@@ -515,7 +515,10 @@ layout: default
     <br>
     <br>
     
-    <a href="/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
+    {% if page.info.ical_link %}
+    <a href="{{page.info.ical_link}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
+    {% endif %}
+
 
 
 
