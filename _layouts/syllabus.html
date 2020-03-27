@@ -343,20 +343,8 @@ layout: default
       {% if item.link %}
         <a href="{{ item.link }}">
       {% endif %}
-
-      {% if item.isrequired %}
-        <b>
-      {% else %}
-        <i>
-      {% endif %}
       
       {{item.title}}
-      
-      {% if item.isrequired %}
-        </b>
-      {% else %}
-        </i>
-      {% endif %}
       
       {% if item.link %}
         </a>
@@ -365,56 +353,20 @@ layout: default
     </td>
       
     <td>
-    {% if item.authors %}
-      {% if item.isrequired %}
-        <b>
-      {% else %}
-        <i>
-      {% endif %}
-      
+    {% if item.authors %}      
       {{item.authors}}
-      
-      {% if item.isrequired %}
-        </b>
-      {% else %}
-        </i>
-      {% endif %}
     {% endif %}
     </td>
 
     <td>
     {% if item.edition %}
-      {% if item.isrequired %}
-        <b>
-      {% else %}
-        <i>
-      {% endif %}
-      
       {{item.edition}}
-      
-      {% if item.isrequired %}
-        </b>
-      {% else %}
-        </i>
-      {% endif %}
     {% endif %}
     </td>
 
     <td>
     {% if item.isbn %}
-      {% if item.isrequired %}
-        <b>
-      {% else %}
-        <i>
-      {% endif %}
-      
       {{item.isbn}}
-      
-      {% if item.isrequired %}
-        </b>
-      {% else %}
-        </i>
-      {% endif %}
     {% endif %}
     </td>
 
