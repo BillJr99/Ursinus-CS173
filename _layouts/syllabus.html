@@ -189,11 +189,7 @@ layout: default
     <tr>
     <td>Course Webpage</td>
     <td><b> <a href="{{page.permalink}}">
-    {% if page.instructors and page.instructors[0].webpage_url %}
-      {{page.instructors[0].webpage_url}}{{page.permalink}}
-    {% else %}
-      {{page.permalink}}
-    {% endif %}
+    {{site.baseurl}}
     </a> </b></td>
     </tr>
     {% endif %}
@@ -382,9 +378,7 @@ layout: default
     <a name="schedule"></a>
     <h2>Course Schedule</h2>
 
-    {% if page.info.ical_link %}
-    <a href="{{page.info.ical_link}}">Import the course calendar into your favorite calendar app with this link!</a>
-    {% endif %}    
+    <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
     
     <table  id="scheduletable" class="table table-condensed" cellspacing="10">
     <thead>

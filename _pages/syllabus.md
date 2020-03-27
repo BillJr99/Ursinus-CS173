@@ -6,7 +6,6 @@ excerpt: "CS173: Intro to Computer Science"
 
 info:
   course_number: CS173
-  ical_link: ./files/CS173.ics
   course_section: "001"
   course_title: "Intro to Computer Science"
   course_prerequisites: "None"
