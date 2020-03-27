@@ -426,6 +426,11 @@ layout: default
 
     <a name="schedule"></a>
     <h2>Course Schedule</h2>
+
+    {% if page.info.ical_link %}
+    <a href="{{page.info.ical_link}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
+    {% endif %}    
+    
     <table  id="index" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
@@ -512,12 +517,7 @@ layout: default
     </ul>
     {% endif %}
     
-    <br>
-    <br>
-    
-    {% if page.info.ical_link %}
-    <a href="{{page.info.ical_link}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
-    {% endif %}
+
 
 
 
