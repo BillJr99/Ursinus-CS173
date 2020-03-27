@@ -291,6 +291,9 @@ layout: default
     {%if item.picture %}
       <img src="{{ item.picture }}"></img>
     {% endif %}
+    {% if item.webpage_url %}
+      </a>
+    {% endif %}    
     </td>
     <td>{% if item.phone %}{{item.phone}}{% endif %}</td>
     <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
