@@ -5,3 +5,15 @@ relative_links:
   collections: true
 
 theme: jekyll-theme-slate
+
+# Analytics
+analytics:
+  provider               :  "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-24052857-1"
+    
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
