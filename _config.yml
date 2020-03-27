@@ -6,6 +6,9 @@ relative_links:
 
 theme: jekyll-theme-slate
 
+title: "CS173 Introduction to Computer Science"
+description: 
+
 baseurl                  : "/Ursinus-CS173" # the subpath of your site, e.g. "/blog"
 
 # Analytics
