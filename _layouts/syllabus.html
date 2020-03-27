@@ -293,7 +293,7 @@ layout: default
     {% endif %}
     </td>
     <td>{% if item.phone %}{{item.phone}}{% endif %}</td>
-    <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email"><i id="general" class="fa fa-envelope fa-2x" ></i>{{item.email}}</a> {% endif %}</td>
+    <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
     <td>
     {% if item.officehours %}<ul>{% endif %}
     {% for officehour in item.officehours %}
@@ -338,7 +338,7 @@ layout: default
     <td align="left">
     {% if item.title %}
       {% if item.link %}
-        <a href="{{ item.link }}"><i id="general" class="fa fa-book fa-2x"></i>
+        <a href="{{ item.link }}">
       {% endif %}
 
       {% if item.isrequired %}
