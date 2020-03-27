@@ -6,6 +6,8 @@ relative_links:
 
 theme: jekyll-theme-slate
 
+baseurl                  : "/Ursinus-CS173" # the subpath of your site, e.g. "/blog"
+
 # Analytics
 analytics:
   provider               :  "google" # false (default), "google", "google-universal", "custom"
