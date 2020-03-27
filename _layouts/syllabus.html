@@ -253,7 +253,7 @@ layout: default
     <a name="instructors"></a>
     <h2>Course Instructors and Office Hours</h2>
 
-    <table id="instructorstable" >
+    <table id="instructorstable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
     <th><span></span></th>
@@ -279,21 +279,16 @@ layout: default
     {% if item.webpage_url %}
       <a href="{{item.webpage_url}}">
     {% endif %}
+    
     {{item.name}}
-    {% if item.webpage_url %}
-      </a>
+    {%if item.picture %}
+    <br>
+    <img src="{{ item.picture }}">
     {% endif %}
-    </td>
-    <td>
+
     {% if item.webpage_url %}
       <a href="{{item.webpage_url}}">
     {% endif %}
-    {%if item.picture %}
-      <img src="{{ item.picture }}">
-    {% endif %}
-    {% if item.webpage_url %}
-      </a>
-    {% endif %}    
     </td>
     <td>{% if item.phone %}{{item.phone}}{% endif %}</td>
     <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
