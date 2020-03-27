@@ -1,6 +1,6 @@
 ---
 layout: syllabus
-permalink: /syllabus
+permalink: /
 title: "CS173: Intro to Computer Science"
 excerpt: "CS173: Intro to Computer Science"
 
