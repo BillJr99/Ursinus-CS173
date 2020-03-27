@@ -261,7 +261,6 @@ layout: default
     <th><span></span></th>
     <th><span></span></th>
     <th><span></span></th>
-    <th><span></span></th>
     </tr>
     </thead>
 
@@ -318,11 +317,10 @@ layout: default
 
     <a name="textbooks"></a>
     <h2>Textbooks</h2>
-    Bold Textbooks are Required, Italicized Textbooks are Recommended or Supplemental
-
     <table  id="textbookstable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
+    <th><span></span></th>
     <th><span></span></th>
     <th><span></span></th>
     <th><span></span></th>
@@ -333,6 +331,13 @@ layout: default
     <tbody>
     {% for item in page.textbooks %}
     <tr align="left">
+    <td align="left">
+    {% if item.isrequired %}
+        Required
+    {% else %}
+        Recommended / Supplemental
+    {% endif %}
+    </td>
     <td align="left">
     {% if item.title %}
       {% if item.link %}
