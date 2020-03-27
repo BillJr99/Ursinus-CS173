@@ -269,13 +269,13 @@ layout: default
 
     {% for item in page.instructors %}
 
-    <tr valign="top">
-    <td valign="top">
+    <tr>
+    <td>
     {% if item.title %}
     {{ item.title }}
     {% endif %}
     </td>
-    <td valign="top">
+    <td>
     {% if item.webpage_url %}
       <a href="{{item.webpage_url}}">
     {% endif %}
@@ -284,7 +284,7 @@ layout: default
       </a>
     {% endif %}
     </td>
-    <td valign="bottom">
+    <td>
     {% if item.webpage_url %}
       <a href="{{item.webpage_url}}">
     {% endif %}
@@ -295,9 +295,9 @@ layout: default
       </a>
     {% endif %}    
     </td>
-    <td valign="top">{% if item.phone %}{{item.phone}}{% endif %}</td>
-    <td valign="top"> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
-    <td valign="top">
+    <td>{% if item.phone %}{{item.phone}}{% endif %}</td>
+    <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
+    <td>
     {% if item.officehours %}<ul>{% endif %}
     {% for officehour in item.officehours %}
     <li><script language="JavaScript">document.write(getFullDay("{{officehour.day}}"));</script>s from {{officehour.starttime}} to {{officehour.endtime}} in {{officehour.location}}</li>
