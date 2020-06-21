@@ -182,8 +182,11 @@ layout: default
     <tr>
     <td>Course Number</td>
     <td><b> {{page.info.course_number}} </b>
-    {% if page.info.course_section %}
-    <br>Section {{page.info.course_section}}
+    {% if page.info.course_sections %}
+    <br>Section(s) 
+    {% for section in page.info.course_sections %}
+    {{section}} 
+    {% endfor %}
     {% endif %}
     </td>
     </tr>
@@ -229,39 +232,45 @@ layout: default
 
 
 
-    {% if page.info.class_meets_locations %}
+    {% if page.info.class_meets_locations and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size-1) %}
     <tr>
-    <td>Class Meetings</td>
+    <td>Class Meetings: Section {{ page.info.course_sections[i] }}</td>
     <td>
     <ul>
-    {% for meeting in page.info.class_meets_locations %}
-    <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.starttime}} to {{meeting.endtime}} in {{meeting.place}}</li>
+    {% for meeting in page.info.class_meets_locations[i] %}
+    <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.section.starttime}} to {{meeting.section.endtime}} in {{meeting.section.place}}</li>
     {% endfor %}
     </ul>
     </td>
     </tr>
+    {% endfor %}
     {% endif %}
     
 
 
-    {% if page.info.midtermexam and page.info.midtermexam.mdate != "TBD" %}
+    {% if page.info.midtermexam and page.info.midtermexam.mdate != "TBD" and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size-1) %}
     <tr>
-    <td>Midterm Exam</td>
+    <td>Midterm Exam: Section {{ page.info.course_sections[i] }} </td>
     <td>
-    {{ page.info.midtermexam.mdate }} from {{ page.info.midtermexam.mstarttime }} to {{ page.info.midtermexam.mendtime }} in {{ page.info.midtermexam.mroom }}
+    {{ page.info.midtermexam[i].section.mdate }} from {{ page.info.midtermexam[i].section.mstarttime }} to {{ page.info.midtermexam[i].section.mendtime }} in {{ page.info.midtermexam[i].section.mroom }}
     </td>
     </tr>
+    {% endfor %}
     {% endif %}
 
     
 
-    {% if page.info.finalexam and page.info.finalexam.fdate != "TBD" %}
+    {% if page.info.finalexam and page.info.finalexam.fdate != "TBD" and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size-1) %}
     <tr>
-    <td>Final Exam</td>
+    <td>Final Exam: Section {{ page.info.course_sections[i] }}</td>
     <td>
-    {{ page.info.finalexam.fdate }} from {{ page.info.finalexam.fstarttime }} to {{ page.info.finalexam.fendtime }} in {{ page.info.finalexam.froom }}
+    {{ page.info.finalexam[i].section.fdate }} from {{ page.info.finalexam[i].section.fstarttime }} to {{ page.info.finalexam[i].section.fendtime }} in {{ page.info.finalexam[i].section.froom }}
     </td>
     </tr>
+    {% endfor %}
     {% endif %}
 
     

@@ -6,37 +6,64 @@ excerpt: "CS173: Intro to Computer Science"
 
 info:
   course_number: CS173
-  course_section: "B"
+  course_sections: 
+  - section: "B"
+  - section: "C"
   course_title: "Intro to Computer Science"
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/08/31"
   course_end_date: "2020/12/11"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   class_meets_days:
-    isM: true
+  - isM: true
     isT: true
     isW: true
     isR: false
     isF: true 
     isS: false
     isU: false
+  - isM: true
+    isT: true
+    isW: true
+    isR: false
+    isF: true 
+    isS: false
+    isU: false    
   class_meets_locations:
-  - day: "M"
-    starttime: "9:00 AM"
-    endtime: "9:50 AM"
-    place: "Pfahler Hall Room 107"
-  - day: "T"
-    starttime: "9:00 AM"
-    endtime: "9:50 AM"
-    place: "LAB: Pfahler Hall Room 107"    
-  - day: "W"
-    starttime: "9:00 AM"
-    endtime: "9:50 AM"
-    place: "Pfahler Hall Room 107"
-  - day: "F"
-    starttime: "9:00 AM"
-    endtime: "9:50 AM"
-    place: "Pfahler Hall Room 107"    
+  - section:
+    - day: "M"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "Pfahler Hall Room 107"
+    - day: "T"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "LAB: Pfahler Hall Room 107"    
+    - day: "W"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "Pfahler Hall Room 107"
+    - day: "F"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "Pfahler Hall Room 107"  
+  - section:
+    - day: "M"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler Hall Room 106"
+    - day: "T"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "LAB: Pfahler Hall Room 106"    
+    - day: "W"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler Hall Room 106"
+    - day: "F"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler Hall Room 106"       
   holidays:
   - date: "2020/10/19"
   - date: "2020/10/20"
@@ -44,16 +71,28 @@ info:
   - date: "2020/11/26"
   - date: "2020/11/27"
   midtermexam: 
-    mdate: "TBD"
-    mstarttime: "TBD"
-    mendtime: "TBD"
-    mroom: "TBD"
+    - section:
+      mdate: "TBD"
+      mstarttime: "TBD"
+      mendtime: "TBD"
+      mroom: "TBD"
+    - section:
+      mdate: "TBD"
+      mstarttime: "TBD"
+      mendtime: "TBD"
+      mroom: "TBD"      
   finalexam: 
-    fdate: "TBD"
-    fstarttime: "TBD"
-    fendtime: "TBD"
-    froom: "TBD"
-  
+    - section:
+      fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
+      froom: "TBD"
+    - section:
+      fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
+      froom: "TBD"
+   
 instructors:
 - name: William Mongan
   title: Professor
