@@ -375,7 +375,7 @@ Ursinus College is committed to providing reasonable accommodations to students 
 ## Let's Talk
 Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. If you are still hesitant to go, take me (Professor Tralie) as an example of someone who has benefited from talk therapy in the past. I am happy to discuss this in office hours in more detail.
 
-![Let's Talk Poster](/images/letstalk.jpg)
+![Let's Talk Poster](./images/letstalk.jpg)
 
 # Late Penalties
 In the absence of accommodations, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule. Students will lose points at the following rate:
@@ -401,6 +401,6 @@ NOTE: The terms "exposing" and "viewing" exclude sending or ingesting electronic
 
 NOTE ALSO: "Other people" includes internet sources
 
-![Collaboration Policy Table](/images/collaborationpolicy.png)
+![Collaboration Policy Table](./images/collaborationpolicy.png)
 
 If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way, regardless of intent, then it may be an academic dishonesty case, and it will be referred to [Dean Sorensen](https://www.ursinus.edu/live/profiles/184-).
