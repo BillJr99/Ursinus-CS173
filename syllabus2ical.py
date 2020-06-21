@@ -151,30 +151,32 @@ outf.write("BEGIN:VCALENDAR\r\nVERSION:2.0\r\n")
 outf.write("BEGIN:VTIMEZONE\r\nTZID:US-Eastern\r\nLAST-MODIFIED:20070101T000000Z\r\nTZURL:http://zones.stds_r_us.net/tz/US-Eastern\r\nBEGIN:STANDARD\r\nDTSTART:19671029T020000\r\nRRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nEND:STANDARD\r\nBEGIN:DAYLIGHT\r\nDTSTART:19870405T020000\r\nRRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nEND:DAYLIGHT\r\nEND:VTIMEZONE\r\n")
 
 # Write the lecture schedule as a recurring event
-for meeting in postdict['info']['class_meets_locations']:
-    dtstart = getDateString(parseDate(startdate))
-    dtstart = dtstart + "T"
-    dtstart = dtstart + getTimeString(parseTime(meeting['starttime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    dtend = getDateString(parseDate(startdate)) # assume no event overlaps a day boundary, ends on start date
-    dtend = dtend + "T"
-    dtend = dtend + getTimeString(parseTime(meeting['endtime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    dtuntil = getDateString(parseDate(enddate)) # for recurrence rule
-    dtuntil = dtuntil + "T"
-    dtuntil = dtuntil + "235959"
-    dtuntil = dtuntil + "Z" 
+for i in range(len(postdict['info']['class_meets_locations'])):
+    section = postdict['info']['course_sections'][i]['section']
+    for meeting in postdict['info']['class_meets_locations'][i]['section']:
+        dtstart = getDateString(parseDate(startdate))
+        dtstart = dtstart + "T"
+        dtstart = dtstart + getTimeString(parseTime(meeting['starttime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        dtend = getDateString(parseDate(startdate)) # assume no event overlaps a day boundary, ends on start date
+        dtend = dtend + "T"
+        dtend = dtend + getTimeString(parseTime(meeting['endtime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        dtuntil = getDateString(parseDate(enddate)) # for recurrence rule
+        dtuntil = dtuntil + "T"
+        dtuntil = dtuntil + "235959"
+        dtuntil = dtuntil + "Z" 
 
-    location = meeting['place']
-    
-    repeatday = geticalday(meeting['day'])
-    
-    rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
-    for holiday in postdict['info']['holidays']:
-        dtholiday = getDateString(parseDate(holiday['date']))       
-        rrule = rrule + "\r\nEXDATE:" + dtholiday
+        location = meeting['place']
+        
+        repeatday = geticalday(meeting['day'])
+        
+        rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
+        for holiday in postdict['info']['holidays']:
+            dtholiday = getDateString(parseDate(holiday['date']))       
+            rrule = rrule + "\r\nEXDATE:" + dtholiday
 
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 for item in postdict['schedule']:   
     weekidx = item['week']
@@ -247,36 +249,39 @@ for instructor in postdict['instructors']:
 
         outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
-# Write Exam Dates        
-if not (postdict['info']['midtermexam']['mdate'] == "TBD"):
-    startd = getDateString(parseDate(postdict['info']['midtermexam']['mdate']))
-    startd = startd + "T"
-    startd = startd + getTimeString(parseTime(postdict['info']['midtermexam']['mstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    endd = getDateString(parseDate(postdict['info']['midtermexam']['mdate']))
-    endd = endd + "T"
-    endd = endd + getTimeString(parseTime(postdict['info']['midtermexam']['mendtime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    dtitle = "Midterm Exam"
-    location = postdict['info']['midtermexam']['mroom']
-    
-    # Write the exam:
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
+# Write Exam Dates 
+for i in range(len(postdict['info']['class_meets_locations'])):
+    section = postdict['info']['course_sections'][i]['section']       
 
-if not (postdict['info']['finalexam']['fdate'] == "TBD"):
-    startd = getDateString(parseDate(postdict['info']['finalexam']['fdate']))
-    startd = startd + "T"
-    startd = startd + getTimeString(parseTime(postdict['info']['finalexam']['fstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    endd = getDateString(parseDate(postdict['info']['finalexam']['fdate']))
-    endd = endd + "T"
-    endd = endd + getTimeString(parseTime(postdict['info']['finalexam']['fendtime'])) # leave in local time, timezone info given above assuming Eastern Time
-    
-    dtitle = "Final Exam"
-    location = postdict['info']['finalexam']['froom']
-    
-    # Write the exam:
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
+    if not (postdict['info']['midtermexam'][i]['mdate'] == "TBD"):
+        startd = getDateString(parseDate(postdict['info']['midtermexam'][i]['mdate']))
+        startd = startd + "T"
+        startd = startd + getTimeString(parseTime(postdict['info']['midtermexam'][i]['mstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        endd = getDateString(parseDate(postdict['info']['midtermexam'][i]['mdate']))
+        endd = endd + "T"
+        endd = endd + getTimeString(parseTime(postdict['info']['midtermexam'][i]['mendtime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        dtitle = "Midterm Exam"
+        location = postdict['info']['midtermexam'][i]['mroom']
+        
+        # Write the exam:
+        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
+
+    if not (postdict['info']['finalexam'][i]['fdate'] == "TBD"):
+        startd = getDateString(parseDate(postdict['info']['finalexam'][i]['fdate']))
+        startd = startd + "T"
+        startd = startd + getTimeString(parseTime(postdict['info']['finalexam'][i]['fstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        endd = getDateString(parseDate(postdict['info']['finalexam'][i]['fdate']))
+        endd = endd + "T"
+        endd = endd + getTimeString(parseTime(postdict['info']['finalexam'][i]['fendtime'])) # leave in local time, timezone info given above assuming Eastern Time
+        
+        dtitle = "Final Exam"
+        location = postdict['info']['finalexam'][i]['froom']
+        
+        # Write the exam:
+        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
 
 # Write University Dates
 if postdict['university']['semester'] == "Fall":
