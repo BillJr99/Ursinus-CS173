@@ -5,8 +5,6 @@ title: "CS173: Intro to Computer Science"
 excerpt: "CS173: Intro to Computer Science"
 
 info:
-  semester: "Fall"
-  academicyear: "2020-21"
   course_number: CS173
   course_section: "001"
   course_title: "Intro to Computer Science"
@@ -159,6 +157,8 @@ schedule:
     dlink: "http://www.billmongan.com" 
 
 universitydates:
+  semester: "Fall"
+  academicyear: "2020-21"
   fall_semester:
   - uname: "Convocation"
     udate: "2020/08/28"

@@ -200,10 +200,10 @@ layout: default
 
 
 
-    {% if page.info.semester and page.info.academicyear %}
+    {% if page.universitydates.semester and page.universitydates.academicyear %}
     <tr>
     <td> Academic Term </td>
-    <td><b> {{page.info.semester}} {{page.info.academicyear}} </b></td>
+    <td><b> {{page.universitydates.semester}} {{page.universitydates.academicyear}} </b></td>
     </tr>
     {% endif %}
     
@@ -242,17 +242,17 @@ layout: default
     
     
 
-    {% if page.info.semester and page.universitydates %}
+    {% if page.universitydates and page.universitydates.semester %}
     <tr>
     <td>Key University Dates</td>
     <td>
-    {% if page.info.semester == "Fall" and page.universitydates.fall_semester %}
+    {% if page.universitydates.semester == "Fall" and page.universitydates.fall_semester %}
     <ul>
     {% for keydate in page.university.fall_semester %}
     {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
     {% endfor %}
     </ul>
-    {% elsif page.info.semester == "Spring" and page.universitydates.spring_semester %}
+    {% elsif page.universitydates.semester == "Spring" and page.universitydates.spring_semester %}
     <ul>
     {% for keydate in page.universitydates.spring_semester %}
     {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
