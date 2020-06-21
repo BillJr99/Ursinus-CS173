@@ -194,6 +194,13 @@ layout: default
     </tr>
     {% endif %}
 
+    {% if page.info.semester and page.info.academicyear %}
+    <tr>
+    <td> Academic Term </td>
+    <td><b> {{page.info.semester}} {{page.info.academicyear}} </b></td>
+    </tr>
+    {% endif %}
+    
     {% if page.info.course_start_date and page.info.course_end_date %}
     <tr>
     <td> Term Start and End </td>
