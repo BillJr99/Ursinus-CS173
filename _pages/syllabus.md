@@ -157,7 +157,7 @@ schedule:
     dlink: "http://www.billmongan.com" 
 
 university:
-  semester: "Spring"
+  semester: "Fall"
   academicyear: "2020-21"
   fall:
   - kname: "Convocation"
