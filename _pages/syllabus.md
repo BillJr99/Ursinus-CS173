@@ -370,6 +370,29 @@ schedule:
     rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Lectures/Week8_Binary/Bitwise.html"
   - rtitle: "LFSR Simulator App"
     rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Lectures/Week8_Binary/LFSR.html"
+- week: "6"
+  date: "3"
+  deliverables:
+  - dtitle: "Assignment 6: Spy Games Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW6_PseudoRandomCrypto"
+  - dtitle: "Code Roundup 1 Due"
+    dlink: "https://github.com/Ursinus-CS173-S2020/CodeRoundup1"
+- week: "7"
+  date: "0"
+  title: "2D Arrays / RGB Images"
+  link: "https://github.com/Ursinus-CS173-S2020/HW7_ASCIIArt/archive/master.zip"
+  readings:
+  - rtitle: "Horstmann Ch. 6.8"
+  deliverables:
+  - dtitle: Lab 7: Epidemic Spreading / Flattening the Curve Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab7_COVID19"
+- week: "7"
+  date: "1"
+  title: "Lab 8: Binary Strings"
+  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab8_BinaryStrings"
+  deliverables:
+  - dtitle: "Lab 8: Binary Strings Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab8_BinaryStrings"
   
 university:
   semester: "Fall"
