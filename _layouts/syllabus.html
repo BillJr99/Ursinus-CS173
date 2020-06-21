@@ -243,7 +243,7 @@ layout: default
     
 
 
-    {% if page.info.midtermexam %}
+    {% if page.info.midtermexam and page.info.midtermexam.mdate != "TBD" %}
     <tr>
     <td>Midterm Exam</td>
     <td>
@@ -254,7 +254,7 @@ layout: default
 
     
 
-    {% if page.info.finalexam %}
+    {% if page.info.finalexam and page.info.finalexam.mdate != "TBD" %}
     <tr>
     <td>Final Exam</td>
     <td>

@@ -384,8 +384,10 @@ schedule:
   readings:
   - rtitle: "Horstmann Ch. 6.8"
   deliverables:
-  - dtitle: Lab 7: Epidemic Spreading / Flattening the Curve Due"
+  - dtitle: "Lab 7: Epidemic Spreading / Flattening the Curve Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab7_COVID19"
+  - dtitle: "Assignment 7: ASCII Art Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW7_ASCIIArt"
 - week: "7"
   date: "1"
   title: "Lab 8: Binary Strings"
@@ -393,6 +395,15 @@ schedule:
   deliverables:
   - dtitle: "Lab 8: Binary Strings Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab8_BinaryStrings"
+- week: "7"
+  date: "2"
+  title: "Assignment Workshopping"
+- week: "7"
+  date: "3"
+  title: "Assignment Workshopping"
+  deliverables:
+  - dtitle: "Assignment 6: Spy Games Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW6_PseudoRandomCrypto"
   
 university:
   semester: "Fall"
