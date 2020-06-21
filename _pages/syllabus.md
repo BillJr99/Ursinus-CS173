@@ -175,6 +175,22 @@ schedule:
   deliverables:
   - dtitle: "Homework 0: Warmup Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"
+- week: "0"
+  date: "1"
+  title: "Lab: Kepler's Third Law"
+  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab1"
+  deliverables:
+  - dtitle: "Lab 1: Kepler's Third Law Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab1"
+  - dtitle: "Assignment 1: Evergreen Field Trip Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW1"
+  - dtitle: "Book Survey 1 Due"
+- week: "0"
+  date: "2"
+  title: "Intro To Java: Data Types / Variables / Arithmetic Operations"
+  link: "https://github.com/Ursinus-CS173-S2020/Class1"
+  readings:
+  - rtitle: "Horstmann Ch. 1, 2.1, 2.2"
   
 university:
   semester: "Fall"
