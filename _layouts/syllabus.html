@@ -242,20 +242,20 @@ layout: default
     
     
 
-    {% if page.universitydates and page.universitydates.semester %}
+    {% if page.universitydates and page.universitydates.semester and page.universitydates.fall_semester and page.universitydates.spring_semester %}
     <tr>
     <td>Key University Dates</td>
     <td>
     {% if page.universitydates.semester == "Fall" and page.universitydates.fall_semester %}
     <ul>
     {% for keydate in page.university.fall_semester %}
-    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: {{keydate.kdate}}</li>{% endif %}
     {% endfor %}
     </ul>
     {% elsif page.universitydates.semester == "Spring" and page.universitydates.spring_semester %}
     <ul>
     {% for keydate in page.universitydates.spring_semester %}
-    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: {{keydate.kdate}}</li>{% endif %}
     {% endfor %}
     </ul>   
     {% endif %}    
