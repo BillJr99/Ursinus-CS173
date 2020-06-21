@@ -240,6 +240,32 @@ layout: default
     </tr>
     {% endif %}
     
+
+
+    {% if page.info.midtermexam %}
+    <tr>
+    <td>Midterm Exam</td>
+    <td>
+    <ul>
+    {{ page.info.midtermexam.mdate }} at {{ page.info.midtermexam.mtime }} in {{ page.info.midtermexam.mroom }}
+    </ul>
+    </td>
+    </tr>
+    {% endif %}
+
+    
+
+    {% if page.info.finalexam %}
+    <tr>
+    <td>Final Exam</td>
+    <td>
+    <ul>
+    {{ page.info.finalexam.fdate }} at {{ page.info.finalexam.ftime }} in {{ page.info.finalexam.froom }}
+    </ul>
+    </td>
+    </tr>
+    {% endif %}
+
     
 
     {% if page.university and page.university.semester %}

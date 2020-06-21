@@ -35,8 +35,14 @@ info:
   - date: "2020/11/25"
   - date: "2020/11/26"
   - date: "2020/11/27"
-  midtermexam: "2020/10/9"
-  finalexam: "TBD"
+  midtermexam: 
+    mdate: "TBD"
+    mtime: "TBD"
+    mroom: "TBD"
+  finalexam: 
+    fdate: "TBD"
+    ftime: "TBD"
+    froom: "TBD"
   
 instructors:
 - name: William Mongan
