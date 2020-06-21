@@ -158,11 +158,7 @@ schedule:
   - dtitle: "Lab 1 Due"
     dlink: "http://www.billmongan.com" 
 
-university:
-  fall:
-  - uname: "Convocation"
-    udate: "2020/8/28"
-    udisplay: false
+
 
      
 ---
