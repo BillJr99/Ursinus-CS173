@@ -156,10 +156,10 @@ schedule:
   - dtitle: "Lab 1 Due"
     dlink: "http://www.billmongan.com" 
 
-universitydates:
+university:
   semester: "Fall"
   academicyear: "2020-21"
-  fall_semester:
+  fall:
   - kname: "Convocation"
     kdate: "2020/08/28"
     kdisplay: false
@@ -175,7 +175,7 @@ universitydates:
   - kname "Mid Semester Grades Posted"
     kdate: "2020/10/16"
     kdisplay: false
-  spring_semester:
+  spring:
   - kname: "Reading Day"
     kdate: "2021/05/6"
     kdisplay: true
