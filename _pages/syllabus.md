@@ -233,6 +233,60 @@ schedule:
   deliverables:
   - dtitle: "Lab 2: Leap Years, JUnit Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears" 
+- week: "2"
+  date: "0"
+  title: "Methods"
+  link: "https://github.com/Ursinus-CS173-S2020/Week3/"
+  readings:
+  - rtitle: "Horstmann Ch. 5 (except 5.9)"
+  deliverables:
+  - dtitle: "Assignment 2: Financial Aid Calculation Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW2_FinancialAidCalculation"
+  - dtitle: "Assignment 3: Weekday Calculator Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW3_WeekdayCalculator"
+  - dtitle: "Book Survey 3 Due"
+- week: "2"
+  date: "1"
+  title: "Lab 3: Weekday Calculator Workshopping / Java's Debugger"
+- week: "2"
+  date: "2"
+  title: "Methods Practice, Programs from Scratch"
+  readings:
+  - rtitle: "Instructions for Starting NetBeans Projects from Scratch"
+    rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Software/index.html#instructions"
+- week: "3"
+  date: "0"
+  title: "While Loops / Experiments with Chance"
+  link: "https://github.com/Ursinus-CS173-S2020/HW4_ChaosGame/tree/master/src/chaos"
+  readings:
+  - rtitle: "Horstmann Ch. 4"
+  - rtitle: "Derren Brown 10 Heads in a Row"
+    rlink: "https://www.youtube.com/watch?v=n1SJ-Tn3bcQ"
+  - rtitle: "The Stock Market Scam"
+    rlink: "https://math.temple.edu/~paulos/oldsite/scam.html"
+  deliverables:
+  - dtitle: "Assignment 3: Weekday Calculator Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW3_WeekdayCalculator"
+  - dtitle: "Assignment 4: The Chaos Game Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW4_ChaosGame"
+- week: "3"
+  date: "1"
+  title: "Lab 4: Epoch Time Overflow"
+  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
+  deliverables:
+  - dtitle: "Lab 4: Epoch Time Overflow Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
+- week: "3"
+  date: "2"
+  title: "Drawing with Loops, Random Walks, For Loops"
+  readings:
+  - rtitle: "Random Walk Pokemon program by Dr. Tralie"
+    rlink: "https://www.youtube.com/watch?v=eo6F28M7Iio"
+- week: "3"
+  date: "3"
+  deliverables:
+  - dtitle: "Lab 4: Epoch Time Overflow Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
     
 university:
   semester: "Fall"
