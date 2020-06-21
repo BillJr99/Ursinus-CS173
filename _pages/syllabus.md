@@ -163,7 +163,9 @@ university:
   - kname: "Convocation"
     kdate: "2020/08/28"
     kdisplay: true
-
+  - kname: "Reading Day"
+    kdate: "2020/12/12"
+    kdisplay: true
     
 ---
 
