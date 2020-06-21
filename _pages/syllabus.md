@@ -9,8 +9,8 @@ info:
   course_section: "001"
   course_title: "Intro to Computer Science"
   course_prerequisites: "None"
-  course_start_date: "2020/08/24"
-  course_end_date: "2020/12/04"
+  course_start_date: "2020/08/31"
+  course_end_date: "2020/12/11"
   course_description: "Course description"
   class_meets_days:
     isM: true
@@ -31,6 +31,7 @@ info:
     place: "Room 100"
   holidays:
   - date: "2020/10/19"
+  - date: "2020/10/20"
   - date: "2020/11/25"
   - date: "2020/11/26"
   - date: "2020/11/27"
