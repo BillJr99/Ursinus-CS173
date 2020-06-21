@@ -71,24 +71,20 @@ info:
   - date: "2020/11/26"
   - date: "2020/11/27"
   midtermexam: 
-    - section:
-      mdate: "TBD"
+    - mdate: "TBD"
       mstarttime: "TBD"
       mendtime: "TBD"
       mroom: "TBD"
-    - section:
-      mdate: "TBD"
+    - mdate: "TBD"
       mstarttime: "TBD"
       mendtime: "TBD"
       mroom: "TBD"      
   finalexam: 
-    - section:
-      fdate: "TBD"
+    - fdate: "TBD"
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"
-    - section:
-      fdate: "TBD"
+    - fdate: "TBD"
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"

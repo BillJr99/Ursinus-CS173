@@ -255,7 +255,7 @@ layout: default
     <tr>
     <td>Midterm Exam: Section {{ page.info.course_sections[i].section }} </td>
     <td>
-    {{ page.info.midtermexam[i].section.mdate }} from {{ page.info.midtermexam[i].section.mstarttime }} to {{ page.info.midtermexam[i].section.mendtime }} in {{ page.info.midtermexam[i].section.mroom }}
+    {{ page.info.midtermexam[i].mdate }} from {{ page.info.midtermexam[i].mstarttime }} to {{ page.info.midtermexam[i].mendtime }} in {{ page.info.midtermexam[i].mroom }}
     </td>
     </tr>
     {% endif %}
@@ -270,7 +270,7 @@ layout: default
     <tr>
     <td>Final Exam: Section {{ page.info.course_sections[i].section }}</td>
     <td>
-    {{ page.info.finalexam[i].section.fdate }} from {{ page.info.finalexam[i].section.fstarttime }} to {{ page.info.finalexam[i].section.fendtime }} in {{ page.info.finalexam[i].section.froom }}
+    {{ page.info.finalexam[i].fdate }} from {{ page.info.finalexam[i].fstarttime }} to {{ page.info.finalexam[i].fendtime }} in {{ page.info.finalexam[i].froom }}
     </td>
     </tr>
     {% endif %}
