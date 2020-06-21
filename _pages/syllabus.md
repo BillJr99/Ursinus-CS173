@@ -308,7 +308,7 @@ schedule:
 - week: "4"
   date: "3"
   deliverables:
-  - dtitle: Lab 5: Weighted Average, Min Elements Due"
+  - dtitle: "Lab 5: Weighted Average, Min Elements Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab5_Arrays"
   - dtitle: "Assignment 5: Guitar String Synthesis Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW5_GuitarStringSynth"
