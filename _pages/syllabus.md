@@ -159,41 +159,7 @@ schedule:
 universitydates:
   semester: "Fall"
   academicyear: "2020-21"
-  fall_semester:
-  - uname: "Convocation"
-    udate: "2020/08/28"
-    udisplay: false
-  - uname: "Reading Day"
-    udate: "2020/12/12"
-    udisplay: true
-  - uname: "Add Deadline"
-    udate: "2020/09/11"
-    udisplay: true
-  - uname: "Drop with a W Deadline"
-    udate: "2020/10/28"
-    udisplay: true
-  - uname "Mid Semester Grades Posted"
-    udate: "2020/10/16"
-    udisplay: false
-  spring_semester:
-  - uname: "Reading Day"
-    udate: "2021/05/6"
-    udisplay: true
-  - uname: "Add Deadline"
-    udate: "2021/02/2"
-    udisplay: true
-  - uname: "Drop with a W Deadline"
-    udate: "2021/03/24"
-    udisplay: true
-  - uname "Mid Semester Grades Posted"
-    udate: "2021/03/5"
-    udisplay: false
-  - uname: "Baccalaureate"
-    udate: "2021/05/14"
-    udisplay: false
-  - uname: "Commencement"
-    udate: "2021/05/15"
-    udisplay: false
+
     
 ---
 
