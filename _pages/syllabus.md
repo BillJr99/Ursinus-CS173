@@ -105,14 +105,14 @@ textbooks:
   edition: "2nd Edition"
   isbn: "978-1-118-06331-6"
   link: https://www.amazon.com/Java-Everyone-Cay-S-Horstmann/dp/1118063317/
-  image: http://images.amazon.com/images/P/1118063317.01._PE30_PI_SCMZZZZZZZ_.jpg
+  image: http://images.amazon.com/images/P/1118063317.01._PI_SCMZZZZZZZ_.jpg
   isrequired: true 
 - title: "Think Java"
   authors: "Cay Horstmann"
   edition: "1st Edition"
   isbn: "978-1491929568"
   link: https://greenteapress.com/wp/think-java/
-  image: http://images.amazon.com/images/P/1491929561.01._PE30_PI_SCMZZZZZZZ_.jpg
+  image: http://images.amazon.com/images/P/1491929561.01._PI_SCMZZZZZZZ_.jpg
   isrequired: false   
 
 objectives:
@@ -179,8 +179,8 @@ schedule:
   link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab1"
   deliverables:
   - dtitle: "Lab 1: Kepler's Third Law Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW1"
-  - dtitle: "Assignment: Evergreen Field Trip Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab1"
+  - dtitle: "Assignment 1: Evergreen Field Trip Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW1"
   - dtitle: "Book Survey 1 Due"
 - week: "0"
@@ -200,7 +200,7 @@ schedule:
   deliverables:
   - dtitle: "Homework 0: Warmup Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"  
-  - dtitle: "Lab 1 Due"
+  - dtitle: "Lab 1: Kepler's Third Law Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0" 
 - week: "1"
   date: "0"
@@ -211,16 +211,47 @@ schedule:
   - rtitle: "Washington Monument During 8/23/2011 Earthquake"
     rlink: "https://www.youtube.com/watch?v=OyjNy0IwbcA"
   deliverables:
-  - dtitle: "Assignment 1 Due"
-  - dtitle: "Assignment 2 Financial Aid Calculation Handed Out"
+  - dtitle: "Assignment 1: Evergreen Field Trip Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW1"
+  - dtitle: "Assignment 2: Financial Aid Calculation Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW2_FinancialAidCalculation"  
 - week: "1"
   date: "1"
   title: "Lab 2: Leap Years, JUnit"
   link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears"
   deliverables:
-  - dtitle: "Lab 2 Leap Years, JUnit Handed Out"
+  - dtitle: "Lab 2: Leap Years, JUnit Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears" 
+  - dtitle: "Book Survey 2 Due"
+- week: "1"
+  date: "2"
+  title: "Boolean Statements, DeMorgan's Law, Begin Methods"
+- week: "1"
+  date: "3"
+  deliverables:
+  - dtitle: "Lab 2: Leap Years, JUnit Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears" 
+- week: "2"
+  date: "0"
+  title: "Methods"
+  link: "https://github.com/Ursinus-CS173-S2020/Week3/"
+  readings:
+  - rtitle: "Horstmann Ch. 5 (except 5.9)"
+  deliverables:
+  - dtitle: "Assignment 2: Financial Aid Calculation Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW2_FinancialAidCalculation"
+  - dtitle: "Assignment 3: Weekday Calculator Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW3_WeekdayCalculator"
+  - dtitle: "Book Survey 3 Due"
+- week: "2"
+  date: "1"
+  title: "Lab 3: Weekday Calculator Workshopping / Java's Debugger"
+- week: "2"
+  date: "2"
+  title: "Methods Practice, Programs from Scratch"
+  readings:
+  - rtitle: "Instructions for Starting NetBeans Projects from Scratch"
+    rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Software/index.html#instructions"
 
 university:
   semester: "Fall"

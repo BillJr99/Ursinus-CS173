@@ -7,6 +7,7 @@ layout: default
   https://stackoverflow.com/questions/5619202/converting-a-string-to-a-date-in-javascript
   https://www.w3resource.com/javascript-exercises/javascript-date-exercise-42.php
   https://stackoverflow.com/questions/4822852/how-to-get-the-day-of-week-and-the-month-of-the-year
+  https://www.oreilly.com/library/view/amazon-hacks/0596005423/ch01s07.html
 -->
 <script language="JavaScript">
 	function strtodate(x) {
@@ -481,9 +482,11 @@ layout: default
     </td>
 
     <td align="left">
+    {% if item.title %}
     {% if item.link %}<a href="{{item.link}}">{% endif %}
     {{ item.title }}
     {% if item.link %}</a>{% endif %}
+    {% endif %}
     </td>
 
     <td align="left">
