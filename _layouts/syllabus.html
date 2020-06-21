@@ -248,13 +248,13 @@ layout: default
     {% if page.info.semester == "Fall" and page.university.fall %}
     <ul>
     {% for keydate in page.university.fall %}
-    {% if keydate.udisplay == True %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
     {% endfor %}
     </ul>
     {% elsif page.info.semester == "Spring" and page.university.spring %}
     <ul>
     {% for keydate in page.university.spring %}
-    {% if keydate.udisplay == True %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
     {% endfor %}
     </ul>   
     {% endif %}    
