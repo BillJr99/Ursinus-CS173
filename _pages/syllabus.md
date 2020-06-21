@@ -275,4 +275,22 @@ university:
     
 ---
 
-Welcome!
+# Overview
+Computer science is the study of how machines interact with data and the way in which machines can be used to solve problems. It is a mathematical discipline, but one which is often much more "hands on" than most fields of math. One important aspect of computer science is computer programming, or the process of writing code, or instructions for a computer to execute in a language a computer can understand. With programming languages, we can tell the computer how to automate calculations that are tedious and slow for humans to do by hand, and how to translate algorithms (recipes to solve problems) into code. In this course, we will learn one such language called Java, and we will use this language to explore an interdisciplinary array of computer science problems, including but not limited to:
+
+* How to encrypt data and hide information.
+* How to make computer generated art and music.
+* How to efficiently store and manipulate records.
+* How to make simple video games.
+
+The course will gradually build up skills by providing a lot of "skeleton code" that students fill in to do more complicated tasks, but by the end of the course, students will be able to write programs from scratch with multiple interlocking components.
+
+## A Word on Patience and Debugging
+Computer programming can often be frustrating, since not only do computers have very little tolerance for mistakes in their language (so-called "syntax errors") that will cause a program to not even run, but even if you manage to get a program to run, it still may not behave as you were intending it to. Computers will do exactly what you tell them to do in code, so you will have to figure out where you told the computer something different from what you intended. This process is called [debugging](https://en.wikipedia.org/wiki/Debugging), and it is time consuming and difficult even for very experienced programmers. So do not be hard on yourself if your programs don't work the first time around (they rarely do, even if you've been programming for decades!). But be sure you leave yourself adequate time to work on the assignments, because the amount of time it takes to resolve issues can be unpredictable.
+
+As part of embracing the process of debugging, we will be creating a ["debugging table"](http://www.ctralie.com/Teaching/CS173_S2020/index.html#debugging) throughout the course, in which students catalog particular error messages that arise for different types of mistakes.
+
+Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!
+
+https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw
+
