@@ -15,20 +15,13 @@ info:
   course_end_date: "2020/12/11"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   class_meets_days:
-  - isM: true
+    isM: true
     isT: true
     isW: true
     isR: false
     isF: true 
     isS: false
     isU: false
-  - isM: true
-    isT: true
-    isW: true
-    isR: false
-    isF: true 
-    isS: false
-    isU: false    
   class_meets_locations:
   - section:
     - day: "M"
