@@ -6,29 +6,37 @@ excerpt: "CS173: Intro to Computer Science"
 
 info:
   course_number: CS173
-  course_section: "001"
+  course_section: "B"
   course_title: "Intro to Computer Science"
-  course_prerequisites: "None"
+  course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/08/31"
   course_end_date: "2020/12/11"
-  course_description: "Course description"
+  course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   class_meets_days:
     isM: true
-    isT: false
+    isT: true
     isW: true
     isR: false
-    isF: false 
+    isF: true 
     isS: false
     isU: false
   class_meets_locations:
   - day: "M"
-    starttime: "09:30 AM"
-    endtime: "11:00 AM"
-    place: "Room 101"
+    starttime: "9:00 AM"
+    endtime: "9:50 AM"
+    place: "Pfahler Hall Room 107"
+  - day: "T"
+    starttime: "9:00 AM"
+    endtime: "9:50 AM"
+    place: "LAB: Pfahler Hall Room 107"    
   - day: "W"
-    starttime: "12:30 PM"
-    endtime: "2:00 PM"
-    place: "Room 100"
+    starttime: "9:00 AM"
+    endtime: "9:50 AM"
+    place: "Pfahler Hall Room 107"
+  - day: "F"
+    starttime: "9:00 AM"
+    endtime: "9:50 AM"
+    place: "Pfahler Hall Room 107"    
   holidays:
   - date: "2020/10/19"
   - date: "2020/10/20"
@@ -55,31 +63,63 @@ instructors:
   picture: /images/profile.png
   officehours:
   - day: "M"
-    starttime: "3:30 PM"
-    endtime: "4:30 PM"
-    location: "Office"
+    starttime: "10:00 AM"
+    endtime: "10:50 AM"
+    location: "TBD"
+  - day: "M"
+    starttime: "12:30 PM"
+    endtime: "1:20 PM"
+    location: "TBD"  
+  - day: "M"
+    starttime: "8:00 PM"
+    endtime: "9:00 PM"
+    location: "Virtual Office Hours on Microsoft Teams"      
+  - day: "T"
+    starttime: "10:00 AM"
+    endtime: "10:50 AM"
+    location: "TBD"
+  - day: "T"
+    starttime: "8:00 PM"
+    endtime: "9:00 PM"
+    location: "Virtual Office Hours on Microsoft Teams"     
   - day: "W"
-    starttime: "4:30 PM"
-    endtime: "5:30 PM"
-    location: "Office"
+    starttime: "10:00 AM"
+    endtime: "10:50 AM"
+    location: "TBD"    
+  - day: "W"
+    starttime: "12:30 PM"
+    endtime: "1:20 PM"
+    location: "TBD"    
+  - day: "F"
+    starttime: "10:00 AM"
+    endtime: "10:50 AM"
+    location: "TBD"     
+  - day: "F"
+    starttime: "12:30 PM"
+    endtime: "1:20 PM"
+    location: "TBD"      
   
 textbooks:
-- title: "Book Title"
-  authors: "Book Authors"
-  edition: "Book Edition"
-  isbn: "Book ISBN"
-  link: http://www.amazon.com
-  isrequired: true  
-- title: "Recommended Book Title"
-  authors: "Book Authors"
-  edition: "Book Edition"
-  isbn: "Book ISBN"
-  link: http://www.amazon.com
-  isrequired: false    
+- title: "Java for Everyone: Late Objects"
+  authors: "Cay Horstmann"
+  edition: "2nd Edition"
+  isbn: "978-1-118-06331-6"
+  link: https://www.amazon.com/Java-Everyone-Cay-S-Horstmann/dp/1118063317/
+  image: http://images.amazon.com/images/P/1118063317.01._PE30_PI_SCMZZZZZZZ_.jpg
+  isrequired: true 
+- title: "Think Java"
+  authors: "Cay Horstmann"
+  edition: "1st Edition"
+  isbn: "978-1491929568"
+  link: https://greenteapress.com/wp/think-java/
+  image: http://images.amazon.com/images/P/1491929561.01._PE30_PI_SCMZZZZZZZ_.jpg
+  isrequired: false   
 
 objectives:
-- objective: "First objective"
-- objective: "Second objective"
+- objective: "Implement and engineer multi-component systems that solve real world problems."
+- objective: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
+- objective: "Learn to be a patient problem solver by developing comfort with the edit -> compile -> run loop, along with basic debugging skills."
+-objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 
 grade_breakdown:
 - category: "Programming Assignments"

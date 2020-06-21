@@ -386,6 +386,7 @@ layout: default
     <th><span></span></th>
     <th><span></span></th>
     <th><span></span></th>
+    <th><span></span></th>
     </tr>
     </thead>
 
@@ -399,6 +400,21 @@ layout: default
         Recommended / Supplemental
     {% endif %}
     </td>
+    
+    <td align="left">
+    {% if item.image %}
+      {% if item.link %}
+        <a href="{{ item.link }}">
+      {% endif %}
+      
+      <img src="{{item.image}}"> 
+      
+      {% if item.link %}
+        </a>
+      {% endif %}
+    {% endif %}
+    </td>
+    
     <td align="left">
     {% if item.title %}
       {% if item.link %}
