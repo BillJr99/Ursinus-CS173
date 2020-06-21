@@ -404,7 +404,25 @@ schedule:
   deliverables:
   - dtitle: "Assignment 6: Spy Games Due"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW6_PseudoRandomCrypto"
-  
+  - dtitle: "Lab 8 Code Roundup"
+    dlink: "https://github.com/Ursinus-CS173-S2020/Coderoundup_Lab8"
+- week: "8"
+  date: "0"
+  title: "Classes and Objects"
+  readings:
+  - rtitle: "Horstmann Ch. 8"
+  - rtitle: "Self Study Module 1"
+    rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Modules/ClassesModule1/video1.html"
+  deliverables:
+  - dtitle: "Lab 8: Binary Strings Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab8_BinaryStrings"
+- week: "8"
+  date: "1"
+  title: "Lab 9: Tic Tac Toe"
+  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab9_TicTacToe"
+  deliverables:
+  - dtitle: "Lab 9: Tic Tac Toe Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab9_TicTacToe"
 university:
   semester: "Fall"
   academicyear: "2020-21"
