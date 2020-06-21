@@ -249,27 +249,31 @@ layout: default
     
 
 
-    {% if page.info.midtermexam and page.info.midtermexam.mdate != "TBD" and page.info.course_sections %}
+    {% if page.info.midtermexam and page.info.course_sections %}
     {% for i in (0..page.info.course_sections.size-1) %}
+    {% if page.info.midtermexam[i].section.mdate != "TBD" %}
     <tr>
     <td>Midterm Exam: Section {{ page.info.course_sections[i] }} </td>
     <td>
     {{ page.info.midtermexam[i].section.mdate }} from {{ page.info.midtermexam[i].section.mstarttime }} to {{ page.info.midtermexam[i].section.mendtime }} in {{ page.info.midtermexam[i].section.mroom }}
     </td>
     </tr>
+    {% endif %}
     {% endfor %}
     {% endif %}
 
     
 
-    {% if page.info.finalexam and page.info.finalexam.fdate != "TBD" and page.info.course_sections %}
+    {% if page.info.finalexam and page.info.course_sections %}
     {% for i in (0..page.info.course_sections.size-1) %}
+    {% if page.info.finalexam[i].section.fdate != "TBD" %}
     <tr>
     <td>Final Exam: Section {{ page.info.course_sections[i] }}</td>
     <td>
     {{ page.info.finalexam[i].section.fdate }} from {{ page.info.finalexam[i].section.fstarttime }} to {{ page.info.finalexam[i].section.fendtime }} in {{ page.info.finalexam[i].section.froom }}
     </td>
     </tr>
+    {% endif %}
     {% endfor %}
     {% endif %}
 
