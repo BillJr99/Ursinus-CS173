@@ -171,9 +171,6 @@ university:
     kdisplay: true
   - kname: "Drop with a W Deadline"
     kdate: "2020/10/28"
-    kdisplay: true
-  - kname "Mid Semester Grades Posted"
-    kdate: "2020/10/16"
     kdisplay: true  
     
 ---
