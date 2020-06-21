@@ -162,6 +162,7 @@ university:
   fall:
   - kname: "Convocation"
     kdate: "2020/08/28"
+    kdisplay: true
 
     
 ---
