@@ -157,9 +157,6 @@ schedule:
   deliverables:
   - dtitle: "Lab 1 Due"
     dlink: "http://www.billmongan.com" 
-
-
-
      
 ---
 
