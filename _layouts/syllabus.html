@@ -452,12 +452,12 @@ layout: default
 
 
 
-
     <a name="schedule"></a>
     <h2>Course Schedule</h2>
 
     <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
-    
+
+    {% if page.schedule %}    
     <table  id="scheduletable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
@@ -536,6 +536,7 @@ layout: default
     {% endfor %}
 
     </table>  
+    {% endif %}
     
     {% if page.info.holidays %}
     Please note the following holidays this term:
