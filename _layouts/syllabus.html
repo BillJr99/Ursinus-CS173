@@ -268,7 +268,7 @@ layout: default
     {% for i in (0..page.info.course_sections.size-1) %}
     {% if page.info.finalexam[i].section.fdate != "TBD" %}
     <tr>
-    <td>Final Exam: Section {{ page.info.course_sections[i] }}</td>
+    <td>Final Exam: Section {{ page.info.course_sections[i].section }}</td>
     <td>
     {{ page.info.finalexam[i].section.fdate }} from {{ page.info.finalexam[i].section.fstarttime }} to {{ page.info.finalexam[i].section.fendtime }} in {{ page.info.finalexam[i].section.froom }}
     </td>
