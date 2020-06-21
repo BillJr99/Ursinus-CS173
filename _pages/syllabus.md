@@ -166,6 +166,12 @@ university:
   - kname: "Reading Day"
     kdate: "2020/12/12"
     kdisplay: true
+  - kname: "Add Deadline"
+    kdate: "2020/09/11"
+    kdisplay: true
+  - kname: "Drop with a W Deadline"
+    kdate: "2020/10/28"
+    kdisplay: true
     
 ---
 
