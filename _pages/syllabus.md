@@ -157,7 +157,7 @@ schedule:
     dlink: "http://www.billmongan.com" 
 
 university:
-  semester: "Spring"
+  semester: "Fall"
   academicyear: "2020-21"
   fall:
   - kname: "Convocation"
@@ -175,10 +175,6 @@ university:
   - kname "Mid Semester Grades Posted"
     kdate: "2020/10/16"
     kdisplay: false  
-  spring:
-  - kname: "Reading Day"
-    kdate: "2021/05/6"
-    kdisplay: true
     
 ---
 
