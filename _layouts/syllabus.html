@@ -183,9 +183,9 @@ layout: default
     <td>Course Number</td>
     <td><b> {{page.info.course_number}} </b>
     {% if page.info.course_sections %}
-    <br>Section(s) 
+    <br>
     {% for section in page.info.course_sections %}
-    {{section.section}} 
+    Section {{section.section}}<br>
     {% endfor %}
     {% endif %}
     </td>
@@ -233,7 +233,7 @@ layout: default
 
 
     {% if page.info.class_meets_locations and page.info.course_sections %}
-    {% for i in (0..page.info.course_sections.size-1) %}
+    {% for i in (1..page.info.course_sections.size) %}
     <tr>
     <td>Class Meetings: Section {{ page.info.course_sections[i].section }}</td>
     <td>
@@ -250,7 +250,7 @@ layout: default
 
 
     {% if page.info.midtermexam and page.info.course_sections %}
-    {% for i in (0..page.info.course_sections.size-1) %}
+    {% for i in (1..page.info.course_sections.size) %}
     {% if page.info.midtermexam[i].section.mdate != "TBD" %}
     <tr>
     <td>Midterm Exam: Section {{ page.info.course_sections[i].section }} </td>
@@ -265,7 +265,7 @@ layout: default
     
 
     {% if page.info.finalexam and page.info.course_sections %}
-    {% for i in (0..page.info.course_sections.size-1) %}
+    {% for i in (1..page.info.course_sections.size) %}
     {% if page.info.finalexam[i].section.fdate != "TBD" %}
     <tr>
     <td>Final Exam: Section {{ page.info.course_sections[i].section }}</td>
