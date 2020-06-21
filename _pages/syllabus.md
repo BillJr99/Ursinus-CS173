@@ -159,25 +159,10 @@ schedule:
 university:
   semester: "Fall"
   academicyear: "2020-21"
-  spring:
-  - kname: "Reading Day"
-    kdate: "2021/05/6"
-    kdisplay: true
-  - kname: "Add Deadline"
-    kdate: "2021/02/2"
-    kdisplay: true
-  - kname: "Drop with a W Deadline"
-    kdate: "2021/03/24"
-    kdisplay: true
-  - kname "Mid Semester Grades Posted"
-    kdate: "2021/03/5"
-    kdisplay: false
-  - kname: "Baccalaureate"
-    kdate: "2021/05/14"
-    kdisplay: false
-  - kname: "Commencement"
-    kdate: "2021/05/15"
-    kdisplay: false
+  fall:
+  - kname: "Convocation"
+    kdate: "2020/08/28"
+
     
 ---
 
