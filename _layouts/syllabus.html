@@ -174,6 +174,8 @@ layout: default
     </tr>
     {% endif %}
 
+
+
     {% if page.info.course_number %}
     <tr>
     <td>Course Number</td>
@@ -185,6 +187,8 @@ layout: default
     </tr>
     {% endif %}
 
+
+
     {% if page.permalink %}
     <tr>
     <td>Course Webpage</td>
@@ -194,12 +198,16 @@ layout: default
     </tr>
     {% endif %}
 
+
+
     {% if page.info.semester and page.info.academicyear %}
     <tr>
     <td> Academic Term </td>
     <td><b> {{page.info.semester}} {{page.info.academicyear}} </b></td>
     </tr>
     {% endif %}
+    
+    
     
     {% if page.info.course_start_date and page.info.course_end_date %}
     <tr>
@@ -208,12 +216,16 @@ layout: default
     </tr>
     {% endif %}
 
+
+
     {% if page.info.course_prerequisites %}
     <tr>
     <td>Course Prerequisites</td>
     <td><b> {{page.info.course_prerequisites}} </b></td>
     </tr>
     {% endif %}
+
+
 
     {% if page.info.class_meets_locations %}
     <tr>
@@ -227,6 +239,28 @@ layout: default
     </td>
     </tr>
     {% endif %}
+    
+    
+    {% if page.info.semester %}
+    <tr>
+    <td>Key University Dates</td>
+    <td>
+    {% if page.info.semester == "Fall" %}
+    <ul>
+    {% for keydate in page.university.fall %}
+    {% if keydate.udisplay == True %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% endfor %}
+    </ul>
+    {% else %}
+    <ul>
+    {% for keydate in page.university.spring %}
+    {% if keydate.udisplay == True %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% endfor %}
+    </ul>   
+    {% endif %}    
+    </td>
+    </tr>    
+    {% endif %}    
     </tbody>
     </table>
 
