@@ -34,6 +34,8 @@ info:
   - date: "2020/11/25"
   - date: "2020/11/26"
   - date: "2020/11/27"
+  midtermexam: "2020/10/9"
+  finalexam: "TBD"
   
 instructors:
 - name: William Mongan
@@ -153,7 +155,24 @@ schedule:
   deliverables:
   - dtitle: "Lab 1 Due"
     dlink: "http://www.billmongan.com" 
-  
+
+university:
+ convocation: "2020/8/28"
+ readingday: 
+   fall: "2020/12/12"
+   spring: "2021/5/6"
+ adddeadline: 
+   fall: "2020/9/11"
+   spring: "2021/2/2"
+ dropwdeadline: 
+   fall: "2020/10/28"
+   spring: "2021/3/24"
+ midsemestergradesdue: 
+   fall: "2020/10/16"
+   spring: "2021/3/5"
+ baccalaureate: "2021/5/14"
+ commencement: "2021/5/15"
+ 
 ---
 
 Welcome!
