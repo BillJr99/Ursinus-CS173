@@ -239,8 +239,8 @@ layout: default
     <td>Class Meetings: Section {{ page.info.course_sections[i].section }}</td>
     <td>
     <ul>
-    {% for meeting in page.info.class_meets_locations[i] %}
-    <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.section.starttime}} to {{meeting.section.endtime}} in {{meeting.section.place}}</li>
+    {% for meeting in page.info.class_meets_locations[i].section %}
+    <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.starttime}} to {{meeting.endtime}} in {{meeting.place}}</li>
     {% endfor %}
     </ul>
     </td>
