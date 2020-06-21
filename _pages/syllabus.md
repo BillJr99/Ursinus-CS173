@@ -174,7 +174,7 @@ university:
     kdisplay: true
   - kname "Mid Semester Grades Posted"
     kdate: "2020/10/16"
-    kdisplay: false  
+    kdisplay: true  
     
 ---
 
