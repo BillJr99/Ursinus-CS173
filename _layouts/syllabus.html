@@ -320,8 +320,6 @@ layout: default
     <th><span></span></th>
     <th><span></span></th>
     <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
     </tr>
     </thead>
 
@@ -341,17 +339,18 @@ layout: default
     {% endif %}
     
     {{item.name}}
+    
     {%if item.picture %}
     <br>
     <img src="{{ item.picture }}">
     {% endif %}
 
     {% if item.webpage_url %}
-      <a href="{{item.webpage_url}}">
+      </a>
     {% endif %}
+    {% if item.phone %}<br>Phone: {{item.phone}}{% endif %}
+    {% if item.email %}<br><a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}
     </td>
-    <td>{% if item.phone %}{{item.phone}}{% endif %}</td>
-    <td> {% if item.email %}<a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}</td>
     <td>
     {% if item.officehours %}<ul>{% endif %}
     {% for officehour in item.officehours %}
