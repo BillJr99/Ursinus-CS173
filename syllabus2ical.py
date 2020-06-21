@@ -236,22 +236,32 @@ for instructor in postdict['instructors']:
 if not (postdict['info']['midtermexam']['mdate'] == "TBD"):
     startd = getDateString(parseDate(postdict['info']['midtermexam']['mdate']))
     startd = startd + "T"
-    startd = startd + getTimeString(parseTime(postdict['info']['midtermexam']['mtime'])) # leave in local time, timezone info given above assuming Eastern Time
+    startd = startd + getTimeString(parseTime(postdict['info']['midtermexam']['mstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
+    
+    endd = getDateString(parseDate(postdict['info']['midtermexam']['mdate']))
+    endd = endd + "T"
+    endd = endd + getTimeString(parseTime(postdict['info']['midtermexam']['mendtime'])) # leave in local time, timezone info given above assuming Eastern Time
+    
     dtitle = "Midterm Exam"
     location = postdict['info']['midtermexam']['mroom']
     
-    # Write the exam as an all-day event:
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
+    # Write the exam:
+    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
 
 if not (postdict['info']['finalexam']['fdate'] == "TBD"):
     startd = getDateString(parseDate(postdict['info']['finalexam']['fdate']))
     startd = startd + "T"
-    startd = startd + getTimeString(parseTime(postdict['info']['finalexam']['ftime'])) # leave in local time, timezone info given above assuming Eastern Time
+    startd = startd + getTimeString(parseTime(postdict['info']['finalexam']['fstarttime'])) # leave in local time, timezone info given above assuming Eastern Time
+    
+    endd = getDateString(parseDate(postdict['info']['finalexam']['fdate']))
+    endd = endd + "T"
+    endd = endd + getTimeString(parseTime(postdict['info']['finalexam']['fendtime'])) # leave in local time, timezone info given above assuming Eastern Time
+    
     dtitle = "Final Exam"
     location = postdict['info']['finalexam']['froom']
     
-    # Write the exam as an all-day event:
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")      
+    # Write the exam:
+    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:" + location.strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
 
 # Write University Dates
 if postdict['university']['semester'] == "Fall":

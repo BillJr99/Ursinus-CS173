@@ -246,9 +246,7 @@ layout: default
     <tr>
     <td>Midterm Exam</td>
     <td>
-    <ul>
-    {{ page.info.midtermexam.mdate }} at {{ page.info.midtermexam.mtime }} in {{ page.info.midtermexam.mroom }}
-    </ul>
+    {{ page.info.midtermexam.mdate }} from {{ page.info.midtermexam.mstarttime }} to {{ page.info.midtermexam.mendtime }} in {{ page.info.midtermexam.mroom }}
     </td>
     </tr>
     {% endif %}
@@ -259,9 +257,7 @@ layout: default
     <tr>
     <td>Final Exam</td>
     <td>
-    <ul>
-    {{ page.info.finalexam.fdate }} at {{ page.info.finalexam.ftime }} in {{ page.info.finalexam.froom }}
-    </ul>
+    {{ page.info.finalexam.fdate }} from {{ page.info.finalexam.fstarttime }} to {{ page.info.finalexam.fendtime }} in {{ page.info.finalexam.froom }}
     </td>
     </tr>
     {% endif %}

@@ -37,11 +37,13 @@ info:
   - date: "2020/11/27"
   midtermexam: 
     mdate: "TBD"
-    mtime: "TBD"
+    mstarttime: "TBD"
+    mendtime: "TBD"
     mroom: "TBD"
   finalexam: 
     fdate: "TBD"
-    ftime: "TBD"
+    fstarttime: "TBD"
+    fendtime: "TBD"
     froom: "TBD"
   
 instructors:
