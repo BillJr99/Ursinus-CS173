@@ -191,7 +191,49 @@ schedule:
   link: "https://github.com/Ursinus-CS173-S2020/Class1"
   readings:
   - rtitle: "Horstmann Ch. 1, 2.1, 2.2"
-  
+- week: "0"
+  date: "3"
+  title: "Finish Types, User Input, Strings"
+  link: "https://github.com/Ursinus-CS173-S2020/Week1"
+  readings:
+  - rtitle: "Horstmann Ch. 2.3, 2.5"  
+  - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization?"
+    rlink: "https://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
+  deliverables:
+  - dtitle: "Homework 0: Warmup Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"  
+  - dtitle: "Lab 1: Kepler's Third Law Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0" 
+- week: "1"
+  date: "0"
+  title: "Decisions: If Statements, Begin Boolean Statements"
+  link: "https://github.com/Ursinus-CS173-S2020/Week2"
+  readings:
+  - rtitle: "Horstmann Ch. 3"
+  - rtitle: "Washington Monument During 8/23/2011 Earthquake"
+    rlink: "https://www.youtube.com/watch?v=OyjNy0IwbcA"
+  deliverables:
+  - dtitle: "Assignment 1: Evergreen Field Trip Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW1"
+  - dtitle: "Assignment 2: Financial Aid Calculation Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW2_FinancialAidCalculation"  
+- week: "1"
+  date: "1"
+  title: "Lab 2: Leap Years, JUnit"
+  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears"
+  deliverables:
+  - dtitle: "Lab 2: Leap Years, JUnit Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears" 
+  - dtitle: "Book Survey 2 Due"
+- week: "1"
+  date: "2"
+  title: "Boolean Statements, DeMorgan's Law, Begin Methods"
+- week: "1"
+  date: "3"
+  deliverables:
+  - dtitle: "Lab 2: Leap Years, JUnit Due"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab2_LeapYears" 
+    
 university:
   semester: "Fall"
   academicyear: "2020-21"
