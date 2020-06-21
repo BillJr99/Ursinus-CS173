@@ -170,6 +170,8 @@ schedule:
   readings:
   - rtitle: "Slides from Today"
     rlink: "https://docs.google.com/presentation/d/1JFMa2svoSIC7l_ABs-dxXZ4_-BJaQj7MWVuXvW0dSUs/edit?usp=sharing"
+  - rtitle: "NetBeans IDE Software Environment"
+    rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Software/index.html"
   deliverables:
   - dtitle: "Homework 0: Warmup Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"
@@ -252,65 +254,6 @@ schedule:
   readings:
   - rtitle: "Instructions for Starting NetBeans Projects from Scratch"
     rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Software/index.html#instructions"
-- week: "3"
-  date: "0"
-  title: "While Loops / Experiments with Chance"
-  link: "https://github.com/Ursinus-CS173-S2020/HW4_ChaosGame/tree/master/src/chaos"
-  readings:
-  - rtitle: "Horstmann Ch. 4"
-  - rtitle: "Derren Brown 10 Heads in a Row"
-    rlink: "https://www.youtube.com/watch?v=n1SJ-Tn3bcQ"
-  - rtitle: "The Stock Market Scam"
-    rlink: "https://math.temple.edu/~paulos/oldsite/scam.html"
-  deliverables:
-  - dtitle: "Assignment 3: Weekday Calculator Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW3_WeekdayCalculator"
-  - dtitle: "Assignment 4: The Chaos Game Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW4_ChaosGame"
-- week: "3"
-  date: "1"
-  title: "Lab 4: Epoch Time Overflow"
-  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
-  deliverables:
-  - dtitle: "Lab 4: Epoch Time Overflow Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
-- week: "3"
-  date: "2"
-  title: "Drawing with Loops, Random Walks, For Loops"
-  readings:
-  - rtitle: "Random Walk Pokemon program by Dr. Tralie"
-    rlink: "https://www.youtube.com/watch?v=eo6F28M7Iio"
-- week: "3"
-  date: "3"
-  deliverables:
-  - dtitle: "Lab 4: Epoch Time Overflow Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab4_EpochOverflow"
-- week: "4"
-  date: "0"
-  title: "Strings and Loops, Arrays"
-  link: "https://github.com/Ursinus-CS173-S2020/Week5"
-  readings:
-  - rtitle: "Horstmann Ch. 6.1"
-- week: "4"
-  date: "1"
-  title: "Lab 5: Weighted Average, Min Elements"
-  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab5_Arrays"
-  deliverables:
-  - dtitle: "Assignment 4: The Chaos Game Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW4_ChaosGame"
-  - dtitle: "Lab 5: Weighted Average, Min Elements Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab5_Arrays"
-- week: "4"
-  date: "2"
-  title: "Loops and Arrays, Digital Audio"
-- week: "4"
-  date: "3"
-  deliverables:
-  - dtitle: Lab 5: Weighted Average, Min Elements Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab5_Arrays"
-  - dtitle: "Assignment 5: Guitar String Synthesis Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW5_GuitarStringSynth"
-
   
 university:
   semester: "Fall"
