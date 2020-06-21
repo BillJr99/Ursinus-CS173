@@ -5,6 +5,8 @@ title: "CS173: Intro to Computer Science"
 excerpt: "CS173: Intro to Computer Science"
 
 info:
+  semester: "Fall"
+  academicyear: "2020-21"
   course_number: CS173
   course_section: "001"
   course_title: "Intro to Computer Science"
@@ -157,21 +159,20 @@ schedule:
     dlink: "http://www.billmongan.com" 
 
 university:
- convocation: "2020/8/28"
- readingday: 
-   fall: "2020/12/12"
-   spring: "2021/5/6"
- adddeadline: 
-   fall: "2020/9/11"
-   spring: "2021/2/2"
- dropwdeadline: 
-   fall: "2020/10/28"
-   spring: "2021/3/24"
- midsemestergradesdue: 
-   fall: "2020/10/16"
-   spring: "2021/3/5"
- baccalaureate: "2021/5/14"
- commencement: "2021/5/15"
+ fall:
+   convocation: "2020/8/28"
+   readingday: "2020/12/12"
+   adddeadline: "2020/9/11"
+   dropwdeadline: "2020/10/28"
+   midsemestergradesdue: "2020/10/16"
+   
+ spring:
+   readingday: "2021/5/6"
+   adddeadline: "2021/2/2"
+   dropwdeadline: "2021/3/24"
+   midsemestergradesdue: "2021/3/5"
+   baccalaureate: "2021/5/14"
+   commencement: "2021/5/15"
  
 ---
 
