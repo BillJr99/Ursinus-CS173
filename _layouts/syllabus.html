@@ -185,7 +185,7 @@ layout: default
     {% if page.info.course_sections %}
     <br>Section(s) 
     {% for section in page.info.course_sections %}
-    {{section}} 
+    {{section.section}} 
     {% endfor %}
     {% endif %}
     </td>
@@ -235,7 +235,7 @@ layout: default
     {% if page.info.class_meets_locations and page.info.course_sections %}
     {% for i in (0..page.info.course_sections.size-1) %}
     <tr>
-    <td>Class Meetings: Section {{ page.info.course_sections[i] }}</td>
+    <td>Class Meetings: Section {{ page.info.course_sections[i].section }}</td>
     <td>
     <ul>
     {% for meeting in page.info.class_meets_locations[i] %}
@@ -253,7 +253,7 @@ layout: default
     {% for i in (0..page.info.course_sections.size-1) %}
     {% if page.info.midtermexam[i].section.mdate != "TBD" %}
     <tr>
-    <td>Midterm Exam: Section {{ page.info.course_sections[i] }} </td>
+    <td>Midterm Exam: Section {{ page.info.course_sections[i].section }} </td>
     <td>
     {{ page.info.midtermexam[i].section.mdate }} from {{ page.info.midtermexam[i].section.mstarttime }} to {{ page.info.midtermexam[i].section.mendtime }} in {{ page.info.midtermexam[i].section.mroom }}
     </td>
