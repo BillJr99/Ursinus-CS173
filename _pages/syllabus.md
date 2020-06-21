@@ -312,28 +312,7 @@ schedule:
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab5_Arrays"
   - dtitle: "Assignment 5: Guitar String Synthesis Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW5_GuitarStringSynth"
-- week: "5"
-  date: "0"
-  title: "Digital Audio, Sawtooth Waves, Do/While Loops"
-  readings:
-  - rtitle: "Horstmann Ch. 6.3-6.6"
-- week: "5"
-  date: "1"
-  title: "Lab 6: Audio Filtering"
-  link: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab6_Filtering"
-  deliverables:
-  - dtitle: "Lab 6: Audio Filtering Handed Out"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab6_Filtering"
-- week: "5"
-  date: "2"
-  title: "Do/While Loops, Seeded Random Number Generators"
-- week: "5"
-  date: "3"
-  deliverables:
-  - dtitle: "Lab 6: Audio Filtering Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Labs/Lab6_Filtering"
-  - dtitle: "Assignment 5: Guitar String Synthesis Due"
-    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW5_GuitarStringSynth"
+
     
 university:
   semester: "Fall"
