@@ -373,7 +373,7 @@ Furthermore, I want all students to feel comfortable expressing their opinions o
 Ursinus College is committed to providing reasonable accommodations to students with disabilities. Students with a disability should contact the Directory of Disability Services ASAP. Mr. Bermudez is located in the Center for Academic Support in the lower level of Myrin Library. Please visit [this link](https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/) for more information on the process. I will do my best to accommodate your requests, and they will be kept completely confidential.
 
 ## Let's Talk
-Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. If you are still hesitant to go, take me (Professor Tralie) as an example of someone who has benefited from talk therapy in the past. I am happy to discuss this in office hours in more detail.
+Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. I am happy to discuss this in office hours in more detail.
 
 ![Let's Talk Poster](./images/letstalk.jpg)
 
