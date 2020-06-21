@@ -242,6 +242,26 @@ layout: default
     
     
 
+    {% if page.info.semester and page.universitydates %}
+    <tr>
+    <td>Key University Dates</td>
+    <td>
+    {% if page.info.semester == "Fall" and page.universitydates.fall_semester %}
+    <ul>
+    {% for keydate in page.university.fall_semester %}
+    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% endfor %}
+    </ul>
+    {% elsif page.info.semester == "Spring" and page.universitydates.spring_semester %}
+    <ul>
+    {% for keydate in page.universitydates.spring_semester %}
+    {% if keydate.udisplay == true %}<li><b>{{keydate.uname}}</b>: {{keydate.udate}}</li>{% endif %}
+    {% endfor %}
+    </ul>   
+    {% endif %}    
+    </td>
+    </tr>    
+    {% endif %}
  
   
     
