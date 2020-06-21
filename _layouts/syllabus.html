@@ -292,13 +292,13 @@ layout: default
     {% if page.university.semester == "Fall" and page.university.fall %}
     <ul>
     {% for keydate in page.university.fall %}
-    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: {{keydate.kdate}}</li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
     {% endfor %}
     </ul>
     {% elsif page.university.semester == "Spring" and page.university.spring %}
     <ul>
     {% for keydate in page.university.spring %}
-    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: {{keydate.kdate}}</li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
     {% endfor %}
     </ul>   
     {% endif %}    
