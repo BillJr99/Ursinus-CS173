@@ -160,41 +160,41 @@ schedule:
 
 university:
  fall:
-   - uname: "Convocation"
-     udate: "2020/8/28"
-     udisplay: False
-   - uname: "Reading Day"
-     udate: "2020/12/12"
-     udisplay: True
-   - uname: "Add Deadline"
-     udate: "2020/9/11"
-     udisplay: True
-   - uname: "Drop with a W Deadline"
-     udate: "2020/10/28"
-     udisplay: True
-   - uname "Mid Semester Grades Posted"
-     udate: "2020/10/16"
-     udisplay: False
+ - uname: "Convocation"
+   udate: "2020/8/28"
+   udisplay: False
+ - uname: "Reading Day"
+   udate: "2020/12/12"
+   udisplay: True
+ - uname: "Add Deadline"
+   udate: "2020/9/11"
+   udisplay: True
+ - uname: "Drop with a W Deadline"
+   udate: "2020/10/28"
+   udisplay: True
+ - uname "Mid Semester Grades Posted"
+   udate: "2020/10/16"
+   udisplay: False
    
  spring:
-   - uname: "Reading Day"
-     udate: "2021/5/6"
-     udisplay: True
-   - uname: "Add Deadline"
-     udate: "2021/2/2"
-     udisplay: True
-   - uname: "Drop with a W Deadline"
-     udate: "2021/3/24"
-     udisplay: True
-   - uname "Mid Semester Grades Posted"
-     udate: "2021/3/5"
-     udisplay: False
-   - uname: "Baccalaureate"
-     udate: "2021/5/14"
-     udisplay: False
-   - uname: "Commencement"
-     udate: "2021/5/15"
-     udisplay: False
+ - uname: "Reading Day"
+   udate: "2021/5/6"
+   udisplay: True
+ - uname: "Add Deadline"
+   udate: "2021/2/2"
+   udisplay: True
+ - uname: "Drop with a W Deadline"
+   udate: "2021/3/24"
+   udisplay: True
+ - uname "Mid Semester Grades Posted"
+   udate: "2021/3/5"
+   udisplay: False
+ - uname: "Baccalaureate"
+   udate: "2021/5/14"
+   udisplay: False
+ - uname: "Commencement"
+   udate: "2021/5/15"
+   udisplay: False
      
 ---
 
