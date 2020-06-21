@@ -179,26 +179,41 @@ for meeting in postdict['info']['class_meets_locations']:
 for item in postdict['schedule']:   
     weekidx = item['week']
     dayidx = item['date']
-    title = item['title']
-    link = item['link']
+    if 'title' in item:
+        title = item['title']
+    else:
+        title = "N/A"
+    if 'link' in item:
+        link = item['link']
+    else:
+        link = ""
+     
     
     startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
     description = link.strip()
     
-    for reading in item['readings']:      
-        rtitle = reading['rtitle']
-        rlink = reading['rlink']
+    if 'readings' in item:
+        for reading in item['readings']:      
+            rtitle = reading['rtitle']
+            if 'rlink' in reading:
+                rlink = reading['rlink']
+            else:
+                rlink = ""
+            
+            description = description.strip() + "\\nReading: " + rtitle.strip() + " " + rlink.strip() 
         
-        description = description.strip() + "\\nReading: " + rtitle.strip() + " (" + rlink.strip() + ")"
+    if 'deliverables' in item:
+        for deliverable in item['deliverables']:        
+            dtitle = deliverable['dtitle']
+            if 'dlink' in deliverable:
+                dlink = deliverable['dlink']
+            else:
+                dlink = ""
+            
+            description = description.strip() + "\\nDeliverable: " + dtitle.strip() + " " + dlink.strip() 
         
-    for deliverable in item['deliverables']:        
-        dtitle = deliverable['dtitle']
-        dlink = deliverable['dlink']
-        
-        description = description.strip() + "\\nDeliverable: " + dtitle.strip() + " (" + dlink.strip() + ")"
-        
-        # Write the Assignment as an all-day event
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")        
+            # Write the Assignment as an all-day event
+            outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + dtitle.strip() + "\r\nLOCATION:\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")        
         
     # Write the lecture as an all-day event:
     outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": Class Meeting\r\nLOCATION:\r\nDESCRIPTION:" + description.strip() + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
