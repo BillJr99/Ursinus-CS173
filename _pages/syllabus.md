@@ -58,7 +58,7 @@ instructors:
 - name: William Mongan
   title: Professor
   email: billmongan@gmail.com
-  phone: "Phone"
+  phone: "Phone TBD"
   webpage_url: "http://www.billmongan.com"
   picture: /images/profile.png
   officehours:
