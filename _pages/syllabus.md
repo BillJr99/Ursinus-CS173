@@ -163,7 +163,18 @@ letter_grades:
 - letter: "F"
   range: "59.49 and below" 
 
-
+schedule:
+- week: "0"
+  date: "0"
+  title: "Course Sneak Preview, HTML, What Is Computer Science? Computers Vs. Humans"
+  readings:
+  - rtitle: "Slides from Today"
+    rlink: "https://docs.google.com/presentation/d/1JFMa2svoSIC7l_ABs-dxXZ4_-BJaQj7MWVuXvW0dSUs/edit?usp=sharing"
+  - rtitle: "NetBeans IDE Software Environment"
+    rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Software/index.html"
+  deliverables:
+  - dtitle: "Homework 0: Warmup Handed Out"
+    dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"
   
 university:
   semester: "Fall"
