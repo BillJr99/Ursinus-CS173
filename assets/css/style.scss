@@ -4,5 +4,9 @@
 @import "{{ site.theme }}";
 
 .inner {
-  max-width: 75%;
+  max-width: 66%; overflow-x: scroll
+}
+
+.table {
+  max-width: 90%; overflow-x: scroll
 }
