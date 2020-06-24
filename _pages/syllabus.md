@@ -57,12 +57,6 @@ info:
       starttime: "11:00 AM"
       endtime: "11:50 AM"
       place: "Pfahler Hall Room 106"       
-  holidays:
-  - date: "2020/10/19"
-  - date: "2020/10/20"
-  - date: "2020/11/25"
-  - date: "2020/11/26"
-  - date: "2020/11/27"
   midtermexam: 
     - mdate: "TBD"
       mstarttime: "TBD"
@@ -609,6 +603,18 @@ university:
   - kname: "Commencement"
     kdate: "2021/05/15"
     kdisplay: false
+  fallholidays:
+  - date: "2020/10/19"
+  - date: "2020/10/20"
+  - date: "2020/11/25"
+  - date: "2020/11/26"
+  - date: "2020/11/27" 
+  springholidays:
+  - date: "2021/03/08"  
+  - date: "2021/03/09"
+  - date: "2021/03/10"
+  - date: "2021/03/11"
+  - date: "2021/03/12"
     
 ---
 Welcome!  This introduction is tentatively taken from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html), and will be adapted for this course.

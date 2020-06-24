@@ -559,13 +559,20 @@ layout: default
     </table>  
     {% endif %}
     
-    {% if page.info.holidays %}
+    {% if page.university.semester == "Fall" and page.university.fallholidays %}
     Please note the following holidays this term:
     <ul>
-    {% for holiday in page.info.holidays %}
+    {% for holiday in page.university.fallholidays %}
     <li><script language="JavaScript">document.write(getDateString(strtodate("{{holiday.date}}")));</script></li>
     {% endfor %}
     </ul>
+    {% elsif page.university.semester == "Spring" and page.university.springholidays %}
+    Please note the following holidays this term:
+    <ul>
+    {% for holiday in page.university.springholidays %}
+    <li><script language="JavaScript">document.write(getDateString(strtodate("{{holiday.date}}")));</script></li>
+    {% endfor %}
+    </ul>    
     {% endif %}
     
 

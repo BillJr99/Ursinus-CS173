@@ -172,9 +172,19 @@ for i in range(len(postdict['info']['class_meets_locations'])):
         repeatday = geticalday(meeting['day'])
         
         rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
-        for holiday in postdict['info']['holidays']:
-            dtholiday = getDateString(parseDate(holiday['date']))       
-            rrule = rrule + "\r\nEXDATE:" + dtholiday
+        
+        # Write Holiday Exceptions
+        if postdict['university']['semester'] == "Fall":
+            hdatekey = 'fallholidays'
+        elif postdict['university']['semester'] == "Spring":
+            hdatekey = 'springholidays'
+        else:
+            hdatekey = None
+            
+        if not (hdatekey is None):      
+            for holiday in postdict['university'][hdatekey]:
+                dtholiday = getDateString(parseDate(holiday['date']))       
+                rrule = rrule + "\r\nEXDATE:" + dtholiday
 
         outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
@@ -243,9 +253,19 @@ for instructor in postdict['instructors']:
         repeatday = geticalday(officehour['day'])
         
         rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
-        for holiday in postdict['info']['holidays']:
-            dtholiday = getDateString(parseDate(holiday['date']))       
-            rrule = rrule + "\r\nEXDATE:" + dtholiday
+        
+        # Write Holiday Exceptions
+        if postdict['university']['semester'] == "Fall":
+            hdatekey = 'fallholidays'
+        elif postdict['university']['semester'] == "Spring":
+            hdatekey = 'springholidays'
+        else:
+            hdatekey = None
+            
+        if not (hdatekey is None):      
+            for holiday in postdict['university'][hdatekey]:        
+                dtholiday = getDateString(parseDate(holiday['date']))       
+                rrule = rrule + "\r\nEXDATE:" + dtholiday
 
         outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
