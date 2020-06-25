@@ -357,7 +357,7 @@ schedule:
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW5_GuitarStringSynth"
 - week: "6"
   date: "0"
-  title: Binary, Hex, ASCII"
+  title: "Binary, Hex, ASCII"
   link: "https://github.com/Ursinus-CS173-S2020/Week8_Binary/"
   readings:
   - rtitle: "Style Guide"
