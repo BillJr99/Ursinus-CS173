@@ -143,6 +143,9 @@ objectives:
 - objective: "Learn to be a patient problem solver by developing comfort with the edit -> compile -> run loop, along with basic debugging skills."
 -objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 
+goals:
+- goal: "To write software that is easy to read and maintain by others"
+
 grade_breakdown:
 - category: "Programming Assignments"
   weight: "50%"
