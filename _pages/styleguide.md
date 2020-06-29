@@ -47,7 +47,9 @@ All rules:
 19. [Text Input Prompts](#textprompts)
 20. [Variable Scoping](#variablescoping)
 
-1. Indentation / Brackets
+<a name="indentation"></a>
+
+Indentation / Brackets
 -------------------------
 
 All code must follow proper indentation and bracket conventions. This
@@ -68,55 +70,18 @@ Second of all, the tabbing is all over the place. This makes it easy to
 miss a closing brace somewhere, which can be very difficult to resolve
 for multiply nested blocks.
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `                `{.cpp
-  2                                    .spaces}`for`{.cpp .keyword .bold}
-  3                                    `(`{.cpp .plain}`int`{.cpp .color1
-  4                                    .bold} `i = 0; i < 100; i++) {`{.cpp
-                                       .plain}
-                                       `            `{.cpp
-                                       .spaces}`if`{.cpp .keyword .bold}
-                                       `(i%2 == 0 && i%3 == 0)`{.cpp
-                                       .plain}
-                                       `                    `{.cpp
-                                       .spaces}`System.out.println(i + `{.c
-                                       pp
-                                       .plain}`" is divisible by 6"`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+<div><div id="highlighter_996110" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0)</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>  
 
 ### Good Code
 
 Here's a better version of the above example, in which brackets are
 applied and aligned properly
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `for`{.cpp .keyword .bold} `(`{.cpp
-  2                                    .plain}`int`{.cpp .color1 .bold}
-  3                                    `i = 0; i < 100; i++) {`{.cpp
-  4                                    .plain}
-  5                                    `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword .bold}
-                                       `(i%2 == 0 && i%3 == 0) {`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`System.out.println(i + `{.c
-                                       pp
-                                       .plain}`" is divisible by 6"`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `    `{.cpp .spaces}`} `{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+<div><div id="highlighter_852586" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0) {</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">} </code></div><div class="line number5 index4 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
 
 * * * * *
 
-2. Naming Conventions
+Naming Conventions
 ---------------------
 
 -   Variable and method names should be in [camel
@@ -207,7 +172,7 @@ word) and in descriptive language.
 
 * * * * *
 
-3. Documentation: Overview
+Documentation: Overview
 --------------------------
 
 All files must have comments near the top of the main program’s file
@@ -240,7 +205,7 @@ example, here's a comment at the top of a file
 
 * * * * *
 
-4. Documentation: Inline code
+Documentation: Inline code
 -----------------------------
 
 All variables (except for loop counters) must be documented. Do not
@@ -273,7 +238,7 @@ information to the reader.
 
 * * * * *
 
-5. Documentation: Methods
+Documentation: Methods
 -------------------------
 
 All methods will have documentation including, but not limited to:
@@ -384,7 +349,7 @@ of what it should look like:
 
 * * * * *
 
-6. Appropriate Loop Choices
+Appropriate Loop Choices
 ---------------------------
 
 Code will be graded on appropriate loop choice. Using a while where a
@@ -489,7 +454,7 @@ while loop
 
 * * * * *
 
-7. Exiting Appropriately
+Exiting Appropriately
 ------------------------
 
 Ending the program anywhere except for the last line of the main will
@@ -498,7 +463,7 @@ your code)
 
 * * * * *
 
-8. The Break Command
+The Break Command
 --------------------
 
 The `break` command should only appear in a `switch` statement, and not
@@ -506,7 +471,7 @@ in a loop.
 
 * * * * *
 
-9. The GOTO Command
+The GOTO Command
 -------------------
 
 Do not use `goto` anywhere in your code! It is an artifact from older
@@ -515,7 +480,7 @@ code](https://en.wikipedia.org/wiki/Spaghetti_code).
 
 * * * * *
 
-10. Positive Boolean Variable Names
+Positive Boolean Variable Names
 -----------------------------------
 
 To avoid confusion, boolean variable names should convey the positive
@@ -525,7 +490,7 @@ Boolean variable names. Some not so good names are `readyCheck`,
 
 * * * * *
 
-11. Boolean Variable Comparisons
+Boolean Variable Comparisons
 --------------------------------
 
 Conditional checks must not compare booleans to `true` or false
@@ -605,7 +570,7 @@ Example 2:
 
 * * * * *
 
-12. Breaking Up Long Boolean Statements
+Breaking Up Long Boolean Statements
 ---------------------------------------
 
 Long conditionals should not appear as `while` or `if` conditions. Use a
@@ -657,7 +622,7 @@ Long conditionals should not appear as `while` or `if` conditions. Use a
 
 * * * * *
 
-13. Robustness
+Robustness
 --------------
 
 All input must be checked. Bad input must be handled gracefully; code
@@ -743,7 +708,7 @@ re-enter or quit the program.
 
 * * * * *
 
-14. No Magic Numbers!
+No Magic Numbers!
 ---------------------
 
 A "magic number" is a number in the program that should be defined as a
@@ -814,7 +779,7 @@ programmer only has to update it in one place to change all instances.
 
 * * * * *
 
-15. Capitalizing Final Variables
+Capitalizing Final Variables
 --------------------------------
 
 All final variables must be in all caps.
@@ -831,7 +796,7 @@ All final variables must be in all caps.
 
 * * * * *
 
-16. Methods Returning At The End
+Methods Returning At The End
 --------------------------------
 
 Methods may only return at the end of the method, not in the middle
@@ -890,7 +855,7 @@ Methods may only return at the end of the method, not in the middle
 
 * * * * *
 
-17. Efficiently Written Code
+Efficiently Written Code
 ----------------------------
 
 Code must be efficient as possible without sacrificing readability. This
@@ -901,7 +866,7 @@ smallest data type necessary. For instance, if the user is to answer
 
 * * * * *
 
-18. Avoid Compound Method calls
+Avoid Compound Method calls
 -------------------------------
 
 Compounding methods and parameters makes your code difficult to read and
@@ -933,7 +898,7 @@ debug, so split up method calls using variables when appropriate.
 
 * * * * *
 
-19. Text Input Prompts
+Text Input Prompts
 ----------------------
 
 Prompts must be meaningful and input must appear on the same line as the
@@ -969,7 +934,7 @@ gives.
 
 * * * * *
 
-20. Variable Scoping
+Variable Scoping
 --------------------
 
 All variable declarations must be within the scope of a method unless
