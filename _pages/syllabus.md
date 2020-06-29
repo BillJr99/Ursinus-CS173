@@ -195,7 +195,7 @@ schedule:
   link: "https://docs.google.com/presentation/d/1JFMa2svoSIC7l_ABs-dxXZ4_-BJaQj7MWVuXvW0dSUs/edit?usp=sharing"
   readings:
   - rtitle: "NetBeans IDE Software Environment"
-    rlink: {{ site.baseurl }}/NetBeans
+    rlink: "./NetBeans"
   deliverables:
   - dtitle: "Homework 0: Warmup Handed Out"
     dlink: "http://www.ctralie.com/Teaching/CS173_S2020/Assignments/HW0"
@@ -364,7 +364,7 @@ schedule:
   link: "https://github.com/Ursinus-CS173-S2020/Week8_Binary/"
   readings:
   - rtitle: "Style Guide"
-    rlink: {{ site.baseurl }}/Style-Guide
+    rlink: "./Style-Guide"
   - rtitle: "Binary <==> Base 10 Conversion"
     rlink: "http://www.ctralie.com/Teaching/CS173_S2020/Lectures/Week8_Binary/BinaryBase10.html"
   - rtitle: "Hex <==> Base 10 Conversion"
