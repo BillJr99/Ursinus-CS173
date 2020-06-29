@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science"
 
 info:
   course_number: CS173
-  next: "{{site.baseurl}}/Modules/IntroExercise"
+  next: "*baseurl/Modules/IntroExercise"
   video: "https://www.youtube.com/embed/PvnlpPWAcZc"
   
 ---
