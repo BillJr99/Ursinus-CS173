@@ -144,7 +144,7 @@ objectives:
 - objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 
 goals:
-- goal: "To write software that is easy to read and maintain by others"
+- goal: "To write software that is easy to read and to maintain by others"
 
 grade_breakdown:
 - category: "Programming Assignments"
