@@ -98,7 +98,7 @@ layout: default
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
                     {% if page.processor.submitformlink %}
                     correctArea.innerHTML += `
-                    <iframe src = "<script>{{ page.processor.submitformcode | strip }}</script>" width=800 height=500>
+                    <iframe src = "<script>{{ page.processor.submitformlink | strip }}</script>" width=800 height=500>
                     `;
                     {% endif %}
                 }
