@@ -31,7 +31,7 @@ files:
             }
         }
     
-  - filename: "Main.java"
+  - filename: "Excerpt from Main.java"
     ismain: true
     code: |
         File f = new File();
