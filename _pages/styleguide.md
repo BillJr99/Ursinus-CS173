@@ -113,16 +113,16 @@ Naming Conventions
 The names of the variables are not descriptive, and the method is not
 written as a verb or in camel case.
 
-                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                    public static void coolstuff(int x) {
-                        int myvar = x;
-                        do {
-                            System.out.print(myvar + " ");
-                            myvar = (myvar + 7)%12;
-                        }
-                        while(myvar != x);
-                    }
-                ]]></script>  
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static void coolstuff(int x) {
+        int myvar = x;
+        do {
+            System.out.print(myvar + " ");
+            myvar = (myvar + 7)%12;
+        }
+        while(myvar != x);
+    }
+]]></script>  
 
 ### Good Code
 
@@ -130,16 +130,16 @@ The method is now a verb that describes what it does, and its name and
 all variables are written in camel case (assuming "halfstep" is one
 word) and in descriptive language.
 
-                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                    public static void printCircleOfFifths(int halfstepInit) {
-                        int halfstepCurr = halfstepInit;
-                        do {
-                            System.out.print(halfstepCurr + " ");
-                            halfstepCurr = (halfstepCurr + 7)%12;
-                        }
-                        while(halfstepCurr != halfstepInit);
-                    }
-                ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static void printCircleOfFifths(int halfstepInit) {
+        int halfstepCurr = halfstepInit;
+        do {
+            System.out.print(halfstepCurr + " ");
+            halfstepCurr = (halfstepCurr + 7)%12;
+        }
+        while(halfstepCurr != halfstepInit);
+    }
+]]></script>
 
 <a name="documentationoverview"></a>
 
@@ -155,14 +155,14 @@ or [this
 link](http://www.tutorialspoint.com/java/java_documentation.htm). As an
 example, here's a comment at the top of a file
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        /**
-                        * The Stack class represents a last-in-first-out stack of objects. 
-                        * @author  Chris Tralie CS 173
-                        * @version 0.1, January 2020
-                        * Note that this version is not thread safe.
-                        */ 
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    /**
+    * The Stack class represents a last-in-first-out stack of objects. 
+    * @author  Chris Tralie CS 173
+    * @version 0.1, January 2020
+    * Note that this version is not thread safe.
+    */ 
+]]></script>
 
 <a name="documentationinline"></a>
 
@@ -175,16 +175,16 @@ information to the reader.
 
 ### Bad Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        int numCounter;  	//counts numbers
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int numCounter;  	//counts numbers
+]]></script>
 
 ### Good Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        int numCounter; 	// Keeps track of how many 
-                                            // integers the user has entered
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int numCounter; 	// Keeps track of how many 
+                        // integers the user has entered
+]]></script>
 
 <a name="documentationmethods"></a>
 
@@ -209,32 +209,32 @@ which you can fill in with details. Below is an example (courtesy of
 Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling))
 of what it should look like:
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        /**
-                         * Returns an Image object that can then be painted on the screen. 
-                         * The url argument must specify an absolute {@link URL}. The name
-                         * argument is a specifier that is relative to the url argument. 
-                         * <p>
-                         * This method always returns immediately, whether or not the 
-                         * image exists. When this applet attempts to draw the image on
-                         * the screen, the data will be loaded. The graphics primitives 
-                         * that draw the image will incrementally paint on the screen. 
-                         *
-                         * @param  url  an absolute URL giving the base location of the image
-                         * @param  name the location of the image, relative to the url argument
-                         * @return      the image at the specified URL
-                         * @see         Image
-                         */
-                        public Image getImage(URL url, String name) {
-                            Image image = null;
-                            try {
-                                image = getImage(new URL(url, name));
-                            } catch (MalformedURLException e) {
-                                e.printStackTrace();
-                            }
-                            return image;
-                         }
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    /**
+     * Returns an Image object that can then be painted on the screen. 
+     * The url argument must specify an absolute {@link URL}. The name
+     * argument is a specifier that is relative to the url argument. 
+     * <p>
+     * This method always returns immediately, whether or not the 
+     * image exists. When this applet attempts to draw the image on
+     * the screen, the data will be loaded. The graphics primitives 
+     * that draw the image will incrementally paint on the screen. 
+     *
+     * @param  url  an absolute URL giving the base location of the image
+     * @param  name the location of the image, relative to the url argument
+     * @return      the image at the specified URL
+     * @see         Image
+     */
+    public Image getImage(URL url, String name) {
+        Image image = null;
+        try {
+            image = getImage(new URL(url, name));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return image;
+     }
+]]></script>
 
 <a name="loopchoices"></a>
 
@@ -252,48 +252,48 @@ Since the loop below starts at 0 and stops at 9, a for loop is much more
 appropriate. Furthermore, the code uses a break statement, which can be
 confusing.
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            int i = 0;
-                            int sum = 0;
-                            while (true) {
-                                if (i >= 10) {
-                                    break;
-                                }
-                                sum += Math.pow(2, (double)i);
-                                i++;
-                            }
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int i = 0;
+    int sum = 0;
+    while (true) {
+        if (i >= 10) {
+            break;
+        }
+        sum += Math.pow(2, (double)i);
+        i++;
+    }
+]]></script>
 
 ### Good Code
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            int sum = 0;
-                            for (int i = 0; i < 10; i++) {
-                                sum += Math.pow(2, (double)i);
-                            }
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int sum = 0;
+    for (int i = 0; i < 10; i++) {
+        sum += Math.pow(2, (double)i);
+    }
+]]></script>
 
 ### Bad Code
 
 As another example, the code below would be better stylistically in a do
 while loop
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            int choice = rand.nextInt(4);
-                            while (choice==temp){
-                                choice = rand.nextInt(4);
-                            }
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int choice = rand.nextInt(4);
+    while (choice==temp){
+        choice = rand.nextInt(4);
+    }
+]]></script>
 
 ### Good Code
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            int choice = -1;
-                            do {
-                                choice = rand.nextInt(4);
-                            }
-                            while (choice==temp);
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int choice = -1;
+    do {
+        choice = rand.nextInt(4);
+    }
+    while (choice==temp);
+]]></script>
 
 <a name="exiting"></a>
 
@@ -343,41 +343,41 @@ Example 1:
 
 ### Bad Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        if ((isValid == true) || (isReady == false)) {
-                            ...
-                        }
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    if ((isValid == true) || (isReady == false)) {
+        ...
+    }
+]]></script>
 
 ### Good Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        if (isValid || !isReady) {
-                            ...
-                        }
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    if (isValid || !isReady) {
+        ...
+    }
+]]></script>
 
 Example 2:
 ----------
 
 ### Bad Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        // This code "toggles" a boolean variable
-                        // back and forth
-                        if (isToggled == true) {
-                            isToggled = false;
-                        }
-                        else if (isToggled == false) {
-                            isToggled = true;
-                        }
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    // This code "toggles" a boolean variable
+    // back and forth
+    if (isToggled == true) {
+        isToggled = false;
+    }
+    else if (isToggled == false) {
+        isToggled = true;
+    }
+]]></script>
 
 ### Good Code
 
-                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                        isToggled = !isToggled;
-                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    isToggled = !isToggled;
+]]></script>
 
 <a name="booleanbreakup"></a>
 
@@ -389,24 +389,24 @@ Long conditionals should not appear as `while` or `if` conditions. Use a
 
 ### Bad Code
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            if ((value <10) || (value >45)) || (response ==”t”) && ((season ==FALL) || (season==SPRING))){
-                                ...
-                            };
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    if ((value <10) || (value >45)) || (response ==”t”) && ((season ==FALL) || (season==SPRING))){
+        ...
+    };
+]]></script>
 
 ### Good Code
 
-                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                            //check if price is ok, consumer agrees, and time is right
-                            boolean isReady = 	((value <10) || (value >45)) 
-                                                && (response ==”t”) 
-                                                && ((season ==FALL) 
-                                                || (season==SPRING)));
-                            if (isReady){
-                                //do some stuff
-                            };
-                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    //check if price is ok, consumer agrees, and time is right
+    boolean isReady = 	((value <10) || (value >45)) 
+                        && (response ==”t”) 
+                        && ((season ==FALL) 
+                        || (season==SPRING)));
+    if (isReady){
+        //do some stuff
+    };
+]]></script>
 
 <a name="robustness"></a>
 
@@ -420,34 +420,34 @@ re-enter or quit the program.
 
 ### Bad Code
 
-                            <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                // Code to convert a fraction to a decimal
-                                Scanner in = new Scanner(System.in);
-                                System.out.print("Enter numerator: ");
-                                double num = in.nextDouble();
-                                System.out.print("Enter denominator: ");
-                                double denom = in.nextDouble();
-                                System.out.println(num/denom);
-                            ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    // Code to convert a fraction to a decimal
+    Scanner in = new Scanner(System.in);
+    System.out.print("Enter numerator: ");
+    double num = in.nextDouble();
+    System.out.print("Enter denominator: ");
+    double denom = in.nextDouble();
+    System.out.println(num/denom);
+]]></script>
 
 ### Good Code
 
-                            <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                // Code to convert a fraction to a decimal
-                                Scanner in = new Scanner(System.in);
-                                double num = 0, denom = 0;
-                                do {
-                                    System.out.print("Enter numerator: ");
-                                    num = in.nextDouble();
-                                    System.out.print("Enter denominator: ");
-                                    denom = in.nextDouble();
-                                    if (denom == 0) {
-                                        System.out.println("Cannot have 0 in denominator!");
-                                    }
-                                }
-                                while (denom == 0);
-                                System.out.println(num/denom);
-                            ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    // Code to convert a fraction to a decimal
+    Scanner in = new Scanner(System.in);
+    double num = 0, denom = 0;
+    do {
+        System.out.print("Enter numerator: ");
+        num = in.nextDouble();
+        System.out.print("Enter denominator: ");
+        denom = in.nextDouble();
+        if (denom == 0) {
+            System.out.println("Cannot have 0 in denominator!");
+        }
+    }
+    while (denom == 0);
+    System.out.println(num/denom);
+]]></script>
 
 <a name="magicnumbers"></a>
 
@@ -460,28 +460,28 @@ programmer only has to update it in one place to change all instances.
 
 ### Bad Code
 
-                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                    double Td = 44100/(440*Math.pow(2, 1/12.0));
-                                    int T = (int)Math.round(Td);
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    double Td = 44100/(440*Math.pow(2, 1/12.0));
+    int T = (int)Math.round(Td);
 
-                                    int N = (int)(Math.round(44100*duration));
-                                ]]></script>
+    int N = (int)(Math.round(44100*duration));
+]]></script>
 
 ### Good Code
 
-                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                    // The sample rate
-                                    public static final int FS = 44100;
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    // The sample rate
+    public static final int FS = 44100;
 
-                                    ...
-                                    
-                                    // Compute the period one halfstep above a 440hz A
-                                    double Td = FS/(440*Math.pow(2, 1/12.0));
-                                    int T = (int)Math.round(Td);
+    ...
+    
+    // Compute the period one halfstep above a 440hz A
+    double Td = FS/(440*Math.pow(2, 1/12.0));
+    int T = (int)Math.round(Td);
 
-                                    // Compute the number of samples over a particular duration of seconds
-                                    int N = (int)(Math.round(FS*duration));
-                                ]]></script>
+    // Compute the number of samples over a particular duration of seconds
+    int N = (int)(Math.round(FS*duration));
+]]></script>
 
 <a name="finalcaps"></a>
 
@@ -492,15 +492,15 @@ All final variables must be in all caps.
 
 ### Bad Code
 
-                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                    public static final int secondsInDay = 24*3600;
-                                ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static final int secondsInDay = 24*3600;
+]]></script>
 
 ### Good Code
 
-                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                    public static final int SECONDS_IN_DAY = 24*3600;
-                                ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static final int SECONDS_IN_DAY = 24*3600;
+]]></script>
                                 
 
 <a name="methodsreturn"></a>
@@ -512,26 +512,26 @@ Methods may only return at the end of the method, not in the middle
 
 ### Bad Code
 
-                                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                            public static boolean isEven(int x) {
-                                                if (x % 2 == 0) {
-                                                    return true;
-                                                }
-                                                return false;
-                                            }
-                                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static boolean isEven(int x) {
+        if (x % 2 == 0) {
+            return true;
+        }
+        return false;
+    }
+]]></script>
 
 ### Good Code
 
-                                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                            public static boolean isEven(int x) {
-                                                boolean result = false;
-                                                if (x % 2 == 0) {
-                                                    result = true;
-                                                }
-                                                return result;
-                                            }
-                                        ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static boolean isEven(int x) {
+        boolean result = false;
+        if (x % 2 == 0) {
+            result = true;
+        }
+        return result;
+    }
+]]></script>
 
 <a name="efficient"></a>
 
@@ -554,17 +554,17 @@ debug, so split up method calls using variables when appropriate.
 
 ### Bad Code
 
-                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                    int myInt = Integer.parseInt(in.getLine().charAt(2));
-                                                ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int myInt = Integer.parseInt(in.getLine().charAt(2));
+]]></script>
 
 ### Good Code
 
-                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                    String inputLine = in.getLine();
-                                                    char id = inputLine.charAt(2);
-                                                    int myInt = Integer.parseInt(id);
-                                                ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    String inputLine = in.getLine();
+    char id = inputLine.charAt(2);
+    int myInt = Integer.parseInt(id);
+]]></script>
 
 <a name="textprompts"></a>
 
@@ -577,17 +577,17 @@ gives.
 
 ### Bad Code
 
-                                                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                        System.out.println("Enter something");
-                                                        int x = in.nextInt();
-                                                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    System.out.println("Enter something");
+    int x = in.nextInt();
+]]></script>
 
 ### Good Code
 
-                                                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                        System.out.print("Please enter a prime number: ");
-                                                        int x = int.nextInt();
-                                                    ]]></script>
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    System.out.print("Please enter a prime number: ");
+    int x = int.nextInt();
+]]></script>
 
 <a name="variablescoping"></a>
 
@@ -599,43 +599,43 @@ the professor gives permission to put a variable within the class scope.
 
 ### Bad Code
 
-                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                    int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
 
-                                                    public static int getWeekday(int year, int month, int day) {
-                                                        int weekday = 0;
-                                                        int ydoomsday=getDoomsdayYear(year);
-                                                        int reference = 0;
+    public static int getWeekday(int year, int month, int day) {
+        int weekday = 0;
+        int ydoomsday=getDoomsdayYear(year);
+        int reference = 0;
 
-                                                        if(isALeapYear(year);){
-                                                            refs[0]=4;
-                                                            refs[1]=29;
-                                                        }
-                                                        reference = refs[month-1];
+        if(isALeapYear(year);){
+            refs[0]=4;
+            refs[1]=29;
+        }
+        reference = refs[month-1];
 
-                                                        ...
-                                                    }
-                                                ]]></script>
+        ...
+    }
+]]></script>
 
 ### Good Code
 
-                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-                                                    public static int getWeekday(int year, int month, int day) {
-                                                        int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+    public static int getWeekday(int year, int month, int day) {
+        int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
 
-                                                        int weekday = 0;
-                                                        int ydoomsday=getDoomsdayYear(year);
-                                                        int reference = 0;
+        int weekday = 0;
+        int ydoomsday=getDoomsdayYear(year);
+        int reference = 0;
 
-                                                        if(isALeapYear(year);){
-                                                            refs[0]=4;
-                                                            refs[1]=29;
-                                                        }
-                                                        reference = refs[month-1];
+        if(isALeapYear(year);){
+            refs[0]=4;
+            refs[1]=29;
+        }
+        reference = refs[month-1];
 
-                                                        ...
-                                                    }
-                                                ]]></script>
+        ...
+    }
+]]></script>
   
   
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
