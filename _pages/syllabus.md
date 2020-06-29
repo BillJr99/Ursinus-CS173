@@ -624,6 +624,7 @@ Computer science is the study of how machines interact with data and the way in 
 
 The course will gradually build up skills by providing a lot of "skeleton code" that students fill in to do more complicated tasks, but by the end of the course, students will be able to write programs from scratch with multiple interlocking components.
 
+<a name="debugging"></a>
 ## A Word on Patience and Debugging
 Computer programming can often be frustrating, since not only do computers have very little tolerance for mistakes in their language (so-called "syntax errors") that will cause a program to not even run, but even if you manage to get a program to run, it still may not behave as you were intending it to. Computers will do exactly what you tell them to do in code, so you will have to figure out where you told the computer something different from what you intended. This process is called [debugging](https://en.wikipedia.org/wiki/Debugging), and it is time consuming and difficult even for very experienced programmers. So do not be hard on yourself if your programs don't work the first time around (they rarely do, even if you've been programming for decades!). But be sure you leave yourself adequate time to work on the assignments, because the amount of time it takes to resolve issues can be unpredictable.
 

@@ -323,7 +323,7 @@ Boolean variable names. Some not so good names are `readyCheck`,
 
 # Boolean Variable Comparisons
 
-Conditional checks must not compare booleans to `true` or false
+Conditional checks must not compare booleans to `true` or `false`.
 
 ## Example 1:
 
