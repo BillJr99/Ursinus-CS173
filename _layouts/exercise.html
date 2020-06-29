@@ -1,0 +1,134 @@
+---
+layout: default
+---
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
+<style>
+.image_off, #home:hover .image_on{
+   display:none
+}
+.image_on, #home:hover .image_off{
+   display:block
+}
+#editor {
+    position: relative;
+    width: 700px;
+    height: 250px;
+}
+#mainEditor {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+#feedbackText {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+
+</style>
+
+<script src="{{site.baseurl}}/assets/js/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{site.baseurl}}/assets/js/modules-common.js" type="text/javascript" charset="utf-8"></script>
+        
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>
+
+        {% if page.info.prev or page.info.next %}
+        <p>
+        {% if page.info.prev %}
+        <button onclick="window.location.href = '{{ page.info.prev }} ';"> &lt--- Previous</button>
+        {% endif %}
+        {% if page.info.next %}
+        <button onclick="window.location.href = '{{ page.info.next }}';">Next ---&gt</button>
+        {% endif %}
+        </p>
+        <HR>
+        {% endif %}
+        
+        {% if page.info.instructions %}
+        {{ page.info.instructions }}
+        {% endif %}
+        
+        
+        <div id="correctArea"></div>
+        
+        <p>
+        <button type = "button" onclick = "runCode()">Run</button>
+        </p>
+        
+        {% for file in page.files %}
+        <h3>{{ file.filename }}</h3>
+        
+        <div id="editor">
+        {{ file.code }}
+        </div>
+        {% endfor %}
+        
+        <h3>{{ page.files.main.filename }}</h3>
+        <div id="mainEditor">
+        {{ page.files.main.code }}
+        </div>
+        
+        <h3>Output</h3>
+        <div id="feedbackText"></div>
+
+        <canvas id="pscanvas"></canvas>
+
+
+        <script>
+        let canvas = document.getElementById("pscanvas");
+        let correctArea = document.getElementById("correctArea");
+
+        let editor = ace.edit("editor");
+        editor.setFontSize(16);
+        editor.session.setMode("ace/mode/java");
+
+        let mainEditor = ace.edit("mainEditor");
+        mainEditor.setFontSize(16);
+        mainEditor.session.setMode("ace/mode/java");
+        mainEditor.setReadOnly(true);
+
+        let feedback = ace.edit("feedbackText");
+        feedback.setFontSize(16);
+        feedback.renderer.setShowGutter(false);
+
+
+        function runCode() {
+
+            try {
+                let code = makeCode(editor.getValue(), mainEditor.getValue());
+                instance = new Processing(canvas, code);
+                {{ page.processor.feedbackprocess }}
+                if ({{ page.processor.correctcheck }}) {
+                    correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback }}</font></h3>";
+                    {% if page.processor.submitformlink %}
+                    correctArea.innerHTML += `
+                    <iframe src = "{{ page.processor.submitformlink }}" width=800 height=500>
+                    `;
+                    {% endif %}
+                }
+                else {
+                    correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback }}</font></h3>";
+                }
+            }
+            catch(err) {
+                feedback.setValue("Error: " + err.message);
+            }
+
+        }
+        </script>        
+        
+    {{ content }} 
+  </div>
+</div>
+
+<!-- Scripts -->
+			<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+			<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+			<script src="{{site.baseurl}}/assets/js/util.js"></script>
+			<script src="{{site.baseurl}}/assets/js/main.js"></script>
+<!-- End Scripts -->
+
+{% include analytics.html %}    
