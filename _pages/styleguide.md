@@ -6,8 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Style Guide"
 
 ---
 
-Style Guide
-===========
+# Style Guide
 
 As we've discussed and experienced, it's possible to write code that
 works, but which is completely unreadable and difficult to debug as a
@@ -23,8 +22,7 @@ Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling) and 
 On many assignments, 10% of the grade will depend on adhering to these
 rules.
 
-All rules:
-----------
+## All rules:
 
 * [Indentation/Brackets](#indentation)
 * [Naming Conventions](#naming)
@@ -49,8 +47,7 @@ All rules:
 
 <a name="indentation"></a>
 
-Indentation / Brackets
--------------------------
+# Indentation / Brackets
 
 All code must follow proper indentation and bracket conventions. This
 includes, but is not limited to, conditionals, loops, and methods.
@@ -93,8 +90,7 @@ applied and aligned properly
 
 <a name="naming"></a>
 
-Naming Conventions
----------------------
+# Naming Conventions
 
 -   Variable and method names should be in [camel
     case](https://en.wikipedia.org/wiki/Camel_case); that is, the first
@@ -143,8 +139,7 @@ word) and in descriptive language.
 
 <a name="documentationoverview"></a>
 
-Documentation: Overview
---------------------------
+# Documentation: Overview
 
 All files must have comments near the top of the main program’s file
 containing the following information: Author’s name, Assignment name,
@@ -166,8 +161,7 @@ example, here's a comment at the top of a file
 
 <a name="documentationinline"></a>
 
-Documentation: Inline code
------------------------------
+# Documentation: Inline code
 
 All variables (except for loop counters) must be documented. Do not
 state the obvious. This clutters up your code and does not convey any
@@ -188,8 +182,7 @@ information to the reader.
 
 <a name="documentationmethods"></a>
 
-Documentation: Methods
--------------------------
+# Documentation: Methods
 
 All methods will have documentation including, but not limited to:
 
@@ -238,8 +231,7 @@ of what it should look like:
 
 <a name="loopchoices"></a>
 
-Appropriate Loop Choices
----------------------------
+# Appropriate Loop Choices
 
 Code will be graded on appropriate loop choice. Using a while where a
 for loop is more appropriate will result in a deduction. You should use
@@ -297,8 +289,7 @@ while loop
 
 <a name="exiting"></a>
 
-Exiting Appropriately
-------------------------
+# Exiting Appropriately
 
 Ending the program anywhere except for the last line of the main will
 result in a deduction. (In other words, no `exit(0)` in the middle of
@@ -306,16 +297,14 @@ your code)
 
 <a name="breaking"></a>
 
-The Break Command
---------------------
+# The Break Command
 
 The `break` command should only appear in a `switch` statement, and not
 in a loop.
 
 <a name="goto"></a>
 
-The GOTO Command
--------------------
+# The GOTO Command
 
 Do not use `goto` anywhere in your code! It is an artifact from older
 programming languages and leads to [spaghetti
@@ -323,8 +312,7 @@ code](https://en.wikipedia.org/wiki/Spaghetti_code).
 
 <a name="boolean"></a>
 
-Positive Boolean Variable Names
------------------------------------
+# Positive Boolean Variable Names
 
 To avoid confusion, boolean variable names should convey the positive
 case. In other words `isReady`, `isValid`, `isProperTime` are good
@@ -333,13 +321,11 @@ Boolean variable names. Some not so good names are `readyCheck`,
 
 <a name="booleancompare"></a>
 
-Boolean Variable Comparisons
---------------------------------
+# Boolean Variable Comparisons
 
 Conditional checks must not compare booleans to `true` or false
 
-Example 1:
-----------
+## Example 1:
 
 ### Bad Code
 
@@ -357,8 +343,7 @@ Example 1:
     }
 ]]></script>
 
-Example 2:
-----------
+## Example 2:
 
 ### Bad Code
 
@@ -381,8 +366,7 @@ Example 2:
 
 <a name="booleanbreakup"></a>
 
-Breaking Up Long Boolean Statements
----------------------------------------
+# Breaking Up Long Boolean Statements
 
 Long conditionals should not appear as `while` or `if` conditions. Use a
 `boolean` variables for readability and self-documentation
@@ -410,8 +394,7 @@ Long conditionals should not appear as `while` or `if` conditions. Use a
 
 <a name="robustness"></a>
 
-Robustness
---------------
+# Robustness
 
 All input must be checked. Bad input must be handled gracefully; code
 must not crash on any inputs. Bad input must not be handled silently. If
@@ -451,8 +434,7 @@ re-enter or quit the program.
 
 <a name="magicnumbers"></a>
 
-No Magic Numbers!
----------------------
+# No Magic Numbers!
 
 A "magic number" is a number in the program that should be defined as a
 final constant, especially if it's used more than once, since the
@@ -485,8 +467,7 @@ programmer only has to update it in one place to change all instances.
 
 <a name="finalcaps"></a>
 
-Capitalizing Final Variables
---------------------------------
+# Capitalizing Final Variables
 
 All final variables must be in all caps.
 
@@ -505,8 +486,7 @@ All final variables must be in all caps.
 
 <a name="methodsreturn"></a>
 
-Methods Returning At The End
---------------------------------
+# Methods Returning At The End
 
 Methods may only return at the end of the method, not in the middle
 
@@ -535,8 +515,7 @@ Methods may only return at the end of the method, not in the middle
 
 <a name="efficient"></a>
 
-Efficiently Written Code
-----------------------------
+# Efficiently Written Code
 
 Code must be efficient as possible without sacrificing readability. This
 includes, but is not limited to chaining your if statements, using the
@@ -546,8 +525,7 @@ smallest data type necessary. For instance, if the user is to answer
 
 <a name="compoundmethods"></a>
 
-Avoid Compound Method calls
--------------------------------
+# Avoid Compound Method calls
 
 Compounding methods and parameters makes your code difficult to read and
 debug, so split up method calls using variables when appropriate.
@@ -568,8 +546,7 @@ debug, so split up method calls using variables when appropriate.
 
 <a name="textprompts"></a>
 
-Text Input Prompts
-----------------------
+# Text Input Prompts
 
 Prompts must be meaningful and input must appear on the same line as the
 prompt. There must be a space between the prompt and the input the user
@@ -591,8 +568,7 @@ gives.
 
 <a name="variablescoping"></a>
 
-Variable Scoping
---------------------
+# Variable Scoping
 
 All variable declarations must be within the scope of a method unless
 the professor gives permission to put a variable within the class scope.
