@@ -14,9 +14,9 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: "http://www.billmongan.com"
   feedbackprocess: | 
-    let result = eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 1=9.8(",");7(3 2=0;2<1.6;2++){1[2]=5(1[2])}4(1);',10,10,'|pos|i|let|print|parseFloat|length|for|split|feedbackString'.split('|'),0,{}))
+    const _0x1513=['length','split'];(function(_0x280d5c,_0x15135f){const _0x53436e=function(_0xd60316){while(--_0xd60316){_0x280d5c['push'](_0x280d5c['shift']());}};_0x53436e(++_0x15135f);}(_0x1513,0x10c));const _0x5343=function(_0x280d5c,_0x15135f){_0x280d5c=_0x280d5c-0x0;let _0x53436e=_0x1513[_0x280d5c];return _0x53436e;};let pos=feedbackString[_0x5343('0x1')](',');for(let i=0x0;i<pos[_0x5343('0x0')];i++){pos[i]=parseFloat(pos[i]);}
   correctcheck: |
-    eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2[0]==4&&2[1]==3',5,5,'||result|10|5'.split('|'),0,{}))
+    const _0x5f2a=['length','split'];(function(_0x79fdb7,_0x5f2a36){const _0x238483=function(_0x34aa41){while(--_0x34aa41){_0x79fdb7['push'](_0x79fdb7['shift']());}};_0x238483(++_0x5f2a36);}(_0x5f2a,0x84));const _0x2384=function(_0x79fdb7,_0x5f2a36){_0x79fdb7=_0x79fdb7-0x0;let _0x238483=_0x5f2a[_0x79fdb7];return _0x238483;};let pos=feedbackString[_0x2384('0x1')](',');for(let i=0x0;i<pos[_0x2384('0x0')];i++){pos[i]=parseFloat(pos[i]);}
  
 files:
   - filename: "File.java"
