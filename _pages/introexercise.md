@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science"
 
 info:
   course_number: CS173
-  prev: "*baseurl/Modules/Intro"
+  prev: "./Intro"
   instructions: "Make this print 5, 10 instead of 10, 5."
   
 processor:  
