@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - NetBeans Software Environment"
 excerpt: "CS173: Intro to Computer Science - NetBeans Software Environment"
     
 ---
+# {{ page.title }}
 
 This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-tralie).
 

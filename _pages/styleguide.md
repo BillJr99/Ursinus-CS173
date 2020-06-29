@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Style Guide"
 excerpt: "CS173: Intro to Computer Science - Style Guide"
 
 ---
+# {{ page.title }}
 
 # Style Guide
 
