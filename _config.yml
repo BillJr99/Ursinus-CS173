@@ -13,11 +13,7 @@ description: "Intro to Computer Science"
 url                      : https://BillJr99.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "/Ursinus-CS173" # the subpath of your site, e.g. "/blog"
 
-# Analytics
-analytics:
-  provider               :  "google" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          : "UA-24052857-1"    
+# Analytics  
 google_analytics         : "UA-24052857-1"
     
 # Reading Files
