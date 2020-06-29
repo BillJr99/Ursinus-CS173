@@ -191,6 +191,15 @@ letter_grades:
 schedule:
 - week: "0"
   date: "0"
+  title: "Course Overview: What is Computer Science?"
+  link: "/Ursinus-CS173-Overview"
+  readings:
+  - rtitle: "NetBeans IDE Software Environment"
+    rlink: "./NetBeans"
+    
+OLDschedule:
+- week: "0"
+  date: "0"
   title: "Course Sneak Preview, HTML, What Is Computer Science? Computers Vs. Humans"
   link: "https://docs.google.com/presentation/d/1JFMa2svoSIC7l_ABs-dxXZ4_-BJaQj7MWVuXvW0dSUs/edit?usp=sharing"
   readings:
