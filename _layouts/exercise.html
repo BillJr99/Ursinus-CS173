@@ -98,9 +98,9 @@ layout: default
             try {
                 let code = makeCode(editor.getValue(), mainEditor.getValue());
                 instance = new Processing(canvas, code);
-                {{ page.processor.feedbackprocess }}
-                if ({{ page.processor.correctcheck }}) {
-                    correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback }}</font></h3>";
+                {{ page.processor.feedbackprocess | strip }}
+                if ({{ page.processor.correctcheck | strip}}) {
+                    correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
                     {% if page.processor.submitformlink %}
                     correctArea.innerHTML += `
                     <iframe src = "{{ page.processor.submitformlink }}" width=800 height=500>
@@ -108,7 +108,7 @@ layout: default
                     {% endif %}
                 }
                 else {
-                    correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback }}</font></h3>";
+                    correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
                 }
             }
             catch(err) {
