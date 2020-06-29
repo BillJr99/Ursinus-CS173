@@ -198,7 +198,7 @@ schedule:
     rlink: "./NetBeans"
   deliverables:
   - dtitle: "Homework 0: Warmup Handed Out"    
-    dlink: "/Assignments/0-Warmup"
+    dlink: "./Assignments/0-Warmup"
     
 OLDschedule:
 - week: "0"
