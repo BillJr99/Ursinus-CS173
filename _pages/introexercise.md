@@ -1,5 +1,5 @@
 ---
-layout: module
+layout: exercise
 permalink: /Modules/IntroExercise
 title: "CS173: Intro to Computer Science"
 excerpt: "CS173: Intro to Computer Science"
