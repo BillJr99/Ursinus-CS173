@@ -65,9 +65,7 @@ layout: default
         <div id="mainEditor">
         {% else %}
         <div id="editor">
-        {% endif %}
-        
-        {{ file.code | strip }}
+        {% endif %}{{ file.code | strip }}
         </div>
         {% endfor %}
         
