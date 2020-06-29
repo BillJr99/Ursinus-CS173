@@ -70,7 +70,12 @@ Second of all, the tabbing is all over the place. This makes it easy to
 miss a closing brace somewhere, which can be very difficult to resolve
 for multiply nested blocks.
 
-<div><div id="highlighter_996110" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Up</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0)</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>  
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            for (int i = 0; i < 100; i++) {
+                        if (i%2 == 0 && i%3 == 0)
+                                System.out.println(i + " is divisible by 6");
+            }
+                    ]]></script>  
 
 ### Good Code
 
@@ -102,34 +107,7 @@ Naming Conventions
 The names of the variables are not descriptive, and the method is not
 written as a verb or in camel case.
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `public`{.cpp .keyword .bold}
-  2                                    `static`{.cpp .keyword .bold}
-  3                                    `void`{.cpp .keyword .bold}
-  4                                    `coolstuff(`{.cpp .plain}`int`{.cpp
-  5                                    .color1 .bold} `x) {`{.cpp .plain}
-  6                                    `    `{.cpp .spaces}`int`{.cpp
-  7                                    .color1 .bold} `myvar = x;`{.cpp
-  8                                    .plain}
-                                       `    `{.cpp .spaces}`do`{.cpp
-                                       .keyword .bold} `{`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`System.out.print(myvar + `{
-                                       .cpp
-                                       .plain}`" "`{.cpp .string}`);`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`myvar = (myvar + 7)%12;`{.c
-                                       pp
-                                       .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp .spaces}`while`{.cpp
-                                       .keyword .bold}`(myvar != x);`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+<div><div id="highlighter_491282" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">public</code> <code class="cpp keyword bold">static</code> <code class="cpp keyword bold">void</code> <code class="cpp plain">coolstuff(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">x) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">myvar = x;</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">do</code> <code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.print(myvar + </code><code class="cpp string">" "</code><code class="cpp plain">);</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">myvar = (myvar + 7)%12;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code><code class="cpp plain">(myvar != x);</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
 
 ### Good Code
 
@@ -137,38 +115,7 @@ The method is now a verb that describes what it does, and its name and
 all variables are written in camel case (assuming "halfstep" is one
 word) and in descriptive language.
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `public`{.cpp .keyword .bold}
-  2                                    `static`{.cpp .keyword .bold}
-  3                                    `void`{.cpp .keyword .bold}
-  4                                    `printCircleOfFifths(`{.cpp
-  5                                    .plain}`int`{.cpp .color1 .bold}
-  6                                    `halfstepInit) {`{.cpp .plain}
-  7                                    `    `{.cpp .spaces}`int`{.cpp
-  8                                    .color1 .bold}
-                                       `halfstepCurr = halfstepInit;`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`do`{.cpp
-                                       .keyword .bold} `{`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`System.out.print(halfstepCu
-                                       rr + `{.cpp
-                                       .plain}`" "`{.cpp .string}`);`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`halfstepCurr = (halfstepCur
-                                       r + 7)%12;`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp .spaces}`while`{.cpp
-                                       .keyword
-                                       .bold}`(halfstepCurr != halfstepInit
-                                       );`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+<div><div id="highlighter_264142" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">public</code> <code class="cpp keyword bold">static</code> <code class="cpp keyword bold">void</code> <code class="cpp plain">printCircleOfFifths(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">halfstepInit) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">halfstepCurr = halfstepInit;</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">do</code> <code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.print(halfstepCurr + </code><code class="cpp string">" "</code><code class="cpp plain">);</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">halfstepCurr = (halfstepCurr + 7)%12;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code><code class="cpp plain">(halfstepCurr != halfstepInit);</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
 
 <a name="documentationoverview"></a>
 
