@@ -6,6 +6,8 @@ excerpt: "CS173: Intro to Computer Science - Style Guide"
 
 ---
 
+This is {{ site.title }}.
+
 Style Guide
 ===========
 
@@ -19,7 +21,7 @@ hard work to go to waste!
 
 Below are some rules to help keep you on the rails as you design (they
 have been adapted from [Professor
-Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling)).
+Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling) and from [Professor Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-tralie)).
 On many assignments, 10% of the grade will depend on adhering to these
 rules
 
