@@ -660,7 +660,7 @@ Since this is a class-wide communication, the following rules apply to Microsoft
 1. Students are expected to be respectful and mindful of the [classroom environment and inclusivity standards](#environment). 
 2. They are equally applicable to a virtual environment as they are in class.
 3. Students are not permitted to share direct answers or questions which might completely give away answers to any homework problems or labs publicly on Microsoft Teams. When in doubt, please send me a direct message there.
-4. I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate. This could be an opportunity to earn [grace points](#grace)!).
+4. I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate).
 5. Students may ask anonymous questions by following a link to a survey at the top of each channel.
 
 # Readings
@@ -690,11 +690,11 @@ As part of embracing bugs in the class, students will keep a running tab of synt
 Letter grades will be assigned on the scale above at the end of the course. "Grade grubbing" will not be tolerated. On my end, every assignment has or will have very precise expectations and point breakdowns. I will also return assignments in a timely manner, and the running weighted grades will be updated on Canvas. Therefore, I expect a commensurate level of respect from you. In sum, you should know where you stand at all times, there will be plenty of opportunities to improve your standing, and there should be no surprises at the end of the course.
 
 # Classroom Participation
-<a name="grace"></a>
-## Grace Points/ Group Work
-In addition to ordinary participation that follows the natural rhythm of a lecture, most days there will be at least one "grace point problem," which is a question that follows on the heels of newly presented material. Students will split into groups of 2 and try to write some code to address a particular problem. When a group of students believe they have figured out the answer, they raise their hand. The other students can continue to work while I verify that the answer is correct. If the answer is correct, the students present the answer to the class. At that point, each student in the group receives a grace point, which can be applied towards one free late day on most assignments and labs (2 grace points = 1 late day). If the group is not correct upon my checking, then the groups continue this process until one gets it correct, and then the competition is over.
 
-Other ways to earn grace points are as follows:
+## Group Work
+In addition to ordinary participation that follows the natural rhythm of a lecture, most days there will be at least one followup problem, which is a question that follows on the heels of newly presented material. Students will split into groups of 2 and try to write some code to address a particular problem. When a group of students believe they have figured out the answer, they raise their hand. The other students can continue to work while I verify that the answer is correct. If the answer is correct, the students present the answer to the class. If the group is not correct upon my checking, then the groups continue this process until one gets it correct.
+
+Other ways to help your fellow classmates in class are as follows:
 
 * Helping to teach a student a topic during office hours.
 * Certain calls for participation in class
@@ -734,8 +734,6 @@ In the absence of accommodations, all assignments are due at 11:59PM Eastern Tim
 * -25% for work submitted up to 48 hours late
 * -40% for work submitted up to 96 hours late
 * -50% for work submitted more than 96 hours late
-
-Students may buy late days with 2 grace points, for a maximum of 7 late days per assignment.
 
 # Collaboration Policy
 <a name="collaboration"></a>
