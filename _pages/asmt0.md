@@ -8,7 +8,7 @@ info:
   coursenum: CS173
   officehourspoll: "https://www.when2meet.com/?9311271-8GY4a"
   testproject:
-    ziplink: "."
+    ziplink: "../../files/asmt0/HW0-master.zip"
     zipfilename: "HW0-master.zip"
     zipdirname: "HW0-master"
   
