@@ -196,6 +196,9 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "./NetBeans"
+  deliverables:
+  - dtitle: "Homework 0: Warmup Handed Out"    
+    dlink: "#"
     
 OLDschedule:
 - week: "0"
