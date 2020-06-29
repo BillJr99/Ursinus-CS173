@@ -9,4 +9,3 @@ info:
   video: "https://www.youtube.com/embed/PvnlpPWAcZc"
   
 ---
-Welcome! 
