@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: null
 permalink: /Style-Guide
 title: "CS173: Intro to Computer Science - Style Guide"
 excerpt: "CS173: Intro to Computer Science - Style Guide"
@@ -10,7 +10,7 @@ As we've discussed an experienced, it's possible to write code that works, but w
                     
 Below are some rules to help keep you on the rails as you design (they have been adapted from [Professor Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling)).  On many assignments, 10% of the grade will depend on adhering to these rules
 
-##All rules
+## All rules
                     
 *   [Indentation/Brackets](#indentation)
 *   [Naming Conventions](#naming)
