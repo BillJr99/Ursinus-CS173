@@ -82,7 +82,13 @@ for multiply nested blocks.
 Here's a better version of the above example, in which brackets are
 applied and aligned properly
 
-<div><div id="highlighter_852586" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Up</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0) {</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">} </code></div><div class="line number5 index4 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
+<script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                    for (int i = 0; i < 100; i++) {
+                        if (i%2 == 0 && i%3 == 0) {
+                            System.out.println(i + " is divisible by 6");
+                        } 
+                    }
+                    ]]></script> 
 
 
 <a name="naming"></a>
@@ -107,7 +113,16 @@ Naming Conventions
 The names of the variables are not descriptive, and the method is not
 written as a verb or in camel case.
 
-<div><div id="highlighter_491282" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">public</code> <code class="cpp keyword bold">static</code> <code class="cpp keyword bold">void</code> <code class="cpp plain">coolstuff(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">x) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">myvar = x;</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">do</code> <code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.print(myvar + </code><code class="cpp string">" "</code><code class="cpp plain">);</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">myvar = (myvar + 7)%12;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code><code class="cpp plain">(myvar != x);</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
+                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                    public static void coolstuff(int x) {
+                        int myvar = x;
+                        do {
+                            System.out.print(myvar + " ");
+                            myvar = (myvar + 7)%12;
+                        }
+                        while(myvar != x);
+                    }
+                ]]></script>  
 
 ### Good Code
 
@@ -115,7 +130,16 @@ The method is now a verb that describes what it does, and its name and
 all variables are written in camel case (assuming "halfstep" is one
 word) and in descriptive language.
 
-<div><div id="highlighter_264142" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">public</code> <code class="cpp keyword bold">static</code> <code class="cpp keyword bold">void</code> <code class="cpp plain">printCircleOfFifths(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">halfstepInit) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp color1 bold">int</code> <code class="cpp plain">halfstepCurr = halfstepInit;</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">do</code> <code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.print(halfstepCurr + </code><code class="cpp string">" "</code><code class="cpp plain">);</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">halfstepCurr = (halfstepCurr + 7)%12;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">}</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">while</code><code class="cpp plain">(halfstepCurr != halfstepInit);</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                    public static void printCircleOfFifths(int halfstepInit) {
+                        int halfstepCurr = halfstepInit;
+                        do {
+                            System.out.print(halfstepCurr + " ");
+                            halfstepCurr = (halfstepCurr + 7)%12;
+                        }
+                        while(halfstepCurr != halfstepInit);
+                    }
+                ]]></script>
 
 <a name="documentationoverview"></a>
 
@@ -131,24 +155,14 @@ or [this
 link](http://www.tutorialspoint.com/java/java_documentation.htm). As an
 example, here's a comment at the top of a file
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `/**`{.cpp .comments}
-  2                                    `* The Stack class represents a last
-  3                                    -in-first-out stack of objects. `{.c
-  4                                    pp
-  5                                    .comments}
-  6                                    `* @author  Chris Tralie CS 173`{.cp
-                                       p
-                                       .comments}
-                                       `* @version 0.1, January 2020`{.cpp
-                                       .comments}
-                                       `* Note that this version is not thr
-                                       ead safe.`{.cpp
-                                       .comments}
-                                       `*/`{.cpp .comments}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        /**
+                        * The Stack class represents a last-in-first-out stack of objects. 
+                        * @author  Chris Tralie CS 173
+                        * @version 0.1, January 2020
+                        * Note that this version is not thread safe.
+                        */ 
+                    ]]></script>
 
 <a name="documentationinline"></a>
 
@@ -161,27 +175,16 @@ information to the reader.
 
 ### Bad Code
 
-[?](#)
-
-  --- ---------------------------------------------------------------------------------------------
-  1   `int`{.cpp .color1 .bold} `numCounter;     `{.cpp .plain}`//counts numbers`{.cpp .comments}
-  --- ---------------------------------------------------------------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        int numCounter;  	//counts numbers
+                    ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1 .bold}
-  2                                    `numCounter;     `{.cpp
-                                       .plain}`// Keeps track of how many `
-                                       {.cpp
-                                       .comments}
-                                       `                    `{.cpp
-                                       .spaces}`// integers the user has en
-                                       tered`{.cpp
-                                       .comments}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        int numCounter; 	// Keeps track of how many 
+                                            // integers the user has entered
+                    ]]></script>
 
 <a name="documentationmethods"></a>
 
@@ -206,93 +209,32 @@ which you can fill in with details. Below is an example (courtesy of
 Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling))
 of what it should look like:
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `/**`{.cpp .comments}
-  2                                    ` `{.cpp
-  3                                    .spaces}`* Returns an Image object t
-  4                                    hat can then be painted on the scree
-  5                                    n. `{.cpp
-  6                                    .comments}
-  7                                    ` `{.cpp
-  8                                    .spaces}`* The url argument must spe
-  9                                    cify an absolute {@link URL}. The na
-  10                                   me`{.cpp
-  11                                   .comments}
-  12                                   ` `{.cpp
-  13                                   .spaces}`* argument is a specifier t
-  14                                   hat is relative to the url argument.
-  15                                    `{.cpp
-  16                                   .comments}
-  17                                   ` `{.cpp .spaces}`* <p>`{.cpp
-  18                                   .comments}
-  19                                   ` `{.cpp
-  20                                   .spaces}`* This method always return
-  21                                   s immediately, whether or not the `{
-  22                                   .cpp
-  23                                   .comments}
-  24                                   ` `{.cpp
-                                       .spaces}`* image exists. When this a
-                                       pplet attempts to draw the image on`
-                                       {.cpp
-                                       .comments}
-                                       ` `{.cpp
-                                       .spaces}`* the screen, the data will
-                                        be loaded. The graphics primitives 
-                                       `{.cpp
-                                       .comments}
-                                       ` `{.cpp
-                                       .spaces}`* that draw the image will 
-                                       incrementally paint on the screen. `
-                                       {.cpp
-                                       .comments}
-                                       ` `{.cpp .spaces}`*`{.cpp .comments}
-                                       ` `{.cpp
-                                       .spaces}`* @param  url  an absolute 
-                                       URL giving the base location of the 
-                                       image`{.cpp
-                                       .comments}
-                                       ` `{.cpp
-                                       .spaces}`* @param  name the location
-                                        of the image, relative to the url a
-                                       rgument`{.cpp
-                                       .comments}
-                                       ` `{.cpp
-                                       .spaces}`* @return      the image at
-                                        the specified URL`{.cpp
-                                       .comments}
-                                       ` `{.cpp
-                                       .spaces}`* @see         Image`{.cpp
-                                       .comments}
-                                       ` `{.cpp .spaces}`*/`{.cpp
-                                       .comments}
-                                       `public`{.cpp .keyword .bold}
-                                       `Image getImage(URL url, String name
-                                       ) {`{.cpp
-                                       .plain}
-                                       `    `{.cpp
-                                       .spaces}`Image image = null;`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`try`{.cpp
-                                       .keyword .bold} `{`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`image = getImage(`{.cpp
-                                       .plain}`new`{.cpp .keyword .bold}
-                                       `URL(url, name));`{.cpp .plain}
-                                       `    `{.cpp .spaces}`} `{.cpp
-                                       .plain}`catch`{.cpp .keyword .bold}
-                                       `(MalformedURLException e) {`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`e.printStackTrace();`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp .spaces}`return`{.cpp
-                                       .keyword .bold} `image;`{.cpp
-                                       .plain}
-                                       ` `{.cpp .spaces}`}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        /**
+                         * Returns an Image object that can then be painted on the screen. 
+                         * The url argument must specify an absolute {@link URL}. The name
+                         * argument is a specifier that is relative to the url argument. 
+                         * <p>
+                         * This method always returns immediately, whether or not the 
+                         * image exists. When this applet attempts to draw the image on
+                         * the screen, the data will be loaded. The graphics primitives 
+                         * that draw the image will incrementally paint on the screen. 
+                         *
+                         * @param  url  an absolute URL giving the base location of the image
+                         * @param  name the location of the image, relative to the url argument
+                         * @return      the image at the specified URL
+                         * @see         Image
+                         */
+                        public Image getImage(URL url, String name) {
+                            Image image = null;
+                            try {
+                                image = getImage(new URL(url, name));
+                            } catch (MalformedURLException e) {
+                                e.printStackTrace();
+                            }
+                            return image;
+                         }
+                    ]]></script>
 
 <a name="loopchoices"></a>
 
@@ -310,94 +252,48 @@ Since the loop below starts at 0 and stops at 9, a for loop is much more
 appropriate. Furthermore, the code uses a break statement, which can be
 confusing.
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1 .bold}
-  2                                    `i = 0;`{.cpp .plain}
-  3                                    `int`{.cpp .color1 .bold}
-  4                                    `sum = 0;`{.cpp .plain}
-  5                                    `while`{.cpp .keyword .bold}
-  6                                    `(`{.cpp .plain}`true`{.cpp .keyword
-  7                                    .bold}`) {`{.cpp .plain}
-  8                                    `    `{.cpp .spaces}`if`{.cpp
-  9                                    .keyword .bold} `(i >= 10) {`{.cpp
-                                       .plain}
-                                       `        `{.cpp .spaces}`break`{.cpp
-                                       .keyword .bold}`;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`sum += Math.`{.cpp
-                                       .plain}`pow`{.cpp .functions
-                                       .bold}`(2, (`{.cpp
-                                       .plain}`double`{.cpp .color1
-                                       .bold}`)i);`{.cpp .plain}
-                                       `    `{.cpp .spaces}`i++;`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            int i = 0;
+                            int sum = 0;
+                            while (true) {
+                                if (i >= 10) {
+                                    break;
+                                }
+                                sum += Math.pow(2, (double)i);
+                                i++;
+                            }
+                        ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1 .bold}
-  2                                    `sum = 0;`{.cpp .plain}
-  3                                    `for`{.cpp .keyword .bold} `(`{.cpp
-  4                                    .plain}`int`{.cpp .color1 .bold}
-                                       `i = 0; i < 10; i++) {`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`sum += Math.`{.cpp
-                                       .plain}`pow`{.cpp .functions
-                                       .bold}`(2, (`{.cpp
-                                       .plain}`double`{.cpp .color1
-                                       .bold}`)i);`{.cpp .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            int sum = 0;
+                            for (int i = 0; i < 10; i++) {
+                                sum += Math.pow(2, (double)i);
+                            }
+                        ]]></script>
 
 ### Bad Code
-
-Since the loop below starts at 0 and stops at 9, a for loop is much more
-appropriate. Furthermore, the code uses a break statement, which can be
-confusing.
-
-* * * * *
 
 As another example, the code below would be better stylistically in a do
 while loop
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1 .bold}
-  2                                    `choice = `{.cpp .plain}`rand`{.cpp
-  3                                    .functions .bold}`.nextInt(4);`{.cpp
-  4                                    .plain}
-                                       `while`{.cpp .keyword .bold}
-                                       `(choice==temp){`{.cpp .plain}
-                                       `    `{.cpp .spaces}`choice = `{.cpp
-                                       .plain}`rand`{.cpp .functions
-                                       .bold}`.nextInt(4);`{.cpp .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            int choice = rand.nextInt(4);
+                            while (choice==temp){
+                                choice = rand.nextInt(4);
+                            }
+                        ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1 .bold}
-  2                                    `choice = -1;`{.cpp .plain}
-  3                                    `do`{.cpp .keyword .bold} `{`{.cpp
-  4                                    .plain}
-  5                                    `    `{.cpp .spaces}`choice = `{.cpp
-                                       .plain}`rand`{.cpp .functions
-                                       .bold}`.nextInt(4);`{.cpp .plain}
-                                       `}`{.cpp .plain}
-                                       `while`{.cpp .keyword .bold}
-                                       `(choice==temp);`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            int choice = -1;
+                            do {
+                                choice = rand.nextInt(4);
+                            }
+                            while (choice==temp);
+                        ]]></script>
 
 <a name="exiting"></a>
 
@@ -447,73 +343,41 @@ Example 1:
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `if`{.cpp .keyword .bold}
-  2                                    `((isValid == `{.cpp
-  3                                    .plain}`true`{.cpp .keyword
-                                       .bold}`) || (isReady == `{.cpp
-                                       .plain}`false`{.cpp .keyword
-                                       .bold}`)) {`{.cpp .plain}
-                                       `    `{.cpp .spaces}`...`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        if ((isValid == true) || (isReady == false)) {
+                            ...
+                        }
+                    ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `if`{.cpp .keyword .bold}
-  2                                    `(isValid || !isReady) {`{.cpp
-  3                                    .plain}
-                                       `    `{.cpp .spaces}`...`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        if (isValid || !isReady) {
+                            ...
+                        }
+                    ]]></script>
 
 Example 2:
 ----------
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `// This code "toggles" a boolean va
-  2                                    riable`{.cpp
-  3                                    .comments}
-  4                                    `// back and forth`{.cpp .comments}
-  5                                    `if`{.cpp .keyword .bold}
-  6                                    `(isToggled == `{.cpp
-  7                                    .plain}`true`{.cpp .keyword
-  8                                    .bold}`) {`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`isToggled = `{.cpp
-                                       .plain}`false`{.cpp .keyword
-                                       .bold}`;`{.cpp .plain}
-                                       `}`{.cpp .plain}
-                                       `else`{.cpp .keyword .bold}
-                                       `if`{.cpp .keyword .bold}
-                                       `(isToggled == `{.cpp
-                                       .plain}`false`{.cpp .keyword
-                                       .bold}`) {`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`isToggled = `{.cpp
-                                       .plain}`true`{.cpp .keyword
-                                       .bold}`;`{.cpp .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        // This code "toggles" a boolean variable
+                        // back and forth
+                        if (isToggled == true) {
+                            isToggled = false;
+                        }
+                        else if (isToggled == false) {
+                            isToggled = true;
+                        }
+                    ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  --- ----------------------------------------
-  1   `isToggled = !isToggled;`{.cpp .plain}
-  --- ----------------------------------------
+                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                        isToggled = !isToggled;
+                    ]]></script>
 
 <a name="booleanbreakup"></a>
 
@@ -525,47 +389,24 @@ Long conditionals should not appear as `while` or `if` conditions. Use a
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `if`{.cpp .keyword .bold}
-  2                                    `((value <10) || (value >45)) || (re
-  3                                    sponse ==”t”) && ((season ==FALL) ||
-                                        (season==SPRING))){`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`...`{.cpp
-                                       .plain}
-                                       `};`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            if ((value <10) || (value >45)) || (response ==”t”) && ((season ==FALL) || (season==SPRING))){
+                                ...
+                            };
+                        ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `//check if price is ok, consumer ag
-  2                                    rees, and time is right`{.cpp
-  3                                    .comments}
-  4                                    `boolean isReady =   ((value <10) ||
-  5                                     (value >45)) `{.cpp
-  6                                    .plain}
-  7                                    `                    `{.cpp
-  8                                    .spaces}`&& (response ==”t”) `{.cpp
-                                       .plain}
-                                       `                    `{.cpp
-                                       .spaces}`&& ((season ==FALL) `{.cpp
-                                       .plain}
-                                       `                    `{.cpp
-                                       .spaces}`|| (season==SPRING)));`{.cp
-                                       p
-                                       .plain}
-                                       `if`{.cpp .keyword .bold}
-                                       `(isReady){`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`//do some stuff`{.cpp
-                                       .comments}
-                                       `};`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                            //check if price is ok, consumer agrees, and time is right
+                            boolean isReady = 	((value <10) || (value >45)) 
+                                                && (response ==”t”) 
+                                                && ((season ==FALL) 
+                                                || (season==SPRING)));
+                            if (isReady){
+                                //do some stuff
+                            };
+                        ]]></script>
 
 <a name="robustness"></a>
 
@@ -579,79 +420,34 @@ re-enter or quit the program.
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `// Code to convert a fraction to a 
-  2                                    decimal`{.cpp
-  3                                    .comments}
-  4                                    `Scanner in = `{.cpp
-  5                                    .plain}`new`{.cpp .keyword .bold}
-  6                                    `Scanner(System.in);`{.cpp .plain}
-  7                                    `System.out.print(`{.cpp
-                                       .plain}`"Enter numerator: "`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `double`{.cpp .color1 .bold}
-                                       `num = in.nextDouble();`{.cpp
-                                       .plain}
-                                       `System.out.print(`{.cpp
-                                       .plain}`"Enter denominator: "`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `double`{.cpp .color1 .bold}
-                                       `denom = in.nextDouble();`{.cpp
-                                       .plain}
-                                       `System.out.println(num/denom);`{.cp
-                                       p
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                            <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                // Code to convert a fraction to a decimal
+                                Scanner in = new Scanner(System.in);
+                                System.out.print("Enter numerator: ");
+                                double num = in.nextDouble();
+                                System.out.print("Enter denominator: ");
+                                double denom = in.nextDouble();
+                                System.out.println(num/denom);
+                            ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `// Code to convert a fraction to a 
-  2                                    decimal`{.cpp
-  3                                    .comments}
-  4                                    `Scanner in = `{.cpp
-  5                                    .plain}`new`{.cpp .keyword .bold}
-  6                                    `Scanner(System.in);`{.cpp .plain}
-  7                                    `double`{.cpp .color1 .bold}
-  8                                    `num = 0, denom = 0;`{.cpp .plain}
-  9                                    `do`{.cpp .keyword .bold} `{`{.cpp
-  10                                   .plain}
-  11                                   `    `{.cpp
-  12                                   .spaces}`System.out.print(`{.cpp
-  13                                   .plain}`"Enter numerator: "`{.cpp
-  14                                   .string}`);`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`num = in.nextDouble();`{.cp
-                                       p
-                                       .plain}
-                                       `    `{.cpp
-                                       .spaces}`System.out.print(`{.cpp
-                                       .plain}`"Enter denominator: "`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`denom = in.nextDouble();`{.
-                                       cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword .bold}
-                                       `(denom == 0) {`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`System.out.println(`{.cpp
-                                       .plain}`"Cannot have 0 in denominato
-                                       r!"`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `}`{.cpp .plain}
-                                       `while`{.cpp .keyword .bold}
-                                       `(denom == 0);`{.cpp .plain}
-                                       `System.out.println(num/denom);`{.cp
-                                       p
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                            <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                // Code to convert a fraction to a decimal
+                                Scanner in = new Scanner(System.in);
+                                double num = 0, denom = 0;
+                                do {
+                                    System.out.print("Enter numerator: ");
+                                    num = in.nextDouble();
+                                    System.out.print("Enter denominator: ");
+                                    denom = in.nextDouble();
+                                    if (denom == 0) {
+                                        System.out.println("Cannot have 0 in denominator!");
+                                    }
+                                }
+                                while (denom == 0);
+                                System.out.println(num/denom);
+                            ]]></script>
 
 <a name="magicnumbers"></a>
 
@@ -664,65 +460,28 @@ programmer only has to update it in one place to change all instances.
 
 ### Bad Code
 
-[?](#)
+                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                    double Td = 44100/(440*Math.pow(2, 1/12.0));
+                                    int T = (int)Math.round(Td);
 
-  ------------------------------------ ------------------------------------
-  1                                    `double`{.cpp .color1 .bold}
-  2                                    `Td = 44100/(440*Math.`{.cpp
-  3                                    .plain}`pow`{.cpp .functions
-  4                                    .bold}`(2, 1/12.0));`{.cpp .plain}
-                                       `int`{.cpp .color1 .bold}
-                                       `T = (`{.cpp .plain}`int`{.cpp
-                                       .color1
-                                       .bold}`)Math.round(Td);`{.cpp
-                                       .plain}
-                                        
-                                       `int`{.cpp .color1 .bold}
-                                       `N = (`{.cpp .plain}`int`{.cpp
-                                       .color1
-                                       .bold}`)(Math.round(44100*duration))
-                                       ;`{.cpp
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                                    int N = (int)(Math.round(44100*duration));
+                                ]]></script>
 
 ### Good Code
 
-[?](#)
+                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                    // The sample rate
+                                    public static final int FS = 44100;
 
-  ------------------------------------ ------------------------------------
-  1                                    `// The sample rate`{.cpp .comments}
-  2                                    `public`{.cpp .keyword .bold}
-  3                                    `static`{.cpp .keyword .bold}
-  4                                    `final `{.cpp .plain}`int`{.cpp
-  5                                    .color1 .bold} `FS = 44100;`{.cpp
-  6                                    .plain}
-  7                                     
-  8                                    `...`{.cpp .plain}
-  9                                     
-  10                                   `// Compute the period one halfstep 
-  11                                   above a 440hz A`{.cpp
-                                       .comments}
-                                       `double`{.cpp .color1 .bold}
-                                       `Td = FS/(440*Math.`{.cpp
-                                       .plain}`pow`{.cpp .functions
-                                       .bold}`(2, 1/12.0));`{.cpp .plain}
-                                       `int`{.cpp .color1 .bold}
-                                       `T = (`{.cpp .plain}`int`{.cpp
-                                       .color1
-                                       .bold}`)Math.round(Td);`{.cpp
-                                       .plain}
-                                        
-                                       `// Compute the number of samples ov
-                                       er a particular duration of seconds`
-                                       {.cpp
-                                       .comments}
-                                       `int`{.cpp .color1 .bold}
-                                       `N = (`{.cpp .plain}`int`{.cpp
-                                       .color1
-                                       .bold}`)(Math.round(FS*duration));`{
-                                       .cpp
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                                    ...
+                                    
+                                    // Compute the period one halfstep above a 440hz A
+                                    double Td = FS/(440*Math.pow(2, 1/12.0));
+                                    int T = (int)Math.round(Td);
+
+                                    // Compute the number of samples over a particular duration of seconds
+                                    int N = (int)(Math.round(FS*duration));
+                                ]]></script>
 
 <a name="finalcaps"></a>
 
@@ -733,13 +492,16 @@ All final variables must be in all caps.
 
 ### Bad Code
 
-`                                         public static final int secondsInDay = 24*3600;                                     `
-\
-\
+                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                    public static final int secondsInDay = 24*3600;
+                                ]]></script>
 
 ### Good Code
 
-`                                         public static final int SECONDS_IN_DAY = 24*3600;                                     `
+                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                    public static final int SECONDS_IN_DAY = 24*3600;
+                                ]]></script>
+                                
 
 <a name="methodsreturn"></a>
 
@@ -750,55 +512,26 @@ Methods may only return at the end of the method, not in the middle
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `public`{.cpp .keyword .bold}
-  2                                    `static`{.cpp .keyword .bold}
-  3                                    `boolean isEven(`{.cpp
-  4                                    .plain}`int`{.cpp .color1 .bold}
-  5                                    `x) {`{.cpp .plain}
-  6                                    `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword .bold}
-                                       `(x % 2 == 0) {`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`return`{.cpp .keyword
-                                       .bold} `true`{.cpp .keyword
-                                       .bold}`;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp .spaces}`return`{.cpp
-                                       .keyword .bold} `false`{.cpp
-                                       .keyword .bold}`;`{.cpp .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                            public static boolean isEven(int x) {
+                                                if (x % 2 == 0) {
+                                                    return true;
+                                                }
+                                                return false;
+                                            }
+                                        ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `public`{.cpp .keyword .bold}
-  2                                    `static`{.cpp .keyword .bold}
-  3                                    `boolean isEven(`{.cpp
-  4                                    .plain}`int`{.cpp .color1 .bold}
-  5                                    `x) {`{.cpp .plain}
-  6                                    `    `{.cpp
-  7                                    .spaces}`boolean result = `{.cpp
-                                       .plain}`false`{.cpp .keyword
-                                       .bold}`;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword .bold}
-                                       `(x % 2 == 0) {`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`result = `{.cpp
-                                       .plain}`true`{.cpp .keyword
-                                       .bold}`;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp .spaces}`return`{.cpp
-                                       .keyword .bold} `result;`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                                        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                            public static boolean isEven(int x) {
+                                                boolean result = false;
+                                                if (x % 2 == 0) {
+                                                    result = true;
+                                                }
+                                                return result;
+                                            }
+                                        ]]></script>
 
 <a name="efficient"></a>
 
@@ -821,27 +554,17 @@ debug, so split up method calls using variables when appropriate.
 
 ### Bad Code
 
-[?](#)
-
-  --- --------------------------------------------------------------------------------------------
-  1   `int`{.cpp .color1 .bold} `myInt = Integer.parseInt(in.getLine().charAt(2));`{.cpp .plain}
-  --- --------------------------------------------------------------------------------------------
+                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                    int myInt = Integer.parseInt(in.getLine().charAt(2));
+                                                ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `String inputLine = in.getLine();`{.
-  2                                    cpp
-  3                                    .plain}
-                                       `char`{.cpp .color1 .bold}
-                                       `id = inputLine.charAt(2);`{.cpp
-                                       .plain}
-                                       `int`{.cpp .color1 .bold}
-                                       `myInt = Integer.parseInt(id);`{.cpp
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                    String inputLine = in.getLine();
+                                                    char id = inputLine.charAt(2);
+                                                    int myInt = Integer.parseInt(id);
+                                                ]]></script>
 
 <a name="textprompts"></a>
 
@@ -854,30 +577,17 @@ gives.
 
 ### Bad Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `System.out.println(`{.cpp
-  2                                    .plain}`"Enter something"`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `int`{.cpp .color1 .bold}
-                                       `x = in.nextInt();`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                                                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                        System.out.println("Enter something");
+                                                        int x = in.nextInt();
+                                                    ]]></script>
 
 ### Good Code
 
-[?](#)
-
-  ------------------------------------ ------------------------------------
-  1                                    `System.out.print(`{.cpp
-  2                                    .plain}`"Please enter a prime number
-                                       : "`{.cpp
-                                       .string}`);`{.cpp .plain}
-                                       `int`{.cpp .color1 .bold}
-                                       `x = `{.cpp .plain}`int`{.cpp
-                                       .color1 .bold}`.nextInt();`{.cpp
-                                       .plain}
-  ------------------------------------ ------------------------------------
+                                                    <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                        System.out.print("Please enter a prime number: ");
+                                                        int x = int.nextInt();
+                                                    ]]></script>
 
 <a name="variablescoping"></a>
 
@@ -889,102 +599,43 @@ the professor gives permission to put a variable within the class scope.
 
 ### Bad Code
 
-[?](#)
+                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                    int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
 
-  ------------------------------------ ------------------------------------
-  1                                    `int`{.cpp .color1
-  2                                    .bold}`[] refs = {3,28,7,4,9,6,11,8,
-  3                                    5,10,7,12};`{.cpp
-  4                                    .plain}
-  5                                     
-  6                                    `public`{.cpp .keyword .bold}
-  7                                    `static`{.cpp .keyword .bold}
-  8                                    `int`{.cpp .color1 .bold}
-  9                                    `getWeekday(`{.cpp .plain}`int`{.cpp
-  10                                   .color1 .bold} `year, `{.cpp
-  11                                   .plain}`int`{.cpp .color1 .bold}
-  12                                   `month, `{.cpp .plain}`int`{.cpp
-  13                                   .color1 .bold} `day) {`{.cpp .plain}
-  14                                   `    `{.cpp .spaces}`int`{.cpp
-  15                                   .color1 .bold} `weekday = 0;`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`int`{.cpp
-                                       .color1 .bold}
-                                       `ydoomsday=getDoomsdayYear(year);`{.
-                                       cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`int`{.cpp
-                                       .color1 .bold} `reference = 0;`{.cpp
-                                       .plain}
-                                        
-                                       `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword
-                                       .bold}`(isALeapYear(year);){`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`refs[0]=4;`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`refs[1]=29;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`reference = refs[month-1];`
-                                       {.cpp
-                                       .plain}
-                                        
-                                       `    `{.cpp .spaces}`...`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                                                    public static int getWeekday(int year, int month, int day) {
+                                                        int weekday = 0;
+                                                        int ydoomsday=getDoomsdayYear(year);
+                                                        int reference = 0;
+
+                                                        if(isALeapYear(year);){
+                                                            refs[0]=4;
+                                                            refs[1]=29;
+                                                        }
+                                                        reference = refs[month-1];
+
+                                                        ...
+                                                    }
+                                                ]]></script>
 
 ### Good Code
 
-[?](#)
+                                                <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+                                                    public static int getWeekday(int year, int month, int day) {
+                                                        int[] refs = {3,28,7,4,9,6,11,8,5,10,7,12};
 
-  ------------------------------------ ------------------------------------
-  1                                    `public`{.cpp .keyword .bold}
-  2                                    `static`{.cpp .keyword .bold}
-  3                                    `int`{.cpp .color1 .bold}
-  4                                    `getWeekday(`{.cpp .plain}`int`{.cpp
-  5                                    .color1 .bold} `year, `{.cpp
-  6                                    .plain}`int`{.cpp .color1 .bold}
-  7                                    `month, `{.cpp .plain}`int`{.cpp
-  8                                    .color1 .bold} `day) {`{.cpp .plain}
-  9                                    `    `{.cpp .spaces}`int`{.cpp
-  10                                   .color1
-  11                                   .bold}`[] refs = {3,28,7,4,9,6,11,8,
-  12                                   5,10,7,12};`{.cpp
-  13                                   .plain}
-  14                                    
-  15                                   `    `{.cpp .spaces}`int`{.cpp
-                                       .color1 .bold} `weekday = 0;`{.cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`int`{.cpp
-                                       .color1 .bold}
-                                       `ydoomsday=getDoomsdayYear(year);`{.
-                                       cpp
-                                       .plain}
-                                       `    `{.cpp .spaces}`int`{.cpp
-                                       .color1 .bold} `reference = 0;`{.cpp
-                                       .plain}
-                                        
-                                       `    `{.cpp .spaces}`if`{.cpp
-                                       .keyword
-                                       .bold}`(isALeapYear(year);){`{.cpp
-                                       .plain}
-                                       `        `{.cpp
-                                       .spaces}`refs[0]=4;`{.cpp .plain}
-                                       `        `{.cpp
-                                       .spaces}`refs[1]=29;`{.cpp .plain}
-                                       `    `{.cpp .spaces}`}`{.cpp .plain}
-                                       `    `{.cpp
-                                       .spaces}`reference = refs[month-1];`
-                                       {.cpp
-                                       .plain}
-                                        
-                                       `    `{.cpp .spaces}`...`{.cpp
-                                       .plain}
-                                       `}`{.cpp .plain}
-  ------------------------------------ ------------------------------------
+                                                        int weekday = 0;
+                                                        int ydoomsday=getDoomsdayYear(year);
+                                                        int reference = 0;
+
+                                                        if(isALeapYear(year);){
+                                                            refs[0]=4;
+                                                            refs[1]=29;
+                                                        }
+                                                        reference = refs[month-1];
+
+                                                        ...
+                                                    }
+                                                ]]></script>
   
   
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
