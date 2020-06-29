@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Style Guide"
 
 ---
 
-This is {{ site.title }}.
-
 Style Guide
 ===========
 
@@ -1075,3 +1073,18 @@ the professor gives permission to put a variable within the class scope.
                                        .plain}
                                        `}`{.cpp .plain}
   ------------------------------------ ------------------------------------
+  
+  
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/util.js"></script>
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/shCore.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/shBrushJScript.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/shBrushCpp.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/shCoreDefault.css">
+<script type="text/javascript">SyntaxHighlighter.all();</script>		
+<script src="{{ site.baseurl }}/assets/js/polyfill.min.js"></script>
+<script id="MathJax-script" async="" src="{{ site.baseurl }}/assets/js/tex-mml-chtml.js"></script>	            
