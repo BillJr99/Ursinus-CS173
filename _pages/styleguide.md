@@ -9,7 +9,7 @@ excerpt: "CS173: Intro to Computer Science - Style Guide"
 Style Guide
 ===========
 
-As we've discussed an experienced, it's possible to write code that
+As we've discussed and experienced, it's possible to write code that
 works, but which is completely unreadable and difficult to debug as a
 result. Furthermore, we want to get you into the habit of writing good
 code that is easy for others to read and which is hence *easier to
