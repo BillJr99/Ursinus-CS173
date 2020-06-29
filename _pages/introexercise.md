@@ -20,6 +20,7 @@ processor:
  
 files:
   - filename: "File.java"
+    ismain: false
     code: | 
         public class File {
             public int x;
@@ -30,13 +31,13 @@ files:
             }
         }
     
-main:
-  filename: "Main.java"
-  code: |
-    File f = new File();
-    f.x = 10;
-    f.y = 5;
-    f.print();
+  - filename: "Main.java"
+    ismain: true
+    code: |
+        File f = new File();
+        f.x = 10;
+        f.y = 5;
+        f.print();
   
 ---
 Welcome! 
