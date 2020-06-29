@@ -12,8 +12,7 @@ info:
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"
-  submitformlink: |
-    eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('5.4("3://2.1.0/");',6,6,'com|google|www|https|write|document'.split('|'),0,{}))
+  submitformlink: "https://www.google.com"
   feedbackprocess: | 
     eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('9 2=8.7(",");6(5 1=0;1<2.4;1++){2[1]=3(2[1])}',10,10,'|i|pos|parseFloat|length|let|for|split|feedbackString|var'.split('|'),0,{}))
   correctcheck: |
