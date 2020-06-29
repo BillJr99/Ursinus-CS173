@@ -119,7 +119,7 @@ instructors:
   - day: "F"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "TBD"      
+    location: "Networking Office Hours"      
   
 textbooks:
 - title: "Java for Everyone: Late Objects"
@@ -141,7 +141,7 @@ objectives:
 - objective: "Implement and engineer multi-component systems that solve real world problems."
 - objective: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
 - objective: "Learn to be a patient problem solver by developing comfort with the edit -> compile -> run loop, along with basic debugging skills."
--objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
+- objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 
 goals:
 - goal: "To write software that is easy to read and maintain by others"
