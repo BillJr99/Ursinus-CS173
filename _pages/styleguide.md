@@ -145,7 +145,7 @@ All files must have comments near the top of the main program’s file
 containing the following information: Author’s name, Assignment name,
 Date, Class, Short description of the project. For complete information
 on writing Java documentation, visit [this
-link](http://www.ctralie.com/Teaching/CS173_S2020/www.oracle.com/technetwork/java/javase/tech/index-137868.html)
+link](http://www.oracle.com/technetwork/java/javase/tech/index-137868.html)
 or [this
 link](http://www.tutorialspoint.com/java/java_documentation.htm). As an
 example, here's a comment at the top of a file
