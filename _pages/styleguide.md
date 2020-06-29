@@ -26,26 +26,26 @@ rules
 All rules:
 ----------
 
-1.  [Indentation/Brackets](#indentation)
-2.  [Naming Conventions](#naming)
-3.  [Documentation: Overview](#documentationoverview)
-4.  [Documentation: Inline Code](#documentationinline)
-5.  [Documentation: Methods](#documentationmethods)
-6.  [Appropriate Loop Choices](#loopchoices)
-7.  [Exiting Appropriately](#xiting)
-8.  [The Break Command](#breaking)
-9.  [The GOTO Command](#goto)
-10. [Positive Boolean Variable Names](#boolean)
-11. [Boolean Variable Comparisons](#booleancompare)
-12. [Breaking Up Long Boolean Statements](#booleanbreakup)
-13. [Robustness](#robustness)
-14. [No Magic Numbers!](#magicnumbers)
-15. [Capitalizing Final Variables](#finalcaps)
-16. [Methods Returning At The End](#methodsreturn)
-17. [Efficiently Written Code](#efficient)
-18. [Avoid Compound Method Calls](#compoundmethods)
-19. [Text Input Prompts](#textprompts)
-20. [Variable Scoping](#variablescoping)
+* [Indentation/Brackets](#indentation)
+* [Naming Conventions](#naming)
+* [Documentation: Overview](#documentationoverview)
+* [Documentation: Inline Code](#documentationinline)
+* [Documentation: Methods](#documentationmethods)
+* [Appropriate Loop Choices](#loopchoices)
+* [Exiting Appropriately](#exiting)
+* [The Break Command](#breaking)
+* [The GOTO Command](#goto)
+* [Positive Boolean Variable Names](#boolean)
+* [Boolean Variable Comparisons](#booleancompare)
+* [Breaking Up Long Boolean Statements](#booleanbreakup)
+* [Robustness](#robustness)
+* [No Magic Numbers!](#magicnumbers)
+* [Capitalizing Final Variables](#finalcaps)
+* [Methods Returning At The End](#methodsreturn)
+* [Efficiently Written Code](#efficient)
+* [Avoid Compound Method Calls](#compoundmethods)
+* [Text Input Prompts](#textprompts)
+* [Variable Scoping](#variablescoping)
 
 <a name="indentation"></a>
 
@@ -70,16 +70,17 @@ Second of all, the tabbing is all over the place. This makes it easy to
 miss a closing brace somewhere, which can be very difficult to resolve
 for multiply nested blocks.
 
-<div><div id="highlighter_996110" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Top</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0)</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>  
+<div><div id="highlighter_996110" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Up</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0)</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>  
 
 ### Good Code
 
 Here's a better version of the above example, in which brackets are
 applied and aligned properly
 
-<div><div id="highlighter_852586" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Top</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0) {</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">} </code></div><div class="line number5 index4 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
+<div><div id="highlighter_852586" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">Up</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 100; i++) {</code></div><div class="line number2 index1 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">if</code> <code class="cpp plain">(i%2 == 0 &amp;&amp; i%3 == 0) {</code></div><div class="line number3 index2 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">System.out.println(i + </code><code class="cpp string">" is divisible by 6"</code><code class="cpp plain">);</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">} </code></div><div class="line number5 index4 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div> 
 
-* * * * *
+
+<a name="naming"></a>
 
 Naming Conventions
 ---------------------
@@ -93,7 +94,6 @@ Naming Conventions
 -   For loop counters should be something short such as `i`, `j`, or
     `k`. You may also use a descriptive, but still short, name for a for
     loop counter such as `row` or `col`
-
 -   Method names should start with a verb (this includes boolean methods
     that start with the verb "is").
 
@@ -170,7 +170,7 @@ word) and in descriptive language.
                                        `}`{.cpp .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="documentationoverview"></a>
 
 Documentation: Overview
 --------------------------
@@ -203,7 +203,7 @@ example, here's a comment at the top of a file
                                        `*/`{.cpp .comments}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="documentationinline"></a>
 
 Documentation: Inline code
 -----------------------------
@@ -236,7 +236,7 @@ information to the reader.
                                        .comments}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="documentationmethods"></a>
 
 Documentation: Methods
 -------------------------
@@ -347,7 +347,7 @@ of what it should look like:
                                        ` `{.cpp .spaces}`}`{.cpp .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="loopchoices"></a>
 
 Appropriate Loop Choices
 ---------------------------
@@ -452,7 +452,7 @@ while loop
                                        `(choice==temp);`{.cpp .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="exiting"></a>
 
 Exiting Appropriately
 ------------------------
@@ -461,7 +461,7 @@ Ending the program anywhere except for the last line of the main will
 result in a deduction. (In other words, no `exit(0)` in the middle of
 your code)
 
-* * * * *
+<a name="breaking"></a>
 
 The Break Command
 --------------------
@@ -469,7 +469,7 @@ The Break Command
 The `break` command should only appear in a `switch` statement, and not
 in a loop.
 
-* * * * *
+<a name="goto"></a>
 
 The GOTO Command
 -------------------
@@ -478,7 +478,7 @@ Do not use `goto` anywhere in your code! It is an artifact from older
 programming languages and leads to [spaghetti
 code](https://en.wikipedia.org/wiki/Spaghetti_code).
 
-* * * * *
+<a name="boolean"></a>
 
 Positive Boolean Variable Names
 -----------------------------------
@@ -488,7 +488,7 @@ case. In other words `isReady`, `isValid`, `isProperTime` are good
 Boolean variable names. Some not so good names are `readyCheck`,
 `notValid`, `checkTime`.
 
-* * * * *
+<a name="booleancompare"></a>
 
 Boolean Variable Comparisons
 --------------------------------
@@ -568,7 +568,7 @@ Example 2:
   1   `isToggled = !isToggled;`{.cpp .plain}
   --- ----------------------------------------
 
-* * * * *
+<a name="booleanbreakup"></a>
 
 Breaking Up Long Boolean Statements
 ---------------------------------------
@@ -620,7 +620,7 @@ Long conditionals should not appear as `while` or `if` conditions. Use a
                                        `};`{.cpp .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="robustness"></a>
 
 Robustness
 --------------
@@ -706,7 +706,7 @@ re-enter or quit the program.
                                        .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="magicnumbers"></a>
 
 No Magic Numbers!
 ---------------------
@@ -777,7 +777,7 @@ programmer only has to update it in one place to change all instances.
                                        .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="finalcaps"></a>
 
 Capitalizing Final Variables
 --------------------------------
@@ -794,7 +794,7 @@ All final variables must be in all caps.
 
 `                                         public static final int SECONDS_IN_DAY = 24*3600;                                     `
 
-* * * * *
+<a name="methodsreturn"></a>
 
 Methods Returning At The End
 --------------------------------
@@ -853,7 +853,7 @@ Methods may only return at the end of the method, not in the middle
                                        `}`{.cpp .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="efficient"></a>
 
 Efficiently Written Code
 ----------------------------
@@ -864,7 +864,7 @@ least amount of variable declarations as possible, and using the
 smallest data type necessary. For instance, if the user is to answer
 1,2,3,4 as a response, use an int, not a double.
 
-* * * * *
+<a name="compoundmethods"></a>
 
 Avoid Compound Method calls
 -------------------------------
@@ -896,7 +896,7 @@ debug, so split up method calls using variables when appropriate.
                                        .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="textprompts"></a>
 
 Text Input Prompts
 ----------------------
@@ -932,7 +932,7 @@ gives.
                                        .plain}
   ------------------------------------ ------------------------------------
 
-* * * * *
+<a name="variablescoping"></a>
 
 Variable Scoping
 --------------------
