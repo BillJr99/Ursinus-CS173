@@ -14,7 +14,7 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: "http://www.billmongan.com"
   feedbackprocess: | 
-    eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2=8.7(",");6(3 1=0;1<2.5;1++){2[1]=4(2[1])}',9,9,'|i|pos|let|parseFloat|length|for|split|feedbackString'.split('|'),0,{}))
+    let pos = eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 1=9.8(",");7(3 2=0;2<1.6;2++){1[2]=5(1[2])}4(1);',10,10,'|pos|i|let|print|parseFloat|length|for|split|feedbackString'.split('|'),0,{}))
   correctcheck: |
     eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2[0]==4&&2[1]==3',5,5,'||pos|10|5'.split('|'),0,{}))
  
