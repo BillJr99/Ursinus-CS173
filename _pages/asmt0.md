@@ -34,7 +34,7 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 9.  Anything else you think I should know?
 10.  Please attach **a headshot** to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
 
-### Doodle Poll for Office Hours
+### Web Poll for Office Hours
 
 You will not be graded on this, but I want to setup my office hours so that everyone can make at least one of them. Please [click here]({{ page.info.officehourspoll }}) and select every block in which you can attend at least 30 minutes in your schedule. You may use a pseudonym or post anonymously if you wish.
 
