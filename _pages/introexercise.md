@@ -19,7 +19,7 @@ processor:
  
 files:
   - filename: "File.java"
-    name: "file"
+    name: ""
     ismain: false
     isreadonly: false
     code: | 
@@ -30,7 +30,7 @@ files:
             public void print() {
                 System.out.println(this.x + "," + this.y);
             }
-        }
+        }       
         
   - filename: "Excerpt from Main.java"
     name: "Main"

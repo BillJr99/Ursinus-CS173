@@ -79,24 +79,24 @@ layout: default
         
         {% for file in page.files %}
         {% if file.ismain == true %}
-            let mainEditor = ace.edit("mainEditor");
-            mainEditor.setFontSize(16);
-            mainEditor.session.setMode("ace/mode/java");
-            {% if file.isreadonly == true %}
-                mainEditor.setReadOnly(true);            
-            {% else %}
-                mainEditor.setReadOnly(false);            
-            {% endif %}
+        let mainEditor = ace.edit("mainEditor");
+        mainEditor.setFontSize(16);
+        mainEditor.session.setMode("ace/mode/java");
+        {% if file.isreadonly == true %}
+        mainEditor.setReadOnly(true);            
         {% else %}
-            let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
-            {{ file.name }}Editor.setFontSize(16);
-            {{ file.name }}Editor.session.setMode("ace/mode/java");
-            {% if file.isreadonly == true %}
-                {{ file.name }}Editor.setReadOnly(true);            
-            {% else %}
-                {{ file.name }}Editor.setReadOnly(false);            
-            {% endif %}   
-            editors.push({{ file.name }}Editor);
+        mainEditor.setReadOnly(false);            
+        {% endif %}
+        {% else %}
+        let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
+        {{ file.name }}Editor.setFontSize(16);
+        {{ file.name }}Editor.session.setMode("ace/mode/java");
+        {% if file.isreadonly == true %}
+        {{ file.name }}Editor.setReadOnly(true);            
+        {% else %}
+        {{ file.name }}Editor.setReadOnly(false);            
+        {% endif %}   
+        editors.push({{ file.name }}Editor);
         {% endif %}
         {% endfor %}
 
