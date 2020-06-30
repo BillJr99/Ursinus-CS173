@@ -52,6 +52,25 @@ This will create a new file for testing with an example test method for each met
 
 ![]({{ site.baseurl }}/images/netbeans/RunTests.png)
 
+If you are interested in trying this test case out for yourself, here is the code from the screenshot above.  This test case asks if 1 is an even number, and should pass because it expects that the function will return  `false`.
+
+```java
+public class NewClassTest {
+	public NewClassTest() {
+	}
+
+	@Test
+	public void testIsEven() {
+		System.out.println("isEven");
+		int num = 1;
+		boolean expResult = false;
+		boolean result = NewClass.isEven(num);
+		assertEquals(result, expResult);
+		//fail("The test case failed");
+	}
+}
+```
+
 ### Exporting To Zip
 
 If you want to export your whole project to a zip, go to `File->Export Project->To ZIP`
