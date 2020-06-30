@@ -233,7 +233,7 @@ schedule:
   date: "0"
   title: "Strings"
 - week: "6"
-  date: "0"
+  date: "2"
   title: "Boolean Logic and Expressions"
 - week: "7"
   date: "2"
