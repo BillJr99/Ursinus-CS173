@@ -19,7 +19,9 @@ processor:
  
 files:
   - filename: "File.java"
+    name: "File"
     ismain: false
+    isreadonly: false
     code: | 
         public class File {
             public int x;
@@ -29,9 +31,25 @@ files:
                 System.out.println(this.x + "," + this.y);
             }
         }
+        
+  - filename: "File2.java"
+    name: "File2"
+    ismain: false
+    isreadonly: true
+    code: | 
+        public class File2 {
+            public int x;
+            public int y;
+            
+            public void print() {
+                System.out.println(this.x + "," + this.y);
+            }
+        }        
     
   - filename: "Excerpt from Main.java"
+    name: "Main"
     ismain: true
+    isreadonly: true
     code: |
         File f = new File();
         f.x = 10;

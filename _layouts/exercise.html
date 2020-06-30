@@ -75,14 +75,30 @@ layout: default
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
 
-        let editor = ace.edit("editor");
-        editor.setFontSize(16);
-        editor.session.setMode("ace/mode/java");
-
-        let mainEditor = ace.edit("mainEditor");
-        mainEditor.setFontSize(16);
-        mainEditor.session.setMode("ace/mode/java");
-        mainEditor.setReadOnly(true);
+        let editors = new Array();
+        
+        {% for file in page.files %}
+        {% if file.ismain == true %}
+            let mainEditor = ace.edit("mainEditor");
+            mainEditor.setFontSize(16);
+            mainEditor.session.setMode("ace/mode/java");
+            {% if file.isreadonly == true %}
+                mainEditor.setReadOnly(true);            
+            {% else %}
+                mainEditor.setReadOnly(false);            
+            {% endif %}
+        {% else %}
+            let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
+            {{ file.name }}Editor.setFontSize(16);
+            {{ file.name }}Editor.session.setMode("ace/mode/java");
+            {% if file.isreadonly == true %}
+                {{ file.name }}Editor.setReadOnly(true);            
+            {% else %}
+                {{ file.name }}Editor.setReadOnly(false);            
+            {% endif %}   
+            editors.push({{ file.name }}Editor);
+        {% endif %}
+        {% endfor %}
 
         let feedback = ace.edit("feedbackText");
         feedback.setFontSize(16);
@@ -90,9 +106,14 @@ layout: default
 
 
         function runCode() {
-
             try {
-                let code = makeCode(editor.getValue(), mainEditor.getValue());
+                /* Append all the non-main editors together */
+                let editorText = "";
+                for (const editor in editors) {
+                    editorText += editor.getValue();
+                    editorText += '\n';
+                }
+                let code = makeCode(editorText, mainEditor.getValue());
                 instance = new Processing(canvas, code);
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
