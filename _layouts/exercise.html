@@ -62,7 +62,7 @@ layout: default
         {% for file in page.files %}
         <h3>{{ file.filename }}</h3>
         
-        {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="{{ file.name }}Editor">{% endif %}{{ file.code | strip }}</div>
+        {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="{{ file.name }}editor">{% endif %}{{ file.code | strip }}</div>
         {% endfor %}
         
         <h3>Output</h3>
@@ -75,7 +75,7 @@ layout: default
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
 
-        let editors = new Array();
+        var editors = new Array();
         
         {% for file in page.files %}
         {% if file.ismain == true %}
@@ -88,15 +88,15 @@ layout: default
         mainEditor.setReadOnly(false);            
         {% endif %}
         {% else %}
-        let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
-        {{ file.name }}Editor.setFontSize(16);
-        {{ file.name }}Editor.session.setMode("ace/mode/java");
+        let {{ file.name }}Editor = ace.edit("{{ file.name }}editor");
+        {{ file.name }}editor.setFontSize(16);
+        {{ file.name }}editor.session.setMode("ace/mode/java");
         {% if file.isreadonly == true %}
-        {{ file.name }}Editor.setReadOnly(true);            
+        {{ file.name }}editor.setReadOnly(true);            
         {% else %}
-        {{ file.name }}Editor.setReadOnly(false);            
+        {{ file.name }}editor.setReadOnly(false);            
         {% endif %}   
-        editors.push({{ file.name }}Editor);
+        editors.push({{ file.name }}editor);
         {% endif %}
         {% endfor %}
 
