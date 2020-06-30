@@ -226,6 +226,7 @@ schedule:
 - week: "4"
   date: "2"
   title: "Coding Style"
+  readings:
   - rtitle: "Style Guide"
     rlink: "./Style-Guide"  
 - week: "5"
