@@ -68,7 +68,7 @@ You can direct NetBeans to automatically download this plugin.  In NetBeans, go 
 
 ![]({{ site.baseurl }}/images/netbeans/netbeanspluginsettings.png)
 
-Click `Add` to provide NetBeans with the URL of the plugin to be downloaded, and paste the following repository URL: `http://www.sickboy.cz/checkstyle/autoupdate/autoupdate-3.xml`.  By installing the plugin directly through NetBeans using a plugin repository, updates to the plugin will be detected and automatically downloaded by NetBeans over time.
+Click `Add` to provide NetBeans with the URL of the plugin repository which houses our plugins, and paste the following repository URL: `http://www.sickboy.cz/checkstyle/autoupdate/autoupdate-3.xml`.  By installing the plugin directly through NetBeans using a plugin repository, updates to the plugin will be detected and automatically downloaded by NetBeans over time.
 
 Now, you can actually select the plugins from this repository.  To do this, go to `Tools->Plugins` again, and go to the `Available Plugins` tab
 
