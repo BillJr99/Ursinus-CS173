@@ -11,8 +11,8 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
-  course_start_date: "2020/08/31"
-  course_end_date: "2020/12/11"
+  course_start_date: "2020/09/07"
+  course_end_date: "2020/12/15"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   class_meets_days:
     isM: true
@@ -648,9 +648,6 @@ university:
   - kname: "Convocation"
     kdate: "2020/08/28"
     kdisplay: true
-  - kname: "Reading Day"
-    kdate: "2020/12/12"
-    kdisplay: true
   - kname: "Add Deadline"
     kdate: "2020/09/11"
     kdisplay: true
@@ -659,6 +656,15 @@ university:
     kdisplay: true  
   - kname: "Mid Semester Grades Posted"
     kdate: "2020/10/16"
+    kdisplay: false
+  - kname: "2020 Transition to Remote Learning after Thanksgiving Break"
+    kdate: "2020/11/30"
+    kdisplay: true
+  - kname: "Finals Week Begins"
+    kdate: "2020/12/16"
+    kdisplay: false
+  - kname: "Finals Week Ends"
+    kdate: "2020/12/22"
     kdisplay: false
   spring:
   - kname: "Reading Day"
@@ -679,6 +685,12 @@ university:
   - kname: "Commencement"
     kdate: "2021/05/15"
     kdisplay: false
+  - kname: "Finals Week Begins"
+    kdate: "2021/05/07"
+    kdisplay: false
+  - kname: "Finals Week Ends"
+    kdate: "2021/05/13"
+    kdisplay: false    
   fallholidays:
   - date: "2020/10/19"
   - date: "2020/10/20"
