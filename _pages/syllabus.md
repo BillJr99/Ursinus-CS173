@@ -263,10 +263,7 @@ schedule:
   date: "0"
   title: "Objects"
 - week: "14"
-  date: "2"
-  title: "Review"
-- week: "14"
-  date: "3"
+  date: "1"
   title: "Review"
     
 OLDschedule:
