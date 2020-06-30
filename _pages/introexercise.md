@@ -19,7 +19,7 @@ processor:
  
 files:
   - filename: "File.java"
-    name: "File"
+    name: "file"
     ismain: false
     isreadonly: false
     code: | 
@@ -33,7 +33,7 @@ files:
         }
         
   - filename: "File2.java"
-    name: "File2"
+    name: "secondfile"
     ismain: false
     isreadonly: true
     code: | 
