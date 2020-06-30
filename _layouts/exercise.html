@@ -59,10 +59,10 @@ layout: default
         <button type = "button" onclick = "runCode()">Run</button>
         </p>
         
+        <!-- Only one editor (besides mainEditor) is allowed because its id must be "editor" -->
         {% for file in page.files %}
         <h3>{{ file.filename }}</h3>
         
-        <!-- Only one editor (besides mainEditor) is allowed because its id must be "editor" -->
         {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="editor">{% endif %}{{ file.code | strip }}</div>
         {% endfor %}
         
