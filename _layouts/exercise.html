@@ -62,7 +62,8 @@ layout: default
         {% for file in page.files %}
         <h3>{{ file.filename }}</h3>
         
-        {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="{{ file.name }}editor">{% endif %}{{ file.code | strip }}</div>
+        <!-- Only one editor (besides mainEditor) is allowed because its id must be "editor" -->
+        {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="editor">{% endif %}{{ file.code | strip }}</div>
         {% endfor %}
         
         <h3>Output</h3>
@@ -75,8 +76,6 @@ layout: default
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
 
-        var editors = new Array();
-        
         {% for file in page.files %}
         {% if file.ismain == true %}
         let mainEditor = ace.edit("mainEditor");
@@ -88,15 +87,14 @@ layout: default
         mainEditor.setReadOnly(false);            
         {% endif %}
         {% else %}
-        let {{ file.name }}editor = ace.edit("{{ file.name }}editor");
-        {{ file.name }}editor.setFontSize(16);
-        {{ file.name }}editor.session.setMode("ace/mode/java");
+        let editor = ace.edit("editor");
+        editor.setFontSize(16);
+        editor.session.setMode("ace/mode/java");
         {% if file.isreadonly == true %}
-        {{ file.name }}editor.setReadOnly(true);            
+        editor.setReadOnly(true);            
         {% else %}
-        {{ file.name }}editor.setReadOnly(false);            
+        editor.setReadOnly(false);            
         {% endif %}   
-        editors.push({{ file.name }}editor);
         {% endif %}
         {% endfor %}
 
@@ -107,13 +105,7 @@ layout: default
 
         function runCode() {
             try {
-                /* Append all the non-main editors together */
-                let editorText = "";
-                for (const editor in editors) {
-                    editorText += editor.getValue();
-                    editorText += '\n';
-                }
-                let code = makeCode(editorText, mainEditor.getValue());
+                let code = makeCode(editor.getValue(), mainEditor.getValue());
                 instance = new Processing(canvas, code);
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {

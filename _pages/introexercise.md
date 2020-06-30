@@ -19,7 +19,6 @@ processor:
  
 files:
   - filename: "File.java"
-    name: "file"
     ismain: false
     isreadonly: false
     code: | 
@@ -33,7 +32,6 @@ files:
         }            
         
   - filename: "Excerpt from Main.java"
-    name: "Main"
     ismain: true
     isreadonly: true
     code: |
