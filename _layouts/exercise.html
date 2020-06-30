@@ -88,7 +88,7 @@ layout: default
         mainEditor.setReadOnly(false);            
         {% endif %}
         {% else %}
-        let {{ file.name }}Editor = ace.edit("{{ file.name }}editor");
+        let {{ file.name }}editor = ace.edit("{{ file.name }}editor");
         {{ file.name }}editor.setFontSize(16);
         {{ file.name }}editor.session.setMode("ace/mode/java");
         {% if file.isreadonly == true %}
