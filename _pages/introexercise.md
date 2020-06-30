@@ -32,20 +32,6 @@ files:
             }
         }
         
-  - filename: "File2.java"
-    name: "secondfile"
-    ismain: false
-    isreadonly: true
-    code: | 
-        public class File2 {
-            public int x;
-            public int y;
-            
-            public void print() {
-                System.out.println(this.x + "," + this.y);
-            }
-        }        
-    
   - filename: "Excerpt from Main.java"
     name: "Main"
     ismain: true
