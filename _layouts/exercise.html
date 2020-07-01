@@ -80,7 +80,7 @@ layout: default
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
 
-        editors = new Array();
+        var editors = new Array();
 
         {% for file in page.files %}
         {% if file.ismain == true %}
@@ -113,7 +113,7 @@ layout: default
         function runCode() {
             try {
                 let editorText = "";
-                for (editor in editors) {
+                for (var editor in editors) {
                     editorText += editor.getValue();
                     editorText += "\n";
                 }
