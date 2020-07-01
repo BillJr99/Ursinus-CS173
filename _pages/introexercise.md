@@ -48,7 +48,7 @@ files:
             }
         }
         
-  - filename: "Excerpt from Main.java"
+  - filename: "Excerpt from Main.java: body of main() function"
     ismain: true
     name: main
     isreadonly: false
