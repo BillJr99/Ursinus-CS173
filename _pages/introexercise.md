@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Introductory Exercise"
 excerpt: "CS173: Intro to Computer Science - Introductory Exercise"
 
 info:
-  prev: "./Intro"
+  prev: "./Module"
   instructions: "Make this print 5, 10 instead of 10, 5."
   
 processor:  
