@@ -19,6 +19,7 @@ processor:
  
 files:
   - filename: "File.java"
+    name: file
     ismain: false
     isreadonly: true
     code: | 
@@ -31,6 +32,11 @@ files:
             }
         }    
 
+  - filename: "File2.java"
+    name: file2
+    ismain: false
+    isreadonly: true
+    code: | 
         public class File2 {
             public int z;
             
@@ -44,6 +50,7 @@ files:
         
   - filename: "Excerpt from Main.java"
     ismain: true
+    name: main
     isreadonly: false
     code: |
         File f = new File();
