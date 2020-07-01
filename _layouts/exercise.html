@@ -63,7 +63,7 @@ layout: default
         <button type = "button" onclick = "runCode()">Run</button>
         </p>
         
-        <!-- Must name main file "main" and the div is hardcoded to mainEditor -->
+        <!-- Must name main file "main" and the div tag here/css/processing code below is hardcoded to mainEditor -->
         {% for file in page.files %}
         <h3>{{ file.filename }}</h3>
         
@@ -80,7 +80,7 @@ layout: default
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
 
-        var editors = new Array();
+        editors = new Array();
 
         {% for file in page.files %}
         {% if file.ismain == true %}
