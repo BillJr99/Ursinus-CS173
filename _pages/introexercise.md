@@ -21,7 +21,7 @@ files:
   - filename: "File.java"
     name: file
     ismain: false
-    isreadonly: true
+    isreadonly: false
     code: | 
         public class File {
             public int x;
