@@ -1,6 +1,6 @@
 ---
 layout: exercise
-permalink: /Modules/IntroExercise
+permalink: /Modules/Intro/Exercise
 title: "CS173: Intro to Computer Science - Introductory Exercise"
 excerpt: "CS173: Intro to Computer Science - Introductory Exercise"
 
