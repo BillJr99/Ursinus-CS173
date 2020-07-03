@@ -16,14 +16,18 @@ layout: default
     position: relative;
     width: 700px;
     height: 250px;
+    {% if file.isvisible == false %}visibility: hidden{% endif %}
 }
-{% endif %}
-{% endfor %}
+{% else %}
 #mainEditor {
     position: relative;
     width: 700px;
     height: 100px;
+    {% if file.isvisible == false %}visibility: hidden{% endif %}
 }
+{% endif %}
+{% endfor %}
+
 #feedbackText {
     position: relative;
     width: 700px;

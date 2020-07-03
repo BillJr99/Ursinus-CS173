@@ -22,6 +22,7 @@ files:
     name: myfirstprogram
     ismain: false
     isreadonly: false
+    isvisible: true
     code: | 
         public class MyFirstProgram {
             public void main() {
@@ -32,11 +33,10 @@ files:
   - filename: "Excerpt from Main.java: body of main() function"
     ismain: true
     name: main
-    isreadonly: false
+    isreadonly: true
+    isvisible: false
     code: |
-        File f = new File();
-        f.x = 10;
-        f.y = 5;
-        f.print();
-  
+        MyFirstProgram myProgram = new MyFirstProgram();
+        myProgram.main();
+        
 ---
