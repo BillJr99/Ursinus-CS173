@@ -13,11 +13,12 @@ layout: default
 {% for file in page.files %}
 {% if file.ismain == false %}
 #{{ file.name }}Editor {
-    position: relative;
     {% if file.isvisible == true %}
+    position: relative;
     width: 700px;
     height: 250px;
     {% else %}
+    position: static;
     width: 700px;
     height: 10px;
     visibility: hidden
@@ -25,11 +26,12 @@ layout: default
 }
 {% else %}
 #mainEditor {
-    position: relative;
     {% if file.isvisible == true %}
+    position: relative;
     width: 700px;
     height: 100px;
     {% else %}
+    position: static;
     width: 700px;
     height: 10px;    
     visibility: hidden
