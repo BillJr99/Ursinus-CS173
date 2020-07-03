@@ -34,7 +34,7 @@ files:
     ismain: true
     name: main
     isreadonly: true
-    isvisible: false
+    isvisible: true
     code: |
         MyFirstProgram.main(null);
         
