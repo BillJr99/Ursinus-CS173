@@ -25,7 +25,7 @@ files:
     isvisible: true
     code: | 
         public class MyFirstProgram {
-            public static void main() {
+            public static void main(String[] args) {
                 System.out.println("Hello");
             }
         }    
@@ -36,6 +36,7 @@ files:
     isreadonly: true
     isvisible: false
     code: |
-        MyFirstProgram.main();
+        MyFirstProgram myprogram = new MyFirstProgram();
+        myprogram.main(null);
         
 ---
