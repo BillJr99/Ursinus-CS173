@@ -71,9 +71,9 @@ layout: default
         {% for file in page.files %}
         {% if file.isvisible == true %}
         <h3>{{ file.filename }}</h3>
+        {% endif %}
         
         {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="{{ file.name }}Editor">{% endif %}{{ file.code | strip }}</div>
-        {% endif %}
         {% endfor %}
         
         <h3>Output</h3>
