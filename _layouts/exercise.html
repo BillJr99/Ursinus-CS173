@@ -128,7 +128,7 @@ layout: default
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
-                    {% if page.processor.submitformlink %}
+                    {% if page.processor.submitformlink and page.processor.issubmitformlive == true %}
                     correctArea.innerHTML += `
                     <iframe src = "{{ page.processor.submitformlink | strip }}" width=800 height=500>
                     `;
