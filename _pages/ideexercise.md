@@ -22,7 +22,7 @@ files:
     name: myfirstprogram
     ismain: false
     isreadonly: false
-    isvisible: true
+    isvisible: false
     code: | 
         public class MyFirstProgram {
             public static void main(String[] args) {
@@ -34,7 +34,7 @@ files:
     ismain: true
     name: main
     isreadonly: true
-    isvisible: true
+    isvisible: false
     code: |
         MyFirstProgram.main(null);
         
