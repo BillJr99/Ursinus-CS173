@@ -1,11 +1,11 @@
 ---
 layout: module
-permalink: /Modules/Intro/Module
+permalink: /Modules/IDE/Module
 title: "CS173: Intro to Computer Science - Introductory Study Guide"
 excerpt: "CS173: Intro to Computer Science - Introductory Study Guide"
 
 info:
   next: "./Exercise"
-  video: "https://www.youtube.com/embed/PvnlpPWAcZc"
+  video: "https://www.youtube.com/embed/T4W0g57PGcU"
   
 ---
