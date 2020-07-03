@@ -11,7 +11,7 @@ info:
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"
-  submitformlink: "https://www.google.com/webhp?igu=1"
+  submitformlink: false
   feedbackprocess: | 
     var pos = feedbackString.split(" ");
   correctcheck: |
