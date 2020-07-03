@@ -14,7 +14,7 @@ processor:
   issubmitformlive: false
   submitformlink: "https://www.google.com/webhp?igu=1"
   feedbackprocess: | 
-    var pos = feedbackString.split();
+    var pos = feedbackString.split(" ");
   correctcheck: |
     pos.length > 1 && pos[0].toLowerCase() === "hello"
  

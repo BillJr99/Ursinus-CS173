@@ -14,9 +14,14 @@ layout: default
 {% if file.ismain == false %}
 #{{ file.name }}Editor {
     position: relative;
+    {% if file.isvisible == true %}
     width: 700px;
     height: 250px;
-    {% if file.isvisible == false %}visibility: hidden{% endif %}
+    {% else %}
+    width: 700px;
+    height: 10px;
+    visibility: hidden
+    {% endif %}
 }
 {% else %}
 #mainEditor {
@@ -25,6 +30,8 @@ layout: default
     width: 700px;
     height: 100px;
     {% else %}
+    width: 700px;
+    height: 10px;    
     visibility: hidden
     {% endif %}
 }
