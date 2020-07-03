@@ -643,7 +643,7 @@ university:
   academicyear: "2020-21"
   fall:
   - kname: "Convocation"
-    kdate: "2020/08/28"
+    kdate: "2020/08/19"
     kdisplay: true
   - kname: "Add Deadline"
     kdate: "2020/09/11"
