@@ -11,7 +11,7 @@ info:
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"
-  issubmitformlive: true
+  issubmitformlive: false
   submitformlink: "https://www.google.com/webhp?igu=1"
   feedbackprocess: | 
     var pos = feedbackString.split();
@@ -26,7 +26,7 @@ files:
     isvisible: true
     code: | 
         public class MyFirstProgram {
-            public void main(String[] args) {
+            public static void main(String[] args) {
                 System.out.println("Hello");
             }
         }    
@@ -37,7 +37,6 @@ files:
     isreadonly: true
     isvisible: false
     code: |
-        MyFirstProgram myprogram = new MyFirstProgram();
-        myprogram.main(null);
+        MyFirstProgram.main(null);
         
 ---

@@ -21,9 +21,12 @@ layout: default
 {% else %}
 #mainEditor {
     position: relative;
+    {% if file.isvisible == true %}
     width: 700px;
     height: 100px;
-    {% if file.isvisible == false %}visibility: hidden{% endif %}
+    {% else %}
+    visibility: hidden
+    {% endif %}
 }
 {% endif %}
 {% endfor %}
