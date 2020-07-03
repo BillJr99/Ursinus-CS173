@@ -15,7 +15,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.split();
   correctcheck: |
-    pos.length > 1 && pos[0].equalsIgnoreCase("Hello")
+    pos.length > 1 && pos[0].toLowerCase() === "hello"
  
 files:
   - filename: "MyFirstProgram.java"
@@ -25,7 +25,7 @@ files:
     isvisible: true
     code: | 
         public class MyFirstProgram {
-            public void main() {
+            public static void main() {
                 System.out.println("Hello");
             }
         }    
@@ -36,7 +36,6 @@ files:
     isreadonly: true
     isvisible: false
     code: |
-        MyFirstProgram myProgram = new MyFirstProgram();
-        myProgram.main();
+        MyFirstProgram.main();
         
 ---
