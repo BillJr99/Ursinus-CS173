@@ -22,7 +22,7 @@ files:
     name: myfirstprogram
     ismain: false
     isreadonly: false
-    isvisible: false
+    isvisible: true
     code: | 
         public class MyFirstProgram {
             public static void main(String[] args) {
