@@ -199,6 +199,8 @@ schedule:
   deliverables:
   - dtitle: "Homework 0: Warmup Handed Out"    
     dlink: "./Assignments/0-Warmup"
+  - dtitle: "Pre-Lab 0: The NetBeans IDE Software Environment"
+    dlink: "./Modules/IDE/Module"
 - week: "0"
   date: "1"
   title: "Introduction to Programming: The Development Environment"    
