@@ -130,7 +130,7 @@ textbooks:
   image: http://images.amazon.com/images/P/1118063317.01._PI_SCMZZZZZZZ_.jpg
   isrequired: true 
 - title: "Think Java"
-  authors: "Cay Horstmann"
+  authors: "Allen Downey and Chris Mayfield"
   edition: "1st Edition"
   isbn: "978-1491929568"
   link: https://greenteapress.com/wp/think-java/
