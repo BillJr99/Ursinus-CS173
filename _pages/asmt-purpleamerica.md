@@ -35,23 +35,19 @@ To create the color codings, the proportion of votes cast for each of (up to) th
 
 We will use 24-bit color in this example, meaning that each of the three values (red, green, and blue) in the tuple can be represented with an 8-bit value.  
 
-````markdown
 <details>
   <summary>How many different values can you represent with an 8-bit value?  In other words, how many different pure "red" colors are there?  There will be an equal number of pure "blue" and pure "green" values as well.  (Click to reveal)</summary>
   
   Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are $2^{8}$ different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
   
 </details>
-````  
 
-````markdown
 <details>
   <summary>How many different values can you represent with a 24-bit value?  In other words, how many different colors can we work with in total?  (Click to reveal)</summary>
   
   There are $2^{24}$ or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or $256^{3}$.  By the law of exponents, $2^{24} = (2^{8})^{3} = 256^{3}$.
   
-</details>
-````  
+</details> 
 
 The color wheel below from Wikipedia shows some example color mixtures.  These values are in hexadecimal, so they range from 0x00 to 0xff for decimal values 0 to 255.  Here is a [guide](https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/number-systems-introduction) from Khan Academy to number systems and converting between hexadecimal, binary, and decimal. 
 
@@ -197,21 +193,18 @@ You can use an ArrayList to store all the HashMaps from all the regions you just
 * `String.strip()`: return a new string that is the original string being called upon but with any leading or trailing whitespace removed
 * `String.length()`: Return an integer for the length of a string
 
-````markdown
 <details>
   <summary>How would you know if you have reached a newline in the file, and are thus finished reading a region?  (Click to reveal)</summary>
   
   Each region is separated by a newline.  After removing whitespace from the line, the length of a blank line will be 0.
   
 </details>
-````  
 
 Then, you will need to convert the Latitude/Longitude coordinates from a String to a double.  The standard library function `Double.parseDouble()` will do this for you, by taking a String parameter and returning its numeric value as a `double`.
 
 ### Converting the Latitude / Longitude Values to a [0, 1] Coordinate Plane
 If you know the largest and smallest X,Y values from the whole file (hint: you do!), you can call these `maxX` and `maxY`, and compute the relative position on a [0,1] coordinate plane.
 
-````markdown
 <details>
   <summary>How would you convert between absolute coordinates and a relative [0, 1] scale?  (Click to reveal)</summary>
   
@@ -221,7 +214,6 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   <img src="https://render.githubusercontent.com/render/math?math=x = \frac{x - minX}{maxX - minX}">
   
 </details>
-````  
 
 Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
 
@@ -245,14 +237,12 @@ Render the map using margin-of-victory color shading for the election of your ch
 ### Extension: Only Read the File Once: Using a Cache for Better Performance
 You may have noticed that it was necessary to open and read each election results file more than once (for example, once for every county you encounter).  You can avoid this by storing the electoral file in memory every time you read it.  This is known as creating a "cache" and will allow your program to run much faster, since disk I/O operations are much slower than other computations.
 
-````markdown
 <details>
   <summary>How might a dictionary allow you to check if a file has been read yet, and then to read it if necessary?   (Click to reveal)</summary>
   
   The state or filename could be the dictionary "key;" if the key is not present in the dictionary, then the file has not yet been read.  Once the data has been read from the file, it can be inserted into the dictionary under that key.  Next time the file is needed, the key will be present in the dictionary, and the data can be accessed without re-reading the file.  In other words, the file must be read only if the data is not in the dictionary.  After reading the file (once), the data is stored in the dictionary for subsequent use.
   
 </details>
-````  
 
 ### Extension: Rendering a Different Map
 Create or read a map GPS coordinates for another region, and render it.  Think of another gradient visualization you can perform.  As long as you store your data in the same way as we did for this assignment, this program can be re-used for other visualizations without much if any additional effort!
@@ -260,7 +250,6 @@ Create or read a map GPS coordinates for another region, and render it.  Think o
 ### Extension: Rendering with a Mercatur Projection
 You may have noticed that the map of the United States appears somewhat distorted because it is projected on a square map.  Lines of latitude and longitude are rounded due to the curvature of the Earth.  Two-dimensional renderings often use a projection to distort the map in order to better render this curved surface on a rectangular 2D projection.  One such projection is a [Mercatur Projection](https://en.wikipedia.org/wiki/Mercator_projection).  Such projections must move the projection inaccuracies somewhere (since we are projecting a 3D surface onto a 2D one, some information must necessarily be lost somewhere!).  Mercatur projections exaggerate features at the extremes of the projection (that is, the top and bottom).  This is why Alaska and Greenland appear larger than they really are when projected in this way.  Howeve,r this better depicts the curvature of the other features of the map, including that of the United States.
 
-````markdown
 <details>
   <summary>Prior to scaling your coordinates to a [0,1] plane, your latitude and longitude values can be projected via a Mercatur Projection using the following approach [taken from https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula](https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula).  It assumes that you know the latitude and longitude of the origin point, the top left point, and the bottom right point, as well as the latitude and longitude of the point you wish to project.   (Click to reveal)</summary>
   
@@ -283,7 +272,6 @@ You may have noticed that the map of the United States appears somewhat distorte
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
 </details>
-````  
 
 ## Programming Rubric
 
