@@ -228,7 +228,7 @@ If you are drawing each county, you'll need to open up the file named as the abb
 
 When you define the color of each county region earlier, compute the red, green, and blue ratios based on the following formula:
 
-<img src="https://render.githubusercontent.com/render/math?math=colorConcentration_{candidate c} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}}">
+<img src="https://render.githubusercontent.com/render/math?math=colorConcentration_{candidate c} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}">
 
 That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
 
