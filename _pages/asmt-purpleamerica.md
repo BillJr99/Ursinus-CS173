@@ -216,8 +216,9 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   <summary>How would you convert between absolute coordinates and a relative [0, 1] scale?  (Click to reveal)</summary>
   
   Each position is the relative distance on the X or Y axis as a ratio to the absolute distance represented on the original map.  So, a point (25, 50) on a [0, 100] coordinate scale would be 25% of the way across, and 50% of the way down that map.  This is obtained by dividing the coordinate value by the range on that axis (here, 100).  To account for negative coordinates (which can happen when using GPS coordinates!), we first subtract the minimum X and Y value on the map before computing this ratio.  The resulting value can be multiplied by the new range, but since we are using a [0, 1] projection, the new scale is 1, and there is no need to scale back up.  The formulae to scale GPS coordinates to a [0, 1] X/Y map are as follows:
-  $y = \frac{y - minY}{maxY - minY}$
-  $x = \frac{x - minX}{maxX - minX}$
+  
+  <img src="https://render.githubusercontent.com/render/math?math=y = \frac{y - minY}{maxY - minY}">
+  <img src="https://render.githubusercontent.com/render/math?math=x = \frac{x - minX}{maxX - minX}">
   
 </details>
 ````  
