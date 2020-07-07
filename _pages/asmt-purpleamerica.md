@@ -26,9 +26,9 @@ Robert Vanderplei proposed a [Purple America](https://en.wikipedia.org/wiki/Purp
 
 ![County by County Election Results on a Purple America Map from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/8/8c/ElectionMapPurpleCounty.png)
 
-Kevin Wayne developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html)[^Wayne2014] in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
-[^Wayne2014]: Nick Parlante, Julie Zelenski, Josh Hug, John Nicholson, John DeNero, Antti Laaksonen, Arto Vihavainen, Frank McCown, and Kevin Wayne. 2014. Nifty assignments. In Proceedings of the 45th ACM technical symposium on Computer science education (SIGCSE ’14). Association for Computing Machinery, New York, NY, USA, 621–622. DOI:[https://doi.org/10.1145/2538862.2538995](https://doi.org/10.1145/2538862.2538995)
+Kevin Wayne developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html)[^1] in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
 
+[^1]: Nick Parlante, Julie Zelenski, Josh Hug, John Nicholson, John DeNero, Antti Laaksonen, Arto Vihavainen, Frank McCown, and Kevin Wayne. 2014. Nifty assignments. In Proceedings of the 45th ACM technical symposium on Computer science education (SIGCSE ’14). Association for Computing Machinery, New York, NY, USA, 621–622. DOI:[https://doi.org/10.1145/2538862.2538995](https://doi.org/10.1145/2538862.2538995)
 
 ### Color Coding
 To create the color codings, the proportion of votes cast for each of (up to) three candidates is converted into a RGB color.  An RGB color is defined by a "tuple," or collection of values: each value in this 3-tuple represents the proportion of red, blue, and green to be mixed in to the color shown.  This is called a 3-tuple because there are three values in the tuple (the red, blue, and green proportion).
