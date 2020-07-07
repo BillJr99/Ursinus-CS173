@@ -188,8 +188,8 @@ Loop through the ArrayList, reading each line of text, and generate two arrays o
 
 * RegionName: A String containing the name of the region
 * State: A String containing the state in which that region is located
-* x: a double[] containing the array of x coordinates of the polygon
-* y: a double[] containing the array of y coordinates of the polygon
+* x: a `double[]` containing the array of x coordinates of the polygon
+* y: a `double[]` containing the array of y coordinates of the polygon
 
 You can use an ArrayList to store all the HashMaps from all the regions you just read.  Note that you will need to remove the extra spaces within the Strings that you read, and "tokenize" the Latitude and Longitude values from each line (since both coordinates appear on each line of text).  The following functions will help you do this:
 
