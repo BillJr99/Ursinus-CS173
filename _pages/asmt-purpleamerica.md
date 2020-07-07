@@ -26,7 +26,7 @@ Robert Vanderplei proposed a [Purple America](https://en.wikipedia.org/wiki/Purp
 
 ![County by County Election Results on a Purple America Map from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/8/8c/ElectionMapPurpleCounty.png)
 
-Kevin Wayne developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html)[^1] in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
+Kevin Wayne[^1] developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html) in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
 
 [^1]: Nick Parlante, Julie Zelenski, Josh Hug, John Nicholson, John DeNero, Antti Laaksonen, Arto Vihavainen, Frank McCown, and Kevin Wayne. 2014. Nifty assignments. In Proceedings of the 45th ACM technical symposium on Computer science education (SIGCSE ’14). Association for Computing Machinery, New York, NY, USA, 621–622. DOI:[https://doi.org/10.1145/2538862.2538995](https://doi.org/10.1145/2538862.2538995)
 
