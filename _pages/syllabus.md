@@ -197,9 +197,9 @@ schedule:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "./NetBeans"
   deliverables:
-  - dtitle: "Homework 0: Warmup Handed Out"    
+  - dtitle: "Assignment: Warmup Handed Out"    
     dlink: "./Assignments/Warmup"
-  - dtitle: "Pre-Lab 0: The NetBeans IDE Software Environment"
+  - dtitle: "Pre-Lab: The NetBeans IDE Software Environment"
     dlink: "./Modules/IDE/Module"
 - week: "0"
   date: "1"
@@ -217,7 +217,7 @@ schedule:
   date: "0"
   title: "Methods"
   deliverables:
-  - dtitle: "Project: Purple America Parts 1 through 3 Handed Out"
+  - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
     dlink: "./Assignments/PurpleAmerica"  
 - week: "3"
   date: "0"
@@ -235,7 +235,7 @@ schedule:
   - rtitle: "Style Guide"
     rlink: "./Style-Guide" 
   deliverables:
-  - dtitle: "Project: Purple America Parts 1 through 3 Due"
+  - dtitle: "Assignment: Purple America Parts 1 through 3 Due"
     dlink: "./Assignments/PurpleAmerica"  
 - week: "5"
   date: "0"
@@ -253,13 +253,13 @@ schedule:
   date: "0"
   title: "Iteration"  
   deliverables:
-  - dtitle: "Project: Purple America Part 4 Handed Out"
+  - dtitle: "Assignment: Purple America Part 4 Handed Out"
     dlink: "./Assignments/PurpleAmerica"    
 - week: "10"
   date: "0"
   title: "Arrays"
   deliverables:
-  - dtitle: "Project: Purple America Part 4 Due"
+  - dtitle: "Assignment: Purple America Part 4 Due"
     dlink: "./Assignments/PurpleAmerica" 
   - dtitle: "Assignment: Mini Crypto Handed Out"
     dlink: "./Assignments/MiniCrypto"     
@@ -267,15 +267,15 @@ schedule:
   date: "0"
   title: "ArrayLists and Generic/Template Data Structures"
   deliverables:
-  - dtitle: "Project: Purple America Part 5 Handed Out"
+  - dtitle: "Assignment: Purple America Part 5 Handed Out"
     dlink: "./Assignments/PurpleAmerica"     
 - week: "12"
   date: "0"
   title: "Algorithms"
   deliverables:
-  - dtitle: "Project: Purple America Part 5 Due"
+  - dtitle: "Assignment: Purple America Part 5 Due"
     dlink: "./Assignments/PurpleAmerica"    
-  - dtitle: "Project: Purple America Parts 6 through 7 Handed Out"
+  - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
     dlink: "./Assignments/PurpleAmerica"        
 - week: "13"
   date: "1"
@@ -293,7 +293,7 @@ schedule:
   date: "1"
   title: "Review"
   deliverables:
-  - dtitle: "Project: Purple America Parts 6 through 7 Due"
+  - dtitle: "Assignment: Purple America Parts 6 through 7 Due"
     dlink: "./Assignments/PurpleAmerica"      
     
 OLDschedule:
