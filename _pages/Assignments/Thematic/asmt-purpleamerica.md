@@ -17,6 +17,13 @@ tags:
 ---
 # {{ page.title }} (100 Points)
 
+The goals of this assignment are:
+* To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.
+* To use iteration to facilitate the rendering of many counties in a graphical display
+* To explore the HashMap data structure for storing associated key-value pairs
+* To use the ArrayList data structure as a generic container
+* To utilize library functionality from external jar files and build upon existing functionality
+
 In the United States, many elections, including the presidential election, are decided by a "winner-take-all" system via a "first-past-the-post" model.  In this model, people in a region cast votes for their candidate of choice among a set of candidates.  Whichever candidate receives the plurality of votes cast "wins" the election.  In American presidential elections, winning a particular region results in receiving a number of "Electoral College" votes; in many states, all of the electoral college votes are cast for the candidate who won the "first-past-the-post" vote in that state.
 
 This results in an electoral map like the one below from the 2008 United States presidential election, in which information is lost pertaining to the margin of victory.  For example, it is known that President Obama won the Commonwealth of Pennsylvania in 2008 (due to the blue color), receiving its 21 electoral college votes; similarly, it is known that Senator McCain won the state of Texas (due to the red color) and received its 34 electoral college votes.  It is not known from this visualization, however, whether these states were won by a single vote or by a landslide.  For this reason, it is important to carefully choose visualizations that convey as much information as possible, and to be clear about the limitations of the visualization.

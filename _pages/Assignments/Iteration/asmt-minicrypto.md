@@ -22,6 +22,12 @@ This assignment is adapted from Prof. Mongan's assignments in communications and
 [^3]: William M. Mongan. 2012. Networking Applications, Protocols, and Cryptography with Java. Tapia Workshop at the University of Pennsylvania, Philadelphia, PA.
 [^4]: Bell, Witten, and Fellows. 1998. Computer Science Unplugged - Public Key Encryption. Available at [https://classic.csunplugged.org/public-key-encryption/](https://classic.csunplugged.org/public-key-encryption/)
 
+The goals of this assignment are:
+* To explore the mathematics of modern encryption systems
+* To implement mathematical theory in the Java programming language
+* To utilize library functionality from external jar files and build upon existing functionality
+* To implement algorithms that iterate over characters in a string and over elements in an array
+
 ## An Unplugged Activity
 If you had to pass secret messages around the room, but had to do so by passing notes to the people immediately adjacent to you, how could you go about "securing" the messages so that only your partner at the other side of the room could read your note?  You and your partner would have to agree on some encoding for the message.  Many such encodings exist:
 
