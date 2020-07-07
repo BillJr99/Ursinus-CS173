@@ -216,6 +216,9 @@ schedule:
 - week: "2"
   date: "0"
   title: "Methods"
+  deliverables:
+  - dtitle: "Project: Purple America Parts 1 through 3 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"  
 - week: "3"
   date: "0"
   title: "Debugging" 
@@ -230,7 +233,10 @@ schedule:
   title: "Coding Style"
   readings:
   - rtitle: "Style Guide"
-    rlink: "./Style-Guide"  
+    rlink: "./Style-Guide" 
+  deliverables:
+  - dtitle: "Project: Purple America Parts 1 through 3 Due"
+    dlink: "./Assignments/PurpleAmerica"  
 - week: "5"
   date: "0"
   title: "Strings"
@@ -246,18 +252,37 @@ schedule:
 - week: "9"
   date: "0"
   title: "Iteration"  
+  deliverables:
+  - dtitle: "Project: Purple America Part 4 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"    
 - week: "10"
   date: "0"
   title: "Arrays"
+  deliverables:
+  - dtitle: "Project: Purple America Part 4 Due"
+    dlink: "./Assignments/PurpleAmerica" 
+  - dtitle: "Assignment: Mini Crypto Handed Out"
+    dlink: "./Assignments/MiniCrypto"     
 - week: "11"
   date: "0"
   title: "ArrayLists and Generic/Template Data Structures"
+  deliverables:
+  - dtitle: "Project: Purple America Part 5 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"     
 - week: "12"
   date: "0"
   title: "Algorithms"
+  deliverables:
+  - dtitle: "Project: Purple America Part 5 Due"
+    dlink: "./Assignments/PurpleAmerica"    
+  - dtitle: "Project: Purple America Parts 6 through 7 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"        
 - week: "13"
   date: "1"
   title: "Ethical Case Studies"  
+  deliverables:
+  - dtitle: "Assignment: Mini Crypto Handed Out"
+    dlink: "./Assignments/MiniCrypto"       
 - week: "13"
   date: "2"
   title: "Objects"
@@ -267,6 +292,9 @@ schedule:
 - week: "14"
   date: "1"
   title: "Review"
+  deliverables:
+  - dtitle: "Project: Purple America Parts 6 through 7 Due"
+    dlink: "./Assignments/PurpleAmerica"      
     
 OLDschedule:
 - week: "0"

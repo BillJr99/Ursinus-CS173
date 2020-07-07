@@ -6,11 +6,16 @@ excerpt: "CS173: Intro to Computer Science - Purple America"
 
 info:
   coursenum: CS173
+
+tags:
+  - graphics
+  - iteration
+  - strings
+  - hashing
+  - numeric
   
 ---
-# {{ page.title }}
-
-## The Assignment (100 Points)
+# {{ page.title }} (100 Points)
 
 In the United States, many elections, including the presidential election, are decided by a "winner-take-all" system via a "first-past-the-post" model.  In this model, people in a region cast votes for their candidate of choice among a set of candidates.  Whichever candidate receives the plurality of votes cast "wins" the election.  In American presidential elections, winning a particular region results in receiving a number of "Electoral College" votes; in many states, all of the electoral college votes are cast for the candidate who won the "first-past-the-post" vote in that state.
 
@@ -29,6 +34,8 @@ Robert Vanderplei proposed a [Purple America](https://en.wikipedia.org/wiki/Purp
 Kevin Wayne \[[^1]\] developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html) in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
 
 [^1]: Nick Parlante, Julie Zelenski, Josh Hug, John Nicholson, John DeNero, Antti Laaksonen, Arto Vihavainen, Frank McCown, and Kevin Wayne. 2014. Nifty assignments. In Proceedings of the 45th ACM technical symposium on Computer science education (SIGCSE ’14). Association for Computing Machinery, New York, NY, USA, 621–622. DOI:[https://doi.org/10.1145/2538862.2538995](https://doi.org/10.1145/2538862.2538995)
+
+## Part 1: Number Systems and RGB Color Coding
 
 ### Color Coding
 To create the color codings, the proportion of votes cast for each of (up to) three candidates is converted into a RGB color.  An RGB color is defined by a "tuple," or collection of values: each value in this 3-tuple represents the proportion of red, blue, and green to be mixed in to the color shown.  This is called a 3-tuple because there are three values in the tuple (the red, blue, and green proportion).
@@ -53,9 +60,9 @@ The color wheel below from Wikipedia shows some example color mixtures.  These v
 
 ![RGB Color Wheel from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif/800px-Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif)
 
-### Drawing Figures
+## Part 2: Drawing Figures
 
-#### Adding the Princeton stdlib Library to Your Project
+### Adding the Princeton stdlib Library to Your Project
 The `edu.princeton.cs.algs4.StdDraw` class contains a library that will draw polygons and other shapes on a window.  The coordinates of this window are assumed to range from [0, 1].  This class is contained in the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file provided by Robert Sedgewick.
 
 To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
@@ -74,7 +81,7 @@ dependencies {
 
 Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file into a subdirectory of your project called `libs`.
 
-#### Basic Drawing Functionality
+### Basic Drawing Functionality
 To draw a figure, you can use the following code snippet:
 
 ```java
@@ -108,11 +115,17 @@ public static void circle(double x, double y, double radius)
 
 Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.
 
-##### Creating a Function to Draw a Figure
+## Part 3: Encapsulating Drawing Functionality in a Function
+
+### Creating a Function to Draw a Figure
 Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
 
-##### Using a Loop to Draw Several Figures
+## Part 4: Using Iteration to Draw Several Figures
+
+### Using a Loop to Draw Multiple Figures
 Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
+
+## Part 5: Reading GPS Coordinates for the Polygons
 
 ### Reading the GPS Coordinates File
 
@@ -202,6 +215,8 @@ You can use an ArrayList to store all the HashMaps from all the regions you just
 
 Then, you will need to convert the Latitude/Longitude coordinates from a String to a double.  The standard library function `Double.parseDouble()` will do this for you, by taking a String parameter and returning its numeric value as a `double`.
 
+## Part 6: Scaling the Coordinates to a Graphical Plane
+
 ### Converting the Latitude / Longitude Values to a [0, 1] Coordinate Plane
 If you know the largest and smallest X,Y values from the whole file (hint: you do!), you can call these `maxX` and `maxY`, and compute the relative position on a [0,1] coordinate plane.
 
@@ -216,6 +231,8 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
 </details>
 
 Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
+
+## Part 7: Generating Color Codes from Electoral Votes
 
 ### Reading the Electoral Votes File and Generating the Color Codes
 Coordinate data for other geographic regions (for example, a state-by-state map of the United States, or a map of each state by county) can be found [here](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america-data.zip).  In addition, this file contains the election results for a given year (for example, USA1968.txt for the state-by-state presidential election in 1968, or PA2008.txt for the county-by-county presidential election results in Pennsylvania in 2008).  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  The first line is a header line, giving the labels for each column in the file (for example, the name of each candidate).  This can be ignored; each subsequent line contains:
@@ -234,7 +251,9 @@ That is, the concentration of a color is the ratio of total votes received by th
 
 Render the map using margin-of-victory color shading for the election of your choice.
 
-### Extension: Only Read the File Once: Using a Cache for Better Performance
+## Extra Credit (10 Points Each)
+
+### Extra Credit 1: Only Read the File Once: Using a Cache for Better Performance
 You may have noticed that it was necessary to open and read each election results file more than once (for example, once for every county you encounter).  You can avoid this by storing the electoral file in memory every time you read it.  This is known as creating a "cache" and will allow your program to run much faster, since disk I/O operations are much slower than other computations.
 
 <details>
@@ -244,10 +263,10 @@ You may have noticed that it was necessary to open and read each election result
   
 </details>
 
-### Extension: Rendering a Different Map
+### Extra Credit 2: Rendering a Different Map
 Create or read a map GPS coordinates for another region, and render it.  Think of another gradient visualization you can perform.  As long as you store your data in the same way as we did for this assignment, this program can be re-used for other visualizations without much if any additional effort!
 
-### Extension: Rendering with a Mercatur Projection
+### Extra Credit 3: Rendering with a Mercatur Projection
 You may have noticed that the map of the United States appears somewhat distorted because it is projected on a square map.  Lines of latitude and longitude are rounded due to the curvature of the Earth.  Two-dimensional renderings often use a projection to distort the map in order to better render this curved surface on a rectangular 2D projection.  One such projection is a [Mercatur Projection](https://en.wikipedia.org/wiki/Mercator_projection).  Such projections must move the projection inaccuracies somewhere (since we are projecting a 3D surface onto a 2D one, some information must necessarily be lost somewhere!).  Mercatur projections exaggerate features at the extremes of the projection (that is, the top and bottom).  This is why Alaska and Greenland appear larger than they really are when projected in this way.  Howeve,r this better depicts the curvature of the other features of the map, including that of the United States.
 
 <details>
@@ -277,7 +296,6 @@ You may have noticed that the map of the United States appears somewhat distorte
 
 |  | Pre-Emerging (<50%) | Beginning (50%) | Progressing (85%) | Proficient (100%) |
 |-|-|-|-|-|
-| Data Structures (40%) | Incorrect/non-specified data structures were implemented to solve the problem, or the data structures specified were not used successfully | Data structures are chosen appropriately, but the implementation contains fundamental departures from the definition | Data structures are chosen appropriately and implemented in a functionally reasonable way, with minor areas of correction or improvement | Data structures are chosen appropriately and implemented faithfully to a standard, a reference, or an efficient implementation |
-| Algorithm Implementation (40%) | The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run | The algorithm fails on the test inputs due to one or more minor issues | The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation | A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case |
-| Code Quality and Documentation (10%) | Code commenting and structure are absent, or code structure departs significantly from best practice | Code commenting and structure is limited in ways that reduce the readability of the program | Code documentation is present that re-states the explicit code definitions | Code is documented at non-trivial points in a manner that enhances the readability of the program |
+| Algorithm Implementation (60%) | The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run | The algorithm fails on the test inputs due to one or more minor issues | The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation | A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case |
+| Code Quality and Documentation (30%) | Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide | Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide | Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide | Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide |
 | Writeup/Submission (10%) | An incomplete submission is provided | The program is submitted, but not according to the directions in one or more ways | The program is submitted according to the directions with a minor omission or correction needed | The program is submitted according to the directions, including a readme writeup describing the solution |
