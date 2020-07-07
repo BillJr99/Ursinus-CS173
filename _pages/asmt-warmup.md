@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /Assignments/0-Warmup
+permalink: /Assignments/Warmup
 title: "CS173: Intro to Computer Science - Warmup"
 excerpt: "CS173: Intro to Computer Science - Warmup"
 
@@ -8,7 +8,7 @@ info:
   coursenum: CS173
   officehourspoll: "https://www.when2meet.com/?9311271-8GY4a"
   testproject:
-    ziplink: "../files/asmt0/HW0-master.zip"
+    ziplink: "../files/asmt-warmup/HW0-master.zip"
     zipfilename: "HW0-master.zip"
     zipdirname: "HW0-master"
   
