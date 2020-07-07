@@ -182,8 +182,8 @@ The region name (for example, the name of the county) is followed by the state n
 ### Parsing the Region File
 Loop through the ArrayList, reading each line of text, and generate two arrays of doubles for each region.  These arrays (x and y) will contain the latitude/longitude coordinates of the polygon defined by each region in the file.  Every time you read a new region (from the start of the region all the way to a blank line indicating the end of the region), create a `HashMap` to store the values for that region.  The `HashMap` should contain the following keys:
 
-* RegionName: A String containing the name of the region
-* State: A String containing the state in which that region is located
+* RegionName: a String containing the name of the region
+* State: a String containing the state in which that region is located
 * x: a `double[]` containing the array of x coordinates of the polygon
 * y: a `double[]` containing the array of y coordinates of the polygon
 
