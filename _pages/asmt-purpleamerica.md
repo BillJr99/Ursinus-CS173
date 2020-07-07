@@ -38,14 +38,14 @@ We will use 24-bit color in this example, meaning that each of the three values 
 <details>
   <summary>How many different values can you represent with an 8-bit value?  In other words, how many different pure "red" colors are there?  There will be an equal number of pure "blue" and pure "green" values as well.  (Click to reveal)</summary>
   
-  Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are <img src="https://render.githubusercontent.com/render/math?math=2^{8}"> different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
+  Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=2^{8}"> different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
   
 </details>
 
 <details>
   <summary>How many different values can you represent with a 24-bit value?  In other words, how many different colors can we work with in total?  (Click to reveal)</summary>
   
-  There are <img src="https://render.githubusercontent.com/render/math?math=2^{24}"> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <img src="https://render.githubusercontent.com/render/math?math=256^{3}">.  By the law of exponents, <img src="https://render.githubusercontent.com/render/math?math=2^{24} = (2^{8})^{3} = 256^{3}">.
+  There are <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=2^{24}"> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=256^{3}">.  By the law of exponents, <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=2^{24} = (2^{8})^{3} = 256^{3}">.
   
 </details> 
 
@@ -210,8 +210,8 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   
   Each position is the relative distance on the X or Y axis as a ratio to the absolute distance represented on the original map.  So, a point (25, 50) on a [0, 100] coordinate scale would be 25% of the way across, and 50% of the way down that map.  This is obtained by dividing the coordinate value by the range on that axis (here, 100).  To account for negative coordinates (which can happen when using GPS coordinates!), we first subtract the minimum X and Y value on the map before computing this ratio.  The resulting value can be multiplied by the new range, but since we are using a [0, 1] projection, the new scale is 1, and there is no need to scale back up.  The formulae to scale GPS coordinates to a [0, 1] X/Y map are as follows:
   
-  <img src="https://render.githubusercontent.com/render/math?math=y = \frac{y - minY}{maxY - minY}">
-  <img src="https://render.githubusercontent.com/render/math?math=x = \frac{x - minX}{maxX - minX}">
+  <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=y = \frac{y - minY}{maxY - minY}">
+  <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=x = \frac{x - minX}{maxX - minX}">
   
 </details>
 
@@ -228,7 +228,7 @@ If you are drawing each county, you'll need to open up the file named as the abb
 
 When you define the color of each county region earlier, compute the red, green, and blue ratios based on the following formula:
 
-<img src="https://render.githubusercontent.com/render/math?math=colorConcentration_{candidate c} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}">
+<img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=colorConcentration_{candidate c} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}">
 
 That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
 
@@ -255,19 +255,19 @@ You may have noticed that the map of the United States appears somewhat distorte
   
   let a = 6378137 (equatorial radius)<br>
   let MercaturX1 = a * topLeftLongitude<br>
-  let MercaturY1 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))"><br>
+  let MercaturY1 = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))"><br>
   let MercaturX2 = a * bottomRightLongitude<br>
-  let MercaturY2 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))"><br>
+  let MercaturY2 = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))"><br>
   <br>
-  let MercaturDistance = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}"><br>
-  let DistanceMap = <img src="https://render.githubusercontent.com/render/math?math=\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})"><br>
-  let ScaleFactor = <img src="https://render.githubusercontent.com/render/math?math=\frac{MercatorDistance}{DistanceMap}"><br>
+  let MercaturDistance = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}"><br>
+  let DistanceMap = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})"><br>
+  let ScaleFactor = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=\frac{MercatorDistance}{DistanceMap}"><br>
   <br>
   let MercatorX0 = a * originLongitude<br>
-  let MercaturY0 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))"><br>
+  let MercaturY0 = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))"><br>
   <br>
-  let projectedLatitude = <img align="middle" src="https://render.githubusercontent.com/render/math?math=2 * atan(exp((ScaleFactor * -latitude %2B MercatorY0) / a)) - \frac{\pi}{2}"><br>
-  let projectedLongitude = <img src="https://render.githubusercontent.com/render/math?math=\frac{ScaleFactor * x %2B MercatorX0}{a}"><br>
+  let projectedLatitude = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=2 * atan(exp(\frac{ScaleFactor * -latitude %2B MercatorY0}{a})) - \frac{\pi}{2}"><br>
+  let projectedLongitude = <img style="vertical-align:middle" src="https://render.githubusercontent.com/render/math?math=\frac{ScaleFactor * x %2B MercatorX0}{a}"><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
