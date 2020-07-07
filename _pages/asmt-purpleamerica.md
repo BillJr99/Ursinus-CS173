@@ -266,7 +266,7 @@ You may have noticed that the map of the United States appears somewhat distorte
   let MercatorX0 = a * originLongitude<br>
   let MercaturY0 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))"><br>
   <br>
-  let projectedLatitude = <img src="https://render.githubusercontent.com/render/math?math=2 * atan(exp((ScaleFactor * -latitude %2B MercatorY0) / a)) - \frac{\pi}{2}"><br>
+  let projectedLatitude = <img align="middle" src="https://render.githubusercontent.com/render/math?math=2 * atan(exp((ScaleFactor * -latitude %2B MercatorY0) / a)) - \frac{\pi}{2}"><br>
   let projectedLongitude = <img src="https://render.githubusercontent.com/render/math?math=\frac{ScaleFactor * x %2B MercatorX0}{a}"><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
