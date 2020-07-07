@@ -194,8 +194,8 @@ All methods will have documentation including, but not limited to:
 These comments should appear above the method name in a particular
 format, which makes it easy to automatically generate web pages
 describing the code (for instance, see documentation for the [audio
-code](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdAudio.html)
-we've been using, which was generated this way). In NetBeans, if you
+code](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdAudio.html), 
+which was generated this way). In NetBeans, if you
 type out the definition of the method and then type `/**` followed by
 `ENTER`, it will automatically generate a correctly formatted comment,
 which you can fill in with details. Below is an example (courtesy of
