@@ -255,19 +255,19 @@ You may have noticed that the map of the United States appears somewhat distorte
   
   let a = 6378137 (equatorial radius)<br>
   let MercaturX1 = a * topLeftLongitude<br>
-  let MercaturY1 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude}{2}))"><br>
+  let MercaturY1 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))"><br>
   let MercaturX2 = a * bottomRightLongitude<br>
-  let MercaturY2 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude}{2}))"><br>
+  let MercaturY2 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))"><br>
   <br>
-  let MercaturDistance = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{(MercatorX2 - MercatorX1)^{2} + (MercatorY2 - MercatorY1)^{2}}"><br>
-  let DistanceMap = <img src="https://render.githubusercontent.com/render/math?math=\sqrt((bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2})"><br>
+  let MercaturDistance = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}"><br>
+  let DistanceMap = <img src="https://render.githubusercontent.com/render/math?math=\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})"><br>
   let ScaleFactor = <img src="https://render.githubusercontent.com/render/math?math=\frac{MercatorDistance}{DistanceMap}"><br>
   <br>
   let MercatorX0 = a * originLongitude<br>
-  let MercaturY0 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} + \frac{originLatitude}{2}))"><br>
+  let MercaturY0 = <img src="https://render.githubusercontent.com/render/math?math=a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))"><br>
   <br>
   let projectedLatitude = <img src="https://render.githubusercontent.com/render/math?math=2 * atan(exp((ScaleFactor * -latitude + MercatorY0) / a)) - \frac{\pi}{2}"><br>
-  let projectedLongitude = <img src="https://render.githubusercontent.com/render/math?math=\frac{ScaleFactor * x + MercatorX0}{a}"><br>
+  let projectedLongitude = <img src="https://render.githubusercontent.com/render/math?math=\frac{ScaleFactor * x %2B MercatorX0}{a}"><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
