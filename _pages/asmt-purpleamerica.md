@@ -59,30 +59,81 @@ The color wheel below from Wikipedia shows some example color mixtures.  These v
 
 ### Drawing Figures
 
-https://algs4.cs.princeton.edu/code/algs4.jar
+#### Adding the Princeton stdlib Library to Your Project
+The `edu.princeton.cs.algs4.StdDraw` class contains a library that will draw polygons and other shapes on a window.  The coordinates of this window are assumed to range from [0, 1].  This class is contained in the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file provided by Robert Sedgewick.
 
-Importing a Jar (build.gradle)
-Drawing a figure
-        Color color = new Color(red, green, blue);
-        
-        StdDraw.setPenRadius();
-        StdDraw.setPenColor(color); 
-        StdDraw.filledPolygon(x, y); 
-Looping to draw the figure
+To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
+
+```
+compile fileTree(dir: 'libs', include: '*.jar')
+```
+
+If you do not have a dependencies section, you can add one as follows:
+
+```
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+```
+
+Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file into a subdirectory of your project called `libs`.
+
+#### Basic Drawing Functionality
+To draw a figure, you can use the following code snippet:
+
+```java
+// Assumption: the edu.princeton.cs.algs4 package is imported in this file
+
+// This is the RGB color of the polygon
+int red = 255;
+int green = 255;
+int blue = 255;
+
+// x and y is an array of coordinates of the corners of the polygon - the polygon will be automatically closed by connecting the last point to the first point.  Here, the points are (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), and, finally, back to (0, 0) automatically.
+double[] x = {0, .2, .2, 0 };
+double[] y = {0,  0, .2, .2};
+    
+Color color = new Color(red, green, blue);
+   
+StdDraw.setPenRadius(); // This resets the pen thickness to the default
+StdDraw.setPenColor(color); 
+StdDraw.filledPolygon(x, y); 
+```
+
+In addition to a filled polygon, you can draw arcs and circles using the following methods:
+
+```java
+// x and y are the center coordinates of the circle
+// radius is the radius of the circle (or the circle traced by the arc)
+// angle1 and angle2 are the angles traced by the arc from the starting and ending points, respectively
+public static void arc(double x, double y, double radius, double angle1, double angle2)
+public static void circle(double x, double y, double radius)
+```
+
+Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.
+
+##### Creating a Function to Draw a Figure
+Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
+
+##### Using a Loop to Draw Several Figures
+Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
 
 ### Reading the GPS Coordinates File
 
-http://nifty.stanford.edu/2014/wayne-purple-america/data/USA-county.txt
+Now we can read the GPS coordinates of the regions to be drawn.  Each region is a polygon specified by a set of latitude and longitude coordinates.  Our goal is to read this file, and create an array of X and Y coordinates from these GPS values to be rendered as polygons by the drawing library we used above.  We can pick any color for now to draw these polygons; we'll specify individual colors for each one later.
 
+A set of GPS coordinates for each county in the United States can be found [here](http://nifty.stanford.edu/2014/wayne-purple-america/data/USA-county.txt).  You can use the `readFile` function below to read a file into an ArrayList of String values (one entry for each line in the file), so that we can parse the entries in this file.
+
+```java
     /**
-     *
-     * @param filePath
-     * @param contents
-     * @return 
-     * @throws IOException
+     * Read a text file, line by line, into an array of Strings
+     * Adapted from https://www.journaldev.com/709/java-read-file-line-by-line
+     * @param filePath the full or relative path to the file to be read
+     * @param contents an ArrayList of Strings, to be populated with for each line read in the file
+     * @return the contents parameter, which now contains an ArrayList of strings corresponding to the lines read from the file
+     * @throws IOException if the file cannot be read (i.e., if it does not exist, or if the user does not have the required permissions to read the file)
      */
     public ArrayList readFile(String filePath, ArrayList<String> contents) throws IOException {
-        /* https://www.journaldev.com/709/java-read-file-line-by-line */
         BufferedReader reader;
         FileReader fileReader;
        
@@ -100,39 +151,138 @@ http://nifty.stanford.edu/2014/wayne-purple-america/data/USA-county.txt
         
         return contents;
     }
+```    
 
-### Storing the Values from the File for Use
-Using a Dictionary/HashMap (perhaps map of maps) to store values?
-Converting the GPS coordinates to a 0-1 plane ((x - min) / (max - min))
-Drawing those coordinates using StdDraw
+Download the [county coordinates file](http://nifty.stanford.edu/2014/wayne-purple-america/data/USA-county.txt) and save it in your project directory.   I created a subdirectory called `data` in my project directory and saved it there.  Use the `readFile` function to read this file (the path to this file is `./data/USA-county.txt` if you used a subdirectory called `data` like I did). 
+
+The file is formatted as follows:
+
+#### File Header
+The first three lines of the file are the coordinates of the top left and bottom right used on the map, followed by the number of regions in the file.  Notice that Latitude and Longitude are separated by three spaces.
+```
+Latitude   Longitude
+Latitude   Longitude
+Count of the Number of Regions
+<blank line>
+```
+
+####  Region
+Each region is then displayed using the same format:
+
+```
+Region Name
+State Abbreviation
+Count of the Number of Polygon Latitude/Longitude corners`
+ Latitude   Longitude
+ Latitude   Longitude
+ Latitude   Longitude
+ ...
+ Latitude   Longitude
+ <blank line> 
+```
+
+The region name (for example, the name of the county) is followed by the state name (for example, PA for Pennsylvania), followed by the number of coordinates.  Like before, Latitude and Longitude are separated by three spaces, but there is also a space at the beginning of each Latitude/Longitude line.
+
+### Parsing the Region File
+Loop through the ArrayList, reading each line of text, and generate two arrays of doubles for each region.  These arrays (x and y) will contain the latitude/longitude coordinates of the polygon defined by each region in the file.  Every time you read a new region (from the start of the region all the way to a blank line indicating the end of the region), create a `HashMap` to store the values for that region.  The `HashMap` should contain the following keys:
+
+* RegionName: A String containing the name of the region
+* State: A String containing the state in which that region is located
+* x: a double[] containing the array of x coordinates of the polygon
+* y: a double[] containing the array of y coordinates of the polygon
+
+You can use an ArrayList to store all the HashMaps from all the regions you just read.  Note that you will need to remove the extra spaces within the Strings that you read, and "tokenize" the Latitude and Longitude values from each line (since both coordinates appear on each line of text).  The following functions will help you do this:
+
+* `String.split(String delimiter)`: return an array of Strings, with one entry for word or "token" on the input String object on which split is called, where each word is separated by a "delimiter" given in the method parameter (note that our coordinate sare separated or delimited by three spaces)
+* `String.strip()`: return a new string that is the original string being called upon but with any leading or trailing whitespace removed
+* `String.length()`: Return an integer for the length of a string
+
+````markdown
+<details>
+  <summary>How would you know if you have reached a newline in the file, and are thus finished reading a region?  (Click to reveal)</summary>
+  
+  Each region is separated by a newline.  After removing whitespace from the line, the length of a blank line will be 0.
+  
+</details>
+````  
+
+Then, you will need to convert the Latitude/Longitude coordinates from a String to a double.  The standard library function `Double.parseDouble()` will do this for you, by taking a String parameter and returning its numeric value as a `double`.
+
+### Converting the Latitude / Longitude Values to a [0, 1] Coordinate Plane
+If you know the largest and smallest X,Y values from the whole file (hint: you do!), you can call these `maxX` and `maxY`, and compute the relative position on a [0,1] coordinate plane.
+
+````markdown
+<details>
+  <summary>How would you convert between absolute coordinates and a relative [0, 1] scale?  (Click to reveal)</summary>
+  
+  Each position is the relative distance on the X or Y axis as a ratio to the absolute distance represented on the original map.  So, a point (25, 50) on a [0, 100] coordinate scale would be 25% of the way across, and 50% of the way down that map.  This is obtained by dividing the coordinate value by the range on that axis (here, 100).  To account for negative coordinates (which can happen when using GPS coordinates!), we first subtract the minimum X and Y value on the map before computing this ratio.  The resulting value can be multiplied by the new range, but since we are using a [0, 1] projection, the new scale is 1, and there is no need to scale back up.  The formulae to scale GPS coordinates to a [0, 1] X/Y map are as follows:
+  $y = \frac{y - minY}{maxY - minY}$
+  $x = \frac{x - minX}{maxX - minX}$
+  
+</details>
+````  
+
+Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
 
 ### Reading the Electoral Votes File and Generating the Color Codes
-Adding color from relative counts
-http://nifty.stanford.edu/2014/wayne-purple-america/purple-america-data.zip
+Coordinate data for other geographic regions (for example, a state-by-state map of the United States, or a map of each state by county) can be found [here](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america-data.zip).  In addition, this file contains the election results for a given year (for example, USA1968.txt for the state-by-state presidential election in 1968, or PA2008.txt for the county-by-county presidential election results in Pennsylvania in 2008).  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  The first line is a header line, giving the labels for each column in the file (for example, the name of each candidate).  This can be ignored; each subsequent line contains:
 
-### Only Read the File Once: Using a Cache for Better Performance
-Cache the lookup?
+```
+State Name,Candidate 1 Votes,Candidate 2 Votes,Candidate 3 Votes
+```
+
+If you are drawing each county, you'll need to open up the file named as the abbreviated state followed by the election year you're interested in.  For example, Alabama in 2004 would be AL2004.txt.  Fortunately, you will know the abbreviated state name: recall that it is included in the GPS file you read earlier, and you saved it in the `HashMap` you created!  If you loop over each of these HashMaps, you can open the correct file given the abbreviated state name, and then read the election results file using a similar approach to the one you took when reading the GPS coordinates file.  This time, the tokens are delimited by commas instead of spaces.
+
+When you define the color of each county region earlier, compute the red, green, and blue ratios based on the following formula:
+
+$colorConcentration_{candidate c} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}}$
+
+That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
+
+Render the map using margin-of-victory color shading for the election of your choice.
+
+### Extension: Only Read the File Once: Using a Cache for Better Performance
+You may have noticed that it was necessary to open and read each election results file more than once (for example, once for every county you encounter).  You can avoid this by storing the electoral file in memory every time you read it.  This is known as creating a "cache" and will allow your program to run much faster, since disk I/O operations are much slower than other computations.
+
+````markdown
+<details>
+  <summary>How might a dictionary allow you to check if a file has been read yet, and then to read it if necessary?   (Click to reveal)</summary>
+  
+  The state or filename could be the dictionary "key;" if the key is not present in the dictionary, then the file has not yet been read.  Once the data has been read from the file, it can be inserted into the dictionary under that key.  Next time the file is needed, the key will be present in the dictionary, and the data can be accessed without re-reading the file.  In other words, the file must be read only if the data is not in the dictionary.  After reading the file (once), the data is stored in the dictionary for subsequent use.
+  
+</details>
+````  
 
 ### Extension: Rendering a Different Map
-Extending with different maps and other counters?
+Create or read a map GPS coordinates for another region, and render it.  Think of another gradient visualization you can perform.  As long as you store your data in the same way as we did for this assignment, this program can be re-used for other visualizations without much if any additional effort!
 
 ### Extension: Rendering with a Mercatur Projection
-Extending with a Mercatur Projection? https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula
-* Compute mx and my for top left and bottom right points
-** a = 6378137 (equatorial radius)
-** Mercator_x = a * longitude
-** Mercator_y = a * ln(tan(pi / 4 + latitude / 2))
-* Compute Mercator distance
-** Distance_Mercator = Sqrt((Mercator_x2 - Mercator_x1) ^ 2 + (Mercator_y2 - Mercator_y1) ^ 2)
-** Distance_Map = Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2)
-** Scale_factor = Distance_Mercator / Distance_Map
-* Compute the origin scaled point
-** Mercator_x0 = a * Longitude_origin
-** Mercator_y0 = a * ln(tan(pi / 4 + Latitude_origin / 2)
-* Compute all point lat/long
-** Latitude = 2 * atan(exp((Scale_factor * -y + Mercator_y0) / a)) - pi / 2
-** Longitude = (Scale_factor * x + Mercator_x0) / a
-* Now scale to 0-1
+You may have noticed that the map of the United States appears somewhat distorted because it is projected on a square map.  Lines of latitude and longitude are rounded due to the curvature of the Earth.  Two-dimensional renderings often use a projection to distort the map in order to better render this curved surface on a rectangular 2D projection.  One such projection is a [Mercatur Projection](https://en.wikipedia.org/wiki/Mercator_projection).  Such projections must move the projection inaccuracies somewhere (since we are projecting a 3D surface onto a 2D one, some information must necessarily be lost somewhere!).  Mercatur projections exaggerate features at the extremes of the projection (that is, the top and bottom).  This is why Alaska and Greenland appear larger than they really are when projected in this way.  Howeve,r this better depicts the curvature of the other features of the map, including that of the United States.
+
+````markdown
+<details>
+  <summary>Prior to scaling your coordinates to a [0,1] plane, your latitude and longitude values can be projected via a Mercatur Projection using the following approach [taken from https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula](https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula).  It assumes that you know the latitude and longitude of the origin point, the top left point, and the bottom right point, as well as the latitude and longitude of the point you wish to project.   (Click to reveal)</summary>
+  
+  let a = 6378137 (equatorial radius)
+  let MercaturX1 = a * topLeftLongitude
+  let $MercaturY1 = a * ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude{2}))$
+  let MercaturX2 = a * bottomRightLongitude
+  let $MercaturY2 = a * ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude{2}))$
+  
+  let $MercaturDistance = \sqrt{(MercatorX2 - MercatorX1)^{2} + (MercatorY2 - MercatorY1)^{2}}$
+  let $DistanceMap = \sqrt((bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2})$
+  let $ScaleFactor = \frac{MercatorDistance}{DistanceMap}$
+  
+  let MercatorX0 = a * originLongitude
+  let $MercaturY0 = a * ln(tan(\frac{\pi}{4} + \frac{originLatitude{2}))$
+  
+  let $projectedLatitude = 2 * atan(exp((ScaleFactor * -latitude + MercatorY0) / a)) - \frac{\pi}{2}$
+  let $projectedLongitude = \frac{ScaleFactor * x + MercatorX0}{a}$
+  
+  After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
+  
+</details>
+````  
 
 ## Programming Rubric
 
