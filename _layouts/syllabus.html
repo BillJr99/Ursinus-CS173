@@ -351,9 +351,9 @@ layout: default
     <table id="instructorstable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
+    <th><span>Role</span></th>
+    <th><span>Name and Contact Information</span></th>
+    <th><span>Office Hours</span></th>
     </tr>
     </thead>
 
@@ -374,9 +374,9 @@ layout: default
     
     {{item.name}}
     
-    {%if item.picture %}
+    {%if item.picture and item.title and item.name %}
     <br>
-    <img src="{{ item.picture }}">
+    <img src="{{ item.picture }}" alt="Picture of {{ item.title }} {{ item.name }}">
     {% endif %}
 
     {% if item.webpage_url %}
@@ -414,11 +414,11 @@ layout: default
     <table  id="textbookstable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
+    <th><span>Required?</span></th>
+    <th><span>Title</span></th>
+    <th><span>Author</span></th>
+    <th><span>Edition</span></th>
+    <th><span>ISBN</span></th>
     </tr>
     </thead>
 
@@ -434,23 +434,13 @@ layout: default
     </td>
     
     <td align="left">
-    {% if item.image %}
+    {% if item.image and item.title %}
       {% if item.link %}
         <a href="{{ item.link }}">
       {% endif %}
       
-      <center><img src="{{item.image}}"></center> 
-      
-      {% if item.link %}
-        </a>
-      {% endif %}
-    {% endif %}
-    <br>
-    {% if item.title %}
-      {% if item.link %}
-        <a href="{{ item.link }}">
-      {% endif %}
-      
+      <center><img src="{{item.image}}" alt="Picture of the cover of the book entitled {{item.title}}"></center> 
+      <br>     
       {{item.title}}
       
       {% if item.link %}
@@ -495,11 +485,11 @@ layout: default
     <table  id="scheduletable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
-    <th><span></span></th>
+    <th><span>Week</span></th>
+    <th><span>Date</span></th>
+    <th><span>Title</span></th>
+    <th><span>Readings</span></th>
+    <th><span>Deliverables</span></th>
     </tr>
     </thead>
 
@@ -599,8 +589,8 @@ layout: default
     <table  id="gradingtable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
-    <th><span></span></th>
-    <th><span></span></th>
+    <th><span>Item</span></th>
+    <th><span>Weight</span></th>
     </tr>
     </thead>
 
@@ -624,8 +614,8 @@ layout: default
     <table  id="lettergradestable" class="table table-condensed" cellspacing="10">
     <thead>
     <tr>
-    <th><span></span></th>
-    <th><span></span></th>
+    <th><span>Letter</span></th>
+    <th><span>Grade Range</span></th>
     </tr>
     </thead>
 
