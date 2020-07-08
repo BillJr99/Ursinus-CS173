@@ -734,7 +734,7 @@ university:
   - date: "2021/03/12"
     
 ---
-Welcome!  [^1]
+Welcome!  \[[^1]\]
 
 [^1]: This introduction is tentatively taken from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html), and will be adapted for this course.
 
@@ -778,7 +778,8 @@ Since this is a class-wide communication, the following rules apply to Microsoft
 4. I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate).
 5. Students may ask anonymous questions by following a link to a survey at the top of each channel.
 
-[![Netiquette in Online Discussion Boards infographic](http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png)](http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/ =340x) [^2]
+[![Netiquette in Online Discussion Boards infographic](http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png)](http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/ =340x) 
+\[[^2]\]
 
 [^2]: Courtesy of [Online Education Blog of Touro College](http://blogs.onlineeducation.touro.edu/) 
 
