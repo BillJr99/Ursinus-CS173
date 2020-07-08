@@ -734,7 +734,8 @@ university:
   - date: "2021/03/12"
     
 ---
-Welcome!  This introduction is tentatively taken from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html), and will be adapted for this course.
+Welcome!  [^1]
+[^1]: This introduction is tentatively taken from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html), and will be adapted for this course.
 
 # Overview
 Computer science is the study of how machines interact with data and the way in which machines can be used to solve problems. It is a mathematical discipline, but one which is often much more "hands on" than most fields of math. One important aspect of computer science is computer programming, or the process of writing code, or instructions for a computer to execute in a language a computer can understand. With programming languages, we can tell the computer how to automate calculations that are tedious and slow for humans to do by hand, and how to translate algorithms (recipes to solve problems) into code. In this course, we will learn one such language called Java, and we will use this language to explore an interdisciplinary array of computer science problems, including but not limited to:
@@ -776,9 +777,8 @@ Since this is a class-wide communication, the following rules apply to Microsoft
 4. I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate).
 5. Students may ask anonymous questions by following a link to a survey at the top of each channel.
 
-<p><a href="http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/"><img src="http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png" alt="Netiquette in Online Discussion Boards infographic" width="681px" border="0" /></a></p><br />
-<p><strong>Please include attribution to the <a href="http://blogs.onlineeducation.touro.edu/" title="Online Education Blog of Touro College">Online Education Blog of Touro College</a> with this graphic.</strong></p><br />
-<p>
+[![Netiquette in Online Discussion Boards infographic](http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png)](http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/ =480x) [^2]
+[^2]: Courtesy of [Online Education Blog of Touro College](http://blogs.onlineeducation.touro.edu/) 
 
 # Readings
 The official textbook for this course has been chosen both for its clarity and emphasis on good style, and it has been tried and true for many semesters at Ursinus. As an optional supplement to this book, we will be using the free online textbook [Think Java](https://greenteapress.com/wp/think-java/).
