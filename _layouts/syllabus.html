@@ -161,7 +161,7 @@ layout: default
     <ul>
     
     {% if page.info.course_number and page.info.course_title %}
-    <li><b>Course Number and Title:</b> {{page.info.course_number}} - {{page.info.course_title}}
+    <li><strong>Course Number and Title:</strong> {{page.info.course_number}} - {{page.info.course_title}}
     
     {% if page.info.course_sections %}
     <ul>
@@ -173,31 +173,31 @@ layout: default
     {% endif %}
     
     {% if page.permalink %}
-    <li><b>Course Webpage:</b> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>
+    <li><strong>Course Webpage:</strong> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>
     <br>
     {% endif %}
     
     {% if page.university.semester and page.university.academicyear %}
-    <li><b>Academic Term:</b> {{page.university.semester}} {{page.university.academicyear}}</a>
+    <li><strong>Academic Term:</strong> {{page.university.semester}} {{page.university.academicyear}}</a>
     <br>
     {% endif %}
     
     {% if page.info.course_start_date and page.info.course_end_date %}
-    <li><b>Term Start and End:</b> <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_start_date}}")));</script> through <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_end_date}}")));</script> </b></li>
+    <li><strong>Term Start and End:</strong> <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_start_date}}")));</script> through <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_end_date}}")));</script> </strong></li>
     <br>
     {% endif %}
     
     {% if page.info.course_prerequisites %}
-    <li><b>Course Prerequisites:</b> {{page.info.course_prerequisites}}</li>   
+    <li><strong>Course Prerequisites:</strong> {{page.info.course_prerequisites}}</li>   
     <br>    
     {% endif %}
     
     {% if page.info.class_meets_locations and page.info.course_sections %}
-    <li><b>Class Meeting Locations and Times:</b></li>  
+    <li><strong>Class Meeting Locations and Times:</strong></li>  
     <ul>
     {% for i in (0..page.info.course_sections.size) %}
     {% if i < page.info.course_sections.size %}
-    <li><b>Class Meetings: </b>Section {{ page.info.course_sections[i].section }}:</li>
+    <li><strong>Section {{ page.info.course_sections[i].section }}:</strong></li>
     <ul>
     {% for meeting in page.info.class_meets_locations[i].section %}
     <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.starttime}} to {{meeting.endtime}} in {{meeting.place}}</li>
@@ -212,7 +212,7 @@ layout: default
     {% for i in (0..page.info.course_sections.size) %}
     {% if i < page.info.course_sections.size %}
     {% if page.info.midtermexam[i].mdate != "TBD" %}
-    <li><b>Midterm Exam:</b></li>
+    <li><strong>Midterm Exam:</strong></li>
     {% break %}
     {% endif %}
     {% endif %}
@@ -232,7 +232,7 @@ layout: default
     {% for i in (0..page.info.course_sections.size) %}
     {% if i < page.info.course_sections.size %}
     {% if page.info.finalexam[i].fdate != "TBD" %}    
-    <li><b>Final Exam:</b></li>
+    <li><strong>Final Exam:</strong></li>
     {% break %}
     {% endif %}
     {% endif %}
@@ -439,11 +439,11 @@ layout: default
     <tr align="left">
 
     <td align="left">
-    <b>Week {{ item.week }}</b>
+    <strong>Week {{ item.week }}</strong>
     </td>
 
     <td align="left">
-    <b><script language="JavaScript">document.write(getCourseDate("{{page.info.course_start_date}}", "{{item.week}}", "{{item.date}}", {{page.info.class_meets_days.isM}}, {{page.info.class_meets_days.isT}}, {{page.info.class_meets_days.isW}}, {{page.info.class_meets_days.isR}}, {{page.info.class_meets_days.isF}}, {{page.info.class_meets_days.isS}}, {{page.info.class_meets_days.isU}}));</script></b>
+    <strong><script language="JavaScript">document.write(getCourseDate("{{page.info.course_start_date}}", "{{item.week}}", "{{item.date}}", {{page.info.class_meets_days.isM}}, {{page.info.class_meets_days.isT}}, {{page.info.class_meets_days.isW}}, {{page.info.class_meets_days.isR}}, {{page.info.class_meets_days.isF}}, {{page.info.class_meets_days.isS}}, {{page.info.class_meets_days.isU}}));</script></strong>
     </td>
 
     <td align="left">
@@ -525,13 +525,13 @@ layout: default
     {% if page.university.semester == "Fall" and page.university.fall %}
     <ul>
     {% for keydate in page.university.fall %}
-    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><strong>{{keydate.kname}}</strong>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
     {% endfor %}
     </ul>
     {% elsif page.university.semester == "Spring" and page.university.spring %}
     <ul>
     {% for keydate in page.university.spring %}
-    {% if keydate.kdisplay == true %}<li><b>{{keydate.kname}}</b>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
+    {% if keydate.kdisplay == true %}<li><strong>{{keydate.kname}}</strong>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
     {% endfor %}
     </ul>   
     {% endif %}       
