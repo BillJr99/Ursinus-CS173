@@ -162,7 +162,6 @@ layout: default
     
     {% if page.info.course_number and page.info.course_title %}
     <li><b>Course Number and Title:</b> {{page.info.course_number}} - {{page.info.course_title}}
-    {% endif %}
     
     {% if page.info.course_sections %}
     <ul>
@@ -170,6 +169,8 @@ layout: default
     <li>Section {{section.section}}</li>
     {% endfor %}
     </ul>
+    {% endif %}
+    {% endif %}
     
     {% if page.permalink %}
     <li><b>Course Webpage:</b> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>
@@ -518,7 +519,6 @@ layout: default
     {% endfor %}
     </ul>   
     {% endif %}       
-    {% endif %}
 
 
 
