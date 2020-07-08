@@ -138,13 +138,15 @@ textbooks:
   isrequired: false   
 
 objectives:
-- objective: "Implement and engineer multi-component systems that solve real world problems."
 - objective: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
-- objective: "Learn to be a patient problem solver by developing comfort with the edit -> compile -> run loop, along with basic debugging skills."
+- objective: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
+- objective: "Implement algorithms that utilize conditionals and iteration over data structures including Strings and Arrays to solve problems."
+- objective: "Describe and convert the encodings by which data types are stored as numeric values"
 
 goals:
-- goal: "To write software that is easy to read and to maintain by others"
+- goal: "Write software that is easy to read and to maintain by others"
+- goal: "Implement and engineer multi-component systems that solve real world problems."
 
 grade_breakdown:
 - category: "Programming Assignments"
@@ -774,17 +776,17 @@ Since this is a class-wide communication, the following rules apply to Microsoft
 4. I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate).
 5. Students may ask anonymous questions by following a link to a survey at the top of each channel.
 
+<p><a href=’http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/’><img src=’http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png’ alt=’Netiquette in Online Discussion Boards infographic’ width=’681px’ border=’0′ /></a></p><br />
+<p><strong>Please include attribution to the <a href=”http://blogs.onlineeducation.touro.edu/” title=”Online Education Blog of Touro College”>Online Education Blog of Touro College</a> with this graphic.</strong></p><br />
+<p>
+
 # Readings
-The official textbook for this course is
+The official textbook for this course has been chosen both for its clarity and emphasis on good style, and it has been tried and true for many semesters at Ursinus. As an optional supplement to this book, we will be using the free online textbook [Think Java](https://greenteapress.com/wp/think-java/).
 
-Cay Horstmann. [Java For Everyone: Late Objects](https://www.amazon.com/Java-Everyone-Cay-S-Horstmann/dp/1118063317/), 2nd Edition. ISBN-13: 978-1-118-06331-6.
-
-This book has been chosen both for its clarity and emphasis on good style, and it has been tried and true for many semesters at Ursinus. As an optional supplement to this book, we will be using the free online textbook [Think Java](https://greenteapress.com/wp/think-java/).
-
-NOTE: The cost of the Horstmann book may be prohibitive for some students, so please note that renting the book is much cheaper. Please communicate as early as possible if you are having trouble obtaining the book, rather than keeping this to yourself, so that we can work on a solution together.
+NOTE: The cost of the book may be prohibitive for some students, so please note that renting the book is much cheaper. Please communicate as early as possible if you are having trouble obtaining the book, rather than keeping this to yourself, so that we can work on a solution together.
 
 ## Book Surveys
-Roughly once every week, students will be expected to respond to some short answer questions on Canvas to make sure they are reading along in the Horstmann book. These questions will cover readings from material that we are about to cover in class, so it is a good opportunity to get some first exposure and also to let me know where potential sticking points may come up in class. For this reason, responses will be due at 11:59PM the night before class, so that I have enough time to look through them. Full credit will be given as long as a reasonable attempt is made at every question, and as long as at least one question is completely correct (partial credit will be given otherwise).
+Roughly once every week, students will be expected to respond to some short answer questions on Canvas to make sure they are reading along in the book. These questions will cover readings from material that we are about to cover in class, so it is a good opportunity to get some first exposure and also to let me know where potential sticking points may come up in class. For this reason, responses will be due at 11:59PM the night before class, so that I have enough time to look through them. Full credit will be given as long as a reasonable attempt is made at every question, and as long as at least one question is completely correct (partial credit will be given otherwise).
 
 # Homework
 ## Labs
@@ -836,7 +838,7 @@ Mental health care is increasingly recognized as a crucial service for the under
 
 ![Let's Talk Poster](./images/letstalk.jpg)
 
-# Late Penalties
+# Late Work
 In the absence of accommodations, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule. Students will lose points at the following rate:
 
 * -5% for work submitted between 1 minute - 6 hours late
