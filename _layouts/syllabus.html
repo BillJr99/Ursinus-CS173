@@ -174,18 +174,22 @@ layout: default
     
     {% if page.permalink %}
     <li><b>Course Webpage:</b> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>
+    <br>
     {% endif %}
     
     {% if page.university.semester and page.university.academicyear %}
     <li><b>Academic Term:</b> {{page.university.semester}} {{page.university.academicyear}}</a>
+    <br>
     {% endif %}
     
     {% if page.info.course_start_date and page.info.course_end_date %}
     <li><b>Term Start and End:</b> <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_start_date}}")));</script> through <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_end_date}}")));</script> </b></li>
+    <br>
     {% endif %}
     
     {% if page.info.course_prerequisites %}
-    <li><b>Course Prerequisites:</b> {{page.info.course_prerequisites}}</li>    
+    <li><b>Course Prerequisites:</b> {{page.info.course_prerequisites}}</li>   
+    <br>    
     {% endif %}
     
     {% if page.info.class_meets_locations and page.info.course_sections %}
@@ -205,7 +209,14 @@ layout: default
     {% endif %}
     
     {% if page.info.midtermexam and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.midtermexam[i].mdate != "TBD" %}
     <li><b>Midterm Exam:</b></li>
+    {% break %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
     <ul>
     {% for i in (0..page.info.course_sections.size) %}
     {% if i < page.info.course_sections.size %}
@@ -218,11 +229,18 @@ layout: default
     {% endif %}
     
     {% if page.info.finalexam and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.finalexam[i].fdate != "TBD" %}    
     <li><b>Final Exam:</b></li>
+    {% break %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}    
     <ul>
     {% for i in (0..page.info.course_sections.size) %}
     {% if i < page.info.course_sections.size %}
-    {% if page.info.finalexam[i].mdate != "TBD" %}
+    {% if page.info.finalexam[i].fdate != "TBD" %}
     <li>Section {{ page.info.course_sections[i].section }}: {{ page.info.finalexam[i].fdate }} from {{ page.info.finalexam[i].fstarttime }} to {{ page.info.finalexam[i].fendtime }} in {{ page.info.finalexam[i].froom }}</li>
     {% endif %}
     {% endif %}
@@ -499,11 +517,9 @@ layout: default
     <li><script language="JavaScript">document.write(getDateString(strtodate("{{holiday.date}}")));</script></li>
     {% endfor %}
     </ul>    
-    <br>
     {% endif %}
     
     {% if page.university and page.university.semester %}
-    <br>
     Please note the following key calendar dates:
 
     {% if page.university.semester == "Fall" and page.university.fall %}
