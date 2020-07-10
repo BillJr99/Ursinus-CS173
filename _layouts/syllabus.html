@@ -158,9 +158,9 @@ layout: default
 
     <a name="courseinfo"></a>
     <h2>Course Info</h2> 
-
+ 
     <ul>
-    
+
     {% if page.info.course_number and page.info.course_title %}
     <li><strong>Course Number and Title:</strong> {{page.info.course_number}} - {{page.info.course_title}}
     
@@ -174,11 +174,9 @@ layout: default
     {% endif %}
     
     {% if page.info.credit_hours %}
-    <ul>
     <li><strong>Credit Hours:</strong> {{ page.info.credit_hours }}</li>
     <ul>
     <li><a href="https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/">Credit Hours</a> include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
-    </ul>
     </ul>
     {% endif %}    
     
