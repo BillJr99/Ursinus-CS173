@@ -152,17 +152,8 @@ layout: default
 
     {% if page.info.course_description %}
     {{ page.info.course_description }}
-    <br />
     {% endif %}
-    {% if page.info.credit_hours %}
-    <br />
-    <a href="https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/">Credit Hours</a>: {{ page.info.credit_hours }}
-    <br>
-    <ul>
-    <li>Credit Hours include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
-    </ul>
-    <br>
-    {% endif %}
+    
 
 
     <a name="courseinfo"></a>
@@ -181,6 +172,15 @@ layout: default
     </ul>
     {% endif %}
     {% endif %}
+    
+    {% if page.info.credit_hours %}
+    <ul>
+    <li><a href="https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/">Credit Hours</a>: {{ page.info.credit_hours }}</li>
+    <ul>
+    <li>Credit Hours include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
+    </ul>
+    </ul>
+    {% endif %}    
     
     {% if page.permalink %}
     <li><strong>Course Webpage:</strong> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a>
