@@ -4,6 +4,15 @@ permalink: /
 title: "CS173: Intro to Computer Science"
 excerpt: "CS173: Intro to Computer Science"
 
+boilerplate:
+  links:
+    credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
+    disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
+    bear2bear: https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/
+    mathhelproom: https://www.ursinus.edu/offices/institute-for-student-success/tutoring-help-sessions/math-help-room/
+    academichonesty: https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/
+    titleix: https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/
+    
 info:
   course_number: CS173
   course_sections: 
