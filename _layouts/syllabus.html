@@ -1,5 +1,14 @@
 ---
 layout: default
+
+boilerplate:
+  links:
+    credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
+    disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
+    bear2bear: https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/
+    mathhelproom: https://www.ursinus.edu/offices/institute-for-student-success/tutoring-help-sessions/math-help-room/
+    academichonesty: https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/
+    titleix: https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/
 ---
 
 <!-- 
@@ -176,7 +185,7 @@ layout: default
     {% if page.info.credit_hours %}
     <li><strong>Credit Hours:</strong> {{ page.info.credit_hours }}</li>
     <ul>
-    <li><a href="https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/">Credit Hours</a> include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
+    <li><a href="{{page.boilerplate.links.credithours}}">Credit Hours</a> include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
     </ul>
     {% endif %}    
     
@@ -299,7 +308,7 @@ layout: default
     
     <a name="accommodations"></a>
     <h3>Accommodations</h3>
-    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of <a href="https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/">Disability Services</a> via email or at 484-762-4329.
+    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of <a href="{{page.boilerplate.links.disabilityservices}}">Disability Services</a> via email or at 484-762-4329.
     
     
     <h3>Let's Talk</h3>
@@ -310,11 +319,11 @@ layout: default
     
     <a name="bear2bear"></a>
     <h3>Bear2Bear</h3>
-    The <a href="https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/">Bear2Bear</a> fund is a student emergency fund established to assist with temporary emergency financial circumstances.   
+    The <a href="{{page.boilerplate.links.bear2bear}}">Bear2Bear</a> fund is a student emergency fund established to assist with temporary emergency financial circumstances.   
     
     
     <h3>Help Room</h3>
-    The math help room (Pfahler 102) is a great place to go if you are struggling. Students who have previously taken the course will be there to help you with the assignments. Visit the <a href="https://www.ursinus.edu/offices/institute-for-student-success/tutoring-help-sessions/math-help-room/">Math Help Room</a> page for more information. 
+    The math help room (Pfahler 102) is a great place to go if you are struggling. Students who have previously taken the course will be there to help you with the assignments. Visit the <a href="{{page.boilerplate.links.mathhelproom}}">Math Help Room</a> page for more information. 
 
 
 
@@ -678,7 +687,7 @@ layout: default
     <br />
     <img src="./images/collaborationpolicy.png" alt="Collaboration Policy Table" />
     <br />
-    If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way according to the College <a href="https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/">Academic Honesty</a> policy, regardless of intent, then it may be an academic dishonesty case, and it will be referred to the Associate Dean for Academic Affairs.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations.  You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty.
+    If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way according to the College <a href="{{page.boilerplate.links.academichonesty}}">Academic Honesty</a> policy, regardless of intent, then it may be an academic dishonesty case, and it will be referred to the Associate Dean for Academic Affairs.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations.  You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty.
     
     
     
@@ -690,7 +699,7 @@ layout: default
     
     
     <h3>Title IX</h3>
-    Title IX is a federal law, under which it is prohibited to discriminate on the basis of gender.  The <a href="https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/">Title IX Coordinator</a> is available to receive inquiries and to investigate allegations in this regard.  
+    Title IX is a federal law, under which it is prohibited to discriminate on the basis of gender.  The <a href="{{page.boilerplate.links.titleix}}">Title IX Coordinator</a> is available to receive inquiries and to investigate allegations in this regard.  
     
     
     
