@@ -11,6 +11,7 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
+  chatlink: https://groupme.com/join_group/60668915/dGoprIMb
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/09/07"
   course_end_date: "2020/12/15"
