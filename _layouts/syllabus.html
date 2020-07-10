@@ -147,11 +147,18 @@ layout: default
   <div class="archive">
     <h1 class="page__title">{{ page.title }}</h1>
     
-    [ <a href="#courseinfo">Course Info</a> | <a href="#objectives">Course Objectives and Goals</a> | <a href="#instructors">Instructors</a> | <a href="#textbooks">Textbooks</a> | <a href="#schedule">Schedule</a> | <a href="#grading">Grading</a> | <a href="#lettergrades">Letter Grades</a> | <a href="#mainbody">Course Details</a> ]
+    [ <a href="#courseinfo">Course Info</a> | <a href="#objectives">Course Objectives and Goals</a> | <a href="#resources">Resources</a> | <a href="#instructors">Instructors</a> | <a href="#textbooks">Textbooks</a> | <a href="#schedule">Schedule</a> | <a href="#grading">Grading</a> | <a href="#lettergrades">Letter Grades</a> | <a href="#mainbody">Course Details</a> ]
     <br><br>
 
     {% if page.info.course_description %}
     {{ page.info.course_description }}
+    <br>
+    {% endif %}
+    {% if page.info.credit_hours %}
+    <a href="https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/">Credit Hours</a>: {{ page.info.credit_hours }}
+    <br>
+    Credit Hours include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.
+    <br>
     {% endif %}
 
 
@@ -282,7 +289,31 @@ layout: default
     {% if page.goals %}
     </ol>
     {% endif %}
-
+    
+    
+    
+    
+    <a name="resources"></a>
+    <h2>Resources</h2>
+    
+    <a name="accommodations"></a>
+    <h3>Accommodations</h3>
+    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of <a href="https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/">Disability Services</a> via email or at 484-762-4329.
+    
+    
+    <h3>Let's Talk</h3>
+    Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. I am happy to discuss this in office hours in more detail.
+    
+    <img src="./images/letstalk.jpg" alt="Let's Talk Poster"> 
+    
+    
+    <a name="bear2bear"></a>
+    <h3>Bear2Bear</h3>
+    The <a href="https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/">Bear2Bear</a> fund is a student emergency fund established to assist with temporary emergency financial circumstances.   
+    
+    
+    <h3>Help Room</h3>
+    The math help room (Pfahler 102) is a great place to go if you are struggling. Students who have previously taken the course will be there to help you with the assignments. Visit the <a href="https://www.ursinus.edu/offices/institute-for-student-success/tutoring-help-sessions/math-help-room/">Math Help Room</a> page for more information. 
 
 
 
@@ -340,7 +371,7 @@ layout: default
     </tbody>
     </table>
 
-
+    Office hours are certainly available for asking questions about the course, about your assignments, and other academic questions you may have.  You do not need an appointment to come to office hours, and you do not even need to have an agenda or set questions!  You can come and just have a general chat about things with us.  If you cannot make it to office hours, you can contact us for an appointment as well.  Office hours are also for non-instructional topics of conversation: you can talk with me about your adjustments to college life, your long-term goals, advice about your academic journey, and most other things.  If I don't know the answer to something or if I don't feel I am the best person to offer you advice about it, I will be happy to help connect you with the right people.  In other words, don't be afraid to ask me things that you think are "off topic" - I love teaching because I love to be a resource for you on your journey.  
 
 
 
@@ -360,6 +391,7 @@ layout: default
     <th><span><strong>Author</strong></span></th>
     <th><span><strong>Edition</strong></span></th>
     <th><span><strong>ISBN</strong></span></th>
+    <th><span><strong>Freely Available?</strong></span></th>
     </tr>
     </thead>
 
@@ -407,11 +439,18 @@ layout: default
       {{item.isbn}}
     {% endif %}
     </td>
+    
+    <td>
+    {% if item.freelyavailable %}
+      {{item.freelyavailable}}
+    {% endif %}
 
     </tr>
     {% endfor %}
     </tbody>
     </table>
+    
+    <strong>Please Note:</strong> The cost of the book may be prohibitive for some students, so please note that renting the book is much cheaper. Please communicate as early as possible if you are having trouble obtaining the book, rather than keeping this to yourself, so that we can work on a solution together.  If you are experiencing a financial hardship, please consider the <a href="#bear2bear">Bear2Bear Emergency Fund</a> for temporary relief applications.
 
 
 
@@ -562,6 +601,8 @@ layout: default
     </tr>
     {% endfor %}
     </table>
+    
+    Letter grades will be assigned on the scale above at the end of the course. "Grade grubbing" is not conducive to professional practice; every assignment has or will have very precise expectations and point breakdowns, and I will evaluate submitted work carefully according to these standards. I will also return assignments in a timely manner, and the running weighted grades will be updated frequently. Therefore, I expect a commensurate level of respect from you. In sum, you should know where you stand at all times, there will be plenty of opportunities to improve your standing, and there should be no surprises at the end of the course.
 
 
 
@@ -593,6 +634,70 @@ layout: default
     
     <a name="mainbody"></a>
     <h2>Course Details</h2>
+    
+    
+    
+    
+    <h3>Online Communication Policy</h3>
+    Since this is a class-wide communication, the following rules apply to message groups and electronic communications:
+    <ol>
+    <li>Students are expected to be respectful and mindful of the <a href="#environment">classroom environment and inclusivity standards.</li>
+    <li>They are equally applicable to a virtual environment as they are in class.</li>
+    <li>Students are not permitted to share direct answers or questions which might completely give away answers to any homework problems or labs publicly on Microsoft Teams. When in doubt, please send me a direct message there.</li>
+    <li>I will attempt to answer questions real time during my virtual office hours. Otherwise, I will make every attempt to respond within 24 hours on weekdays, at any time before 9PM. I cannot be expected to respond at all on Saturdays or Sundays, so please plan accordingly. (Of course, students can and should still respond to each other outside of these intervals, when appropriate).</li>
+    <li>Students may ask anonymous questions.</li>
+
+    <p><a href="http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/"><img src="http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png" alt="Netiquette in Online Discussion Boards infographic" width="340px" border="0" /></a></p><br />
+    <p><strong><!--Please include attribution to the-->Courtesy of the <a href="http://blogs.onlineeducation.touro.edu/" title="Online Education Blog of Touro College">Online Education Blog of Touro College</a><!--with this graphic-->.</strong></p><br />
+    <p>
+    
+    
+    
+    
+    
+    
+    <a name="environment"></a>
+    <h3>Classroom Environment and Inclusivity Standards</h3>
+    My goal is to foster a environment in which students across all axes of diversity feel welcome and valued, both by me and by their peers. Axes of diversity include, but are not limited to, age, background, beliefs, race, ethnicity, gender/gender identity/gender expression (please feel free to tell me in person or over e-mail which pronouns I should use), national origin, religious affiliation, and sexual orientation. Discrimination of any form will not be tolerated.
+    
+    Furthermore, I want all students to feel comfortable expressing their opinions or confusion at any point in the course, as long as they do so respectfully. As I will stress over and over, being confused is an important part of the process of learning computer science. Therefore, I will not tolerate any form of put-downs by one student towards another about their confusion or progress in the class. Learning computer science and struggling to grow is not <a href="https://i0.wp.com/katielmartin.com/wp-content/uploads/2019/02/1_9HzbByi2Uzit8474Rp4ZPg-1.jpg?w=550&ssl=1">always comfortable</a>, but I want it to feel safe.  Much of this material is probably new to everyone, and those with some prior experience likely recall a time when it was new to them, too.  Remember that <strong>this is not a competition</strong>: helping others to grow is itself a richly rewarding professional development opportunity.  
+    
+    
+    
+    
+    <a name="collaboration"></a>
+    <h3>Collaboration Policy and Academic Integrity Policy</h3>
+    Communication between students is allowed (and encouraged!), but it is expected that every student's code or writeups will be completely distinct! Please do not copy code off of the Internet (repurposing code from the Internet will probably make it harder anyway because the assignments are so specialized). Please cite any sources in addition to materials linked from the course website that you used to help in crafting your code and completing the assignment.
+
+    To encourage collaboration, students will be allowed to choose one or more "<strong>buddies</strong>" to work "near" during the assignment. Students are still expected to submit their own solutions, but they are allowed to provide substantial help to each other, and even to look at each others' code during the process. Students should indicate their buddies in the README upon assignment submission. Please let me know if you would like a buddy but are having trouble finding one.
+
+    Below is a table spelling out in more detail when and how you are allowed to share code with people (table style cribbed from <a href="https://www.cs.princeton.edu/courses/archive/spring19/cos126/syllabus.html">Princeton CS 126</a>).
+
+    <strong>Please Note:</strong> The terms "exposing" and "viewing" exclude sending or ingesting electronically, which would be considered copying. Exposing and viewing are normally done in the context of in-person working or in the help room.  In addition, "Other People" includes internet sources!
+
+    <img src="./images/collaborationpolicy.png" alt="Collaboration Policy Table" />
+
+    If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way according to the College <a href="https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/">Academic Honesty</a> policy, regardless of intent, then it may be an academic dishonesty case, and it will be referred to the Associate Dean for Academic Affairs.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations.  You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty.
+    
+    
+    
+    <h3>Title IX</h3>
+    Title IX is a federal law, under which it is prohibited to discriminate on the basis of gender.  The <a href="https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/">Title IX Coordinator</a> is available to receive inquiries and to investigate allegations in this regard.  
+    
+    
+    
+    <h3>Inclement Weather Policy</h3>
+    In the event that the College closes due to inclement weather or other circumstances, our in-person class sessions, office hours, labs, or other meetings will not be held.  I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply).  If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those.  This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal.  Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well.
+    
+    
+    
+    
+    <h3>More Information about the Course</h3>
     {{ content }}
+    
+    
+    
+    <h3>Syllabus Subject to Change</h3>
+    I will do my best to provide all relevant information about the course on this syllabus.  Sometimes, exigent circumstances, the pace of the class, or other circumstances will warrant minor revisions to the syllabus.  For example, inclement weather or other campus closure might affect the course schedule and assignment deadlines; in addition, I may find that the class benefits from spending more time on a particular topic, and adjust accordingly.  Although I try to avoid rescheduling office hours, it may become necessary from time to time to accommodate other events in the College.  Should any revisions be necessary, I commit to making any revisions in my estimation of the the best interests of the class, and commit to communicating those changes to you as soon as I make them.  
   </div>
 </div>
