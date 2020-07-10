@@ -76,7 +76,7 @@ info:
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"
-  flexible_submission_policy: "In the absence of <a href="#accommodations">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which awards 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline."
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which awards 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline."
    
 instructors:
 - name: William Mongan
