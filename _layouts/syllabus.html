@@ -2,6 +2,9 @@
 layout: default
 
 boilerplate:
+  lms: 
+    title: Canvas, Microsoft Teams, GroupMe
+    description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
     disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
@@ -700,6 +703,14 @@ boilerplate:
     <!--<p>--><!--<strong>--><small><!--Please include attribution to the-->Courtesy of the <a href="http://blogs.onlineeducation.touro.edu/" title="Online Education Blog of Touro College">Online Education Blog of Touro College</a><!--with this graphic-->.</small><!--</strong>--><!--</p>--><br />
     <!--<p>-->
     
+    
+    
+    {% if layout.boilerplate.lms.title and layout.boilerplate.lms.description %}
+    <h3>{{layout.boilerplate.lms.title}}</h3>
+    {{layout.boilerplate.lms.description}}
+    <br />    
+    Since it is likely that students will have similar questions, it is much more efficient for me to answer them there so the whole class can see the answer, so it is possible that I will ask you to re-send a question on the forum that I get in e-mail (please do not be shy or take it personally if I do so; it means it was a great question and worth sharing with everyone!). There will be an anonymous option at the top of every chatroom to help facilitate this.
+    {% endif %}
     
     
     <a name="collaboration"></a>

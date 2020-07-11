@@ -764,11 +764,6 @@ Inevitably, you will fall into this trap. So don't beat yourself up too much whe
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me: I&#39;m stuck on a bug. What do I do<br><br>Other developers: Take a break. Walk away. Go outside. Sleep on it and come back to it the next day.<br><br>Me: *Sits at desk obsessing over bug until 2AM*</p>&mdash; Madison Kanna (@Madisonkanna) <a href="https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw">January 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-# Canvas / Microsoft Teams
-We will be using Canvas, but only to submit labs and to store all of the grades.
-
-For all other discussions and announcements for the course, we will be using [Microsoft Teams](https://insights.ursinus.edu/display/LEI/Microsoft+Teams), which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments. Since it is likely that students will have similar questions, it is much more efficient for me to answer them there so the whole class can see the answer, so it is possible that I will ask you to re-send a question on Microsoft Teams that I get in e-mail (please do not be shy or take it personally if I do so; it means it was a great question and worth sharing with everyone!). There will be an anonymous option at the top of every chatroom to help facilitate this.
-
 ## Book Surveys
 Roughly once every week, students will be expected to respond to some short answer questions on Canvas to make sure they are reading along in the book. These questions will cover readings from material that we are about to cover in class, so it is a good opportunity to get some first exposure and also to let me know where potential sticking points may come up in class. For this reason, responses will be due at 11:59PM the night before class, so that I have enough time to look through them. Full credit will be given as long as a reasonable attempt is made at every question, and as long as at least one question is completely correct (partial credit will be given otherwise).
 
