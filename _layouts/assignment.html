@@ -50,7 +50,7 @@ layout: default
     
     
     
-    {% if page.info.contract %}
+    {% if page.info.contract and (page.info.contract.a or page.info.contract.b or page.info.contract.c or page.info.contract.d ) %}
     <h1>Contract Grading</h1>
     
     {% if page.info.contract.a %}
