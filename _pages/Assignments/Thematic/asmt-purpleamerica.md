@@ -301,7 +301,7 @@ You may have noticed that the map of the United States appears somewhat distorte
 <details>
   <summary>Prior to scaling your coordinates to a [0,1] plane, your latitude and longitude values can be projected via a Mercatur Projection using the following approach (from https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula).  It assumes that you know the latitude and longitude of the origin point, the top left point, and the bottom right point, as well as the latitude and longitude of the point you wish to project.   (Click to reveal)</summary>
   
-  let a = 6378137 (equatorial radius)<br>
+  let a = 6378137 (equatorial radius in meters)<br>
   let MercaturX1 = <span>\(a \times topLeftLongitude\)</span><br>
   let MercaturY1 = <span>\(a \times ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude}{2}))\)</span><br>
   let MercaturX2 = <span>\(a \times bottomRightLongitude\)</span><br>
