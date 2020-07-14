@@ -56,14 +56,14 @@ We will use 24-bit color in this example, meaning that each of the three values 
 <details>
   <summary>How many different values can you represent with an 8-bit value?  In other words, how many different pure "red" colors are there?  There will be an equal number of pure "blue" and pure "green" values as well.  (Click to reveal)</summary>
   
-  Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are <span>\(2^{8}\)</span> different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
+  Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are <span>\\(2^{8}\\)</span> different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
   
 </details>
 
 <details>
   <summary>How many different values can you represent with a 24-bit value?  In other words, how many different colors can we work with in total?  (Click to reveal)</summary>
   
-  There are <span>\(2^{24}\)</span> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <span>\(256^{3}\)</span>.  By the law of exponents, <span>\(2^{24} = (2^{8})^{3} = 256^{3}\)</span>.
+  There are <span>\\(2^{24}\\)</span> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <span>\\(256^{3}\\)</span>.  By the law of exponents, <span>\\(2^{24} = (2^{8})^{3} = 256^{3}\\)</span>.
   
 </details> 
 
@@ -237,8 +237,8 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   Each position is the relative distance on the X or Y axis as a ratio to the absolute distance represented on the original map.  So, a point (25, 50) on a [0, 100] coordinate scale would be 25% of the way across, and 50% of the way down that map.  This is obtained by dividing the coordinate value by the range on that axis (here, 100).  To account for negative coordinates (which can happen when using GPS coordinates!), we first subtract the minimum X and Y value on the map before computing this ratio.  The resulting value can be multiplied by the new range, but since we are using a [0, 1] projection, the new scale is 1, and there is no need to scale back up.  The formulae to scale GPS coordinates to a [0, 1] X/Y map are as follows:
   
   <br>
-  <span>\(y = \frac{y - minY}{maxY - minY}\)</span><br>
-  <span>\(x = \frac{x - minX}{maxX - minX}\)</span>
+  <span>\\(y = \frac{y - minY}{maxY - minY}\\)</span><br>
+  <span>\\(x = \frac{x - minX}{maxX - minX}\\)</span>
   
 </details>
 
@@ -257,7 +257,7 @@ If you are drawing each county, you'll need to open up the file named as the abb
 
 When you define the color of each county region earlier, compute the red, green, and blue ratios based on the following formula:
 
-<span>\\(colorConcentration_{c = candidate} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}\)</span>
+<span>\\(colorConcentration_{c = candidate} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}\\)</span>
 
 That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
 
@@ -285,20 +285,20 @@ You may have noticed that the map of the United States appears somewhat distorte
   <summary>Prior to scaling your coordinates to a [0,1] plane, your latitude and longitude values can be projected via a Mercatur Projection using the following approach (from https://gis.stackexchange.com/questions/298619/mercator-map-coordinates-transformation-formula).  It assumes that you know the latitude and longitude of the origin point, the top left point, and the bottom right point, as well as the latitude and longitude of the point you wish to project.   (Click to reveal)</summary>
   
   let a = 6378137 (equatorial radius)<br>
-  let MercaturX1 = a * topLeftLongitude<br>
-  let MercaturY1 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude}{2}))\\)</span><br>
-  let MercaturX2 = a * bottomRightLongitude<br>
-  let MercaturY2 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude}{2}))\\)</span><br>
+  let MercaturX1 = <span>\\(a \times topLeftLongitude\\)</span><br>
+  let MercaturY1 = <span>\\(a \times ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude}{2}))\\)</span><br>
+  let MercaturX2 = <span>\\(a \times bottomRightLongitude\\)</span><br>
+  let MercaturY2 = <span>\\(a \times ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude}{2}))\\)</span><br>
   <br>
   let MercaturDistance = <span>\\(\sqrt{(MercatorX2 - MercatorX1)^{2} + (MercatorY2 - MercatorY1)^{2}}\\)</span><br>
   let DistanceMap = <span>\\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2})\\)</span><br>
   let ScaleFactor = <span>\\(\frac{MercatorDistance}{DistanceMap}\\)</span><br>
   <br>
-  let MercatorX0 = a * originLongitude<br>
-  let MercaturY0 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{originLatitude}{2}))\\)</span><br>
+  let MercatorX0 = <span>\\(a \times originLongitude\\)</span><br>
+  let MercaturY0 = <span>\\(a \times ln(tan(\frac{\pi}{4} + \frac{originLatitude}{2}))\\)</span><br>
   <br>
-  let projectedLatitude = <span>\\(2 * atan(exp(\frac{ScaleFactor * -latitude + MercatorY0}{a})) - \frac{\pi}{2}\\)</span><br>
-  let projectedLongitude = <span>\\(\frac{ScaleFactor * x + MercatorX0}{a}\\)</span><br>
+  let projectedLatitude = <span>\\(2 \times atan(exp(\frac{ScaleFactor \times -(latitude) + MercatorY0}{a})) - \frac{\pi}{2}\\)</span><br>
+  let projectedLongitude = <span>\\(\frac{ScaleFactor \times x + MercatorX0}{a}\\)</span><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
