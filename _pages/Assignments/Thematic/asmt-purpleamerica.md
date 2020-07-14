@@ -63,7 +63,7 @@ We will use 24-bit color in this example, meaning that each of the three values 
 <details>
   <summary>How many different values can you represent with a 24-bit value?  In other words, how many different colors can we work with in total?  (Click to reveal)</summary>
   
-  There are <span>\\(2^{24}\\)</span> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <span>\\(256^{3}\\)</span>.  By the law of exponents, <span>\\(2^{24} = (2^{8})^{3} = 256^{3}\\)</span>.
+  There are <span>\(2^{24}\)</span> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <span>\(256^{3}\)</span>.  By the law of exponents, <span>\(2^{24} = (2^{8})^{3} = 256^{3}\)</span>.
   
 </details> 
 
