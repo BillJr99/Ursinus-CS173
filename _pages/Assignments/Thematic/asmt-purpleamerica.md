@@ -320,3 +320,6 @@ You may have noticed that the map of the United States appears somewhat distorte
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
 </details>
+
+### Extra Credit 4: Improving Accessibility
+One of the challenges associated with producing visualizations is that they may not be universally productive and accessible.  For example, those with visual impairments will not benefit from this visualization.  Choose a color contrast palette with better contrast (cite any sources used when identifying such color palettes), and add a textual represnetation in the middle of each state (or pointing to the state) that indicates the percentage and winner in that state.
