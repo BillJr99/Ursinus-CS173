@@ -167,7 +167,7 @@ Going back through the RSA algorithm, how did you compute your private key from 
 <details>
   <summary>Why is this too difficult to do in practice?  (Click to reveal)</summary>
   
-  You would need to know <span>\\(M = \phi(C)\\)</span>, the Totient of C; this is equivalent to factoring the large prime number C, which is very difficult to do in practice.
+  You would need to know M, the Totient of C; this is equivalent to factoring the large prime number C, which is very difficult to do in practice.
   
 </details>
 
