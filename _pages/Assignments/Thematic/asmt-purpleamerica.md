@@ -256,7 +256,7 @@ If you are drawing each county, you'll need to open up the file named as the abb
 
 When you define the color of each county region earlier, compute the red, green, and blue ratios based on the following formula:
 
-<span>\\(colorConcentration_{c = candidate} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}\\)</span>
+<span>\\(colorConcentration_{c = candidate} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}\)</span>
 
 That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
 
@@ -285,19 +285,19 @@ You may have noticed that the map of the United States appears somewhat distorte
   
   let a = 6378137 (equatorial radius)<br>
   let MercaturX1 = a * topLeftLongitude<br>
-  let MercaturY1 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))\)</span><br>
+  let MercaturY1 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))\\)</span><br>
   let MercaturX2 = a * bottomRightLongitude<br>
-  let MercaturY2 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))\)</span><br>
+  let MercaturY2 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))\\)</span><br>
   <br>
-  let MercaturDistance = <span>\(\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}\)</span><br>
-  let DistanceMap = <span>\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})\)</span><br>
-  let ScaleFactor = <span>\(\frac{MercatorDistance}{DistanceMap}\)</span><br>
+  let MercaturDistance = <span>\(\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}\\)</span><br>
+  let DistanceMap = <span>\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})\\)</span><br>
+  let ScaleFactor = <span>\(\frac{MercatorDistance}{DistanceMap}\\)</span><br>
   <br>
   let MercatorX0 = a * originLongitude<br>
-  let MercaturY0 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))\)</span><br>
+  let MercaturY0 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))\\)</span><br>
   <br>
-  let projectedLatitude = <span>\(2 * atan(exp(\frac{ScaleFactor * -latitude %2B MercatorY0}{a})) - \frac{\pi}{2}\)</span><br>
-  let projectedLongitude = <span>\(\frac{ScaleFactor * x %2B MercatorX0}{a}\)</span><br>
+  let projectedLatitude = <span>\(2 * atan(exp(\frac{ScaleFactor * -latitude %2B MercatorY0}{a})) - \frac{\pi}{2}\\)</span><br>
+  let projectedLongitude = <span>\(\frac{ScaleFactor * x %2B MercatorX0}{a}\\)</span><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
