@@ -97,7 +97,7 @@ dependencies {
 
 Now, jar files added to the libs directory of your project will be available for use in your code.  You can download the [rsamath.jar]({{ site.baseurl }}/files/rsamath/rsamath.jar) file into a subdirectory of your project called `libs`.
 
-To see which functions are available in the RSAMath library, see the [Javadoc]({{ site.baseurl }}/files/rsamath/doc/index.html).  The `RSAMath` class is implemented in the `cs4hs11.rsalibrary` package, which you can import in your program.  The methods are not static, so you can create an `RSAMath` object and then call the functions on the resulting object.  Here is a listing of the methods you'll find in this library:
+To see which functions are available in the RSAMath library, see the [Javadoc]({{ site.baseurl }}/files/rsamath/doc/index.html).  The `RSAMath` class is implemented in the `cs4hs11.rsalibrary` package, which you can import in your program.  *The methods are not static, but you can create an `RSAMath` object and then call the functions on the resulting object.*  Here is a listing of the methods you'll find in this library:
 
 ![RSAMath Library Methods]({{ site.baseurl }}/images/asmt-minicrypto/javadocs.png)
 
@@ -106,6 +106,17 @@ To see which functions are available in the RSAMath library, see the [Javadoc]({
 
 ### Generate a Public/Private Key Pair
 Write a function to generate a public and private key pair and print these to the screen.  Write a `main()` function to test this functionality.
+
+A number N is prime if no number from 2 to N-1 divides evenly into it.  That is, <span>\\((N (mod \; k)) \ne 0\\)</span> for all <span>\\(k \in [2, N-1]\\)</span>.
+
+Once you generate those prine numbers (let's call them A and B), you can generate your public key (E, C) and private key (D, C).  Recall that the value C is shared between the public and private key, and that E and C are made available to others so that they can encrypt data to you.  Your private key (D, C) is needed to decrypt those values, so you must keep the value D a secret!
+
+To generate your public key:
+
+1. Compute <span>\\(C = AB\\)</span>.
+2. Compute <span>\\(M = \phi(C) = (A-1)(B-1)\\)</span>.
+3. Compute E, a value co-prime to M.  The `RSAMath.coprime(M)` method can help you do this.
+4. Compute D, the modular inverse of <span>\\(E (mod \; M)\\)</span>.  The `RSAMath.mod_inverse(E, M)` method can help you do this.
 
 Here is an example:
 
@@ -118,8 +129,12 @@ Here is an example:
 
 ![Encryption Example]({{ site.baseurl }}/images/asmt-minicrypto/encrypt.png)
 
+The `RSAMath.endecrypt(X, E, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.  
+
 ### Decrypt Data Using a Private Key
-Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.
+Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.  
+
+The procedure is similar to that used to encrypt a value.
 
 Here is an example:
 
@@ -138,7 +153,13 @@ Write test cases that encrypt values using your public key, and decrypt them usi
 ## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
 Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a String parameter, and for each character in the string, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
 
+Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the char to an int:
+
+`char X = (int) c;`
+
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!
+
+The procedure to do this is similar to that used to encrypt each character, except that the value to be decrypted is the encrypted value of the ASCII value used before, and the key is the private key (D, C) associated with the public key that was used to encrypt it.  You can cast the ASCII int value you obtain back to a char, and either print it or concatenate it with a String.
 
 ## Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
