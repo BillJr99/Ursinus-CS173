@@ -236,7 +236,8 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   
   Each position is the relative distance on the X or Y axis as a ratio to the absolute distance represented on the original map.  So, a point (25, 50) on a [0, 100] coordinate scale would be 25% of the way across, and 50% of the way down that map.  This is obtained by dividing the coordinate value by the range on that axis (here, 100).  To account for negative coordinates (which can happen when using GPS coordinates!), we first subtract the minimum X and Y value on the map before computing this ratio.  The resulting value can be multiplied by the new range, but since we are using a [0, 1] projection, the new scale is 1, and there is no need to scale back up.  The formulae to scale GPS coordinates to a [0, 1] X/Y map are as follows:
   
-  <span>\(y = \frac{y - minY}{maxY - minY}\)</span>
+  <br>
+  <span>\(y = \frac{y - minY}{maxY - minY}\)</span><br>
   <span>\(x = \frac{x - minX}{maxX - minX}\)</span>
   
 </details>
@@ -285,19 +286,19 @@ You may have noticed that the map of the United States appears somewhat distorte
   
   let a = 6378137 (equatorial radius)<br>
   let MercaturX1 = a * topLeftLongitude<br>
-  let MercaturY1 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{topLeftLatitude}{2}))\\)</span><br>
+  let MercaturY1 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{topLeftLatitude}{2}))\\)</span><br>
   let MercaturX2 = a * bottomRightLongitude<br>
-  let MercaturY2 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{bottomRightLatitude}{2}))\\)</span><br>
+  let MercaturY2 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude}{2}))\\)</span><br>
   <br>
-  let MercaturDistance = <span>\(\sqrt{(MercatorX2 - MercatorX1)^{2} %2B (MercatorY2 - MercatorY1)^{2}}\\)</span><br>
-  let DistanceMap = <span>\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} %2B (bottomRightLatitude - topLeftLongitude)^{2})\\)</span><br>
-  let ScaleFactor = <span>\(\frac{MercatorDistance}{DistanceMap}\\)</span><br>
+  let MercaturDistance = <span>\\(\sqrt{(MercatorX2 - MercatorX1)^{2} + (MercatorY2 - MercatorY1)^{2}}\\)</span><br>
+  let DistanceMap = <span>\\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2})\\)</span><br>
+  let ScaleFactor = <span>\\(\frac{MercatorDistance}{DistanceMap}\\)</span><br>
   <br>
   let MercatorX0 = a * originLongitude<br>
-  let MercaturY0 = <span>\(a * ln(tan(\frac{\pi}{4} %2B \frac{originLatitude}{2}))\\)</span><br>
+  let MercaturY0 = <span>\\(a * ln(tan(\frac{\pi}{4} + \frac{originLatitude}{2}))\\)</span><br>
   <br>
-  let projectedLatitude = <span>\(2 * atan(exp(\frac{ScaleFactor * -latitude %2B MercatorY0}{a})) - \frac{\pi}{2}\\)</span><br>
-  let projectedLongitude = <span>\(\frac{ScaleFactor * x %2B MercatorX0}{a}\\)</span><br>
+  let projectedLatitude = <span>\\(2 * atan(exp(\frac{ScaleFactor * -latitude + MercatorY0}{a})) - \frac{\pi}{2}\\)</span><br>
+  let projectedLongitude = <span>\\(\frac{ScaleFactor * x + MercatorX0}{a}\\)</span><br>
   <br>
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
