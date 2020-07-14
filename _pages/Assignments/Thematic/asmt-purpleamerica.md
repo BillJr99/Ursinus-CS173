@@ -6,6 +6,9 @@ excerpt: "CS173: Intro to Computer Science - Purple America"
 
 info:
   coursenum: CS173
+  githubclassroom:
+    joinlink: https://classroom.github.com/classrooms/61290261-billmongan-cs173-fall20
+    clonelink: false
   points: 100
   goals:
     - To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.

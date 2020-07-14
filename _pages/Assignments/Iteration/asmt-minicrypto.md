@@ -6,6 +6,9 @@ excerpt: "CS173: Intro to Computer Science - Public-Key Cryptography"
 
 info:
   coursenum: CS173
+  githubclassroom:
+    joinlink: https://classroom.github.com/classrooms/61290261-billmongan-cs173-fall20
+    clonelink: false  
   points: 100
   goals:
     - To relate the mathematics of modern encryption systems to applied principles of information hiding
