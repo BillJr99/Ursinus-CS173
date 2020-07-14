@@ -291,7 +291,7 @@ You may have noticed that the map of the United States appears somewhat distorte
   let MercaturY2 = <span>\(a \times ln(tan(\frac{\pi}{4} + \frac{bottomRightLatitude}{2}))\)</span><br>
   <br>
   let MercaturDistance = <span>\(\sqrt{(MercatorX2 - MercatorX1)^{2} + (MercatorY2 - MercatorY1)^{2}}\)</span><br>
-  let DistanceMap = <span>\(\sqrt((bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2})\)</span><br>
+  let DistanceMap = <span>\(\sqrt{(bottomRightLongitude - topLeftLongitude)^{2} + (bottomRightLatitude - topLeftLongitude)^{2}}\)</span><br>
   let ScaleFactor = <span>\(\frac{MercatorDistance}{DistanceMap}\)</span><br>
   <br>
   let MercatorX0 = <span>\(a \times originLongitude\)</span><br>
