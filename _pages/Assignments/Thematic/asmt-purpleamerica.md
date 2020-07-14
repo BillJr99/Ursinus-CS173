@@ -32,6 +32,24 @@ info:
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
       progressing: The program is submitted according to the directions with a minor omission or correction needed
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+  contract:
+    a:
+      - Engage in class discussions
+      - Submit 90% of in-class assignments
+      - Submit 100% of homework assignments at the progressing level
+      - Submit 50% of homework assignments at the proficient level
+    b:
+      - Engage in class discussions
+      - Submit 80% of in-class assignments
+      - Submit 100% of homework assignments at the beginning level
+      - Submit 85% of homework assignments at the progressing level
+      - Submit 33% of homework assignments at the proficient level
+    c:
+      - Engage in class discussions
+      - Submit 70% of in-class assignments
+      - Submit 90% of homework assignments at the beginning level
+      - Submit 75% of homework assignments at the progressing level
+      - Submit 25% of homework assignments at the proficient level
 
 tags:
   - graphics

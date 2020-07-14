@@ -47,5 +47,32 @@ layout: default
     </tbody>
     </table>
     {% endif %}
+    
+    
+    
+    {% if page.info.contract %}
+    <h1>Contract Grading</h1>
+    
+    <h2>To Receive an A</h2>
+    <ul>
+    {% for item in page.info.contract.a %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>To Receive a B</h2>
+    <ul>
+    {% for item in page.info.contract.b %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    
+    <h2>To Receive a C</h2>
+    <ul>
+    {% for item in page.info.contract.c %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>    
+    {% endif %}
   </div>
 </div>
