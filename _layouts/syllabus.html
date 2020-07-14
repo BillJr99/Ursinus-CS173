@@ -644,7 +644,7 @@ boilerplate:
     </table>
     
 
-
+    {% if page.letter_grades %}
     <h3>Letter Grades</h3>
     <table  id="lettergradestable" class="table table-condensed" cellspacing="10">
     <thead>
@@ -666,6 +666,48 @@ boilerplate:
     </tr>
     {% endfor %}
     </table>
+    {% endif %}
+    
+    
+    {% if page.contract %}
+    <h3>Contract Grading</h3>
+    
+    {% if page.contract.a %}
+    <h4>To Receive an A</h4>
+    <ul>
+    {% for item in page.contract.a %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.contract.b %}
+    <h4>To Receive a B</h4>
+    <ul>
+    {% for item in page.contract.b %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.contract.c %}
+    <h4>To Receive a C</h4>
+    <ul>
+    {% for item in page.contract.c %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>   
+    {% endif %}
+
+    {% if page.contract.d %}
+    <h4>To Receive a D</h4>
+    <ul>
+    {% for item in page.contract.d %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>      
+    {% endif %}
+    {% endif %}
         
 		
     Letter grades will be assigned on the scale above at the end of the course. "Grade grubbing" is not conducive to professional practice; every assignment has or will have very precise expectations and point breakdowns, and I will evaluate submitted work carefully according to these standards. I will also return assignments in a timely manner, and the running weighted grades will be updated frequently. Therefore, I expect a commensurate level of respect from you. In sum, you should know where you stand at all times, there will be plenty of opportunities to improve your standing, and there should be no surprises at the end of the course.

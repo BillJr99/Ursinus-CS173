@@ -53,26 +53,40 @@ layout: default
     {% if page.info.contract %}
     <h1>Contract Grading</h1>
     
+    {% if page.info.contract.a %}
     <h2>To Receive an A</h2>
     <ul>
     {% for item in page.info.contract.a %}
     <li>{{item}}</li>
     {% endfor %}
     </ul>
+    {% endif %}
     
+    {% if page.info.contract.b %}
     <h2>To Receive a B</h2>
     <ul>
     {% for item in page.info.contract.b %}
     <li>{{item}}</li>
     {% endfor %}
     </ul>
+    {% endif %}
     
+    {% if page.info.contract.c %}    
     <h2>To Receive a C</h2>
     <ul>
     {% for item in page.info.contract.c %}
     <li>{{item}}</li>
     {% endfor %}
     </ul>    
+    {% endif %}
+    
+    {% if page.info.contract.d %}    
+    <h2>To Receive a D</h2>
+    <ul>
+    {% for item in page.info.contract.d %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>        
     {% endif %}
   </div>
 </div>
