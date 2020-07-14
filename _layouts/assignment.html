@@ -19,6 +19,7 @@ layout: default
     </ol>
     {% endif %}
 
+    <h2>The Assignment</h2>
     {{ content }} 
     
     {% if page.info.rubric %}
@@ -36,7 +37,7 @@ layout: default
     <tbody>
       {% for item in page.info.rubric %}
       <tr>
-        <td>{{item.description}} ({{item.weight}})%</td>
+        <td>{{item.description}} ({{item.weight}}%)</td>
         <td>{{item.preemerging}}</td>
         <td>{{item.beginning}}</td>
         <td>{{item.progressing}}</td>
