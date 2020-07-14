@@ -10,3 +10,8 @@
 a:link {
   color: blue;
 }
+
+.footnotes::before {
+  display: block;
+  content: "Footnotes:";
+}
