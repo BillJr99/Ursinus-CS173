@@ -10,7 +10,7 @@ layout: default
     <h1 class="page__title">{{ page.title }}{% if page.info.points %} ({{page.info.points}}){% endif %}</h1>
 
     {% if page.info.goals %}
-    <h2>Assignment Goals</h2>
+    <h1>Assignment Goals</h1>
     The goals of this assignment are:
     <ol>
     {% for goal in page.info.goals %}
@@ -19,11 +19,11 @@ layout: default
     </ol>
     {% endif %}
 
-    <h2>The Assignment</h2>
+    <h1>The Assignment</h1>
     {{ content }} 
     
     {% if page.info.rubric %}
-    <h2>Assignment Rubric</h2>
+    <h1>Assignment Rubric</h1>
     <table>
     <thead>
       <tr>
