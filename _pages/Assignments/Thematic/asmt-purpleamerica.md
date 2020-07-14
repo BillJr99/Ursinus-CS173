@@ -20,7 +20,7 @@ tags:
 The goals of this assignment are:
 * To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.
 * To use iteration to facilitate the rendering of many counties in a graphical display
-* To explore the HashMap data structure for storing associated key-value pairs
+* To use the HashMap data structure for storing associated key-value pairs
 * To use the ArrayList data structure as a generic container
 * To utilize library functionality from external jar files and build upon existing functionality
 
