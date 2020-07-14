@@ -20,6 +20,11 @@ layout: default
     {% endif %}
 
     <h1>The Assignment</h1>
+    {% if page.info.clonegithubclassroom %}
+    You can clone this assignment at <a href=\"{{ page.info.clonegithubclassroom }}\">{{ page.info.clonegithubclassroom }}</a>
+    <br /><br />
+    {% endif %}
+    
     {{ content }} 
     
     {% if page.info.rubric %}
