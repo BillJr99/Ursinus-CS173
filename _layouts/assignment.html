@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}{% if page.info.points %} ({{page.info.points}}){% endif %}</h1>
+
+    {% if page.info.goals %}
+    <h2>Assignment Goals</h2>
+    The goals of this assignment are:
+    <ol>
+    {% for goal in page.info.goals %}
+    <li>{{goal}}</li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+    {{ content }} 
+    
+    {% if page.info.rubric %}
+    <h2>Assignment Rubric</h2>
+    <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Pre-Emerging (< 50%)</th>
+        <th>Beginning (50%)</th>
+        <th>Progressing (85%)</th>
+        <th>Proficient (100%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in page.info.rubric %}
+      <tr>
+        <td>{{item.description}} ({{item.weight}})%</td>
+        <td>{{item.preemerging}}</td>
+        <td>{{item.beginning}}</td>
+        <td>{{item.progressing}}</td>
+        <td>{{item.proficient}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+  </div>
+</div>

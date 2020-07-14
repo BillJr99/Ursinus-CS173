@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: assignment
 permalink: /Assignments/Warmup
 title: "CS173: Intro to Computer Science - Warmup"
 excerpt: "CS173: Intro to Computer Science - Warmup"
@@ -11,12 +11,12 @@ info:
     ziplink: "../files/asmt-warmup/HW0-master.zip"
     zipfilename: "HW0-master.zip"
     zipdirname: "HW0-master"
+  points: 15
   
 tags:
   - introduction
   
 ---
-# {{ page.title }} (15 Points)
 
 The purpose of this assignment is to get us setup for the course, both by getting to know each other better, and by setting up the software environment.
 

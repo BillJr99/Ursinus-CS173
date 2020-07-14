@@ -1,12 +1,37 @@
 ---
-layout: default
+layout: assignment
 permalink: /Assignments/MiniCrypto
 title: "CS173: Intro to Computer Science - Public-Key Cryptography"
 excerpt: "CS173: Intro to Computer Science - Public-Key Cryptography"
 
 info:
   coursenum: CS173
-  
+  points: 100
+  goals:
+    - To relate the mathematics of modern encryption systems to applied principles of information hiding
+    - To implement mathematical theory in the Java programming language
+    - To apply library functionality from external jar files and build upon existing functionality
+    - To implement algorithms that iterate over characters in a string and over elements in an array
+  rubric:
+    - weight: 60
+      description: Algorithm Implementation
+      preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
+      beginning: The algorithm fails on the test inputs due to one or more minor issues
+      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
+      proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+    - weight: 30
+      description: Code Quality and Documentation
+      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
+      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
+      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
+      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+    - weight: 10
+      description: Writeup and Submission
+      preemerging: An incomplete submission is provided
+      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
+      progressing: The program is submitted according to the directions with a minor omission or correction needed
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution    
+      
 tags:
   - strings
   - iteration
@@ -14,23 +39,12 @@ tags:
   
 ---
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-# {{ page.title }} (100 Points)
-
 This assignment is adapted from Prof. Mongan's assignments in communications and introductory cryptography \[[^1], [^2], [^3]\], and from the CS Unplugged Public Key Encryption lesson module \[[^4]\].
 
 [^1]: William M. Mongan. 2012. An integrated introduction to network protocols and cryptography to high school students (abstract only). In Proceedings of the 43rd ACM technical symposium on Computer Science Education (SIGCSE ’12). Association for Computing Machinery, New York, NY, USA, 664. DOI:[https://doi.org/10.1145/2157136.2157364](https://doi.org/10.1145/2157136.2157364)
 [^2]: William M. Mongan. 2011. Networking Applications, Protocols, and Cryptography with Java. Google CS4HS Workshop at the University of Pennsylvania, Philadelphia, PA.
 [^3]: William M. Mongan. 2012. Networking Applications, Protocols, and Cryptography with Java. Tapia Workshop at the University of Pennsylvania, Philadelphia, PA.
 [^4]: Bell, Witten, and Fellows. 1998. Computer Science Unplugged - Public Key Encryption. Available at [https://classic.csunplugged.org/public-key-encryption/](https://classic.csunplugged.org/public-key-encryption/)
-
-The goals of this assignment are:
-* To relate the mathematics of modern encryption systems to applied principles of information hiding
-* To implement mathematical theory in the Java programming language
-* To apply library functionality from external jar files and build upon existing functionality
-* To implement algorithms that iterate over characters in a string and over elements in an array
 
 ## An Unplugged Activity
 If you had to pass secret messages around the room, but had to do so by passing notes to the people immediately adjacent to you, how could you go about "securing" the messages so that only your partner at the other side of the room could read your note?  You and your partner would have to agree on some encoding for the message.  Many such encodings exist:
@@ -184,11 +198,3 @@ Here is an example:
 ### Implement the RSAMath functions
 
 Create your own versions of each of the functions in the RSAMath library given to you, and use those instead in your programs!
-
-## Programming Rubric
-
-|  | Pre-Emerging (<50%) | Beginning (50%) | Progressing (85%) | Proficient (100%) |
-|-|-|-|-|-|
-| Algorithm Implementation (60%) | The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run | The algorithm fails on the test inputs due to one or more minor issues | The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation | A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case |
-| Code Quality and Documentation (30%) | Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide | Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide | Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide | Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide |
-| Writeup/Submission (10%) | An incomplete submission is provided | The program is submitted, but not according to the directions in one or more ways | The program is submitted according to the directions with a minor omission or correction needed | The program is submitted according to the directions, including a readme writeup describing the solution |

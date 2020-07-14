@@ -1,11 +1,37 @@
 ---
-layout: default
+layout: assignment
 permalink: /Assignments/PurpleAmerica
 title: "CS173: Intro to Computer Science - Purple America"
 excerpt: "CS173: Intro to Computer Science - Purple America"
 
 info:
   coursenum: CS173
+  points: 100
+  goals:
+    - To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.
+    - To use iteration to facilitate the rendering of many counties in a graphical display
+    - To use the HashMap data structure for storing associated key-value pairs
+    - To use the ArrayList data structure as a generic container
+    - To utilize library functionality from external jar files and build upon existing functionality
+  rubric:
+    - weight: 60
+      description: Algorithm Implementation
+      preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
+      beginning: The algorithm fails on the test inputs due to one or more minor issues
+      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
+      proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+    - weight: 30
+      description: Code Quality and Documentation
+      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
+      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
+      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
+      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+    - weight: 10
+      description: Writeup and Submission
+      preemerging: An incomplete submission is provided
+      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
+      progressing: The program is submitted according to the directions with a minor omission or correction needed
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
 
 tags:
   - graphics
@@ -15,18 +41,6 @@ tags:
   - numeric
   
 ---
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-# {{ page.title }} (100 Points)
-
-The goals of this assignment are:
-* To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.
-* To use iteration to facilitate the rendering of many counties in a graphical display
-* To use the HashMap data structure for storing associated key-value pairs
-* To use the ArrayList data structure as a generic container
-* To utilize library functionality from external jar files and build upon existing functionality
 
 In the United States, many elections, including the presidential election, are decided by a "winner-take-all" system via a "first-past-the-post" model.  In this model, people in a region cast votes for their candidate of choice among a set of candidates.  Whichever candidate receives the plurality of votes cast "wins" the election.  In American presidential elections, winning a particular region results in receiving a number of "Electoral College" votes; in many states, all of the electoral college votes are cast for the candidate who won the "first-past-the-post" vote in that state.
 
@@ -303,11 +317,3 @@ You may have noticed that the map of the United States appears somewhat distorte
   After projecting all of your coordinates, you can scale them to a [0, 1] plane as before.
   
 </details>
-
-## Programming Rubric
-
-|  | Pre-Emerging (<50%) | Beginning (50%) | Progressing (85%) | Proficient (100%) |
-|-|-|-|-|-|
-| Algorithm Implementation (60%) | The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run | The algorithm fails on the test inputs due to one or more minor issues | The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation | A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case |
-| Code Quality and Documentation (30%) | Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide | Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide | Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide | Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide |
-| Writeup/Submission (10%) | An incomplete submission is provided | The program is submitted, but not according to the directions in one or more ways | The program is submitted according to the directions with a minor omission or correction needed | The program is submitted according to the directions, including a readme writeup describing the solution |
