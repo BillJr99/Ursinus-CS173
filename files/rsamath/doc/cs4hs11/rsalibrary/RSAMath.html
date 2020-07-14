@@ -130,8 +130,8 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#coprime(int)">coprime</A></B>(int&nbsp;x)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#coprime(long)">coprime</A></B>(long&nbsp;x)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using a java.util.Random number generator, pick a random integer
@@ -139,10 +139,10 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#endecrypt(int, int, int)">endecrypt</A></B>(int&nbsp;msg_or_cipher,
-          int&nbsp;key,
-          int&nbsp;c)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#endecrypt(long(long(long)">endecrypt</A></B>(long&nbsp;msg_or_cipher,
+          long&nbsp;key,
+          long&nbsp;c)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Given an integer representing an ASCII character value, encrypt it 
@@ -150,36 +150,36 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#GCD(int, int)">GCD</A></B>(int&nbsp;a,
-    int&nbsp;b)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#GCD(long(long)">GCD</A></B>(long&nbsp;a,
+    long&nbsp;b)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computes the GCD of two numbers a and b</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#mod_inverse(int, int)">mod_inverse</A></B>(int&nbsp;base,
-            int&nbsp;m)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#mod_inverse(long(long)">mod_inverse</A></B>(long&nbsp;base,
+            long&nbsp;m)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute the modular inverse base^-1 % m.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#modulo(int, int, int)">modulo</A></B>(int&nbsp;a,
-       int&nbsp;b,
-       int&nbsp;c)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#modulo(long(long(long)">modulo</A></B>(long&nbsp;a,
+       long&nbsp;b,
+       long&nbsp;c)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computes Math.mod(Math.pow(a, b), c), for large values of a, b, and c</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#totient(int)">totient</A></B>(int&nbsp;n)</CODE>
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../cs4hs11/rsalibrary/RSAMath.html#totient(long)">totient</A></B>(long&nbsp;n)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute Euler's Totient.</TD>
@@ -229,11 +229,11 @@ public <B>RSAMath</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="GCD(int, int)"><!-- --></A><H3>
+<A NAME="GCD(long(long)"><!-- --></A><H3>
 GCD</H3>
 <PRE>
-public int <B>GCD</B>(int&nbsp;a,
-               int&nbsp;b)</PRE>
+public long <B>GCD</B>(long&nbsp;a,
+               long&nbsp;b)</PRE>
 <DL>
 <DD>Computes the GCD of two numbers a and b
 <P>
@@ -244,12 +244,12 @@ public int <B>GCD</B>(int&nbsp;a,
 </DL>
 <HR>
 
-<A NAME="modulo(int, int, int)"><!-- --></A><H3>
+<A NAME="modulo(long(long(long)"><!-- --></A><H3>
 modulo</H3>
 <PRE>
-public int <B>modulo</B>(int&nbsp;a,
-                  int&nbsp;b,
-                  int&nbsp;c)</PRE>
+public long <B>modulo</B>(long&nbsp;a,
+                  long&nbsp;b,
+                  long&nbsp;c)</PRE>
 <DL>
 <DD>Computes Math.mod(Math.pow(a, b), c), for large values of a, b, and c
 <P>
@@ -260,10 +260,10 @@ public int <B>modulo</B>(int&nbsp;a,
 </DL>
 <HR>
 
-<A NAME="totient(int)"><!-- --></A><H3>
+<A NAME="totient(long)"><!-- --></A><H3>
 totient</H3>
 <PRE>
-public int <B>totient</B>(int&nbsp;n)</PRE>
+public long <B>totient</B>(long&nbsp;n)</PRE>
 <DL>
 <DD>Compute Euler's Totient.  From Wikipedia: The totient of a positive integer n
  is defined to be the number of positive integers less than or equal to n that
@@ -281,10 +281,10 @@ public int <B>totient</B>(int&nbsp;n)</PRE>
 </DL>
 <HR>
 
-<A NAME="coprime(int)"><!-- --></A><H3>
+<A NAME="coprime(long)"><!-- --></A><H3>
 coprime</H3>
 <PRE>
-public int <B>coprime</B>(int&nbsp;x)</PRE>
+public long <B>coprime</B>(long&nbsp;x)</PRE>
 <DL>
 <DD>Using a java.util.Random number generator, pick a random integer
  that is coprime to the given input parameter x.
@@ -296,11 +296,11 @@ public int <B>coprime</B>(int&nbsp;x)</PRE>
 </DL>
 <HR>
 
-<A NAME="mod_inverse(int, int)"><!-- --></A><H3>
+<A NAME="mod_inverse(long(long)"><!-- --></A><H3>
 mod_inverse</H3>
 <PRE>
-public int <B>mod_inverse</B>(int&nbsp;base,
-                       int&nbsp;m)</PRE>
+public long <B>mod_inverse</B>(long&nbsp;base,
+                       long&nbsp;m)</PRE>
 <DL>
 <DD>Compute the modular inverse base^-1 % m.  Note this is not the arithmetic inverse (1/base) mod m.
 <P>
@@ -311,12 +311,12 @@ public int <B>mod_inverse</B>(int&nbsp;base,
 </DL>
 <HR>
 
-<A NAME="endecrypt(int, int, int)"><!-- --></A><H3>
+<A NAME="endecrypt(long(long(long)"><!-- --></A><H3>
 endecrypt</H3>
 <PRE>
-public int <B>endecrypt</B>(int&nbsp;msg_or_cipher,
-                     int&nbsp;key,
-                     int&nbsp;c)</PRE>
+public long <B>endecrypt</B>(long&nbsp;msg_or_cipher,
+                     long&nbsp;key,
+                     long&nbsp;c)</PRE>
 <DL>
 <DD>Given an integer representing an ASCII character value, encrypt it 
  via the RSA crypto algorithm.  Or, given an integer representing an 
