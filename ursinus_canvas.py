@@ -9,13 +9,13 @@ from datetime import datetime, timedelta
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
 
 # CONSIDERATION
-# Put more details in assignments like links (relative links are available in "link" and course homepage provides absolute)
 # course.create_course_section - separate calendar?  duplicate assignments, etc?
 # Change course calendar entries to timetables: which can possibly be done on a per-section basis
 ## https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable
 # Handle content export (also download?)
 # Handle exporting discussions
 # Add assignment rubrics and point values (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
+## # https://canvas.instructure.com/doc/api/rubrics.html
 # Tie to learning outcomes
 
 API_URL = "https://ursinus.instructure.com/"
@@ -264,7 +264,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = 100
-                    inputdict['description'] = description
+                    inputdict['description'] = description + " (" + homepage + dlink + ")"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(startd + "T235900Z", "%Y%m%dT%H%M%SZ"))
                     
                     create_assignment(course, inputdict)
