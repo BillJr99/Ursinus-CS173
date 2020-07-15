@@ -88,7 +88,7 @@ The key idea behind Fisher's Linear Discriminant is that data can be separated i
 
 As you will learn in statistics, and implemented above in this assignment, the variance is a measure of the difference of the data elements to their overall mean.  Therefore, Fisher's idea can be expressed mathematically: 
 
-<span>\\(FisherLDA \propto \frac{(\mu_{1} - \mu{2})^{2}}{\Sigma_{1}^{2} + Sigma_{2}^{2}}\\)</span>
+<span>\\(FisherLDA \propto \frac{(\mu_{1} - \mu_{2})^{2}}{\Sigma_{1}^{2} + Sigma_{2}^{2}}\\)</span>
 
 The FisherLDA is large when the numerator is large and the denominator is small.  That is, when the difference of the means is large, and the sum of the variances is small.  This occurs when the means of the two classes differ greatly (like the dime and the quarter), while the variance of each is relatively small.
 
