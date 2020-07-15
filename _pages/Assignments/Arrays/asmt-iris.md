@@ -95,17 +95,17 @@ The FisherLDA is large when the numerator is large and the denominator is small.
 The Linear Discriminant function tells us how separable a feature is into two classes, and it only requires the mean and variance, which we have!  For each feature (the original arrays of the lengths/widths from the data set that you created in Part 2), compute the Linear Discriminant function for the following features:
 
 1. The `setosa` sepal length *vs* the `versicolor` sepal length
-2. The `setosa` sepal length *vs* the `versicolor` sepal length
-3. The `setosa` sepal length *vs* the `virginicia` sepal length
+2. The `setosa` sepal length *vs* the `virginicia` sepal length
+3. The `versicolor` sepal length *vs* the `virginicia` sepal length
 4. The `setosa` sepal width *vs* the `versicolor` sepal width
-5. The `setosa` sepal width *vs* the `versicolor` sepal width
-6. The `setosa` sepal width *vs* the `virginicia` sepal width
+5. The `setosa` sepal width *vs* the `virginicia` sepal width
+6. The `versicolor` sepal width *vs* the `virginicia` sepal width
 7. The `setosa` petal length *vs* the `versicolor` petal length 
-8. The `setosa` petal length *vs* the `versicolor` petal length 
-9. The `setosa` petal length *vs* the `virginicia` petal length 
+8. The `setosa` petal length *vs* the `setosa` petal length 
+9. The `versicolor` petal length *vs* the `virginicia` petal length 
 10. The `setosa` petal width *vs* the `versicolor` petal width
-11. The `setosa` petal width *vs* the `versicolor` petal width 
-12. The `setosa` petal width *vs* the `virginicia` petal width
+11. The `setosa` petal width *vs* the `setosa` petal width 
+12. The `versicolor` petal width *vs* the `virginicia` petal width
 
 At first glance, this seems like a lot of work!  Before you start writing code, remember that you can do this once, but implement the code in a function that accepts the two arrays as parameters.  Then, just call the functions with the right pair of arrays, and you're done!
 
