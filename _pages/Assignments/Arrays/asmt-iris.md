@@ -62,7 +62,7 @@ Using an `ArrayList`, gather all the sepal lengths, sepal widths, petal lengths,
 Compute the mean and variance of these arrays.  The formulas for the mean and variance are provided for your convenience:
 
 Mean: <span>\\(\mu = \frac{\sum\limits_{i=1}^{n} x_{i}}{n}\\)</span><br>
-Variance: <span>\\(\Sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})\\)</span>
+Variance: <span>\\(\Sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})}{n}\\)</span>
 
 ## Part 3: Classifying a New Flower
 Using the Means you just computed, which we call our data featuress, we will try to determine the classification of an unknown flower.  Make up values for a flower based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space.  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
