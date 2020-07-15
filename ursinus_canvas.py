@@ -5,20 +5,23 @@ import sys
 import frontmatter
 from datetime import datetime, timedelta
 
-# TODO (https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py, https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py)
-# course.create_course_section - separate calendar?  duplicate assignments, etc?
-# Assignments don't bring in all the dict details
-# Verify calendar entries with time zone changes between standard time and daylight time
+# https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
+# https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
+
+# CONSIDERATION
 # Put more details in assignments like links (relative links are available in "link" and course homepage provides absolute)
-# Make API KEY and User ID parameters so that the script can be published
-# Add assignment rubrics (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
-# Make time zone a parameter with default to America/New_York
-# Change course calendar entries to timetables: https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable which can be done on a per-section basis
-# Handle content export and discussions
+# course.create_course_section - separate calendar?  duplicate assignments, etc?
+# Change course calendar entries to timetables: which can possibly be done on a per-section basis
+## https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable
+# Handle content export (also download?)
+# Handle exporting discussions
+# Add assignment rubrics and point values (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
+# Tie to learning outcomes
 
 API_URL = "https://ursinus.instructure.com/"
 # Generate key at API_URL + profile/settings
 # Obtain User ID from API_URL + /api/v1/users/self
+CANVAS_TIME_ZONE = "America/New_York"
 
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
@@ -112,6 +115,9 @@ def parseDate(dt):
 def parseTime(t):
     return datetime.strptime(t, '%I:%M %p')
     
+def parseDateTimeCanvas(dt):
+    return datetime.strftime(dt, '%Y-%m-%dT%H:%M:%SZ')
+    
 def adddays(dt, n):
     return dt + timedelta(days=n)
     
@@ -164,7 +170,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     isS = postdict['info']['class_meets_days']['isS']
     isU = postdict['info']['class_meets_days']['isU']
     
-    course.update(course={'time_zone': "America/New_York"}) # Set time zone to Eastern Time
+    course.update(course={'time_zone': CANVAS_TIME_ZONE}) # Set time zone to Eastern Time
     course.update(course={'syllabus_body': "<iframe src=\"" + homepage + "\" title=\"Course Homepage\" width=800 height=600></iframe>"}) # Set Syllabus to Course Webpage
     
     # Delete All Assignments and Events, Re-Initialize Here
@@ -199,7 +205,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
             inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = 'America/New_York' # Assuming Eastern Time
+            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             inputdict['duplicate'] = {}
             inputdict['duplicate']['frequency'] = "weekly"
@@ -229,7 +235,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 else:
                     dlink = ""
                 
-                description = "Deliverable: " + dtitle.strip() 
+                description = dtitle.strip() 
             
                 # Write the Assignment as an all-day event
                 inputdict = {}
@@ -237,7 +243,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 inputdict['title'] = description.strip()
                 inputdict['description'] = description.strip()
                 inputdict['start_at'] = startd 
-                inputdict['time_zone_edited'] = 'America/New_York' # Assuming Eastern Time
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
                 inputdict['all_day'] = True
                 
                 create_calendar_event(canvas, inputdict) 
@@ -246,13 +252,20 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 if not (' handed out' in description.lower()):
                     inputdict = {}
                     inputdict['name'] = description
-                    inputdict['submission_types']: ['online_upload']
-                    inputdict['allowed_extensions']: ['zip', 'bz2', 'tar', 'gzip', 'gz', 'rar', '7z']
-                    inputdict['notify_of_update']: True
-                    inputdict['published']: True
-                    inputdict['points_possible']: 100
-                    inputdict['description']: description
-                    inputdict['due_at']: startd
+                    inputdict['submission_types'] = []
+                    inputdict['submission_types'].append('online_upload')
+                    inputdict['allowed_extensions'] = []
+                    inputdict['allowed_extensions'].append('zip')
+                    inputdict['allowed_extensions'].append('bz2')
+                    inputdict['allowed_extensions'].append('tar')
+                    inputdict['allowed_extensions'].append('gz')
+                    inputdict['allowed_extensions'].append('rar')
+                    inputdict['allowed_extensions'].append('7z')
+                    inputdict['notify_of_update'] = True
+                    inputdict['published'] = True
+                    inputdict['points_possible'] = 100
+                    inputdict['description'] = description
+                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(startd + "T235900Z", "%Y%m%dT%H%M%SZ"))
                     
                     create_assignment(course, inputdict)
             
@@ -286,7 +299,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
             inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = 'America/New_York' # Assuming Eastern Time
+            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             inputdict['duplicate'] = {}
             inputdict['duplicate']['frequency'] = "weekly"
@@ -318,7 +331,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
             inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = 'America/New_York' # Assuming Eastern Time
+            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             
             create_calendar_event(canvas, inputdict)  
@@ -343,7 +356,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
             inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = 'America/New_York' # Assuming Eastern Time
+            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             
             create_calendar_event(canvas, inputdict)    
@@ -374,11 +387,12 @@ def usage():
     print("\t[-w | --webpage]\tURL of course homepage (https://...)")
     print("\t[-a | --apikey]\tAPI Key (get from API_URL + /profile/settings)")
     print("\t[-u | --userid]\tUser ID Number (get from API_URL + /api/v1/users/self)")
+    print("\t[-t | --timezone]\tTime Zone (i.e. America/New_York)")
     
 # Parse user options
 # https://docs.python.org/3/library/getopt.html
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid="])
+    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone="])
 except getopt.GetoptError as err:
     # print help information and exit:
     print(err)  # will print something like "option -a not recognized"
@@ -405,6 +419,8 @@ for o, a in opts:
         API_KEY = a
     elif o in ("-u", "--userid"):
         USER_ID = a
+    elif o in ("-t", "--timezone"):
+        CANVAS_TIME_ZONE = a
 
 if USER_ID is None:
     USER_ID = input("Enter User ID (get from API_URL + /api/v1/users/self): ")
@@ -428,7 +444,7 @@ course = canvas.get_course(courseid)
 process_markdown(markdownfile, canvas, course, courseid, coursehomepage)
 
 # Export Course Content
-course.export_content("zip")
+# course.export_content("zip")
 
 # Gather all Discussion Topics    
 topics = course.get_discussion_topics()
