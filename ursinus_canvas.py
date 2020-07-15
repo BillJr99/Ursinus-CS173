@@ -14,6 +14,7 @@ from datetime import datetime, timedelta
 # Add assignment rubrics (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
 # Make time zone a parameter with default to America/New_York
 # Change course calendar entries to timetables: https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable which can be done on a per-section basis
+# Handle content export and discussions
 
 API_URL = "https://ursinus.instructure.com/"
 # Generate key at API_URL + profile/settings
