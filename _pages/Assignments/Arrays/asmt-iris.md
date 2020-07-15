@@ -62,7 +62,7 @@ Using an `ArrayList`, gather all the sepal lengths, sepal widths, petal lengths,
 Compute the mean and variance of these arrays.  The formulas for the mean and variance are provided for your convenience:
 
 Mean: <span>\\(\mu = \frac{\sum\limits_{i=1}^{n} x_{i}}{n}\\)</span><br>
-Variance: <span>\\(\Sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})}{n}\\)</span>
+Variance: <span>\\(\sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})}{n}\\)</span>
 
 ## Part 3: Classifying a New Flower
 Using the Means you just computed, which we call our data featuress, we will try to determine the classification of an unknown flower.  Make up values for a flower based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space.  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
@@ -88,7 +88,7 @@ The key idea behind Fisher's Linear Discriminant is that data can be separated i
 
 As you will learn in statistics, and implemented above in this assignment, the variance is a measure of the difference of the data elements to their overall mean.  Therefore, Fisher's idea can be expressed mathematically: 
 
-<span>\\(FisherLDA \propto \frac{(\mu_{1} - \mu_{2})^{2}}{\Sigma_{1}^{2} + Sigma_{2}^{2}}\\)</span>
+<span>\\(FisherLDA \propto \frac{(\mu_{1} - \mu_{2})^{2}}{\sigma_{1}^{2} + \sigma_{2}^{2}}\\)</span>
 
 The FisherLDA is large when the numerator is large and the denominator is small.  That is, when the difference of the means is large, and the sum of the variances is small.  This occurs when the means of the two classes differ greatly (like the dime and the quarter), while the variance of each is relatively small.
 
