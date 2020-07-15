@@ -67,7 +67,7 @@ Variance: <span>\\(\Sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})\\)
 ## Part 3: Classifying a New Flower
 Using the Means you just computed, which we call our data featuress, we will try to determine the classification of an unknown flower.  Make up values for a flower based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space.  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
 
-Euclidean Distance: <span>\\(d = \sqrt{(x_{petalLength}-\mu_{petalLength})^{2} + (x_{petalHeight}-\mu_{petalHeight})^{2} + (x_{petalLength}-\mu_{petalHeight})^{2} + (x_{sepalLength}-\mu_{sepalHeight})^{2}}\\)</span>
+Euclidean Distance: <span>\\(d = \sqrt{(x_{petalLength}-\mu_{petalLength})^{2} + (x_{petalWidth}-\mu_{petalWidth})^{2} + (x_{petalLength}-\mu_{petalLength})^{2} + (x_{sepalWidth}-\mu_{sepalWidth})^{2}}\\)</span>
 
 You will compute three of these Euclidean Distances: one using the means of the `setosa` flower, one using the means of the `versicolor` flower, and one using the means of the `virginica` flower.  `x` is your made up flower that you're looking to classify.
 
