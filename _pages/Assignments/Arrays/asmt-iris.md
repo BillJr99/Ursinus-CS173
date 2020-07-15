@@ -101,10 +101,10 @@ The Linear Discriminant function tells us how separable a feature is into two cl
 5. The `setosa` sepal width *vs* the `virginicia` sepal width
 6. The `versicolor` sepal width *vs* the `virginicia` sepal width
 7. The `setosa` petal length *vs* the `versicolor` petal length 
-8. The `setosa` petal length *vs* the `setosa` petal length 
+8. The `setosa` petal length *vs* the `virginicia` petal length 
 9. The `versicolor` petal length *vs* the `virginicia` petal length 
 10. The `setosa` petal width *vs* the `versicolor` petal width
-11. The `setosa` petal width *vs* the `setosa` petal width 
+11. The `setosa` petal width *vs* the `virginicia` petal width 
 12. The `versicolor` petal width *vs* the `virginicia` petal width
 
 At first glance, this seems like a lot of work!  Before you start writing code, remember that you can do this once, but implement the code in a function that accepts the two arrays as parameters.  Then, just call the functions with the right pair of arrays, and you're done!
