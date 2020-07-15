@@ -297,7 +297,7 @@ schedule:
   date: "1"
   title: "Ethical Case Studies"  
   deliverables:
-  - dtitle: "Assignment: Mini Crypto Handed Out"
+  - dtitle: "Assignment: Mini Crypto Due"
     dlink: "./Assignments/MiniCrypto"       
 - week: "13"
   date: "2"
