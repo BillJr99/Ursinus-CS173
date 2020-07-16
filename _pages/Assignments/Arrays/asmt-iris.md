@@ -47,7 +47,7 @@ The [Iris Flower Dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set) is
 
 In this assignment, you will read the classic Iris dataset, and use information obtained about different types of flowers to predict what kind of flower an unknown specimen is knowing only its measured data values.  
 
-Here are examples of the three flowers:
+Here are examples of the three flowers, taken from the [Iris Flower Dataset Wikipedia page](https://en.wikipedia.org/wiki/Iris_flower_data_set):
 
 | Setosa | Versicolor | Virginica |
 |-|-|-|
@@ -71,7 +71,7 @@ Here is a sample of the data, taken from [http://archive.ics.uci.edu/ml/machine-
 5.0,3.6,1.4,0.2,Iris-setosa
 ```
 
-Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  What do you notice?  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length:
+Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  What do you notice?  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length, taken from [scikit-learn](https://scikit-learn.org/):
 
 ![Sepal Width vs Sepal Length Plot, with Flower Classifications Color Coded from scikit-learn](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
 
@@ -138,7 +138,9 @@ At first glance, this seems like a lot of work!  Before you start writing code, 
 Which column/feature (i.e., the "sepal length") best separates the `setosa` and the `versicolor` flowers?  Which column best separates the `setosa` and the `virginica` flowers?  Which column seems the best overall?  Do any columns appear to do a poor job separating any of the classes?  Which columns would you use for our approach?  Based on your findings, which two flowers do you think are most easily distinguished between each other, and why?
 
 ## Ethical Use of Learning Algorithms
-Generalizing features to a mean has the potential to bias an algorithm, either unintentionally or intentionally, toward making decisions that disadvantage people.  This is known as [Algorithmic Bias](https://en.wikipedia.org/wiki/Algorithmic_bias).  This [case study](https://www.onlineethics.org/Resources/algorithm.aspx?id=44420&sortby=name&dir=asc&tab=teaching-aids) describes a common scenario in which [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) is applied to a dataset to determine which features best separate the data.  PCA is another technique for selecting the best subset of column features to use in a learning algorithm (like we did here with the Fisher LDA score).  In this example, the PCA algorithm was used to select features that are discriminatory.  What steps can developers take to ensure that they are equitible when classifying data?  In particular, what can be done to avoid developing algorithms that discriminate according to implicit bias or "blind spots?"
+Generalizing features to a mean has the potential to bias an algorithm, either unintentionally or intentionally, toward making decisions that disadvantage people.  This is known as [Algorithmic Bias](https://en.wikipedia.org/wiki/Algorithmic_bias).  This [case study](https://www.onlineethics.org/Resources/algorithm.aspx?id=44420&sortby=name&dir=asc&tab=teaching-aids)  \[[^1]\] describes a common scenario in which [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) is applied to a dataset to determine which features best separate the data.  PCA is another technique for selecting the best subset of column features to use in a learning algorithm (like we did here with the Fisher LDA score).  In this example, the PCA algorithm was used to select features that are discriminatory.  What steps can developers take to ensure that they are equitible when classifying data?  In particular, what can be done to avoid developing algorithms that discriminate according to implicit bias or "blind spots?"
+
+[^1]: Jason Ludwig, Kendall Darfler, Kristene Unsworth, and Kelly Joyce.  "An Algorithm Discriminates" Online Ethics Center for Engineering 11/28/2017 OEC Accessed: Thursday, July 16, 2020 <www.onlineethics.org/44420/algorithm>
 
 ## Extra Credit (10 Points)
 
