@@ -53,17 +53,23 @@ Here are examples of the three flowers:
 |-|-|-|
 | <img alt="Setosa Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" width="150" /> | <img alt="Versicolor Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg" width="150" /> | <img alt="Virginica Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Iris_virginica.jpg" width="150" /> |
 
-The dataset can be [downloaded](http://archive.ics.uci.edu/ml/datasets/Iris) and saved into your project directory.  On the [Iris download page](http://archive.ics.uci.edu/ml/datasets/Iris), click the `Data Folder` link, and then download the `iris.data` file.  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  The first line is a header line, giving the labels for each column in the file (for example, whether the column contains lengths or widths of the flower petals).  This can be ignored; each subsequent line contains:
+The dataset can be [downloaded](http://archive.ics.uci.edu/ml/datasets/Iris) and saved into your project directory.  On the [Iris download page](http://archive.ics.uci.edu/ml/datasets/Iris), click the `Data Folder` link, and then download the `iris.data` file.  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  This particular CSV does not have a header, so even the first row of data is an actual data record.  The format of the file is as follows:
 
 ```
-SepalLength,SepalWidth,PetalLength,PetalWidth,Classification
+SepalLength,SepalWidth,PetalLength,PetalWidth,SpeciesClassification
 ```
 
 The lengths and widths are numeric values, and the classification is either `setosa`, `versicolor`, or `virginica`.  Given the sepal and petal widths and lengths, we can make a prediction about new types of flowers whose classification is unknown to us.  Generally, the more examples we have of each type of flower, the more accurate our prediction will be.
 
-Here is a sample of the data:
+Here is a sample of the data, taken from [http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data](http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data):
 
-<iframe src="https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv" width="80%" height="200"></iframe>
+```
+5.1,3.5,1.4,0.2,Iris-setosa
+4.9,3.0,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+4.6,3.1,1.5,0.2,Iris-setosa
+5.0,3.6,1.4,0.2,Iris-setosa
+```
 
 Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  What do you notice?  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length:
 
