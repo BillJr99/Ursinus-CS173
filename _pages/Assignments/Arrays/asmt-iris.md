@@ -137,11 +137,28 @@ At first glance, this seems like a lot of work!  Before you start writing code, 
 
 Which column/feature (i.e., the "sepal length") best separates the `setosa` and the `versicolor` flowers?  Which column best separates the `setosa` and the `virginica` flowers?  Which column seems the best overall?  Do any columns appear to do a poor job separating any of the classes?  Which columns would you use for our approach?  Based on your findings, which two flowers do you think are most easily distinguished between each other, and why?
 
+## Extra Credit (10 Points)
+
+For extra credit, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?
+
 ## Ethical Use of Learning Algorithms
+
+### Avoiding Discrimination
+
 Generalizing features to a mean has the potential to bias an algorithm, either unintentionally or intentionally, toward making decisions that disadvantage people.  This is known as [Algorithmic Bias](https://en.wikipedia.org/wiki/Algorithmic_bias).  This [case study](https://www.onlineethics.org/Resources/algorithm.aspx?id=44420&sortby=name&dir=asc&tab=teaching-aids)  \[[^1]\] describes a common scenario in which [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) is applied to a dataset to determine which features best separate the data.  PCA is another technique for selecting the best subset of column features to use in a learning algorithm (like we did here with the Fisher LDA score).  In this example, the PCA algorithm was used to select features that are discriminatory.  What steps can developers take to ensure that they are equitible when classifying data?  In particular, what can be done to avoid developing algorithms that discriminate according to implicit bias or "blind spots?"
 
 [^1]: Jason Ludwig, Kendall Darfler, Kristene Unsworth, and Kelly Joyce.  "An Algorithm Discriminates" Online Ethics Center for Engineering 11/28/2017 OEC Accessed: Thursday, July 16, 2020 <www.onlineethics.org/44420/algorithm>
 
-## Extra Credit (10 Points)
+### Publication in the Annals of Eugenics
 
-For extra credit, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?
+Like other seminal statistical tools of the day (for example, the [Student t-test](https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1939.tb02192.x)), Fisher's work was [published](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-1809.1936.tb02137.x) in the Annals of Eugenics in 1936.  Wiley Publishing includes a foreword to these articles as follows:
+
+> The articles published by the Annals of Eugenics (1925–1954) 
+> have been made available online as an historical archive intended 
+> for scholarly use. The work of eugenicists was often pervaded by 
+> prejudice against racial, ethnic and disabled groups. The online 
+> publication of this material for scholarly research purposes is 
+> not an endorsement of those views nor a promotion of eugenics in 
+> any way.
+
+I endorse and echo this sentiment.  We use these statistical techniques ubiquitously throughout science, mathematics, engineering, and computation.  That ubiquity has the potential to obfuscate potentially harmful context and applications.  We will discuss this in more detail in class, but for now, let us commit to applying these valuable techniques in contexts that do no harm.  To do this successfully requires more than a mere avoidance of overt bigotry; rather, we must be mindful of implicit bias, microaggressions, and the potential for generalized and algorithmic analysis to amplify systemic bias, both implicit and overt.
