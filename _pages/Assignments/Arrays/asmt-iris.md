@@ -51,7 +51,7 @@ Here are examples of the three flowers:
 
 | Setosa | Versicolor | Virginica |
 |-|-|-|
-| ![Setosa Flower Example from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg =150x) | ![Versicolor Flower Example from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg =150x) | ![Virginica Flower Example from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/9/9f/Iris_virginica.jpg =150x) |
+| <img alt="Setosa Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" width="150" /> | <img alt="Versicolor Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg" width="150" /> | <img alt="Virginica Flower Example from Wikipedia" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Iris_virginica.jpg" width="150" /> |
 
 The dataset can be [downloaded](http://archive.ics.uci.edu/ml/datasets/Iris) and saved into your project directory.  On the [Iris download page](http://archive.ics.uci.edu/ml/datasets/Iris), click the `Data Folder` link, and then download the `iris.data` file.  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  The first line is a header line, giving the labels for each column in the file (for example, whether the column contains lengths or widths of the flower petals).  This can be ignored; each subsequent line contains:
 
@@ -67,7 +67,7 @@ Here is a sample of the data:
 
 Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  What do you notice?  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length:
 
-![Sepal Width vs Sepal Length Plot, with Flower Classifications Color Coded](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
+![Sepal Width vs Sepal Length Plot, with Flower Classifications Color Coded from scikit-learn](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
 
 ## Part 1: Reading the CSV File
 Open the CSV file for reading.  Since it is a CSV file, a `BufferedReader` is a good choice, as we can read the text line-by-line.  Using the `split` function, you can obtain an array of values for each row.  This array will contain the sepal length, sepal width, petal length, petal width, and the known classification of that particular flower.  The `split` function accepts a `String` parameter representing the delimiter character on which to split.  For a CSV, that's the comma character.
