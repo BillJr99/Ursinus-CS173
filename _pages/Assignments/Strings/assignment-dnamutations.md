@@ -44,11 +44,11 @@ tags:
   
 ---
 
-[Nucleic Acid (NA) Sequences](https://en.wikipedia.org/wiki/Nucleic_acid_sequence) like DNA and RNA are organic chains of phosphates and sugars that encode subject to mutations that encode genetic information about living things.  These chains mutate in various ways through reproduction and as a result of cellular damage (for example, through UV from sunlight).  We represent the four DNA nucleotide bases as (A)denine, (C)ytosine, (G)uanine, and (T)hymine, using the letters A, C, G, and T, respectively.  An example DNA chain might be represented as AATCC.  Here is an example RNA chain from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png).
+[Nucleic Acid (NA) Sequences](https://en.wikipedia.org/wiki/Nucleic_acid_sequence) like DNA and RNA are organic chains of phosphates and sugars that encode subject to mutations that encode genetic information about living things.  These chains mutate in various ways through reproduction and as a result of cellular damage (for example, through UV from sunlight).  We represent the four DNA nucleotide bases as (A)denine, (C)ytosine, (G)uanine, and (T)hymine, using the letters A, C, G, and T, respectively.  An example DNA chain might be represented as AATCC.  Here is an example RNA chain from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png) (which uses additional nucleotide bases such as (U)racil, represented by the letter U).
 
 ![An RNA Chain from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png)
 
-Each of these bases has a complement, as follows:
+In this assignment we will restrict ourselves to DNA bases A, C, G, and T.  Each of these bases has a complement, as follows:
 
 * The complement of A is T (and vice-versa)
 * The complement of C is G (and vice-versa)
