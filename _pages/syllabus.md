@@ -259,6 +259,9 @@ schedule:
 - week: "8"
   date: "0"
   title: "Iteration"
+  - deliverables:
+    dtitle: "Assignment: DNA Mutations Handed Out"
+    dlink: "./Assignments/DNAMutations"
 - week: "9"
   date: "0"
   title: "Iteration"  
@@ -282,6 +285,9 @@ schedule:
 - week: "11"
   date: "0"
   title: "HashMaps"
+  - deliverables:
+    dtitle: "Assignment: DNA Mutations Due"
+    dlink: "./Assignments/DNAMutations"  
 - week: "11"
   date: "2"
   title: "Algorithms: Searching and Sorting"
