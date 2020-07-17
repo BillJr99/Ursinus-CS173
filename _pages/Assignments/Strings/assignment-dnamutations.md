@@ -83,6 +83,8 @@ Given an NA chain string, an NA subchain, and a position, insert the subchain in
 ## Part 4: Removing a Chain
 Given an NA chain string and an NA subchain, remove all instances of the subchain from the chain.  For example, `remove("ACCGCC", "CC")` would return "AG".
 
+Note that Java Strings now have a method `replaceAll` that will do this for you.  I definitely encourage you to use this.  However, you may notice that these helper methods don't always exist across many of the string operations we're exploring here.  So, there is significant value in practicing with string indexing.  For full credit on this problem, implement your own replacement algorithm to accomplish this without calling a `replace` or `replaceAll` string method.  However, it would be a good idea to write a unit test that compares your results to a call to `replaceAll`, and you should feel both free and encouraged to do so!
+
 Question: Why might you need to create an `ArrayList` to represent your new strings as you construct them, before returning the final result?  Why can't you simply construct a new empty string and append each character to it as you iterate?
 
 ## Part 5: Testing
