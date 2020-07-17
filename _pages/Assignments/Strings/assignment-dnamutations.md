@@ -44,7 +44,7 @@ tags:
   
 ---
 
-[Nucleic Acid (NA) Sequences](https://en.wikipedia.org/wiki/Nucleic_acid_sequence) like DNA and RNA are organic chains of phosphates and sugars that encode subject to mutations that encode genetic information about living things.  These chains mutate in various ways through reproduction and as a result of cellular damage (for example, through UV from sunlight).  We represent the four DNA nucleotide bases as (A)denine, (C)ytosine, (G)uanine, and (T)hymine, using the letters A, C, G, and T, respectively.  An example DNA chain might be represented as AATCC.  Here is an example RNA chain from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png) (which uses additional nucleotide bases such as (U)racil, represented by the letter U).
+[Nucleic Acid (NA) Sequences](https://en.wikipedia.org/wiki/Nucleic_acid_sequence) like DNA and RNA are organic chains of phosphates and sugars that encode that encode genetic information about living things.  These chains mutate in various ways through reproduction and as a result of cellular damage (for example, through UV from sunlight).  We represent the four DNA nucleotide bases as (A)denine, (C)ytosine, (G)uanine, and (T)hymine, using the letters A, C, G, and T, respectively.  An example DNA chain might be represented as AATCC.  Here is an example RNA chain from [Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png) (which uses additional nucleotide bases such as (U)racil, represented by the letter U).
 
 ![An RNA Chain from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/c/cd/RNA-codon.png)
 
