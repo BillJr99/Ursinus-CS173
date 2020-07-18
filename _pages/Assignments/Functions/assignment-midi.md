@@ -93,11 +93,15 @@ Let's test the interface and the computer sound setup by playing a note using a 
 
 To do this, you can first set an instrument on the default channel by calling the following method of the `MIDIPlayer` library:
 
-`player.setInstrument(Instruments.HARP);`
+```java
+player.setInstrument(Instruments.HARP);
+```
 
 Here, `Instruments.HARP` is the instrument that you want to use.  This will assign the harp to the default channel 0.  To play a note, you can call the following function:
 
-`player.playNote(Notes.NOTE_C4, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY);`
+```java
+player.playNote(Notes.NOTE_C4, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY);
+```
 
 This will play a C4 quarter note, using a default intensity value.
 
@@ -111,7 +115,9 @@ Now, try adding the second part: `F4 F4 E4 E4 D4 D4 D4 D4 C4`.  Note that there 
 
 There should have been a brief pause between the first part (`C4 C4 G4 G4 A4 A4 G4`) and the second part (`F4 F4 E4 E4 D4 D4 D4 D4 C4`).  The following function call will introduce a "rest" or pause (in this case, equivalent to an eighth note duration) in between the parts:
 
-`MIDIPlayer.rest(Notes.NOTE_EIGHTH);`
+```java
+MIDIPlayer.rest(Notes.NOTE_EIGHTH);
+```
 
 Try inserting this in between the parts.
 
@@ -128,7 +134,9 @@ F4 F4 E4 E4 D4 D4 C4(whole)
 
 For fun, try changing the instrument to a guitar before playing the song: 
 
-`player.setInstrument(Instruments.GUITAR);`
+```java
+player.setInstrument(Instruments.GUITAR);
+```
 
 Compare the result to [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star) (there is a MIDI rendition on the Wikipedia page that you can play!).  There are a few small differences to make the alphabet fit into the song - can you spot them?  What would you change in your program to match [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star)?
 
