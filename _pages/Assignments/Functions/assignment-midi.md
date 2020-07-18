@@ -119,7 +119,9 @@ There should have been a brief pause between the first part (`C4 C4 G4 G4 A4 A4 
 MIDIPlayer.rest(Notes.NOTE_EIGHTH);
 ```
 
-Try inserting this in between the parts.
+Try inserting this in between the parts.  
+
+You might notice that we are calling `MIDIPlayer.rest()` while we call `player.playNote()` elsewhere.  Both come from the same code library, so what's the difference?  Take a look at the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) and notice that the `rest()` method is a `static` function.  This means that the `rest()` method is not specific to a particular `MIDIPlayer`, and so it belongs to the class rather than to the object.  A "rest" does not actually play a sound, so you are not using the variables and methods of the MIDIPlayer object variable to accomplish this.  It's generic to any `MIDIPlayer`, so it's not necessary to call the function on any particular variable.  Notice that the constants in `Instruments` and `Notes` are also static - they aren't unique to any one `MIDIPlayer` - every student is using the same ones regardless of the computer they're using or the program they're writing.  As a rule of thumb: if you don't need to call `new` to get a variable first in order to use a method or variable from that class, it could probably be declared `static.`  
 
 Finish the alphabet song.  Here are the notes, which are quarter notes unless otherwise specified (I suggest adding an eighth note duration rest in between each part):
 
