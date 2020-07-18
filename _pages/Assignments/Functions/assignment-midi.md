@@ -126,12 +126,12 @@ You might notice that we are calling `MIDIPlayer.rest()` while we call `player.p
 Finish the alphabet song.  Here are the notes, which are quarter notes unless otherwise specified (I suggest adding an eighth note duration rest in between each part):
 
 ```
-C4 C4 G4 G4 A4 A4 G4(whole)
-F4 F4 E4 E4 D4(1/8th) D4(1/8th) D4(1/8th) D4(1/8th) C4(whole)
-G4 G4 F4 (rest 1/16th) E4 E4 D4(whole)
-G4(1/8th) G4(1/8th) G4(1/8th) F4 (rest 1/16th) E4 E4 D4(whole)
-C4 C4 G4 G4 A4 A4 G4(whole)
-F4 F4 E4 E4 D4 D4 C4(whole)
+C4 C4 G4 G4 A4 A4 G4(1/2 note)
+F4 F4 E4 E4 D4(1/8th note) D4(1/8th note) D4(1/8th note) D4(1/8th note) C4(1/2 note)
+G4 G4 F4 (rest 1/16th note) E4 E4 D4(1/2 note)
+G4(1/8th note) G4(1/8th note) G4(1/8th note) F4 (rest 1/16th note) E4 E4 D4(1/2 note)
+C4 C4 G4 G4 A4 A4 G4(1/2 note)
+F4 F4 E4 E4 D4 D4 C4(1/2 note)
 ```
 
 For fun, try changing the instrument to a guitar before playing the song: 
