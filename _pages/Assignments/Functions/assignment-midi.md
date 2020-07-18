@@ -73,6 +73,14 @@ The MIDI library you imported includes a `MIDIPlayer` class that you can instant
 MIDIPlayer player = new MIDIPlayer();
 ```
 
+Be sure to add the import for `MIDIPlayer` to your program (we'll go ahead and add the imports for the other library classes that we'll need later as well):
+
+```java
+import com.MIDI.MIDIPlayer;
+import com.MIDI.Instruments;
+import com.MIDI.Notes;
+```
+
 Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) to find out about the method interface this library provides.  There are a number of methods you can call inside the `MIDIPlayer` class.  What are a few of them, and, in your own words, what do they do?
 
 In addition, there are two classes `Instruments` and `Notes` which contain constants that represent some of the instruments, notes, and note durations that you can play.  These include `Notes.NOTE_C4` for a C4 note, `Instruments.GUITAR` for a guitar, and `Notes.NOTE_QUARTER` which specifies a quarter note duration.  Click on the `Instruments` and `Notes` javadoc classes and make a note of some of the instruments and notes that are available to you.  Because it's a synthesizer, some of the "instruments" are actually creative sound effects - feel free to have fun with this!
