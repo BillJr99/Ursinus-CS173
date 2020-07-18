@@ -56,7 +56,7 @@ dependencies {
 }
 ```
 
-Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [MIDILib.jar]({{ site.baseurl }}/files/asmt-midi/MIDILib.jar) file into a subdirectory of your project called `libs`.  See the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadocdoc/index.html) for more information about the library \[[^1], [^2], [^3], [^4], [^5], [^6]\].
+Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [MIDILib.jar]({{ site.baseurl }}/files/asmt-midi/MIDILib.jar) file into a subdirectory of your project called `libs`.  See the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) for more information about the library \[[^1], [^2], [^3], [^4], [^5], [^6]\].
 
 [^1]: [http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java](http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java)
 [^2]: [https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies)
@@ -73,7 +73,7 @@ The MIDI library you imported includes a `MIDIPlayer` class that you can instant
 MIDIPlayer player = new MIDIPlayer();
 ```
 
-Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadocdoc/index.html) to find out about the method interface this library provides.  There are a number of methods you can call inside the `MIDIPlayer` class.  What are a few of them, and, in your own words, what do they do?
+Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) to find out about the method interface this library provides.  There are a number of methods you can call inside the `MIDIPlayer` class.  What are a few of them, and, in your own words, what do they do?
 
 In addition, there are two classes `Instruments` and `Notes` which contain constants that represent some of the instruments, notes, and note durations that you can play.  These include `Notes.NOTE_C4` for a C4 note, `Instruments.GUITAR` for a guitar, and `Notes.NOTE_QUARTER` which specifies a quarter note duration.  Click on the `Instruments` and `Notes` javadoc classes and make a note of some of the instruments and notes that are available to you.  Because it's a synthesizer, some of the "instruments" are actually creative sound effects - feel free to have fun with this!
 
