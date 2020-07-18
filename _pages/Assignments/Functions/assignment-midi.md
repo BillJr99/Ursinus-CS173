@@ -105,7 +105,7 @@ player.playNote(Notes.NOTE_C4, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY);
 
 This will play a C4 quarter note, using a default intensity value.
 
-Try it and verify that you get sound output.  Try changing this to play an A4 whole note at half intensity.  The A4 note is a higher pitched note, and this is because A4 is a higher frequency vibration which your ear perceives as a higher pitch.  In fact, A4 is defined here as 440 Hz, and, consequently, C4 (known as "middle C") is ~262 Hz. Every note is defined by its own fundamental frequency.
+Try it and verify that you get sound output.  Try changing this to play an A4 whole note at half intensity.  The A4 note is a higher pitched note, and this is because A4 is a higher frequency vibration which your ear perceives as a higher pitch.  In fact, A4 is defined here as 440 Hz, and, consequently, C4 (known as "middle C") is ~262 Hz. Every note is defined by its own fundamental frequency.  Incidentally, there is repitition here: if A3 is 220 Hz, what frequency do you think C3 is?  How about A2?  You can try listening to some notes and frequencies using this [online tone generator](https://www.szynalski.com/tone-generator/).
 
 ## Part 2: Playing a Song
 
