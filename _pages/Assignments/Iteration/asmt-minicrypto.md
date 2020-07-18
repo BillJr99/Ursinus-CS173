@@ -98,7 +98,7 @@ The encryption key <span>\\(C = 3337\\)</span> and <span>\\(e = 79\\)</span> mak
 The idea is that 1019 is very difficult to find even knowing <span>\\(e = 79\\)</span> and <span>\\(C = 3337\\)</span>.  That's because we'd need to be able to factor 3337 into two numbers that, when one is subtracted from each and multiplied together, give 3220 -- such that 79 is relatively prime to that number.  If factoring was easy, we could try every number until we found it.  Luckily, it isn't so easy.   Still, cryptosystems are subject to attacks similar to those you do in the newspaper, and there are some tricks (padding, salting) to dealing with that.  What would you do?  Some devices like RSA keys generate RSA values every minute.  This is because we believe that even if these numbers can be factored, it would take more than a minute to do so, and thus the security maintained.
 
 ## RSAMath Library
-The mathematics functions used in this assignment are provided in the jar file library [rsamath.jar]({{ site.baseurl }}/files/rsamath/rsamath.jar).  To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
+The mathematics functions used in this assignment are provided in the jar file library [rsamath.jar]({{ site.baseurl }}/files/asmt-minicrypto/rsamath.jar).  To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
 
 ```
 compile fileTree(dir: 'libs', include: '*.jar')
@@ -114,7 +114,7 @@ dependencies {
 
 Now, jar files added to the libs directory of your project will be available for use in your code.  You can download the [rsamath.jar]({{ site.baseurl }}/files/rsamath/rsamath.jar) file into a subdirectory of your project called `libs`.
 
-To see which functions are available in the RSAMath library, see the [Javadoc]({{ site.baseurl }}/files/rsamath/doc/index.html).  The `RSAMath` class is implemented in the `cs4hs11.rsalibrary` package, which you can import in your program.  *The methods are not static, but you can create an `RSAMath` object and then call the functions on the resulting object.*  Here is a listing of the methods you'll find in this library:
+To see which functions are available in the RSAMath library, see the [Javadoc]({{ site.baseurl }}/files/asmt-minicrypto/doc/index.html).  The `RSAMath` class is implemented in the `cs4hs11.rsalibrary` package, which you can import in your program.  *The methods are not static, but you can create an `RSAMath` object and then call the functions on the resulting object.*  Here is a listing of the methods you'll find in this library:
 
 ![RSAMath Library Methods]({{ site.baseurl }}/images/asmt-minicrypto/javadocs.png)
 
