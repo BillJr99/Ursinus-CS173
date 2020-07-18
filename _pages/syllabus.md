@@ -227,13 +227,13 @@ schedule:
   date: "2"
   title: "Functions and Methods"
   deliverables:
-  - dtitle: "Assignment: MIDI Synthesizer Handed Out"
+  - dtitle: "Assignment: MIDI Audio Handed Out"
     dlink: "./Assignments/MIDI"  
 - week: "3"
   date: "2"
   title: "Debugging" 
   deliverables:
-  - dtitle: "Assignment: MIDI Synthesizer Due"
+  - dtitle: "Assignment: MIDI Audio Due"
     dlink: "./Assignments/MIDI"    
   - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
     dlink: "./Assignments/PurpleAmerica"    
