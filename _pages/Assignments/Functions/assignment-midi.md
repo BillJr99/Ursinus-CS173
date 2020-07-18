@@ -85,7 +85,7 @@ Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) to fin
 
 In addition, there are two classes `Instruments` and `Notes` which contain constants that represent some of the instruments, notes, and note durations that you can play.  These include `Notes.NOTE_C4` for a C4 note, `Instruments.GUITAR` for a guitar, and `Notes.NOTE_QUARTER` which specifies a quarter note duration.  Click on the `Instruments` and `Notes` javadoc classes and make a note of some of the instruments and notes that are available to you.  Because it's a synthesizer, some of the "instruments" are actually creative sound effects - feel free to have fun with this!
 
-Javadoc documentation is really helpful because it enables you to observe functionality made available by a library "at a glance."  You can see how methods are named, information about how they are invoked, and what parameters they require.  These are generated programmatically through comments that you write throughout your code, and this is prescribed by the [Style Guide]({{ site.baseurl }}/Style-Guide).
+Javadoc documentation is really helpful because it enables you to observe functionality made available by a library "at a glance."  You can see how methods are named, information about how they are invoked, and what parameters they require.  These are generated programmatically through comments that you write throughout your code, and this is prescribed by the [Style Guide]({{ site.baseurl }}/Style-Guide#documentationoverview).
 
 ## Part 1: Playing a Note
 
