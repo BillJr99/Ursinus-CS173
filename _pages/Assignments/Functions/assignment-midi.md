@@ -89,7 +89,7 @@ Javadoc documentation is really helpful because it enables you to observe functi
 
 ## Part 1: Playing a Note
 
-Let's test the interface and the computer sound setup by playing a note using a synthesized instrument.  The MIDI interface works by defining a number of "channels" on which you can play notes, chords, and sounds.  You can think of a channel as a particular instrument.  In fact, you can assign an instrument to a channel.  The default channel is "channel 0," but you can have several more of them, referenced by number.
+Let's test the interface and the computer sound setup by playing a note using a synthesized instrument.  The MIDI interface works by defining a number of "channels" on which you can play notes, chords, and sounds.  You can think of a channel as a particular instrument.  In fact, you can assign an instrument to a channel.  The default channel is "channel 0," but you can have several more of them, referenced by number.  In this assignment, we will stick with the default channel, but feel free to see me if you are interested in extending this to multiple channels and instruments.
 
 To do this, you can first set an instrument on the default channel by calling the following method of the `MIDIPlayer` library:
 
@@ -146,4 +146,44 @@ Did you notice that part of the song repeats?  The first part is exactly the sam
 
 Define a function `playMainPart()` that contains the code to play the `C4 C4 G4 G4 A4 A4 G4` part, and modify your program so that you call this function each of the two times you want to play that part in the song.
 
+## Part 4: Make Up Your Own Song
+Every answer is correct - be creative and play some notes.  Explore the Notes class and the Instruments class for a few examples that you can play.  Let me know if you come up with something fun that you'd be willing to share - we can take a few minutes in class sometime for a few "code demonstrations."
+
+## Optional Part 5: Just for Fun...
+
 When we explore arrays and loops, we will see how we can represent a song like this using a single variable (an "array") that represents the entire collection of notes, and this can be played using a single call to the function to play all the notes.  "Loops" can iterate over these collections, one by one, and automatically play each note, so that you don't have to copy your code like you did here.
+
+If you'd like to try out chords using arrays, try running the following code in your program:
+
+```java
+player.setInstrument(Instruments.GUITAR);
+       
+int chordNotes[] = {Notes.NOTE_C4, Notes.NOTE_E4, Notes.NOTE_G4};
+player.playChord(chordNotes, Notes.NOTE_WHOLE, Notes.DEFAULT_INTENSITY);
+```
+
+You may not be familiar with the notation yet, but we are asking the synthesizer to play three notes instead of just one.  This is called a chord (in this case, the chord is comprised of the  C4, E4, and G4 notes).  `chordNotes` is called an array: it is a variable that contains a collection of multiple values, rather than just a single value.
+
+If you are familiar with older versions of Microsoft Windows, you might be familiar with these sounds (OK, this rendition is far from faithful, but I am admittedly not musically inclined!  You may need to use your imagination here...):
+
+```java
+player.setInstrument(Instruments.BRIGHT_PIANO);
+        
+player.playNote(Notes.NOTE_D4, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_D3, Notes.NOTE_SIXTEENTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_A3, Notes.NOTE_SIXTEENTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_G3, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_D3, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_D4, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+int[] notes = {Notes.NOTE_A4, Notes.NOTE_A3};
+player.playChord(notes, Notes.NOTE_HALF, Notes.DEFAULT_INTENSITY);
+        
+MIDIPlayer.rest(Notes.NOTE_WHOLE);
+        
+player.playNote(Notes.NOTE_G4, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_D4, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_G3, Notes.NOTE_EIGHTH, Notes.DEFAULT_INTENSITY);
+player.playNote(Notes.NOTE_A3, Notes.NOTE_HALF, Notes.DEFAULT_INTENSITY);
+        
+MIDIPlayer.rest(Notes.NOTE_WHOLE);
+```
