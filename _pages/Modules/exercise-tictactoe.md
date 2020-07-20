@@ -38,11 +38,11 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                String[][] board = new String {
+                String[][] board = new String[][] {
                     { "X", "O", "X" },
                     { "O", "X", "-" },
                     { "-", "-", "X" }
-                }
+                };
                 
                 boolean isWinner = TicTacToe.checkWinningTicTacToe(board);
                 
