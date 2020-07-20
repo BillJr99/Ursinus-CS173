@@ -15,7 +15,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString;
   correctcheck: |
-    trim(pos) === "2038"
+    pos.trim() === "2038"
  
 files:
   - filename: "EpochTimeOverflow.java"
