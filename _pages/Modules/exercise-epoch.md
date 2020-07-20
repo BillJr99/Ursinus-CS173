@@ -13,9 +13,9 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    var pos = int(feedbackString);
+    var pos = feedbackString;
   correctcheck: |
-    pos === 2038
+    parseInt(pos, 10) == 2038
  
 files:
   - filename: "EpochTimeOverflow.java"
