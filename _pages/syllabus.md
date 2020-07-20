@@ -244,9 +244,6 @@ schedule:
 - week: "1"
   date: "3"
   title: "Object Data Types"
-  deliverables:  
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "./Labs/Kepler"
   readings:
   - rtitle: "Ch. 2.3, 2.5"
     rlink: false    
@@ -255,7 +252,10 @@ schedule:
   title: "Boolean Logic and Expressions"
   readings:
   - rtitle: "Ch. 3"
-    rlink: false   
+    rlink: false  
+  deliverables:  
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "./Labs/Kepler"    
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -267,10 +267,7 @@ schedule:
   title: "Conditionals"  
 - week: "2"
   date: "3"
-  title: "Conditionals"  
-  deliverables:  
-  - dtitle: "Lab: Debugging Due"    
-    dlink: false     
+  title: "Conditionals"      
 - week: "3"
   date: "0"
   title: "Functions and Methods"
@@ -279,7 +276,9 @@ schedule:
     rlink: false  
   deliverables:
   - dtitle: "Assignment: MIDI Audio Handed Out"
-    dlink: "./Assignments/MIDI"      
+    dlink: "./Assignments/MIDI" 
+  - dtitle: "Lab: Debugging Due"    
+    dlink: false     
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
@@ -295,17 +294,16 @@ schedule:
 - week: "3"
   date: "3"
   title: "Testing"  
-  deliverables:
-  - dtitle: "Lab: Functions Due"    
-    dlink: false 
 - week: "4"
   date: "0"
   title: "Testing" 
   deliverables:
+  - dtitle: "Lab: Functions Due"    
+    dlink: false 
   - dtitle: "Assignment: MIDI Audio Due"
     dlink: "./Assignments/MIDI"    
   - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"     
+    dlink: "./Assignments/PurpleAmerica"
 - week: "4"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -318,13 +316,12 @@ schedule:
 - week: "4"
   date: "3"
   title: "Strings"
-  deliverables:
-  - dtitle: "Lab: Financial Aid Calculator Due"
-    dlink: "./Labs/FinancialAidCalculator"  
 - week: "5"
   date: "0"
   title: "Iteration and the for loop"
   deliverables:
+  - dtitle: "Lab: Financial Aid Calculator Due"
+    dlink: "./Labs/FinancialAidCalculator"    
   - dtitle: "Assignment: Purple America Parts 1 through 3 Due"
     dlink: "./Assignments/PurpleAmerica"  
   - dtitle: "Assignment: Purple America Part 4 Handed Out"
@@ -351,6 +348,8 @@ schedule:
   date: "0"
   title: "Iteration"
   deliverables:
+  - dtitle: "Lab: Iteration Due"
+    dlink: false    
   - dtitle: "Assignment: Purple America Part 4 Due"
     dlink: "./Assignments/PurpleAmerica"  
   - dtitle: "Assignment: DNA Mutations Handed Out"
@@ -367,13 +366,13 @@ schedule:
 - week: "6"
   date: "3"
   title: "String Manipulation" 
-  deliverables:
-  - dtitle: "Lab: Bernouli Trials Due"
-    dlink: false  
 - week: "7"
   date: "2"
   title: "Arrays" 
-  readings:
+  deliverables:
+  - dtitle: "Lab: Bernouli Trials Due"
+    dlink: false    
+  readings:  
   - rtitle: "Ch. 6.1"
     rlink: false    
 - week: "7"
@@ -439,11 +438,12 @@ schedule:
     dlink: "./Assignments/PurpleAmerica"    
   - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
     dlink: "./Assignments/PurpleAmerica"   
-  - dtitle: "Lab: HashMaps Due"
-    dlink: false
 - week: "10"
   date: "0"
-  title: "File I/O"  
+  title: "File I/O" 
+  deliverables:
+  - dtitle: "Lab: HashMaps Due"
+    dlink: false  
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
@@ -469,12 +469,12 @@ schedule:
   readings:
   - rtitle: "Pre-Lab: Recursion"
     rlink: "./Modules/Recursion/Module"   
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false 
 - week: "11"
   date: "0"
   title: "Searching and Sorting" 
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: false   
   readings:
   - rtitle: "Pre-Lab: Insertion Sort"
     rlink: "./Modules/InsertionSort/Module"    
@@ -500,14 +500,14 @@ schedule:
   date: "3"
   title: "Recursion and Dynamic Programming"   
   deliverables:
-  - dtitle: "Lab: Searching and Sorting Due"
-    dlink: false
   - dtitle: "Assignment: Guitar String Synthesizer Handed Out"
     dlink: "./Assignments/GuitarStringSynth"           
 - week: "12"
   date: "0"
   title: "Final Project Brainstorm"
   deliverables:
+  - dtitle: "Lab: Searching and Sorting Due"
+    dlink: false  
   - dtitle: "Final Project: Handed Out"
     dlink: false    
 - week: "12"
@@ -524,19 +524,19 @@ schedule:
   title: "Final Project Workshop" 
 - week: "13"
   date: "2"
-  title: "Final Project Workshop"
+  title: "Final Project Workshop"    
+- week: "14"
+  date: "3"
+  title: "Review"     
   deliverables:
   - dtitle: "Final Project: Due"
-    dlink: false     
-- week: "13"
-  date: "3"
-  title: "Final Project Presentations"   
+    dlink: false   
 - week: "14"
   date: "0"
-  title: "Final Project Presentations"  
+  title: "Final Project Presentations"   
 - week: "14"
   date: "1"
-  title: "Review"     
+  title: "Final Project Presentations"      
 university:
   semester: "Fall"
   academicyear: "2020-21"
