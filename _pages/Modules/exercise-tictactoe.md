@@ -25,7 +25,7 @@ files:
     isvisible: true
     code: | 
         public class TicTacToe {
-            public static boolean checkWinningTicTacToe(String[][] board) {
+            public static boolean checkWinningTicTacToe(char[][] board) {
 
             }
         }  
@@ -38,7 +38,7 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                String[][] board = new String[][] {
+                char[][] board = new char[][] {
                     { "X", "O", "X" },
                     { "O", "X", "-" },
                     { "-", "-", "X" }
