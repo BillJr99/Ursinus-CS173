@@ -424,9 +424,9 @@ schedule:
     rlink: false    
 - week: "9"
   date: "1"
-  title: "Lab: Post-It Pandemonium"    
+  title: "Lab: HashMaps"
   deliverables:
-  - dtitle: "Lab: Post-It Pandemonium Handed Out"
+  - dtitle: "Lab: HashMaps Handed Out"
     dlink: false  
 - week: "9"
   date: "2"
@@ -439,17 +439,17 @@ schedule:
     dlink: "./Assignments/PurpleAmerica"    
   - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
     dlink: "./Assignments/PurpleAmerica"   
-  - dtitle: "Lab: Post-It Pandemonium Due"
-    dlink: false  
+  - dtitle: "Lab: HashMaps Due"
+    dlink: false
 - week: "10"
   date: "0"
   title: "File I/O"  
 - week: "10"
   date: "1"
-  title: "Lab: HashMaps"
+  title: "Lab: Ethical Case Studies"
   deliverables:
-  - dtitle: "Lab: HashMaps Handed Out"
-    dlink: false  
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: false    
 - week: "10"
   date: "2"
   title: "Comparators and Sorting"
@@ -469,8 +469,8 @@ schedule:
   readings:
   - rtitle: "Pre-Lab: Recursion"
     rlink: "./Modules/Recursion/Module"   
-  deliverables: 
-  - dtitle: "Lab: HashMaps Due"
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: false 
 - week: "11"
   date: "0"
@@ -512,17 +512,12 @@ schedule:
     dlink: false    
 - week: "12"
   date: "1"
-  title: "Lab: Ethical Case Studies"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false     
+  title: "Final Project Workshop"  
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
   deliverables:
   - dtitle: "Lab: Software Design Handed Out"
-    dlink: false 
-  - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false 
   - dtitle: "Assignment: Guitar String Synthesizer Due"
     dlink: "./Assignments/GuitarStringSynth"         
