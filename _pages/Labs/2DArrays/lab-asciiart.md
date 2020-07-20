@@ -191,8 +191,8 @@ Using blocks with 2 rows tall and 1 column wide, we get the following ASCII art 
 
 ![Ursinus Flag ASCII Rendering](../images/lab-asciiart/ursinusFlag_2_1_text.png)
 
-## Art Contest
-As an optional part of this assignment, students may create a submission as part of an art contest. Any submission whatsoever will receive 2 extra credit points, and the winner will receive 5 extra cedit points.
+## Extra Credit: Art Contest
+As an optional part of this assignment, students may create a submission as part of an art contest. Any submission whatsoever will receive 7.5% extra credit points, and the winner will receive an additional 7.5% extra cedit points.
 
 In your README, in addition to the standard questions, please also indicate if you have a submission for the art contest. If so, do you give your permission to post publicly on the class web site? What name/pseudonym should I use when posting?
 
