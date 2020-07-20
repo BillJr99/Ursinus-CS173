@@ -445,8 +445,7 @@ schedule:
 - week: "14"
   date: "1"
   title: "Review"
-  deliverables:
-      
+
     
 university:
   semester: "Fall"
