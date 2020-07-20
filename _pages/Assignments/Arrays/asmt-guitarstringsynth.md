@@ -48,7 +48,7 @@ In this assignment \[[^1]\], you will practice with arrays and loops in a fun ap
 We will be using the `StdAudio` library from the Princeton [algs4cs](https://algs4.cs.princeton.edu/home/) repository. [View the documentation for this library here](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdAudio.html).
 
 ## Background: Digital Audio / Musical Notes
-Sound is the result of pressure waves traveling through the air. Just as our ears pick up these pressure variations and send a signal to our brain, digital microphones/ADCs are designed to turn these variations into an array of pressure samples over time (in the discussion below, we often refer to "sample" and "array index" interchangeably). Digital audio is often sampled at 44100 samples per second, which we refer to as the **sample rate** (FS). This means that if we want to represent 2 seconds of audio, for instance, we need an array with 88200 samples (good thing we're using arrays and don't have to define 88200 individual variables!). The reason for this is that we need a sampling frequency that's at least twice the highest frequency we want to represent. Since the highest frequency humans can hear is around 20,000hz, 44100hz is adequate. (Another fun fact about this number is it is <span>\\(2^{2} 3^{2} 5^{2} 7^{2}\\)</span>).
+Sound is the result of pressure waves traveling through the air. Just as our ears pick up these pressure variations and send a signal to our brain, digital microphones/ADCs are designed to turn these variations into an array of pressure samples over time (in the discussion below, we often refer to "sample" and "array index" interchangeably). Digital audio is often sampled at 44100 samples per second, which we refer to as the **sample rate** (FS). This means that if we want to represent 2 seconds of audio, for instance, we need an array with 88200 samples (good thing we're using arrays and don't have to define 88200 individual variables!). The reason for this is that we need a sampling frequency that's at least twice the highest frequency we want to represent. Since the highest frequency humans can hear is around 20,000hz, 44100hz is adequate. (Another fun fact about this number is it is <span>\\(2^{2} 3^{2} 5^{2} 7^{2}\\)</span>.
 
 ### Square Waves And Pitches
 One property of our perception of audio is that if a sound repeats a pattern over and over again quickly enough, we hear it as a pitch, or musical note. For example, let's consider a "square wave." The code below is a snippet from SquareWave.java in the homework 5 package which generates this pattern. The pattern will repeat itself every T elements in the array. This is referred to as the period of the audio.
@@ -143,9 +143,9 @@ which looks and sounds like this
 ### Pulse Tone Sinusoids
 It's also possible to build sounds from sine waves, which we refer to as "pure tones." Given a sample rate `FS`, a period `T`, and an amplitude (loudness) `a`, the formula for the value in the array at index `i` is:
 
-<span>\\(a sin(\frac{2 \pi i}{T})\\)</span>)
+<span>\\(a sin(\frac{2 \pi i}{T})\\)</span>
 
-For those who know trigonometry, you'll notice that this does indeed go through one period over `T` samples, since that will bring it from 0 to 2 <span>\\(\pi\\)</span>). The code to do this, which can be found in `Sinusoid.java` in the skeleton code, looks like this:
+For those who know trigonometry, you'll notice that this does indeed go through one period over `T` samples, since that will bring it from 0 to 2 <span>\\(\pi\\)</span>. The code to do this, which can be found in `Sinusoid.java` in the skeleton code, looks like this:
 
 ```java
 /**
@@ -212,17 +212,17 @@ The square waves and sinusoids sound a bit dull and unrealistic (although a real
 
 Most Western string orchestras tune to a "concert A," which goes through 440 periods in one second. If our audio is sampled at 44100 samples per second, this means that each period takes up about 100 samples (which we saw in the examples above). In each octave in the Western chromatic scale, there are 12 notes total. Going from one note to its adjacent note in order is called a halfstep. For example, a B is 2 halfsteps above A. The formula for determining the period for a particular note h halfsteps away from a concert A is:
 
-<span>\\(T = \frac{FS}{440 \times 2^{\frac{h}{12}}}\\)</span>)
+<span>\\(T = \frac{FS}{440 \times 2^{\frac{h}{12}}}\\)</span>
 
 For example, at a sample rate of 44100, a B which is 2 halfsteps above concert A has a period of:
 
-<span>\\(T = \frac{44100}{440 \times 2^{\frac{2}{12}}} \approx 89.29\\)</span>)
+<span>\\(T = \frac{44100}{440 \times 2^{\frac{2}{12}}} \approx 89.29\\)</span>
 
 Notice how the period has gotten shorter, which indeed corresponds to an increase in pitch, as we saw in the square/sinusoid examples.
 
 It is also possible for the halfstep to be negative, in which case the formula yields a period longer than 100, for a pitch lower than 440. For example, for a G two halfsteps below concert A, the formula yields:
 
-<span>\\(T = \frac{44100}{440 \times 2^{\frac{-2}{12}}} \approx 112.5\\)</span>)
+<span>\\(T = \frac{44100}{440 \times 2^{\frac{-2}{12}}} \approx 112.5\\)</span>
 
 Your first task is to implement this equation in the `getPeriod` method in `GuitarString.java`. You should round the period you return to the nearest integer.
 
