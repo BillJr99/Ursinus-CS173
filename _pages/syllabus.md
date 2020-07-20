@@ -220,12 +220,15 @@ schedule:
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
+  readings:
+  - rtitle: "Ch. 1, 2.1, 2.2"
+    rlink: false
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"  
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
-    dlink: "./Assignments/Kepler"  
+    dlink: false
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -239,16 +242,22 @@ schedule:
   title: "Object Data Types"
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "./Assignments/Kepler"    
+    dlink: false
+  readings:
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false    
 - week: "2"
   date: "0"
   title: "Boolean Logic and Expressions"
+  readings:
+  - rtitle: "Ch. 3"
+    rlink: false  
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
-    dlink: "./Assignments/Debugging"   
+    dlink: false  
 - week: "2"
   date: "2"
   title: "Conditionals"  
@@ -257,10 +266,13 @@ schedule:
   title: "Conditionals"  
   deliverables:  
   - dtitle: "Lab: Debugging Due"    
-    dlink: "./Assignments/Debugging"     
+    dlink: false     
 - week: "3"
   date: "0"
   title: "Functions and Methods"
+  readings:
+  - rtitle: "Ch. 5 (except 5.9)"
+    rlink: false  
   deliverables:
   - dtitle: "Assignment: MIDI Audio Handed Out"
     dlink: "./Assignments/MIDI"      
@@ -269,7 +281,7 @@ schedule:
   title: "Lab: Functions"    
   deliverables:  
   - dtitle: "Lab: Functions Handed Out"    
-    dlink: "./Assignments/Functions" 
+    dlink: false 
 - week: "3"
   date: "2"
   title: "Coding Style and the Code Review"
@@ -281,7 +293,7 @@ schedule:
   title: "Testing"  
   deliverables:
   - dtitle: "Lab: Functions Due"    
-    dlink: "./Assignments/Functions"  
+    dlink: false  
 - week: "4"
   date: "0"
   title: "Testing" 
@@ -295,7 +307,7 @@ schedule:
   title: "Lab: Testing" 
   deliverables:
   - dtitle: "Lab: Testing Handed Out"
-    dlink: "./Assignments/Testing"           
+    dlink: false           
 - week: "4"
   date: "2"
   title: "Boolean Statements and DeMorgan's Law"   
@@ -304,7 +316,7 @@ schedule:
   title: "Strings"
   deliverables:
   - dtitle: "Lab: Testing Due"
-    dlink: "./Assignments/Testing"   
+    dlink: false   
 - week: "5"
   date: "0"
   title: "Iteration and the for loop"
@@ -318,16 +330,22 @@ schedule:
   title: "Lab: Iteration" 
   deliverables:
   - dtitle: "Lab: Iteration Handed Out"
-    dlink: "./Assignments/Iteration"  
+    dlink: false  
 - week: "5"
   date: "2"
-  title: "Iteration and the while loop"
+  title: "Iteration, Randomness, and the while loop"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
 - week: "5"
   date: "3"
   title: "Iteration and the do loop"  
+  readings:
+  - rtitle: "Ch. 6.3-6.6"
+    rlink: false    
 - week: "6"
   date: "0"
-  title: "Randomness"
+  title: "Iteration"
   deliverables:
   - dtitle: "Assignment: Purple America Part 4 Due"
     dlink: "./Assignments/PurpleAmerica"  
@@ -338,7 +356,7 @@ schedule:
   title: "Lab: Bernouli Trials"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Handed Out"
-    dlink: "./Assignments/BernouliTrials"
+    dlink: false
 - week: "6"
   date: "2"
   title: "String Manipulation"    
@@ -347,16 +365,19 @@ schedule:
   title: "String Manipulation" 
   deliverables:
   - dtitle: "Lab: Bernouli Trials Due"
-    dlink: "./Assignments/BernouliTrials"  
+    dlink: false  
 - week: "7"
   date: "0"
   title: "Arrays" 
+  readings:
+  - rtitle: "Ch. 6.1"
+    rlink: false    
 - week: "7"
   date: "1"
   title: "Lab: Reimann Sums"    
   deliverables:
   - dtitle: "Lab: Discrete Function Optimization Handed Out"
-    dlink: "./Assignments/FunctionOptimization"  
+    dlink: false 
 - week: "7"
   date: "2"
   title: "ArrayLists and Generic/Template Data Structures"
@@ -367,33 +388,42 @@ schedule:
     dlink: "./Assignments/MiniCrypto"     
 - week: "7"
   date: "3"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"  
+  title: "2D Arrays" 
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false     
   deliverables:
   - dtitle: "Lab: Discrete Function Optimization Due"
-    dlink: "./Assignments/FunctionOptimization"   
+    dlink: false    
 - week: "8"
   date: "0"
-  title: "HashMaps"  
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"  
 - week: "8"
   date: "1"
-  title: "Lab: HashMaps"    
+  title: "Lab: 2D Bitmaps"    
   deliverables:
-  - dtitle: "Lab: HashMaps Handed Out"
-    dlink: "./Assignments/HashMaps"    
+  - dtitle: "Lab: 2D Bitmaps Handed Out"
+    dlink: false 
 - week: "8"
   date: "2"
-  title: "HashMaps" 
+  title: "HashMaps"   
   deliverables:
   - dtitle: "Assignment: Mini Crypto Due"
     dlink: "./Assignments/MiniCrypto" 
   - dtitle: "Assignment: Purple America Part 5 Handed Out"
     dlink: "./Assignments/PurpleAmerica"   
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false     
 - week: "8"
   date: "3"
   title: "Classes"
   deliverables:
-  - dtitle: "Lab: HashMaps Due"
-    dlink: "./Assignments/HashMaps"     
+  - dtitle: "Lab: 2D Bitmaps Due"
+    dlink: false    
+  readings:
+  - rtitle: "Ch. 8"
+    rlink: false     
 - week: "9"
   date: "0"
   title: "Classes" 
@@ -402,7 +432,7 @@ schedule:
   title: "Lab: Post-It Pandemonium"    
   deliverables:
   - dtitle: "Lab: Post-It Pandemonium Handed Out"
-    dlink: "./Assignments/PostIts"     
+    dlink: false  
 - week: "9"
   date: "2"
   title: "File I/O"
@@ -416,7 +446,7 @@ schedule:
   title: "File I/O" 
   deliverables:
   - dtitle: "Lab: Post-It Pandemonium Due"
-    dlink: "./Assignments/PostIts"       
+    dlink: false  
 - week: "10"
   date: "0"
   title: "Ethical Case Studies"       
@@ -425,10 +455,13 @@ schedule:
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "./Assignments/EthicalCaseStudies"     
+    dlink: false    
 - week: "10"
   date: "2"
-  title: "Algorithms: Searching and Sorting"
+  title: "Comparators and Sorting"
+  readings:
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
   deliverables:
   - dtitle: "Assignment: Purple America Parts 6 through 7 Due"
     dlink: "./Assignments/PurpleAmerica"      
@@ -439,16 +472,16 @@ schedule:
   title: "Algorithms: Recursion and Merge Sort" 
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "./Assignments/EthicalCaseStudies"     
+    dlink: false 
 - week: "11"
   date: "0"
-  title: "Dynamic Programming" 
+  title: "Searching and Sorting" 
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
   deliverables:
   - dtitle: "Lab: Searching and Sorting Handed Out"
-    dlink: "./Assignments/SearchingSorting"   
+    dlink: false 
 - week: "11"
   date: "2"
   title: "Recursion and Dynamic Programming"  
@@ -460,16 +493,16 @@ schedule:
   title: "Recursion and Dynamic Programming"   
   deliverables:
   - dtitle: "Lab: Searching and Sorting Due"
-    dlink: "./Assignments/SearchingSorting"  
+    dlink: false
 - week: "12"
   date: "0"
   title: "Principles of Software Design and Modularity"
 - week: "12"
   date: "1"
-  title: "Lab: Design Lab"
+  title: "Lab: HashMaps"
   deliverables:
-  - dtitle: "Lab: Software Design Handed Out"
-    dlink: "./Assignments/Design"  
+  - dtitle: "Lab: HashMaps Handed Out"
+    dlink: false
 - week: "12"
   date: "2"
   title: "Licensing and Open Source Software"
@@ -477,22 +510,28 @@ schedule:
   date: "3"
   title: "Final Project Braindstorm"
   deliverables:
-  - dtitle: "Lab: Software Design Due"
-    dlink: "./Assignments/Design"  
+  - dtitle: "Lab: HashMaps Due"
+    dlink: false
   - dtitle: "Final Project: Handed Out"
-    dlink: "./Assignments/FinalProject"      
+    dlink: false   
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
+  deliverables:
+  - dtitle: "Lab: Software Design Handed Out"
+    dlink: false   
 - week: "13"
   date: "1"
-  title: "Final Project Workshop"
+  title: "Lab: Software Design" 
 - week: "13"
   date: "2"
   title: "Final Project Workshop"
+  deliverables:
+  - dtitle: "Lab: Software Design Due"
+    dlink: false   
 - week: "13"
   date: "3"
-  title: "Final Project Presentations"
+  title: "Final Project Presentations"   
 - week: "14"
   date: "0"
   title: "Final Project Presentations"  
