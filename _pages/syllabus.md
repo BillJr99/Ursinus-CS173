@@ -215,6 +215,7 @@ schedule:
 - week: "0"
   date: "3"
   title: "Data Types and Variables"  
+  deliverables:
   - dtitle: "Assignment: Warmup Due"    
     dlink: "./Assignments/Warmup"  
 - week: "1"
