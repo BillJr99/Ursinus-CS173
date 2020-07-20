@@ -371,37 +371,25 @@ schedule:
   - dtitle: "Lab: Bernouli Trials Due"
     dlink: false  
 - week: "7"
-  date: "0"
+  date: "2"
   title: "Arrays" 
   readings:
   - rtitle: "Ch. 6.1"
     rlink: false    
 - week: "7"
-  date: "1"
-  title: "Lab: Reimann Sums"    
-  deliverables:
-  - dtitle: "Lab: Discrete Function Optimization Handed Out"
-    dlink: false 
-- week: "7"
-  date: "2"
+  date: "3"
   title: "ArrayLists and Generic/Template Data Structures"
   deliverables:  
   - dtitle: "Assignment: DNA Mutations Due"
     dlink: "./Assignments/DNAMutations"    
   - dtitle: "Assignment: Mini Crypto Handed Out"
     dlink: "./Assignments/MiniCrypto"     
-- week: "7"
-  date: "3"
+- week: "8"
+  date: "0"
   title: "2D Arrays" 
   readings:
   - rtitle: "Ch. 6.8"
-    rlink: false     
-  deliverables:
-  - dtitle: "Lab: Discrete Function Optimization Due"
-    dlink: false    
-- week: "8"
-  date: "0"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"  
+    rlink: false        
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
@@ -410,10 +398,13 @@ schedule:
     rlink: "./Modules/TicTacToe/Exercise"  
   deliverables:
   - dtitle: "Lab: ASCII Art Handed Out"
-    dlink: "./Labs/ASCIIArt"  
+    dlink: "./Labs/ASCIIArt" 
 - week: "8"
   date: "2"
-  title: "HashMaps"   
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+- week: "8"
+  date: "3"
+  title: "HashMaps and Caches"   
   deliverables:
   - dtitle: "Assignment: Mini Crypto Due"
     dlink: "./Assignments/MiniCrypto" 
@@ -422,18 +413,15 @@ schedule:
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false     
-- week: "8"
-  date: "3"
-  title: "Classes"
+- week: "9"
+  date: "0"
+  title: "Classes" 
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
     dlink: "./Labs/ASCIIArt"      
   readings:
   - rtitle: "Ch. 8"
-    rlink: false     
-- week: "9"
-  date: "0"
-  title: "Classes" 
+    rlink: false    
 - week: "9"
   date: "1"
   title: "Lab: Post-It Pandemonium"    
@@ -442,21 +430,20 @@ schedule:
     dlink: false  
 - week: "9"
   date: "2"
+  title: "Classes" 
+- week: "9"
+  date: "3"
   title: "File I/O"
   deliverables:
   - dtitle: "Assignment: Purple America Part 5 Due"
     dlink: "./Assignments/PurpleAmerica"    
   - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"    
-- week: "9"
-  date: "3"
-  title: "File I/O" 
-  deliverables:
+    dlink: "./Assignments/PurpleAmerica"   
   - dtitle: "Lab: Post-It Pandemonium Due"
     dlink: false  
 - week: "10"
   date: "0"
-  title: "Using HashMaps as a Cache"  
+  title: "File I/O"  
 - week: "10"
   date: "1"
   title: "Lab: HashMaps"
@@ -528,24 +515,17 @@ schedule:
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false    
-- week: "12"
-  date: "2"
-  title: "Licensing and Open Source Software"
-- week: "12"
-  date: "3"
-  title: "Principles of Software Design and Modularity"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: false 
-  - dtitle: "Assignment: Guitar String Synthesizer Due"
-    dlink: "./Assignments/GuitarStringSynth"           
+    dlink: false     
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
   deliverables:
   - dtitle: "Lab: Software Design Handed Out"
-    dlink: false   
+    dlink: false 
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: false 
+  - dtitle: "Assignment: Guitar String Synthesizer Due"
+    dlink: "./Assignments/GuitarStringSynth"         
 - week: "13"
   date: "1"
   title: "Lab: Software Design" 
