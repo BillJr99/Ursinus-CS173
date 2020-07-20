@@ -145,7 +145,7 @@ layout: default
                     {% endif %}
                 }
                 {% if incorrectchecks %}
-                {% for check in incorrectchecks %}
+                {% for check in page.processor.incorrectchecks %}
                 else if ({{ check.incorrectcheck | strip}}) {
                     correctArea.innerHTML = "<h3><font color = red>{{ check.feedback | strip }}</font></h3>";
                 }
