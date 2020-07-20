@@ -89,7 +89,7 @@ layout: default
         <h3>Output</h3>
         <div id="feedbackText"></div>
 
-        <canvas id="pscanvas"></canvas>
+        <canvas id="pscanvas" height="20px"></canvas>
 
 
         <script>
@@ -144,6 +144,13 @@ layout: default
                     `;
                     {% endif %}
                 }
+                {% if incorrectchecks %}
+                {% for check in incorrectchecks %}
+                else if ({{ check.incorrectcheck | strip}}) {
+                    correctArea.innerHTML = "<h3><font color = red>{{ check.feedback | strip }}</font></h3>";
+                }
+                {% endfor %}
+                {% endif %}
                 else {
                     correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
                 }

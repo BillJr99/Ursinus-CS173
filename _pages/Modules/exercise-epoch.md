@@ -15,7 +15,17 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString;
   correctcheck: |
-    parseInt(pos, 10) == 2038
+    pos.trim() === "2038"
+  incorrectchecks:
+    - incorrectcheck: |
+        pos.trim() === "2038.0962597349062"
+      feedback: "Try again: don't forget to convert this value to an integer!"
+    - incorrectcheck: |
+        pos.trim() === "68.09625973490614"
+      feedback: "Try again: don't forget to add this value to the epoch starting year, and convert your answer to an integer."
+    - incorrectcheck: |
+        pos.trim() === "68"
+      feedback: "Try again: don't forget to add this value to the epoch starting year."
  
 files:
   - filename: "EpochTimeOverflow.java"
