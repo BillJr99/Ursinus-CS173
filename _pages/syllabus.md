@@ -450,13 +450,13 @@ schedule:
     dlink: false  
 - week: "10"
   date: "0"
-  title: "Ethical Case Studies"       
+  title: "Using HashMaps as a Cache"  
 - week: "10"
   date: "1"
-  title: "Lab: Ethical Case Studies"
+  title: "Lab: HashMaps"
   deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false    
+  - dtitle: "Lab: HashMaps Handed Out"
+    dlink: false  
 - week: "10"
   date: "2"
   title: "Comparators and Sorting"
@@ -472,7 +472,7 @@ schedule:
   date: "3"
   title: "Algorithms: Recursion and Merge Sort" 
   deliverables:
-  - dtitle: "Lab: Ethical Case Studies Due"
+  - dtitle: "Lab: HashMaps Due"
     dlink: false 
 - week: "11"
   date: "0"
@@ -503,10 +503,10 @@ schedule:
     dlink: false    
 - week: "12"
   date: "1"
-  title: "Lab: HashMaps"
+  title: "Lab: Ethical Case Studies"
   deliverables:
-  - dtitle: "Lab: HashMaps Handed Out"
-    dlink: false
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: false    
 - week: "12"
   date: "2"
   title: "Licensing and Open Source Software"
@@ -514,7 +514,7 @@ schedule:
   date: "3"
   title: "Principles of Software Design and Modularity"
   deliverables:
-  - dtitle: "Lab: HashMaps Due"
+  - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false 
 - week: "13"
   date: "0"
