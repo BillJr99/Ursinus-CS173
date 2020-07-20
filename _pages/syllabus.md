@@ -476,6 +476,8 @@ schedule:
   date: "3"
   title: "Algorithms: Recursion and Merge Sort" 
   deliverables:
+  - dtitle: "Pre-Lab: Recursion"
+    dlink: "./Modules/Recursion/Module"  
   - dtitle: "Lab: HashMaps Due"
     dlink: false 
 - week: "11"
@@ -485,14 +487,18 @@ schedule:
   date: "1"
   title: "Lab: Searching and Sorting" 
   deliverables:
+  - dtitle: "Pre-Lab: Merge Sort"
+    dlink: "./Modules/MergeSort/Module"
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
 - week: "11"
   date: "2"
   title: "Recursion and Dynamic Programming"  
   deliverables:
+  - dtitle: "Pre-Lab: Dynamic Programming"
+    dlink: "./Modules/DynamicProgramming/Module"  
   - dtitle: "Assignment: Iris Dataset Due"
-    dlink: "./Assignments/Iris"
+    dlink: "./Assignments/Iris"    
 - week: "11"
   date: "3"
   title: "Recursion and Dynamic Programming"   
