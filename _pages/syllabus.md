@@ -348,7 +348,8 @@ schedule:
     dlink: "./Assignments/BernouliTrials"
 - week: "7"
   date: "0"
-  title: "ArrayLists and Generic/Template Data Structures"  
+  title: "ArrayLists and Generic/Template Data Structures" 
+  deliverables:  
   - dtitle: "Assignment: DNA Mutations Due"
     dlink: "./Assignments/DNAMutations"    
   - dtitle: "Assignment: Mini Crypto Handed Out"
