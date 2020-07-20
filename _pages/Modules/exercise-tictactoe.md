@@ -72,7 +72,7 @@ files:
 
 In this exercise \[[^1]\], students will write a program that simulates a game of Tic-Tac-Toe. The Tic-Tac-Toe game is played on a 3x3 grid with two players who take turns. The first player marks moves with an X, and the second player marks moves with an O. The first player to form a horizontal, vertical, or diagonal sequence the same mark wins the game. In a 3x3 board, this is 3 such marks in a row.  Your program should check that a given board configuration is a winning board.
 
-Note that using this interface, it is necessary to compare char variables with double quotes instead of single quotes.  That is, to check if a variable `ch` is equal to the letter "X", you would write:
+Note that using this interface, it is necessary to compare char variables with double quotes instead of single quotes (even though you will use single quotes in real Java code).  That is, to check if a variable `ch` is equal to the letter "X", you would write:
 
 ```java
 if(ch == "X") { 
