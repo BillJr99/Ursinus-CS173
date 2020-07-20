@@ -56,7 +56,7 @@ files:
                 
                 boolean bothWinners = isWinner1 && isWinner2;
                 
-                System.out.println(isWinner);
+                System.out.println(bothWinners);
             }
         }         
 
