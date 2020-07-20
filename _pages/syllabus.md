@@ -405,7 +405,7 @@ schedule:
   date: "1"
   title: "Lab: 2D Bitmaps"    
   deliverables:
-  - dtitle: "Pre-Lab: Tic Tac Toe"
+  - dtitle: "Pre-Lab: Tic-Tac-Toe"
     dlink: "./Modules/TicTacToe/Exercise"
   - dtitle: "Lab: 2D Bitmaps Handed Out"
     dlink: false 
