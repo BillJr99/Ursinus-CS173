@@ -7,7 +7,10 @@ excerpt: "CS173: Intro to Computer Science - Merge Sort"
 info:
   prev: "./Module2"
   instructions: "Please fill in the while loop in the mergeSort method that performs the merging step.  Below is the majority of the code for merge sort, as well as some array utilities we wrote last lab. The main method fills in a random array, prints that array, calls the mergeSort method, and then prints the result. If you've done this properly, the resulting array will come back in sorted order. At this point, a survey will pop up. Please input your name, and also copy in the code that you wrote in the while loop."
-  
+  goals:
+    - To implement the merge sort algorithm
+    - To swap two variables in memory
+    
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

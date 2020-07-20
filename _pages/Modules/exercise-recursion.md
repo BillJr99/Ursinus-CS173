@@ -7,7 +7,9 @@ excerpt: "CS173: Intro to Computer Science - Recursion"
 info:
   prev: "./Module"
   instructions: "Fill in the reverseString method below to recursively compute the string in reverse."
-  
+  goals:
+    - To implement a recursive function call
+    
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

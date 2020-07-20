@@ -66,6 +66,16 @@ layout: default
         <HR>
         {% endif %}
         
+        {% if page.info.goals %}
+        <h1>Exercise Goals</h1>
+        The goals of this exercise are:
+        <ol>
+        {% for goal in page.info.goals %}
+        <li>{{goal}}</li>
+        {% endfor %}
+        </ol>
+        {% endif %}
+        
         {% if page.info.instructions %}
         {{ page.info.instructions }}
         {% endif %}

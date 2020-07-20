@@ -307,10 +307,10 @@ schedule:
     dlink: "./Assignments/PurpleAmerica"     
 - week: "4"
   date: "1"
-  title: "Lab: Testing" 
+  title: "Lab: Financial Aid Calculator" 
   deliverables:
-  - dtitle: "Lab: Testing Handed Out"
-    dlink: false           
+  - dtitle: "Lab: Financial Aid Calculator Handed Out"
+    dlink: "./Labs/FinancialAidCalculator"           
 - week: "4"
   date: "2"
   title: "Boolean Statements and DeMorgan's Law"   
@@ -318,8 +318,8 @@ schedule:
   date: "3"
   title: "Strings"
   deliverables:
-  - dtitle: "Lab: Testing Due"
-    dlink: false   
+  - dtitle: "Lab: Financial Aid Calculator Due"
+    dlink: "./Labs/FinancialAidCalculator"  
 - week: "5"
   date: "0"
   title: "Iteration and the for loop"
