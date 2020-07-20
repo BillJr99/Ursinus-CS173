@@ -238,7 +238,7 @@ schedule:
   readings:
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
-  - rtitle: "PAC-Man Map 256 Glitch"
+  - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"   
 - week: "1"
   date: "3"
@@ -405,6 +405,8 @@ schedule:
   date: "1"
   title: "Lab: 2D Bitmaps"    
   deliverables:
+  - dtitle: "Pre-Lab: Tic Tac Toe"
+    dlink: "./Modules/TicTacToe/Exercise"
   - dtitle: "Lab: 2D Bitmaps Handed Out"
     dlink: false 
 - week: "8"
