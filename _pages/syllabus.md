@@ -403,12 +403,12 @@ schedule:
   title: "Number Systems and Encodings: RGB Color and ASCII Text"  
 - week: "8"
   date: "1"
-  title: "Lab: 2D Bitmaps"    
+  title: "Lab: ASCII Art"    
   deliverables:
   - dtitle: "Pre-Lab: Tic-Tac-Toe"
     dlink: "./Modules/TicTacToe/Exercise"
-  - dtitle: "Lab: 2D Bitmaps Handed Out"
-    dlink: false 
+  - dtitle: "Lab: ASCII Art Handed Out"
+    dlink: "./Labs/ASCIIArt"  
 - week: "8"
   date: "2"
   title: "HashMaps"   
@@ -424,8 +424,8 @@ schedule:
   date: "3"
   title: "Classes"
   deliverables:
-  - dtitle: "Lab: 2D Bitmaps Due"
-    dlink: false    
+  - dtitle: "Lab: ASCII Art Due"
+    dlink: "./Labs/ASCIIArt"      
   readings:
   - rtitle: "Ch. 8"
     rlink: false     

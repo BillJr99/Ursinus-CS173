@@ -95,11 +95,11 @@ if (a > b && c > d) {
 
 Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in Netbeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  To run the unit tests, right click on this file and select "run," as shown below:
 
-![Running a Unit Test in NetBeans](../files/lab-financialaidcalculator/RunUnitTest.png)
+![Running a Unit Test in NetBeans](../images/lab-financialaidcalculator/RunUnitTest.png)
 
 The results of all of the tests will be shown in the console. For instance, for the default skeleton code, I provided two tests, and one of them fails:
 
-![Viewing the Results of Running a Unit Test in NetBeans](../files/lab-financialaidcalculator/TestResults.png)
+![Viewing the Results of Running a Unit Test in NetBeans](../images/lab-financialaidcalculator/TestResults.png)
 
 The reason for this behavior is as follows. By default, the code returns a "placeholder value" of $0.0 for all income levels and number of children. The first test has a high income that should receive zero aid, so this passes just fine. However, the second case has a mid level income of $35,000 with 5 kids, that should receive a total of $5,000 in aid by the rules above. In this case, the placeholder value of $0.0 is definitely not correct, so this second test will fail until you update your code.
 
