@@ -224,6 +224,321 @@ schedule:
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false   
+- week: "1"
+  date: "0"
+  title: "Lab: Kepler's Third Law"  
+  deliverables:
+  - dtitle: "Lab: Kepler's Third Law Handed Out"    
+    dlink: false
+- week: "1"
+  date: "2"
+  title: "Ranges and Quantization of Data Types" 
+  readings:
+  - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
+    rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
+  - rtitle: "PAC-Man Map 256 Glitch"
+    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"   
+- week: "1"
+  date: "3"
+  title: "Object Data Types"
+  deliverables:  
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: false
+  readings:
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false    
+- week: "2"
+  date: "0"
+  title: "Boolean Logic and Expressions"
+  readings:
+  - rtitle: "Ch. 3"
+    rlink: false  
+- week: "2"
+  date: "1"
+  title: "Lab: Debugging"  
+  deliverables:  
+  - dtitle: "Lab: Debugging Handed Out"    
+    dlink: false  
+- week: "2"
+  date: "2"
+  title: "Conditionals"  
+- week: "2"
+  date: "3"
+  title: "Conditionals"  
+  deliverables:  
+  - dtitle: "Lab: Debugging Due"    
+    dlink: false     
+- week: "3"
+  date: "0"
+  title: "Functions and Methods"
+  readings:
+  - rtitle: "Ch. 5 (except 5.9)"
+    rlink: false  
+  deliverables:
+  - dtitle: "Assignment: MIDI Audio Handed Out"
+    dlink: "./Assignments/MIDI"      
+- week: "3"
+  date: "1"
+  title: "Lab: Functions"    
+  deliverables:  
+  - dtitle: "Lab: Functions Handed Out"    
+    dlink: false 
+- week: "3"
+  date: "2"
+  title: "Coding Style and the Code Review"
+  readings:
+  - rtitle: "Style Guide"
+    rlink: "./Style-Guide" 
+- week: "3"
+  date: "3"
+  title: "Testing"  
+  deliverables:
+  - dtitle: "Lab: Functions Due"    
+    dlink: false 
+- week: "4"
+  date: "0"
+  title: "Testing" 
+  deliverables:
+  - dtitle: "Assignment: MIDI Audio Due"
+    dlink: "./Assignments/MIDI"    
+  - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"     
+- week: "4"
+  date: "1"
+  title: "Lab: Testing" 
+  deliverables:
+  - dtitle: "Lab: Testing Handed Out"
+    dlink: false           
+- week: "4"
+  date: "2"
+  title: "Boolean Statements and DeMorgan's Law"   
+- week: "4"
+  date: "3"
+  title: "Strings"
+  deliverables:
+  - dtitle: "Lab: Testing Due"
+    dlink: false   
+- week: "5"
+  date: "0"
+  title: "Iteration and the for loop"
+  deliverables:
+  - dtitle: "Assignment: Purple America Parts 1 through 3 Due"
+    dlink: "./Assignments/PurpleAmerica"  
+  - dtitle: "Assignment: Purple America Part 4 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"        
+- week: "5"
+  date: "1"
+  title: "Lab: Iteration" 
+  deliverables:
+  - dtitle: "Lab: Iteration Handed Out"
+    dlink: false  
+- week: "5"
+  date: "2"
+  title: "Iteration, Randomness, and the while loop"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
+- week: "5"
+  date: "3"
+  title: "Iteration and the do loop"  
+  readings:
+  - rtitle: "Ch. 6.3-6.6"
+    rlink: false    
+- week: "6"
+  date: "0"
+  title: "Iteration"
+  deliverables:
+  - dtitle: "Assignment: Purple America Part 4 Due"
+    dlink: "./Assignments/PurpleAmerica"  
+  - dtitle: "Assignment: DNA Mutations Handed Out"
+    dlink: "./Assignments/DNAMutations"    
+- week: "6"
+  date: "1"
+  title: "Lab: Bernouli Trials"
+  deliverables:
+  - dtitle: "Lab: Bernouli Trials Handed Out"
+    dlink: false
+- week: "6"
+  date: "2"
+  title: "String Manipulation"    
+- week: "6"
+  date: "3"
+  title: "String Manipulation" 
+  deliverables:
+  - dtitle: "Lab: Bernouli Trials Due"
+    dlink: false  
+- week: "7"
+  date: "0"
+  title: "Arrays" 
+  readings:
+  - rtitle: "Ch. 6.1"
+    rlink: false    
+- week: "7"
+  date: "1"
+  title: "Lab: Reimann Sums"    
+  deliverables:
+  - dtitle: "Lab: Discrete Function Optimization Handed Out"
+    dlink: false 
+- week: "7"
+  date: "2"
+  title: "ArrayLists and Generic/Template Data Structures"
+  deliverables:  
+  - dtitle: "Assignment: DNA Mutations Due"
+    dlink: "./Assignments/DNAMutations"    
+  - dtitle: "Assignment: Mini Crypto Handed Out"
+    dlink: "./Assignments/MiniCrypto"     
+- week: "7"
+  date: "3"
+  title: "2D Arrays" 
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false     
+  deliverables:
+  - dtitle: "Lab: Discrete Function Optimization Due"
+    dlink: false    
+- week: "8"
+  date: "0"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"  
+- week: "8"
+  date: "1"
+  title: "Lab: 2D Bitmaps"    
+  deliverables:
+  - dtitle: "Lab: 2D Bitmaps Handed Out"
+    dlink: false 
+- week: "8"
+  date: "2"
+  title: "HashMaps"   
+  deliverables:
+  - dtitle: "Assignment: Mini Crypto Due"
+    dlink: "./Assignments/MiniCrypto" 
+  - dtitle: "Assignment: Purple America Part 5 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"   
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false     
+- week: "8"
+  date: "3"
+  title: "Classes"
+  deliverables:
+  - dtitle: "Lab: 2D Bitmaps Due"
+    dlink: false    
+  readings:
+  - rtitle: "Ch. 8"
+    rlink: false     
+- week: "9"
+  date: "0"
+  title: "Classes" 
+- week: "9"
+  date: "1"
+  title: "Lab: Post-It Pandemonium"    
+  deliverables:
+  - dtitle: "Lab: Post-It Pandemonium Handed Out"
+    dlink: false  
+- week: "9"
+  date: "2"
+  title: "File I/O"
+  deliverables:
+  - dtitle: "Assignment: Purple America Part 5 Due"
+    dlink: "./Assignments/PurpleAmerica"    
+  - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "./Assignments/PurpleAmerica"    
+- week: "9"
+  date: "3"
+  title: "File I/O" 
+  deliverables:
+  - dtitle: "Lab: Post-It Pandemonium Due"
+    dlink: false  
+- week: "10"
+  date: "0"
+  title: "Ethical Case Studies"       
+- week: "10"
+  date: "1"
+  title: "Lab: Ethical Case Studies"
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: false    
+- week: "10"
+  date: "2"
+  title: "Comparators and Sorting"
+  readings:
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
+  deliverables:
+  - dtitle: "Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "./Assignments/PurpleAmerica"      
+  - dtitle: "Assignment: Iris Dataset Handed Out"
+    dlink: "./Assignments/Iris"      
+- week: "10"
+  date: "3"
+  title: "Algorithms: Recursion and Merge Sort" 
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: false 
+- week: "11"
+  date: "0"
+  title: "Searching and Sorting" 
+- week: "11"
+  date: "1"
+  title: "Lab: Searching and Sorting" 
+  deliverables:
+  - dtitle: "Lab: Searching and Sorting Handed Out"
+    dlink: false 
+- week: "11"
+  date: "2"
+  title: "Recursion and Dynamic Programming"  
+  deliverables:
+  - dtitle: "Assignment: Iris Dataset Due"
+    dlink: "./Assignments/Iris"
+- week: "11"
+  date: "3"
+  title: "Recursion and Dynamic Programming"   
+  deliverables:
+  - dtitle: "Lab: Searching and Sorting Due"
+    dlink: false
+- week: "12"
+  date: "0"
+  title: "Principles of Software Design and Modularity"
+- week: "12"
+  date: "1"
+  title: "Lab: HashMaps"
+  deliverables:
+  - dtitle: "Lab: HashMaps Handed Out"
+    dlink: false
+- week: "12"
+  date: "2"
+  title: "Licensing and Open Source Software"
+- week: "12"
+  date: "3"
+  title: "Final Project Braindstorm"
+  deliverables:
+  - dtitle: "Lab: HashMaps Due"
+    dlink: false
+  - dtitle: "Final Project: Handed Out"
+    dlink: false   
+- week: "13"
+  date: "0"
+  title: "Final Project Workshop"
+  deliverables:
+  - dtitle: "Lab: Software Design Handed Out"
+    dlink: false   
+- week: "13"
+  date: "1"
+  title: "Lab: Software Design" 
+- week: "13"
+  date: "2"
+  title: "Final Project Workshop"
+  deliverables:
+  - dtitle: "Lab: Software Design Due"
+    dlink: false   
+- week: "13"
+  date: "3"
+  title: "Final Project Presentations"   
+- week: "14"
+  date: "0"
+  title: "Final Project Presentations"  
+- week: "14"
+  date: "1"
+  title: "Review"     
 university:
   semester: "Fall"
   academicyear: "2020-21"
