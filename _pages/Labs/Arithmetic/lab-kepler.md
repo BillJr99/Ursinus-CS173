@@ -38,7 +38,7 @@ tags:
   
 ---
 
-[Kepler's Third Law](https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion#Third_law_of_Kepler) relates the orbital period of a body around another body.  Due to gravitational forces, bodies in space are attracted to one another; objects in orbit continuously attract one another, forming an orbital pattern that we can predict.   In this lab \[[^1]\], you will compute the orbital period of the planets around the sun, given each planet's mass and length of its semi-major axis.
+[Kepler's Third Law](https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion#Third_law_of_Kepler) relates the orbital period of a body around another body.  Due to gravitational forces, bodies in space are attracted to one another; objects in orbit continuously attract one another, forming an orbital pattern that we can predict.   In this lab \[[^1]\], you will compute the orbital period of the planets around the sun, given each planet's mass and length of its semi-major axis (the semi-major axis is half the length of the longest chord across the orbital ellipse).
 
 The formula relating the orbital period T of a planet to its mass m and semi-major axis length a is:
 
@@ -75,7 +75,7 @@ Astronomical Units (AU) is a unit of measure approximately defined as the distan
 
 Similarly, the formula yields the orbital period in seconds.  In order to output the orbital period in years, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth year.  
 
-To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.
+To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.  `Math.sqrt(x)` and `Math.pow(x, p)` accept and return values of type `double`, and, similarly, `Math.PI` is a `double`.
 
 I strongly suggest computing the portions of this formula one item at a time, rather than implementing the entire formula as a single line of code.  Thus, I would compute the numerator separately from the denominator, then compute the square root of the quotient.  You might even compute the division first and then separately take the square root of it.  This keeps your code short and your arithmetic concise, and each of these makes your code easier to read, understand, and fix!
 
