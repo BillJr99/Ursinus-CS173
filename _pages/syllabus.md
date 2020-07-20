@@ -201,11 +201,11 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "./NetBeans"
+  - rtitle: "Pre-Lab: The NetBeans IDE Software Environment"
+    rlink: "./Modules/IDE/Module"    
   deliverables:
   - dtitle: "Assignment: Warmup Handed Out"    
     dlink: "./Assignments/Warmup"
-  - dtitle: "Pre-Lab: The NetBeans IDE Software Environment"
-    dlink: "./Modules/IDE/Module"
 - week: "0"
   date: "1"
   title: "Lab: Introduction to Programming and The Development Environment and GitHub"    
@@ -226,10 +226,11 @@ schedule:
     rlink: false   
 - week: "1"
   date: "0"
-  title: "Lab: Kepler's Third Law"  
+  title: "Lab: Kepler's Third Law"
+  readings:
+  - rtitle: "Pre-Lab: Epoch Time Overflow"
+    rlink: "./Modules/EpochTime/Exercise"    
   deliverables:
-  - dtitle: "Pre-Lab: Epoch Time Overflow"
-    dlink: "./Modules/EpochTime/Exercise"  
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "./Labs/Kepler"
 - week: "1"
@@ -254,7 +255,7 @@ schedule:
   title: "Boolean Logic and Expressions"
   readings:
   - rtitle: "Ch. 3"
-    rlink: false  
+    rlink: false   
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -404,9 +405,10 @@ schedule:
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
+  readings:
+  - rtitle: "Pre-Lab: Tic-Tac-Toe"
+    rlink: "./Modules/TicTacToe/Exercise"  
   deliverables:
-  - dtitle: "Pre-Lab: Tic-Tac-Toe"
-    dlink: "./Modules/TicTacToe/Exercise"
   - dtitle: "Lab: ASCII Art Handed Out"
     dlink: "./Labs/ASCIIArt"  
 - week: "8"
@@ -477,39 +479,44 @@ schedule:
 - week: "10"
   date: "3"
   title: "Algorithms: Recursion and Merge Sort" 
-  deliverables:
-  - dtitle: "Pre-Lab: Recursion"
-    dlink: "./Modules/Recursion/Module"  
+  readings:
+  - rtitle: "Pre-Lab: Recursion"
+    rlink: "./Modules/Recursion/Module"   
+  deliverables: 
   - dtitle: "Lab: HashMaps Due"
     dlink: false 
 - week: "11"
   date: "0"
   title: "Searching and Sorting" 
-  deliverables:
-  - dtitle: "Pre-Lab: Insertion Sort"
-    dlink: "./Modules/InsertionSort/Module"    
+  readings:
+  - rtitle: "Pre-Lab: Insertion Sort"
+    rlink: "./Modules/InsertionSort/Module"    
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
+  readings:
+  - rtitle: "Pre-Lab: Merge Sort"
+    rlink: "./Modules/MergeSort/Module"  
   deliverables:
-  - dtitle: "Pre-Lab: Merge Sort"
-    dlink: "./Modules/MergeSort/Module"
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
 - week: "11"
   date: "2"
   title: "Recursion and Dynamic Programming"  
+  readings:
+  - rtitle: "Pre-Lab: Dynamic Programming"
+    rlink: "./Modules/DynamicProgramming/Module"    
   deliverables:
-  - dtitle: "Pre-Lab: Dynamic Programming"
-    dlink: "./Modules/DynamicProgramming/Module"  
   - dtitle: "Assignment: Iris Dataset Due"
-    dlink: "./Assignments/Iris"    
+    dlink: "./Assignments/Iris"
 - week: "11"
   date: "3"
   title: "Recursion and Dynamic Programming"   
   deliverables:
   - dtitle: "Lab: Searching and Sorting Due"
     dlink: false
+  - dtitle: "Assignment: Guitar String Synthesizer Handed Out"
+    dlink: "./Assignments/GuitarStringSynth"           
 - week: "12"
   date: "0"
   title: "Final Project Brainstorm"
@@ -531,6 +538,8 @@ schedule:
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false 
+  - dtitle: "Assignment: Guitar String Synthesizer Due"
+    dlink: "./Assignments/GuitarStringSynth"           
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
