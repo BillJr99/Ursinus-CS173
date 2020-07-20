@@ -228,6 +228,8 @@ schedule:
   date: "0"
   title: "Lab: Kepler's Third Law"  
   deliverables:
+  - dtitle: "Pre-Lab: Epoch Time Overflow"
+    dlink: "./Modules/EpochTime/Exercise"  
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "./Labs/Kepler"
 - week: "1"
