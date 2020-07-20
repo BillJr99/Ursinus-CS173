@@ -53,9 +53,9 @@ final double VARIABLE_NAME = 123.456
 (note the use of the `final` keyword, which means that the assigned value cannot be changed, and the capital letters for the variable name, which quickly indicates to a programmer that the value is indeed a constant).
 
 * <span>\\(M = 1.989 \times 10^{30} kg\\)</span> 
-** This is represented in Java as 1.989e30
-* <span>\\(G = 6.6743015 \times 10^{-11}\\) \frac{meters^{3}}{kg \times sec^{2}}</span> 
-** This is represented in Java as 6.6743015e-11
+    * This is represented in Java as 1.989e30
+* <span>\\(G = 6.6743015 \times 10^{-11} \frac{meters^{3}}{kg \times sec^{2}}\\)</span> 
+    * This is represented in Java as 6.6743015e-11
 
 The following table provides your inputs for the planetary mass and semi-major axis length, as well as an approximate length of the year on that planet in Earth Days (to help you check your output).
 
