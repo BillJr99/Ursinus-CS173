@@ -497,7 +497,10 @@ schedule:
     dlink: false
 - week: "12"
   date: "0"
-  title: "Principles of Software Design and Modularity"
+  title: "Final Project Brainstorm"
+  deliverables:
+  - dtitle: "Final Project: Handed Out"
+    dlink: false    
 - week: "12"
   date: "1"
   title: "Lab: HashMaps"
@@ -509,12 +512,10 @@ schedule:
   title: "Licensing and Open Source Software"
 - week: "12"
   date: "3"
-  title: "Final Project Braindstorm"
+  title: "Principles of Software Design and Modularity"
   deliverables:
   - dtitle: "Lab: HashMaps Due"
-    dlink: false
-  - dtitle: "Final Project: Handed Out"
-    dlink: false   
+    dlink: false 
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
@@ -530,6 +531,8 @@ schedule:
   deliverables:
   - dtitle: "Lab: Software Design Due"
     dlink: false   
+  - dtitle: "Final Project: Due"
+    dlink: false     
 - week: "13"
   date: "3"
   title: "Final Project Presentations"   
