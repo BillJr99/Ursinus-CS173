@@ -517,6 +517,7 @@ boilerplate:
     <tr align="left">
 
     <td align="left">
+    <!-- Assumes week numbers are counted from 0 in the markdown definition to facilitate date calculation -->
     {% assign week_num = item.week | to_integer %}
     <strong>Week {{ week_num | plus: 1 }}</strong>
     </td>
