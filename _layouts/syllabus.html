@@ -517,7 +517,8 @@ boilerplate:
     <tr align="left">
 
     <td align="left">
-    <strong>Week {{ item.week }}</strong>
+    {% assign week_num = item.week | to_integer %}
+    <strong>Week {{ week_num | plus: 1 }}</strong>
     </td>
 
     <td align="left">
