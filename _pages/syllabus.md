@@ -485,6 +485,7 @@ schedule:
 - week: "11"
   date: "0"
   title: "Searching and Sorting" 
+  deliverables:
   - dtitle: "Pre-Lab: Insertion Sort"
     dlink: "./Modules/InsertionSort/Module"    
 - week: "11"
