@@ -517,19 +517,15 @@ schedule:
   date: "0"
   title: "Final Project Workshop"
   deliverables:
-  - dtitle: "Lab: Software Design Handed Out"
-    dlink: false 
   - dtitle: "Assignment: Guitar String Synthesizer Due"
     dlink: "./Assignments/GuitarStringSynth"         
 - week: "13"
   date: "1"
-  title: "Lab: Software Design" 
+  title: "Final Project Workshop" 
 - week: "13"
   date: "2"
   title: "Final Project Workshop"
   deliverables:
-  - dtitle: "Lab: Software Design Due"
-    dlink: false   
   - dtitle: "Final Project: Due"
     dlink: false     
 - week: "13"
