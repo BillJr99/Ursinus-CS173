@@ -229,7 +229,7 @@ schedule:
   title: "Lab: Kepler's Third Law"  
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
-    dlink: false
+    dlink: "./Labs/Kepler"
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -243,7 +243,7 @@ schedule:
   title: "Object Data Types"
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: false
+    dlink: "./Labs/Kepler"
   readings:
   - rtitle: "Ch. 2.3, 2.5"
     rlink: false    
