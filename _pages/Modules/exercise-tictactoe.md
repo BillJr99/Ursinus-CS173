@@ -56,7 +56,7 @@ files:
     isreadonly: true
     isvisible: false
     code: |
-        TicTacToe.main(null);
+        Driver.main(null);
         
 ---
 
