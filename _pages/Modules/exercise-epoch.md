@@ -5,7 +5,6 @@ title: "CS173: Intro to Computer Science - Epoch Time Overflow Calculator"
 excerpt: "CS173: Intro to Computer Science - Epoch Time Overflow Calculator"
 
 info:
-  prev: "./Module"
   instructions: "Modify the EpochTimeOverflow.java file to print the year when the Epoch overflow occurs."
   
 processor:  

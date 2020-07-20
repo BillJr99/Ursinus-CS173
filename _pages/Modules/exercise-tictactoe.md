@@ -5,7 +5,6 @@ title: "CS173: Intro to Computer Science - Tic-Tac-Toe"
 excerpt: "CS173: Intro to Computer Science - Tic-Tac-Toe"
 
 info:
-  prev: "./Module"
   instructions: "Modify the TicTacToe.java file to return whether a given array contains a winning tic-tac-toe configuration."
   
 processor:  
