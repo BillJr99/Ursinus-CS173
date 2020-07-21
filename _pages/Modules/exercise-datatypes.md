@@ -38,7 +38,11 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                double C = 3e8; // A constant representing the speed of light = 300000000, which can be typed as 3e8 for convenience
+                /*  A constant representing the 
+                    speed of light = 300000000, 
+                    which can be typed as 3e8 for convenience
+                    meaning "three times ten to the eighth" */
+                double C = 3e8; 
 
                 /* TODO: 1. Declare a variable m for the mass 
                             of an object, and assign it the 
