@@ -208,7 +208,10 @@ schedule:
     dlink: "./Assignments/Warmup"
 - week: "0"
   date: "1"
-  title: "Lab: Introduction to Programming and The Development Environment and GitHub"    
+  title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
+  readings:
+  - rtitle: "Pre-Lab: Getting Started with Git and Github"
+    rlink: "./Modules/Github/Module"       
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"    
@@ -230,8 +233,6 @@ schedule:
   readings: 
   - rtitle: "Pre-Lab: Epoch Time Overflow"
     rlink: "./Modules/EpochTime/Exercise"  
-  - rtitle: "Pre-Lab: Cloning an Assignment with Github Classroom"
-    rlink: "./Modules/GithubClone/Module"     
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "./Labs/Kepler"
