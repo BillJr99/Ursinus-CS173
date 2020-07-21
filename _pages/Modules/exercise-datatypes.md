@@ -20,7 +20,14 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("")
+    pos.includes("207000000000000000")
+  incorrectchecks:
+    - incorrectcheck: |
+        pos.includes("690000000")
+      feedback: "Try again: don't forget to square c with the Math.pow() method, or by multiplying by c twice!"    
+    - incorrectcheck: |
+        pos.includes("180000000000000000")
+      feedback: "Try again: be sure to declare m as a float or double!"          
  
 files:
   - filename: "Driver.java"
