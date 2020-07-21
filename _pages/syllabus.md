@@ -274,6 +274,8 @@ schedule:
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
+  - rtitle: "Pre-Lab: Using External Libraries in Your NetBeans Project"
+    rlink: "./Modules/Library/Module"    
   deliverables:
   - dtitle: "Assignment: MIDI Audio Handed Out"
     dlink: "./Assignments/MIDI" 
