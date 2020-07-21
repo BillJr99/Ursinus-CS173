@@ -217,7 +217,10 @@ schedule:
   title: "A Brief History of Computer Science"    
 - week: "0"
   date: "3"
-  title: "Data Types and Variables"  
+  title: "Data Types and Variables" 
+  readings:
+  - rtitle: "Pre-Lab: Introduction to Primitive Data Types"
+    rlink: "./Modules/DataTypes/Module"  
   deliverables:
   - dtitle: "Assignment: Warmup Due"    
     dlink: "./Assignments/Warmup"  
