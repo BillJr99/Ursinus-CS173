@@ -1,10 +1,11 @@
 ---
 layout: module
-permalink: /Modules/GithubClone/Module
-title: "CS173: Intro to Computer Science - Cloning and Assignment with Github Classroom"
-excerpt: "CS173: Intro to Computer Science - Cloning and Assignment with Github Classroom"
+permalink: /Modules/GithubClassroom/Module
+title: "CS173: Intro to Computer Science - Cloning an Assignment with Github Classroom"
+excerpt: "CS173: Intro to Computer Science - Cloning an Assignment with Github Classroom"
 
 info:
+  prev: "../Github/Module"
   video: "https://www.youtube.com/embed/nQyvc5EW6WE"
   
 ---
