@@ -72,10 +72,13 @@ Prior to writing your code, draw a grid representing the string you're searching
 ### Computing the Complement of an NA Chain
 Given an NA chain string, return a new string representing its complement.  This should be a string of the same length as the original; however, each character should be replaced with its complement.  That is, all the A's should be switched to T's (and vice-versa), and all the C's should become G's (and vice-versa).
 
-Question: why do you need to reutrn a new string?  Since strings are represented as arrays of characters, why can't you manipulate the input string paramter directly?  Even if you could, why do you think it is a good idea to create a new string anyway?
+Question: why do you need to return a new string?  Since strings are represented as arrays of characters, why can't you manipulate the input string paramter directly?  Even if you could, why do you think it is a good idea to create a new string anyway?
 
 ### Reversing a Chain
 Given an NA chain string, return a new string of the same length but with all the characters reversed.  That is, "ATCG" becomes "GCTA".
+
+### Compute an Antisense
+Using the two functions you just wrote to compute the complement and the reverse of a chain, write a function to compute the antisense of a given NA chain.  To do this, compute the complement of the chain, and then reverse it.
 
 ## Part 3: Inserting a Chain
 Given an NA chain string, an NA subchain, and a position, insert the subchain into the chain.  For example, `insert("ACCG", "TT", 2)` would return "ACTTCG" (recall that the indices start at 0, so the TT occupies position 3 and 4 in the string, which are indices 2 and 3.
