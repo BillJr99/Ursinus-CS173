@@ -227,9 +227,11 @@ schedule:
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
-  readings:
+  readings: 
   - rtitle: "Pre-Lab: Epoch Time Overflow"
-    rlink: "./Modules/EpochTime/Exercise"    
+    rlink: "./Modules/EpochTime/Exercise"  
+  - rtitle: "Pre-Lab: Cloning an Assignment with Github Classroom"
+    rlink: "./Modules/GithubClone/Module"     
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "./Labs/Kepler"
