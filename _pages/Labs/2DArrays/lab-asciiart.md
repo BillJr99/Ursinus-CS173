@@ -161,7 +161,7 @@ Using blocks with 4 rows tall and 2 columns wide, we get the following ASCII art
 ### R2 D2
 The following image has been provided in the starter code `Examples/` directory. 
 
-![R2 D2](../images/lab-asciiart/MonaLisa.png)
+![R2 D2](../images/lab-asciiart/r2d2.png)
 
 You can load this in with the following code
 
