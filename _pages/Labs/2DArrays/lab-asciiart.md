@@ -7,7 +7,6 @@ excerpt: "CS173: Intro to Computer Science - ASCII Art"
 info:
   coursenum: CS173
   githubclassroom:
-    joinlink: https://classroom.github.com/classrooms/61290261-billmongan-cs173-fall20
     clonelink: false
   points: 100
   goals:
