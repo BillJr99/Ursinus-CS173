@@ -229,7 +229,9 @@ schedule:
   title: "Programming Statements, Expressions, and Operators"
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
-    rlink: false   
+    rlink: false 
+  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
+    rlink: "./Modules/Values/Module"  
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
