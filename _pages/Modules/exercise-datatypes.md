@@ -40,10 +40,19 @@ files:
             public static void main(String[] args) {
                 double C = 3e8; // A constant representing the speed of light = 300000000, which can be typed as 3e8 for convenience
 
-                /* TODO: 1. Declare a variable m for the mass of an object, and assign it the value 2.3.  Be sure to use the appropriate data type!
-                         2. Compute the Energy (using Einstein's formula: E = MC^2)
-                            ... note that C is a capital letter: variables are case sensitive, so you'll want to refer to it as C and not c in this program.
-                         3. Print the value using System.out.println
+                /* TODO: 1. Declare a variable m for the mass 
+                            of an object, and assign it the 
+                            value 2.3.  Be sure to use the 
+                            appropriate data type!
+                         2. Compute the Energy (using 
+                            Einstein's formula: E = MC^2)
+                            ... note that C is a capital 
+                            letter: variables are case 
+                            sensitive, so you'll want to 
+                            refer to it as C and not c in 
+                            this program.
+                         3. Print the value using 
+                            System.out.println()
                 */
                 
             }
