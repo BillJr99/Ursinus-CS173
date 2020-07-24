@@ -342,12 +342,6 @@ Then, you can run:
 playFile("HappyBirthday.txt");
 ```
 
-As a second example, I have also provided the file `WannaBeStartinSomething.txt` (by Michael Jackson), which you can also run:
-
-```java
-playFile("WannaBeStartinSomething.txt");
-```
-
 #### Hints
 * If you have a String `s` of comma-separated values, then `s.split(",")` will return an array of Strings that are on either side of the commas. For instance, `"11,12,13".split(",")` will return the array `{"11", "12", "13"}`. You will then need to convert each to the correct type. The function `Integer.parseInt(string)` will convert a string to an integer, and the function `Double.parseDouble(string)` will convert a string to a double.
 
