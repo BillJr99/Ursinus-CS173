@@ -306,7 +306,7 @@ By default, the `main` function in `GuitarString.java` plays the first 24 halfst
 </p>
 
 ### Extra Credit (25%)
-As extra credit, you should fill in the method `playFile`, which loads in and plays a bunch of notes in sequence from a text file. The text file contains a bunch of lines with comma separated values for `halfstep,duration,decay`. For example, the file `HappyBirthday.txt` contains the following sequence of 25 notes:
+As extra credit, you should fill in the method `playFile`, which loads in and plays a bunch of notes in sequence from a text file. The text file contains a bunch of lines with comma separated values for `halfstep,duration,decay`. For example, the "Happy Birthday" song contains the following sequence of 25 notes:
 
 ```
 0,0.35,0.98
@@ -336,7 +336,7 @@ As extra credit, you should fill in the method `playFile`, which loads in and pl
 5,0.5,0.98
 ```
 
-Then, you can run:
+If you copy and paste this into a file called `HappyBirthday.txt`, you can run:
 
 ```java
 playFile("HappyBirthday.txt");
