@@ -336,35 +336,17 @@ As extra credit, you should fill in the method `playFile`, which loads in and pl
 5,0.5,0.98
 ```
 
-Then, when you run:
+Then, you can run:
 
 ```java
 playFile("HappyBirthday.txt");
 ```
 
-from the main method, you should hear this audio
-
-<p>
-<audio controls>
-    <source src="../files/asmt-guitarstringsynth/HappyBirthday.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio> 
-</p>
-
-As a second example, I have also provided the file `WannaBeStartinSomething.txt` (by Michael Jackson), so that when you run:
+As a second example, I have also provided the file `WannaBeStartinSomething.txt` (by Michael Jackson), which you can also run:
 
 ```java
 playFile("WannaBeStartinSomething.txt");
 ```
-
-from the main method, you should hear this audio
-
-<p>
-<audio controls>
-    <source src="../files/asmt-guitarstringsynth/WannaBeStartinSomething.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio> 
-</p>
 
 #### Hints
 * If you have a String `s` of comma-separated values, then `s.split(",")` will return an array of Strings that are on either side of the commas. For instance, `"11,12,13".split(",")` will return the array `{"11", "12", "13"}`. You will then need to convert each to the correct type. The function `Integer.parseInt(string)` will convert a string to an integer, and the function `Double.parseDouble(string)` will convert a string to a double.
