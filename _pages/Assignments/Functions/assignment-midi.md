@@ -150,7 +150,7 @@ Define a function `playMainPart()` that contains the code to play the `C4 C4 G4 
 ## Part 4: Make Up Your Own Song
 Every answer is correct - be creative and play some notes.  Explore the Notes class and the Instruments class for a few examples that you can play.  Let me know if you come up with something fun that you'd be willing to share - we can take a few minutes in class sometime for a few "code demonstrations."
 
-## Optional Part 5: Just for Fun...
+## Part 5: Just for Fun...
 
 When we explore arrays and loops, we will see how we can represent a song like this using a single variable (an "array") that represents the entire collection of notes, and this can be played using a single call to the function to play all the notes.  "Loops" can iterate over these collections, one by one, and automatically play each note, so that you don't have to copy your code like you did here.
 
@@ -188,3 +188,5 @@ player.playNote(Notes.NOTE_A3, Notes.NOTE_HALF, Notes.DEFAULT_INTENSITY);
         
 MIDIPlayer.rest(Notes.NOTE_WHOLE);
 ```
+
+Take a look at the `playChord` function call.  What is different about it from the calls to `playNote`?  We know that it is playing multiple notes together (in this case, A4 and A3).  How do we know this?
