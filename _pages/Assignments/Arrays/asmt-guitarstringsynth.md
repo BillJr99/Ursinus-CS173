@@ -142,7 +142,7 @@ which looks and sounds like this
 ### Pulse Tone Sinusoids
 It's also possible to build sounds from sine waves, which we refer to as "pure tones." Given a sample rate `FS`, a period `T`, and an amplitude (loudness) `a`, the formula for the value in the array at index `i` is:
 
-<span>\\(a sin(\frac{2 \pi i}{T})\\)</span>
+<span>\\(a \times sin(\frac{2 \pi i}{T})\\)</span>
 
 For those who know trigonometry, you'll notice that this does indeed go through one period over `T` samples, since that will bring it from 0 to 2 <span>\\(\pi\\)</span>. The code to do this, which can be found in `Sinusoid.java` in the skeleton code, looks like this:
 
