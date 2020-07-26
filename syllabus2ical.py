@@ -4,6 +4,14 @@ from datetime import datetime,timedelta
 import uuid
 from dateutil import tz
 
+def stripnobool(val):
+    if type(val) is bool:
+        result = ""
+    else:
+        result = str(val)
+    
+    return result.strip()
+    
 def getDayNum(dayidx, M, T, W, R, F, S, U):
     result = 0
     
@@ -186,7 +194,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
                 dtholiday = getDateString(parseDate(holiday['date']))       
                 rrule = rrule + "\r\nEXDATE:" + dtholiday
 
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 for item in postdict['schedule']:   
     weekidx = item['week']
@@ -202,7 +210,7 @@ for item in postdict['schedule']:
      
     
     startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
-    description = str(link).strip()
+    description = stripnobool(link)
     
     if 'readings' in item:
         for reading in item['readings']:      
@@ -212,7 +220,7 @@ for item in postdict['schedule']:
             else:
                 rlink = ""
             
-            description = str(description).strip() + "\\nReading: " + str(rtitle).strip() + " " + str(rlink).strip() 
+            description = stripnobool(description) + "\\nReading: " + stripnobool(rtitle) + " " + stripnobool(rlink) 
         
     if 'deliverables' in item:
         for deliverable in item['deliverables']:        
@@ -222,13 +230,13 @@ for item in postdict['schedule']:
             else:
                 dlink = ""
             
-            description = str(description).strip() + "\\nDeliverable: " + str(dtitle).strip() + " " + str(dlink).strip() 
+            description = stripnobool(description) + "\\nDeliverable: " + stripnobool(dtitle) + " " + stripnobool(dlink) 
         
             # Write the Assignment as an all-day event
-            outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + str(dtitle).strip() + "\r\nLOCATION:\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")        
+            outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")        
         
     # Write the lecture as an all-day event:
-    outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": Class Meeting\r\nLOCATION:\r\nDESCRIPTION:" + str(description).strip() + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+    outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": Class Meeting\r\nLOCATION:\r\nDESCRIPTION:" + stripnobool(description) + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
     
 # Write Office Hours as a Recurring Event
 for instructor in postdict['instructors']:
@@ -267,7 +275,7 @@ for instructor in postdict['instructors']:
                 dtholiday = getDateString(parseDate(holiday['date']))       
                 rrule = rrule + "\r\nEXDATE:" + dtholiday
 
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 # Write Exam Dates 
 for i in range(len(postdict['info']['class_meets_locations'])):
@@ -286,7 +294,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
         location = postdict['info']['midtermexam'][i]['mroom']
         
         # Write the exam:
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + str(dtitle).strip() + "\r\nLOCATION:" + str(location).strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
 
     if not (postdict['info']['finalexam'][i]['fdate'] == "TBD"):
         startd = getDateString(parseDate(postdict['info']['finalexam'][i]['fdate']))
@@ -301,7 +309,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
         location = postdict['info']['finalexam'][i]['froom']
         
         # Write the exam:
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + str(dtitle).strip() + "\r\nLOCATION:" + str(location).strip() + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
 
 # Write University Dates
 if postdict['university']['semester'] == "Fall":
@@ -317,7 +325,7 @@ if not (kdatekey is None):
         description = keydate['kname']
           
         # Write the key date as an all-day event:
-        outf.write("BEGIN:VEVENT\r\nUID:" + str(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + str(description).strip() + "\r\nLOCATION:\r\nDESCRIPTION:" + str(description).strip() + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + stripnobool(description) + "\r\nLOCATION:\r\nDESCRIPTION:" + stripnobool(description) + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
                
 outf.write("END:VCALENDAR\r\n")
 
