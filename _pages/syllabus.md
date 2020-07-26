@@ -82,13 +82,13 @@ info:
     <table style="border-collapse: collapse; border: none;" cellspacing="0" cellpadding="0" border="0" width="100%">
     <tr style="border: none;">
     <td style="border: none; text-align:center" vertical-align: bottom;>
-    <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
+    <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="50%" style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
     </td>
     <td style="border: none; text-align:center" vertical-align: bottom;>
-    <img style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
+    <img width="50%" style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
     </td>
     <td style="border: none; text-align:center" vertical-align: bottom;>
-    <img style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
+    <img width="50%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
     </td>
     </tr>
     </table>
