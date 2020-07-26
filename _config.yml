@@ -21,6 +21,3 @@ include:
   - .htaccess
   - _pages
   - files
-  
-github:
-  is_project_page: false # hide "view on github" button at the top
