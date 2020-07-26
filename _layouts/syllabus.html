@@ -164,6 +164,14 @@ boilerplate:
     [ <a href="#courseinfo">Course Info</a> | <a href="#objectives">Course Objectives and Goals</a> | <a href="#resources">Resources</a> | <a href="#instructors">Instructors</a> | <a href="#textbooks">Textbooks</a> | <a href="#schedule">Schedule</a> | <a href="#grading">Grading</a> | <a href="#policies">Course Policies</a> | <a href="#mainbody">Course Details</a> ]
     <br><br>
 
+
+    
+    {% if page.info.banner %}
+    {{ page.info.banner }}
+    {% endif %}
+
+
+
     {% if page.info.course_description %}
     {{ page.info.course_description }}
     {% endif %}

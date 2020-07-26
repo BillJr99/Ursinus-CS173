@@ -78,7 +78,21 @@ info:
       fendtime: "TBD"
       froom: "TBD"
   flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which awards 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline."
-   
+  banner: |
+    <table border=0>
+    <tr>
+    <td>
+    <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="512" alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
+    </td>
+    <td>
+    <img alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
+    </td>
+    <td>
+    <img alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
+    </td>
+    </tr>
+    </table>
+    
 instructors:
 - name: William Mongan
   title: Professor
