@@ -7,7 +7,7 @@ excerpt: "CS174: OOP - Drills - Computing the mean of arrays"
 info:
   prev: "./ArraySep"
   next: "./ArrayZeroes"
-  instructions: "Fill in a method to compute the mean of an array of ints.  Note that even though the inputs are integers, their mean may be a decimal number!  For example, the mean of <code>{0, 5, 2, 4}</code> is <code>2.75</code>."  Finally, <i>if an empty array is passed to your method, you should return 0.0</i>.  Recall that this is referred to as a "boundary case" or "edge case" in testing.
+  instructions: "Fill in a method to compute the mean of an array of ints.  Note that even though the inputs are integers, their mean may be a decimal number!  For example, the mean of <code>{0, 5, 2, 4}</code> is <code>2.75</code>.  Finally, <i>if an empty array is passed to your method, you should return 0.0</i>.  Recall that this is referred to as a "boundary case" or "edge case" in testing.
   goals:
     - To do proper array accessing
     - To use loops in concert with arrays
