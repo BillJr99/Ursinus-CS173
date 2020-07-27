@@ -18,7 +18,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("084")
+    pos.includes("0284")
   incorrectchecks:
     - incorrectcheck: |
         pos.includes("00")
@@ -49,11 +49,13 @@ files:
     code: | 
         public class Tester {
             public static void main(String[] args) {
+                int[] arr0 = {};
+                System.out.print(ArrayZeroes.countZeroes(arr0));
                 int[] arr1 = {0, 5, 10, 0, 3, 4};
                 System.out.print(ArrayZeroes.countZeroes(arr1));
                 int[] arr2 = {0, 0, 1, 2, 4, 3, 4, 4, 0, 1, 2, 0, 3, 0, 0, 0, 2, 2, 4, 0};
                 System.out.print(ArrayZeroes.countZeroes(arr2));
-                int[] arr3 = {[ 3, 13, 12,  3, 20, 17, 10, 17,  6,  1, 19, 10, 15,  9,  9, 13, 11, 8, 17,  0,  2,  1,  4, 10, 20,  5, 14,  5, 20, 17, 14, 17, 16,  5, 17, 14,  1, 17, 10, 14, 20, 20,  8, 10,  9,  9, 20,  8, 14,  4, 13, 9,  3, 11,  2,  8, 12,  1, 13,  9, 13,  1,  9, 14, 16, 15,  0,  9, 3,  5, 17,  2,  0, 12,  8,  7, 13, 15, 14,  7, 10, 11, 18, 19, 14, 20, 10,  2,  3, 10, 20,  3, 19,  8, 14, 11, 11,  5,  5,  0]};
+                int[] arr3 = {3, 13, 12,  3, 20, 17, 10, 17,  6,  1, 19, 10, 15,  9,  9, 13, 11, 8, 17,  0,  2,  1,  4, 10, 20,  5, 14,  5, 20, 17, 14, 17, 16,  5, 17, 14,  1, 17, 10, 14, 20, 20,  8, 10,  9,  9, 20,  8, 14,  4, 13, 9,  3, 11,  2,  8, 12,  1, 13,  9, 13,  1,  9, 14, 16, 15,  0,  9, 3,  5, 17,  2,  0, 12,  8,  7, 13, 15, 14,  7, 10, 11, 18, 19, 14, 20, 10,  2,  3, 10, 20,  3, 19,  8, 14, 11, 11,  5,  5,  0};
                 System.out.print(ArrayZeroes.countZeroes(arr3));
             }
         }    
