@@ -21,7 +21,7 @@ processor:
     pos.includes("0284")
   incorrectchecks:
     - incorrectcheck: |
-        pos.includes("00")
+        pos.includes("0000")
       feedback: "Try again: It looks like you're still returning the default value of 0 from the <code>countZeroes</code> method"    
  
 files:

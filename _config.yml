@@ -7,7 +7,7 @@ relative_links:
 
 theme: jekyll-theme-slate
 
-title: "CS174"
+title: "<a href = http://www.ctralie.com/Teaching/CS174_F2020/">CS 174</a>"
 description: "Object-Oriented Programming"
 
 url                      : https://ursinus-cs174-f2020.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
