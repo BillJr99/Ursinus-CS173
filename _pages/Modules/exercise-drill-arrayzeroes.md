@@ -1,14 +1,16 @@
 ---
 layout: exercise
-permalink: /Modules/ArrayZeroes/Exercise
+permalink: /Modules/ArrayDrills/ArrayZeroes
 title: "CS174: OOP - Drills - Counting Array Zeroes"
 excerpt: "CS174: OOP - Drills - Counting Array Zeroes"
 
 info:
-  instructions: "Modify the <code>countZeroes</code> method in <code>ArrayZeroes.java</code> file to count the number of zeroes in an array."
+  next: "./ArraySep"
+  instructions: "Modify the <code>countZeroes</code> method in <code>ArrayZeroes.java</code> file to count the number of zeroes in an array (this is based on exercise 13 on page 266 of the Horstmann book <i>Java for Everyone</i>)."
   goals:
     - To do proper array accessing
     - To use loops in concert with arrays
+    - To use logic inside of a loop
     - To declare accumulator variables outside of loops that are used in loops, but whose state persists beyond the loop
     
 processor:  
