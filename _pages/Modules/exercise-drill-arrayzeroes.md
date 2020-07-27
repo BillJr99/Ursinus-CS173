@@ -5,7 +5,7 @@ title: "CS174: OOP - Drills - Counting Array Zeroes"
 excerpt: "CS174: OOP - Drills - Counting Array Zeroes"
 
 info:
-  instructions: "Modify the Driver.java file to compute and print the Energy of an object given its mass and the constant c (which is given to you in the program)."
+  instructions: "Modify the <code>countZeroes</code> method in <code>ArrayZeroes.java</code> file to count the number of zeroes in an array."
   goals:
     - To do proper array accessing
     - To use loops in concert with arrays
