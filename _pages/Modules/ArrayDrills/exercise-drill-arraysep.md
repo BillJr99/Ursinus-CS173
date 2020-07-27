@@ -27,6 +27,7 @@ processor:
     - incorrectcheck: |
         pos.includes("0, 5, 10, 0, 3, 4,") || pos.includes("0, 0, 1, 2, 4, 3, 4,")
       feedback: "Try again. Be careful not to include a comma at the end!"
+    
     - incorrectcheck: |
         pos.includes("0,5,10,0,3,4") || pos.includes("0,0,1,2,4,3,4")
       feedback: "Try again. Be sure to include spaces after commas!"    
