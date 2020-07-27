@@ -10,7 +10,7 @@ info:
   instructions: "Declare a void method <code>printArray</code> in the <code>ArrayPrinter</code> class.  This method should take an array of ints, and it should then print out the elements of the array separated by commas (this is useful, since printing out an array by default in Java just gives its memory address).  For example, the array <code>{0,5,2,4}</code> should be printed out as <b>0, 5, 2, 4</b>.  Note how there is no comma or space at the end of the output string."
   goals:
     - To declare a public static method to some specification
-    - To do proper array accessing
+    - To do proper array indexing
     - To use loops in concert with arrays
     - To use logic inside of a loop
     - To use the <code>System.out.print</code> method properly

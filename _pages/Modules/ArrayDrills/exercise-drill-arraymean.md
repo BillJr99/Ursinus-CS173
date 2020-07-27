@@ -6,14 +6,14 @@ excerpt: "CS174: OOP - Drills - Computing the mean of arrays"
 
 info:
   prev: "./ArraySep"
+  next: "./ArrayReverse"
   instructions: "Fill in a method to compute the mean of an array of ints.  Note that even though the inputs are integers, their mean may be a decimal number!  For example, the mean of <code>{0, 5, 2, 4}</code> is <code>2.75</code>.  Finally, <i>if an empty array is passed to your method, you should return 0.0</i>.  Recall that this is referred to as a <i>boundary case</i> or <i>edge case</i> in testing."
   goals:
-    - To do proper array accessing
+    - To do proper array indexing
     - To use loops in concert with arrays
-    - To use logic inside of a loop
     - To declare accumulator variables outside of loops that are used in loops, but whose state persists beyond the loop
     - To use proper types
-    - To practice handling boundary cases
+    - To handle boundary cases
     
 processor:  
   correctfeedback: "Correct!!" 
