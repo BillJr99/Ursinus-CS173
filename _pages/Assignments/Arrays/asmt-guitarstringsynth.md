@@ -40,7 +40,7 @@ tags:
   
 ---
 
-In this assignment \[[^1]\], you will practice with arrays and loops in a fun application that involves digital audio.
+In this assignment [\[[^1]\], \[[^2]\]], you will practice with arrays and loops in a fun application that involves digital audio.
 
 [Download the skeleton code](../files/asmt-guitarstringsynth/GuitarStringSynth-master.zip) for this assignment. You will be editing `src/guitarstring/GuitarString.java`.
 
@@ -352,3 +352,4 @@ playFile("HappyBirthday.txt");
 * If you have a String `s` of comma-separated values, then `s.split(",")` will return an array of Strings that are on either side of the commas. For instance, `"11,12,13".split(",")` will return the array `{"11", "12", "13"}`. You will then need to convert each to the correct type. The function `Integer.parseInt(string)` will convert a string to an integer, and the function `Double.parseDouble(string)` will convert a string to a double.
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)
+[^2]: Adapted from [Princeton COS126 course](https://www.cs.princeton.edu/courses/archive/spring19/cos126/assignments/guitar-hero/)
