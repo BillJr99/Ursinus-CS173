@@ -31,7 +31,7 @@ processor:
  
 files:
   - filename: "ArrayPrinter.java"
-    name: arrayzeroes
+    name: arrayprinter
     ismain: false
     isreadonly: false
     isvisible: true
@@ -49,10 +49,10 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {0, 5, 10, 0, 3, 4};
-                System.out.print(ArrayZeroes.countZeroes(arr0));
+                System.out.print(ArrayPrinter.printArray(arr0));
                 System.out.print(".");
                 int[] arr1 = {0, 0, 1, 2, 4, 3, 4};
-                System.out.print(ArrayZeroes.countZeroes(arr1));
+                System.out.print(ArrayPrinter.printArray(arr1));
                 System.out.print(".");
             }
         }    
