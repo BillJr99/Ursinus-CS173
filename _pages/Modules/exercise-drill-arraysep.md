@@ -1,6 +1,6 @@
 ---
 layout: exercise
-permalink: /Modules/ArrayDrills/ArraySep
+permalink: /ArrayDrills/ArraySep
 title: "CS174: OOP - Drills - Printing array with commas"
 excerpt: "CS174: OOP - Drills - Printing array with commas"
 

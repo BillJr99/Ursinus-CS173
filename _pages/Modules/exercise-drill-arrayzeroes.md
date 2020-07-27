@@ -1,6 +1,6 @@
 ---
 layout: exercise
-permalink: /Modules/ArrayDrills/ArrayZeroes
+permalink: /ArrayDrills/ArrayZeroes
 title: "CS174: OOP - Drills - Counting Array Zeroes"
 excerpt: "CS174: OOP - Drills - Counting Array Zeroes"
 
