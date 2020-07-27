@@ -627,7 +627,7 @@ university:
 ---
 Welcome!  
 
-# Overview
+## Overview
 Computer science is the study of how machines interact with data and the way in which machines can be used to solve problems. It is a mathematical discipline, but one which is often much more "hands on" than most fields of math. One important aspect of computer science is computer programming, or the process of writing code, or instructions for a computer to execute in a language a computer can understand. With programming languages, we can tell the computer how to automate calculations that are tedious and slow for humans to do by hand, and how to translate algorithms (recipes to solve problems) into code. In this course, we will learn one such language called Java, and we will use this language to explore an interdisciplinary array of computer science problems, including but not limited to:
 
 * How to encrypt data and hide information.
@@ -637,11 +637,11 @@ Computer science is the study of how machines interact with data and the way in 
 
 The course will gradually build up skills by providing "skeleton code" or other scaffolding that students fill in to do more complicated tasks, but by the end of the course, students will be able to write programs from scratch with multiple interlocking components.
 
-## A Word on Background and Inclusivity \[[^1]\]
+### A Word on Background and Inclusivity \[[^1]\]
 It is often the case that some students have had a good amount of programming experience before they start this course, either as part of a high school curriculum or on their own. However, *no prior knowledge whatsoever is assumed*, so we start from scratch. It is a human tendency to show off how smart or knowledgeable we are to let everyone around us know, but it can be distracting and very discouraging to people who have not seen the material before, and it can quickly poison a classroom environment. If there's an advanced topic you would like to discuss, my office door is open, and I can give you a nearly unlimited supply of extra things to challenge you. But please keep it to yourself. I also expect those of you with more experience to help those in our community who are new. Conversely, if this is brand new to you, do not worry! Some of our best senior computer science majors at Ursinus started off with no experience, and our goal is to get everyone on the same page in this course.
     
 <a name="patienceanddebugging"></a>
-## A Word on Patience and Debugging \[[^1]\]
+### A Word on Patience and Debugging \[[^1]\]
 <div style="float: right; margin-left: 5px;">
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me: I&#39;m stuck on a bug. What do I do<br><br>Other developers: Take a break. Walk away. Go outside. Sleep on it and come back to it the next day.<br><br>Me: *Sits at desk obsessing over bug until 2AM*</p>&mdash; Madison Kanna (@Madisonkanna) <a href="https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw">January 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
@@ -652,24 +652,24 @@ As part of embracing the process of debugging, we will be creating a ["debugging
 
 Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!
 
-# Homework
+## Homework
 
-## Pre-Lab Exercises
+### Pre-Lab Exercises
 Roughly once every week, students will be expected to engage with pre-lab material.  These are videos we've produced or curated to help introduce concepts that we'll be going over in-class.  It is expected that you will read the readings for the class and complete the pre-lab exercises by 11:59PM the night before class. Sometimes, these exercises will include a book survey, which includes questions or exercises based on topics covered in your background reading.  These will offer tutorials and background to prepare you for and enhance our in-class activities, and also will provide me with a pre-assessment as I plan our class agenda.  Full credit will be given as long as a reasonable attempt is made at every question, as part of the class participation grade.  It is not so important that you answer every question of every exercise correctly, but it is critically imortant that you participate and engage meaningfully with the exercises before our class sessions.
 
-## Labs
+### Labs
 Every week, we will have a lab session where students get a chance to practice concepts we just learned in a safe and [collaborative](#collaboration) environment. Tasks will be given that serve as warm-ups for the larger assignments, and final submissions will be graded on a scale from 0 to 2. Students will have a chance to refine their submissions until the Friday of every week, and there will be help from the Lab T.A.s listed above.
 
-## Assignments
+### Assignments
 The bulk of the grade in the course will be earned by completing roughly 8 individual programming assignments. Be sure to start them early! Note that [collaboration and sharing rules](#collaboration) differ slightly for labs and assignments.
 
 <a name="debugging"></a>
-## Debugging Table \[[^1]\]
+### Debugging Table \[[^1]\]
 As part of embracing bugs in the class, students will keep a running tab of syntax errors that they get and what they mean. You may edit these tables in whatever word processor is most comfortable to you. On average, students should add at least one syntax error for each lab. We will check in right before spring break to make sure students have around 10 syntax errors recorded at that time, and we expect at least double that by the end of the course. At the end of the course, students will submit their full table as 5% of their grade.
 
-# Classroom Participation
+## Classroom Participation
 
-## Group Work \[[^1]\]
+### Group Work \[[^1]\]
 In addition to ordinary participation that follows the natural rhythm of a lecture, most days there will be at least one followup problem, which is a question that follows on the heels of newly presented material. Students will split into groups of 2 and try to write some code to address a particular problem. When a group of students believe they have figured out the answer, they raise their hand. The other students can continue to work while I verify that the answer is correct. If the answer is correct, the students present the answer to the class. If the group is not correct upon my checking, then the groups continue this process until one gets it correct.
 
 Other ways to help your fellow classmates in class are as follows:
@@ -679,7 +679,7 @@ Other ways to help your fellow classmates in class are as follows:
 * Particularly helpful or insightful messages on Microsoft Teams
 * Finding mistakes in the book or on the assigned homework and labs
 
-## Class Participation and Classroom Etiquette \[[^1]\]
+### Class Participation and Classroom Etiquette \[[^1]\]
 For classroom attendance, the following rules apply:
 
 * Please be attentive during class. **The use of laptops and other electronic devices is not permitted unless you are instructed to use them or are using them to take notes.** There will be class exercises that involve coding, but lecture time should be used for learning computer science. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
