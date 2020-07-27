@@ -642,13 +642,15 @@ It is often the case that some students have had a good amount of programming ex
     
 <a name="patienceanddebugging"></a>
 ## A Word on Patience and Debugging \[[^1]\]
+<div style="float: right;">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me: I&#39;m stuck on a bug. What do I do<br><br>Other developers: Take a break. Walk away. Go outside. Sleep on it and come back to it the next day.<br><br>Me: *Sits at desk obsessing over bug until 2AM*</p>&mdash; Madison Kanna (@Madisonkanna) <a href="https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw">January 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 Computer programming can often be frustrating, since not only do computers have very little tolerance for mistakes in their language (so-called "syntax errors") that will cause a program to not even run, but even if you manage to get a program to run, it still may not behave as you were intending it to. Computers will do exactly what you tell them to do in code, so you will have to figure out where you told the computer something different from what you intended. This process is called [debugging](https://en.wikipedia.org/wiki/Debugging), and it is time consuming and difficult even for very experienced programmers. So do not be hard on yourself if your programs don't work the first time around (they rarely do, even if you've been programming for decades!). But be sure you leave yourself adequate time to work on the assignments, because the amount of time it takes to resolve issues can be unpredictable.
 
 As part of embracing the process of debugging, we will be creating a ["debugging table"](#debugging) throughout the course, in which students catalog particular error messages that arise for different types of mistakes.
 
 Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me: I&#39;m stuck on a bug. What do I do<br><br>Other developers: Take a break. Walk away. Go outside. Sleep on it and come back to it the next day.<br><br>Me: *Sits at desk obsessing over bug until 2AM*</p>&mdash; Madison Kanna (@Madisonkanna) <a href="https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw">January 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 # Homework
 
