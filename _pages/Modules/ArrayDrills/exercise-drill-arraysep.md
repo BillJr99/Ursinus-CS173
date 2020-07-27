@@ -12,6 +12,7 @@ info:
     - To do proper array accessing
     - To use loops in concert with arrays
     - To use logic inside of a loop
+    - To use the <code>System.out.print</code> method properly
     
 processor:  
   correctfeedback: "Correct!!" 
@@ -49,10 +50,10 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {0, 5, 10, 0, 3, 4};
-                System.out.print(ArrayPrinter.printArray(arr0));
+                ArrayPrinter.printArray(arr0);
                 System.out.print(".");
                 int[] arr1 = {0, 0, 1, 2, 4, 3, 4};
-                System.out.print(ArrayPrinter.printArray(arr1));
+                ArrayPrinter.printArray(arr1);
                 System.out.print(".");
             }
         }    
