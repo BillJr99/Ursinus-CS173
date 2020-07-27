@@ -6,7 +6,8 @@ excerpt: "CS174: OOP - Drills - Printing array with commas"
 
 info:
   prev: "./ArrayZeroes"
-  instructions: "Declare a void method <code>printArray</code> which takes an array of ints, and which prints out the elements of the array separated by commas (this is useful, since printing out an array by default in Java just gives its memory address).  For example, the array <code>{0,5,2,4}</code> should be printed out as <b>0, 5, 2, 4</b>.  Note how there is no comma or space at the end of the output string."
+  next: "./ArrayMean"
+  instructions: "Declare a void method <code>printArray</code> in the <code>ArrayPrinter</code> class.  This method should take an array of ints, and it should then print out the elements of the array separated by commas (this is useful, since printing out an array by default in Java just gives its memory address).  For example, the array <code>{0,5,2,4}</code> should be printed out as <b>0, 5, 2, 4</b>.  Note how there is no comma or space at the end of the output string."
   goals:
     - To declare a public static method to some specification
     - To do proper array accessing
