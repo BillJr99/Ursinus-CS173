@@ -642,7 +642,7 @@ It is often the case that some students have had a good amount of programming ex
     
 <a name="patienceanddebugging"></a>
 ## A Word on Patience and Debugging \[[^1]\]
-<div style="float: right;">
+<div style="float: right; margin: 5px;">
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Me: I&#39;m stuck on a bug. What do I do<br><br>Other developers: Take a break. Walk away. Go outside. Sleep on it and come back to it the next day.<br><br>Me: *Sits at desk obsessing over bug until 2AM*</p>&mdash; Madison Kanna (@Madisonkanna) <a href="https://twitter.com/Madisonkanna/status/1218065898214436865?ref_src=twsrc%5Etfw">January 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
