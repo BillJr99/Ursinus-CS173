@@ -1,8 +1,8 @@
 ---
 layout: exercise
 permalink: /ArrayDrills/ArrayMean
-title: "CS174: OOP - Drills - Printing array with commas"
-excerpt: "CS174: OOP - Drills - Printing array with commas"
+title: "CS174: OOP - Drills - Computing the mean of arrays"
+excerpt: "CS174: OOP - Drills - Computing the mean of arrays"
 
 info:
   prev: "./ArraySep"
