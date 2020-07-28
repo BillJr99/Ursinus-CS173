@@ -23,6 +23,14 @@ API_URL = "https://ursinus.instructure.com/"
 # Obtain User ID from API_URL + /api/v1/users/self
 CANVAS_TIME_ZONE = "America/New_York"
 
+def stripnobool(val):
+    if type(val) is bool:
+        result = ""
+    else:
+        result = str(val)
+    
+    return result.strip()
+    
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
     
@@ -230,8 +238,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         if 'deliverables' in item:
             for deliverable in item['deliverables']:        
                 dtitle = deliverable['dtitle']
-                if 'dlink' in deliverable:
-                    dlink = deliverable['dlink']
+                if 'stripnobool(dlink)' in deliverable:
+                    dlink = deliverable['stripnobool(dlink)']
                 else:
                     dlink = ""
                 
@@ -264,7 +272,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = 100
-                    inputdict['description'] = description + " (" + homepage + dlink + ")"
+                    inputdict['description'] = description + " (" + homepage + stripnobool(dlink) + ")"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(startd + "T235900Z", "%Y%m%dT%H%M%SZ"))
                     
                     create_assignment(course, inputdict)
