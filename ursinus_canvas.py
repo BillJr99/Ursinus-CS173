@@ -392,7 +392,7 @@ def usage():
     print("\t[-h | --help]\tUsage Documentation")
     print("\t[-c | --courseid]\tCanvas Course ID number (can be found using canvas link after logging in); omit for a course listing here")
     print("\t[-m | --markdown]\tPath to course syllabus markdown file")  
-    print("\t[-w | --webpage]\tURL of course homepage (https://...)")
+    print("\t[-w | --webpage]\tURL of hosted course homepage (https://www.yourhomepage.com/course)")
     print("\t[-a | --apikey]\tAPI Key (get from API_URL + /profile/settings)")
     print("\t[-u | --userid]\tUser ID Number (get from API_URL + /api/v1/users/self)")
     print("\t[-t | --timezone]\tTime Zone (i.e. America/New_York)")
