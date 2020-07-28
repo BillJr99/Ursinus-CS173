@@ -179,7 +179,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     isU = postdict['info']['class_meets_days']['isU']
     
     course.update(course={'time_zone': CANVAS_TIME_ZONE}) # Set time zone to Eastern Time
-    course.update(course={'syllabus_body': "<iframe src=\"" + homepage + "\" title=\"Course Homepage\" width=800 height=600></iframe>"}) # Set Syllabus to Course Webpage
+    course.update(course={'syllabus_body': "<iframe src=\"" + homepage + "\" title=\"Course Homepage\" width=\"1024\" height=\"768\"></iframe>"}) # Set Syllabus to Course Webpage
     
     # Delete All Assignments and Events, Re-Initialize Here
     delete_all_assignments(course)
