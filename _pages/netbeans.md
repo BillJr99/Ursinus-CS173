@@ -11,12 +11,22 @@ This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live
 
 # Software Environment
 
-We will be using the Java programming language in this class. The purpose of the class is not to become an expert in Java, but rather to use Java in the service of learning about other topics in computer science. To make this as easy as possible, we will start with an Integrated Development Environment (IDE) known as **Neatbeans**, which will make it easy to organize your projects and to run the code you write. It also has some nice tools to help you [debug]({{ site.baseurl }}#patienceanddebugging). Please visit [this link](https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html) to download Netbeans with Java for your appropriate operating system. Most windows and Linux users will want the **x64** download. Please post on Microsoft Teams if you are having any issues installing or running Netbeans. A few notes to help you:
+We will be using the Java programming language in this class. The purpose of the class is not to become an expert in Java, but rather to use Java in the service of learning about other topics in computer science. To make this as easy as possible, we will start with an Integrated Development Environment (IDE) known as **Neatbeans**, which will make it easy to organize your projects and to run the code you write. It also has some nice tools to help you [debug]({{ site.baseurl }}#patienceanddebugging). 
 
--   You will need to allow the installer to make changes to your computer (the software is safe).
--   It is fine to use the default location for NetBeans and the JDK.
+Please visit these links to install the Java Development Kit (JDK) and NetBeans.  You will install the JDK first, and then NetBeans.  Most Windows and Linux users will want the **x64** downloads for each of these.
 
-**NOTE:** You may also use [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers), [IntelliJ Idea](https://www.jetbrains.com/idea/download/), or the terminal (`javac` and `java`) if you are more comfortable with them, but the default option is Netbeans, and we will be working through examples in class and in labs with Netbeans.
+* [Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html)
+    * If you are prompted on the download page, you can select "JDK Download"
+* [NetBeans](https://netbeans.apache.org/download/index.html)
+    * If you are prompted on the download page, you can click "Download" under the "Apache NetBeans" heading (there might be a version number of even the letters "LTS" - meaning "Long Term Support" version; these are fine)
+
+Here are a few notes to help you:
+
+* You will need to allow the installer to make changes to your computer (the software is safe).
+* It is fine to use the default location for NetBeans and the JDK.
+* Please contact me if you have any difficulty installing or running NetBeans.
+
+**NOTE:** You may also use [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers), [IntelliJ Idea](https://www.jetbrains.com/idea/download/), or the terminal (`javac` and `java`) if you are more comfortable with them, but the default option is Netbeans, and we will be working through examples in class and in labs with Netbeans.  Also, there is a [combined download of Java and NetBeans](https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html) in a single installer.  You are welcome to use this, but it is an older version of the software, so things might look a little different from the examples in class.
 
 # Instructions for Creating NetBeans Projects And JUnit Tests
 
