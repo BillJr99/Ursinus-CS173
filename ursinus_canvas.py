@@ -444,7 +444,7 @@ if courseid == -1:
 if markdownfile is None:
     markdownfile = input("Enter path to course syllabus markdown file: ")
 if coursehomepage is None:
-    coursehomepage = input("Enter course website (https://...): ")
+    coursehomepage = input("Enter course website (https://www.yourhomepage.com/course): ")
     
 course = canvas.get_course(courseid)
 
