@@ -64,7 +64,7 @@ info:
                 A single character
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                `char grade = 'A';`
+                `char grade = \'A\';`
             </div>
         </div>     
         <div style="width: 100%; display: table-row;">
@@ -75,15 +75,15 @@ info:
                 Textual data
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                `String name = "Lee";`
+                `String name = \"Lee\";`
             </div>
         </div>       
         </div>
     questions:
-      - What is the data type of the value `"Hello World!"`?
+      - What is the data type of the value `\"Hello World!\"`?
       - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
       - How might a computer represent a True/False boolean?
-      - How might a computer represent the letter `'A'` or the word `"Hi!"`?
+      - How might a computer represent the letter `\'A\'` or the word `\"Hi!\"`?
     
   reflective_prompt: What other kinds of data could you imagine a computer representing?
 
