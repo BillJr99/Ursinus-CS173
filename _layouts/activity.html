@@ -24,6 +24,7 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
     {% endif %}
 
     <h1>The Activity</h1>
+    
     {% if layout.directions %}
     <h2>Directions</h2>
     {{ layout.directions }}
@@ -33,7 +34,6 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
     {% for model in page.info.models %}
         <h2>{{model.title}}</h2>
         {{ model.model }}
-        {% endif %}
         
         {% if model.questions %}
         <h2>Questions</h2>
