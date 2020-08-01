@@ -210,14 +210,14 @@ boilerplate:
     {% endif %}
     
     {% if page.info.chatlink %}
-    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our Class Chat Channel Here!</a></li>
+    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our class chat channel here!</a></li>
     <br>
     {% endif %}
     
-    <li><strong>Course Calendar Export:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a></li>
+    <li><strong>Course Calendar Export:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a><br></li>
     
     {% if page.info.class_notebook %}
-    <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access Our Class Notebook Here!</a></li>
+    <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access Our Class Notebook Here!</a><br></li>
     {% endif %}    
     
     {% if page.university.semester and page.university.academicyear %}
