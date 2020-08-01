@@ -390,7 +390,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
         
         coursedt = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
-        coursedtstr = coursedt.strftime('%a, %b %-d,%Y')
+        coursedtstr = coursedt.strftime('%a, %b %d, %Y')
         weekdayidx = "(Week " + str(int(weekidx)+1) + " Day " + str(int(dayidx)+1) + ")"
         
         # Create a module for this entry
