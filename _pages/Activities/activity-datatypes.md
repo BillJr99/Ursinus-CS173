@@ -11,7 +11,7 @@ info:
   models:
     - title: Primitive Data Types
       model: |
-        <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+        <div style="width: 100%; display: table; border-collapse:separate;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">
             <div style="display: table-cell; width:33%; background-color: black; color: white;">
                 <strong>Type Name</strong>
