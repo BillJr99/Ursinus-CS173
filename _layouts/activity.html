@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>
+
+    {% if page.info.goals %}
+    <h1>Activity Goals</h1>
+    The goals of this activity are:
+    <ol>
+    {% for goal in page.info.goals %}
+    <li>{{goal}}</li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+    <h1>The Activity</h1>
+    
+    {% if page.info.model %}
+    <h2>Model</h2>
+    {{ page.info.model }}
+    {% endif %}
+    
+    {% if page.info.questions %}
+    <h2>Questions</h2>
+    <ol>
+    {% for question in page.info.questions %}
+    <li>{{ question }}</li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+    
+    {{ content }} 
+    
+    {% if page.info.submission %}
+    <h2>Submission</h2>
+    {{ page.info.submission }}
+    {% endif %}
+  </div>
+</div>
