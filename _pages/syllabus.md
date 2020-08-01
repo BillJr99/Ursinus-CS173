@@ -239,6 +239,7 @@ schedule:
 - week: "0"
   date: "3"
   title: "Data Types and Variables" 
+  link: "Activities/DataTypes"
   readings:
   - rtitle: "Exercise: Introduction to Primitive Data Types"
     rlink: "Modules/DataTypes/Module"  
