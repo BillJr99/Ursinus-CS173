@@ -79,11 +79,11 @@ info:
             </div>
         </div>       
         </div>
-    questions:
-      - What is the data type of the value `\"Hello World!\"`?
-      - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
-      - How might a computer represent a True/False boolean?
-      - How might a computer represent the letter `\'A\'` or the word `\"Hi!\"`?
+      questions:
+        - What is the data type of the value `\"Hello World!\"`?
+        - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
+        - How might a computer represent a True/False boolean?
+        - How might a computer represent the letter `\'A\'` or the word `\"Hi!\"`?
     
   reflective_prompt: What other kinds of data could you imagine a computer representing?
 
