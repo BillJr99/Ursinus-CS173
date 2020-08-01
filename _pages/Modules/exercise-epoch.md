@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Epoch Time Overflow Calculator"
 excerpt: "CS173: Intro to Computer Science - Epoch Time Overflow Calculator"
 
 info:
+  points: 3
   instructions: "Modify the EpochTimeOverflow.java file to print the year when the Epoch overflow occurs."
   goals:
     - To perform arithmetic using the Java programming language

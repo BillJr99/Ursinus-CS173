@@ -1,28 +1,53 @@
 # https://canvasapi.readthedocs.io/en/stable/
+# https://canvas.instructure.com/doc/api/
+
+# canvasapi on pip is out of date, might need to install from https://github.com/ucfopen/canvasapi (git+https://github.com/ucfopen/canvasapi.git)
+
 from canvasapi import Canvas, exceptions
 import getopt
 import sys
 import frontmatter
 from datetime import datetime, timedelta
+import threading
 
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
 
 # CONSIDERATION
+# Add assignment rubrics and point values (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
+## https://canvas.instructure.com/doc/api/rubrics.html
 # course.create_course_section - separate calendar?  duplicate assignments, etc?
 # Change course calendar entries to timetables: which can possibly be done on a per-section basis
 ## https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable
-# Handle content export (also download?)
-# Handle exporting discussions
-# Add assignment rubrics and point values (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
-## # https://canvas.instructure.com/doc/api/rubrics.html
 # Tie to learning outcomes
+# Hide unused links
 
 API_URL = "https://ursinus.instructure.com/"
 # Generate key at API_URL + profile/settings
 # Obtain User ID from API_URL + /api/v1/users/self
-CANVAS_TIME_ZONE = "America/New_York"
 
+CANVAS_TIME_ZONE = "America/New_York"
+DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
+DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
+
+child_threads = []
+
+def addslash(str):
+    if not (str.endswith("/")):
+        return str + "/"
+    else:
+        return str
+
+def printlog(msg, output=True):
+    if output:
+        print(msg)
+        
+# https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
+def rchop(s, suffix):
+    if suffix and s.endswith(suffix):
+        return s[:-len(suffix)]
+    return s
+    
 def stripnobool(val):
     if type(val) is bool:
         result = ""
@@ -30,19 +55,85 @@ def stripnobool(val):
         result = str(val)
     
     return result.strip()
+
+def dodelete(item):
+    try:
+        item.delete()
+    except exceptions.ResourceDoesNotExist:
+        print("Deleting: Resource Does Not Exist")
     
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
     
     for event in events:
-        event.delete()
+        t = threading.Thread(target=dodelete, args=(event,))
+        child_threads.append(t)
+        t.start()
 
 def delete_all_assignments(course):
     assignments = course.get_assignments()
 
-    for assignment in assignments:
-        assignment.delete()
+    for assignment in assignments:        
+        t = threading.Thread(target=dodelete, args=(assignment,))
+        child_threads.append(t)
+        t.start()           
         
+def delete_all_modules(course):
+    modules = course.get_modules()
+    
+    itemthreads = []
+    
+    for module in modules:
+        items = module.get_module_items()
+        
+        for item in items:
+            t = threading.Thread(target=dodelete, args=(item,))
+            child_threads.append(t)
+            t.start()                 
+        
+        for t in itemthreads:
+            t.join()
+            
+        t = threading.Thread(target=dodelete, args=(module,))
+        child_threads.append(t)
+        t.start()   
+            
+def delete_all_assignment_groups(course):
+    groups = course.get_assignment_groups()
+    
+    for group in groups:
+        t = threading.Thread(target=dodelete, args=(group,))
+        child_threads.append(t)
+        t.start()   
+
+def delete_assignment_group_by_name(course, name):
+    groups = course.get_assignment_groups()
+    
+    for group in groups:
+        if group.name == name:
+            t = threading.Thread(target=dodelete, args=(group,))
+            child_threads.append(t)
+            t.start()         
+    
+def delete_old_data(course, canvas, coursecontext):
+    t1 = threading.Thread(target=delete_all_assignments, args=(course,))
+    t2 = threading.Thread(target=delete_all_events, args=(canvas,coursecontext,))
+    t3 = threading.Thread(target=delete_all_modules, args=(course,))
+    t4 = threading.Thread(target=delete_all_assignment_groups, args=(course,))
+    
+    child_threads.append(t1)
+    child_threads.append(t2)
+    child_threads.append(t3)
+    child_threads.append(t4)
+    
+    t1.start()
+    t2.start()
+    t3.start()
+    t4.start()
+    
+def add_grading_standard(course, inputdict):
+    course.add_grading_standards(inputdict)
+    
 def countWeeks(d1, d2):
     # https://stackoverflow.com/questions/14191832/how-to-calculate-difference-between-two-dates-in-weeks-in-python
     monday1 = (d1 - timedelta(days=d1.weekday()))
@@ -135,7 +226,7 @@ def addweeks(dt, n):
 def getDateString(dt):
     return dt.strftime('%Y%m%d')    
     
-def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U):
+def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U, tostring=True):
     dt = parseDate(startdate)
     weeknum = int(weeknum)
     dayidx = int(dayidx)
@@ -144,11 +235,68 @@ def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U):
     daynum = getDayNum(dayidx, M, T, W, R, F, S, U)
     dt = adddays(dt, daynum)
     
-    return getDateString(dt)
+    if tostring:
+        return getDateString(dt)
+    else:
+        return dt
     
 # Create Assignment Shells: https://canvasapi.readthedocs.io/en/stable/examples.html#create-an-assignment
 def create_assignment(course, inputdict):
-    course.create_assignment(inputdict)
+    asmt = course.create_assignment(inputdict)
+    return asmt
+    
+# Create Assignment Group: https://canvas.instructure.com/doc/api/assignment_groups.html#method.assignment_groups_api.create
+def create_assignmentgroup(course, inputdict):
+    asmtgroup = course.create_assignment_group(**inputdict)
+    return asmtgroup
+
+# Create a Module: https://canvas.instructure.com/doc/api/modules.html#method.context_modules_api.create
+def create_module(course, inputdict):
+    module = course.create_module(inputdict)
+    return module
+    
+# Add an item to an existing module: https://canvas.instructure.com/doc/api/modules.html#method.context_module_items_api.create
+def add_module_item(module, inputdict):
+    moduleitem = module.create_module_item(inputdict)
+    module.edit(module={'published': True})
+    return moduleitem
+    
+def get_assignment_group_containing_label(groups, label):
+    for group in groups:
+        name = group.name
+        
+        if label in name:
+            return group
+    
+    return None
+    
+def add_assignments_to_groups(course):
+    # Get all the assignments
+    assignments = course.get_assignments()
+    
+    # Get all the assignment groups
+    groups = course.get_assignment_groups()
+    
+    # If Lab, Project, Assignment (etc...) is in the name, add it to the weight column with Lab, Project, or Assignment (etc...) in the name
+    for assignment in assignments:
+        name = assignment.name
+        asmtid = assignment.id
+        
+        if 'Lab:' in name:
+            group = get_assignment_group_containing_label(groups, 'Lab')
+        elif 'Programming Assignment:' in name:
+            group = get_assignment_group_containing_label(groups, 'Programming Assignment')
+        elif 'Written Assignment:' in name:
+            group = get_assignment_group_containing_label(groups, 'Written Assignment')            
+        elif 'Project:' in name:
+            group = get_assignment_group_containing_label(groups, 'Project')
+        elif 'Exercise:' in name:
+            group = get_assignment_group_containing_label(groups, 'Exercise')
+            
+        if not (group is None):
+            groupid = group.id
+            
+            assignment.edit(assignment={'assignment_group_id': groupid})
     
 # Create Calendar: https://canvasapi.readthedocs.io/en/stable/canvas-ref.html (canvas.create_calendar_event, dict from https://canvas.instructure.com/doc/api/calendar_events.html)
 def create_calendar_event(canvas, inputdict):
@@ -178,12 +326,17 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     isS = postdict['info']['class_meets_days']['isS']
     isU = postdict['info']['class_meets_days']['isU']
     
+    printlog("Replacing Syllabus Page with Course Homepage...")
+    
     course.update(course={'time_zone': CANVAS_TIME_ZONE}) # Set time zone to Eastern Time
     course.update(course={'syllabus_body': "<iframe src=\"" + homepage + "\" title=\"Course Homepage\" width=\"1024\" height=\"768\"></iframe>"}) # Set Syllabus to Course Webpage
     
-    # Delete All Assignments and Events, Re-Initialize Here
-    delete_all_assignments(course)
-    delete_all_events(canvas, coursecontext)
+    printlog("Deleting Old Data...")
+    
+    # Delete All Assignments, Events, etc.; Re-Initialize Here
+    delete_old_data(course, canvas, coursecontext)
+       
+    printlog("Writing Lecture Schedule...")
     
     # Write the lecture schedule as a recurring event
     for i in range(len(postdict['info']['class_meets_locations'])):
@@ -212,7 +365,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['description'] = summary.strip()
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend
+            inputdict['end_at'] = dtend            
             inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             inputdict['duplicate'] = {}
@@ -221,6 +374,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             
             create_calendar_event(canvas, inputdict)
 
+    printlog("Writing Assignments...")
     for item in postdict['schedule']:   
         weekidx = item['week']
         dayidx = item['date']
@@ -232,32 +386,51 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             link = item['link']
         else:
             link = ""
-               
+   
         startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
+        
+        coursedt = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
+        coursedtstr = coursedt.strftime('%a, %b %-d,%Y')
+        weekdayidx = "(Week " + str(int(weekidx)+1) + " Day " + str(int(dayidx)+1) + ")"
+        
+        # Create a module for this entry
+        inputdict = {}
+        inputdict['name'] = coursedtstr + " - " + title   
+        inputdict['published'] = True
+        module = create_module(course, inputdict)
+        
+        # Create a Module Entry for Class Notes Link
+        if 'link' in item:
+            inputdict = {}
+            inputdict['title'] = title
+            inputdict['type'] = "ExternalUrl"
+            inputdict['external_url'] = addslash(homepage) + stripnobool(link)
+            inputdict['new_tab'] = True
+            inputdict['published'] = True
+            add_module_item(module, inputdict)
             
         if 'deliverables' in item:
             for deliverable in item['deliverables']:        
                 dtitle = deliverable['dtitle']
-                if 'stripnobool(dlink)' in deliverable:
-                    dlink = deliverable['stripnobool(dlink)']
+                if 'dlink' in deliverable:
+                    dlink = deliverable['dlink']
                 else:
                     dlink = ""
+                    
+                if 'points' in deliverable:
+                    points = int(deliverable['points'])
+                else:
+                    points = 100                    
                 
                 description = dtitle.strip() 
-            
-                # Write the Assignment as an all-day event
-                inputdict = {}
-                inputdict['context_code'] = coursecontext
-                inputdict['title'] = description.strip()
-                inputdict['description'] = description.strip()
-                inputdict['start_at'] = startd 
-                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-                inputdict['all_day'] = True
                 
-                create_calendar_event(canvas, inputdict) 
+                description = rchop(description, " Due")
 
                 # Create an Assignment Shell
                 if not (' handed out' in description.lower()):
+                    duedate = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
+                    duedate = getDateString(adddays(duedate, DUE_DATE_OFFSET)) # offset the due date as needed for the due time which is in UTC
+                    
                     inputdict = {}
                     inputdict['name'] = description
                     inputdict['submission_types'] = []
@@ -271,12 +444,39 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['allowed_extensions'].append('7z')
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
-                    inputdict['points_possible'] = 100
-                    inputdict['description'] = description + " (" + homepage + stripnobool(dlink) + ")"
-                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(startd + "T235900Z", "%Y%m%dT%H%M%SZ"))
+                    inputdict['points_possible'] = points
+                    inputdict['description'] = description + " (" + addslash(homepage) + stripnobool(dlink) + ")"
+                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
                     
-                    create_assignment(course, inputdict)
-            
+                    assignment = create_assignment(course, inputdict)
+                    
+                    # Create a Module Entry for the Assignment
+                    inputdict = {}
+                    inputdict['title'] = description
+                    inputdict['type'] = 'Assignment'
+                    inputdict['content_id'] = assignment.id
+                    inputdict['published'] = True
+                    add_module_item(module, inputdict)
+                    
+        if 'readings' in item:
+            for reading in item['readings']:    
+                rtitle = reading['rtitle']
+                if 'rlink' in reading:
+                    rlink = reading['rlink']
+                else:
+                    rlink = ""  
+                
+                # Create a Module Entry for the Reading Activity
+                inputdict = {}
+                inputdict['title'] = rtitle
+                inputdict['type'] = "ExternalUrl"
+                inputdict['external_url'] = addslash(homepage) + stripnobool(rlink)
+                inputdict['new_tab'] = True            
+                inputdict['published'] = True
+                add_module_item(module, inputdict)                  
+    
+    printlog("Writing Office Hours...")
+    
     # Write Office Hours as a Recurring Event
     for instructor in postdict['instructors']:
         instructorname = instructor['name']
@@ -315,6 +515,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             
             create_calendar_event(canvas, inputdict)  
 
+    printlog("Writing Exams...")
+    
     # Write Exam Dates 
     for i in range(len(postdict['info']['class_meets_locations'])):
         section = postdict['info']['course_sections'][i]['section']       
@@ -338,7 +540,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['description'] = dtitle.strip()
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend
+            inputdict['end_at'] = dtend 
             inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             
@@ -363,11 +565,26 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['description'] = dtitle.strip()
             inputdict['location_name'] = location.strip()
             inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend
+            inputdict['end_at'] = dtend 
             inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
             inputdict['all_day'] = False
             
             create_calendar_event(canvas, inputdict)    
+    
+    printlog("Creating Assignment Groups...")
+    
+    # Write Out Assignment Groups   
+    if 'grade_breakdown' in postdict:
+        for breakdown in postdict['grade_breakdown']:
+            inputdict = {} 
+            
+            inputdict['name'] = breakdown['category']
+            inputdict['group_weight'] = float(rchop(breakdown['weight'], '%'))
+            
+            # The Assignments group might exist by default - don't call anything that in breakdown just in case
+            create_assignmentgroup(course, inputdict)
+            
+        add_assignments_to_groups(course)
 
 def get_courseid(canvas, user):
     courses = user.get_courses()
@@ -435,6 +652,7 @@ if USER_ID is None:
 if API_KEY is None:
     API_KEY = input("Enter API Key (get from API_URL + /profile/settings): ")
     
+printlog("Instantiating Canvas...")
 # Instantiate Canvas and Course
 canvas = Canvas(API_URL, API_KEY)
 user = canvas.get_user(USER_ID)
@@ -448,16 +666,27 @@ if coursehomepage is None:
     
 course = canvas.get_course(courseid)
 
+printlog("Reading Markdown...")
 # Read Course Markdown File
 process_markdown(markdownfile, canvas, course, courseid, coursehomepage)
 
+#printlog("Initiating Course Export...")
 # Export Course Content
-# course.export_content("zip")
+#course.export_content("zip")
 
+printlog("Parsing Discussions...")
 # Gather all Discussion Topics    
 topics = course.get_discussion_topics()
 for topic in topics:
     entries = topic.get_entries()
         
     parse_discussions(entries)
-            
+
+printlog("Cleaning Up...")
+
+# Delete the default Assignments gradebook group
+delete_assignment_group_by_name(course, "Assignments")
+
+# Wait for any child threads to finish            
+for t in child_threads:
+    t.join()

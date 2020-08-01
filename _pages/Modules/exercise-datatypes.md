@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types"
 excerpt: "CS173: Intro to Computer Science - Introduction to to Primitive Data Types"
 
 info:
+  points: 3
   prev: "./Module"
   instructions: "Modify the Driver.java file to compute and print the Energy of an object given its mass and the constant c (which is given to you in the program)."
   goals:

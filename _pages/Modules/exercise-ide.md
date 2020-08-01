@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Introduction to the NetBeans IDE"
 excerpt: "CS173: Intro to Computer Science - Introduction to the NetBeans IDE"
 
 info:
+  points: 3
   prev: "./Module"
   instructions: "Modify the MyFirstProgram.java file to print hello to yourself (Hello followed by your name)."
   goals:

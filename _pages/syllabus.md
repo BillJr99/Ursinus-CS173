@@ -11,7 +11,7 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173/"
   chatlink: https://groupme.com/join_group/60668915/dGoprIMb
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/09/07"
@@ -206,27 +206,30 @@ letter_grades:
 - letter: "D-"
   range: "59.5-62.99"
 - letter: "F"
-  range: "59.49 and below" 
+  range: "0-59.49" 
 
 schedule:
 - week: "0"
   date: "0"
   title: "Course Overview: What is Computer Science?"
-  link: "/Ursinus-CS173-Overview"
+  link: "../Ursinus-CS173-Overview"
   readings:
   - rtitle: "NetBeans IDE Software Environment"
-    rlink: "./NetBeans"
-  - rtitle: "Pre-Lab: The NetBeans IDE Software Environment"
-    rlink: "./Modules/IDE/Module"    
+    rlink: "NetBeans"
+  - rtitle: "Exercise: The NetBeans IDE Software Environment"
+    rlink: "Modules/IDE/Module"    
+    points: 3
   deliverables:
-  - dtitle: "Assignment: Warmup Handed Out"    
-    dlink: "./Assignments/Warmup"
+  - dtitle: "Programming Assignment: Warmup Handed Out"    
+    dlink: "Assignments/Warmup"
+    points: 15
 - week: "0"
   date: "1"
   title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
   readings:
-  - rtitle: "Pre-Lab: Getting Started with Git and Github"
-    rlink: "./Modules/Github/Module"       
+  - rtitle: "Exercise: Getting Started with Git and Github"
+    rlink: "Modules/Github/Module" 
+    points: 3
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"    
@@ -234,11 +237,13 @@ schedule:
   date: "3"
   title: "Data Types and Variables" 
   readings:
-  - rtitle: "Pre-Lab: Introduction to Primitive Data Types"
-    rlink: "./Modules/DataTypes/Module"  
+  - rtitle: "Exercise: Introduction to Primitive Data Types"
+    rlink: "Modules/DataTypes/Module"  
+    points: 3
   deliverables:
-  - dtitle: "Assignment: Warmup Due"    
-    dlink: "./Assignments/Warmup"  
+  - dtitle: "Programming Assignment: Warmup Due"    
+    dlink: "Assignments/Warmup"  
+    points: 15
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
@@ -246,16 +251,19 @@ schedule:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
-    rlink: "./Modules/Values/Module"  
+    rlink: "Modules/Values/Module" 
+    points: 3    
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
   readings: 
-  - rtitle: "Pre-Lab: Epoch Time Overflow"
-    rlink: "./Modules/EpochTime/Exercise"  
+  - rtitle: "Exercise: Epoch Time Overflow"
+    rlink: "Modules/EpochTime/Exercise"
+    points: 3
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
-    dlink: "./Labs/Kepler"
+    dlink: "Labs/Kepler"
+    points: 100
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -278,7 +286,8 @@ schedule:
     rlink: false  
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "./Labs/Kepler"    
+    dlink: "Labs/Kepler"    
+    points: 100
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -297,25 +306,29 @@ schedule:
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Pre-Lab: Using External Libraries in Your NetBeans Project"
-    rlink: "./Modules/Library/Module"    
+  - rtitle: "Exercise: Using External Libraries in Your NetBeans Project"
+    rlink: "Modules/Library/Module"  
+    points: 3    
   deliverables:
-  - dtitle: "Assignment: MIDI Audio Handed Out"
-    dlink: "./Assignments/MIDI" 
+  - dtitle: "Programming Assignment: MIDI Audio Handed Out"
+    dlink: "Assignments/MIDI" 
+    points: 100
   - dtitle: "Lab: Debugging Due"    
     dlink: false     
+    points: 100
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
   - dtitle: "Lab: Functions Handed Out"    
     dlink: false 
+    points: 100
 - week: "3"
   date: "2"
   title: "Coding Style and the Code Review"
   readings:
   - rtitle: "Style Guide"
-    rlink: "./Style-Guide" 
+    rlink: "Style-Guide" 
 - week: "3"
   date: "3"
   title: "Testing"  
@@ -325,16 +338,20 @@ schedule:
   deliverables:
   - dtitle: "Lab: Functions Due"    
     dlink: false 
-  - dtitle: "Assignment: MIDI Audio Due"
-    dlink: "./Assignments/MIDI"    
-  - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"
+    points: 100
+  - dtitle: "Programming Assignment: MIDI Audio Due"
+    dlink: "Assignments/MIDI"    
+    points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Handed Out"
+    dlink: "Assignments/PurpleAmerica"
+    points: 25
 - week: "4"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Handed Out"
-    dlink: "./Labs/FinancialAidCalculator"           
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100    
 - week: "4"
   date: "2"
   title: "Boolean Statements and DeMorgan's Law"   
@@ -346,17 +363,21 @@ schedule:
   title: "Iteration and the for loop"
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Due"
-    dlink: "./Labs/FinancialAidCalculator"    
-  - dtitle: "Assignment: Purple America Parts 1 through 3 Due"
-    dlink: "./Assignments/PurpleAmerica"  
-  - dtitle: "Assignment: Purple America Part 4 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"        
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100    
+  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Due"
+    dlink: "Assignments/PurpleAmerica"  
+    points: 25
+  - dtitle: "Programming Assignment: Purple America Part 4 Handed Out"
+    dlink: "Assignments/PurpleAmerica"        
+    points: 25
 - week: "5"
   date: "1"
   title: "Lab: Iteration" 
   deliverables:
   - dtitle: "Lab: Iteration Handed Out"
     dlink: false  
+    points: 100
 - week: "5"
   date: "2"
   title: "Iteration, Randomness, and the while loop"
@@ -375,16 +396,19 @@ schedule:
   deliverables:
   - dtitle: "Lab: Iteration Due"
     dlink: false    
-  - dtitle: "Assignment: Purple America Part 4 Due"
-    dlink: "./Assignments/PurpleAmerica"  
-  - dtitle: "Assignment: DNA Mutations Handed Out"
-    dlink: "./Assignments/DNAMutations"    
+  - dtitle: "Programming Assignment: Purple America Part 4 Due"
+    dlink: "Assignments/PurpleAmerica"  
+    points: 25
+  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
+    dlink: "Assignments/DNAMutations"  
+    points: 100    
 - week: "6"
   date: "1"
   title: "Lab: Bernouli Trials"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Handed Out"
     dlink: false
+    points: 100
 - week: "6"
   date: "2"
   title: "String Manipulation"    
@@ -397,6 +421,7 @@ schedule:
   deliverables:
   - dtitle: "Lab: Bernouli Trials Due"
     dlink: false    
+    points: 100
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false    
@@ -404,10 +429,12 @@ schedule:
   date: "3"
   title: "ArrayLists and Generic/Template Data Structures"
   deliverables:  
-  - dtitle: "Assignment: DNA Mutations Due"
-    dlink: "./Assignments/DNAMutations"    
-  - dtitle: "Assignment: Mini Crypto Handed Out"
-    dlink: "./Assignments/MiniCrypto"     
+  - dtitle: "Programming Assignment: DNA Mutations Due"
+    dlink: "Assignments/DNAMutations" 
+    points: 100    
+  - dtitle: "Programming Assignment: Mini Crypto Handed Out"
+    dlink: "Assignments/MiniCrypto" 
+    points: 100
 - week: "8"
   date: "0"
   title: "2D Arrays" 
@@ -418,11 +445,13 @@ schedule:
   date: "1"
   title: "Lab: ASCII Art"    
   readings:
-  - rtitle: "Pre-Lab: Tic-Tac-Toe"
-    rlink: "./Modules/TicTacToe/Exercise"  
+  - rtitle: "Exercise: Tic-Tac-Toe"
+    rlink: "Modules/TicTacToe/Exercise"  
+    points: 3
   deliverables:
   - dtitle: "Lab: ASCII Art Handed Out"
-    dlink: "./Labs/ASCIIArt" 
+    dlink: "Labs/ASCIIArt" 
+    points: 100
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -430,10 +459,12 @@ schedule:
   date: "3"
   title: "HashMaps and Caches"   
   deliverables:
-  - dtitle: "Assignment: Mini Crypto Due"
-    dlink: "./Assignments/MiniCrypto" 
-  - dtitle: "Assignment: Purple America Part 5 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"   
+  - dtitle: "Programming Assignment: Mini Crypto Due"
+    dlink: "Assignments/MiniCrypto" 
+    points: 100
+  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false     
@@ -442,7 +473,8 @@ schedule:
   title: "Classes" 
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
-    dlink: "./Labs/ASCIIArt"      
+    dlink: "Labs/ASCIIArt"      
+    points: 100
   readings:
   - rtitle: "Ch. 8"
     rlink: false    
@@ -452,6 +484,7 @@ schedule:
   deliverables:
   - dtitle: "Lab: HashMaps Handed Out"
     dlink: false  
+    points: 100
 - week: "9"
   date: "2"
   title: "Classes" 
@@ -459,22 +492,26 @@ schedule:
   date: "3"
   title: "File I/O"
   deliverables:
-  - dtitle: "Assignment: Purple America Part 5 Due"
-    dlink: "./Assignments/PurpleAmerica"    
-  - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"   
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
 - week: "10"
   date: "0"
   title: "File I/O" 
   deliverables:
   - dtitle: "Lab: HashMaps Due"
     dlink: false  
+    points: 100
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: false    
+    points: 100
 - week: "10"
   date: "2"
   title: "Comparators and Sorting"
@@ -484,57 +521,69 @@ schedule:
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"
   deliverables:
-  - dtitle: "Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "./Assignments/PurpleAmerica"      
-  - dtitle: "Assignment: Iris Dataset Handed Out"
-    dlink: "./Assignments/Iris"      
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100
 - week: "10"
   date: "3"
   title: "Algorithms: Recursion and Merge Sort" 
   readings:
-  - rtitle: "Pre-Lab: Recursion"
-    rlink: "./Modules/Recursion/Module"   
+  - rtitle: "Exercise: Recursion"
+    rlink: "Modules/Recursion/Module"   
+    points: 3
 - week: "11"
   date: "0"
   title: "Searching and Sorting" 
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false   
+    points: 100
   readings:
-  - rtitle: "Pre-Lab: Insertion Sort"
-    rlink: "./Modules/InsertionSort/Module"    
+  - rtitle: "Exercise: Insertion Sort"
+    rlink: "Modules/InsertionSort/Module"    
+    points: 3
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
   readings:
-  - rtitle: "Pre-Lab: Merge Sort"
-    rlink: "./Modules/MergeSort/Module"  
+  - rtitle: "Exercise: Merge Sort"
+    rlink: "Modules/MergeSort/Module"  
+    points: 3
   deliverables:
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
+    points: 100
 - week: "11"
   date: "2"
   title: "Recursion and Dynamic Programming"  
   readings:
-  - rtitle: "Pre-Lab: Dynamic Programming"
-    rlink: "./Modules/DynamicProgramming/Module"    
+  - rtitle: "Exercise: Dynamic Programming"
+    rlink: "Modules/DynamicProgramming/Module"    
+    points: 3
   deliverables:
-  - dtitle: "Assignment: Iris Dataset Due"
-    dlink: "./Assignments/Iris"
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100
 - week: "11"
   date: "3"
   title: "Recursion and Dynamic Programming"   
   deliverables:
-  - dtitle: "Assignment: Guitar String Synthesizer Handed Out"
-    dlink: "./Assignments/GuitarStringSynth"           
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
+    dlink: "Assignments/GuitarStringSynth"           
+    points: 100
 - week: "12"
   date: "0"
   title: "Final Project Brainstorm"
   deliverables:
   - dtitle: "Lab: Searching and Sorting Due"
     dlink: false  
+    points: 100
   - dtitle: "Final Project: Handed Out"
     dlink: false    
+    points: 100
 - week: "12"
   date: "1"
   title: "Final Project Workshop"  
@@ -542,8 +591,9 @@ schedule:
   date: "0"
   title: "Final Project Workshop"
   deliverables:
-  - dtitle: "Assignment: Guitar String Synthesizer Due"
-    dlink: "./Assignments/GuitarStringSynth"         
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Due"
+    dlink: "Assignments/GuitarStringSynth"  
+    points: 100    
 - week: "13"
   date: "1"
   title: "Final Project Workshop" 
@@ -556,6 +606,7 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Due"
     dlink: false   
+    points: 100
 - week: "14"
   date: "0"
   title: "Final Project Presentations"   
