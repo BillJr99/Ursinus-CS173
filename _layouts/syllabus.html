@@ -174,10 +174,8 @@ boilerplate:
 
 
 
-    {% if page.info.course_description %}
-    <div style="clear: both;">
-    <strong>Course Description</strong>: {{ page.info.course_description }}
-    </div>
+    {% if page.info.welcome_message %}
+    {{ page.info.welcome_message }}
     {% endif %}
     
 
@@ -286,7 +284,12 @@ boilerplate:
     {% endfor %}
     </ul>
     {% endif %}    
-    </ul>      
+    </ul>  
+
+
+    {% if page.info.course_description %}
+    <li><strong>Course Description</strong>: {{ page.info.course_description }}</li>
+    {% endif %}    
     
     </ul>
 

@@ -17,6 +17,7 @@ info:
   course_start_date: "2020/09/07"
   course_end_date: "2020/12/15"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
+  welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
   class_meets_days:
     isM: true
     isT: true
@@ -677,7 +678,6 @@ university:
   - date: "2021/03/12"
     
 ---
-Welcome!  
 
 ## Overview
 Computer science is the study of how machines interact with data and the way in which machines can be used to solve problems. It is a mathematical discipline, but one which is often much more "hands on" than most fields of math. One important aspect of computer science is computer programming, or the process of writing code, or instructions for a computer to execute in a language a computer can understand. With programming languages, we can tell the computer how to automate calculations that are tedious and slow for humans to do by hand, and how to translate algorithms (recipes to solve problems) into code. In this course, we will learn one such language called Java, and we will use this language to explore an interdisciplinary array of computer science problems, including but not limited to:
