@@ -11,70 +11,70 @@ info:
   models:
     - title: Primitive Data Types
       model: |
-        <div style="width: 100%; display: table; border-collapse:separate;">
+        <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">
-            <div style="display: table-cell; width:33%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Type Name</strong>
             </div>
-            <div style="display: table-cell; width:33%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Use</strong>
             </div>
-            <div style="display: table-cell; width:33%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Example</strong>
             </div>
         </div>
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>int</code>
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 Whole number numeric values
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>int participants = 40;</code>
             </div>
         </div>    
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>double</code>
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 Fractional or decimal numeric values (these are called "floating point" values)
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>double price = 5.95;</code>
             </div>
         </div>        
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>boolean</code>
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 True/False
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>boolean raining = false;</code>
             </div>
         </div>  
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>char</code>
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 A single character
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>char grade = &apos;A&apos;</code>
             </div>
         </div>     
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; width:33%;">
-                `String`
+            <div style="display: table-cell; padding:5px; width:33%;">
+                <code>String</code>
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 Textual data
             </div>
-            <div style="display: table-cell; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%;">
                 <code>String name = &quot;Lee&quot;</code>
             </div>
         </div>       
