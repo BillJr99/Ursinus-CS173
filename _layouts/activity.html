@@ -32,11 +32,11 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
     
     {% if page.info.models %}
     {% for model in page.info.models %}
-        <h2>{{model.title}}</h2>
+        <h2>Model: {{model.title}}</h2>
         {{ model.model }}
         
         {% if model.questions %}
-        <h2>Questions</h2>
+        <h3>Questions</h3>
         <ol>
         {% for question in model.questions %}
         <li>{{ question }}</li>
