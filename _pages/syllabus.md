@@ -82,13 +82,13 @@ info:
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
-        <div style="display: table-cell; padding:5px; width=33%;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="100%" style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
         </div>
-        <div style="display: table-cell; padding:5px; width=33%;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
         </div>
-        <div style="display: table-cell; padding:5px; width=33%;">
+        <div style="display: table-cell; padding:5px; width:33%; max-width:250px;">
             <img width="100%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
         </div>
     </div>
