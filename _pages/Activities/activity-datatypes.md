@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Data Types"
 
 info:
   goals: 
-    - To explain that binary data uses "bits" of 1's and 0's to represent data of various types, both numeric and textual
+    - To explain that binary data uses \"bits\" of `1\'s` and `0\'s` to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
     - title: Primitive Data Types
