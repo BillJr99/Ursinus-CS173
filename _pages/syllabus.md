@@ -88,7 +88,7 @@ info:
         <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
         </div>
-        <div style="display: table-cell; padding:5px; width:33%; max-width:250px;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
         </div>
     </div>
