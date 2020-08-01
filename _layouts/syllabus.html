@@ -4,7 +4,7 @@ layout: default
 boilerplate:
   lms: 
     title: Canvas, Microsoft Teams, GroupMe
-    description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
+    description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
     disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
@@ -210,9 +210,15 @@ boilerplate:
     {% endif %}
     
     {% if page.info.chatlink %}
-    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">{{page.info.chatlink}}</a></li>
+    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our Class Chat Channel Here!</a></li>
     <br>
     {% endif %}
+    
+    <li><strong>Course Calendar Export:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a></li>
+    
+    {% if page.info.class_notebook %}
+    <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access Our Class Notebook Here!</a></li>
+    {% endif %}    
     
     {% if page.university.semester and page.university.academicyear %}
     <li><strong>Academic Term:</strong> {{page.university.semester}} {{page.university.academicyear}}</a></li>
@@ -520,10 +526,7 @@ boilerplate:
 
 
     <a name="schedule"></a>
-    <h2>Course Schedule</h2>
-
-    <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
-    <br>
+    <h2>Course Schedule</h2>    
 
     {% if page.schedule %}    
     <table  id="scheduletable" class="table table-condensed" cellspacing="10">
