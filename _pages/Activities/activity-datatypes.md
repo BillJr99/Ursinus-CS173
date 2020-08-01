@@ -6,13 +6,13 @@ excerpt: "CS173: Intro to Computer Science - Data Types"
 
 info:
   goals: 
-    - To explain that binary data uses \"bits\" of `1\'s` and `0\'s` to represent data of various types, both numeric and textual
+    - To explain that binary data uses &quot;bits&quot; of `1&apos;s` and `0&apos;s` to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
     - title: Primitive Data Types
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
-        <div style="width: 100%; display: table-row;">
+        <div style="width: 100%; display: table-row; background-color: black; color: white;">
             <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Type Name</strong>
             </div>
@@ -64,7 +64,7 @@ info:
                 A single character
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                `char grade = \'A\';`
+                `char grade = &apos;A&apos;;`
             </div>
         </div>     
         <div style="width: 100%; display: table-row;">
@@ -75,15 +75,15 @@ info:
                 Textual data
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                `String name = \"Lee\";`
+                `String name = &quot;Lee&quot;;`
             </div>
         </div>       
         </div>
       questions:
-        - What is the data type of the value `\"Hello World!\"`?
+        - What is the data type of the value `&quot;Hello World!&quot;`?
         - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
         - How might a computer represent a True/False boolean?
-        - How might a computer represent the letter `\'A\'` or the word `\"Hi!\"`?
+        - How might a computer represent the letter `&apos;A&apos;` or the word `&quot;Hi!&quot;`?
     
   reflective_prompt: What other kinds of data could you imagine a computer representing?
 
