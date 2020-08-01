@@ -13,13 +13,13 @@ info:
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row;">
-            <div style="display: table-cell; padding:5px; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Type Name</strong>
             </div>
-            <div style="display: table-cell; padding:5px; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Use</strong>
             </div>
-            <div style="display: table-cell; padding:5px; width:33%;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Example</strong>
             </div>
         </div>
