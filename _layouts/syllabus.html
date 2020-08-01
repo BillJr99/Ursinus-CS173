@@ -214,7 +214,7 @@ boilerplate:
     <br>
     {% endif %}
     
-    <li><strong>Course Calendar Export:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a></li><br>
+    <li><strong>Course Calendar:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a></li><br>
     
     {% if page.info.class_notebook %}
     <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access our class notebook here!</a></li><br>
@@ -426,6 +426,7 @@ boilerplate:
     {% endif %}
     {% if item.phone %}<br>Phone: {{item.phone}}{% endif %}
     {% if item.email %}<br>E-Mail: <a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}
+    {% if item.office %}<br>Office: {{item.office}} {% endif %}
     </td>
     <td>
     {% if item.officehours %}<ul>{% endif %}

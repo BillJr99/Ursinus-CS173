@@ -100,7 +100,8 @@ instructors:
 - name: William Mongan
   title: Professor
   email: billmongan@gmail.com
-  phone: "Phone TBD"
+  phone: "610-409-3410"
+  office: "Pfahler Hall 101L"
   webpage_url: "http://www.billmongan.com"
   picture: /images/profile.png
   officehours:
