@@ -98,8 +98,23 @@ info:
         - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
         - How might a computer represent a True/False boolean?
         - How might a computer represent the letter <code>&apos;A&apos;</code> or the word <code>&quot;Hi!&quot;</code>?
-    
-  reflective_prompt: What other kinds of data could you imagine a computer representing?
+    - title: "Special Characters"
+      model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class MySecondClass {
+            public static void main(String[] args) {
+                System.out.print("The most damaging phrase in the language is: \"We've always done it this way!\"");
+                System.out.println(" -- Grace Hopper");
+            }
+        }
+        ]]></script> 
+      questions: 
+        - The excerpt from the above interview with Admiral Grace Hopper includes a quotation.  How can you print quotation marks to the screen without Java interpreting them as the end of your <code>String</code>?
+        - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?
+        - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
+        
+  reflective_prompts: 
+    - What other kinds of data could you imagine a computer representing?
 
 tags:
   - datatypes
