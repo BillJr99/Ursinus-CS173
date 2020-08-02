@@ -375,6 +375,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             create_calendar_event(canvas, inputdict)
 
     printlog("Writing Assignments...")
+    scheduleitems = 0
     for item in postdict['schedule']:   
         weekidx = item['week']
         dayidx = item['date']
@@ -398,6 +399,28 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         inputdict['name'] = coursedtstr + " - " + title   
         inputdict['published'] = True
         module = create_module(course, inputdict)
+        
+        # Add course resources to first day entry
+        if scheduleitems == 0:
+            if 'class_notebook' in postdict['info']:
+                inputdict = {}
+                inputdict['title'] = "Access the Class Notebook"
+                inputdict['type'] = "ExternalUrl"
+                inputdict['external_url'] = postdict['info']['class_notebook']
+                inputdict['new_tab'] = True
+                inputdict['published'] = True
+                add_module_item(module, inputdict)
+                
+            if 'chatlink' in postdict['info']:
+                inputdict = {}
+                inputdict['title'] = "Access the Class Group Chat"
+                inputdict['type'] = "ExternalUrl"
+                inputdict['external_url'] = postdict['info']['chatlink']
+                inputdict['new_tab'] = True
+                inputdict['published'] = True
+                add_module_item(module, inputdict)                
+        
+        scheduleitems = scheduleitems + 1
         
         # Create a Module Entry for Class Notes Link
         if 'link' in item:

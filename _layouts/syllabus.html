@@ -214,7 +214,9 @@ boilerplate:
     <br>
     {% endif %}
     
-    <li><strong>Course Calendar:</strong> <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a></li><br>
+    {% if page.info.ical %}
+    <li><strong>Course Calendar:</strong> <a href="{{ page.info.ical }}">Import the course calendar into your favorite calendar app with this link!</a></li><br>
+    {% endif %}
     
     {% if page.info.class_notebook %}
     <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access our class notebook here!</a></li><br>
