@@ -15,7 +15,6 @@ info:
         <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
         - What happens if you print an escape character?  Does the backslash actually print?
-		- What happens if you print an escape character?  Does the backslash actually print?
 
 tags:
   - datatypes
