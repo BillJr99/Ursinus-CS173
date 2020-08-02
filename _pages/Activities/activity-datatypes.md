@@ -131,34 +131,34 @@ info:
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <code>\\'</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <strong>Single Quote</strong>
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <code>\\"</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <strong>Double Quote</strong>
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <code>\\n</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <strong>New Line</strong>
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <code>\\t</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; ">
                 <strong>Tab</strong>
             </div>
         </div>
