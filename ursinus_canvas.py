@@ -2,6 +2,7 @@
 # https://canvas.instructure.com/doc/api/
 
 # canvasapi on pip is out of date, might need to install from https://github.com/ucfopen/canvasapi (git+https://github.com/ucfopen/canvasapi.git)
+# pip install python-frontmatter
 
 from canvasapi import Canvas, exceptions
 import getopt
@@ -9,6 +10,8 @@ import sys
 import frontmatter
 from datetime import datetime, timedelta
 import threading
+import time
+import random
 
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
@@ -56,11 +59,22 @@ def stripnobool(val):
     
     return result.strip()
 
-def dodelete(item):
+def dodelete(item, dosleep=True):
+    if dosleep: # for rate limiting
+        sleeptime = random.randint(5, 20)
+        time.sleep(sleeptime)
+        
     try:
         item.delete()
     except exceptions.ResourceDoesNotExist:
         print("Deleting: Resource Does Not Exist")
+    except exceptions.Unauthorized:
+        print("Deleting: Unauthorized")
+    except exceptions.Forbidden:
+        print("Deleting: Forbidden - it is possible that the rate limit is exceeded")
+        time.sleep(5)
+    except exceptions.CanvasException:
+        print("Deleting: Canvas Error")
     
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
@@ -89,6 +103,7 @@ def delete_all_modules(course):
         for item in items:
             t = threading.Thread(target=dodelete, args=(item,))
             child_threads.append(t)
+            itemthreads.append(t)
             t.start()                 
         
         for t in itemthreads:
@@ -105,6 +120,26 @@ def delete_all_assignment_groups(course):
         t = threading.Thread(target=dodelete, args=(group,))
         child_threads.append(t)
         t.start()   
+        
+def delete_all_discussion_topics(course):
+    topics = course.get_discussion_topics()
+    
+    itemthreads = []
+    for topic in topics:
+        entries = topic.get_topic_entries()
+        
+        for entry in entries:
+            t = threading.Thread(target=dodelete, args=(entry,))
+            child_threads.append(t)
+            itemthreads.append(t)
+            t.start() 
+
+        for t in itemthreads:
+            t.join()
+            
+        t = threading.Thread(target=dodelete, args=(topic,))
+        child_threads.append(t)
+        t.start() 
 
 def delete_assignment_group_by_name(course, name):
     groups = course.get_assignment_groups()
@@ -120,16 +155,25 @@ def delete_old_data(course, canvas, coursecontext):
     t2 = threading.Thread(target=delete_all_events, args=(canvas,coursecontext,))
     t3 = threading.Thread(target=delete_all_modules, args=(course,))
     t4 = threading.Thread(target=delete_all_assignment_groups, args=(course,))
+    t5 = threading.Thread(target=delete_all_discussion_topics, args=(course,))
     
     child_threads.append(t1)
     child_threads.append(t2)
     child_threads.append(t3)
     child_threads.append(t4)
+    child_threads.append(t5)
     
     t1.start()
     t2.start()
     t3.start()
     t4.start()
+    t5.start()
+    
+# https://canvas.instructure.com/doc/api/discussion_topics.html
+# https://canvas.instructure.com/doc/api/discussion_topics.html#method.discussion_topics.create
+# https://canvasapi.readthedocs.io/en/stable/course-ref.html
+def add_discussion_topic(course, inputdict):
+    course.create_discussion_topic(**inputdict)
     
 def add_grading_standard(course, inputdict):
     course.add_grading_standards(inputdict)
@@ -336,6 +380,26 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     # Delete All Assignments, Events, etc.; Re-Initialize Here
     delete_old_data(course, canvas, coursecontext)
        
+    
+    printlog("Creating Discussion Board Topics...")
+    
+    # Create Discussion Topics
+    inputdict = {}
+    inputdict['title'] = "Introductions"
+    inputdict['description'] = "Welcome!  Please use this space to introduce yourself.  Feel free to say anything about yourself that you are comfortable sharing, like a word on why you are taking this course and what you hope to get from it."
+    inputdict['discussion_type'] = "threaded"
+    inputdict['pinned'] = True
+    inputdict['published'] = True
+    add_discussion_topic(course, inputdict)
+    
+    inputdict = {}
+    inputdict['title'] = "Water Cooler"
+    inputdict['description'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
+    inputdict['discussion_type'] = "threaded"
+    inputdict['pinned'] = True
+    inputdict['published'] = True
+    add_discussion_topic(course, inputdict)
+    
     printlog("Writing Lecture Schedule...")
     
     # Write the lecture schedule as a recurring event
@@ -701,7 +765,7 @@ printlog("Parsing Discussions...")
 # Gather all Discussion Topics    
 topics = course.get_discussion_topics()
 for topic in topics:
-    entries = topic.get_entries()
+    entries = topic.get_topic_entries()
         
     parse_discussions(entries)
 
