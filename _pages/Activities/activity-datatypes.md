@@ -12,7 +12,7 @@ info:
   models:
     - title: "Hello World"
       model: |
-        <img src="../../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
+        <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
         - What do you think the curly braces represent and enclose?
     - title: "Your First Program"
