@@ -44,9 +44,12 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
     {% endif %}    
     
     {% if page.info.models %}
+    {% assign model_num = 1 %}
     <hr style="border: 1px solid black;"/>
     {% for model in page.info.models %}
-        <h2>Model: {{model.title}}</h2>
+        <h2>Model {{ model_num }}: {{ model.title }}</h2>
+        {% assign model_num = {{ model_num | plus: 1 }} %}
+        
         {{ model.model }}
         
         {% if model.questions %}
