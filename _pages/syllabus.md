@@ -248,6 +248,7 @@ schedule:
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
+  link: "Activities/Expressions"
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
