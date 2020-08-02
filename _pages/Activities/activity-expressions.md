@@ -26,7 +26,7 @@ info:
                 <code>\'</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; ">
-                <strong>Single Quote</strong>
+                Single Quote
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
@@ -34,7 +34,7 @@ info:
                 <code>\"</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; ">
-                <strong>Double Quote</strong>
+                Double Quote
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
@@ -42,7 +42,7 @@ info:
                 <code>\n</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; ">
-                <strong>New Line</strong>
+                New Line
             </div>
         </div>
         <div style="width: 100%; display: table-row; ">
@@ -50,7 +50,7 @@ info:
                 <code>\t</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; ">
-                <strong>Tab</strong>
+                Tab
             </div>
         </div>
         </div>
