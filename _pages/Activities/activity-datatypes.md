@@ -10,23 +10,6 @@ info:
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
-    - title: "Your First Program"
-      model: |
-        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-		// Classes are like nouns that your program represents
-        public class Main { 
-		    // Functions are like verbs that you will execute on nouns
-            public static void main(String[] args) { 
-                // println prints a line to the string
-                System.out.println("Hello World!");
-                System.out.println("Have a great day.");
-            }
-        }
-        ]]></script> 
-      questions: 
-        - What do you think the <code>//</code> characters represent?
-		- What is typically enclosed in double quotes?
-		- What does a semicolon represent?
     - title: Primitive Data Types
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
