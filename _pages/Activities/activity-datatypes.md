@@ -12,7 +12,7 @@ info:
     - title: "Your First Program"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class MyFirstClass {
+        public class Main {
             public static void main(String[] args) {
                 // println prints a "line" to the string
                 System.out.println("Hello World!");
@@ -101,7 +101,7 @@ info:
     - title: "Special Characters"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class MySecondClass {
+        public class Main {
             public static void main(String[] args) {
                 System.out.print("The most damaging phrase in the language is: \"We've always done it this way!\"");
                 System.out.println(" -- Grace Hopper");
