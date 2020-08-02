@@ -6,9 +6,9 @@ excerpt: "CS173: Intro to Computer Science - Escape Characters"
 
 info:
   goals: 
-    - "To identify the use of escape characters"
-	- "To specify the manner in which escape characters are invoked"
-	- "To apply escape characters where needed"
+    - To identify the use of escape characters
+	- To specify the manner in which escape characters are invoked
+	- To apply escape characters where needed
   models:
     - title: "Hello World"
       model: |
