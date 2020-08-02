@@ -8,9 +8,9 @@ info:
   goals: 
     - To identify the use of escape characters
     - To specify the manner in which escape characters are invoked
-    - To identify primitive data structures and their uses
+    - To apply escape characters where needed
   models:
-    - title: "Hello World"
+    - title: "Escape Characters"
       model: |
         <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
