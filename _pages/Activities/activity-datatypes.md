@@ -6,15 +6,21 @@ excerpt: "CS173: Intro to Computer Science - Data Types"
 
 info:
   goals: 
+    - To be able to identify a class and a method in a sample Java program.
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
+    - title: "Hello World!"
+	  model: |
+	    <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example" />
+	  questions:
+	    - What do the curly braces enclose?
     - title: "Your First Program"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class Main {
-            public static void main(String[] args) {
-                // println prints a "line" to the string
+        public class Main { // Classes are like nouns that your program represents
+            public static void main(String[] args) { // Functions are like verbs that you will execute on nouns
+                // println prints a line to the string
                 System.out.println("Hello World!");
                 System.out.println("Have a great day.");
             }
@@ -22,7 +28,8 @@ info:
         ]]></script> 
       questions: 
         - What do you think the <code>//</code> characters represent?
-        - What do the curly braces enclose?
+		- What is typically enclosed in double quotes?
+		- What does a semicolon represent?
     - title: Primitive Data Types
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -114,7 +121,55 @@ info:
         - The excerpt from the above interview with Admiral Grace Hopper includes a quotation.  How can you print quotation marks to the screen without Java interpreting them as the end of your <code>String</code>?
         - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?
         - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
-        
+	- title: "Escape Characters"
+	  model: |
+	    <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+        <div style="width: 100%; display: table-row; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Escape Character</strong>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Use</strong>
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <code>\'</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Single Quote</strong>
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <code>\"</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Double Quote</strong>
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <code>\n</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>New Line</strong>
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <code>\t</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Tab</strong>
+            </div>
+        </div>
+		</div>
+	  questions:
+        - What happens if you print an escape character?  Does the backslash actually print?
+		- Why do you think we call these &quot;escape characters?&quot;
+		- What escape character do you think prints a backslash to the screen?
+		- How would you print the actual characters \n to the screen (i.e., not a newline character, but the actual backslash and n characters)?
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
 
