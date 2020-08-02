@@ -11,8 +11,7 @@ info:
     - To identify primitive data structures and their uses
   models:
     - title: "Hello World!"
-	  model: |
-	    <img src="../../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example" />
+	  model: Test model
 	  questions:
 	    - What do the curly braces enclose?
     - title: "Your First Program"
