@@ -13,7 +13,7 @@ info:
 	- title: "Escape Characters"
 	  model: "The model"
 	  questions:
-        - Q
+        - "Q"
 
 tags:
   - datatypes
