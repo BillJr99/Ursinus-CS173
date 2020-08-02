@@ -55,10 +55,7 @@ info:
         </div>
 		</div>
 	  questions:
-        - What happens if you print an escape character?  Does the backslash actually print?
-		- Why do you think we call these &quot;escape characters?&quot;
-		- What escape character do you think prints a backslash to the screen?
-		- How would you print the actual characters <code>\\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)?
+        - Q
 
 tags:
   - datatypes
