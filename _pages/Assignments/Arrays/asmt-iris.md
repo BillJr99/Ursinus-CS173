@@ -31,8 +31,8 @@ info:
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+      progressing: The program is submitted according to the directions with a minor omission or correction needed, and with at least superficial responses to the bolded questions throughout
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
 tags:
   - strings
@@ -70,7 +70,7 @@ Here is a sample of the data, taken from [http://archive.ics.uci.edu/ml/machine-
 5.0,3.6,1.4,0.2,Iris-setosa
 ```
 
-Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  What do you notice?  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length, taken from [scikit-learn](https://scikit-learn.org/):
+Before we begin, open the CSV file in your favorite spreadsheet program.  You'll see four numeric columns and a classification, as you saw above.  Plot any two of the numeric columns on a scatterplot graph.  **What do you notice?**  Here is an example of such a plot comparing the Sepal Width *vs* the Sepal Length, taken from [scikit-learn](https://scikit-learn.org/):
 
 ![Sepal Width vs Sepal Length Plot, with Flower Classifications Color Coded from scikit-learn](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
 
@@ -102,10 +102,10 @@ Print out all of your Euclidean Distances, and choose the flower corresponding t
 Re-read each line of the Iris Dataset CSV file.  This time, pretend that you do not know the classification, and use those values as your "made up flower" to be classified.  In your program, compare your classification to the actual classification from the CSV, and print out your accuracy rate.
 
 ### Studying the Effect of More or Fewer Samples
-What happens if you only read 10, 5, or 1 example of a `setosa` flower?  Modify your program to read only the first N rows of each of the flower types.  How well are you able to predict your flowers?  Use the accuracy rate you computed above, and graph your accuracy over N=1, 5, 10, and the whole dataset.
+**What happens if you only read 10, 5, or 1 example of a `setosa` flower?**  Modify your program to read only the first N rows of each of the flower types.  **How well are you able to predict your flowers?**  Use the accuracy rate you computed above, and graph your accuracy over N=1, 5, 10, and the whole dataset.
 
 ### Fisher Linear Discriminant
-It is usually the case that adding more rows to our input data results in better classification (at least to a plateau).  However, it's not always the case that adding more columns ("features") to the dataset makes for better prediction.  If we use too many columns, our accuracy actually starts to decrease.  If we needed to remove some columns, how would we choose which columns to keep and which to remove?  Let's find out which column(s) are helping us classify the data the best.  We can do this by computing the Fisher Linear Discriminant (developed by Fisher, who also provided this classic Iris dataset).  
+It is usually the case that adding more rows to our input data results in better classification (at least to a plateau).  However, it's not always the case that adding more columns ("features") to the dataset makes for better prediction.  If we use too many columns, our accuracy actually starts to decrease.  **If we needed to remove some columns, how would we choose which columns to keep and which to remove?**  Let's find out which column(s) are helping us classify the data the best.  We can do this by computing the Fisher Linear Discriminant (developed by Fisher, who also provided this classic Iris dataset).  
 
 The key idea behind Fisher's Linear Discriminant is that data can be separated into classes if those classes have a relatively small variance, and the data between the classes have a relatively high variance.  Imagine two different coins (for example, an American quarter and an American dime).  The quarter has a large radius and weight compared to the dime.  If you looked at enough quarters and dimes, each one might have a slightly different radius and weight because of wear and tear, but generally, they would be close together, but the radius and weight of each dime would differ greatly from those of the quarter.  It is important to compute features that do not overlap between classifications.  For our flower example here, our classification worked out because the petal and sepal lengths/widths were generally far apart between the different types of flowers (but also close together for each type of flower).  As a result, comparing unknown flowers to the means of these features provided a reasonable prediction of the flower type.  The Fisher LDA function gives us a mechanism to measure this feature "closeness" formally.
 
@@ -134,17 +134,23 @@ The Linear Discriminant function tells us how separable a feature is into two cl
 
 At first glance, this seems like a lot of work!  Before you start writing code, remember that you can do this once, but implement the code in a function that accepts the two arrays as parameters.  Then, just call the functions with the right pair of arrays, and you're done!
 
-Which column/feature (i.e., the "sepal length") best separates the `setosa` and the `versicolor` flowers?  Which column best separates the `setosa` and the `virginica` flowers?  Which column seems the best overall?  Do any columns appear to do a poor job separating any of the classes?  Which columns would you use for our approach?  Based on your findings, which two flowers do you think are most easily distinguished between each other, and why?
+Here are a few questions to consider about the data:
+
+* **Which column/feature (i.e., the "sepal length") best separates the `setosa` and the `versicolor` flowers?**
+* **Which column best separates the `setosa` and the `virginica` flowers?  Which column seems the best overall?**  
+* **Do any columns appear to do a poor job separating any of the classes?**  
+* **Which columns would you use for our approach?**  
+* **Based on your findings, which two flowers do you think are most easily distinguished between each other, and why?**
 
 ## Extra Credit (10 Points)
 
-For extra credit, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?
+For extra credit, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  **Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?**
 
 ## Ethical Use of Learning Algorithms
 
 ### Avoiding Discrimination
 
-Generalizing features to a mean has the potential to bias an algorithm, either unintentionally or intentionally, toward making decisions that disadvantage people.  This is known as [Algorithmic Bias](https://en.wikipedia.org/wiki/Algorithmic_bias).  This [case study](https://www.onlineethics.org/Resources/algorithm.aspx?id=44420&sortby=name&dir=asc&tab=teaching-aids)  \[[^1]\] describes a common scenario in which [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) is applied to a dataset to determine which features best separate the data.  PCA is another technique for selecting the best subset of column features to use in a learning algorithm (like we did here with the Fisher LDA score).  In this example, the PCA algorithm was used to select features that are discriminatory.  What steps can developers take to ensure that they are equitible when classifying data?  In particular, what can be done to avoid developing algorithms that discriminate according to implicit bias or "blind spots?"
+Generalizing features to a mean has the potential to bias an algorithm, either unintentionally or intentionally, toward making decisions that disadvantage people.  This is known as [Algorithmic Bias](https://en.wikipedia.org/wiki/Algorithmic_bias).  This [case study](https://www.onlineethics.org/Resources/algorithm.aspx?id=44420&sortby=name&dir=asc&tab=teaching-aids)  \[[^1]\] describes a common scenario in which [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis) is applied to a dataset to determine which features best separate the data.  PCA is another technique for selecting the best subset of column features to use in a learning algorithm (like we did here with the Fisher LDA score).  In this example, the PCA algorithm was used to select features that are discriminatory.  **What steps can developers take to ensure that they are equitible when classifying data?**  **In particular, what can be done to avoid developing algorithms that discriminate according to implicit bias or "blind spots?"**
 
 [^1]: Jason Ludwig, Kendall Darfler, Kristene Unsworth, and Kelly Joyce.  "An Algorithm Discriminates." Online Ethics Center for Engineering, 11/28/2017. OEC Accessed: Thursday, July 16, 2020 <www.onlineethics.org/44420/algorithm>
 

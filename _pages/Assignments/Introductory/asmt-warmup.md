@@ -22,7 +22,7 @@ The purpose of this assignment is to get us setup for the course, both by gettin
 
 ## Personal Survey (5 Pts)
 
-I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on Microsoft Teams
+I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on GroupMe
 
 1.  Your Name, Your Nickname (if applicable) / Preferred Pronouns
 2.  What is your reason for taking the course? (Blunt honesty is perfectly fine here, if applicable)
@@ -33,7 +33,7 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 7.  What are you the most worried about in this course?
 8.  A fun fact about yourself
 9.  Anything else you think I should know?
-10.  Please attach **a headshot** to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
+10.  Please attach **a headshot** picture to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
 
 ## Web Poll for Office Hours
 
@@ -55,11 +55,11 @@ Next, expand `Source Packages -> hw0` and double click on `GoodCode.java`. Once 
 
 ![]({{ site.baseurl }}/images/asmt-warmup/GoodCode.png)
 
-Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to Microsoft Teams.
+Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to GroupMe.
 
 ## Syllabus (5pts)
 
-Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on Microsoft Teams with the answers to the following questions**
+Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on GroupMe with the answers to the following questions**
 
 1.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code during labs
 2.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code for regular assignments.
