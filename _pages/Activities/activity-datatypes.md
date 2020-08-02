@@ -132,7 +132,7 @@ info:
         </div>
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
-                <code>\'</code>
+                <code>\\'</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
                 <strong>Single Quote</strong>
@@ -140,7 +140,7 @@ info:
         </div>
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
-                <code>\"</code>
+                <code>\\"</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
                 <strong>Double Quote</strong>
@@ -148,7 +148,7 @@ info:
         </div>
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
-                <code>\n</code>
+                <code>\\n</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
                 <strong>New Line</strong>
@@ -156,7 +156,7 @@ info:
         </div>
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
-                <code>\t</code>
+                <code>\\t</code>
             </div>
             <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
                 <strong>Tab</strong>
@@ -167,7 +167,7 @@ info:
         - What happens if you print an escape character?  Does the backslash actually print?
 		- Why do you think we call these &quot;escape characters?&quot;
 		- What escape character do you think prints a backslash to the screen?
-		- How would you print the actual characters <code>\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)?
+		- How would you print the actual characters <code>\\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)?
         
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
