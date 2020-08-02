@@ -14,7 +14,7 @@ info:
       model: |
         <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
-        - What do you think the curly braces represent and enclose?
+        - What happens if you print an escape character?  Does the backslash actually print?
 
 tags:
   - datatypes
