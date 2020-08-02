@@ -9,6 +9,20 @@ info:
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
+    - title: "Your First Program"
+      model: |
+        ```java
+        public class MyFirstClass {
+            public static void main(String[] args) {
+                // println prints a "line" to the string
+                System.out.println("Hello World!");
+                System.out.println("Have a great day.");
+            }
+        }
+        ```
+      questions: 
+        - What do you think the <code>//<code> characters represent?
+        - What do the curly braces enclose?
     - title: Primitive Data Types
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -64,7 +78,7 @@ info:
                 A single character
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                <code>char grade = &apos;A&apos;</code>
+                <code>char grade = &apos;A&apos;;</code>
             </div>
         </div>     
         <div style="width: 100%; display: table-row;">
@@ -75,7 +89,7 @@ info:
                 Textual data
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                <code>String name = &quot;Lee&quot;</code>
+                <code>String name = &quot;Lee&quot;;</code>
             </div>
         </div>       
         </div>
