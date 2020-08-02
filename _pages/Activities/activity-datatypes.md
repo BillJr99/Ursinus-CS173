@@ -11,7 +11,7 @@ info:
   models:
     - title: "Your First Program"
       model: |
-        ```java
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class MyFirstClass {
             public static void main(String[] args) {
                 // println prints a "line" to the string
@@ -19,7 +19,7 @@ info:
                 System.out.println("Have a great day.");
             }
         }
-        ```
+        ]]></script> 
       questions: 
         - What do you think the <code>//<code> characters represent?
         - What do the curly braces enclose?
