@@ -124,6 +124,7 @@ info:
         <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
         - What happens if you print an escape character?  Does the backslash actually print?
+		- Q2
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
 
