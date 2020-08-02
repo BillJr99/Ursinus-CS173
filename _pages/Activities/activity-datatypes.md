@@ -13,8 +13,10 @@ info:
     - title: "Your First Program"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class Main { // Classes are like nouns that your program represents
-            public static void main(String[] args) { // Functions are like verbs that you will execute on nouns
+		// Classes are like nouns that your program represents
+        public class Main { 
+		    // Functions are like verbs that you will execute on nouns
+            public static void main(String[] args) { 
                 // println prints a line to the string
                 System.out.println("Hello World!");
                 System.out.println("Have a great day.");
