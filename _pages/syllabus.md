@@ -241,10 +241,6 @@ schedule:
   date: "3"
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
-  readings:
-  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
-    rlink: "Modules/Expressions/Module"  
-    points: 3
   deliverables:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
@@ -254,14 +250,16 @@ schedule:
   title: "Programming Statements, Expressions, and Operators"
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
-    rlink: false 
-  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
-    rlink: "Modules/Values/Module" 
-    points: 3    
+    rlink: false  
+  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    rlink: "Modules/Expressions/Module"  
+    points: 3	
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
   readings: 
+  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
+    rlink: "Modules/Values/Module" 
   - rtitle: "Exercise: Epoch Time Overflow"
     rlink: "Modules/EpochTime/Exercise"
     points: 3
