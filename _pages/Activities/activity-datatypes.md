@@ -120,8 +120,7 @@ info:
         - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?
         - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
     - title: "Escape Characters"
-      model: |
-        Test
+      model: Test
       questions: 
         - Q1
 		- Q2
