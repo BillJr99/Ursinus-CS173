@@ -41,7 +41,7 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
     {% if layout.directions %}
     <h2>Directions</h2>
     {{ layout.directions }}
-    {% endif %}    
+    {% endif %}  
     
     {% if page.info.models %}
     {% assign model_num = 1 %}
@@ -60,6 +60,13 @@ submission: Submit your answers to the questions using the Collaborative Spaces 
         {% endfor %}
         </ol>
         {% endif %}
+        
+        {% if model.embed %}
+        <h3>Embedded Code Environment</h3>
+        You can try out some code examples in this embedded development environment!
+        {{ model.embed }}
+        {% endif %}
+        
         <hr style="border: 1px solid black;"/>
     {% endfor %}
     {% endif %}
