@@ -10,6 +10,11 @@ info:
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
   models:
+    - title: "Hello World"
+      model: |
+        Test model
+      questions: 
+        - What do you think the curly braces represent and enclose?
     - title: "Your First Program"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
