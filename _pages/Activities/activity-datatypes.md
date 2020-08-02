@@ -23,6 +23,7 @@ info:
         ]]></script> 
       questions: 
         - What do you think the <code>//</code> characters represent?
+        - What do the curly braces enclose?
     - title: Primitive Data Types
       model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
