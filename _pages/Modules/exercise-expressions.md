@@ -1,8 +1,8 @@
 ---
 layout: exercise
-permalink: /Modules/DataTypes/Exercise
-title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types"
-excerpt: "CS173: Intro to Computer Science - Introduction to to Primitive Data Types"
+permalink: /Modules/Expressions/Exercise
+title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types and Expressions"
+excerpt: "CS173: Intro to Computer Science - Introduction to to Primitive Data Types and Expressions"
 
 info:
   points: 3

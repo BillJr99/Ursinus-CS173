@@ -242,8 +242,8 @@ schedule:
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
   readings:
-  - rtitle: "Exercise: Introduction to Primitive Data Types"
-    rlink: "Modules/DataTypes/Module"  
+  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    rlink: "Modules/Expressions/Module"  
     points: 3
   deliverables:
   - dtitle: "Programming Assignment: Warmup Due"    
