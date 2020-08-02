@@ -21,7 +21,7 @@ info:
         }
         ]]></script> 
       questions: 
-        - What do you think the <code>//<code> characters represent?
+        - What do you think the <code>//</code> characters represent?
         - What do the curly braces enclose?
     - title: Primitive Data Types
       model: |
