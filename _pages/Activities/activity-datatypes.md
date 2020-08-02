@@ -121,9 +121,7 @@ info:
         - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
     - title: "Escape Characters"
       model: |
-        Test
-		Test
-		Test
+        <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
       questions: 
         - What do you think the curly braces represent and enclose?
   reflective_prompts: 
