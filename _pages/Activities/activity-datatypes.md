@@ -119,12 +119,6 @@ info:
         - The excerpt from the above interview with Admiral Grace Hopper includes a quotation.  How can you print quotation marks to the screen without Java interpreting them as the end of your <code>String</code>?
         - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?
         - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
-    - title: "Escape Characters"
-      model: |
-        <img src="../images/examples/helloworld_annotated.png" alt="Annotated Hello World Java program example">
-      questions: 
-        - What happens if you print an escape character?  Does the backslash actually print?
-		- Q2
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
 
