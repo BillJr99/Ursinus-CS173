@@ -40,7 +40,7 @@ info:
                 32 bits = 4 bytes
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                <span>\\(2^{32}\\) = approximately 4 billion values</span>
+                <span>\(2^{32}\) = approximately 4 billion values</span>
                 <br>
                 Each additional bit doubles the number of values that can be stored: all the possible values with a <code>1</code> appended before them, plus all the possible values with a <code>0</code> appended before them!
             </div>

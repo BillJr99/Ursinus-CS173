@@ -171,7 +171,18 @@ info:
         - Why do you think we call these &quot;escape characters?&quot;
         - What escape character do you think prints a backslash to the screen?
         - How would you print the actual characters <code>\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)? 
-        
+    - model: |
+    
+      title: Data Types Have Ranges Because They Are Discrete
+      questions:
+        - The largest value a boolean can store is 1, even though it is a single bit value that can hold two discrete values.  This is because a bit is needed to store the value 0.  So a boolean’s largest value is not 2^1, but actually 2^1 - 1.  What is the largest int value that a computer can store?
+        - Why can the int data type store more negative values than positive values?
+        - Suppose you required more precision than the 15 significant digits offered by the double type.  What would happen to the range if a double could provide more precision, and why?     
+    - model: |
+      
+      title: Larger Data Types Can Store More Values (Larger Values and More Precise Values)
+      questions:
+        - Fill in the blanks in the table above.            
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
 
