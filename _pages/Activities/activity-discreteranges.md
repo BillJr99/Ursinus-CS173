@@ -235,7 +235,7 @@ info:
                 <span>\(2^{64}\)</span>
             </div>
             <div style="display: table-cell; padding:5px; width:25%; ">
-                Approximately <code><span>\(-1.797 \times 10^{308}\)</span></code> through <code><span>\(1.797 \times 10^{308}\)</span></code>, with approximately 15 significant digits of precision
+                Approximately <code><span>\(-1.797 \times 10^{308}\)</span></code> through <code><span>\\(1.797 \times 10^{308}\\)</span></code>, with approximately 15 significant digits of precision
             </div>            
         </div>          
         </div>
