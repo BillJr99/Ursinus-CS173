@@ -10,7 +10,6 @@ info:
   goals:
     - To write mathematical expressions in Java
     - To write a function that computes an expression and returns its result
-    - To call a function from <code>main()</code> and use its return value
     
 processor:  
   correctfeedback: "Correct!!" 
