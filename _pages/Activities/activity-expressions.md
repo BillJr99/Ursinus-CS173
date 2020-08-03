@@ -12,59 +12,59 @@ info:
     - model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Operation</strong>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Operator</strong>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
                 <strong>Examples</strong>
             </div>            
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Addition
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>+</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>int x = 6 + 4;</code>
                 <br>
                 <code>int y = x + 2;</code>
             </div>            
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Subtraction
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>-</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>float z = 3.1 - 5;</code>
             </div>            
         </div> 
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Multiplication
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>*</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>double x = 5.2 * 2;</code>
             </div>            
         </div>
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Division
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>/</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>int idiv = 5 / 2; // returns 2</code>
                 <br>
                 <code>double fdiv = 5 / 2.0; // returns 2.5</code>
@@ -73,79 +73,79 @@ info:
             </div>            
         </div>   
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Modulus
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>%</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>int remainder = 5 % 2; // returns 1</code>
             </div>            
         </div> 
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Increment
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>++</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x++; // x = x + 1;</code>
             </div>            
         </div>     
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Decrement
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>--</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x--; // x = x - 1;</code>
             </div>            
         </div>            
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Addition
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>+=</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x += 5.5; // x = x + 5.5;</code>
             </div>            
         </div>            
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Subtraction
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>-=</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x -= 2; // x = x - 2;</code>
             </div>            
         </div>  
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Multiplication
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>*=</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x *= 10.1; // x = x * 10.1;</code>
             </div>            
         </div>         
         <div style="width: 100%; display: table-row; ">
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 Compound Division
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>/=</code>
             </div>
-            <div style="display: table-cell; padding:5px; width:50%; ">
+            <div style="display: table-cell; padding:5px; width:33%; ">
                 <code>x /= y; // x = x / y;</code>
             </div>            
         </div>                 
