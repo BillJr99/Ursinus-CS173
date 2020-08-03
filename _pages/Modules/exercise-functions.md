@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Functions"
 
 info:
   points: 3
-  instructions: "Write a function that computes one of the roots of a quadratic equation.  In addition to multiplying b by itself, you can compute <span>\(b^{2}\)</span> using the <code>Math.pow()</code> method.  The <code>Math.sqrt()</code> method takes a <code>double</code> parameter, which is the number whose root should be computed, and returns the result as a <code>double</code>.  Now write a program that calls a method that you will write to compute the quadratic root, and then have <code>main()</code> print the root that you calculate."
+  instructions: "Write a function that computes one of the roots of a <a href="https://en.wikipedia.org/wiki/Quadratic_equation#/media/File:Quadratic_formula.svg">quadratic equation</a>.  In addition to multiplying b by itself, you can compute <code>b*b</code> using the <code>Math.pow()</code> method.  The <code>Math.sqrt()</code> method takes a <code>double</code> parameter, which is the number whose root should be computed, and returns the result as a <code>double</code>.  Now write a program that calls a method that you will write to compute the quadratic root, and then have <code>main()</code> print the root that you calculate."
   goals:
     - To write mathematical expressions in Java
     - To write a function that computes an expression and returns its result
