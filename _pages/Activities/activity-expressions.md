@@ -159,7 +159,18 @@ info:
         - Suppose you had to divide two integers, but you want the result to be stored as a floating point value.  How could you ensure that this happens (there are several possibilities!)?
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
-
+  additional_reading:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html	
+      title: Expressions and Assignments
+  additional_practice:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html
+      title: Compound Assignment Operators
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/Exercises.html
+      title: Variables and Assignments
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-8-practice-coding.html
+      title: Variables and Assignments Practice Coding Problems
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/to
+      title: Review of Variables and Assignments
 tags:
   - datatypes
   - expressions

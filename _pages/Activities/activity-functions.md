@@ -42,6 +42,9 @@ info:
 
   reflective_prompts:
     - How do you think a computer might generate a random number?  Why do you think we call them pseudorandom numbers?
+  additional_reading:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html 
+      title: Type Casting
 tags:
   - functions
   - expressions
