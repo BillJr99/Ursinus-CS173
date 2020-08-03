@@ -90,5 +90,17 @@ embed_directions: You can try out some code examples in this embedded developmen
     <h2>Submission</h2>
     {{ layout.submission }}
     {% endif %}
+    
+    
+    
+    {% if page.info.additional_practice %}
+    <h1>For Additional Practice</h1>
+    Feel free to visit these resources for additional practice exercises.
+    <ol>
+    {% for link in page.info.additional_practice %}
+    <li><a href="{{link}}">{{link}}</a></li>
+    {% endfor %}
+    </ol>
+    {% endif %}    
   </div>
 </div>
