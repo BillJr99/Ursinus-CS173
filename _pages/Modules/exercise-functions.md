@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Functions"
 
 info:
   points: 3
-  instructions: "Write a function that computes one of the roots of a <a href=\"https://en.wikipedia.org/wiki/Quadratic_equation\">quadratic equation</a>.  In addition to multiplying b by itself, you can compute <code>b*b</code> using the <code>Math.pow()</code> method.  The <code>Math.sqrt()</code> method takes a <code>double</code> parameter, which is the number whose root should be computed, and returns the result as a <code>double</code>.  Now write a program that calls a method that you will write to compute the quadratic root, and then have <code>main()</code> print the root that you calculate."
+  instructions: "Write a function that computes one of the roots of a <a href=\"https://en.wikipedia.org/wiki/Quadratic_equation\">quadratic equation</a>.  In addition to multiplying b by itself, you can compute <code>b\*b</code> using the <code>Math.pow()</code> method.  The <code>Math.sqrt()</code> method takes a <code>double</code> parameter, which is the number whose root should be computed, and returns the result as a <code>double</code>.  Now write a program that calls a method that you will write to compute the quadratic root, and then have <code>main()</code> print the root that you calculate."
   goals:
     - To write mathematical expressions in Java
     - To write a function that computes an expression and returns its result
@@ -53,3 +53,16 @@ files:
         
 ---
 
+## Quadratic Formula
+
+For reference, the quadratic formula is 
+
+<span>\[ \frac{-b \pm \sqrt{(b^{2} - 4ac)}}{2a} \]</span>
+
+given an equation:
+
+<span>\[ a^{2}x + bx + c = 0 \]</span>
+
+In this exercise, you can simply compute one of the roots, as follows:
+
+<span>\[ \frac{-b \pm \sqrt{(b^{2} - 4ac)}}{2a} \]</span>
