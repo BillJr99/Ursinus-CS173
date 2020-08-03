@@ -29,7 +29,7 @@ info:
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     - model: |
-        <iframe src="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#random--" width="100%" height="240"></iframe>
+        <iframe src="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#random--" width="100%" height="480"></iframe>
       title: Generating pseudorandom numbers using <code>Math.random()</code>
       questions:
         - The <code>Math.random()</code> function takes no parameters, but returns a random number greater than or equal to <code>0</code>, and less than (but not equal to) <code>1</code>.  How can you use this to generate a random value between <code>0</code> and <code>10</code>?
