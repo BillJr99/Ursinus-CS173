@@ -63,7 +63,22 @@ info:
         }
         ]]></script>     
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>     
-      
+  additional_reading:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-2-ifs.html
+      title: The <code>if</code> Statement
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-3-if-else.html
+      title: The <code>if</code>/<code>else</code> Statement
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-4-else-ifs.html
+      title: <code>if</code>/<code>else if</code> Statements
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html 
+      title: Compound <code>if</code> Statements
+  additional_practice:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/Exercises.html
+      title: <code>if</code> Statements
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-10-practice-coding.html
+      title: Code Practice with <code>if</code> Statements
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/APLine.html
+      title: Using Class Functions
 tags:
   - boolean
   - expressions

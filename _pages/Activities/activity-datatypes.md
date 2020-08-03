@@ -177,6 +177,13 @@ info:
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-2-java-intro.html	
       title: Introduction to Java
+  additional_practice:
+    - link: https://practiceit.cs.washington.edu/problem/view/bjp5/chapter1/s10-Shaq
+      title: Shaq
+    - link: https://practiceit.cs.washington.edu/problem/view/bjp5/chapter1/s15-printlnSlashes
+      title: Printing Slashes
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-8-practice-coding.html
+      title: Mixed-Up Coding Practice
 
 tags:
   - datatypes

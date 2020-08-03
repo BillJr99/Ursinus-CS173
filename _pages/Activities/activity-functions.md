@@ -45,6 +45,14 @@ info:
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html 
       title: Type Casting
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html
+      title: Calling Functions with no Parameters
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html
+      title: Calling Functions with Parameters
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html
+      title: Function Return Values
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html
+      title: Using the <code>Math</code> Class
 tags:
   - functions
   - expressions
