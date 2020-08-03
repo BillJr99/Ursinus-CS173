@@ -285,7 +285,7 @@ schedule:
     rlink: false    
 - week: "2"
   date: "0"
-  title: "Boolean Logic and Expressions"
+  title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
@@ -365,7 +365,7 @@ schedule:
     points: 100    
 - week: "4"
   date: "2"
-  title: "Boolean Statements and DeMorgan's Law"   
+  title: "Strings"   
 - week: "4"
   date: "3"
   title: "Strings"
@@ -744,7 +744,7 @@ Other ways to help your fellow classmates in class are as follows:
 ### Class Participation and Classroom Etiquette \[[^1]\]
 For classroom attendance, the following rules apply:
 
-* Please be attentive during class. **The use of laptops and other electronic devices is not permitted unless you are instructed to use them or are using them to take notes.** There will be class exercises that involve coding, but lecture time should be used for learning computer science. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
+* Please be attentive during class. There will be class exercises that involve coding, but class time should be used for learning computer science. It is imperative that technology be used for this purpose during our class time together. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
 * Please follow common courtesy. For instance, you can bring food and drink as long as it's not distracting, but please clean up after yourself if you do. Our janitorial staff deserves the utmost respect and help with their job.
 * In-class exercises and "low stakes" activities will take place individually and in groups to assess our progress together.  These exercises will be given both synchronously (for example, in-class activities, pair programming exercises) and asynchronously (for example, pre-lab exercises, peer code reviews, book surveys) and will be graded on a participation basis.  These are given equal weight and form the basis of the class participation score.
 * If a class session is remote, please feel free to make choices that make you most comfortable.  For example, I will record these sessions for students who cannot make the session or for those who would benefit from a review of the material.  Although I'd encourage you to enable your video feed if it is available, if you would prefer to leave your video off, you should absolutely feel free to do so.  Please keep your microphone on mute to avoid background noises while others are speaking; however, please do not feel "mic fright" about unmuting to speak up and participate anytime.  If, however, you would prefer to communicate via the chat interface (either exclusively or in combination with your audio/video), you should feel free to do that.  Whether in-person or remote, all I ask is that you engage as best you can; the material is challenging but fun, and we're all here to learn new things together.
