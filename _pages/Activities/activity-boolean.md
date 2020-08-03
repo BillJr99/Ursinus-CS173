@@ -83,6 +83,9 @@ info:
       questions:
         - What is the result of <code>(a || b) && (c || d)</code> if <code>a = true</code>, <code>b = true</code>, <code>c = false</code>, <code>d = false</code>?
         - "<a href=\"https://en.wikipedia.org/wiki/De_Morgan%27s_laws\">DeMorgan’s Law</a> allows you to simplify a boolean expression by &quot;factoring out&quot; a negation, and flipping an AND to an OR (and vice-versa).  For example, <code>(!a && !b)</code> is equivalent to <code>!(a || b)</code>. The reverse procedure also works - negating the outside, negating each term on the inside, and flipping the operator: <code>!(a || b)</code> is equivalent to <code>(!a && !b)</code>.  Re-write <code>!(a && !b)</code> using DeMorgan’s Law."
+        - Write a program to compute <code>(!a && !b)</code> for two <code>boolean</code> variables, and then to compute the DeMorgan's Law version of that expression.  Print both results to verify that they are equivalent.
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html
       title: Booleans
