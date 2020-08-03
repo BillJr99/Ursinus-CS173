@@ -11,7 +11,8 @@ info:
     - To identify primitive data structures and their uses
     - To identify the use of escape characters
     - To specify the manner in which escape characters are invoked
-    - To apply escape characters where needed    
+    - To apply escape characters where needed 
+    - To be able to create and compile a Java source file in a chosen development environment
   models:
     - title: "Hello World"
       model: |

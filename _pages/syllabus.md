@@ -286,6 +286,7 @@ schedule:
 - week: "2"
   date: "0"
   title: "Boolean Logic and Expressions"
+  link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
     rlink: false  
@@ -302,18 +303,23 @@ schedule:
 - week: "2"
   date: "2"
   title: "Conditionals"  
+  link: "Activities/Conditionals"
 - week: "2"
   date: "3"
   title: "Conditionals"      
 - week: "3"
   date: "0"
   title: "Functions and Methods"
+  link: "Activities/Functions"
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
   - rtitle: "Exercise: Using External Libraries in Your NetBeans Project"
     rlink: "Modules/Library/Module"  
-    points: 3    
+    points: 3   
+  - rtitle: "Exercise: Writing and Calling Functions"
+    rlink: "Modules/Functions/Exercise"  
+    points: 3     
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 

@@ -8,6 +8,7 @@ info:
   goals: 
     - To write statements that manipulate values of different numeric types
     - To manipulate variables in a Java program
+    - To be able to apply operators appropriate to primitive data type values
   models:
     - model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">

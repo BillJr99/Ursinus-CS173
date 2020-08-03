@@ -9,6 +9,7 @@ info:
     - To explain that data types are discrete because they are represented by a finite number of computing bits
     - To explain that all data are represented computationally via binary values
     - To explain the relationship between a data type's bit size and its range
+    - To explain why typed values take on discrete ranged values that can differ from data type to data type
   models:
     - model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
