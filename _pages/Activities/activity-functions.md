@@ -10,9 +10,38 @@ info:
     - To be able to utilize the methods Math class in code
   models:
     - model: |
-        <img src="../images/examples/functions_area.png" alt="Functions to Compute the Area of Shapes">
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            /* Return the area of a circle, given its radius
+             * @param radius: the radius of the circle
+             *        Precondition: radius >= 0
+             * @return the area of the circle in square units of the radius
+             */
+            public static double circleArea(double radius) {
+                double area = 3.14 * radius * radius;
+                
+                return area;
+            }
+            
+            public static double triangleArea(double base, double height) {
+                double area = 0.5 * base * height;
+                
+                return area;
+            }
+            
+            public static void main(String[] args) {
+                double r = 10.0;
+                
+                double a = circleArea(r);
+                
+                System.out.print("The area of the circle is: ");
+                System.out.println(r);
+            }
+        }
+        ]]></script>     
       title: Writing and Invoking Functions to Re-Use Code Logic
       questions:
+        - What does <code>return</code> mean in the <code>circleArea</code> function above?
         - Notice that functions have data types before their function names, just like variables do.  What is the return type of <code>circleArea()</code>?
         - Try running the sample program above in repl.it. 
         - Modify the program to write an additional function circleDiameter() that computes the diameter (<span>\(2 \times \pi \times r\)</span>) given the radius of the circle.  Call that function from main() and print the value.
@@ -22,7 +51,31 @@ info:
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
     - model: |
-        <img src="../images/examples/functions_void.png" alt="void Function Examples">
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            /* Print a greeting to a friend
+               @param name: the name of the friend
+             */
+            public static void sayHello(String name) {
+                System.out.print("Hello ");
+                System.out.print(name);
+                System.out.println("!");
+            }
+            
+            /* Say Hello to the World */
+            public static void sayHelloWorld() {
+                System.out.println("Hello World!");
+            }
+            
+            public static void main(String[] args) {
+                String friend = "Alex";
+                
+                sayHello(friend);
+                sayHello("friend");
+                sayHelloWorld();
+            }
+        }
+        ]]></script>  
       title: The <code>void</code> Keyword
       questions:
         - The <code>+</code> operator works on Strings as well as on numeric values.  &quot;Adding&quot; two strings together concatenates or combines them.  Re-write the <code>sayHello()</code> method so that it executes in just one <code>System.out.println()</code> statement.      
@@ -42,6 +95,8 @@ info:
 
   reflective_prompts:
     - How do you think a computer might generate a random number?  Why do you think we call them pseudorandom numbers?
+    - Notice the comments above the <code>circleArea</code> function.  What do you think a precondition means?
+    - Write comments for the <code>triangleArea</code> function in a similar spirit to those of the <code>circleArea</code> function.
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html 
       title: Type Casting
