@@ -96,22 +96,22 @@ embed_directions: You can try out some code examples in this embedded developmen
     {% if page.info.additional_reading %}
     <h1>Supplemental Reading</h1>
     Feel free to visit these resources for supplemental background reading material.
-    <ol>
+    <ul>
     {% for entry in page.info.additional_reading %}
     <li><a href="{{entry.link}}">{{entry.title}}</a></li>
     {% endfor %}
-    </ol>
+    </ul>
     {% endif %} 
     
     
     {% if page.info.additional_practice %}
     <h1>For Additional Practice</h1>
     Feel free to visit these resources for additional practice exercises.
-    <ol>
+    <ul>
     {% for entry in page.info.additional_practice %}
     <li><a href="{{entry.link}}">{{entry.title}}</a></li>
     {% endfor %}
-    </ol>
+    </ul>
     {% endif %}    
   </div>
 </div>
