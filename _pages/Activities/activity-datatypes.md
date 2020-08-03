@@ -1,14 +1,17 @@
 ---
 layout: activity
 permalink: /Activities/DataTypes
-title: "CS173: Intro to Computer Science - Data Types"
-excerpt: "CS173: Intro to Computer Science - Data Types"
+title: "CS173: Intro to Computer Science - Data Types and Escape Characters"
+excerpt: "CS173: Intro to Computer Science - Data Types and Escape Characters"
 
 info:
   goals: 
     - To identify the major components of a Java program, including a method and a class
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual
     - To identify primitive data structures and their uses
+    - To identify the use of escape characters
+    - To specify the manner in which escape characters are invoked
+    - To apply escape characters where needed    
   models:
     - title: "Hello World"
       model: |
@@ -119,6 +122,56 @@ info:
         - The excerpt from the above interview with Admiral Grace Hopper includes a quotation.  How can you print quotation marks to the screen without Java interpreting them as the end of your <code>String</code>?
         - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?
         - How could you revise the above program to print the entire statement using only one line of code (in other words, only one call to <code>System.out.println</code>?
+    - title: "Escape Characters"
+      model: |
+        <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+        <div style="width: 100%; display: table-row; background-color: black; color: white;">
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Escape Character</strong>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                <strong>Use</strong>
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                <code>\'</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                Single Quote
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                <code>\"</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                Double Quote
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                <code>\n</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                New Line
+            </div>
+        </div>
+        <div style="width: 100%; display: table-row; ">
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                <code>\t</code>
+            </div>
+            <div style="display: table-cell; padding:5px; width:50%; ">
+                Tab
+            </div>
+        </div>
+        </div>
+      questions: 
+        - What happens if you print an escape character?  Does the backslash actually print?
+        - Why do you think we call these &quot;escape characters?&quot;
+        - What escape character do you think prints a backslash to the screen?
+        - How would you print the actual characters <code>\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)? 
+        
   reflective_prompts: 
     - What other kinds of data could you imagine a computer representing?
 

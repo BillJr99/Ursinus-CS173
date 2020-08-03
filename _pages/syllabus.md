@@ -271,6 +271,7 @@ schedule:
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
+  link: "Activities/DiscreteRanges"
   readings:
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
