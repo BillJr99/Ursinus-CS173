@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Functions"
 
 info:
   points: 3
-  instructions: "Write a function that computes one of the roots of a quadratic equation <span>\(\frac{(-b + \sqrt{(b^{2} - 4ac)})}{2 \times a}\)</span>.  In addition to multiplying b by itself, you can compute <span>\(b^{2}\)</span> using the <code>Math.pow()</code> method.  The <code>Math.sqrt()</code> method takes a <code>double</code> parameter, which is the number whose root should be computed, and returns the result as a <code>double</code>.  Now write a program that calls a method that you will write to compute the quadratic root, and then have <code>main()</code> print the root that you calculate."
+  instructions: test
   goals:
     - To write mathematical expressions in Java
     - To write a function that computes an expression and returns its result
@@ -31,7 +31,7 @@ files:
         public class Driver {
             public static double quadraticRoots(int a, int b, int c) {
                 // TODO write this function and return the result.
-                // There are two roots (-b + or - ...)
+                // There are two roots (-b "+ or -" ...)
                 // ... just compute -b + ...
             }
             
