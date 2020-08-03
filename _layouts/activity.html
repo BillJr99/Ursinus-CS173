@@ -39,6 +39,16 @@ embed_directions: You can try out some code examples in this embedded developmen
     </ol>
     {% endif %}
 
+    {% if page.info.additional_reading %}
+    <h1>Supplemental Reading</h1>
+    Feel free to visit these resources for supplemental background reading material.
+    <ul>
+    {% for entry in page.info.additional_reading %}
+    <li><a href="{{entry.link}}">{{entry.title}}</a></li>
+    {% endfor %}
+    </ul>
+    {% endif %} 
+    
     <h1>The Activity</h1>
     
     {% if layout.directions %}
@@ -90,19 +100,6 @@ embed_directions: You can try out some code examples in this embedded developmen
     <h2>Submission</h2>
     {{ layout.submission }}
     {% endif %}
-    
-
-    
-    {% if page.info.additional_reading %}
-    <h1>Supplemental Reading</h1>
-    Feel free to visit these resources for supplemental background reading material.
-    <ul>
-    {% for entry in page.info.additional_reading %}
-    <li><a href="{{entry.link}}">{{entry.title}}</a></li>
-    {% endfor %}
-    </ul>
-    {% endif %} 
-    
     
     {% if page.info.additional_practice %}
     <h1>For Additional Practice</h1>
