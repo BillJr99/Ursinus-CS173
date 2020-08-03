@@ -31,7 +31,7 @@ files:
         public class Driver {
             public static double quadraticRoots(int a, int b, int c) {
                 // TODO write this function and return the result.
-                // There are two roots (-b "+ or -" ...)
+                // There are two roots (-b + or - ...)
                 // ... just compute -b + ...
             }
             
