@@ -157,7 +157,7 @@ info:
                 <span>\(2^{64}\)</span>
             </div>
             <div style="display: table-cell; padding:5px; width:25%; ">
-                Approximately <span><code>\(-1.797 \times 10^{308}\)</code></span> through <span><code>\(1.797 \times 10^{308}\)</code></span>, with approximately 15 significant digits of precision
+                Approximately <code><span>\(-1.797 \times 10^{308}\)</span></code> through <code><span>\(1.797 \times 10^{308}\)</span></code>, with approximately 15 significant digits of precision
             </div>            
         </div>         
         </div>    
@@ -221,7 +221,7 @@ info:
                 <strong>???</strong>
             </div>
             <div style="display: table-cell; padding:5px; width:25%; ">
-                Approximately <span><code>\(-3.402 \times 10^{38}\)</code></span> through <span><code>\(3.402 \times 10^{38}\)</code></span>, with approximately 6 significant digits of precision
+                Approximately <code><span>\(-3.402 \times 10^{38}\)</span></code> through <code><span>\(3.402 \times 10^{38}\)</span></code>, with approximately 6 significant digits of precision
             </div>            
         </div>     
         <div style="width: 100%; display: table-row; ">
@@ -235,7 +235,7 @@ info:
                 <span>\(2^{64}\)</span>
             </div>
             <div style="display: table-cell; padding:5px; width:25%; ">
-                Approximately <span><code>\(-1.797 \times 10^{308}\)</code></span> through <span><code>\(1.797 \times 10^{308}\)</code></span>, with approximately 15 significant digits of precision
+                Approximately <code><span>\(-1.797 \times 10^{308}\)</span></code> through <code><span>\(1.797 \times 10^{308}\)</span></code>, with approximately 15 significant digits of precision
             </div>            
         </div>          
         </div>
