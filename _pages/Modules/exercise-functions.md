@@ -53,3 +53,6 @@ files:
         
 ---
 
+## Quadratic Formula
+
+For reference, the quadratic formula is:
