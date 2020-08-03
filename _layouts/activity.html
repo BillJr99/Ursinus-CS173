@@ -91,6 +91,17 @@ embed_directions: You can try out some code examples in this embedded developmen
     {{ layout.submission }}
     {% endif %}
     
+
+    
+    {% if page.info.additional_reading %}
+    <h1>Supplemental Reading</h1>
+    Feel free to visit these resources for supplemental background reading material.
+    <ol>
+    {% for link in page.info.additional_reading %}
+    <li><a href="{{link}}">{{link}}</a></li>
+    {% endfor %}
+    </ol>
+    {% endif %} 
     
     
     {% if page.info.additional_practice %}
