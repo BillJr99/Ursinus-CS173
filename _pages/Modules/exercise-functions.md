@@ -53,16 +53,3 @@ files:
         
 ---
 
-## Quadratic Formula
-
-For reference, the quadratic formula is 
-
-<span>\[ \frac{-b \pm \sqrt{(b^{2} - 4ac)}}{2a} \]</span>
-
-given an equation:
-
-<span>\[ a^{2}x + bx + c = 0 \]</span>
-
-In this exercise, you can simply compute one of the roots, as follows:
-
-<span>\[ \frac{-b \pm \sqrt{(b^{2} - 4ac)}}{2a} \]</span>
