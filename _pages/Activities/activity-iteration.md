@@ -20,7 +20,17 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html 
       title: String Loops 
      
-    
+  additional_practice:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html
+      title: Loop Analysis
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/Exercises.html
+      title: Iteration Review
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-8-practice-coding.html
+      title: Iteration Practice Problems
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQselfDivisorA.html
+      title: Self Divisors using the Modulus, Loops, and Conditionals
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
+      title: String Iteration    
 
 tags:
   - iterations
