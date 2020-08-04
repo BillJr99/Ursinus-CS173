@@ -114,7 +114,7 @@ info:
     - How do you think encapsulation helps make things easier for other programmers to use our code?
 
 tags:
-  - iterations
+  - classes
   
 ---
 
