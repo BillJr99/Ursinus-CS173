@@ -56,6 +56,25 @@ info:
         - What could you do to change this to print the values 0 through 10?  
         - What could you do to print the values 1 through 10?
         - What might you change in the code to print only the even values between 0 and 9, changing only the line beginning with for?
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                boolean raining = false;
+
+                while(!raining) {
+                    System.out.println("Play outside!");
+                    raining = checkIfRaining(); // made up function!
+                }
+            }
+        }
+        ]]></script>        
+      title: The <code>while</code> Loop
+      questions:
+        - Why isn’t this code example written as a do loop?  How might this result in telling someone to “play outside” while it is raining?
+        - Modify this code to implement a <code>checkIfRaining()</code> function that generates a random number between 1 and 10, and returns <code>true</code> if the number is greater than 7 (and return <code>false</code> otherwise).
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
         
 tags:
   - iterations
