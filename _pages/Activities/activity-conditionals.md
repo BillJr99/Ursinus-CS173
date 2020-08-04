@@ -101,6 +101,8 @@ info:
       title: "Compound <code>if</code> conditionals"
       questions: 
         - "Consider the letter grade breakdown table on our <a href=\"../#grading\">course syllabus</a>.  Write a series of compound <code>if</code> statements that determines if your grade is an A+, an A, or an A-."
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
     - model: |
         <img src="../images/venn3.png" alt="Empty 3-way Venn Diagram">
       title: "Putting It All Together: Implementing a Venn Diagram"
