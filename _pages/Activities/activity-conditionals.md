@@ -7,6 +7,10 @@ excerpt: "CS173: Intro to Computer Science - Conditionals"
 info:
   goals: 
     - To be able to write an <code>if</code> statement
+    - To be able to write an <code>else</code> statement
+    - To design boolean expressions for conditionals
+    - To combine the <code>if</code> and <code>else</code> blocks to form conditionals that utilize the <code>else if</code> construct
+    - To implement complex conditional statements using boolean expression operators
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
@@ -47,7 +51,21 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public void canRunForPresident(int age) {
+            public static void canRunForPresident2(int age) {
+                if(age >= 18) {
+                    System.out.println("You are old enough to vote!");
+                    
+                    if(age >= 35) {
+                        System.out.println("... and you are old enough to run for President!");
+                    } else {
+                        System.out.println("... but not old enough to run for President!");
+                    }
+                } else {
+                    System.out.println("You're too young to run for President, and too young to vote.");
+                }
+            }
+            
+            public static void canRunForPresident(int age) {
                 if(age >= 35) {
                     System.out.println(“You are old enough to run for President of the United States!”);
                 } else if(age >= 18) {
@@ -59,10 +77,30 @@ info:
             
             public static void main(String[] args) {
                 canRunForPresident(38);
+                canRunForPresident(21);
             }
         }
-        ]]></script>     
-      title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>  
+        ]]></script>         
+      title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
+      questions:
+        - Which code structure do you prefer and why?
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void canVoteButNotRunForPresident(int age) {
+                if(age >= 18 && age <= 35) {
+                    System.out.println("");
+                }
+            }
+            
+            public static void main(String[] args) {
+                canVoteButNotRunForPresident(25);
+            }
+        }
+        ]]></script>      
+      title: "Compound <code>if</code> conditionals"
+      questions: 
+        - "Consider the letter grade breakdown table on our <a href=\"../#grading\">course syllabus</a>.  Write a series of compound <code>if</code> statements that determines if your grade is an A+, an A, or an A-."
     - model: |
         <img src="../images/venn3.png" alt="Empty 3-way Venn Diagram">
       title: "Putting It All Together: Implementing a Venn Diagram"
@@ -71,7 +109,7 @@ info:
         - "Label the three large circles \"A\", \"B\", and \"C\".  In each of the 7 regions within the Venn Diagram, which elements are true and which are false?"
         - "Write a series of <code>if</code> statements that may use <code>else</code> and <code>else if</code> blocks that print out the different states of your Venn Diagram.  There are a few ways to go about this, so we will discuss and compare approaches as a class."
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>       
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-2-ifs.html
       title: The <code>if</code> Statement
