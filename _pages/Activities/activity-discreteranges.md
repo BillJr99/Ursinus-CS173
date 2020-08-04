@@ -164,7 +164,7 @@ info:
         </div>    
       title: Data Types Have Ranges Because They Are Discrete
       questions:
-        - The largest value a boolean can store is 1, even though it is a single bit value that can hold two discrete values.  This is because a bit is needed to store the value 0.  So a boolean’s largest value is not <span>\(2^{1}\)</span>, but actually <span>\(2^{1} - 1\)</span>.  What is the largest int value that a computer can store?
+        - The largest value a boolean can store is <code>1</code>, even though it is a single bit value that can hold two discrete values.  This is because a bit is needed to store the value <code>0</code>.  So a boolean’s largest value is not <span>\(2^{1}\)</span>, but actually <span>\(2^{1} - 1\)</span>.  What is the largest int value that a computer can store?
         - Why can the int data type store more negative values than positive values?
         - Suppose you required more precision than the 15 significant digits offered by the double type.  What would happen to the range if a double could provide more precision, and why?     
     - model: |
