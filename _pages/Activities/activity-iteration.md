@@ -8,7 +8,7 @@ info:
   goals: 
     - To be able to explain the uses of the different loop structures (<code>for</code>, <code>while</code>, and <code>do</code>)
     - To be able to apply boolean expressions to iterative structures via the <code>for</code>, <code>while</code>, and <code>do</code> loops
-    - To be able to apply iteration and conditionals to a <code>String</code>.
+    - To be able to apply iteration and conditionals to a <code>String</code>
 
   models:
     - model: |
@@ -93,7 +93,32 @@ info:
         }
         ]]></script>     
       title: Nested Loops
-       
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Scanner;
+        
+        public class Main {
+            public static void main(String[] args) {
+                String x = "test";
+                
+                boolean containsT = false;
+                int numT = 0;
+                
+                for(int i = 0; i < x.length(); i++) {
+                    if(x.charAt(i) == 't') {
+                        containsT = true;
+                        numT++;
+                    }
+                }
+            }
+        }
+        ]]></script>     
+      title: Iterative Algorithms Using the String
+      questions:
+        - "For what values of <code>i</code> will the character <code>\'t\'</code> be found in this <code>String</code>?  You may find the <a href=\"https://cscircles.cemc.uwaterloo.ca/java_visualize/\">Java Visualizer</a> or your IDE debugger helpful."
+        - "Write a function that accepts a <code>String x</code>, a <code>char c</code>, and an <code>int n</code>.  Return the index of the <code>n\'th</code> instance of the character <code>c</code> in the <code>String x</code>.  Use the <code>indexOf()</code> method in a loop."
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
     
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html

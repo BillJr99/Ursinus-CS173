@@ -404,7 +404,7 @@ schedule:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false    
 - week: "6"
-  date: "0"
+  date: "2"
   title: "Iteration, Randomness, and the do loop"
   deliverables:
   - dtitle: "Lab: Iteration Due"
@@ -416,18 +416,18 @@ schedule:
     dlink: "Assignments/DNAMutations"  
     points: 100    
 - week: "6"
+  date: "3"
+  title: "String Manipulation" 
+- week: "7"
+  date: "0"
+  title: "String Manipulation"  
+- week: "7"
   date: "1"
   title: "Lab: Bernouli Trials"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Handed Out"
     dlink: false
-    points: 100
-- week: "6"
-  date: "2"
-  title: "String Manipulation"    
-- week: "6"
-  date: "3"
-  title: "String Manipulation" 
+    points: 100  
 - week: "7"
   date: "2"
   title: "Arrays" 
@@ -570,8 +570,8 @@ schedule:
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
     points: 100
-- week: "11"
-  date: "2"
+- week: "12"
+  date: "0"
   title: "Recursion and Dynamic Programming"  
   readings:
   - rtitle: "Exercise: Dynamic Programming"
@@ -581,25 +581,25 @@ schedule:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
     points: 100
-- week: "11"
-  date: "3"
+  - dtitle: "Lab: Searching and Sorting Due"
+    dlink: false  
+    points: 100
+- week: "12"
+  date: "1"
+  title: "Lab: Final Project Brainstorm"    
+  deliverables:
+  - dtitle: "Final Project: Handed Out"
+    dlink: false    
+    points: 100     
+- week: "12"
+  date: "2"
   title: "Recursion and Dynamic Programming"   
   deliverables:
   - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
     dlink: "Assignments/GuitarStringSynth"           
     points: 100
 - week: "12"
-  date: "0"
-  title: "Final Project Brainstorm"
-  deliverables:
-  - dtitle: "Lab: Searching and Sorting Due"
-    dlink: false  
-    points: 100
-  - dtitle: "Final Project: Handed Out"
-    dlink: false    
-    points: 100
-- week: "12"
-  date: "1"
+  date: "3"
   title: "Final Project Workshop"  
 - week: "13"
   date: "0"
