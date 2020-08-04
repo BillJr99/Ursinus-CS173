@@ -32,6 +32,31 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
       title: String Iteration    
 
+  models:
+    - model: |
+        Conditionals can be used to repeatedly execute code.  There are three varieties of these “loops:” the for loop (which is useful when counting the number of iterations that are needed), the while loop (which is useful for executing until something is true), and the do loop (similar to the while loop, but it executes at least once and checks whether it should stop at the end of the loop, rather than at the beginning).    
+        <br>
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                int i = 0;
+                /* for(initial value; 
+                        execute as long as this is true; 
+                        what to do after each time through the loop) { … }
+                */
+                for(i = 0; i < 10; i++) {
+                    System.out.println(i); // Counts from 0 to 9 and prints each
+                }
+            }
+        }
+        ]]></script>    
+      title: The <code>for</code> Loop
+      questions:
+        - The code prints the numbers from 0 through 9.  Why doesn’t it also print the value 10?
+        - What could you do to change this to print the values 0 through 10?  
+        - What could you do to print the values 1 through 10?
+        - What might you change in the code to print only the even values between 0 and 9, changing only the line beginning with for?
+        
 tags:
   - iterations
   - strings
