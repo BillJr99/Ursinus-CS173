@@ -63,7 +63,9 @@ embed_directions: You can try out some code examples in this embedded developmen
         <h2>Model {{ model_num }}: {{ model.title }}</h2>
         {% assign model_num = model_num | plus:1 %}
         
+        <div style="text-align: center; width: 100%;">
         {{ model.model }}
+        </div>
         
         {% if model.questions %}
         <h3>Questions</h3>
