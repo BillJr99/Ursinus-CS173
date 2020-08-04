@@ -97,7 +97,27 @@ info:
         }
         ]]></script>        
       title: The <code>while</code> Loop with User Input
-      
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Scanner;
+        
+        public class Main {
+            public static void main(String[] args) {
+                System.out.println("Each team gets 3 turns!");
+                
+                for(int i = 0; i < 10; i++) {
+                    System.out.println("Team " + i);
+                    for(int j = 0; j < 3; j++) {
+                        System.out.println("Team " + i + " turn number " + j);
+                    }
+                }
+            }
+        }
+        ]]></script>     
+      title: Nested Loops
+      questions:
+        - How many times does the inner loop print statement execute?
+        
 tags:
   - iterations
   - strings
