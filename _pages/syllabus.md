@@ -372,7 +372,7 @@ schedule:
   title: "Strings"
 - week: "5"
   date: "0"
-  title: "Iteration and the for loop"
+  title: "Iteration"
   link: "Activities/Iteration"
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Due"
@@ -393,19 +393,19 @@ schedule:
     points: 100
 - week: "5"
   date: "2"
-  title: "Iteration, Randomness, and the while loop"
+  title: "Iteration and the for loop"
   readings:
   - rtitle: "Ch. 4"
     rlink: false  
 - week: "5"
   date: "3"
-  title: "Iteration and the do loop"  
+  title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false    
 - week: "6"
   date: "0"
-  title: "Iteration"
+  title: "Iteration, Randomness, and the do loop"
   deliverables:
   - dtitle: "Lab: Iteration Due"
     dlink: false    
