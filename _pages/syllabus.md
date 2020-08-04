@@ -372,6 +372,7 @@ schedule:
 - week: "5"
   date: "0"
   title: "Iteration and the for loop"
+  link: "Activities/Iteration"
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
@@ -482,6 +483,7 @@ schedule:
 - week: "9"
   date: "0"
   title: "Classes" 
+  link: "Activities/Classes"
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
     dlink: "Labs/ASCIIArt"      
