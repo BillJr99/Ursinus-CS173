@@ -75,7 +75,29 @@ info:
         - Modify this code to implement a <code>checkIfRaining()</code> function that generates a random number between 1 and 10, and returns <code>true</code> if the number is greater than 7 (and return <code>false</code> otherwise).
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Scanner;
         
+        public class Main {
+            public static void main(String[] args) {
+                int value = 7;
+                int guess = -1;
+
+                // Used to read the user’s input from the console
+                Scanner input = new Scanner(System.in);
+
+                do {
+                    System.out.println(“Can you guess my number?”);
+                    guess = input.nextInt(); // read an integer from the keyboard
+                } while(guess != value);
+
+                System.out.println(“You got it!”);
+            }
+        }
+        ]]></script>        
+      title: The <code>while</code> Loop with User Input
+      
 tags:
   - iterations
   - strings
