@@ -365,7 +365,8 @@ schedule:
     points: 100    
 - week: "4"
   date: "2"
-  title: "Strings"   
+  title: "Strings" 
+  link: "Activities/Strings"  
 - week: "4"
   date: "3"
   title: "Strings"
