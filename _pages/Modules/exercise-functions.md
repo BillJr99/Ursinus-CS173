@@ -61,7 +61,7 @@ For reference, the quadratic formula is:
 
 given an equation:
 
-<span>\\[a^{2}x + bx + c = 0\\]</span>
+<span>\\[ax^{2} + bx + c = 0\\]</span>
 
 In this exercise, you can simply compute one of the roots, as follows:
 
