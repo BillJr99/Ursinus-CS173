@@ -552,6 +552,7 @@ schedule:
 - week: "11"
   date: "0"
   title: "Searching and Sorting" 
+  link: "Activities/SearchingAndSorting"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false   

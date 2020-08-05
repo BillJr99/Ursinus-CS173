@@ -212,6 +212,9 @@ info:
       
 tags:
   - arrays
+  - arraylist
+  - iteration
+  - classes
   
 ---
 
