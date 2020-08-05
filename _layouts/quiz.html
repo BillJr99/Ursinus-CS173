@@ -29,8 +29,8 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
 <!--reCAPTCHA-->
 
  <script>
-   function onSubmit(token) {
-     document.getElementById("quizform").submit();
+   function enableSubmit() {
+    document.getElementById("submitbutton").disabled = false;
    }
  </script>
  
@@ -72,12 +72,10 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
             {% endfor %}            
     </div>    
     
-    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey }}"></div>
-   
-    <button class="g-recaptcha" 
-        data-sitekey="{{ layout.googlerecaptchakey }}" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey }}" data-callback="enableSubmit"></div>
+    
+    <input type="button" value="Submit" id="submitbutton" disabled="disabled">
+
     </form>
     
     {{ content }} 
