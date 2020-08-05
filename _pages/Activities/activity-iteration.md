@@ -141,7 +141,7 @@ info:
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
       questions:
-        - "For what values of <code>i</code> will the character <code>\'t\'</code> be found in this <code>String</code>?  You may find the <a href=\"https://cscircles.cemc.uwaterloo.ca/java_visualize/\">Java Visualizer</a> or your IDE debugger helpful."
+        - "For what values of <code>i</code> will the character <code>'t'</code> be found in this <code>String</code>?  You may find the <a href=\"https://cscircles.cemc.uwaterloo.ca/java_visualize/\">Java Visualizer</a> or your IDE debugger helpful."
         
 tags:
   - iterations
