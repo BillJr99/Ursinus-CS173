@@ -117,6 +117,29 @@ info:
       title: Nested Loops
       questions:
         - How many times does the inner loop print statement execute?
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Scanner;
+        
+        public class Main {
+            public static void main(String[] args) {
+                String x = "test";
+                
+                boolean containsT = false;
+                int numT = 0;
+                
+                for(int i = 0; i < x.length(); i++) {
+                    if(x.charAt(i) == 't') {
+                        containsT = true;
+                        numT++;
+                    }
+                }
+            }
+        }
+        ]]></script>     
+      title: Iterative Algorithms Using the String
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
         
 tags:
   - iterations
