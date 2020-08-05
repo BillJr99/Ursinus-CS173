@@ -502,7 +502,8 @@ schedule:
     points: 100
 - week: "9"
   date: "2"
-  title: "Classes" 
+  title: "Classes and Inheritance"
+  link: "Activities/Inheritance"  
 - week: "9"
   date: "3"
   title: "File I/O"
