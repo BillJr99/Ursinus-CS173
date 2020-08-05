@@ -431,6 +431,7 @@ schedule:
 - week: "7"
   date: "2"
   title: "Arrays" 
+  link: "Activities/Arrays"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Due"
     dlink: false    
@@ -440,7 +441,7 @@ schedule:
     rlink: false    
 - week: "7"
   date: "3"
-  title: "ArrayLists and Generic/Template Data Structures"
+  title: "2D Arrays" 
   deliverables:  
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
@@ -450,7 +451,7 @@ schedule:
     points: 100
 - week: "8"
   date: "0"
-  title: "2D Arrays" 
+  title: "ArrayLists and Generic/Template Data Structures"
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false        
