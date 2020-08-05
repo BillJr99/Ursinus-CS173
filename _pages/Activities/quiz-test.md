@@ -10,13 +10,13 @@ info:
     questions:
       - text: "What is 9 + 5"
         label: nineplusfive
-        visible: True
+        visible: true
       - text: "CS173"
         label: coursename
-        visible: False
+        visible: false
       - text: "What is your name?"
         label: "name"
-        visible: True
+        visible: true
       
 tags:
   - java

@@ -43,7 +43,7 @@ googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
     <form id="quizform" action="mailto:{{ page.info.email }}" method="post">
     {% for question in page.info.questions %}
     <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
-    {% if question.visible == True %}
+    {% if question.visible == true %}
     {{ question.text }}: <input type="text" name="{{ question.label }}" />
     <br>
     {% endif %}
