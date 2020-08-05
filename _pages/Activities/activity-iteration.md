@@ -142,7 +142,7 @@ info:
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
       questions:
         - "For what values of <code>i</code> will the character <code>&lsquo;t&rsquo;</code> be found in this <code>String</code>?  You may find the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/>Java Visualizer</a> or your IDE debugger helpful."
-        - "Write a function that accepts a <code>String x</code>, a <code>char c</code>, and an <code>int n</code>.  Return the index of the <code>n&lsquo;th</code> instance of the character <code>c</code> in the <code>String x</code>.  Use the <code>indexOf()</code> method in a loop."
+        - "Write a function that accepts a <code>String x</code>, a <code>char c</code>, and an <code>int n</code>.  Return the index of the <code>n&rsquo;th</code> instance of the character <code>c</code> in the <code>String x</code>.  Use the <code>indexOf()</code> method in a loop."
         
 tags:
   - iterations
