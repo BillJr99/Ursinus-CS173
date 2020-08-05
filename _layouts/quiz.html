@@ -1,0 +1,60 @@
+---
+layout: default
+
+directions: Please answer the questions provided.
+
+submission: Submit your answers via the form on this page.
+
+googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/util.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+<!--Syntax highlighting in Javascript!-->
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shCore.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushJScript.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushCpp.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!--Syntax highlighting in Javascript!-->
+<!--reCAPTCHA-->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<!--reCAPTCHA-->
+
+ <script>
+   function onSubmit(token) {
+     document.getElementById("quizform").submit();
+   }
+ </script>
+ 
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>   
+    
+    <h2>Directions</h2>
+    {{ layout.directions }}
+    
+    <form id="quizform" action="mailto:{{ page.info.email }}" method="post">
+    {% for question in page.info.questions %}
+    <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
+    {% if question.visible == True %}
+    {{ question.text }}: <input type="text" name="{{ question.label }}" />
+    <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}" />
+    {% endif %}
+    {% endfor %}
+	
+    <button class="g-recaptcha" 
+        data-sitekey="{{ layout.googlerecaptchakey }}" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+    </form>
+    
+    {{ content }} 
+  </div>
+</div>
