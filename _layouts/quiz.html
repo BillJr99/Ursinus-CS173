@@ -40,7 +40,7 @@ googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
     <h2>Directions</h2>
     {{ layout.directions }}
     
-    <h2>Quiz{% if page.info.points %} ({{ page.info.points }}){% endif %}</h2>
+    <h2>Quiz{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
     
     <form id="quizform" action="mailto:{{ page.info.email }}" method="post">
     
@@ -70,6 +70,8 @@ googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
             
             {% endfor %}            
     </div>    
+    
+    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey }}"></div>
    
     <button class="g-recaptcha" 
         data-sitekey="{{ layout.googlerecaptchakey }}" 
