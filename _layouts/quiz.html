@@ -40,15 +40,37 @@ googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
     <h2>Directions</h2>
     {{ layout.directions }}
     
+    <h2>Quiz{% if page.info.points %} ({{ page.info.points }}){% endif %}</h2>
+    
     <form id="quizform" action="mailto:{{ page.info.email }}" method="post">
-    {% for question in page.info.questions %}
-    <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
-    {% if question.visible == true %}
-    {{ question.text }}: <input type="text" name="{{ question.label }}" />
-    <br>
-    {% endif %}
-    {% endfor %}
-	
+    
+    <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+            <div style="width: 100%; display: table-row; background-color: black; color: white;">
+                <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                    <strong>Question</strong>
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                    <strong>Response</strong>
+                </div>
+            </div>
+            
+            {% for question in page.info.questions %}
+            <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
+            
+            {% if question.visible == true %}
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                {{ question.text }}
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" name="{{ question.label }}" width="100%" />
+                </div>
+            </div> 
+            {% endif %}
+            
+            {% endfor %}            
+    </div>    
+   
     <button class="g-recaptcha" 
         data-sitekey="{{ layout.googlerecaptchakey }}" 
         data-callback='onSubmit' 

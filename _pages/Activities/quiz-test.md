@@ -6,6 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Test Quiz"
 
 info:
     email: "billmongan@gmail.com"
+    points: 3
     
     questions:
       - text: "What is 9 + 5"
