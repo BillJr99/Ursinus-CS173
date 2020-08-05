@@ -45,7 +45,7 @@ googlerecaptchakey: 6Lds07oZAAAAAOT3drVdmXVDXV6uZVeu1GMYbS8A
     <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
     {% if question.visible == True %}
     {{ question.text }}: <input type="text" name="{{ question.label }}" />
-    <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}" />
+    <br>
     {% endif %}
     {% endfor %}
 	

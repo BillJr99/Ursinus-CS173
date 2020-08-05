@@ -13,8 +13,10 @@ info:
         visible: True
       - text: "CS173"
         label: coursename
+        visible: False
       - text: "What is your name?"
         label: "name"
+        visible: True
       
 tags:
   - java
