@@ -34,6 +34,7 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 8.  A fun fact about yourself
 9.  Anything else you think I should know?
 10.  Please attach **a headshot** picture to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
+11.  Finally, we will be sharing work with each other through electronic means.  To protect your privacy, you are welcome to use a pseudonym on your work in lieu of your name.  Let me know if you'd like to use a pseudonym on your assignments, and what name you'll use.
 
 ## Web Poll for Office Hours
 
