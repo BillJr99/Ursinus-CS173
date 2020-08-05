@@ -41,9 +41,9 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
     <h2>Directions</h2>
     {{ layout.directions }}
     
-    <h2>Quiz{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
+    <h2>{{ page.info.quizname }}{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
     
-    <form id="quizform" action="mailto:{{ page.info.email }}" method="post">
+    <form id="quizform" action="mailto:{{ page.info.email }}" method="post" {% if page.info.enctype %}enctype="{{ page.info.enctype}}"{% endif %}>
     
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
             <div style="width: 100%; display: table-row; background-color: black; color: white;">
@@ -82,32 +82,3 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
   </div>
 </div>
 
-<!-- Example Quiz Markdown:
-
----
-layout: quiz
-permalink: /Quizzes/Test
-title: "CS173: Intro to Computer Science - Test Quiz"
-excerpt: "CS173: Intro to Computer Science - Test Quiz"
-
-info:
-    email: "billmongan@gmail.com"
-    points: 3
-    
-    questions:
-      - text: "What is 9 + 5"
-        label: nineplusfive
-        visible: true
-      - text: "CS173"
-        label: coursename
-        visible: false
-      - text: "What is your name?"
-        label: "name"
-        visible: true
-      
-tags:
-  - java
-  
----
-
--->
