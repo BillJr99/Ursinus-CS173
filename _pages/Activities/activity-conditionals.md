@@ -77,13 +77,13 @@ info:
             
             public static void main(String[] args) {
                 canRunForPresident(38);
-                canRunForPresident(21);
+                canRunForPresident2(21);
             }
         }
         ]]></script>         
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
       questions:
-        - Which code structure do you prefer and why?
+        - Which code structure (<code>canRunForPresident</code> or <code>canRunForPresident2</code>) do you prefer and why?
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
