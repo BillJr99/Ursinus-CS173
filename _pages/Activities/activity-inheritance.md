@@ -15,7 +15,7 @@ info:
     
   models:
     - model: |
-        <img src="../examples/inheritance-relationship.png" alt="Diagram of the Relationships between Inherited Classes">
+        <img src="../images/examples/inheritance-relationship.png" alt="Diagram of the Relationships between Inherited Classes">
       title: Inheritance Relationship
       questions:
         - Which items in the model are &quot;Vehicles?&quot;  Which are &quot;Homes?&quot;

@@ -17,7 +17,7 @@ info:
     
   models:
     - model: |
-       <img src="../images/java-visualizer-book-classes.png" alt="Java Visualizer Class Overview of a Book Class"><br><small>Java Visualizer: https://cscircles.cemc.uwaterloo.ca/java_visualize</small>
+       <img src="../images/examples/java-visualizer-book-classes.png" alt="Java Visualizer Class Overview of a Book Class"><br><small>Java Visualizer: <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize>https://cscircles.cemc.uwaterloo.ca/java_visualize</a></small>
       title: Objects and Classes
       questions:
         - Consider the code example in the embedded frame, and the visualization of the class structures in the model.  What do you notice about the name of the class and the file in which it is saved?
