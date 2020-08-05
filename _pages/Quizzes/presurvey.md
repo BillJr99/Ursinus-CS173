@@ -8,7 +8,7 @@ info:
     email: "billmongan@gmail.com"
     
     points: 0
-    quizname: Pre-Survey
+    quizname: "Welcome Survey"
     enctype: "multipart/form-data"
     
     questions:
