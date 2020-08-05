@@ -544,22 +544,23 @@ schedule:
     points: 100
 - week: "10"
   date: "3"
-  title: "Algorithms: Recursion and Merge Sort" 
+  title: "Searching and Sorting" 
+  link: "Activities/SearchingAndSorting"  
   readings:
-  - rtitle: "Exercise: Recursion"
-    rlink: "Modules/Recursion/Module"   
-    points: 3
+  - rtitle: "Exercise: Insertion Sort"
+    rlink: "Modules/InsertionSort/Module"    
+    points: 3  
 - week: "11"
   date: "0"
-  title: "Searching and Sorting" 
-  link: "Activities/SearchingAndSorting"
+  title: "Algorithms: Recursion and Merge Sort" 
+  link: "Activities/Recursion"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false   
     points: 100
   readings:
-  - rtitle: "Exercise: Insertion Sort"
-    rlink: "Modules/InsertionSort/Module"    
+  - rtitle: "Exercise: Recursion"
+    rlink: "Modules/Recursion/Module"   
     points: 3
 - week: "11"
   date: "1"

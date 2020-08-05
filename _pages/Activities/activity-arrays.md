@@ -101,6 +101,7 @@ info:
         <img src="../images/examples/java-visualizer-2darrayidentity.png" alt="Java Visualizer Example of a 2D Array" />
       title: 2D Arrays and Traversals
       questions:
+        - How would you describe a 2D array in terms of usual 1D arrays?
         - Run this code in the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a>.  What is the output?
         - Re-draw the arrays <code>mat1</code> and <code>mat2</code> as a square grid. 
         - Is it possible to re-size these arrays if you need to add additional elements later?  If so, how, and if not, why not?
@@ -139,6 +140,7 @@ info:
         - What would be the effect of creating an <code>ArrayList</code> that stored another <code>ArrayList</code>?
         - What is the size of the <code>ArrayList</code> prior to calling <code>remove()</code>?  What is the size after the call?
         - Suppose a friend needed to remove every other element from an <code>ArrayList</code> (say, the ones with an even numbered index).  Looping for <code>i = 0</code> to <code>arr.size()</code>, they remove each element if <code>(i % 2 == 0)</code> but the wrong elements seem to be removed.  What happened, and what can we do instead?
+        
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html
       title: Array Basics
