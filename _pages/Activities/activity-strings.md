@@ -31,11 +31,11 @@ info:
         - Unlike re-assigning a primitive variable, assigning a variable to an object creates a new object.  A <code>String</code> is a class that allocates memory for and stores text. Since String text cannot be reassigned once it is allocated (and must be re-created instead), a <code>String</code> is called an <strong>immutable</strong> object.  Why can’t a <code>String</code> be re-assigned like an <code>int</code> or <code>double</code> can?
     - title: <code>String</code> Manipulation
       model: |
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#concat(java.lang.String)" width="100%" height="580" style="pointer-events:none;" scrolling="no"></iframe>
+        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#concat(java.lang.String)" width="100%" height="700" style="pointer-events:none;" scrolling="no"></iframe>
         <br>
         <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#indexOf(int)" width="100%" height="600" style="pointer-events:none;" scrolling="no"></iframe>
         <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#indexOf(int,int)" width="100%" height="740" style="pointer-events:none;" scrolling="no"></iframe>
+        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#indexOf(int,int)" width="100%" height="800" style="pointer-events:none;" scrolling="no"></iframe>
         <br>
         <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#replace(char,char)" width="100%" height="700" style="pointer-events:none;" scrolling="no"></iframe>
         <br>
