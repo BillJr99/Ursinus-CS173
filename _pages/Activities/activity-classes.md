@@ -23,7 +23,7 @@ info:
         - Consider the code example in the embedded frame, and the visualization of the class structures in the model.  What do you notice about the name of the class and the file in which it is saved?
         - What data does a <code>Book</code> contain?
         - How is each <code>Book</code> instantiated in <code>main()</code>?
-        - Harry Potter was re-released in 2013 with 336 pages.  What would you change in the code to reflect this?
+        - Other editions of The Great Gatsby were released with 180 pages.  What would you change in the code to reflect this?
         - What would you write to print the author and title of each of these books? 
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaClassExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
