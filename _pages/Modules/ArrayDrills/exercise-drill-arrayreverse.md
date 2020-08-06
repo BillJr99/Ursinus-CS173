@@ -6,6 +6,7 @@ excerpt: "CS174: OOP - Drills - Creating the reverse of an array"
 
 info:
   prev: "./ArrayMean"
+  next: "./ArrayInsert"
   instructions: "Fill in the method <code>getReverseArray</code> in <code>ArrayUtils.java</code> to return a new array which is the reverse of a given array.  For example, the array {0, 5, 2, 3} would turn into the array {3, 2, 5, 0}."
   goals:
     - To do proper array indexing
