@@ -75,7 +75,7 @@ info:
         ]]></script>     
       title: Palendrome Checker
       questions: 
-        - Write a function that checks if two <code>String<code>s are equal, by checking them character by character.  
+        - Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  
         - Use this comparison function to determine if two <code>String</code>s are palendromes of each other.  Two <code>String</code>s are panendromes if their sorted characters are equal to one another.
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	

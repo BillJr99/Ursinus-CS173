@@ -107,7 +107,7 @@ info:
         - Run this code in the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a>.  What is the output?
         - Re-draw the arrays <code>mat1</code> and <code>mat2</code> as a square grid. 
         - Is it possible to re-size these arrays if you need to add additional elements later?  If so, how, and if not, why not?
-        - Develop pseudocode to determine whether a 2D array is a &quot;magic array&quot;, in which the sum of each column and row of a square array is the same value.  A sample 3x3 magic array is: <code>{ 4, 9, 2, 3, 5, 7, 8, 1, 6 }</code>.
+        - "Develop pseudocode to determine whether a 2D array is a &quot;magic array&quot;, in which the sum of each column and row of a square array is the same value.  A sample 3x3 magic array is: <code>[ 4, 9, 2, 3, 5, 7, 8, 1, 6 ]</code>."
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
