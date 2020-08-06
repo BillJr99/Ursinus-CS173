@@ -18,9 +18,11 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html
       title: Nested Loops
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html 
-      title: String Loops 
+      title: <code>String</code> Loops 
      
   additional_practice:
+    - link: https://repl.it/community/classrooms/20700/assignments/146567
+      title: Counting Practice
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html
       title: Loop Analysis
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/Exercises.html
@@ -30,7 +32,15 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQselfDivisorA.html
       title: Self Divisors using the Modulus, Loops, and Conditionals
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
-      title: String Iteration    
+      title: <code>String</code> Iteration    
+    - link: https://repl.it/community/classrooms/20700/assignments/146533
+      title: Looping over Every Other Character of a <code>String</code>
+    - link: https://repl.it/community/classrooms/20700/assignments/146572
+      title: Printing Only the Vowels of a <code>String</code>
+    - link: https://repl.it/community/classrooms/20700/assignments/146541
+      title: Prime Checker
+    - link: https://repl.it/community/classrooms/20700/assignments/146559  
+      title: The Fibonacci Sequence
 
   models:
     - model: |

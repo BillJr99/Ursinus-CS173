@@ -100,11 +100,14 @@ info:
         <br>
         <img src="../images/examples/java-visualizer-2darrayidentity.png" alt="Java Visualizer Example of a 2D Array" />
       title: 2D Arrays and Traversals
+      embed: |
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
       questions:
         - How would you describe a 2D array in terms of usual 1D arrays?
         - Run this code in the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a>.  What is the output?
         - Re-draw the arrays <code>mat1</code> and <code>mat2</code> as a square grid. 
         - Is it possible to re-size these arrays if you need to add additional elements later?  If so, how, and if not, why not?
+        - Develop pseudocode to determine whether a 2D array is a &quot;magic array&quot;, in which the sum of each column and row of a square array is the same value.  A sample 3x3 magic array is: <code>{ 4, 9, 2, 3, 5, 7, 8, 1, 6 }</code>.
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
@@ -210,7 +213,9 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/cookieOrderA.html
       title: Cookie Order
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/cookieOrderB.html 
-      title: Cookie Order with Removal      
+      title: Cookie Order with Removal     
+    - link: https://repl.it/community/classrooms/20700/assignments/146519
+      title: <code>ArrayList</code> Practice    
       
 tags:
   - arrays

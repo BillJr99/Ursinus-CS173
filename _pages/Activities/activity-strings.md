@@ -48,7 +48,35 @@ info:
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Arrays;
         
+        public class Main {
+            public static void main(String[] args) {
+                String x = "bat";
+                String y = "tab";
+                
+                /* Sorting the letters in a string by converting the string 
+                 * to an array of individual characters.
+                 * https://www.geeksforgeeks.org/sort-a-string-in-java-2-different-ways/
+                 */
+                char xArray = x.toCharArray();
+                char yArray = y.toCharArray();
+                
+                Arrays.sort(xArray); // xArray now contains "abt"
+                Arrays.sort(yArray); // yArray now contains "abt"
+                
+                // Reconstruct the Strings from the sorted arrays
+                String x = new String(xArray); // x now contains "abt"
+                String y = new String(yArray); // y now contains "abt"
+            }
+        }
+        ]]></script>     
+      title: Palendrome Checker
+      questions: 
+        - Write a function that checks if two <code>String<code>s are equal, by checking them character by character.  
+        - Use this comparison function to determine if two <code>String</code>s are palendromes of each other.  Two <code>String</code>s are panendromes if their sorted characters are equal to one another.
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
       title: Strings
@@ -56,11 +84,32 @@ info:
       title: String Methods
 
   additional_practice:
+    - link: https://repl.it/community/classrooms/20700/assignments/146459
+      title: Printing the length of a <code>String</code>
+    - link: https://repl.it/community/classrooms/20700/assignments/146544
+      title: The <code>charAt</code> Method
+    - link: https://repl.it/community/classrooms/20700/assignments/146534
+      title: The <code>indexOf</code> Method
+    - link: https://repl.it/community/classrooms/20700/assignments/146536
+      title: Substrings
+    - link: https://repl.it/community/classrooms/20700/assignments/146558
+      title: <code>String</code> Methods Practice
+    - link: https://repl.it/community/classrooms/20700/assignments/146561
+      title: The <code>substring</code> method
+    - link: https://repl.it/community/classrooms/20700/assignments/146555
+      title: Testing for Substrings at the End of a <code>String</code>
+    - link: https://repl.it/community/classrooms/20700/assignments/146553
+      title: Testing for <code>String</code> Equality
+    - link: https://repl.it/community/classrooms/20700/assignments/146570
+      title: Reversing a <code>String</code>     
+    - link: https://repl.it/community/classrooms/20700/assignments/146565
+      title: Mixed Case
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-12-practice-coding.html
       title: Coding with Objects
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
-      title: String Manipulation
-
+      title: <code>String</code> Manipulation
+    - link: https://repl.it/community/classrooms/20700/assignments/146564
+      title: <code>String</code> Pluralizer
 tags:
   - strings
   
