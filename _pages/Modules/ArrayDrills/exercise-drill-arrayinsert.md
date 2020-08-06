@@ -6,7 +6,7 @@ excerpt: "CS174: OOP - Drills - Array Insert"
 
 info:
   prev: "./ArrayReverse"
-  instructions: "Modify the <code>insertElement</code> method in <code>ArrayInsert.java</code> to insert an element at a particular index.  For example, if you have the array <code>{0, 5, 4, 8, 2}</code> and you insert the element <code>1</code> at index <code>2</code>, you should create a new array with the elements <code>{0, 5, <b>1</b>, 4, 8, 2}</code>. <p><b>NOTE:</b> The tediousness of this seemingly simple operation is what motivates us to use other data structures such as an <code>ArrayList</code> or linked list."
+  instructions: "Modify the <code>insertElement</code> method in <code>ArrayUtils.java</code> to insert an element at a particular index.  For example, if you have the array <code>{0, 5, 4, 8, 2}</code> and you insert the element <code>1</code> at index <code>2</code>, you should create a new array with the elements <code>{0, 5, <b>1</b>, 4, 8, 2}</code>. <p><b>NOTE:</b> The tediousness of this seemingly simple operation is what motivates us to use other data structures such as an <code>ArrayList</code> or linked list."
   goals:
     - To do proper array indexing
     - To use loops in concert with arrays
