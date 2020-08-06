@@ -13,7 +13,7 @@ info:
   credit_hours: "4 Semester Hours"
   course_homepage: "https://www.billmongan.com/Ursinus-CS173/"
   chatlink: https://groupme.com/join_group/60668915/dGoprIMb
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/_layouts/OneNote.aspx?id=%2Fpersonal%2Fwmongan_ursinus_edu%2FDocuments%2FClass%20Notebooks%2FCS173%20Fall%202020
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020
   ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/09/07"
