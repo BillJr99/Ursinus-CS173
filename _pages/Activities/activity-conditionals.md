@@ -15,7 +15,7 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public void canRunForPresident(int age) {
+            public static void canRunForPresident(int age) {
                 if(age >= 35) {
                     System.out.println("You are old enough to run for President of the United States!");
                 }
@@ -34,7 +34,7 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public void canRunForPresident(int age) {
+            public static void canRunForPresident(int age) {
                 if(age >= 35) {
                     System.out.println("You are old enough to run for President of the United States!");
                 } else {
