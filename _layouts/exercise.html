@@ -90,7 +90,7 @@ facultyemail: "billmongan@gmail.com"
         <div id="correctArea"></div>
         
         <p>
-        <strong>Enter your e-mail address before clicking Run:</strong> <input type="text" id="studentemail" name="studentemail" oninput="if(document.getElementById('studentemail').value.contains('@') && document.getElementById('studentemail').value.contains('.')) document.getElementById('runbutton').disabled = false;"><br>
+        <strong>Enter your e-mail address before clicking Run:</strong> <input type="text" id="studentemail" name="studentemail" onKeyUp="if(document.getElementById('studentemail').value.contains('@') && document.getElementById('studentemail').value.contains('.')) document.getElementById('runbutton').disabled = false;"><br>
         {% if layout.formprocessor and layout.formprocessor != false %}
         Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong><br>
         {% endif %}
