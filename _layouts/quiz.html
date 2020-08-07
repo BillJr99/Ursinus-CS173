@@ -48,6 +48,8 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
     <!-- Include page.title for reference -->
     <input type="hidden" name="title" value="{{ page.title }}">
 
+    <!-- Magic Word: formprocessor only sends if this is present -->
+    <input type="hidden" name="magic" value="ursinus">
     
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
             <div style="width: 100%; display: table-row; background-color: black; color: white;">
@@ -60,7 +62,7 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
             </div>
             
             {% for question in page.info.questions %}
-            <input type="hidden" name="{{ question.label }}q" value="{{ question.text }}">
+            <input type="hidden" name="{{ question.label }}-q" value="{{ question.text }}">
             
             {% if question.visible == true %}
             <div style="width: 100%; display: table-row;">
@@ -77,7 +79,7 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
             
             <!-- facultyemail and studentemail fields are required to send mail on the form processor -->
             <input type="hidden" name="facultyemail" value="{{ page.info.email }}">
-            <input type="hidden" name="{{ question.label }}q" value="What is your e-mail address?">
+            <input type="hidden" name="studentemail-q" value="What is your e-mail address?">
             
             <div style="width: 100%; display: table-row;">
                 <div style="display: table-cell; padding:5px; width:50%;">
