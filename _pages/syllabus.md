@@ -404,6 +404,12 @@ schedule:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false    
 - week: "6"
+  date: "0"
+  title: "Iteration"
+- week: "6"
+  date: "1"
+  title: "Iteration"  
+- week: "6"
   date: "2"
   title: "Iteration, Randomness, and the do loop"
   deliverables:
@@ -682,8 +688,6 @@ university:
     kdate: "2021/05/13"
     kdisplay: false    
   fallholidays:
-  - date: "2020/10/19"
-  - date: "2020/10/20"
   - date: "2020/11/25"
   - date: "2020/11/26"
   - date: "2020/11/27" 
