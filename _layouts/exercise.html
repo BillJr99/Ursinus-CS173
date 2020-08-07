@@ -90,7 +90,7 @@ facultyemail: "billmongan@gmail.com"
         <div id="correctArea"></div>
         
         <p>
-        Enter your e-mail address: <input type="text" id="studentemail" name="studentemail"><br><br>
+        <strong>Enter your e-mail address before clicking Run:</strong> <input type="text" id="studentemail" name="studentemail"><br><br>
         
         {% if layout.formprocessor and layout.formprocessor != false %}
         Clicking Run below will check your work and, if it passes, will submit your work automatically.<br>
@@ -193,6 +193,12 @@ facultyemail: "billmongan@gmail.com"
                         var xhttp = new XMLHttpRequest();
                         xhttp.open("POST", "{{ layout.formprocessor }}", true)
                         xhttp.setRequestHeader("Content-type", "{{ layout.enctype }}");
+                        
+                        xhttp.onreadystatechange = function() {
+                            if (xhr.readyState == XMLHttpRequest.DONE) {
+                                feedback.setValue(feedback.getValue() + "<br><br>" + xhttp.responseText);
+                            }
+                        }
                         
                         var formdata = new FormData();
                         formdata.append("facultyemail", "{{ layout.facultyemail }}"); // required
