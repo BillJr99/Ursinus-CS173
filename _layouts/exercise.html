@@ -90,7 +90,7 @@ facultyemail: "billmongan@gmail.com"
         <div id="correctArea"></div>
         
         <p>
-        Enter your e-mail address: <input type="text" name="studentemail"><br>
+        Enter your e-mail address: <input type="text" name="studentemail"><br><br>
         
         <button type = "button" onclick = "runCode()">Run</button>
         </p>
@@ -165,7 +165,8 @@ facultyemail: "billmongan@gmail.com"
                     
                     <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
                     {% if layout.formprocessor and layout.formprocessor != false %}
-                    submitcode = ''
+                        submitcode = '';
+                        
                         for (var i in editors) {
                             submitcode += editors[i].getValue();
                             submitcode += "\n";
@@ -178,7 +179,7 @@ facultyemail: "billmongan@gmail.com"
                         var formdata = new FormData();
                         formdata.append("facultyemail", "{{ layout.facultyemail }}"); // required
                         formdata.append("magic", "ursinus"); // required
-                        formdata.append("title", "{{ page.info.title }}"); // required
+                        formdata.append("title", "{{ page.title }}"); // required
                         formdata.append("studentemail", document.getElementById("studentemail").value); //required
                         formdata.append("code", submitcode);
                         xhttp.send(formdata);
