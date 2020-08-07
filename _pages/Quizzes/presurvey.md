@@ -10,7 +10,7 @@ info:
     
     points: 0
     quizname: "Welcome Survey"
-    enctype: "text/plain"
+    enctype: "application/x-www-form-urlencoded"
     
     questions:
       - text: "CS173"
