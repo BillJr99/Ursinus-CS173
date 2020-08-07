@@ -181,7 +181,7 @@ facultyemail: "billmongan@gmail.com"
                         
                         var xhttp = new XMLHttpRequest();
                         xhttp.open("POST", "{{ layout.formprocessor }}", true)
-                        xhttp.setRequestHeader("Content-type", "{{ layout.encrype }}");
+                        xhttp.setRequestHeader("Content-type", "{{ layout.enctype }}");
                         
                         var formdata = new FormData();
                         formdata.append("facultyemail", "{{ layout.facultyemail }}"); // required
