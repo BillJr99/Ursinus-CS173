@@ -93,10 +93,10 @@ facultyemail: "billmongan@gmail.com"
         Enter your e-mail address: <input type="text" name="studentemail"><br><br>
         
         {% if layout.formprocessor and layout.formprocessor != false %}
-        Clicking Run below will check your work and, if it passes, will submit your work automatically.
+        Clicking Run below will check your work and, if it passes, will submit your work automatically.<br>
         {% endif %}
         {% if page.processor.submitformlink and page.processor.submitformlink != false %}
-        Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions.
+        Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions.<br>
         {% endif %}
         
         <button type = "button" onclick = "runCode()">Run</button>
