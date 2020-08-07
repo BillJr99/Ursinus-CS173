@@ -43,7 +43,11 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
     
     <h2>{{ page.info.quizname }}{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
     
-    <form id="quizform" action="mailto:{{ page.info.email }}" method="post" {% if page.info.enctype %}enctype="{{ page.info.enctype}}"{% endif %}>
+    <form id="quizform" action="{{page.info.action}}" method="post" {% if page.info.enctype %}enctype="{{ page.info.enctype}}"{% endif %}>
+    
+    <!-- Include page.info.title for reference -->
+    <input type="hidden" name="title" value="{{ page.info.title }}">
+
     
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
             <div style="width: 100%; display: table-row; background-color: black; color: white;">
@@ -70,6 +74,19 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
             {% endif %}
             
             {% endfor %}            
+            
+            <!-- facultyemail and studentemail fields are required to send mail on the form processor -->
+            <input type="hidden" name="facultyemail" value="{{ page.info.email }}">
+            <input type="hidden" name="{{ question.label }}q" value="What is your e-mail address?">
+            
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                What is your e-mail address?
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" name="studentemail" style="width: 100%;" />
+                </div>
+            </div>             
     </div>    
     
     <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey }}" data-callback="enableSubmit"></div>

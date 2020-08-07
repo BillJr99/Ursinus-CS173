@@ -6,6 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Pre Survey"
 
 info:
     email: "billmongan@gmail.com"
+    action: "http://192.204.148.92:8082/"
     
     points: 0
     quizname: "Welcome Survey"
