@@ -195,6 +195,8 @@ facultyemail: "billmongan@gmail.com"
                         xhttp.setRequestHeader("Content-type", "{{ layout.enctype }}");
                         
                         xhttp.onreadystatechange = function() {
+                            alert(xhttp.readyState);
+                            alert(xhttp.response);
                             if (xhttp.readyState == XMLHttpRequest.DONE) {
                                 feedback.setValue(feedback.getValue() + "\n\n" + xhttp.response);
                             }
