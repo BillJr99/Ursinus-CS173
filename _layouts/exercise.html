@@ -187,14 +187,14 @@ facultyemail: "billmongan@gmail.com"
                         
                         for (var i in editors) {
                             submitcode += editors[i].getValue();
-                            submitcode += "\n";
+                            submitcode += "\n\n";
                         }
                         
                         var xhttp = new XMLHttpRequest();
                         xhttp.open("POST", "{{ layout.formprocessor }}", true)
                         xhttp.setRequestHeader("Content-type", "{{ layout.enctype }}");
                         
-                        xhttp.onload = function() {
+                        xhttp.onreadystatechange = function() {
                             alert(xhttp.readyState);
                             alert(xhttp.response);
                             if (xhttp.readyState == XMLHttpRequest.DONE) {
