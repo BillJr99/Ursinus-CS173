@@ -196,7 +196,7 @@ facultyemail: "billmongan@gmail.com"
                         
                         xhttp.onreadystatechange = function() {
                             if (xhttp.readyState == XMLHttpRequest.DONE) {
-                                feedback.setValue(feedback.getValue() + "<br><br>" + xhttp.responseText);
+                                feedback.setValue(feedback.getValue() + "\n\n" + xhttp.response);
                             }
                         }
                         
