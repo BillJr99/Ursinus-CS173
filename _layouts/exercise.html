@@ -1,5 +1,9 @@
 ---
 layout: default
+
+formprocessor: "http://192.204.148.92:8082/"
+enctype: "application/x-www-form-urlencoded"
+facultyemail: "billmongan@gmail.com"
 ---
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
@@ -83,10 +87,11 @@ layout: default
         {{ page.info.instructions }}
         {% endif %}
         
-        
         <div id="correctArea"></div>
         
         <p>
+        Enter your e-mail address: <input type="text" name="studentemail"><br>
+        
         <button type = "button" onclick = "runCode()">Run</button>
         </p>
         
@@ -151,10 +156,32 @@ layout: default
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
+                    <!-- Setting a page.processor.submitformlink in the markdown will pop up an iframe with a page of your choice -->
                     {% if page.processor.submitformlink and page.processor.submitformlink != false %}
                     correctArea.innerHTML += `
                     <iframe src = "{{ page.processor.submitformlink | strip }}" width=800 height=500>
                     `;
+                    {% endif %}
+                    
+                    <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
+                    {% if layout.formprocessor and layout.formprocessor != false %}
+                    submitcode = ''
+                        for (var i in editors) {
+                            submitcode += editors[i].getValue();
+                            submitcode += "\n";
+                        }
+                        
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.open("POST", "{{ layout.action }}", true)
+                        xhttp.setRequestHeader("Content-type", "{{ layout.encrype }}");
+                        
+                        var formdata = new FormData();
+                        formdata.append("facultyemail", "{{ layout.facultyemail }}"); // required
+                        formdata.append("magic", "ursinus"); // required
+                        formdata.append("title", "{{ page.info.title }}"); // required
+                        formdata.append("studentemail", document.getElementById("studentemail").value); //required
+                        formdata.append("code", submitcode);
+                        xhttp.send(formdata);
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}

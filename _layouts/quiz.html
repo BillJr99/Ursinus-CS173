@@ -7,6 +7,9 @@ submission: Submit your answers via the form on this page.
 
 googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
 
+formprocessor: "http://192.204.148.92:8082/"
+enctype: "application/x-www-form-urlencoded"
+facultyemail: "billmongan@gmail.com"
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -43,7 +46,7 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
     
     <h2>{{ page.info.quizname }}{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
     
-    <form id="quizform" action="{{page.info.action}}" method="post" {% if page.info.enctype %}enctype="{{ page.info.enctype}}"{% endif %}>
+    <form id="quizform" action="{{layout.formprocessor}}" method="post" {% if layout.enctype %}enctype="{{ layout.enctype}}"{% endif %}>
     
     <!-- Include page.title for reference -->
     <input type="hidden" name="title" value="{{ page.title }}">
@@ -78,7 +81,7 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
             {% endfor %}            
             
             <!-- facultyemail and studentemail fields are required to send mail on the form processor -->
-            <input type="hidden" name="facultyemail" value="{{ page.info.email }}">
+            <input type="hidden" name="facultyemail" value="{{ layout.facultyemail }}">
             <input type="hidden" name="studentemail-q" value="What is your e-mail address?">
             
             <div style="width: 100%; display: table-row;">
