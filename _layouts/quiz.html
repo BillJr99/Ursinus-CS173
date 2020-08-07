@@ -45,8 +45,8 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
     
     <form id="quizform" action="{{page.info.action}}" method="post" {% if page.info.enctype %}enctype="{{ page.info.enctype}}"{% endif %}>
     
-    <!-- Include page.info.title for reference -->
-    <input type="hidden" name="title" value="{{ page.info.title }}">
+    <!-- Include page.title for reference -->
+    <input type="hidden" name="title" value="{{ page.title }}">
 
     
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
