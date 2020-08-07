@@ -199,8 +199,8 @@ facultyemail: "billmongan@gmail.com"
                         formdata.append("magic", "ursinus"); // required
                         formdata.append("title", "{{ page.title }}"); // required
                         formdata.append("studentemail", document.getElementById("studentemail").value); //required
-                        formdata.append("code", urlencodeFormData(submitcode));
-                        xhttp.send(formdata);
+                        formdata.append("code", submitcode);
+                        xhttp.send(urlencodeFormData(formdata));
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
