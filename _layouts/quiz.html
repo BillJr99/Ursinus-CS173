@@ -10,6 +10,8 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
 formprocessor: "http://192.204.148.92:8082/"
 enctype: "application/x-www-form-urlencoded"
 facultyemail: "billmongan@gmail.com"
+
+formprocessordirections: "<strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -48,7 +50,7 @@ facultyemail: "billmongan@gmail.com"
     
     <strong>You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>
     
-    <form id="quizform" action="{{layout.formprocessor}}" method="post" {% if layout.enctype %}enctype="{{ layout.enctype}}"{% endif %}>
+    <form id="quizform" action="{{layout.formprocessor | strip}}" method="post" {% if layout.enctype %}enctype="{{ layout.enctype | strip}}"{% endif %}>
     
     <!-- Include page.title for reference -->
     <input type="hidden" name="title" value="{{ page.title }}">
@@ -67,7 +69,7 @@ facultyemail: "billmongan@gmail.com"
             </div>
             
             {% for question in page.info.questions %}
-            <input type="hidden" name="{{ question.label }}-q" value="{{ question.text }}">
+            <input type="hidden" name="{{ question.label }}-q" value="{{ question.text | strip }}">
             
             {% if question.visible == true %}
             <div style="width: 100%; display: table-row;">
@@ -75,7 +77,7 @@ facultyemail: "billmongan@gmail.com"
                 {{ question.text }}
                 </div>
                 <div style="display: table-cell; padding:5px; width:50%;">
-                <input type="text" name="{{ question.label }}" style="width: 100%;" />
+                <input type="text" name="{{ question.label | strip }}" style="width: 100%;" />
                 </div>
             </div> 
             {% endif %}
@@ -83,7 +85,7 @@ facultyemail: "billmongan@gmail.com"
             {% endfor %}            
             
             <!-- facultyemail and studentemail fields are required to send mail on the form processor -->
-            <input type="hidden" name="facultyemail" value="{{ layout.facultyemail }}">
+            <input type="hidden" name="facultyemail" value="{{ layout.facultyemail | strip }}">
             <input type="hidden" name="studentemail-q" value="What is your e-mail address?">
             
             <div style="width: 100%; display: table-row;">
@@ -96,8 +98,10 @@ facultyemail: "billmongan@gmail.com"
             </div>             
     </div>    
     
-    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey }}" data-callback="enableSubmit"></div>
+    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey | strip }}" data-callback="enableSubmit"></div>
     
+    <br>
+    {{ layout.formprocessordirections }}<br><br>
     <input type="submit" value="Submit" id="submitbutton" disabled="disabled">
 
     </form>
