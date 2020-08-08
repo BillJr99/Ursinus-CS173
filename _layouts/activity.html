@@ -29,6 +29,18 @@ embed_directions: You can try out some code examples in this embedded developmen
   <div class="archive">
     <h1 class="page__title">{{ page.title }}</h1>
 
+    {% if page.info.prev or page.info.next %}
+    <p>
+    {% if page.info.prev %}
+    <button onclick="window.location.href = '{{ page.info.prev }} ';"> &lt--- Previous</button>
+    {% endif %}
+    {% if page.info.next %}
+    <button onclick="window.location.href = '{{ page.info.next }}';">Next ---&gt</button>
+    {% endif %}
+    </p>
+    <HR>
+    {% endif %}
+
     {% if page.info.goals %}
     <h1>Activity Goals</h1>
     The goals of this activity are:
