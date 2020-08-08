@@ -48,8 +48,6 @@ formprocessordirections: "<strong>You must be connected to the VPN for submissio
     
     <h2>{{ page.info.quizname }}{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
     
-    <strong>You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>
-    
     <form id="quizform" action="{{layout.formprocessor | strip}}" method="post" {% if layout.enctype %}enctype="{{ layout.enctype | strip}}"{% endif %}>
     
     <!-- Include page.title for reference -->
