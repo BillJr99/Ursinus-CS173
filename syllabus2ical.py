@@ -4,6 +4,12 @@ from datetime import datetime,timedelta
 import uuid
 from dateutil import tz
 
+# https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
+def rchop(s, suffix):
+    if suffix and s.endswith(suffix):
+        return s[:-len(suffix)]
+    return s
+    
 def stripnobool(val):
     if type(val) is bool:
         result = ""
@@ -98,7 +104,7 @@ def adddays(dt, n):
 def addweeks(dt, n):
     return dt + timedelta(days=7*n)
     
-def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U):
+def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U, tostring=True):
     dt = parseDate(startdate)
     weeknum = int(weeknum)
     dayidx = int(dayidx)
@@ -107,7 +113,10 @@ def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U):
     daynum = getDayNum(dayidx, M, T, W, R, F, S, U)
     dt = adddays(dt, daynum)
     
-    return getDateString(dt)
+    if tostring:
+        return getDateString(dt)
+    else:
+        return dt
 
 def geticalday(d):
     if d == 'M':
@@ -145,6 +154,7 @@ coursenum = postdict['info']['course_number']
 coursename = postdict['info']['course_title']
 startdate = postdict['info']['course_start_date']
 enddate = postdict['info']['course_end_date']
+homepage = postdict['info']['course_homepage']
 isM = postdict['info']['class_meets_days']['isM']
 isT = postdict['info']['class_meets_days']['isT']
 isW = postdict['info']['class_meets_days']['isW']
@@ -215,20 +225,34 @@ for item in postdict['schedule']:
     if 'readings' in item:
         for reading in item['readings']:      
             rtitle = reading['rtitle']
+            
             if 'rlink' in reading:
                 rlink = reading['rlink']
             else:
                 rlink = ""
+                
+            if rlink:
+                if not rlink.startswith("http"): 
+                    rlink = rchop(homepage, '/') + '/' + stripnobool(rlink)
+            else:
+                rlink = stripnobool(rlink)
             
             description = stripnobool(description) + "\\nReading: " + stripnobool(rtitle) + " " + stripnobool(rlink) 
         
     if 'deliverables' in item:
         for deliverable in item['deliverables']:        
             dtitle = deliverable['dtitle']
+            
             if 'dlink' in deliverable:
                 dlink = deliverable['dlink']
             else:
                 dlink = ""
+            
+            if dlink:
+                if not dlink.startswith("http"): 
+                    dlink = rchop(homepage, '/') + '/' + stripnobool(dlink)
+            else:
+                dlink = stripnobool(dlink)
             
             description = stripnobool(description) + "\\nDeliverable: " + stripnobool(dtitle) + " " + stripnobool(dlink) 
         

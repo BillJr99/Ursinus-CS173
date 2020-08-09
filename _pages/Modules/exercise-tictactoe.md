@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Tic-Tac-Toe"
 excerpt: "CS173: Intro to Computer Science - Tic-Tac-Toe"
 
 info:
+  points: 3
   instructions: "Modify the TicTacToe.java file to return whether a given array contains a winning tic-tac-toe configuration."
   goals:
     - To iterate over a 2-dimensional array

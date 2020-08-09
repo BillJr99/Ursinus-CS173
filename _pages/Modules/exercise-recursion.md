@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Recursion"
 excerpt: "CS173: Intro to Computer Science - Recursion"
 
 info:
+  points: 3
   prev: "./Module"
   instructions: "Fill in the reverseString method below to recursively compute the string in reverse."
   goals:

@@ -1,8 +1,26 @@
 ---
 layout: default
+
+formprocessor: "http://192.204.148.92:8082/"
+formprocessoripranges: 
+  - "198"
+  - "192"
+enctype: "application/x-www-form-urlencoded"
+facultyemail: "billmongan@gmail.com"
+
+formprocessordirections: "Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
+
+submitformlinkdirections: "Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions."
 ---
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/util.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+
 <style>
 .image_off, #home:hover .image_on{
    display:none
@@ -48,10 +66,10 @@ layout: default
 
 <script src="{{site.baseurl}}/assets/js/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="{{site.baseurl}}/assets/js/modules-common.js" type="text/javascript" charset="utf-8"></script>
-        
+
 <div id="main" role="main">
   <div class="archive">    
-    <h1 class="page__title">{{ page.title }}</h1>
+    <h1 class="page__title">{{ page.title }}{% if page.info.points %} ({{page.info.points}} Points){% endif %}</h1>
         Developed by <a href="https://www.ursinus.edu/live/profiles/4502-christopher-tralie">Professor Tralie</a> and Professor Mongan.
 
         {% if page.info.prev or page.info.next %}
@@ -80,11 +98,19 @@ layout: default
         {{ page.info.instructions }}
         {% endif %}
         
-        
         <div id="correctArea"></div>
         
         <p>
-        <button type = "button" onclick = "runCode()">Run</button>
+        <strong>Enter your e-mail address before clicking Run:</strong> <input type="text" id="studentemail" name="studentemail" onchange="if(document.getElementById('studentemail').value.indexOf('@') != -1 && document.getElementById('studentemail').value.indexOf('.') != -1) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;"><br>
+        {% if layout.formprocessor and layout.formprocessor != false %}
+        {{ layout.formprocessordirections }}<br>
+        {% endif %}
+        {% if page.processor.submitformlink and page.processor.submitformlink != false %}
+        {{ layout.submitformlinkdirections }}<br>
+        {% endif %}
+        <br>
+        
+        <button type = "button" onclick = "if(document.getElementById('studentemail').value.indexOf('@') != -1 && document.getElementById('studentemail').value.indexOf('.') != -1) runCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your e-mail address first!</font></h3>';" id="runbutton" disabled>Run</button>
         </p>
         
         <!-- Must name main file "main" and the div tag here/css/processing code below is hardcoded to mainEditor -->
@@ -135,6 +161,17 @@ layout: default
         feedback.setFontSize(16);
         feedback.renderer.setShowGutter(false);
 
+        <!-- https://stackoverflow.com/questions/7542586/new-formdata-application-x-www-form-urlencoded -->
+        function urlencodeFormData(fd){
+            var s = '';
+            function encode(s){ return encodeURIComponent(s).replace(/%20/g,'+'); }
+            for(var pair of fd.entries()){
+                if(typeof pair[1]=='string'){
+                    s += (s?'&':'') + encode(pair[0])+'='+encode(pair[1]);
+                }
+            }
+            return s;
+        }
 
         function runCode() {
             try {
@@ -148,10 +185,54 @@ layout: default
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
+                    <!-- Setting a page.processor.submitformlink in the markdown will pop up an iframe with a page of your choice -->
                     {% if page.processor.submitformlink and page.processor.submitformlink != false %}
                     correctArea.innerHTML += `
                     <iframe src = "{{ page.processor.submitformlink | strip }}" width=800 height=500>
                     `;
+                    {% endif %}
+                    
+                    <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
+                    {% if layout.formprocessor and layout.formprocessor != false %}
+                        // Check IP range for VPN access to reach the formprocessor               
+                        $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+                            var validrange = false;
+                            ipaddr = data['geoplugin_request'];
+                            
+                            {% if layout.formprocessoripranges %}  
+                            {% for range in layout.formprocessoripranges %}
+                            if(ipaddr.startsWith("{{ range }}")) {
+                                vaidrange = true;
+                            }    
+                            {% endfor %}
+                            {% else %}
+                            validrange = true;
+                            {% endif %}
+
+                            if(validrange) {
+                                // Now submit
+                                submitcode = '';
+                                
+                                for (var i in editors) {
+                                    submitcode += editors[i].getValue();
+                                    submitcode += "\n\n";
+                                }
+                                
+                                var xhttp = new XMLHttpRequest();
+                                xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
+                                xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
+                                
+                                var formdata = new FormData();
+                                formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
+                                formdata.append("magic", "ursinus"); // required
+                                formdata.append("title", "{{ page.title | strip }}"); // required
+                                formdata.append("studentemail", document.getElementById("studentemail").value); //required
+                                formdata.append("code", submitcode);
+                                xhttp.send(urlencodeFormData(formdata));
+                            } else {
+                                alert("Please be sure you are on the VPN or have network access to the submission system.  Your IP address is " + ipaddr);
+                            }
+                        });
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
@@ -175,10 +256,3 @@ layout: default
     {{ content }} 
   </div>
 </div>
-
-<!-- Scripts -->
-			<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
-			<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
-			<script src="{{site.baseurl}}/assets/js/util.js"></script>
-			<script src="{{site.baseurl}}/assets/js/main.js"></script>
-<!-- End Scripts -->  

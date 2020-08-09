@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Insertion Sort"
 excerpt: "CS173: Intro to Computer Science - Insertion Sort"
 
 info:
+  points: 3
   prev: "./Module2"
   instructions: "Please fill in the swap method to swap arr[i] with arr[j]. Below is some of the code we wrote in the video to setup random arrays, as well as skeleton code for insertion sort. The main method fills in a random array, prints that array, calls the insertionSort method, and then prints the result. Once this method works properly, your insertion sort code will properly sort the array. At this point, a survey will pop up. Please input your name, and also copy in the code that you wrote in the swap method"
   goals:

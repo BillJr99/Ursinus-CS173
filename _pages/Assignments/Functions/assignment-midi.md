@@ -29,8 +29,8 @@ info:
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+      progressing: The program is submitted according to the directions with a minor omission or correction needed, and with at least superficial responses to the bolded questions throughout
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
 
 tags:
   - functions
@@ -80,7 +80,7 @@ import com.MIDI.Instruments;
 import com.MIDI.Notes;
 ```
 
-Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) to find out about the method interface this library provides.  There are a number of methods you can call inside the `MIDIPlayer` class.  What are a few of them, and, in your own words, what do they do?
+Open the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) to find out about the method interface this library provides.  There are a number of methods you can call inside the `MIDIPlayer` class.  **What are a few of them, and, in your own words, what do they do?**
 
 In addition, there are two classes `Instruments` and `Notes` which contain constants that represent some of the instruments, notes, and note durations that you can play.  These include `Notes.NOTE_C4` for a C4 note, `Instruments.GUITAR` for a guitar, and `Notes.NOTE_QUARTER` which specifies a quarter note duration.  Click on the `Instruments` and `Notes` javadoc classes and make a note of some of the instruments and notes that are available to you.  Because it's a synthesizer, some of the "instruments" are actually creative sound effects - feel free to have fun with this!
 
@@ -104,7 +104,7 @@ player.playNote(Notes.NOTE_C4, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY);
 
 This will play a C4 quarter note, using a default intensity value.
 
-Try it and verify that you get sound output.  Try changing this to play an A4 whole note at half intensity.  The A4 note is a higher pitched note, and this is because A4 is a higher frequency vibration which your ear perceives as a higher pitch.  In fact, A4 is defined here as 440 Hz, and, consequently, C4 (known as "middle C") is ~262 Hz. Every note is defined by its own fundamental frequency.  Incidentally, there is repitition here: if A3 is 220 Hz, what frequency do you think C3 is?  How about A2?  You can try listening to some notes and frequencies using this [online tone generator](https://www.szynalski.com/tone-generator/).
+Try it and verify that you get sound output.  Try changing this to play an A4 whole note at half intensity.  The A4 note is a higher pitched note, and this is because A4 is a higher frequency vibration which your ear perceives as a higher pitch.  In fact, A4 is defined here as 440 Hz, and, consequently, C4 (known as "middle C") is ~262 Hz. Every note is defined by its own fundamental frequency.  Incidentally, there is repitition here: **if A3 is 220 Hz, what frequency do you think C3 is?**  **How about A2?**  You can try listening to some notes and frequencies using this [online tone generator](https://www.szynalski.com/tone-generator/).
 
 ## Part 2: Playing a Song
 
@@ -120,7 +120,7 @@ MIDIPlayer.rest(Notes.NOTE_EIGHTH);
 
 Try inserting this in between the parts.  
 
-You might notice that we are calling `MIDIPlayer.rest()` while we call `player.playNote()` elsewhere.  Both come from the same code library, so what's the difference?  Take a look at the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) and notice that the `rest()` method is a `static` function.  This means that the `rest()` method is not specific to a particular `MIDIPlayer`, and so it belongs to the class rather than to the object.  A "rest" does not actually play a sound, so you are not using the variables and methods of the MIDIPlayer object variable to accomplish this.  It's generic to any `MIDIPlayer`, so it's not necessary to call the function on any particular variable.  Notice that the constants in `Instruments` and `Notes` are also static - they aren't unique to any one `MIDIPlayer` - every student is using the same ones regardless of the computer they're using or the program they're writing.  As a rule of thumb: if you don't need to call `new` to get a variable first in order to use a method or variable from that class, it could probably be declared `static.`  
+You might notice that we are calling `MIDIPlayer.rest()` while we call `player.playNote()` elsewhere.  **Both come from the same code library, so what's the difference?**  Take a look at the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) and notice that the `rest()` method is a `static` function.  This means that the `rest()` method is not specific to a particular `MIDIPlayer`, and so it belongs to the class rather than to the object.  A "rest" does not actually play a sound, so you are not using the variables and methods of the MIDIPlayer object variable to accomplish this.  It's generic to any `MIDIPlayer`, so it's not necessary to call the function on any particular variable.  Notice that the constants in `Instruments` and `Notes` are also static - they aren't unique to any one `MIDIPlayer` - every student is using the same ones regardless of the computer they're using or the program they're writing.  As a rule of thumb: if you don't need to call `new` to get a variable first in order to use a method or variable from that class, it could probably be declared `static.`  
 
 Finish the alphabet song.  Here are the notes, which are quarter notes unless otherwise specified (I suggest adding an eighth note duration rest in between each part):
 
@@ -139,7 +139,7 @@ For fun, try changing the instrument to a guitar before playing the song:
 player.setInstrument(Instruments.GUITAR);
 ```
 
-Compare the result to [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star) (there is a MIDI rendition on the Wikipedia page that you can play!).  There are a few small differences to make the alphabet fit into the song - can you spot them?  What would you change in your program to match [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star)?
+Compare the result to [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star) (there is a MIDI rendition on the Wikipedia page that you can play!).  **There are a few small differences to make the alphabet fit into the song - can you spot them?**  **What would you change in your program to match [Twinkle Twinkle Little Star](https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star)?**
 
 ## Part 3: Using Functions to Enable Code Re-Use and Repitition
 
@@ -189,4 +189,4 @@ player.playNote(Notes.NOTE_A3, Notes.NOTE_HALF, Notes.DEFAULT_INTENSITY);
 MIDIPlayer.rest(Notes.NOTE_WHOLE);
 ```
 
-Take a look at the `playChord` function call.  What is different about it from the calls to `playNote`?  We know that it is playing multiple notes together (in this case, A4 and A3).  How do we know this?
+Take a look at the `playChord` function call.  **What is different about it from the calls to `playNote`?**  We know that it is playing multiple notes together (in this case, A4 and A3).  **How do we know this?**

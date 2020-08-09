@@ -11,11 +11,15 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173/"
   chatlink: https://groupme.com/join_group/60668915/dGoprIMb
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020
+  ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2020/09/07"
   course_end_date: "2020/12/15"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
+  welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
   class_meets_days:
     isM: true
     isT: true
@@ -77,17 +81,17 @@ info:
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which awards 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline."
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which allows up to 2 days to be used during the semester by each student.  For example, one deliverable may be submitted 2 days late, or two deliverables may each be submitted 1 day late.  After these 2 days are utilized, subsequent deliverables may be submitted after the deadline, awarding up to: 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline.  To exercise flexible submission, please e-mail the instructor after submitting your deliverable, indicating: a) which deliverable you have submitted past the deadline, and b) how many flex days you wish to use (if any)." 
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
-        <div style="display: table-cell; padding:5px;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="100%" style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
         </div>
-        <div style="display: table-cell; padding:5px;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
         </div>
-        <div style="display: table-cell; padding:5px;">
+        <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
         </div>
     </div>
@@ -97,7 +101,8 @@ instructors:
 - name: William Mongan
   title: Professor
   email: billmongan@gmail.com
-  phone: "Phone TBD"
+  phone: "610-409-3410"
+  office: "Pfahler Hall 101L"
   webpage_url: "http://www.billmongan.com"
   picture: /images/profile.png
   officehours:
@@ -205,59 +210,68 @@ letter_grades:
 - letter: "D-"
   range: "59.5-62.99"
 - letter: "F"
-  range: "59.49 and below" 
+  range: "0-59.49" 
 
 schedule:
 - week: "0"
   date: "0"
   title: "Course Overview: What is Computer Science?"
-  link: "/Ursinus-CS173-Overview"
+  link: "../Ursinus-CS173-Overview"
   readings:
   - rtitle: "NetBeans IDE Software Environment"
-    rlink: "./NetBeans"
-  - rtitle: "Pre-Lab: The NetBeans IDE Software Environment"
-    rlink: "./Modules/IDE/Module"    
+    rlink: "NetBeans"
+  - rtitle: "Exercise: The NetBeans IDE Software Environment"
+    rlink: "Modules/IDE/Module"    
+    points: 3
   deliverables:
-  - dtitle: "Assignment: Warmup Handed Out"    
-    dlink: "./Assignments/Warmup"
+  - dtitle: "Programming Assignment: Warmup Handed Out"    
+    dlink: "Assignments/Warmup"
+    points: 15
 - week: "0"
   date: "1"
   title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
   readings:
-  - rtitle: "Pre-Lab: Getting Started with Git and Github"
-    rlink: "./Modules/Github/Module"       
+  - rtitle: "Exercise: Getting Started with Git and Github"
+    rlink: "Modules/Github/Module" 
+    points: 3
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"    
 - week: "0"
   date: "3"
   title: "Data Types and Variables" 
-  readings:
-  - rtitle: "Pre-Lab: Introduction to Primitive Data Types"
-    rlink: "./Modules/DataTypes/Module"  
+  link: "Activities/DataTypes"
   deliverables:
-  - dtitle: "Assignment: Warmup Due"    
-    dlink: "./Assignments/Warmup"  
+  - dtitle: "Programming Assignment: Warmup Due"    
+    dlink: "Assignments/Warmup"  
+    points: 15
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
+  link: "Activities/Expressions"
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
-    rlink: false 
-  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
-    rlink: "./Modules/Values/Module"  
+    rlink: false  
+  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    rlink: "Modules/Expressions/Module"  
+    points: 3	
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
   readings: 
-  - rtitle: "Pre-Lab: Epoch Time Overflow"
-    rlink: "./Modules/EpochTime/Exercise"  
+  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
+    rlink: "Modules/Values/Module" 
+  - rtitle: "Exercise: Epoch Time Overflow"
+    rlink: "Modules/EpochTime/Exercise"
+    points: 3
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
-    dlink: "./Labs/Kepler"
+    dlink: "Labs/Kepler"
+    points: 100
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
+  link: "Activities/DiscreteRanges"
   readings:
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
@@ -271,13 +285,15 @@ schedule:
     rlink: false    
 - week: "2"
   date: "0"
-  title: "Boolean Logic and Expressions"
+  title: "Boolean Logic Expressions, DeMorgan's Law"
+  link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
     rlink: false  
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "./Labs/Kepler"    
+    dlink: "Labs/Kepler"    
+    points: 100
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -287,34 +303,43 @@ schedule:
 - week: "2"
   date: "2"
   title: "Conditionals"  
+  link: "Activities/Conditionals"
 - week: "2"
   date: "3"
   title: "Conditionals"      
 - week: "3"
   date: "0"
   title: "Functions and Methods"
+  link: "Activities/Functions"
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Pre-Lab: Using External Libraries in Your NetBeans Project"
-    rlink: "./Modules/Library/Module"    
+  - rtitle: "Exercise: Using External Libraries in Your NetBeans Project"
+    rlink: "Modules/Library/Module"  
+    points: 3   
+  - rtitle: "Exercise: Writing and Calling Functions"
+    rlink: "Modules/Functions/Exercise"  
+    points: 3     
   deliverables:
-  - dtitle: "Assignment: MIDI Audio Handed Out"
-    dlink: "./Assignments/MIDI" 
+  - dtitle: "Programming Assignment: MIDI Audio Handed Out"
+    dlink: "Assignments/MIDI" 
+    points: 100
   - dtitle: "Lab: Debugging Due"    
     dlink: false     
+    points: 100
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
   - dtitle: "Lab: Functions Handed Out"    
     dlink: false 
+    points: 100
 - week: "3"
   date: "2"
   title: "Coding Style and the Code Review"
   readings:
   - rtitle: "Style Guide"
-    rlink: "./Style-Guide" 
+    rlink: "Style-Guide" 
 - week: "3"
   date: "3"
   title: "Testing"  
@@ -324,92 +349,115 @@ schedule:
   deliverables:
   - dtitle: "Lab: Functions Due"    
     dlink: false 
-  - dtitle: "Assignment: MIDI Audio Due"
-    dlink: "./Assignments/MIDI"    
-  - dtitle: "Assignment: Purple America Parts 1 through 3 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"
+    points: 100
+  - dtitle: "Programming Assignment: MIDI Audio Due"
+    dlink: "Assignments/MIDI"    
+    points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Handed Out"
+    dlink: "Assignments/PurpleAmerica"
+    points: 25
 - week: "4"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Handed Out"
-    dlink: "./Labs/FinancialAidCalculator"           
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100    
 - week: "4"
   date: "2"
-  title: "Boolean Statements and DeMorgan's Law"   
+  title: "Strings" 
+  link: "Activities/Strings"  
 - week: "4"
   date: "3"
   title: "Strings"
 - week: "5"
   date: "0"
-  title: "Iteration and the for loop"
+  title: "Iteration"
+  link: "Activities/Iteration"
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Due"
-    dlink: "./Labs/FinancialAidCalculator"    
-  - dtitle: "Assignment: Purple America Parts 1 through 3 Due"
-    dlink: "./Assignments/PurpleAmerica"  
-  - dtitle: "Assignment: Purple America Part 4 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"        
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100    
+  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Due"
+    dlink: "Assignments/PurpleAmerica"  
+    points: 25
+  - dtitle: "Programming Assignment: Purple America Part 4 Handed Out"
+    dlink: "Assignments/PurpleAmerica"        
+    points: 25
 - week: "5"
   date: "1"
   title: "Lab: Iteration" 
   deliverables:
   - dtitle: "Lab: Iteration Handed Out"
     dlink: false  
+    points: 100
 - week: "5"
   date: "2"
-  title: "Iteration, Randomness, and the while loop"
+  title: "Iteration and the for loop"
   readings:
   - rtitle: "Ch. 4"
     rlink: false  
 - week: "5"
   date: "3"
-  title: "Iteration and the do loop"  
+  title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false    
 - week: "6"
   date: "0"
   title: "Iteration"
+- week: "6"
+  date: "1"
+  title: "Iteration"  
+- week: "6"
+  date: "2"
+  title: "Iteration, Randomness, and the do loop"
   deliverables:
   - dtitle: "Lab: Iteration Due"
     dlink: false    
-  - dtitle: "Assignment: Purple America Part 4 Due"
-    dlink: "./Assignments/PurpleAmerica"  
-  - dtitle: "Assignment: DNA Mutations Handed Out"
-    dlink: "./Assignments/DNAMutations"    
+  - dtitle: "Programming Assignment: Purple America Part 4 Due"
+    dlink: "Assignments/PurpleAmerica"  
+    points: 25
+  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
+    dlink: "Assignments/DNAMutations"  
+    points: 100    
 - week: "6"
+  date: "3"
+  title: "String Manipulation" 
+- week: "7"
+  date: "0"
+  title: "String Manipulation"  
+- week: "7"
   date: "1"
   title: "Lab: Bernouli Trials"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Handed Out"
     dlink: false
-- week: "6"
-  date: "2"
-  title: "String Manipulation"    
-- week: "6"
-  date: "3"
-  title: "String Manipulation" 
+    points: 100  
 - week: "7"
   date: "2"
   title: "Arrays" 
+  link: "Activities/Arrays"
   deliverables:
   - dtitle: "Lab: Bernouli Trials Due"
     dlink: false    
+    points: 100
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false    
 - week: "7"
   date: "3"
-  title: "ArrayLists and Generic/Template Data Structures"
+  title: "2D Arrays" 
   deliverables:  
-  - dtitle: "Assignment: DNA Mutations Due"
-    dlink: "./Assignments/DNAMutations"    
-  - dtitle: "Assignment: Mini Crypto Handed Out"
-    dlink: "./Assignments/MiniCrypto"     
+  - dtitle: "Programming Assignment: DNA Mutations Due"
+    dlink: "Assignments/DNAMutations" 
+    points: 100    
+  - dtitle: "Programming Assignment: Mini Crypto Handed Out"
+    dlink: "Assignments/MiniCrypto" 
+    points: 100
 - week: "8"
   date: "0"
-  title: "2D Arrays" 
+  title: "ArrayLists and Generic/Template Data Structures"
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false        
@@ -417,11 +465,13 @@ schedule:
   date: "1"
   title: "Lab: ASCII Art"    
   readings:
-  - rtitle: "Pre-Lab: Tic-Tac-Toe"
-    rlink: "./Modules/TicTacToe/Exercise"  
+  - rtitle: "Exercise: Tic-Tac-Toe"
+    rlink: "Modules/TicTacToe/Exercise"  
+    points: 3
   deliverables:
   - dtitle: "Lab: ASCII Art Handed Out"
-    dlink: "./Labs/ASCIIArt" 
+    dlink: "Labs/ASCIIArt" 
+    points: 100
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -429,19 +479,23 @@ schedule:
   date: "3"
   title: "HashMaps and Caches"   
   deliverables:
-  - dtitle: "Assignment: Mini Crypto Due"
-    dlink: "./Assignments/MiniCrypto" 
-  - dtitle: "Assignment: Purple America Part 5 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"   
+  - dtitle: "Programming Assignment: Mini Crypto Due"
+    dlink: "Assignments/MiniCrypto" 
+    points: 100
+  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false     
 - week: "9"
   date: "0"
   title: "Classes" 
+  link: "Activities/Classes"
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
-    dlink: "./Labs/ASCIIArt"      
+    dlink: "Labs/ASCIIArt"      
+    points: 100
   readings:
   - rtitle: "Ch. 8"
     rlink: false    
@@ -451,29 +505,35 @@ schedule:
   deliverables:
   - dtitle: "Lab: HashMaps Handed Out"
     dlink: false  
+    points: 100
 - week: "9"
   date: "2"
-  title: "Classes" 
+  title: "Classes and Inheritance"
+  link: "Activities/Inheritance"  
 - week: "9"
   date: "3"
   title: "File I/O"
   deliverables:
-  - dtitle: "Assignment: Purple America Part 5 Due"
-    dlink: "./Assignments/PurpleAmerica"    
-  - dtitle: "Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "./Assignments/PurpleAmerica"   
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
 - week: "10"
   date: "0"
   title: "File I/O" 
   deliverables:
   - dtitle: "Lab: HashMaps Due"
     dlink: false  
+    points: 100
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: false    
+    points: 100
 - week: "10"
   date: "2"
   title: "Comparators and Sorting"
@@ -483,66 +543,81 @@ schedule:
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"
   deliverables:
-  - dtitle: "Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "./Assignments/PurpleAmerica"      
-  - dtitle: "Assignment: Iris Dataset Handed Out"
-    dlink: "./Assignments/Iris"      
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100
 - week: "10"
   date: "3"
-  title: "Algorithms: Recursion and Merge Sort" 
+  title: "Searching and Sorting" 
+  link: "Activities/SearchingAndSorting"  
   readings:
-  - rtitle: "Pre-Lab: Recursion"
-    rlink: "./Modules/Recursion/Module"   
+  - rtitle: "Exercise: Insertion Sort"
+    rlink: "Modules/InsertionSort/Module"    
+    points: 3  
 - week: "11"
   date: "0"
-  title: "Searching and Sorting" 
+  title: "Algorithms: Recursion and Merge Sort" 
+  link: "Activities/Recursion"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false   
+    points: 100
   readings:
-  - rtitle: "Pre-Lab: Insertion Sort"
-    rlink: "./Modules/InsertionSort/Module"    
+  - rtitle: "Exercise: Recursion"
+    rlink: "Modules/Recursion/Module"   
+    points: 3
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
   readings:
-  - rtitle: "Pre-Lab: Merge Sort"
-    rlink: "./Modules/MergeSort/Module"  
+  - rtitle: "Exercise: Merge Sort"
+    rlink: "Modules/MergeSort/Module"  
+    points: 3
   deliverables:
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
-- week: "11"
-  date: "2"
-  title: "Recursion and Dynamic Programming"  
-  readings:
-  - rtitle: "Pre-Lab: Dynamic Programming"
-    rlink: "./Modules/DynamicProgramming/Module"    
-  deliverables:
-  - dtitle: "Assignment: Iris Dataset Due"
-    dlink: "./Assignments/Iris"
-- week: "11"
-  date: "3"
-  title: "Recursion and Dynamic Programming"   
-  deliverables:
-  - dtitle: "Assignment: Guitar String Synthesizer Handed Out"
-    dlink: "./Assignments/GuitarStringSynth"           
+    points: 100
 - week: "12"
   date: "0"
-  title: "Final Project Brainstorm"
+  title: "Recursion and Dynamic Programming"  
+  readings:
+  - rtitle: "Exercise: Dynamic Programming"
+    rlink: "Modules/DynamicProgramming/Module"    
+    points: 3
   deliverables:
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100
   - dtitle: "Lab: Searching and Sorting Due"
     dlink: false  
-  - dtitle: "Final Project: Handed Out"
-    dlink: false    
+    points: 100
 - week: "12"
   date: "1"
+  title: "Lab: Final Project Brainstorm"    
+  deliverables:
+  - dtitle: "Final Project: Handed Out"
+    dlink: false    
+    points: 100     
+- week: "12"
+  date: "2"
+  title: "Recursion and Dynamic Programming"   
+  deliverables:
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
+    dlink: "Assignments/GuitarStringSynth"           
+    points: 100
+- week: "12"
+  date: "3"
   title: "Final Project Workshop"  
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
   deliverables:
-  - dtitle: "Assignment: Guitar String Synthesizer Due"
-    dlink: "./Assignments/GuitarStringSynth"         
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Due"
+    dlink: "Assignments/GuitarStringSynth"  
+    points: 100    
 - week: "13"
   date: "1"
   title: "Final Project Workshop" 
@@ -555,6 +630,7 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Due"
     dlink: false   
+    points: 100
 - week: "14"
   date: "0"
   title: "Final Project Presentations"   
@@ -612,8 +688,6 @@ university:
     kdate: "2021/05/13"
     kdisplay: false    
   fallholidays:
-  - date: "2020/10/19"
-  - date: "2020/10/20"
   - date: "2020/11/25"
   - date: "2020/11/26"
   - date: "2020/11/27" 
@@ -625,7 +699,6 @@ university:
   - date: "2021/03/12"
     
 ---
-Welcome!  
 
 ## Overview
 Computer science is the study of how machines interact with data and the way in which machines can be used to solve problems. It is a mathematical discipline, but one which is often much more "hands on" than most fields of math. One important aspect of computer science is computer programming, or the process of writing code, or instructions for a computer to execute in a language a computer can understand. With programming languages, we can tell the computer how to automate calculations that are tedious and slow for humans to do by hand, and how to translate algorithms (recipes to solve problems) into code. In this course, we will learn one such language called Java, and we will use this language to explore an interdisciplinary array of computer science problems, including but not limited to:
@@ -682,7 +755,7 @@ Other ways to help your fellow classmates in class are as follows:
 ### Class Participation and Classroom Etiquette \[[^1]\]
 For classroom attendance, the following rules apply:
 
-* Please be attentive during class. **The use of laptops and other electronic devices is not permitted unless you are instructed to use them or are using them to take notes.** There will be class exercises that involve coding, but lecture time should be used for learning computer science. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
+* Please be attentive during class. There will be class exercises that involve coding, but class time should be used for learning computer science. It is imperative that technology be used for this purpose during our class time together. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
 * Please follow common courtesy. For instance, you can bring food and drink as long as it's not distracting, but please clean up after yourself if you do. Our janitorial staff deserves the utmost respect and help with their job.
 * In-class exercises and "low stakes" activities will take place individually and in groups to assess our progress together.  These exercises will be given both synchronously (for example, in-class activities, pair programming exercises) and asynchronously (for example, pre-lab exercises, peer code reviews, book surveys) and will be graded on a participation basis.  These are given equal weight and form the basis of the class participation score.
 * If a class session is remote, please feel free to make choices that make you most comfortable.  For example, I will record these sessions for students who cannot make the session or for those who would benefit from a review of the material.  Although I'd encourage you to enable your video feed if it is available, if you would prefer to leave your video off, you should absolutely feel free to do so.  Please keep your microphone on mute to avoid background noises while others are speaking; however, please do not feel "mic fright" about unmuting to speak up and participate anytime.  If, however, you would prefer to communicate via the chat interface (either exclusively or in combination with your audio/video), you should feel free to do that.  Whether in-person or remote, all I ask is that you engage as best you can; the material is challenging but fun, and we're all here to learn new things together.

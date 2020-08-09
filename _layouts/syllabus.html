@@ -4,7 +4,7 @@ layout: default
 boilerplate:
   lms: 
     title: Canvas, Microsoft Teams, GroupMe
-    description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
+    description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
     disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
@@ -174,10 +174,8 @@ boilerplate:
 
 
 
-    {% if page.info.course_description %}
-    <div style="clear: both;">
-    {{ page.info.course_description }}
-    </div>
+    {% if page.info.welcome_message %}
+    {{ page.info.welcome_message }}
     {% endif %}
     
 
@@ -212,9 +210,17 @@ boilerplate:
     {% endif %}
     
     {% if page.info.chatlink %}
-    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">{{page.info.chatlink}}</a></li>
+    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our class chat channel here!</a></li>
     <br>
     {% endif %}
+    
+    {% if page.info.ical %}
+    <li><strong>Course Calendar:</strong> <a href="{{ page.info.ical }}">Import the course calendar into your favorite calendar app with this link!</a></li><br>
+    {% endif %}
+    
+    {% if page.info.class_notebook %}
+    <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access our class notebook here!</a></li><br>
+    {% endif %}    
     
     {% if page.university.semester and page.university.academicyear %}
     <li><strong>Academic Term:</strong> {{page.university.semester}} {{page.university.academicyear}}</a></li>
@@ -285,8 +291,12 @@ boilerplate:
     {% endif %}
     {% endfor %}
     </ul>
+    {% endif %}     
+
+
+    {% if page.info.course_description %}
+    <li><strong>Course Description</strong>: {{ page.info.course_description }}</li>
     {% endif %}    
-    </ul>      
     
     </ul>
 
@@ -417,6 +427,7 @@ boilerplate:
     {% endif %}
     {% if item.phone %}<br>Phone: {{item.phone}}{% endif %}
     {% if item.email %}<br>E-Mail: <a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}
+    {% if item.office %}<br>Office: {{item.office}} {% endif %}
     </td>
     <td>
     {% if item.officehours %}<ul>{% endif %}
@@ -503,7 +514,7 @@ boilerplate:
     
     <td>
     {% if item.freelyavailable %}
-      <a href="{{item.freelyavailable}}">{{item.freelyavailable}}</a>
+      <a href="{{item.freelyavailable}}">Online Version</a>
     {% endif %}
 
     </tr>
@@ -517,10 +528,7 @@ boilerplate:
 
 
     <a name="schedule"></a>
-    <h2>Course Schedule</h2>
-
-    <a href="{{site.baseurl}}/files/{{page.info.course_number}}.ics">Import the course calendar into your favorite calendar app with this link!</a>
-    <br>
+    <h2>Course Schedule</h2>    
 
     {% if page.schedule %}    
     <table  id="scheduletable" class="table table-condensed" cellspacing="10">
@@ -788,7 +796,60 @@ boilerplate:
     <br /><br />
     <strong>Please Note:</strong> The terms "exposing" and "viewing" exclude sending or ingesting electronically, which would be considered copying. Exposing and viewing are normally done in the context of in-person working or in the help room.  In addition, "Other People" includes internet sources!
     <br />
-    <img src="./images/collaborationpolicy.png" alt="Collaboration Policy Table" />
+        <table id="collaborationtable" class="table table-condensed" cellspacing="10">
+        <thead>
+          <tr>
+            <th></th>
+            <th><strong>Your Buddy</strong></th>
+            <th><strong>Course Staff</strong></th>
+            <th><strong>Course Grads</strong></th>
+            <th><strong>Classmates</strong></th>
+            <th><strong>Others</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Discuss Concepts With</strong></td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>Acknowledge Collaboration With</strong></td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>Expose Your Code/Solutions To</strong></td>
+            <td>ALL EXCEPT<br>Assignments</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>In-Class<br>Exercises</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>View the Code/Solutions Of</strong></td>
+            <td>ALL EXCEPT<br>Assignments</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>In-Class<br>Exercises</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>Copy Code/Solutions From</strong></td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+          </tr>
+        </tbody>
+        </table>
     <br />
     If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way according to the College <a href="{{layout.boilerplate.links.academichonesty}}">Academic Honesty</a> policy, regardless of intent, then it may be an academic dishonesty case, and it will be referred to the Associate Dean for Academic Affairs.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations.  You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty.
     

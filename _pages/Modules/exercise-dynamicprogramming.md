@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Dynamic Programming"
 excerpt: "CS173: Intro to Computer Science - Dynamic Programming"
 
 info:
+  points: 3
   prev: "./Module2"
   instructions: "Your job below is to change the fib method so that it checks to see if a particular Fibonacci number has been saved in memory before trying to compute it. If it's already been saved, simply return what's in memory."
   goals:
