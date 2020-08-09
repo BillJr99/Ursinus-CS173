@@ -195,10 +195,9 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                         // Check IP range for VPN access to reach the formprocessor               
                         $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
                             var validrange = false;
-                            
-                            {% if layout.formprocessoriprange %}
                             ipaddr = data['geoplugin_request'];
                             
+                            {% if layout.formprocessoriprange %}                            
                             if(ipaddr.startsWith("{{ layout.formprocessoriprange }}")) {
                                 vaidrange = true;
                             }    
@@ -226,7 +225,9 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                                 formdata.append("studentemail", document.getElementById("studentemail").value); //required
                                 formdata.append("code", submitcode);
                                 xhttp.send(urlencodeFormData(formdata));
-                            }                            
+                            } else {
+                                alert("Please be sure you are on the VPN or have network access to the submission system.  Your IP address is " + ipaddr);
+                            }
                         });
                     {% endif %}
                 }
