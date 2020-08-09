@@ -199,8 +199,8 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                             var validrange = false;
                             ipaddr = data['geoplugin_request'];
                             
-                            {% if layout.formprocessoriprange %}  
-                            {% for range in layout.formprocessoriprange %}
+                            {% if layout.formprocessoripranges %}  
+                            {% for range in layout.formprocessoripranges %}
                             if(ipaddr.startsWith("{{ range }}")) {
                                 vaidrange = true;
                             }    
