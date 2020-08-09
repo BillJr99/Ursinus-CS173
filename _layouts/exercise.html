@@ -201,15 +201,6 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     var xhttp = new XMLHttpRequest();
                     xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
                     xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
-                    xhttp.timeout = 10000; // 10 second timeout
-                    
-                    xhttp.ontimeout = function (e) {
-                        alert("Submission failed - are you connected to the VPN?  Please try submitting again!");
-                    };
-                    
-                    xhttp.onload = function () {
-                        alert("Submission successful!  Please check your email to verify you received a copy of your submission.");
-                    };
                     
                     var formdata = new FormData();
                     formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
@@ -217,7 +208,12 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     formdata.append("title", "{{ page.title | strip }}"); // required
                     formdata.append("studentemail", document.getElementById("studentemail").value); //required
                     formdata.append("code", submitcode);
-                    xhttp.send(urlencodeFormData(formdata));                    
+                    
+                    try {
+                        xhttp.send(urlencodeFormData(formdata));                    
+                    } catch(e) {
+                        alert("Submission failed.  Are you connected to the VPN?  Please try submitting again.  Details: " + e.message);
+                    }
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
