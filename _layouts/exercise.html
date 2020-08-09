@@ -2,6 +2,7 @@
 layout: default
 
 formprocessor: "http://192.204.148.92:8082/"
+formprocessoriprange: "198"
 enctype: "application/x-www-form-urlencoded"
 facultyemail: "billmongan@gmail.com"
 
@@ -13,6 +14,10 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/util.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
 
 <style>
 .image_off, #home:hover .image_on{
@@ -187,24 +192,42 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     
                     <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
                     {% if layout.formprocessor and layout.formprocessor != false %}
-                        submitcode = '';
-                        
-                        for (var i in editors) {
-                            submitcode += editors[i].getValue();
-                            submitcode += "\n\n";
-                        }
-                        
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
-                        xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
-                        
-                        var formdata = new FormData();
-                        formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
-                        formdata.append("magic", "ursinus"); // required
-                        formdata.append("title", "{{ page.title | strip }}"); // required
-                        formdata.append("studentemail", document.getElementById("studentemail").value); //required
-                        formdata.append("code", submitcode);
-                        xhttp.send(urlencodeFormData(formdata));
+                        // Check IP range for VPN access to reach the formprocessor               
+                        $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
+                            var validrange = false;
+                            
+                            {% if layout.formprocessoriprange %}
+                            ipaddr = data['geoplugin_request'];
+                            
+                            if(ipaddr.startsWith("{{ layout.formprocessoriprange }}")) {
+                                vaidrange = true;
+                            }    
+                            {% else %}
+                            validrange = true;
+                            {% endif %}
+
+                            if(validrange) {
+                                // Now submit
+                                submitcode = '';
+                                
+                                for (var i in editors) {
+                                    submitcode += editors[i].getValue();
+                                    submitcode += "\n\n";
+                                }
+                                
+                                var xhttp = new XMLHttpRequest();
+                                xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
+                                xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
+                                
+                                var formdata = new FormData();
+                                formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
+                                formdata.append("magic", "ursinus"); // required
+                                formdata.append("title", "{{ page.title | strip }}"); // required
+                                formdata.append("studentemail", document.getElementById("studentemail").value); //required
+                                formdata.append("code", submitcode);
+                                xhttp.send(urlencodeFormData(formdata));
+                            }                            
+                        });
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
@@ -228,10 +251,3 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
     {{ content }} 
   </div>
 </div>
-
-<!-- Scripts -->
-			<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
-			<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
-			<script src="{{site.baseurl}}/assets/js/util.js"></script>
-			<script src="{{site.baseurl}}/assets/js/main.js"></script>
-<!-- End Scripts -->  
