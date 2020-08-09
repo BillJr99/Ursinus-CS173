@@ -29,7 +29,10 @@ processor:
     - incorrectcheck: |
         pos.includes("180000000000000000")
       feedback: "Try again: be sure to declare m as a float or double!"          
- 
+    - incorrectcheck: |
+        pos.includes("1586999999")
+      feedback: "Try again: you may have squared the mass value instead of the speed of light!"
+      
 files:
   - filename: "Driver.java"
     name: driver
