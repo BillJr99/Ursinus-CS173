@@ -199,6 +199,10 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     }
                     
                     var xhttp = new XMLHttpRequest();
+                    xhttp.onerror = function(e){
+                        alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+                    };
+
                     xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
                     xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
                     
@@ -209,11 +213,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     formdata.append("studentemail", document.getElementById("studentemail").value); //required
                     formdata.append("code", submitcode);
                     
-                    try {
-                        xhttp.send(urlencodeFormData(formdata));                    
-                    } catch(e) {
-                        alert("Submission failed.  Are you connected to the VPN?  Please try submitting again.  Details: " + e.message);
-                    }
+                    xhttp.send(urlencodeFormData(formdata));                    
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
