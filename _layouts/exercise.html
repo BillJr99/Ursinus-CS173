@@ -2,7 +2,9 @@
 layout: default
 
 formprocessor: "http://192.204.148.92:8082/"
-formprocessoriprange: "198"
+formprocessoripranges: 
+  - "198"
+  - "192"
 enctype: "application/x-www-form-urlencoded"
 facultyemail: "billmongan@gmail.com"
 
@@ -197,10 +199,12 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                             var validrange = false;
                             ipaddr = data['geoplugin_request'];
                             
-                            {% if layout.formprocessoriprange %}                            
-                            if(ipaddr.startsWith("{{ layout.formprocessoriprange }}")) {
+                            {% if layout.formprocessoriprange %}  
+                            {% for range in layout.formprocessoriprange %}
+                            if(ipaddr.startsWith("{{ range }}")) {
                                 vaidrange = true;
                             }    
+                            {% endfor %}
                             {% else %}
                             validrange = true;
                             {% endif %}
