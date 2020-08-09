@@ -2,9 +2,6 @@
 layout: default
 
 formprocessor: "http://192.204.148.92:8082/"
-formprocessoripranges: 
-  - "198"
-  - "192"
 enctype: "application/x-www-form-urlencoded"
 facultyemail: "billmongan@gmail.com"
 
@@ -194,45 +191,24 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     
                     <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
                     {% if layout.formprocessor and layout.formprocessor != false %}
-                        // Check IP range for VPN access to reach the formprocessor               
-                        $.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data) {
-                            var validrange = false;
-                            ipaddr = data['geoplugin_request'];
-                            
-                            {% if layout.formprocessoripranges %}  
-                            {% for range in layout.formprocessoripranges %}
-                            if(ipaddr.startsWith("{{ range }}")) {
-                                vaidrange = true;
-                            }    
-                            {% endfor %}
-                            {% else %}
-                            validrange = true;
-                            {% endif %}
-
-                            if(validrange) {
-                                // Now submit
-                                submitcode = '';
-                                
-                                for (var i in editors) {
-                                    submitcode += editors[i].getValue();
-                                    submitcode += "\n\n";
-                                }
-                                
-                                var xhttp = new XMLHttpRequest();
-                                xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
-                                xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
-                                
-                                var formdata = new FormData();
-                                formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
-                                formdata.append("magic", "ursinus"); // required
-                                formdata.append("title", "{{ page.title | strip }}"); // required
-                                formdata.append("studentemail", document.getElementById("studentemail").value); //required
-                                formdata.append("code", submitcode);
-                                xhttp.send(urlencodeFormData(formdata));
-                            } else {
-                                alert("Please be sure you are on the VPN or have network access to the submission system.  Please connect and submit again.  Your IP address is " + ipaddr);
-                            }
-                        });
+                    submitcode = '';
+                    
+                    for (var i in editors) {
+                        submitcode += editors[i].getValue();
+                        submitcode += "\n\n";
+                    }
+                    
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
+                    xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
+                    
+                    var formdata = new FormData();
+                    formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
+                    formdata.append("magic", "ursinus"); // required
+                    formdata.append("title", "{{ page.title | strip }}"); // required
+                    formdata.append("studentemail", document.getElementById("studentemail").value); //required
+                    formdata.append("code", submitcode);
+                    xhttp.send(urlencodeFormData(formdata));
                     {% endif %}
                 }
                 {% if page.processor.incorrectchecks %}
