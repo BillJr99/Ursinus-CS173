@@ -5,6 +5,7 @@ boilerplate:
   lms: 
     title: Canvas, Microsoft Teams, GroupMe
     description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
+    lmslink: "https://ursinus.instructure.com/"
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
     disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
@@ -252,6 +253,17 @@ boilerplate:
     {% endfor %}
     </ul>
     {% endif %}
+    
+    
+    {% if page.info.zoom %}
+    <li><strong>Zoom Link (see <a href="{{ layout.boilerplate.lms.lmslink }}">LMS</a> for password):</strong></li> 
+    <ul>    
+    {% for i in (0..page.info.zoom.size) %}
+    <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom[i].section.zoomlink }}">{{ page.info.zoom[i].section.zoomlink }}</a></li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
     
     {% if page.info.midtermexam and page.info.course_sections %}
     {% for i in (0..page.info.course_sections.size) %}

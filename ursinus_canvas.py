@@ -33,8 +33,11 @@ CANVAS_TIME_ZONE = "America/New_York"
 DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
 DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
 
-child_threads = []
+TABS_TO_HIDE = ["Rubrics", "Quizzes", "Outcomes", "Conferences", "Chat", "New Analytics", "Collaborations", "Files", "Pages", "Announcements"] # which navigation pane items to hide if they are visible
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance"] # which navigation pane items to force show if they are already hidden
 
+child_threads = []
+            
 def addslash(str):
     if not (str.endswith("/")):
         return str + "/"
@@ -91,7 +94,7 @@ def delete_all_assignments(course):
         t = threading.Thread(target=dodelete, args=(assignment,))
         child_threads.append(t)
         t.start()           
-        
+           
 def delete_all_modules(course):
     modules = course.get_modules()
     
@@ -168,7 +171,21 @@ def delete_old_data(course, canvas, coursecontext):
     t3.start()
     t4.start()
     t5.start()
+
+# https://canvas.instructure.com/doc/api/tabs.html#method.tabs.update
+# https://canvas.instructure.com/doc/api/tabs.html#method.tabs.index
+def arrange_tabs(course):
+    tabs = course.get_tabs()
     
+    for tab in tabs:
+        print(tab)
+        print(dir(tab))
+        printlog(tab['label'])
+        if tab['label'] in TABS_TO_HIDE:
+            tab.edit(tab={'hidden': True})
+        if tab['label'] in TABS_TO_SHOW:
+            tab.edit(tab={'hidden': False})
+            
 # https://canvas.instructure.com/doc/api/discussion_topics.html
 # https://canvas.instructure.com/doc/api/discussion_topics.html#method.discussion_topics.create
 # https://canvasapi.readthedocs.io/en/stable/course-ref.html
@@ -295,8 +312,10 @@ def create_assignmentgroup(course, inputdict):
     return asmtgroup
 
 # Create a Module: https://canvas.instructure.com/doc/api/modules.html#method.context_modules_api.create
-def create_module(course, inputdict):
+def create_module(course, inputdict, position=-1):
     module = course.create_module(inputdict)
+    if position >= 1:
+        module.edit(module={'position': position})
     return module
     
 # Add an item to an existing module: https://canvas.instructure.com/doc/api/modules.html#method.context_module_items_api.create
@@ -402,6 +421,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     
     printlog("Writing Lecture Schedule...")
     
+    moduleidx = 1 # module positions are 1-indexed
+    
     # Write the lecture schedule as a recurring event
     for i in range(len(postdict['info']['class_meets_locations'])):
         section = postdict['info']['course_sections'][i]['section']
@@ -462,7 +483,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         inputdict = {}
         inputdict['name'] = coursedtstr + " - " + title   
         inputdict['published'] = True
-        module = create_module(course, inputdict)
+        module = create_module(course, inputdict, moduleidx)
+        moduleidx = moduleidx + 1 # for positioning
         
         # Add course resources to first day entry
         if scheduleitems == 0:
@@ -756,6 +778,10 @@ course = canvas.get_course(courseid)
 printlog("Reading Markdown...")
 # Read Course Markdown File
 process_markdown(markdownfile, canvas, course, courseid, coursehomepage)
+
+printlog("Hiding/Showing Tabs...")
+# Hide Navigation Tabs
+arrange_tabs(course)
 
 #printlog("Initiating Course Export...")
 # Export Course Content
