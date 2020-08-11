@@ -116,11 +116,11 @@ instructors:
   - day: "M"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "M"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "TBD"  
+    location: "Virtual Office Hours on Microsoft Teams"  
   - day: "M"
     starttime: "8:00 PM"
     endtime: "9:00 PM"
@@ -128,7 +128,7 @@ instructors:
   - day: "T"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "T"
     starttime: "8:00 PM"
     endtime: "9:00 PM"
@@ -136,19 +136,19 @@ instructors:
   - day: "W"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"    
+    location: "Virtual Office Hours on Microsoft Teams"    
   - day: "W"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "TBD"    
+    location: "Virtual Office Hours on Microsoft Teams"    
   - day: "F"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"     
+    location: "Virtual Office Hours on Microsoft Teams"     
   - day: "F"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "Networking Office Hours"      
+    location: "Networking Virtual Office Hours on Microsoft Teams"      
   
 textbooks:
 - title: "Java for Everyone: Late Objects"
@@ -232,9 +232,8 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
-  - rtitle: "Exercise: The NetBeans IDE Software Environment"
+  - rtitle: "The NetBeans IDE Software Environment"
     rlink: "Modules/IDE/Module"    
-    points: 3
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
@@ -243,9 +242,8 @@ schedule:
   date: "1"
   title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
   readings:
-  - rtitle: "Exercise: Getting Started with Git and Github"
+  - rtitle: "Getting Started with Git and Github"
     rlink: "Modules/Github/Module" 
-    points: 3
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"    
@@ -261,25 +259,26 @@ schedule:
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
+  deliverables:
+  - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    dlink: "Modules/Expressions/Module"  
+    points: 3	  
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
-  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
-    rlink: "Modules/Expressions/Module"  
-    points: 3	
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
   readings: 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
     rlink: "Modules/Values/Module" 
-  - rtitle: "Exercise: Epoch Time Overflow"
-    rlink: "Modules/EpochTime/Exercise"
-    points: 3
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
     points: 100
+  - dtitle: "Exercise: Epoch Time Overflow"
+    dlink: "Modules/EpochTime/Exercise"
+    points: 3    
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -329,12 +328,8 @@ schedule:
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Exercise: Using External Libraries in Your NetBeans Project"
-    rlink: "Modules/Library/Module"  
-    points: 3   
-  - rtitle: "Exercise: Writing and Calling Functions"
-    rlink: "Modules/Functions/Exercise"  
-    points: 3     
+  - rtitle: "Using External Libraries in Your NetBeans Project"
+    rlink: "Modules/Library/Module"      
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
@@ -342,6 +337,9 @@ schedule:
   - dtitle: "Lab: Debugging Due"    
     dlink: false     
     points: 100
+  - dtitle: "Exercise: Writing and Calling Functions"
+    dlink: "Modules/Functions/Exercise"  
+    points: 3      
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
@@ -452,6 +450,8 @@ schedule:
   - dtitle: "Lab: Bernouli Trials Handed Out"
     dlink: false
     points: 100  
+  - dtitle: "Debugging Table: First Check"
+    points: 10
 - week: "7"
   date: "2"
   title: "Arrays" 
@@ -482,14 +482,13 @@ schedule:
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
-  readings:
-  - rtitle: "Exercise: Tic-Tac-Toe"
-    rlink: "Modules/TicTacToe/Exercise"  
-    points: 3
   deliverables:
   - dtitle: "Lab: ASCII Art Handed Out"
     dlink: "Labs/ASCIIArt" 
     points: 100
+  - dtitle: "Exercise: Tic-Tac-Toe"
+    dlink: "Modules/TicTacToe/Exercise"  
+    points: 3    
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -572,9 +571,8 @@ schedule:
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"  
   readings:
-  - rtitle: "Exercise: Insertion Sort"
+  - rtitle: "Insertion Sort"
     rlink: "Modules/InsertionSort/Module"    
-    points: 3  
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -584,16 +582,14 @@ schedule:
     dlink: false   
     points: 100
   readings:
-  - rtitle: "Exercise: Recursion"
+  - rtitle: "Recursion"
     rlink: "Modules/Recursion/Module"   
-    points: 3
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
   readings:
-  - rtitle: "Exercise: Merge Sort"
+  - rtitle: "Merge Sort"
     rlink: "Modules/MergeSort/Module"  
-    points: 3
   deliverables:
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
@@ -602,9 +598,8 @@ schedule:
   date: "0"
   title: "Recursion and Dynamic Programming"  
   readings:
-  - rtitle: "Exercise: Dynamic Programming"
+  - rtitle: "Dynamic Programming"
     rlink: "Modules/DynamicProgramming/Module"    
-    points: 3
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
@@ -618,7 +613,9 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Handed Out"
     dlink: false    
-    points: 100     
+    points: 100
+  - dtitle: "Debugging Table: Second Check"
+    points: 10    
 - week: "12"
   date: "2"
   title: "Recursion and Dynamic Programming"   

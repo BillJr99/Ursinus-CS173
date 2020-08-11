@@ -368,7 +368,15 @@ def add_assignments_to_groups(course):
             group = get_assignment_group_containing_label(groups, 'Project')
         elif 'Exercise:' in name:
             group = get_assignment_group_containing_label(groups, 'Exercise')
-            
+        else:
+            if 'grade_breakdown' in postdict:
+                for breakdown in postdict['grade_breakdown']:        
+                    category = breakdown['category']
+                    
+                    if category in name:
+                        group = get_assignment_group_containing_label(groups, category)
+                        break
+                        
         if not (group is None):
             groupid = group.id
             
