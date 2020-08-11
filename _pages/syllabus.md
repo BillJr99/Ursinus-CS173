@@ -656,17 +656,14 @@ university:
   semester: "Fall"
   academicyear: "2020-21"
   fall:
-  - kname: "Convocation"
-    kdate: "2020/08/19"
-    kdisplay: true
   - kname: "Add Deadline"
-    kdate: "2020/09/11"
+    kdate: "2020/09/18"
     kdisplay: true
   - kname: "Drop with a W Deadline"
-    kdate: "2020/10/28"
+    kdate: "2020/11/4"
     kdisplay: true  
   - kname: "Mid Semester Grades Posted"
-    kdate: "2020/10/16"
+    kdate: "2020/10/23"
     kdisplay: false
   - kname: "2020 Transition to Remote Learning after Thanksgiving Break"
     kdate: "2020/11/30"
