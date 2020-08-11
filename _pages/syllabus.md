@@ -347,8 +347,8 @@ schedule:
   date: "3"
   title: "Testing"  
   readings:
-  - rtitle: "JUnit Testing with NetBeans"
-    link: "NetBeans"
+  - rtitle: "NetBeans"
+    rlink: "NetBeans"
 - week: "4"
   date: "0"
   title: "Testing" 
