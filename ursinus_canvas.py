@@ -353,7 +353,7 @@ def add_assignments_to_groups(course, postdict):
     # Get all the assignment groups
     groups = course.get_assignment_groups()
     
-    # If Lab, Project, Assignment (etc...) is in the name, add it to the weight column with Lab, Project, or Assignment (etc...) in the name
+    # If Lab, Project, Assignment (etc...) is in the name, add it to the weight column with Lab, Project, or Assignment (etc...) in the name (you can prefix a deliverable name with the name of a grade breakdown column and it will add to that as well)
     for assignment in assignments:
         name = assignment.name
         asmtid = assignment.id
