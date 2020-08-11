@@ -346,7 +346,7 @@ def get_assignment_group_containing_label(groups, label):
     
     return None
     
-def add_assignments_to_groups(course):
+def add_assignments_to_groups(course, postdict):
     # Get all the assignments
     assignments = course.get_assignments()
     
@@ -717,7 +717,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             # The Assignments group might exist by default - don't call anything that in breakdown just in case
             create_assignmentgroup(course, inputdict)
             
-        add_assignments_to_groups(course)
+        add_assignments_to_groups(course, postdict)
         
         # Delete the default Assignments gradebook group
         delete_assignment_group_by_name(course, "Assignments")        
