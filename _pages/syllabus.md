@@ -169,13 +169,18 @@ textbooks:
   freelyavailable: https://greenteapress.com/wp/think-java/
 
 objectives:
-- objective: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
-- objective: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 - objective: "Implement algorithms that utilize conditionals and iteration over data structures including Strings and Arrays to solve problems."
 - objective: "Describe and convert the encodings by which data types are stored as numeric values"
+- objective: "Identify and apply data types appropriate to the design of a programming solution to a given problem"
+- objective: "To design and implement appropriate unit tests for a given software system to detect errors in a program"
+- objective: "To appropriately use the debugger to correct an error in a program"
+- objective: "To solve problems using collections of data, including arrays"
+- objective: "To explain that computer data of all types are represented by collections of binary states"
 
 goals:
+- goal: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
+- goal: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - goal: "Write software that is easy to read and to maintain by others"
 - goal: "Implement and engineer multi-component systems that solve real world problems."
 
