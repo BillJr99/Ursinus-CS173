@@ -21,7 +21,7 @@ processor:
     pos.includes("3,1") || pos.includes("3.0,1.0")        
  
 files:
-  - filename: "Driver.java"
+  - filename: "Student Code"
     name: driver
     ismain: false
     isreadonly: false
@@ -29,7 +29,11 @@ files:
     code: | 
          import math
          def get_quadratic_roots(a, b, c):
-             return 0
+             """
+             Compute the right root of of the quadratic equation
+             f(x) = ax^2 + bx + c
+             """
+             return 0 # This is a dummy value
 
   - filename: "Test Code Block"
     ismain: true
