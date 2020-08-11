@@ -81,7 +81,11 @@ public class NewClassTest {
 }
 ```
 
-### Exporting To Zip
+## Using the Debugger
+
+In addition to testing, NetBeans includes a debugger that can help identify errors in your code (especially when a test case fails!).  Here is an [article]({{ site.baseurl }}/NetBeans/Debugging) on using the NetBeans debugger for your projects.
+
+## Exporting To Zip
 
 If you want to export your whole project to a zip, go to `File->Export Project->To ZIP`
 
