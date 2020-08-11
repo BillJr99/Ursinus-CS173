@@ -18,7 +18,7 @@ We can see that the output is incorrect.  I've tried to double the value `5`, an
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-output.png)
 
 ## Unit Testing
-Although not specifically required It's a good practice to create test cases to expose bugs.  Even if our output above was correct, we might have bugs that would cause our code to fail on other inputs.  It's a great idea to create a series of test cases that test a variety of values.  It's impossible to test every conceivable value, but "boundary cases" are often a good place to start (negative numbers, positive numbers, `1`, `-1`, `0`, very large numbers, very small numbers, and so on).
+Although not specifically required for debugging, it's a good practice to create test cases to expose bugs.  Even if our output above was correct, we might have bugs that would cause our code to fail on other inputs.  It's a great idea to create a series of test cases that test a variety of values.  It's impossible to test every conceivable value, but "boundary cases" are often a good place to start (negative numbers, positive numbers, `1`, `-1`, `0`, very large numbers, very small numbers, and so on).
 
 Let's use NetBeans to create a unit test class that we can use to populate our tests.  For this example, we'll just create a single test case, so that things fit neatly into the screenshot.  
 
@@ -30,7 +30,7 @@ Right-clicking on the test class file and clicking `Test File` will cause the te
 
 ## Using the Debugger
 
-Now that we have a failed test case, let's create a `Breakpoint` that will cause our program to pause its execution at a certain point, and allow us to inspect our variables and the state of the program.  This allows us to confirm at various parts of the program that things are executing the way we expect.  Thus, we can use `Breakpoint`s to narrow down where in the code our program is failing.
+Now that we have a failed test case, let's create a `Breakpoint` that will cause our program to pause its execution at a certain point, and allow us to inspect our variables and the state of the program.  This allows us to confirm at various parts of the program that things are executing the way we expect.  Thus, we can use a `Breakpoint` to narrow down where in the code our program is failing.
 
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-breakpoint.png)
 
