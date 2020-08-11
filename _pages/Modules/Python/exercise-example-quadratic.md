@@ -6,7 +6,7 @@ excerpt: "Python Example Module: Quadratic Formula"
 
 info:
   points: 3
-  instructions: "Write a function that computes one of the roots of a <a href=\"https://en.wikipedia.org/wiki/Quadratic_equation\">quadratic equation</a>.  In addition to multiplying b by itself, you can compute <code>b*b</code> using the <code>Math.pow()</code> method.  The <code>math.sqrt()</code> method takes a single parameter, which is the number whose root should be computed, and returns the result.  Now complete the code to compute one of the roots of the quadratic formula
+  instructions: "Write a function that computes one of the roots of a <a href=\"https://en.wikipedia.org/wiki/Quadratic_equation\">quadratic equation</a>.  In addition to multiplying b by itself, you can compute <code>b*b</code> using the <code>b**</code> with the <code>**</code> operator.  The <code>math.sqrt()</code> method takes a single parameter, which is the number whose root should be computed, and returns the result.  Now complete the code to compute one of the roots of the quadratic formula"
   goals:
     - To write mathematical expressions in Python
     - To write a function that computes an expression and returns its result
