@@ -297,6 +297,9 @@ schedule:
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
+  readings:
+  - rtitle: "Debugging with NetBeans"
+    rlink: "NetBeans/Debugging"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: false  
@@ -343,6 +346,9 @@ schedule:
 - week: "3"
   date: "3"
   title: "Testing"  
+  readings:
+  - rtitle: "JUnit Testing with NetBeans"
+    link: "NetBeans"
 - week: "4"
   date: "0"
   title: "Testing" 
