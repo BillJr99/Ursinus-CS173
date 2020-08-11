@@ -265,7 +265,9 @@ boilerplate:
     <li><strong>Zoom Link (see <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a> for password):</strong></li> 
     <ul>    
     {% for i in (0..page.info.zoom.size) %}
+    {% if i < page.info.zoom.size %}
     <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom[i].section.zoomlink }}">{{ page.info.zoom[i].section.zoomlink }}</a></li>
+    {% endif %}
     {% endfor %}
     </ul>
     {% endif %}
