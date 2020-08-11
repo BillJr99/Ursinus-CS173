@@ -26,7 +26,7 @@ info:
       phonenumberlink: "https://ursinus-edu.zoom.us/u/ah7EJXKY2"
   - section:
       zoomlink: "https://ursinus-edu.zoom.us/j/99939384648"
-      phonenumber: "https://ursinus-edu.zoom.us/u/ab9KdLEJza"
+      phonenumberlink: "https://ursinus-edu.zoom.us/u/ab9KdLEJza"
   class_meets_days:
     isM: true
     isT: true
