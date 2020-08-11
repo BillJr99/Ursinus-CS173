@@ -33,7 +33,7 @@ CANVAS_TIME_ZONE = "America/New_York"
 DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
 DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
 
-TABS_TO_HIDE = ["Rubrics", "Quizzes", "Outcomes", "Conferences", "Chat", "New Analytics", "Collaborations", "Files", "Pages", "Announcements"] # which navigation pane items to hide if they are visible
+TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
 TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance"] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
@@ -63,21 +63,33 @@ def stripnobool(val):
     return result.strip()
 
 def dodelete(item, dosleep=True):
-    if dosleep: # for rate limiting
-        sleeptime = random.randint(5, 20)
-        time.sleep(sleeptime)
-        
-    try:
-        item.delete()
-    except exceptions.ResourceDoesNotExist:
-        print("Deleting: Resource Does Not Exist")
-    except exceptions.Unauthorized:
-        print("Deleting: Unauthorized")
-    except exceptions.Forbidden:
-        print("Deleting: Forbidden - it is possible that the rate limit is exceeded")
-        time.sleep(5)
-    except exceptions.CanvasException:
-        print("Deleting: Canvas Error")
+    repeat = True
+    
+    while repeat:
+        if dosleep: # for rate limiting
+            sleeptime = random.randint(5, 20)
+            time.sleep(sleeptime)
+            
+        try:
+            item.delete()
+            printlog("Delete: Successful")
+            repeat = False
+        except exceptions.ResourceDoesNotExist:
+            print("Deleting: Resource Does Not Exist")
+            repeat = False
+        except exceptions.Unauthorized:
+            print("Deleting: Unauthorized")
+            repeat = False
+        except exceptions.Forbidden:
+            print("Deleting: Forbidden - it is possible that the rate limit is exceeded")
+            repeat = True
+        except exceptions.CanvasException:
+            print("Deleting: Canvas Error")
+            repeat = True
+        except:
+            print("Deleting: Unknown Error")
+            repeat = True
+            
     
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
@@ -171,6 +183,10 @@ def delete_old_data(course, canvas, coursecontext):
     t3.start()
     t4.start()
     t5.start()
+    
+    # Avoid a race condition in which newly added items are deleted when gathered by these threads
+    for t in child_threads:
+        t.join()
 
 # https://canvas.instructure.com/doc/api/tabs.html#method.tabs.update
 # https://canvas.instructure.com/doc/api/tabs.html#method.tabs.index
@@ -178,13 +194,10 @@ def arrange_tabs(course):
     tabs = course.get_tabs()
     
     for tab in tabs:
-        print(tab)
-        print(dir(tab))
-        printlog(tab['label'])
-        if tab['label'] in TABS_TO_HIDE:
-            tab.edit(tab={'hidden': True})
-        if tab['label'] in TABS_TO_SHOW:
-            tab.edit(tab={'hidden': False})
+        if tab.label in TABS_TO_HIDE:
+            tab.update(hidden=True)
+        if tab.label in TABS_TO_SHOW:
+            tab.update(hidden=False)
             
 # https://canvas.instructure.com/doc/api/discussion_topics.html
 # https://canvas.instructure.com/doc/api/discussion_topics.html#method.discussion_topics.create
@@ -360,6 +373,9 @@ def add_assignments_to_groups(course):
             groupid = group.id
             
             assignment.edit(assignment={'assignment_group_id': groupid})
+            
+    # Enable assignment group weighted grading
+    course.update(course={'apply_assignment_group_weights': True})
     
 # Create Calendar: https://canvasapi.readthedocs.io/en/stable/canvas-ref.html (canvas.create_calendar_event, dict from https://canvas.instructure.com/doc/api/calendar_events.html)
 def create_calendar_event(canvas, inputdict):
@@ -405,7 +421,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     # Create Discussion Topics
     inputdict = {}
     inputdict['title'] = "Introductions"
-    inputdict['description'] = "Welcome!  Please use this space to introduce yourself.  Feel free to say anything about yourself that you are comfortable sharing, like a word on why you are taking this course and what you hope to get from it."
+    inputdict['message'] = "Welcome!  Please use this space to introduce yourself.  Feel free to say anything about yourself that you are comfortable sharing, like a word on why you are taking this course and what you hope to get from it."
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
@@ -413,7 +429,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     
     inputdict = {}
     inputdict['title'] = "Water Cooler"
-    inputdict['description'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
+    inputdict['message'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
@@ -694,6 +710,9 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             create_assignmentgroup(course, inputdict)
             
         add_assignments_to_groups(course)
+        
+        # Delete the default Assignments gradebook group
+        delete_assignment_group_by_name(course, "Assignments")        
 
 def get_courseid(canvas, user):
     courses = user.get_courses()
@@ -795,11 +814,7 @@ for topic in topics:
         
     parse_discussions(entries)
 
-printlog("Cleaning Up...")
-
-# Delete the default Assignments gradebook group
-delete_assignment_group_by_name(course, "Assignments")
-
-# Wait for any child threads to finish            
+printlog("Finished: Waiting for Child Threads to Terminate")
+# Clean Up
 for t in child_threads:
-    t.join()
+        t.join()
