@@ -180,50 +180,51 @@ info:
         - When using an <code>interface</code>, it is sometimes still necessary to duplicate code.  Can you find an example of this in this Model?
         - Run this example in <a href=https://repl.it>repl.it</a>.  What must each file be named, and what code goes into which file?  When you click Run, what <code>javac</code> command executes (specifically, what files are compiled)? 
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaInheritanceExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[  
         import java.util.Random;
         
         public abstract class Vehicle {
-             protected int gear;
-             protected boolean parked;
-             protected int speed;
-             protected boolean locked;
-             
-             public Vehicle() {
+            protected int gear;
+            protected boolean parked;
+            protected int speed;
+            protected boolean locked;
+         
+            public Vehicle() {
                this.gear = 1;
                this.parked = true;
                this.speed = 0;
                this.locked = true;
-             }
-             
-              public void drive(int speed) {
+            }
+         
+            public void drive(int speed) {
                if(this.parked == true) {
                  this.parked = false;
                }
                this.speed = speed;
-             }
-             
-             // return a boolean if the vehicle is parked
-             public abstract boolean stop();
-             
-             public int getSpeed() {
-               return this.speed;
-             }
-             
-             public void unlock() {
-               this.locked = false;
-             }
-             
-             public void lock() {
-               this.locked = true;
-             }
             }
-            public interface Home {
-             public int cook();
-             
-             public void makeBed();
+         
+            // return a boolean if the vehicle is parked
+            public abstract boolean stop();
+         
+            public int getSpeed() {
+               return this.speed;
+            }
+         
+            public void unlock() {
+               this.locked = false;
+            }
+         
+            public void lock() {
+               this.locked = true;
+            }
+        }
+        
+        public interface Home {
+            public int cook();
+         
+            public void makeBed();
         }
 
         public class Car extends Vehicle {
@@ -244,6 +245,7 @@ info:
                return this.parked;
             }
         }
+        
         // Unlike interfaces, you can only extend a single class
         public class MotorHome extends Vehicle implements Home {
              private boolean bedmade;

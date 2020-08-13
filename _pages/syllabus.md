@@ -407,6 +407,9 @@ schedule:
   - dtitle: "Lab: Iteration Handed Out"
     dlink: false  
     points: 100
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
 - week: "5"
   date: "2"
   title: "Iteration and the for loop"
