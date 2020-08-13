@@ -40,8 +40,6 @@ info:
         - "How would you modify the program above to play a game of &quot;Duck-Duck-Goose&quot; -- that is, iterating through the array until a certain value is reached (say, <code>10</code>)?"
         
   additional_reading:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html
-      title: Array Basics
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html
       title: Traversing Arrays
     
