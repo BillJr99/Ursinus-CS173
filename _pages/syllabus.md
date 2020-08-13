@@ -11,7 +11,7 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173/"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Fall2020/"
   chatlink: https://groupme.com/join_group/60668915/dGoprIMb
   class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020
   ical: files/CS173.ics
