@@ -11,7 +11,7 @@ info:
   - section: "C"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173/"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Fall2020/"
   chatlink: https://groupme.com/join_group/60668915/dGoprIMb
   class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020
   ical: files/CS173.ics
@@ -20,6 +20,13 @@ info:
   course_end_date: "2020/12/15"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
+  zoom:
+  - section:
+      zoomlink: "https://ursinus-edu.zoom.us/j/91450716052"
+      phonenumberlink: "https://ursinus-edu.zoom.us/u/ah7EJXKY2"
+  - section:
+      zoomlink: "https://ursinus-edu.zoom.us/j/99939384648"
+      phonenumberlink: "https://ursinus-edu.zoom.us/u/ab9KdLEJza"
   class_meets_days:
     isM: true
     isT: true
@@ -109,11 +116,11 @@ instructors:
   - day: "M"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "M"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "TBD"  
+    location: "Virtual Office Hours on Microsoft Teams"  
   - day: "M"
     starttime: "8:00 PM"
     endtime: "9:00 PM"
@@ -121,7 +128,7 @@ instructors:
   - day: "T"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "T"
     starttime: "8:00 PM"
     endtime: "9:00 PM"
@@ -129,19 +136,19 @@ instructors:
   - day: "W"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"    
+    location: "Virtual Office Hours on Microsoft Teams"    
   - day: "W"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "TBD"    
+    location: "Virtual Office Hours on Microsoft Teams"    
   - day: "F"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
-    location: "TBD"     
+    location: "Virtual Office Hours on Microsoft Teams"     
   - day: "F"
     starttime: "12:30 PM"
     endtime: "1:20 PM"
-    location: "Networking Office Hours"      
+    location: "Networking Virtual Office Hours on Microsoft Teams"      
   
 textbooks:
 - title: "Java for Everyone: Late Objects"
@@ -162,13 +169,18 @@ textbooks:
   freelyavailable: https://greenteapress.com/wp/think-java/
 
 objectives:
-- objective: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
-- objective: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
 - objective: "Implement algorithms that utilize conditionals and iteration over data structures including Strings and Arrays to solve problems."
 - objective: "Describe and convert the encodings by which data types are stored as numeric values"
+- objective: "Identify and apply data types appropriate to the design of a programming solution to a given problem"
+- objective: "To design and implement appropriate unit tests for a given software system to detect errors in a program"
+- objective: "To appropriately use the debugger to correct an error in a program"
+- objective: "To solve problems using collections of data, including arrays"
+- objective: "To explain that computer data of all types are represented by collections of binary states"
 
 goals:
+- goal: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
+- goal: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - goal: "Write software that is easy to read and to maintain by others"
 - goal: "Implement and engineer multi-component systems that solve real world problems."
 
@@ -220,9 +232,8 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
-  - rtitle: "Exercise: The NetBeans IDE Software Environment"
+  - rtitle: "The NetBeans IDE Software Environment"
     rlink: "Modules/IDE/Module"    
-    points: 3
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
@@ -231,9 +242,8 @@ schedule:
   date: "1"
   title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
   readings:
-  - rtitle: "Exercise: Getting Started with Git and Github"
+  - rtitle: "Getting Started with Git and Github"
     rlink: "Modules/Github/Module" 
-    points: 3
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"    
@@ -249,25 +259,26 @@ schedule:
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
+  deliverables:
+  - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    dlink: "Modules/Expressions/Module"  
+    points: 3	  
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
-  - rtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
-    rlink: "Modules/Expressions/Module"  
-    points: 3	
 - week: "1"
   date: "0"
   title: "Lab: Kepler's Third Law"
   readings: 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
     rlink: "Modules/Values/Module" 
-  - rtitle: "Exercise: Epoch Time Overflow"
-    rlink: "Modules/EpochTime/Exercise"
-    points: 3
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
     points: 100
+  - dtitle: "Exercise: Epoch Time Overflow"
+    dlink: "Modules/EpochTime/Exercise"
+    points: 3    
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -297,6 +308,9 @@ schedule:
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
+  readings:
+  - rtitle: "Debugging with NetBeans"
+    rlink: "NetBeans/Debugging"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: false  
@@ -314,12 +328,8 @@ schedule:
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Exercise: Using External Libraries in Your NetBeans Project"
-    rlink: "Modules/Library/Module"  
-    points: 3   
-  - rtitle: "Exercise: Writing and Calling Functions"
-    rlink: "Modules/Functions/Exercise"  
-    points: 3     
+  - rtitle: "Using External Libraries in Your NetBeans Project"
+    rlink: "Modules/Library/Module"      
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
@@ -327,6 +337,9 @@ schedule:
   - dtitle: "Lab: Debugging Due"    
     dlink: false     
     points: 100
+  - dtitle: "Exercise: Writing and Calling Functions"
+    dlink: "Modules/Functions/Exercise"  
+    points: 3      
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
@@ -343,6 +356,9 @@ schedule:
 - week: "3"
   date: "3"
   title: "Testing"  
+  readings:
+  - rtitle: "NetBeans"
+    rlink: "NetBeans"
 - week: "4"
   date: "0"
   title: "Testing" 
@@ -391,6 +407,9 @@ schedule:
   - dtitle: "Lab: Iteration Handed Out"
     dlink: false  
     points: 100
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
 - week: "5"
   date: "2"
   title: "Iteration and the for loop"
@@ -434,6 +453,8 @@ schedule:
   - dtitle: "Lab: Bernouli Trials Handed Out"
     dlink: false
     points: 100  
+  - dtitle: "Debugging Table: First Check"
+    points: 10
 - week: "7"
   date: "2"
   title: "Arrays" 
@@ -464,14 +485,13 @@ schedule:
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
-  readings:
-  - rtitle: "Exercise: Tic-Tac-Toe"
-    rlink: "Modules/TicTacToe/Exercise"  
-    points: 3
   deliverables:
   - dtitle: "Lab: ASCII Art Handed Out"
     dlink: "Labs/ASCIIArt" 
     points: 100
+  - dtitle: "Exercise: Tic-Tac-Toe"
+    dlink: "Modules/TicTacToe/Exercise"  
+    points: 3    
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -554,9 +574,8 @@ schedule:
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"  
   readings:
-  - rtitle: "Exercise: Insertion Sort"
+  - rtitle: "Insertion Sort"
     rlink: "Modules/InsertionSort/Module"    
-    points: 3  
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -566,16 +585,14 @@ schedule:
     dlink: false   
     points: 100
   readings:
-  - rtitle: "Exercise: Recursion"
+  - rtitle: "Recursion"
     rlink: "Modules/Recursion/Module"   
-    points: 3
 - week: "11"
   date: "1"
   title: "Lab: Searching and Sorting" 
   readings:
-  - rtitle: "Exercise: Merge Sort"
+  - rtitle: "Merge Sort"
     rlink: "Modules/MergeSort/Module"  
-    points: 3
   deliverables:
   - dtitle: "Lab: Searching and Sorting Handed Out"
     dlink: false 
@@ -584,9 +601,8 @@ schedule:
   date: "0"
   title: "Recursion and Dynamic Programming"  
   readings:
-  - rtitle: "Exercise: Dynamic Programming"
+  - rtitle: "Dynamic Programming"
     rlink: "Modules/DynamicProgramming/Module"    
-    points: 3
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
@@ -600,7 +616,9 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Handed Out"
     dlink: false    
-    points: 100     
+    points: 100
+  - dtitle: "Debugging Table: Second Check"
+    points: 10    
 - week: "12"
   date: "2"
   title: "Recursion and Dynamic Programming"   
@@ -641,17 +659,14 @@ university:
   semester: "Fall"
   academicyear: "2020-21"
   fall:
-  - kname: "Convocation"
-    kdate: "2020/08/19"
-    kdisplay: true
   - kname: "Add Deadline"
-    kdate: "2020/09/11"
+    kdate: "2020/09/18"
     kdisplay: true
   - kname: "Drop with a W Deadline"
-    kdate: "2020/10/28"
+    kdate: "2020/11/4"
     kdisplay: true  
   - kname: "Mid Semester Grades Posted"
-    kdate: "2020/10/16"
+    kdate: "2020/10/23"
     kdisplay: false
   - kname: "2020 Transition to Remote Learning after Thanksgiving Break"
     kdate: "2020/11/30"

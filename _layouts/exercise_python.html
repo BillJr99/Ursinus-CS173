@@ -1,16 +1,15 @@
 ---
-layout: default
+layout: python
 
-formprocessor: "https://mathcs.ursinus.edu:8092/"
+formprocessor: "https://mathcs.ursinus.edu:8082/"
 enctype: "application/x-www-form-urlencoded"
-facultyemail: "ctralie@ursinus.edu"
+facultyemail: "billmongan@gmail.com"
 
 formprocessordirections: "Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 
 submitformlinkdirections: "Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions."
 ---
 
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
@@ -108,6 +107,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         <br>
         
         <button type = "button" onclick = "if(document.getElementById('studentemail').value.indexOf('@') != -1 && document.getElementById('studentemail').value.indexOf('.') != -1) runCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your e-mail address first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
+
         </p>
         
         <!-- Must name main file "main" and the div tag here/css/processing code below is hardcoded to mainEditor -->
@@ -124,6 +124,44 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
 
         <canvas id="pscanvas" height="20px"></canvas>
 
+        <!-- Python script runner -->
+        <script type="text/python">
+            from browser import document as doc, window
+            import tb as traceback
+            import sys
+
+            def get_formatted(*args, **kwargs):
+                """
+                My imitation of Python 3's print() function, so I can
+                return the result as a string
+                """
+                sep = ' '
+                end = '\n'
+                if 'sep' in kwargs:
+                    sep = kwargs['sep']
+                if 'end' in kwargs:
+                    end = kwargs['end']
+                ret = ''
+                for i, arg in enumerate(args):
+                    ret += "%s"%arg
+                    if i < len(args) - 1:
+                        ret += sep
+                return ret + end
+
+            def run_python_code(code):
+                result = ""
+                try:
+                    window['python_code_result'] = ''
+                    code = code.replace("print(", "window['python_code_result'] += get_formatted(")
+                    exec(code)
+                    result = window['python_code_result']
+                except Exception as exc:
+                    # Formatting exception
+                    result = traceback.format_exc()
+                return result
+            
+            window.run_python_code = run_python_code
+        </script>
 
         <script>
         let canvas = document.getElementById("pscanvas");
@@ -135,7 +173,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         {% if file.ismain == true %}
         let mainEditor = ace.edit("mainEditor");
         mainEditor.setFontSize(16);
-        mainEditor.session.setMode("ace/mode/java");
+        mainEditor.session.setMode("ace/mode/python");
         {% if file.isreadonly == true %}
         mainEditor.setReadOnly(true);            
         {% else %}
@@ -144,7 +182,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         {% else %}
         let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
         {{ file.name }}Editor.setFontSize(16);
-        {{ file.name }}Editor.session.setMode("ace/mode/java");
+        {{ file.name }}Editor.session.setMode("ace/mode/python");
         {% if file.isreadonly == true %}
         {{ file.name }}Editor.setReadOnly(true);            
         {% else %}
@@ -172,13 +210,16 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
 
         function runCode() {
             try {
-                let editorText = "";
+                
+                let student_code = "";
                 for (var i in editors) {
-                    editorText += editors[i].getValue();
-                    editorText += "\n";
+                    student_code += editors[i].getValue();
+                    student_code += "\n";
                 }
-                let code = makeCodeJavaProcessing(editorText, mainEditor.getValue());
-                instance = new Processing(canvas, code);
+                student_code += mainEditor.getValue();
+                feedbackString = run_python_code(student_code);
+                feedback.setValue(feedbackString);
+                
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";

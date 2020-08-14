@@ -48,35 +48,7 @@ info:
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
-    - model: |
-        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        import java.util.Arrays;
-        
-        public class Main {
-            public static void main(String[] args) {
-                String x = "bat";
-                String y = "tab";
-                
-                /* Sorting the letters in a string by converting the string 
-                 * to an array of individual characters.
-                 * https://www.geeksforgeeks.org/sort-a-string-in-java-2-different-ways/
-                 */
-                char xArray = x.toCharArray();
-                char yArray = y.toCharArray();
-                
-                Arrays.sort(xArray); // xArray now contains "abt"
-                Arrays.sort(yArray); // yArray now contains "abt"
-                
-                // Reconstruct the Strings from the sorted arrays
-                String x = new String(xArray); // x now contains "abt"
-                String y = new String(yArray); // y now contains "abt"
-            }
-        }
-        ]]></script>     
-      title: Palendrome Checker
-      questions: 
-        - Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  
-        - Use this comparison function to determine if two <code>String</code>s are palendromes of each other.  Two <code>String</code>s are panendromes if their sorted characters are equal to one another.
+
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
       title: Strings

@@ -28,13 +28,31 @@ function feedbackPrint(s) {
     return s;
 }
 
-function makeCode(codeString, mainString) {
+/**
+ * Take code from the browser and put it into a form that can be sent to processing
+ * 
+ * @param {*} codeString All Java code (except for the main) that should be executed, as a string
+ * @param {*} mainString A string of the Java code that should go in main
+ * 
+ * @return The final code that should be executed by processing.js
+ */
+function makeCodeJavaProcessing(codeString, mainString) {
     feedbackString = "";
     let str = codeString.replace(/System.out.print/g, "feedbackString += feedbackPrint");
     str += PROCESSING_CODE_BEGIN;
     str += mainString.replace(/System.out.print/g, "feedbackString += feedbackPrint");
     str += PROCESSING_CODE_END;
     return str;
+}
+
+/**
+ * Convert the whitespace in a particular string to HTML whitespace
+ * @param {string} s The input string
+ */
+function getHTMLWhitespace(s) {
+    s = s.replace("\n", "<BR>");
+    s = s.replace("\t", "&nbsp&nbsp&nbsp&nbsp");
+    return s;
 }
 
 function removeTemplate(s) {

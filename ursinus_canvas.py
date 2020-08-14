@@ -33,8 +33,11 @@ CANVAS_TIME_ZONE = "America/New_York"
 DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
 DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
 
-child_threads = []
+TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance"] # which navigation pane items to force show if they are already hidden
 
+child_threads = []
+            
 def addslash(str):
     if not (str.endswith("/")):
         return str + "/"
@@ -60,21 +63,33 @@ def stripnobool(val):
     return result.strip()
 
 def dodelete(item, dosleep=True):
-    if dosleep: # for rate limiting
-        sleeptime = random.randint(5, 20)
-        time.sleep(sleeptime)
-        
-    try:
-        item.delete()
-    except exceptions.ResourceDoesNotExist:
-        print("Deleting: Resource Does Not Exist")
-    except exceptions.Unauthorized:
-        print("Deleting: Unauthorized")
-    except exceptions.Forbidden:
-        print("Deleting: Forbidden - it is possible that the rate limit is exceeded")
-        time.sleep(5)
-    except exceptions.CanvasException:
-        print("Deleting: Canvas Error")
+    repeat = True
+    
+    while repeat:
+        if dosleep: # for rate limiting
+            sleeptime = random.randint(5, 20)
+            time.sleep(sleeptime)
+            
+        try:
+            item.delete()
+            printlog("Delete: Successful")
+            repeat = False
+        except exceptions.ResourceDoesNotExist:
+            print("Deleting: Resource Does Not Exist")
+            repeat = False
+        except exceptions.Unauthorized:
+            print("Deleting: Unauthorized")
+            repeat = False
+        except exceptions.Forbidden:
+            print("Deleting: Forbidden - it is possible that the rate limit is exceeded")
+            repeat = True
+        except exceptions.CanvasException:
+            print("Deleting: Canvas Error")
+            repeat = True
+        except:
+            print("Deleting: Unknown Error")
+            repeat = True
+            
     
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
@@ -91,7 +106,7 @@ def delete_all_assignments(course):
         t = threading.Thread(target=dodelete, args=(assignment,))
         child_threads.append(t)
         t.start()           
-        
+           
 def delete_all_modules(course):
     modules = course.get_modules()
     
@@ -169,6 +184,21 @@ def delete_old_data(course, canvas, coursecontext):
     t4.start()
     t5.start()
     
+    # Avoid a race condition in which newly added items are deleted when gathered by these threads
+    for t in child_threads:
+        t.join()
+
+# https://canvas.instructure.com/doc/api/tabs.html#method.tabs.update
+# https://canvas.instructure.com/doc/api/tabs.html#method.tabs.index
+def arrange_tabs(course):
+    tabs = course.get_tabs()
+    
+    for tab in tabs:
+        if tab.label in TABS_TO_HIDE:
+            tab.update(hidden=True)
+        if tab.label in TABS_TO_SHOW:
+            tab.update(hidden=False)
+            
 # https://canvas.instructure.com/doc/api/discussion_topics.html
 # https://canvas.instructure.com/doc/api/discussion_topics.html#method.discussion_topics.create
 # https://canvasapi.readthedocs.io/en/stable/course-ref.html
@@ -295,8 +325,10 @@ def create_assignmentgroup(course, inputdict):
     return asmtgroup
 
 # Create a Module: https://canvas.instructure.com/doc/api/modules.html#method.context_modules_api.create
-def create_module(course, inputdict):
+def create_module(course, inputdict, position=-1):
     module = course.create_module(inputdict)
+    if position >= 1:
+        module.edit(module={'position': position})
     return module
     
 # Add an item to an existing module: https://canvas.instructure.com/doc/api/modules.html#method.context_module_items_api.create
@@ -314,14 +346,14 @@ def get_assignment_group_containing_label(groups, label):
     
     return None
     
-def add_assignments_to_groups(course):
+def add_assignments_to_groups(course, postdict):
     # Get all the assignments
     assignments = course.get_assignments()
     
     # Get all the assignment groups
     groups = course.get_assignment_groups()
     
-    # If Lab, Project, Assignment (etc...) is in the name, add it to the weight column with Lab, Project, or Assignment (etc...) in the name
+    # If Lab, Project, Assignment (etc...) is in the name, add it to the weight column with Lab, Project, or Assignment (etc...) in the name (you can prefix a deliverable name with the name of a grade breakdown column and it will add to that as well)
     for assignment in assignments:
         name = assignment.name
         asmtid = assignment.id
@@ -336,11 +368,22 @@ def add_assignments_to_groups(course):
             group = get_assignment_group_containing_label(groups, 'Project')
         elif 'Exercise:' in name:
             group = get_assignment_group_containing_label(groups, 'Exercise')
-            
+        else:
+            if 'grade_breakdown' in postdict:
+                for breakdown in postdict['grade_breakdown']:        
+                    category = breakdown['category']
+                    
+                    if category in name:
+                        group = get_assignment_group_containing_label(groups, category)
+                        break
+                        
         if not (group is None):
             groupid = group.id
             
             assignment.edit(assignment={'assignment_group_id': groupid})
+            
+    # Enable assignment group weighted grading
+    course.update(course={'apply_assignment_group_weights': True})
     
 # Create Calendar: https://canvasapi.readthedocs.io/en/stable/canvas-ref.html (canvas.create_calendar_event, dict from https://canvas.instructure.com/doc/api/calendar_events.html)
 def create_calendar_event(canvas, inputdict):
@@ -386,7 +429,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     # Create Discussion Topics
     inputdict = {}
     inputdict['title'] = "Introductions"
-    inputdict['description'] = "Welcome!  Please use this space to introduce yourself.  Feel free to say anything about yourself that you are comfortable sharing, like a word on why you are taking this course and what you hope to get from it."
+    inputdict['message'] = "Welcome!  Please use this space to introduce yourself.  Feel free to say anything about yourself that you are comfortable sharing, like a word on why you are taking this course and what you hope to get from it."
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
@@ -394,13 +437,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     
     inputdict = {}
     inputdict['title'] = "Water Cooler"
-    inputdict['description'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
+    inputdict['message'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
     add_discussion_topic(course, inputdict)
     
     printlog("Writing Lecture Schedule...")
+    
+    moduleidx = 1 # module positions are 1-indexed
     
     # Write the lecture schedule as a recurring event
     for i in range(len(postdict['info']['class_meets_locations'])):
@@ -462,7 +507,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         inputdict = {}
         inputdict['name'] = coursedtstr + " - " + title   
         inputdict['published'] = True
-        module = create_module(course, inputdict)
+        module = create_module(course, inputdict, moduleidx)
+        moduleidx = moduleidx + 1 # for positioning
         
         # Add course resources to first day entry
         if scheduleitems == 0:
@@ -671,7 +717,10 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             # The Assignments group might exist by default - don't call anything that in breakdown just in case
             create_assignmentgroup(course, inputdict)
             
-        add_assignments_to_groups(course)
+        add_assignments_to_groups(course, postdict)
+        
+        # Delete the default Assignments gradebook group
+        delete_assignment_group_by_name(course, "Assignments")        
 
 def get_courseid(canvas, user):
     courses = user.get_courses()
@@ -757,6 +806,10 @@ printlog("Reading Markdown...")
 # Read Course Markdown File
 process_markdown(markdownfile, canvas, course, courseid, coursehomepage)
 
+printlog("Hiding/Showing Tabs...")
+# Hide Navigation Tabs
+arrange_tabs(course)
+
 #printlog("Initiating Course Export...")
 # Export Course Content
 #course.export_content("zip")
@@ -769,11 +822,7 @@ for topic in topics:
         
     parse_discussions(entries)
 
-printlog("Cleaning Up...")
-
-# Delete the default Assignments gradebook group
-delete_assignment_group_by_name(course, "Assignments")
-
-# Wait for any child threads to finish            
+printlog("Finished: Waiting for Child Threads to Terminate")
+# Clean Up
 for t in child_threads:
-    t.join()
+        t.join()

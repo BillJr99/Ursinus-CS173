@@ -5,6 +5,9 @@ boilerplate:
   lms: 
     title: Canvas, Microsoft Teams, GroupMe
     description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
+    lmsname: "Canvas"
+    lmslink: "https://ursinus.instructure.com/"
+  disability: "Ursinus College is committed to ensuring equal access and providing reasonable accommodations for students with disabilities. The Institute for Student Success works with students who have any kind of disability, whether apparent or non-apparent, learning, emotional, physical, or cognitive, and need accommodations to increase their access to this learning environment. I encourage you to reach out to the Director of Disability Services, Dr. Dolly Singley to discuss about supports and accommodations you may need. Dolly’s office is located in the Institute for Student Success in Lower Wismer. You can schedule a meeting with Dolly by using this link: <a href=\"https://dsingley.youcanbook.me/\">https://dsingley.youcanbook.me/</a>, by emailing her at dsingley@ursinus.edu or by calling her at 1-484-762-4329. Students can also review accessibility and disabilities services online at <a href=\"https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/\">https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/</a>. Academic Honesty statement. See the <a href=\"https://www.ursinus.edu/offices/academic-affairs/faculty-resources/faculty-handbook/index.php\">Course Management</a> page in the Faculty Handbook for an explanation of college policies on plagiarism and other academic honesty violations."
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
     disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
@@ -13,7 +16,9 @@ boilerplate:
     academichonesty: https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/
     titleix: https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/
     thequestions: https://www.ursinus.edu/quest/the-questions/
-    
+  miscpolicies:
+    - title: COVID-19 Requirements/Policy
+      body: For in person sessions, you are required to wear a mask and you will be asked to leave the classroom if you are not properly wearing a mask. If you forget your face mask, disposable masks will be available in all buildings. DO NOT attend class if you do not feel well, just email me and let me know (see attendance policy above). In the event our course must go fully remote, we will continue towards achieving the course learning goals, but there may be adjustments to the schedule, content, assessments etc.  My office hours will mainly be conducted remotely to maintain physical distancing.
 ---
 
 <!-- 
@@ -209,6 +214,11 @@ boilerplate:
     <br>
     {% endif %}
     
+    {% if layout.boilerplate.lms.lmslink %}
+    <li><strong>LMS ({{ layout.boilerplate.lms.lmsname }}):</strong> <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a></li>
+    <br>
+    {% endif %}
+    
     {% if page.info.chatlink %}
     <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our class chat channel here!</a></li>
     <br>
@@ -252,6 +262,19 @@ boilerplate:
     {% endfor %}
     </ul>
     {% endif %}
+    
+    
+    {% if page.info.zoom %}
+    <li><strong>Zoom Link for Class Sessions (see <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a> for password):</strong></li> 
+    <ul>    
+    {% for i in (0..page.info.zoom.size) %}
+    {% if i < page.info.zoom.size %}
+    <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom[i].section.zoomlink }}">{{ page.info.zoom[i].section.zoomlink }}</a></li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
     
     {% if page.info.midtermexam and page.info.course_sections %}
     {% for i in (0..page.info.course_sections.size) %}
@@ -359,7 +382,11 @@ boilerplate:
     Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of <a href="{{layout.boilerplate.links.disabilityservices}}">Disability Services</a> via email or at 484-762-4329.
     
     
-    
+    {% if layout.boilerplate.disability %}
+    <h3>Disability Statement</h3>
+    {{ layout.boilerplate.disability }}
+    {% endif %}
+
     
     <h3>Let's Talk</h3>
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -369,6 +396,8 @@ boilerplate:
         </div>
         <div style="display: table-cell; padding:5px; vertical-align: top">
             Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. I am happy to discuss this in office hours in more detail.
+            
+            Additionally, please know that the <a href="https://www.ursinus.edu/offices/wellness-center/counseling/">Wellness Center</a> is available for students and includes a crisis hour at 2-3pm each weekday.
         </div>        
     </div>
     </div>
@@ -763,6 +792,8 @@ boilerplate:
     
     Furthermore, I want all students to feel comfortable expressing their opinions or confusion at any point in the course, as long as they do so respectfully. As I will stress over and over, being confused is an important part of the process of learning computer science. Therefore, I will not tolerate any form of put-downs by one student towards another about their confusion or progress in the class. Learning computer science and struggling to grow is not <a href="https://i0.wp.com/katielmartin.com/wp-content/uploads/2019/02/1_9HzbByi2Uzit8474Rp4ZPg-1.jpg?w=550&ssl=1">always comfortable</a>, but I want it to feel safe.  Much of this material is probably new to everyone, and those with some prior experience likely recall a time when it was new to them, too.  Remember that <strong>this is not a competition</strong>: helping others to grow is itself a richly rewarding professional development opportunity.  
     
+    In order to allow for equitable access to class for students who may be attend and participating remotely, I may record our class sessions. These recordings will only be available on our Canvas site. I will announce that we are recording in the beginning of any classes of this kind; out of respect and privacy for me and all class members, please do not download, copy, or redistribute class recordings.
+    
     
     
     
@@ -830,15 +861,15 @@ boilerplate:
             <td>OK</td>
             <td>OK</td>
             <td>In-Class<br>Exercises</td>
-            <td>OK</td>
+            <td>NO</td>
           </tr>
           <tr>
             <td><strong>View the Code/Solutions Of</strong></td>
             <td>ALL EXCEPT<br>Assignments</td>
             <td>OK</td>
-            <td>OK</td>
+            <td>NO</td>
             <td>In-Class<br>Exercises</td>
-            <td>OK</td>
+            <td>NO</td>
           </tr>
           <tr>
             <td><strong>Copy Code/Solutions From</strong></td>
@@ -867,9 +898,22 @@ boilerplate:
     
     
     
-    <h3>Inclement Weather Policy</h3>
-    In the event that the College closes due to inclement weather or other circumstances, our in-person class sessions, office hours, labs, or other meetings will not be held.  I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply).  If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those.  This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal.  Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well.
+    <h3>Inclement Weather and Class Cancellation Policy</h3>
+    In the event that the College closes due to inclement weather or other circumstances, our in-person class sessions, office hours, labs, or other meetings will not be held.  I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply).  If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those.  I will communicate this plan to the department so that it can be posted on my office door if it is feasible to do so.  This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal.  Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well.
     
+    
+    {% if layout.boilerplate.miscpolicies %}
+    <h3>Miscellaneous Policies</h3>
+    <ul>
+    {% for policy in layout.boilerplate.miscpolicies %}
+    <li><strong>{{policy.title}}:</strong> {{policy.body}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    
+    <h3>Student Perception of Teaching Questionnaire (SPTQ)</h3>
+    I will be soliciting student feedback through the SPTQ and possibly through other forms of commentary.  This feedback greatly assists me and the department as we develop our courses and overall curriculum for this program.  This course has benefitted from the feedback of those students who took the course before you, and your feedback will help maintain and improve the course for those to follow.  I strongly encourage you to participate in this important and valuable process.
     
     
     <h3>Syllabus Subject to Change</h3>
