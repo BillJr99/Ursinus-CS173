@@ -7,6 +7,10 @@ excerpt: "CS173: Intro to Computer Science - Warmup"
 info:
   coursenum: CS173
   officehourspoll: "https://www.when2meet.com/?9311271-8GY4a"
+  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020"
+  class_notebook_name: "OneNote"
+  chatlink: "https://groupme.com/join_group/60668915/dGoprIMb"
+  chatname: "GroupMe"
   testproject:
     ziplink: "../files/asmt-warmup/HW0-master.zip"
     zipfilename: "HW0-master.zip"
@@ -22,7 +26,7 @@ The purpose of this assignment is to get us setup for the course, both by gettin
 
 ## Personal Survey (5 Pts)
 
-I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on GroupMe
+I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on [{{ page.info.chatname }}]({{ page.info.chatlink }}).
 
 1.  Your Name, Your Nickname (if applicable) / Preferred Pronouns
 2.  What is your reason for taking the course? (Blunt honesty is perfectly fine here, if applicable)
@@ -56,15 +60,19 @@ Next, expand `Source Packages -> hw0` and double click on `GoodCode.java`. Once 
 
 ![]({{ site.baseurl }}/images/asmt-warmup/GoodCode.png)
 
-Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to GroupMe.
+Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to [{{ page.info.chatname }}]({{ page.info.chatlink }}).
+
+### Class Notebook
+
+We will use an electronic shared notebook throughout the class.  You'll be able to take notes there, see the whiteboard notes that I create, and respond to some reflective journal prompts throughout the course.  We'll use [{{page.info.class_notebook_name}}]({{ page.info.class_notebook }}), which you can access through this link.
 
 ## Syllabus (5pts)
 
-Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on GroupMe with the answers to the following questions**
+Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on [{{ page.info.chatname }}]({{ page.info.chatlink }}) with the answers to the following questions**
 
 1.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code during labs
 2.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code for regular assignments.
 3.  True/False: You may look at any classmate's code during a regular assignment.
 4.  What happens if you show up after the lecture has already started?
 5.  Where is the help room located?
-6.  Extra credit (+2) Send me a selfie of yourself inside of the help room.
+<!--6.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
