@@ -532,10 +532,6 @@ schedule:
   date: "3"
   title: "Classes and Inheritance"
   link: "Activities/Inheritance"
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25
 - week: "10"
   date: "0"
   title: "File I/O"
@@ -543,6 +539,9 @@ schedule:
   - dtitle: "Lab: HashMaps Due"
     dlink: false  
     points: 100
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25    
   - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
     dlink: "Assignments/PurpleAmerica"   
     points: 25    
