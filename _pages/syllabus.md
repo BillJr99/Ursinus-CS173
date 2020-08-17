@@ -405,8 +405,8 @@ schedule:
   date: "1"
   title: "Lab: Iteration" 
   deliverables:
-  - dtitle: "Lab: Iteration Handed Out"
-    dlink: "Labs/Iteration"  
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
+    dlink: "Labs/MonteCarloPi"  
     points: 100
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
@@ -433,8 +433,8 @@ schedule:
   date: "2"
   title: "Iteration, Randomness, and the do loop"
   deliverables:
-  - dtitle: "Lab: Iteration Due"
-    dlink: "Labs/Iteration"    
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"    
   - dtitle: "Programming Assignment: Purple America Part 4 Due"
     dlink: "Assignments/PurpleAmerica"  
     points: 25

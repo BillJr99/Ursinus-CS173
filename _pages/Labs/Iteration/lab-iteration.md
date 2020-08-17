@@ -1,6 +1,6 @@
 ---
 layout: assignment
-permalink: /Labs/Iteration
+permalink: /Labs/MonteCarloPi
 title: "CS173: Intro to Computer Science - Iteration"
 excerpt: "CS173: Intro to Computer Science - Iteration"
 
@@ -37,6 +37,23 @@ tags:
   
 ---
 
-In this lab, you will use iteration to help you avoid writing (and debugging, and fixing, and maintaining) the same code over and over again.
+In this lab, you will use iteration to help you avoid writing (and debugging, and fixing, and maintaining) the same code over and over again.  Specifically, we will estimate the value of <span>\(\pi\)</span> using iteratively generated random numbers.
 
-Write a program 
+Imagine a unit square with a circle inscribed.  The diameter of the circle is 1, since the length of a side of the unit square (in which the circle is inscribed) is 1.
+
+**Question: what is the area of the square, and what is the area of the circle?**
+
+Generate 10 pairs of random numbers (x and y coordinates) between 0 and 1.  Only some (or perhaps none!) of these points lie inside the circle, but all of these points lie inside the unit square.  The ratio of the points inside the circle to the points inside the square should approximate the ratio of the area of the circle to the area of the square, given enough points.
+
+<span>\(\frac{A_{circle}}{A_{square}} = \frac{\pi \times r^{2}}{s^{2}}\)</span>
+
+Since we're using a unit square with side length <span>\(s = 1\)</span>, we know that <span>\(r = 0.5\)</span>.  This gives us the following:
+
+<span>\(\frac{A_{circle}}{A_{square}} = \frac{\pi \times 0.5^{2}}{1^{2}}\)</span><br>
+<span>\(\frac{A_{circle}}{A_{square}} = \pi \times 0.25\)</span><br>
+
+Amazingly, the ratio of data points inside the circle to those inside the square is <span>\(\frac{\pi}{4}\)</span>.  In fact, since every data point is inside the square (because x and y are both between 0 and 1), the percentage of data points inside the unit circle will approximate <span>\(\frac{\pi}{4}\)</span>.
+
+We know that a point `(x, y)` lies within a unit circle if <span>\(x^{2} + y^{2} \leq 1\)</span>.  Thus, you can create a program with a function `estimatePi` that accepts a parameter that specifies the number of pairs of random numbers `(x, y)` to generate.  Return the percentage of those random pairs that lie within the unit circle.
+
+Call this function for various numbers of iterations (for example, 10, 100, 1000, 10000, 100000, 1000000, and 10000000), and compute the error from the actual value of <span>\(\frac{\pi}{4}\)</span>.  Now, run it a second time: do the error values change?  If so, by how much?
