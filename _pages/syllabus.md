@@ -344,8 +344,8 @@ schedule:
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
-  - dtitle: "Lab: Functions Handed Out"    
-    dlink: false 
+  - dtitle: "Lab: Averaging Functions Handed Out"    
+    dlink: "Labs/AverageFunction" 
     points: 100
 - week: "3"
   date: "2"
@@ -356,6 +356,7 @@ schedule:
 - week: "3"
   date: "3"
   title: "Testing"  
+  link: "Activities/Testing"
   readings:
   - rtitle: "NetBeans"
     rlink: "NetBeans"
@@ -363,8 +364,8 @@ schedule:
   date: "0"
   title: "Testing" 
   deliverables:
-  - dtitle: "Lab: Functions Due"    
-    dlink: false 
+  - dtitle: "Lab: Averaging Functions Due"    
+    dlink: "Labs/AverageFunction"  
     points: 100
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
@@ -405,7 +406,7 @@ schedule:
   title: "Lab: Iteration" 
   deliverables:
   - dtitle: "Lab: Iteration Handed Out"
-    dlink: false  
+    dlink: "Labs/Iteration"  
     points: 100
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
@@ -433,7 +434,7 @@ schedule:
   title: "Iteration, Randomness, and the do loop"
   deliverables:
   - dtitle: "Lab: Iteration Due"
-    dlink: false    
+    dlink: "Labs/Iteration"    
   - dtitle: "Programming Assignment: Purple America Part 4 Due"
     dlink: "Assignments/PurpleAmerica"  
     points: 25
@@ -445,23 +446,23 @@ schedule:
   title: "String Manipulation" 
 - week: "7"
   date: "0"
-  title: "String Manipulation"  
+  title: "Arrays" 
+  link: "Activities/Arrays"
 - week: "7"
   date: "1"
-  title: "Lab: Bernouli Trials"
+  title: "Lab: Arrays"
   deliverables:
-  - dtitle: "Lab: Bernouli Trials Handed Out"
-    dlink: false
+  - dtitle: "Lab: Array Averages Handed Out"
+    dlink: "Labs/ArrayAveraging"
     points: 100  
   - dtitle: "Debugging Table: First Check"
     points: 10
 - week: "7"
   date: "2"
   title: "Arrays" 
-  link: "Activities/Arrays"
   deliverables:
-  - dtitle: "Lab: Bernouli Trials Due"
-    dlink: false    
+  - dtitle: "Lab: Array Averages Due"
+    dlink: "Labs/ArrayAveraging"    
     points: 100
   readings:  
   - rtitle: "Ch. 6.1"
