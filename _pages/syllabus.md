@@ -564,19 +564,19 @@ schedule:
     points: 100
 - week: "10"
   date: "2"
-  title: "Comparators and Sorting"
-  readings:
-  - rtitle: "Ch. 9.6.3"
-    rlink: false   
-  - rtitle: "Interactive Demo of Insertion Sort"
-    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"
-- week: "10"
-  date: "3"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"  
   readings:
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
+- week: "10"
+  date: "3"
+  title: "Searching and Sorting" 
+  readings:
   - rtitle: "Insertion Sort"
     rlink: "Modules/InsertionSort/Module"       
+  - rtitle: "Interactive Demo of Insertion Sort"
+    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -596,13 +596,13 @@ schedule:
     rlink: "Modules/Recursion/Module"   
 - week: "11"
   date: "1"
-  title: "Lab: Searching and Sorting" 
+  title: "Lab: The High-Low Game" 
   readings:
   - rtitle: "Merge Sort"
     rlink: "Modules/MergeSort/Module"  
   deliverables:
-  - dtitle: "Lab: Searching and Sorting Handed Out"
-    dlink: false 
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropLowest" 
     points: 100
 - week: "12"
   date: "0"
@@ -611,8 +611,8 @@ schedule:
   - rtitle: "Dynamic Programming"
     rlink: "Modules/DynamicProgramming/Module"    
   deliverables:
-  - dtitle: "Lab: Searching and Sorting Due"
-    dlink: false  
+  - dtitle: "Lab: Drop the Lowest Due"
+    dlink: "Labs/DropLowest"  
     points: 100
 - week: "12"
   date: "1"
