@@ -287,24 +287,24 @@ schedule:
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
   - rtitle: "Pac-Man Map 256 Glitch"
-    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"   
+    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false      
 - week: "1"
   date: "3"
-  title: "Object Data Types"
-  readings:
-  - rtitle: "Ch. 2.3, 2.5"
-    rlink: false    
-- week: "2"
-  date: "0"
   title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
-    rlink: false  
+    rlink: false   
+- week: "2"
+  date: "0"   
+  title: "Conditionals"   
+  link: "Activities/Conditionals"
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
-    points: 100
+    points: 100  
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -317,10 +317,9 @@ schedule:
 - week: "2"
   date: "2"
   title: "Conditionals"  
-  link: "Activities/Conditionals"
 - week: "2"
   date: "3"
-  title: "Conditionals"      
+  title: "Conditionals"   
 - week: "3"
   date: "0"
   title: "Functions and Methods"
@@ -510,7 +509,7 @@ schedule:
     rlink: false     
 - week: "9"
   date: "0"
-  title: "Classes" 
+  title: "Classes and Object Data Types" 
   link: "Activities/Classes"
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
@@ -528,25 +527,25 @@ schedule:
     points: 100
 - week: "9"
   date: "2"
-  title: "Classes and Inheritance"
-  link: "Activities/Inheritance"  
+  title: "Classes"
 - week: "9"
   date: "3"
-  title: "File I/O"
+  title: "Classes and Inheritance"
+  link: "Activities/Inheritance"
   deliverables:
   - dtitle: "Programming Assignment: Purple America Part 5 Due"
     dlink: "Assignments/PurpleAmerica"    
     points: 25
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
 - week: "10"
   date: "0"
-  title: "File I/O" 
+  title: "File I/O"
   deliverables:
   - dtitle: "Lab: HashMaps Due"
     dlink: false  
     points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25    
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
@@ -562,20 +561,13 @@ schedule:
     rlink: false   
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100
 - week: "10"
   date: "3"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"  
   readings:
   - rtitle: "Insertion Sort"
-    rlink: "Modules/InsertionSort/Module"    
+    rlink: "Modules/InsertionSort/Module"       
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -584,6 +576,12 @@ schedule:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: false   
     points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100     
   readings:
   - rtitle: "Recursion"
     rlink: "Modules/Recursion/Module"   
@@ -604,9 +602,6 @@ schedule:
   - rtitle: "Dynamic Programming"
     rlink: "Modules/DynamicProgramming/Module"    
   deliverables:
-  - dtitle: "Programming Assignment: Iris Dataset Due"
-    dlink: "Assignments/Iris"
-    points: 100
   - dtitle: "Lab: Searching and Sorting Due"
     dlink: false  
     points: 100
@@ -623,6 +618,9 @@ schedule:
   date: "2"
   title: "Recursion and Dynamic Programming"   
   deliverables:
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100  
   - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
     dlink: "Assignments/GuitarStringSynth"           
     points: 100
