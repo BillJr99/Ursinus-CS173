@@ -619,7 +619,7 @@ schedule:
   title: "Lab: Final Project Brainstorm"    
   deliverables:
   - dtitle: "Final Project: Handed Out"
-    dlink: false    
+    dlink: "Projects/Final"    
     points: 100
   - dtitle: "Debugging Table: Second Check"
     points: 10    
@@ -654,7 +654,7 @@ schedule:
   title: "Review"     
   deliverables:
   - dtitle: "Final Project: Due"
-    dlink: false   
+    dlink: "Projects/Final"   
     points: 100
 - week: "14"
   date: "0"
