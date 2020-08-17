@@ -50,4 +50,4 @@ Make the needed repair, then stop and re-run the debugger.  Check the watch expr
 
 ## Trivia
 
-Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only recently fixed](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?
+Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only fixed 9 years later](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?
