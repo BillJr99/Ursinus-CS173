@@ -314,7 +314,7 @@ schedule:
     rlink: "NetBeans/Debugging"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
-    dlink: false  
+    dlink: "Labs/Debugging"
 - week: "2"
   date: "2"
   title: "Conditionals"  
@@ -335,7 +335,7 @@ schedule:
     dlink: "Assignments/MIDI" 
     points: 100
   - dtitle: "Lab: Debugging Due"    
-    dlink: false     
+    dlink: "Labs/Debugging"     
     points: 100
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Exercise"  
