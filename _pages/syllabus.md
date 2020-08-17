@@ -329,7 +329,9 @@ schedule:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
   - rtitle: "Using External Libraries in Your NetBeans Project"
-    rlink: "Modules/Library/Module"      
+    rlink: "Modules/Library/Module"     
+  - rtitle: "Reading User Input"
+    rlink: "https://www.w3schools.com/java/java_user_input.asp"  
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
@@ -542,6 +544,7 @@ schedule:
 - week: "10"
   date: "0"
   title: "File I/O"
+  link: "Activities/FileIO"
   deliverables:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
@@ -557,7 +560,7 @@ schedule:
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false    
+    dlink: "Labs/EthicalConsiderations"    
     points: 100
 - week: "10"
   date: "2"
@@ -580,7 +583,7 @@ schedule:
   link: "Activities/Recursion"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: false   
+    dlink: "Labs/EthicalConsiderations"   
     points: 100
   - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
     dlink: "Assignments/PurpleAmerica"   
