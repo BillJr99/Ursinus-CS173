@@ -27,7 +27,6 @@ info:
       questions:
         - What's wrong with this code? (there is more than one answer!)
         - How many calls would you make to `triangleArea` before you decide that it is "passing?"  What paramter inputs would you supply to those calls?
-  models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Random;

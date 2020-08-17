@@ -444,6 +444,9 @@ schedule:
 - week: "6"
   date: "3"
   title: "String Manipulation" 
+  readings:
+    - rtitle: "String Manipulation Exercises"
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
 - week: "7"
   date: "0"
   title: "Arrays" 
@@ -496,9 +499,11 @@ schedule:
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"
 - week: "8"
   date: "3"
-  title: "HashMaps and Caches"   
+  title: "HashMaps and Caches"  
+  link: "Activities/HashMaps"  
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto" 
@@ -524,8 +529,8 @@ schedule:
   date: "1"
   title: "Lab: HashMaps"
   deliverables:
-  - dtitle: "Lab: HashMaps Handed Out"
-    dlink: false  
+  - dtitle: "Lab: HashMap Story Telling Handed Out"
+    dlink: "Labs/TellAStory"
     points: 100
 - week: "9"
   date: "2"
@@ -538,8 +543,8 @@ schedule:
   date: "0"
   title: "File I/O"
   deliverables:
-  - dtitle: "Lab: HashMaps Due"
-    dlink: false  
+  - dtitle: "Lab: HashMap Story Telling Due"
+    dlink: "Labs/TellAStory"
     points: 100
   - dtitle: "Programming Assignment: Purple America Part 5 Due"
     dlink: "Assignments/PurpleAmerica"    

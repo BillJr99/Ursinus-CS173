@@ -1,0 +1,40 @@
+---
+layout: activity
+permalink: /Activities/NumberSystems
+title: "CS173: Intro to Computer Science - Number Systems"
+excerpt: "CS173: Intro to Computer Science - Number Systems"
+
+info:
+  goals: 
+    - To identify the number systems that represent common data types
+    - To model colors according to their RGB encoding
+  models:
+    - model: |   
+        <img src="http://www.asciitable.com/index/asciifull.gif" alt="ASCII Table">
+      title: ASCII Table
+      questions:
+        - What is the decimal representation for the character `'A'`?  How about the newline character `\n`?
+        - What is the decimal representation for the character `'B'`?  How about the character `'b'`?  What is the difference between them?  
+        - What is the difference between each corresponding capital and lowercase letter?
+        - Write out the representation for the character `'B'` in binary, and also the character `'b'`.  How does their binary differ?
+        - How do you think a `boolean isLowerCase(char x)` function might work?
+    - model: |
+        <iframe src="https://www.rapidtables.com/web/color/RGB_Color.html" width="100%">
+      title: RGB Colors
+      questions:
+        - What three colors are used to define all colors on the color wheel?
+        - What does every greyscale color have in common?
+        - If you have one, what is the RGB value of your favorite color (or choose any color!)?  What is the  value of the red, green, and blue components in hexadecimal? What is the value in the "#" box for this color?
+        - What is the largest and smallest value of red, green, and blue that you can have?
+        - Given the number of possible reds, greens, and blues, how many total colors can we represent?
+        - Including black and white, how many possible pure greyscale colors can we represent?
+        
+reflective_prompts:
+  - What can we do when choosing colors to better accommodate visually impaired or colorblind persons?
+  
+tags:
+  - numbersystems
+  - colors
+  
+---
+
