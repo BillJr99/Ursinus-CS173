@@ -232,8 +232,6 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
-  - rtitle: "The NetBeans IDE Software Environment"
-    rlink: "Modules/IDE/Module"    
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
@@ -256,6 +254,9 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3    
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
@@ -315,6 +316,7 @@ schedule:
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
+    points: 100
 - week: "2"
   date: "2"
   title: "Conditionals"  
@@ -360,7 +362,7 @@ schedule:
   title: "Testing"  
   link: "Activities/Testing"
   readings:
-  - rtitle: "NetBeans"
+  - rtitle: "NetBeans IDE and Testing"
     rlink: "NetBeans"
 - week: "4"
   date: "0"
@@ -577,7 +579,8 @@ schedule:
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"      
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3     
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -593,13 +596,15 @@ schedule:
     dlink: "Assignments/Iris"      
     points: 100     
   - dtitle: "Exercise: Recursion"
-    dlink: "Modules/Recursion/Module"   
+    dlink: "Modules/Recursion/Module"
+    points: 3 
 - week: "11"
   date: "1"
   title: "Lab: The High-Low Game" 
   deliverables:
   - dtitle: "Exercise: Merge Sort"
     dlink: "Modules/MergeSort/Module"  
+    points: 3 
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100
@@ -609,7 +614,8 @@ schedule:
   link: "Activities/DynamicProgramming"
   deliverables:
   - dtitle: "Exercise: Dynamic Programming"
-    dlink: "Modules/DynamicProgramming/Module"     
+    dlink: "Modules/DynamicProgramming/Module"   
+    points: 3     
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
