@@ -19,7 +19,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("1,3,7")
+    pos.includes("1,3,7.1,8,9")
   incorrectchecks:
     - incorrectcheck: |
         pos.includes("0,0,0")
@@ -66,7 +66,9 @@ files:
     code: | 
         public class Tester {
             public static void main(String[] args) {
-              ArrayUtils.printArray(ArrayUtils.sort3Elements(7, 3, 1))
+              ArrayUtils.printArray(ArrayUtils.sort3Elements(7, 3, 1));
+              System.out.print(".");
+              ArrayUtils.printArray(ArrayUtils.sort3Elements(9, 1, 8));
             }
         }    
 
