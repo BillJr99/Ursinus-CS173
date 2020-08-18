@@ -30,9 +30,9 @@ info:
             }
         }
         ]]></script>          
-      title: User Input with the `Scanner`
+      title: User Input with the <code>Scanner<code>
       questions:
-        - What is `System.in`?
+        - What is <code>System.in<code>?
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.nio.file.Files;
@@ -72,8 +72,8 @@ info:
         ]]></script>          
       title: User Input
       questions:
-        - What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to `readFileString` or `readFileBytes`?
-        - What is the difference between `readFileBytes` and `readFileString`?
+        - What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to <code>readFileString</code> or <code>readFileBytes</code>?
+        - What is the difference between <code>readFileBytes</code> and <code>readFileString</code>?
         
 tags:
   - io

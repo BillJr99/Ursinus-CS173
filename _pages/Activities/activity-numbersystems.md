@@ -13,11 +13,11 @@ info:
         <img src="http://www.asciitable.com/index/asciifull.gif" alt="ASCII Table">
       title: ASCII Table
       questions:
-        - What is the decimal representation for the character `'A'`?  How about the newline character `\n`?
-        - What is the decimal representation for the character `'B'`?  How about the character `'b'`?  What is the difference between them?  
+        - What is the decimal representation for the character <code>'A'</code>?  How about the newline character <code>\n</code>?
+        - What is the decimal representation for the character <code>'B'</code>?  How about the character <code>'b'</code>?  What is the difference between them?  
         - What is the difference between each corresponding capital and lowercase letter?
-        - Write out the representation for the character `'B'` in binary, and also the character `'b'`.  How does their binary differ?
-        - How do you think a `boolean isLowerCase(char x)` function might work?
+        - Write out the representation for the character <code>'B'</code> in binary, and also the character <code>'b'</code>.  How does their binary differ?
+        - How do you think a <code>boolean isLowerCase(char x)</code> function might work?
     - model: |
         <iframe src="https://www.rapidtables.com/web/color/RGB_Color.html" width="100%">
       title: RGB Colors
