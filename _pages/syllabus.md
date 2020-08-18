@@ -572,11 +572,12 @@ schedule:
 - week: "10"
   date: "3"
   title: "Searching and Sorting" 
-  readings:
-  - rtitle: "Insertion Sort"
-    rlink: "Modules/InsertionSort/Module"       
+  readings:   
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
+  deliverables:
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"      
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -591,16 +592,14 @@ schedule:
   - dtitle: "Programming Assignment: Iris Dataset Handed Out"
     dlink: "Assignments/Iris"      
     points: 100     
-  readings:
-  - rtitle: "Recursion"
-    rlink: "Modules/Recursion/Module"   
+  - dtitle: "Exercise: Recursion"
+    dlink: "Modules/Recursion/Module"   
 - week: "11"
   date: "1"
   title: "Lab: The High-Low Game" 
-  readings:
-  - rtitle: "Merge Sort"
-    rlink: "Modules/MergeSort/Module"  
   deliverables:
+  - dtitle: "Exercise: Merge Sort"
+    dlink: "Modules/MergeSort/Module"  
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100
@@ -608,10 +607,9 @@ schedule:
   date: "0"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"
-  readings:
-  - rtitle: "Dynamic Programming"
-    rlink: "Modules/DynamicProgramming/Module"    
   deliverables:
+  - dtitle: "Exercise: Dynamic Programming"
+    dlink: "Modules/DynamicProgramming/Module"     
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
