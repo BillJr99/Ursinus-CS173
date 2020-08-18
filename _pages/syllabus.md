@@ -607,6 +607,7 @@ schedule:
 - week: "12"
   date: "0"
   title: "Recursion and Dynamic Programming"  
+  link: "Activities/DynamicProgramming"
   readings:
   - rtitle: "Dynamic Programming"
     rlink: "Modules/DynamicProgramming/Module"    
