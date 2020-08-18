@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - ASCII Art"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/BbktE1Lz"
   points: 100
   goals:
     - To traverse and manipulate a 2-dimensional array

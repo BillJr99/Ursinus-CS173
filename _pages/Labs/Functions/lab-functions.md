@@ -1,13 +1,13 @@
 ---
 layout: assignment
 permalink: /Labs/AverageFunction
-title: "CS173: Intro to Computer Science - Modular Code with Functions"
-excerpt: "CS173: Intro to Computer Science - Modular Code with Functions"
+title: "CS173: Intro to Computer Science - Averaging Functions"
+excerpt: "CS173: Intro to Computer Science - Averaging Functions"
 
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/7Pyr5KjF"
   points: 100
   goals:
     - To develop functions to abstract program concepts

@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Ethics in Algorithms"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/z3SHnGPd"
   points: 100
   goals:
     - To identify and reason about professional ethics and responsibilities in software and computing

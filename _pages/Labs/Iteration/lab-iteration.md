@@ -1,13 +1,13 @@
 ---
 layout: assignment
 permalink: /Labs/MonteCarloPi
-title: "CS173: Intro to Computer Science - Iteration"
-excerpt: "CS173: Intro to Computer Science - Iteration"
+title: "CS173: Intro to Computer Science - Estimating Pi with Monte Carlo Simulation"
+excerpt: "CS173: Intro to Computer Science - Estimating Pi with Monte Carlo Simulation"
 
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/5lbeaWNk"
   points: 100
   goals:
     - To use iteration to solve problems while avoiding the need to write duplicate code

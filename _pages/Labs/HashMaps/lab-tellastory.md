@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Tell a Story with HashMaps"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/KW7gYBFu"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code

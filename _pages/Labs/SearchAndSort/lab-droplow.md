@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Searching and Sorting: Dropping the
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/XWrevmFf"
   points: 100
   goals:
     - To search an array using iterative approaches

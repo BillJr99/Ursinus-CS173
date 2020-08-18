@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Using the Debugger"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/XLL23LHq"
   points: 100
   goals:
     - To use the debugger to identify code bugs

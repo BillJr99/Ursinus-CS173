@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - The Iris Dataset"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/aUBQKbnb"
   points: 100
   goals:
     - To use File I/O to read and process a text file dataset
