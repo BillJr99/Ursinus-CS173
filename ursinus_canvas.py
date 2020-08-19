@@ -34,7 +34,7 @@ DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during
 DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
 
 TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
-TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance"] # which navigation pane items to force show if they are already hidden
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video" ] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
 
