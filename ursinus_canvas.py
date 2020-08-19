@@ -398,6 +398,10 @@ def add_assignments_to_groups(course, postdict):
             group = get_assignment_group_containing_label(groups, 'Project')
         elif 'Exercise:' in name:
             group = get_assignment_group_containing_label(groups, 'Exercise')
+        elif 'Participation:' in name:
+            group = get_assignment_group_containing_label(groups, 'Participation') 
+        elif 'Quiz:' in name:
+            group = get_assignment_group_containing_label(groups, 'Quiz') 
         else:
             if 'grade_breakdown' in postdict:
                 for breakdown in postdict['grade_breakdown']:        
@@ -747,7 +751,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['name'] = breakdown['category']
             inputdict['group_weight'] = float(rchop(breakdown['weight'], '%'))
             
-            # The Assignments group might exist by default - don't call anything that group name in markdown just in case
+            # The Assignments group might exist by default - don't call anything that group name as an assignment category or grade breakdown just in case
             create_assignmentgroup(course, inputdict)
             
         add_assignments_to_groups(course, postdict)

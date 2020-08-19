@@ -191,7 +191,7 @@ grade_breakdown:
   weight: "25%"
 - category: "Final Project"
   weight: "15%"
-- category: "Class Participation and Pre-Lab Exercises"
+- category: "Class Participation, Quizzes and Pre-Lab Exercises"
   weight: "7.5%"
 - category: "Debugging Table"
   weight: "2.5%"
@@ -433,6 +433,9 @@ schedule:
 - week: "6"
   date: "1"
   title: "Iteration"  
+  deliverables:
+    - dtitle: "Participation: First Activity Notebook Check"
+      points: 10
 - week: "6"
   date: "2"
   title: "Iteration, Randomness, and the do loop"
@@ -623,7 +626,7 @@ schedule:
   date: "1"
   title: "Lab: Final Project Brainstorm"    
   deliverables:
-  - dtitle: "Final Project: Handed Out"
+  - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100
   - dtitle: "Debugging Table: Second Check"
@@ -641,6 +644,9 @@ schedule:
 - week: "12"
   date: "3"
   title: "Final Project Workshop"  
+  deliverables:
+    - dtitle: "Participation: Second Activity Notebook Check"
+      points: 10  
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
@@ -658,7 +664,7 @@ schedule:
   date: "3"
   title: "Review"     
   deliverables:
-  - dtitle: "Final Project: Due"
+  - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"   
     points: 100
 - week: "14"
