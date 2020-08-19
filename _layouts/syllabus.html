@@ -508,13 +508,15 @@ boilerplate:
     </td>
     
     <td align="left">
-    {% if item.image and item.title %}
+    {% if item.title or item.image %}
       {% if item.link %}
         <a href="{{ item.link }}">
       {% endif %}
       
+      {% if item.image %}
       <center><img src="{{item.image}}" alt="Picture of the cover of the book entitled {{item.title}}"></center> 
       <br>     
+      {% endif %}
       {{item.title}}
       
       {% if item.link %}
