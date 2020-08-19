@@ -186,15 +186,15 @@ goals:
 
 grade_breakdown:
 - category: "Programming Assignments"
-  weight: "50%"
+  weight: "40%"
 - category: "Labs"
-  weight: "25%"
+  weight: "30%"
 - category: "Final Project"
   weight: "15%"
 - category: "Class Participation, Quizzes and Pre-Lab Exercises"
-  weight: "7.5%"
+  weight: "10%"
 - category: "Debugging Table"
-  weight: "2.5%"
+  weight: "5%"
 
 letter_grades:
 - letter: "A+"
