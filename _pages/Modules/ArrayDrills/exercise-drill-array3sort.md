@@ -6,11 +6,13 @@ excerpt: "CS174: OOP - Drills - Array 3 Sort"
 
 info:
   prev: "./ArrayInsert"
+  next: "./ArrayMinIndex"
   instructions: "Create a static method <code>sort3Elements</code> that takes in 3 integers and returns a 3-element array containing those integers in sorted order.  For instance, if it receives the integers 7, 1, and 3, it should return the array <code>{1, 3, 7}</code>"
   goals:
     - To do proper array indexing
     - To allocate and populate new arrays
     - To use conditional statements appropriately
+    - To properly define methods
     
 processor:  
   correctfeedback: "Correct!!" 
