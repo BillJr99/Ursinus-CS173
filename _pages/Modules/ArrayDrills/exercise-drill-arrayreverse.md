@@ -61,10 +61,12 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {0, 5, 10, 0, 3, 4, 0, 1};
-                ArrayUtils.printArray(ArrayUtils.getReverseArray(arr0));
-                System.out.print(".");
+                int[] arr0rev = ArrayUtils.getReverseArray(arr0);
                 int[] arr1 = {0, 0, 1, 1, 1, 1, 3};
-                ArrayUtils.printArray(ArrayUtils.getReverseArray(arr1));
+                int[] arr1rev = ArrayUtils.getReverseArray(arr1);
+                ArrayUtils.printArray(arr0rev);
+                System.out.print(".");
+                ArrayUtils.printArray(arr1rev);
             }
         }    
 

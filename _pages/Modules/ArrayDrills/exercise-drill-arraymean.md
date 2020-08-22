@@ -22,10 +22,10 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("2.875,1,0")
+    pos.includes("2.875.1.0")
   incorrectchecks:
     - incorrectcheck: |
-        pos.includes("2,")
+        pos.includes("2.")
       feedback: "Try again. Be careful to use a double variable to store your average!"  
     
     - incorrectcheck: |
@@ -33,7 +33,7 @@ processor:
       feedback: "Try again. Don't forget to divide by the number of elements in the array!" 
 
     - incorrectcheck: |
-        pos.includes("0,0,0")
+        pos.includes("0.0.0")
       feedback: "Try again. It seems like you're still returning the default value of 0 for all of your arrays!" 
 
     - incorrectcheck: |
@@ -63,13 +63,12 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {0, 5, 10, 0, 3, 4, 0, 1};
-                System.out.print((double)ArrayUtils.getMean(arr0));
-                System.out.print(",");
+                double mean0 = (double)ArrayUtils.getMean(arr0);
                 int[] arr1 = {0, 0, 1, 1, 1, 1, 3};
-                System.out.print((double)ArrayUtils.getMean(arr1));
-                System.out.print(",");
+                double mean1 = (double)ArrayUtils.getMean(arr1);
                 int[] arr2 = {};
-                System.out.print((double)ArrayUtils.getMean(arr2));
+                double mean2 = (double)ArrayUtils.getMean(arr2);
+                System.out.print(mean0 + "." + mean1 + "." + mean2);
             }
         }    
 

@@ -46,13 +46,16 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {3, 5, 0, 8, 0, 2};
-                System.out.print(ArrayUtils.getMinIndex(arr0));
-                System.out.print(".");
+                int min0 = ArrayUtils.getMinIndex(arr0);
                 int[] arr1 = {9, -3, 4, -3, 2, 5, 3, 2};
-                System.out.print(ArrayUtils.getMinIndex(arr1));
-                System.out.print(".");
+                int min1 = ArrayUtils.getMinIndex(arr1);
                 int[] arr2 = {};
-                System.out.print(ArrayUtils.getMinIndex(arr2));
+                int min2 = ArrayUtils.getMinIndex(arr2);
+                System.out.print(min0);
+                System.out.print(".");
+                System.out.print(min1);
+                System.out.print(".");
+                System.out.print(min2);
             }
         }    
 

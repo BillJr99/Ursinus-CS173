@@ -24,6 +24,12 @@ processor:
     pos.includes("1,3,7.1,8,9")
   incorrectchecks:
     - incorrectcheck: |
+        pos.includes("7,3,1.9,1,8")
+      feedback: "Try again: You put the elements in the array, but you didn't sort them."   
+    - incorrectcheck: |
+        pos.includes("7,3,1.9,8,1")
+      feedback: "Try again: You put the elements in descending order instead of ascending order."   
+    - incorrectcheck: |
         pos.includes("0,0,0")
       feedback: "Try again: It looks like you forgot to fill in the array you returned with elements."    
     - incorrectcheck: |
@@ -68,9 +74,11 @@ files:
     code: | 
         public class Tester {
             public static void main(String[] args) {
-              ArrayUtils.printArray(ArrayUtils.sort3Elements(7, 3, 1));
+              int[] arr1 = ArrayUtils.sort3Elements(7, 3, 1);
+              int[] arr2 = ArrayUtils.sort3Elements(9, 1, 8);
+              ArrayUtils.printArray(arr1);
               System.out.print(".");
-              ArrayUtils.printArray(ArrayUtils.sort3Elements(9, 1, 8));
+              ArrayUtils.printArray(arr2);
             }
         }    
 

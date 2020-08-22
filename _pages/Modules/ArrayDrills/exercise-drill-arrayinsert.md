@@ -83,15 +83,14 @@ files:
         public class Tester {
             public static void main(String[] args) {
                 int[] arr0 = {0, 5, 4, 8, 2};
-                int[] result;
-                result = ArrayUtils.insertElement(arr0, 2, 1);
-                ArrayUtils.printArray(result);
+                int[] result0 = ArrayUtils.insertElement(arr0, 2, 1);
+                int[] result1 = ArrayUtils.insertElement(arr0, 4, 10);
+                int[] result2 = ArrayUtils.insertElement(arr0, 0, 50);
+                ArrayUtils.printArray(result0);
                 System.out.print(".");
-                result = ArrayUtils.insertElement(arr0, 4, 10);
-                ArrayUtils.printArray(result);
+                ArrayUtils.printArray(result1);
                 System.out.print(".");
-                result = ArrayUtils.insertElement(arr0, 0, 50);
-                ArrayUtils.printArray(result);
+                ArrayUtils.printArray(result2);
             }
         }    
 
