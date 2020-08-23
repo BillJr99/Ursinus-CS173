@@ -7,11 +7,11 @@ relative_links:
 
 theme: jekyll-theme-slate
 
-title: "CS174"
-description: "Object-Oriented Programming"
+title: "CS173"
+description: "Intro to Computer Science"
 
-url                      : https://ursinus-cs174-f2020.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/Modules" # the subpath of your site, e.g. "/blog"
+url                      : https://BillJr99.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/Ursinus-CS173" # the subpath of your site, e.g. "/blog"
     
 # Reading Files
 include:
