@@ -20,7 +20,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("1,3,7.1,8,9")
+    pos.includes("3.12.10")
   incorrectchecks:
     - incorrectcheck: |
         pos.includes("9.44.12")
@@ -64,13 +64,12 @@ files:
         public class Tester {
             public static void main(String[] args) {
               String s1 = "I love CS";
-              System.out.print(StringUtils.countVowels(s1));
-              System.out.print(".");
+              int vowels1 = StringUtils.countVowels(s1);
               String s2 = "The quick brown fox jumped over the lAzy dOg";
-              System.out.print(StringUtils.countVowels(s2));
-              System.out.print(".");
+              int vowels2 = StringUtils.countVowels(s2);
               String s3 = "aEIOu  AeioU";
-              System.out.print(StringUtils.countVowels(s3));
+              int vowels3 = StringUtils.countVowels(s3);
+              System.out.print(vowels1 + "." + vowels2 + "." + vowels3);
             }
         }    
 
