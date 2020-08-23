@@ -9,7 +9,7 @@ googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
 
 formprocessor: "https://mathcs.ursinus.edu:8082/"
 enctype: "application/x-www-form-urlencoded"
-facultyemail: "billmongan@gmail.com"
+facultyemail: "wmongan@ursinus.edu"
 
 formprocessordirections: "<strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 ---
@@ -82,7 +82,7 @@ formprocessordirections: "<strong>You must be connected to the VPN for submissio
             
             {% endfor %}            
             
-            <!-- facultyemail and studentemail fields are required to send mail on the form processor -->
+            <!-- facultyemail and studentnetid fields are required to send mail on the form processor -->
             <input type="hidden" name="facultyemail" value="{{ layout.facultyemail | strip }}">
             <input type="hidden" name="studentemail-q" value="What is your e-mail address?">
             
@@ -93,7 +93,16 @@ formprocessordirections: "<strong>You must be connected to the VPN for submissio
                 <div style="display: table-cell; padding:5px; width:50%;">
                 <input type="text" name="studentemail" style="width: 100%;" />
                 </div>
-            </div>             
+            </div> 
+
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                What is your netid?
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" id="studentnetid" name="studentnetid" style="width: 100%;" />          
+                </div>
+            </div> 
     </div>    
     
     <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey | strip }}" data-callback="enableSubmit"></div>
