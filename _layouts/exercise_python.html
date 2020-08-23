@@ -1,9 +1,9 @@
 ---
 layout: python
 
-formprocessor: "https://mathcs.ursinus.edu:8082/"
+formprocessor: "https://mathcs.ursinus.edu:8092/"
 enctype: "application/x-www-form-urlencoded"
-facultyemail: "billmongan@gmail.com"
+facultyemail: "ctralie@ursinus.edu"
 
 formprocessordirections: "Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 
@@ -97,7 +97,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         <div id="correctArea"></div>
         
         <p>
-        <strong>Enter your e-mail address before clicking Run:</strong> <input type="text" id="studentemail" name="studentemail" onchange="if(document.getElementById('studentemail').value.indexOf('@') != -1 && document.getElementById('studentemail').value.indexOf('.') != -1) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;"><br>
+        <strong>Enter your Ursinus netid before clicking run (non Ursinus students can simply enter their name):</strong> <input type="text" id="studentnetid" name="studentnetid" onchange="if(document.getElementById('studentnetid').value.length > 0) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;"><br>
         {% if layout.formprocessor and layout.formprocessor != false %}
         {{ layout.formprocessordirections }}<br>
         {% endif %}
@@ -106,8 +106,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         {% endif %}
         <br>
         
-        <button type = "button" onclick = "if(document.getElementById('studentemail').value.indexOf('@') != -1 && document.getElementById('studentemail').value.indexOf('.') != -1) runCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your e-mail address first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
-
+        <button type = "button" onclick = "if(document.getElementById('studentnetid').value.length > 0) runCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your netid first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
         </p>
         
         <!-- Must name main file "main" and the div tag here/css/processing code below is hardcoded to mainEditor -->
@@ -166,6 +165,8 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         <script>
         let canvas = document.getElementById("pscanvas");
         let correctArea = document.getElementById("correctArea");
+        let correctlyAnswered = false;
+        let numAttempts = 0;
 
         var editors = new Array();
 
@@ -208,9 +209,54 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
             return s;
         }
 
+        /**
+         * Send code to the server with a POST command
+         * @param {boolean} vpnwarn Whether to warn about connecting to a vpn
+         * @param {boolean} halfcredit Whether this is a half credit submission
+         */
+         function postCode(vpnwarn, halfcredit) {
+            <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
+            {% if layout.formprocessor and layout.formprocessor != false %}
+            submitcode = '';
+            
+            for (var i in editors) {
+                submitcode += editors[i].getValue();
+                submitcode += "\n\n";
+            }
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.onerror = function(e){
+                if (vpnwarn) {
+                    alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+                }
+            };
+
+            xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
+            xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
+            
+            var formdata = new FormData();
+            formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
+            formdata.append("magic", "ursinus"); // required
+            formdata.append("title", "{{ page.title | strip }}"); // required
+            formdata.append("studentnetid", document.getElementById("studentnetid").value); //required
+            formdata.append("code", submitcode);
+            {% if page.canvasasmtid %}
+            formdata.append("canvasasmtid", "{{page.canvasasmtid}}");
+            {% endif %}
+            {% if page.canvaspoints %}
+            formdata.append("canvaspoints", "{{page.canvaspoints}}");
+            {% endif %}
+            if (halfcredit) {
+                formdata.append("canvashalfcredit", true);
+            }
+            
+            xhttp.send(urlencodeFormData(formdata));                    
+            {% endif %}
+        }
+
         function runCode() {
             try {
-                
+                numAttempts++;
                 let student_code = "";
                 for (var i in editors) {
                     student_code += editors[i].getValue();
@@ -222,6 +268,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                 
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
+                    correctlyAnswered = true;
                     correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
                     <!-- Setting a page.processor.submitformlink in the markdown will pop up an iframe with a page of your choice -->
                     {% if page.processor.submitformlink and page.processor.submitformlink != false %}
@@ -230,32 +277,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                     `;
                     {% endif %}
                     
-                    <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
-                    {% if layout.formprocessor and layout.formprocessor != false %}
-                    submitcode = '';
-                    
-                    for (var i in editors) {
-                        submitcode += editors[i].getValue();
-                        submitcode += "\n\n";
-                    }
-                    
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onerror = function(e){
-                        alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
-                    };
-
-                    xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
-                    xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
-                    
-                    var formdata = new FormData();
-                    formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
-                    formdata.append("magic", "ursinus"); // required
-                    formdata.append("title", "{{ page.title | strip }}"); // required
-                    formdata.append("studentemail", document.getElementById("studentemail").value); //required
-                    formdata.append("code", submitcode);
-                    
-                    xhttp.send(urlencodeFormData(formdata));                    
-                    {% endif %}
+                    postCode(true, false);
                 }
                 {% if page.processor.incorrectchecks %}
                 {% for check in page.processor.incorrectchecks %}
@@ -269,8 +291,17 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
                 }
             }
             catch(err) {
+                correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
                 feedback.setValue("Error: " + err.message);
             }
+
+            {% if page.canvashalftries %}
+            if (!correctlyAnswered && numAttempts == {{ page.canvashalftries }}) {
+                postCode(false, true);
+            }
+
+
+            {% endif %}
 
         }
         </script>        

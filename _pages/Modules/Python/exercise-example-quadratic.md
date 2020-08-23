@@ -1,8 +1,11 @@
 ---
 layout: exercise_python
-permalink: /Modules/Python/Example_Quadratic
+permalink: "Python/Example_Quadratic"
 title: "Python Example Module: Quadratic Formula"
 excerpt: "Python Example Module: Quadratic Formula"
+canvasasmtid: "95035"
+canvaspoints: "3"
+canvashalftries: 5
 
 info:
   points: 3

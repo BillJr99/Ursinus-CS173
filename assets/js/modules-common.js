@@ -42,6 +42,10 @@ function makeCodeJavaProcessing(codeString, mainString) {
     str += PROCESSING_CODE_BEGIN;
     str += mainString.replace(/System.out.print/g, "feedbackString += feedbackPrint");
     str += PROCESSING_CODE_END;
+    // TODO: Hack for dealing with the fact that chars are cast to
+    // ints in this transpiler
+    str = str.replace(/'/g, "\"");
+    console.log(str);
     return str;
 }
 
