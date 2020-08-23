@@ -40,36 +40,36 @@ info:
     - day: "M"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
-      place: "Pfahler Hall Room 107"
+      place: "Tent 1"
     - day: "T"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
-      place: "LAB: Pfahler Hall Room 107"    
+      place: "Tent 5"
     - day: "W"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
-      place: "Pfahler Hall Room 107"
+      place: "Tent 1"
     - day: "F"
       starttime: "9:00 AM"
       endtime: "9:50 AM"
-      place: "Pfahler Hall Room 107"  
+      place: "Tent 1"
   - section:
     - day: "M"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Pfahler Hall Room 106"
+      place: "Tent 1"
     - day: "T"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "LAB: Pfahler Hall Room 106"    
+      place: "Tent 5"
     - day: "W"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Pfahler Hall Room 106"
+      place: "Tent 1"
     - day: "F"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Pfahler Hall Room 106"       
+      place: "Tent 1"
   midtermexam: 
     - mdate: "TBD"
       mstarttime: "TBD"
@@ -122,16 +122,16 @@ instructors:
     endtime: "1:20 PM"
     location: "Virtual Office Hours on Microsoft Teams"  
   - day: "M"
-    starttime: "8:00 PM"
-    endtime: "9:00 PM"
+    starttime: "7:00 PM"
+    endtime: "8:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"      
   - day: "T"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
     location: "Virtual Office Hours on Microsoft Teams"
   - day: "T"
-    starttime: "8:00 PM"
-    endtime: "9:00 PM"
+    starttime: "7:00 PM"
+    endtime: "8:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"     
   - day: "W"
     starttime: "10:00 AM"
@@ -186,15 +186,15 @@ goals:
 
 grade_breakdown:
 - category: "Programming Assignments"
-  weight: "50%"
+  weight: "40%"
 - category: "Labs"
-  weight: "25%"
+  weight: "30%"
 - category: "Final Project"
   weight: "15%"
-- category: "Class Participation and Pre-Lab Exercises"
-  weight: "7.5%"
+- category: "Class Participation, Quizzes and Pre-Lab Exercises"
+  weight: "10%"
 - category: "Debugging Table"
-  weight: "2.5%"
+  weight: "5%"
 
 letter_grades:
 - letter: "A+"
@@ -232,8 +232,6 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
-  - rtitle: "The NetBeans IDE Software Environment"
-    rlink: "Modules/IDE/Module"    
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
@@ -246,7 +244,8 @@ schedule:
     rlink: "Modules/Github/Module" 
 - week: "0"
   date: "2"
-  title: "A Brief History of Computer Science"    
+  title: "A Brief History of Computer Science"  
+  link: "../Ursinus-CS173-CSHistory"  
 - week: "0"
   date: "3"
   title: "Data Types and Variables" 
@@ -255,6 +254,9 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3    
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
@@ -287,24 +289,24 @@ schedule:
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
   - rtitle: "Pac-Man Map 256 Glitch"
-    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"   
+    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false      
 - week: "1"
   date: "3"
-  title: "Object Data Types"
-  readings:
-  - rtitle: "Ch. 2.3, 2.5"
-    rlink: false    
-- week: "2"
-  date: "0"
   title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
-    rlink: false  
+    rlink: false   
+- week: "2"
+  date: "0"   
+  title: "Conditionals"   
+  link: "Activities/Conditionals"
   deliverables:  
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
-    points: 100
+    points: 100  
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -313,14 +315,14 @@ schedule:
     rlink: "NetBeans/Debugging"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
-    dlink: false  
+    dlink: "Labs/Debugging"
+    points: 100
 - week: "2"
   date: "2"
   title: "Conditionals"  
-  link: "Activities/Conditionals"
 - week: "2"
   date: "3"
-  title: "Conditionals"      
+  title: "Conditionals"   
 - week: "3"
   date: "0"
   title: "Functions and Methods"
@@ -329,13 +331,15 @@ schedule:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
   - rtitle: "Using External Libraries in Your NetBeans Project"
-    rlink: "Modules/Library/Module"      
+    rlink: "Modules/Library/Module"     
+  - rtitle: "Reading User Input"
+    rlink: "https://www.w3schools.com/java/java_user_input.asp"  
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
     points: 100
   - dtitle: "Lab: Debugging Due"    
-    dlink: false     
+    dlink: "Labs/Debugging"     
     points: 100
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Exercise"  
@@ -344,8 +348,8 @@ schedule:
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
-  - dtitle: "Lab: Functions Handed Out"    
-    dlink: false 
+  - dtitle: "Lab: Averaging Functions Handed Out"    
+    dlink: "Labs/AverageFunction" 
     points: 100
 - week: "3"
   date: "2"
@@ -356,15 +360,16 @@ schedule:
 - week: "3"
   date: "3"
   title: "Testing"  
+  link: "Activities/Testing"
   readings:
-  - rtitle: "NetBeans"
+  - rtitle: "NetBeans IDE and Testing"
     rlink: "NetBeans"
 - week: "4"
   date: "0"
   title: "Testing" 
   deliverables:
-  - dtitle: "Lab: Functions Due"    
-    dlink: false 
+  - dtitle: "Lab: Averaging Functions Due"    
+    dlink: "Labs/AverageFunction"  
     points: 100
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
@@ -404,8 +409,8 @@ schedule:
   date: "1"
   title: "Lab: Iteration" 
   deliverables:
-  - dtitle: "Lab: Iteration Handed Out"
-    dlink: false  
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
+    dlink: "Labs/MonteCarloPi"  
     points: 100
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
@@ -428,12 +433,15 @@ schedule:
 - week: "6"
   date: "1"
   title: "Iteration"  
+  deliverables:
+    - dtitle: "Participation: First Activity Notebook Check"
+      points: 10
 - week: "6"
   date: "2"
   title: "Iteration, Randomness, and the do loop"
   deliverables:
-  - dtitle: "Lab: Iteration Due"
-    dlink: false    
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"    
   - dtitle: "Programming Assignment: Purple America Part 4 Due"
     dlink: "Assignments/PurpleAmerica"  
     points: 25
@@ -443,25 +451,28 @@ schedule:
 - week: "6"
   date: "3"
   title: "String Manipulation" 
+  readings:
+    - rtitle: "String Manipulation Exercises"
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
 - week: "7"
   date: "0"
-  title: "String Manipulation"  
+  title: "Arrays" 
+  link: "Activities/Arrays"
 - week: "7"
   date: "1"
-  title: "Lab: Bernouli Trials"
+  title: "Lab: Arrays"
   deliverables:
-  - dtitle: "Lab: Bernouli Trials Handed Out"
-    dlink: false
+  - dtitle: "Lab: Array Averages Handed Out"
+    dlink: "Labs/ArrayAveraging"
     points: 100  
   - dtitle: "Debugging Table: First Check"
     points: 10
 - week: "7"
   date: "2"
   title: "Arrays" 
-  link: "Activities/Arrays"
   deliverables:
-  - dtitle: "Lab: Bernouli Trials Due"
-    dlink: false    
+  - dtitle: "Lab: Array Averages Due"
+    dlink: "Labs/ArrayAveraging"    
     points: 100
   readings:  
   - rtitle: "Ch. 6.1"
@@ -495,9 +506,11 @@ schedule:
 - week: "8"
   date: "2"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"
 - week: "8"
   date: "3"
-  title: "HashMaps and Caches"   
+  title: "HashMaps and Caches"  
+  link: "Activities/HashMaps"  
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto" 
@@ -510,7 +523,7 @@ schedule:
     rlink: false     
 - week: "9"
   date: "0"
-  title: "Classes" 
+  title: "Classes and Object Data Types" 
   link: "Activities/Classes"
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
@@ -523,99 +536,98 @@ schedule:
   date: "1"
   title: "Lab: HashMaps"
   deliverables:
-  - dtitle: "Lab: HashMaps Handed Out"
-    dlink: false  
+  - dtitle: "Lab: HashMap Story Telling Handed Out"
+    dlink: "Labs/TellAStory"
     points: 100
 - week: "9"
   date: "2"
-  title: "Classes and Inheritance"
-  link: "Activities/Inheritance"  
+  title: "Classes"
 - week: "9"
   date: "3"
-  title: "File I/O"
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
+  title: "Classes and Inheritance"
+  link: "Activities/Inheritance"
 - week: "10"
   date: "0"
-  title: "File I/O" 
+  title: "File I/O"
+  link: "Activities/FileIO"
   deliverables:
-  - dtitle: "Lab: HashMaps Due"
-    dlink: false  
+  - dtitle: "Lab: HashMap Story Telling Due"
+    dlink: "Labs/TellAStory"
     points: 100
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25    
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25    
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: false    
+    dlink: "Labs/EthicalConsiderations"    
     points: 100
 - week: "10"
   date: "2"
-  title: "Comparators and Sorting"
-  readings:
-  - rtitle: "Ch. 9.6.3"
-    rlink: false   
-  - rtitle: "Interactive Demo of Insertion Sort"
-    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100
-- week: "10"
-  date: "3"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"  
   readings:
-  - rtitle: "Insertion Sort"
-    rlink: "Modules/InsertionSort/Module"    
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
+- week: "10"
+  date: "3"
+  title: "Searching and Sorting" 
+  readings:   
+  - rtitle: "Interactive Demo of Insertion Sort"
+    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
+  deliverables:
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3     
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
   link: "Activities/Recursion"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: false   
+    dlink: "Labs/EthicalConsiderations"   
     points: 100
-  readings:
-  - rtitle: "Recursion"
-    rlink: "Modules/Recursion/Module"   
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100     
+  - dtitle: "Exercise: Recursion"
+    dlink: "Modules/Recursion/Module"
+    points: 3 
 - week: "11"
   date: "1"
-  title: "Lab: Searching and Sorting" 
-  readings:
-  - rtitle: "Merge Sort"
-    rlink: "Modules/MergeSort/Module"  
+  title: "Lab: The High-Low Game" 
   deliverables:
-  - dtitle: "Lab: Searching and Sorting Handed Out"
-    dlink: false 
+  - dtitle: "Exercise: Merge Sort"
+    dlink: "Modules/MergeSort/Module"  
+    points: 3 
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropLowest" 
     points: 100
 - week: "12"
   date: "0"
   title: "Recursion and Dynamic Programming"  
-  readings:
-  - rtitle: "Dynamic Programming"
-    rlink: "Modules/DynamicProgramming/Module"    
+  link: "Activities/DynamicProgramming"
   deliverables:
-  - dtitle: "Programming Assignment: Iris Dataset Due"
-    dlink: "Assignments/Iris"
-    points: 100
-  - dtitle: "Lab: Searching and Sorting Due"
-    dlink: false  
+  - dtitle: "Exercise: Dynamic Programming"
+    dlink: "Modules/DynamicProgramming/Module"   
+    points: 3     
+  - dtitle: "Lab: Drop the Lowest Due"
+    dlink: "Labs/DropLowest"  
     points: 100
 - week: "12"
   date: "1"
   title: "Lab: Final Project Brainstorm"    
   deliverables:
-  - dtitle: "Final Project: Handed Out"
-    dlink: false    
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
     points: 100
   - dtitle: "Debugging Table: Second Check"
     points: 10    
@@ -623,12 +635,18 @@ schedule:
   date: "2"
   title: "Recursion and Dynamic Programming"   
   deliverables:
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100  
   - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
     dlink: "Assignments/GuitarStringSynth"           
     points: 100
 - week: "12"
   date: "3"
   title: "Final Project Workshop"  
+  deliverables:
+    - dtitle: "Participation: Second Activity Notebook Check"
+      points: 10  
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
@@ -646,8 +664,8 @@ schedule:
   date: "3"
   title: "Review"     
   deliverables:
-  - dtitle: "Final Project: Due"
-    dlink: false   
+  - dtitle: "Final Project: Project and Presentation Due"
+    dlink: "Projects/Final"   
     points: 100
 - week: "14"
   date: "0"
@@ -775,4 +793,4 @@ For classroom attendance, the following rules apply:
 * In-class exercises and "low stakes" activities will take place individually and in groups to assess our progress together.  These exercises will be given both synchronously (for example, in-class activities, pair programming exercises) and asynchronously (for example, pre-lab exercises, peer code reviews, book surveys) and will be graded on a participation basis.  These are given equal weight and form the basis of the class participation score.
 * If a class session is remote, please feel free to make choices that make you most comfortable.  For example, I will record these sessions for students who cannot make the session or for those who would benefit from a review of the material.  Although I'd encourage you to enable your video feed if it is available, if you would prefer to leave your video off, you should absolutely feel free to do so.  Please keep your microphone on mute to avoid background noises while others are speaking; however, please do not feel "mic fright" about unmuting to speak up and participate anytime.  If, however, you would prefer to communicate via the chat interface (either exclusively or in combination with your audio/video), you should feel free to do that.  Whether in-person or remote, all I ask is that you engage as best you can; the material is challenging but fun, and we're all here to learn new things together.
 
-[^1]: This introduction is tentatively taken from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html), and will be adapted for this course.
+[^1]: This introduction is adapted from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html).

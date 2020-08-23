@@ -34,9 +34,12 @@ DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during
 DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
 
 TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
-TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance"] # which navigation pane items to force show if they are already hidden
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video" ] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
+
+skipdiscussions = False
+skipassignments = False
             
 def addslash(str):
     if not (str.endswith("/")):
@@ -100,6 +103,9 @@ def delete_all_events(canvas, coursecontext):
         t.start()
 
 def delete_all_assignments(course):
+    if skipassignments:
+        return
+        
     assignments = course.get_assignments()
 
     for assignment in assignments:        
@@ -129,6 +135,9 @@ def delete_all_modules(course):
         t.start()   
             
 def delete_all_assignment_groups(course):
+    if skipdiscussions:
+        return
+        
     groups = course.get_assignment_groups()
     
     for group in groups:
@@ -137,6 +146,9 @@ def delete_all_assignment_groups(course):
         t.start()   
         
 def delete_all_discussion_topics(course):
+    if skipdiscussions:
+        return
+        
     topics = course.get_discussion_topics()
     
     itemthreads = []
@@ -203,6 +215,9 @@ def arrange_tabs(course):
 # https://canvas.instructure.com/doc/api/discussion_topics.html#method.discussion_topics.create
 # https://canvasapi.readthedocs.io/en/stable/course-ref.html
 def add_discussion_topic(course, inputdict):
+    if skipdiscussions:
+        return
+        
     course.create_discussion_topic(**inputdict)
     
 def add_grading_standard(course, inputdict):
@@ -316,6 +331,9 @@ def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U, tostring=True
     
 # Create Assignment Shells: https://canvasapi.readthedocs.io/en/stable/examples.html#create-an-assignment
 def create_assignment(course, inputdict):
+    if skipassignments:
+        return
+
     asmt = course.create_assignment(inputdict)
     return asmt
     
@@ -345,8 +363,20 @@ def get_assignment_group_containing_label(groups, label):
             return group
     
     return None
+
+def getposidxandinc(map, key):
+    if not (key in map):
+        map[key] = 1 # positions are 1 indexed
     
+    pos = map[key]
+    map[key] = map[key] + 1 # increment the position for the next call
+    
+    return pos
+        
 def add_assignments_to_groups(course, postdict):
+    # Track positions for each group to order them in the Canvas view
+    posidx = {}
+    
     # Get all the assignments
     assignments = course.get_assignments()
     
@@ -368,6 +398,10 @@ def add_assignments_to_groups(course, postdict):
             group = get_assignment_group_containing_label(groups, 'Project')
         elif 'Exercise:' in name:
             group = get_assignment_group_containing_label(groups, 'Exercise')
+        elif 'Participation:' in name:
+            group = get_assignment_group_containing_label(groups, 'Participation') 
+        elif 'Quiz:' in name:
+            group = get_assignment_group_containing_label(groups, 'Quiz') 
         else:
             if 'grade_breakdown' in postdict:
                 for breakdown in postdict['grade_breakdown']:        
@@ -378,9 +412,10 @@ def add_assignments_to_groups(course, postdict):
                         break
                         
         if not (group is None):
+            pos = getposidxandinc(posidx, group)
             groupid = group.id
             
-            assignment.edit(assignment={'assignment_group_id': groupid})
+            assignment.edit(assignment={'assignment_group_id': groupid, 'position': pos})
             
     # Enable assignment group weighted grading
     course.update(course={'apply_assignment_group_weights': True})
@@ -423,7 +458,6 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     # Delete All Assignments, Events, etc.; Re-Initialize Here
     delete_old_data(course, canvas, coursecontext)
        
-    
     printlog("Creating Discussion Board Topics...")
     
     # Create Discussion Topics
@@ -446,6 +480,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     printlog("Writing Lecture Schedule...")
     
     moduleidx = 1 # module positions are 1-indexed
+    asmtidx = 1 # assignment index position as well
     
     # Write the lecture schedule as a recurring event
     for i in range(len(postdict['info']['class_meets_locations'])):
@@ -580,8 +615,10 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['points_possible'] = points
                     inputdict['description'] = description + " (" + addslash(homepage) + stripnobool(dlink) + ")"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
+                    inputdict['position'] = asmtidx
                     
                     assignment = create_assignment(course, inputdict)
+                    asmtidx = asmtidx + 1
                     
                     # Create a Module Entry for the Assignment
                     inputdict = {}
@@ -714,7 +751,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict['name'] = breakdown['category']
             inputdict['group_weight'] = float(rchop(breakdown['weight'], '%'))
             
-            # The Assignments group might exist by default - don't call anything that in breakdown just in case
+            # The Assignments group might exist by default - don't call anything that group name as an assignment category or grade breakdown just in case
             create_assignmentgroup(course, inputdict)
             
         add_assignments_to_groups(course, postdict)
@@ -749,14 +786,18 @@ def usage():
     print("\t[-a | --apikey]\tAPI Key (get from API_URL + /profile/settings)")
     print("\t[-u | --userid]\tUser ID Number (get from API_URL + /api/v1/users/self)")
     print("\t[-t | --timezone]\tTime Zone (i.e. America/New_York)")
+    print("\t[-e | --duetime]\t Latest Due Time in UTC for Your Time Zone (i.e., T045959Z for Eastern Time)")
+    print("\t[-d | --discussions]\tDo not delete or re-create discussion topics and entries")
+    print("\t[-s | --assignments]\tDo not delete or re-create assignments (but still re-arrange existing ones in modules view)")
+    print("\nDo not create an assignment group called Assignments, and do prefix assignment names with the desired Assignment Group Name: Deliverable")
     
 # Parse user options
 # https://docs.python.org/3/library/getopt.html
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone="])
+    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:da", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments"])
 except getopt.GetoptError as err:
     # print help information and exit:
-    print(err)  # will print something like "option -a not recognized"
+    print(err)  # will print something like "option -z not recognized"
     usage()
     sys.exit(2)
 
@@ -782,6 +823,12 @@ for o, a in opts:
         USER_ID = a
     elif o in ("-t", "--timezone"):
         CANVAS_TIME_ZONE = a
+    elif o in ("-e", "--duetime"):
+        DUE_TIME = a
+    elif o in ("-d", "--discussions"):
+        skipdiscussions = True
+    elif o in ("-s", "--assignments"):
+        skipassignments = True
 
 if USER_ID is None:
     USER_ID = input("Enter User ID (get from API_URL + /api/v1/users/self): ")

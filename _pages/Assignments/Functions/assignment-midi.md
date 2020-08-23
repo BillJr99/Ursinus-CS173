@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - MIDI Audio"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/mfQDVf2s"
   points: 100
   goals:
     - To implement functions to facilitate code re-use

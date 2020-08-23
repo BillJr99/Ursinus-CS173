@@ -20,7 +20,7 @@ TZNAME:EDT
 END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:f398f308-fdd8-4914-810d-b8e8d74b813b
+UID:cc0660b0-97a7-46d4-8ec4-4bc39ec3ef74
 DTSTAMP:20200907T090000
 DTSTART;TZID=US-Eastern:20200907T090000
 DTEND;TZID=US-Eastern:20200907T095000
@@ -34,7 +34,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f0ad6323-8f31-468f-b30b-7a4ffe4ae246
+UID:753d4b90-f073-495e-b16a-39b8be3effcb
 DTSTAMP:20200907T090000
 DTSTART;TZID=US-Eastern:20200907T090000
 DTEND;TZID=US-Eastern:20200907T095000
@@ -48,7 +48,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b715c37b-c5f2-4085-ac5b-02e4c9c0b721
+UID:f368e279-7f94-4c66-b261-f05d588f57f8
 DTSTAMP:20200907T090000
 DTSTART;TZID=US-Eastern:20200907T090000
 DTEND;TZID=US-Eastern:20200907T095000
@@ -62,7 +62,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:d266023a-0e69-416f-96be-cd2abac9288d
+UID:8bedcf6e-9e0c-4a7d-8791-6c2ed8e35d9c
 DTSTAMP:20200907T090000
 DTSTART;TZID=US-Eastern:20200907T090000
 DTEND;TZID=US-Eastern:20200907T095000
@@ -76,7 +76,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:4902c7ff-1315-4453-963b-83ad3f5c7f2a
+UID:56cf9c1b-ea4d-49d2-b0fa-f7b40f6262a8
 DTSTAMP:20200907T110000
 DTSTART;TZID=US-Eastern:20200907T110000
 DTEND;TZID=US-Eastern:20200907T115000
@@ -90,7 +90,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:2904907a-12e6-41d6-b095-e7ff8f2081f3
+UID:6c1f8800-7291-43c9-9269-934c059e99bf
 DTSTAMP:20200907T110000
 DTSTART;TZID=US-Eastern:20200907T110000
 DTEND;TZID=US-Eastern:20200907T115000
@@ -104,7 +104,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:57d5e2fc-9f4f-45d4-93f5-c0e3eb25fb1f
+UID:007cfe1b-ae5c-40dd-80e0-dfff93473e77
 DTSTAMP:20200907T110000
 DTSTART;TZID=US-Eastern:20200907T110000
 DTEND;TZID=US-Eastern:20200907T115000
@@ -118,7 +118,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:5159eefe-558c-4064-b58c-a9b27bb4b260
+UID:d99924e0-e749-4ccc-acee-97093ab01677
 DTSTAMP:20200907T110000
 DTSTART;TZID=US-Eastern:20200907T110000
 DTEND;TZID=US-Eastern:20200907T115000
@@ -132,7 +132,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ad929dfd-0a16-4e13-be7a-10890392f361
+UID:b7821998-68ee-4fe7-a81c-0a2432e75f90
 DTSTAMP:20200907T000000Z
 DTSTART;VALUE=DATE:20200907
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Warmup Handed Out
@@ -141,34 +141,34 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b93e373d-267d-434d-aacb-ebc4017694df
+UID:8c238c3a-4f16-4e9a-8d27-b8ef0b3c7090
 DTSTAMP:20200907T000000Z
 DTSTART;VALUE=DATE:20200907
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:../Ursinus-CS173-Overview\nReading: NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173/NetBeans\nReading: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173/Modules/IDE/Module\nDeliverable: Programming Assignment: Warmup Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/Warmup
+DESCRIPTION:../Ursinus-CS173-Overview\nReading: NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Fall2020/NetBeans\nDeliverable: Programming Assignment: Warmup Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/Warmup
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:a4f568a7-2d17-4b50-aaf8-6757eaff61d0
+UID:241a59ce-c872-4645-9438-3eac578718f4
 DTSTAMP:20200908T000000Z
 DTSTART;VALUE=DATE:20200908
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Getting Started with Git and Github https://www.billmongan.com/Ursinus-CS173/Modules/Github/Module
+DESCRIPTION:\nReading: Getting Started with Git and Github https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Github/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:a0dd195b-b4c5-4cb4-9b63-2dd81e550e0e
+UID:e72df562-51c7-4b5b-9a84-8b3f8947b217
 DTSTAMP:20200909T000000Z
 DTSTART;VALUE=DATE:20200909
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:../Ursinus-CS173-CSHistory
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8f347574-0307-4c1e-9878-eb75cc6b18e6
+UID:c9694cf8-36b2-4b04-aad7-335cc5aed628
 DTSTAMP:20200911T000000Z
 DTSTART;VALUE=DATE:20200911
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Warmup Due
@@ -177,16 +177,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:0d258c9b-9ca5-4122-bbec-916795915a87
+UID:61ef657f-af9a-4911-9947-aa6d19e6908b
+DTSTAMP:20200911T000000Z
+DTSTART;VALUE=DATE:20200911
+SUMMARY:CS173 Intro to Computer Science: Exercise: The NetBeans IDE Software Environment
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:6209174e-2845-4bb3-9907-dc0aa98265aa
 DTSTAMP:20200911T000000Z
 DTSTART;VALUE=DATE:20200911
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/DataTypes\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS173/Assignments/Warmup
+DESCRIPTION:Activities/DataTypes\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/Warmup\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/IDE/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:5786993a-7c8e-4be8-9788-1d5afca5fd72
+UID:f7eea30a-b294-42aa-9ec7-1d1298aa3d67
 DTSTAMP:20200914T000000Z
 DTSTART;VALUE=DATE:20200914
 SUMMARY:CS173 Intro to Computer Science: Exercise: Introduction to Primitive Data Types and Expressions
@@ -195,16 +204,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:afcfef4a-ec97-4484-afe4-e1444b6e9932
+UID:f6c88fad-aa98-4386-a83f-037d7d3678aa
 DTSTAMP:20200914T000000Z
 DTSTART;VALUE=DATE:20200914
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nDeliverable: Exercise: Introduction to Primitive Data Types and Expressions https://www.billmongan.com/Ursinus-CS173/Modules/Expressions/Module
+DESCRIPTION:Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nDeliverable: Exercise: Introduction to Primitive Data Types and Expressions https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Expressions/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:2d509cfe-eea8-4c6f-81bc-424a33a0057e
+UID:3d9767b6-0cb3-4975-b792-bf81f652d142
 DTSTAMP:20200914T000000Z
 DTSTART;VALUE=DATE:20200914
 SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Handed Out
@@ -213,7 +222,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:0fd2990c-3b75-4bbc-851d-00a6a5a8a7b4
+UID:e5b23a37-6d29-4e96-9278-6c010b52cfa0
 DTSTAMP:20200914T000000Z
 DTSTART;VALUE=DATE:20200914
 SUMMARY:CS173 Intro to Computer Science: Exercise: Epoch Time Overflow
@@ -222,34 +231,34 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:9e9bca46-4389-41a9-8c5c-b46c96adf84f
+UID:88e0afce-e5ac-486e-bbf6-60cda53e3914
 DTSTAMP:20200914T000000Z
 DTSTART;VALUE=DATE:20200914
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Review of Data Types, Expressions, ASCII, and Floating Point encodings https://www.billmongan.com/Ursinus-CS173/Modules/Values/Module\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173/Labs/Kepler\nDeliverable: Exercise: Epoch Time Overflow https://www.billmongan.com/Ursinus-CS173/Modules/EpochTime/Exercise
+DESCRIPTION:\nReading: Review of Data Types, Expressions, ASCII, and Floating Point encodings https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Values/Module\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/Kepler\nDeliverable: Exercise: Epoch Time Overflow https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/EpochTime/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:3af854dd-c64e-44f9-8c65-d92db46ca71f
+UID:2b785cb0-c2fc-412d-b072-54aa0f8220e5
 DTSTAMP:20200916T000000Z
 DTSTART;VALUE=DATE:20200916
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/DiscreteRanges\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch
+DESCRIPTION:Activities/DiscreteRanges\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Ch. 2.3, 2.5
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:bf663227-bc2a-4793-8f19-1fc3549484d5
+UID:e0b4c09d-307d-4169-943d-981e4bbc5672
 DTSTAMP:20200918T000000Z
 DTSTART;VALUE=DATE:20200918
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Ch. 2.3, 2.5
+DESCRIPTION:Activities/Boolean\nReading: Ch. 3
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:1115e219-9386-4662-8933-98a09ecac75c
+UID:a3a8ff31-7f66-43e7-a833-b01256288d4b
 DTSTAMP:20200921T000000Z
 DTSTART;VALUE=DATE:20200921
 SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Due
@@ -258,16 +267,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:e22af1cf-f7ca-4f65-afc4-a9591c4bf86b
+UID:862b71a4-8170-47e8-b2b9-88b79d7a7442
 DTSTAMP:20200921T000000Z
 DTSTART;VALUE=DATE:20200921
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Boolean\nReading: Ch. 3\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173/Labs/Kepler
+DESCRIPTION:Activities/Conditionals\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/Kepler
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:4be8d670-3192-4b7b-a818-2fa6a4840418
+UID:ae01a072-be65-44d1-a375-c9ea82648a08
 DTSTAMP:20200922T000000Z
 DTSTART;VALUE=DATE:20200922
 SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Handed Out
@@ -276,25 +285,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:807cb43f-af73-463e-9d5c-5fe489ca89fa
+UID:bed3a87d-65dc-45c6-9132-95889fc898ab
 DTSTAMP:20200922T000000Z
 DTSTART;VALUE=DATE:20200922
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Debugging with NetBeans https://www.billmongan.com/Ursinus-CS173/NetBeans/Debugging\nDeliverable: Lab: Debugging Handed Out
+DESCRIPTION:\nReading: Debugging with NetBeans https://www.billmongan.com/Ursinus-CS173-Fall2020/NetBeans/Debugging\nDeliverable: Lab: Debugging Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/Debugging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f4a76f45-7646-41ab-b684-5758fff4b554
+UID:c4f0711d-b70d-4f59-90b0-5a8acfa3aa31
 DTSTAMP:20200923T000000Z
 DTSTART;VALUE=DATE:20200923
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Conditionals
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6ca3d79e-ac83-48d9-b3b7-788362e20d32
+UID:8ebf2681-c800-4997-9eec-0a41db1509d2
 DTSTAMP:20200925T000000Z
 DTSTART;VALUE=DATE:20200925
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -303,7 +312,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8a7271b0-5b43-417b-a4e4-9ce732a1cffc
+UID:f12fd4eb-e92e-4feb-8c30-7885e583b511
 DTSTAMP:20200928T000000Z
 DTSTART;VALUE=DATE:20200928
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Handed Out
@@ -312,7 +321,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:3690decb-3145-406a-8c6c-511f8adaa7b0
+UID:5d35e235-7922-46f8-9154-5f056b333da2
 DTSTAMP:20200928T000000Z
 DTSTART;VALUE=DATE:20200928
 SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Due
@@ -321,7 +330,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:12596c5c-2665-4cc8-bf4f-a62fa3519ebb
+UID:b80d81b3-ad32-45cc-bd9a-c6a33883f395
 DTSTAMP:20200928T000000Z
 DTSTART;VALUE=DATE:20200928
 SUMMARY:CS173 Intro to Computer Science: Exercise: Writing and Calling Functions
@@ -330,61 +339,61 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f850d562-0386-4ad9-882f-1e8236f50b05
+UID:e0588c50-38c0-4368-9b13-ea7725ec4d4d
 DTSTAMP:20200928T000000Z
 DTSTART;VALUE=DATE:20200928
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Functions\nReading: Ch. 5 (except 5.9)\nReading: Using External Libraries in Your NetBeans Project https://www.billmongan.com/Ursinus-CS173/Modules/Library/Module\nDeliverable: Programming Assignment: MIDI Audio Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/MIDI\nDeliverable: Lab: Debugging Due\nDeliverable: Exercise: Writing and Calling Functions https://www.billmongan.com/Ursinus-CS173/Modules/Functions/Exercise
+DESCRIPTION:Activities/Functions\nReading: Ch. 5 (except 5.9)\nReading: Using External Libraries in Your NetBeans Project https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Library/Module\nReading: Reading User Input https://www.w3schools.com/java/java_user_input.asp\nDeliverable: Programming Assignment: MIDI Audio Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/MIDI\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/Debugging\nDeliverable: Exercise: Writing and Calling Functions https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Functions/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:65ee9bab-cacc-4916-bb9f-9adb9dcadf21
+UID:a88b356c-6dd9-4a9c-8eb6-aa2d8e9f0c4e
 DTSTAMP:20200929T000000Z
 DTSTART;VALUE=DATE:20200929
-SUMMARY:CS173 Intro to Computer Science: Lab: Functions Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:65d57de9-415a-4f5b-bcff-2c3a994c4661
+UID:a4d18035-f17f-473e-9560-fcf8727e0e3d
 DTSTAMP:20200929T000000Z
 DTSTART;VALUE=DATE:20200929
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Functions Handed Out
+DESCRIPTION:\nDeliverable: Lab: Averaging Functions Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/AverageFunction
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:e94199bb-ff39-4fca-8208-890b9e467ae8
+UID:de89577b-90d1-4f1b-b660-a21eca71f770
 DTSTAMP:20200930T000000Z
 DTSTART;VALUE=DATE:20200930
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173/Style-Guide
+DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Fall2020/Style-Guide
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:5753ccb2-f117-4ad2-868c-64abc564e21b
+UID:8ebe1bc6-9cbc-4aca-bc36-d5d094751325
 DTSTAMP:20201002T000000Z
 DTSTART;VALUE=DATE:20201002
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: NetBeans https://www.billmongan.com/Ursinus-CS173/NetBeans
+DESCRIPTION:Activities/Testing\nReading: NetBeans IDE and Testing https://www.billmongan.com/Ursinus-CS173-Fall2020/NetBeans
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6ff13697-7f5e-430b-89d7-19908981959b
+UID:962b0d1a-fd8c-4b1a-8689-8d1c8cc14a08
 DTSTAMP:20201005T000000Z
 DTSTART;VALUE=DATE:20201005
-SUMMARY:CS173 Intro to Computer Science: Lab: Functions Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:681bac9c-1937-4a6f-928c-53983d41f7ee
+UID:974ea0c6-38a6-4c46-b590-45b0a5acc629
 DTSTAMP:20201005T000000Z
 DTSTART;VALUE=DATE:20201005
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Due
@@ -393,7 +402,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:9458180d-378f-48dc-9059-696e0448a988
+UID:81daf36a-c427-4ef8-8ce7-ed0d9896ec51
 DTSTAMP:20201005T000000Z
 DTSTART;VALUE=DATE:20201005
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Parts 1 through 3 Handed Out
@@ -402,16 +411,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:d5a66bd5-0270-4411-982f-fe0d2d1ac6ee
+UID:14aa83ef-1bd8-4c39-a442-749d64e78451
 DTSTAMP:20201005T000000Z
 DTSTART;VALUE=DATE:20201005
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Functions Due\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173/Assignments/MIDI\nDeliverable: Programming Assignment: Purple America Parts 1 through 3 Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica
+DESCRIPTION:\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/AverageFunction\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/MIDI\nDeliverable: Programming Assignment: Purple America Parts 1 through 3 Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00ed5c64-c8db-4b21-bc8c-70513ac6ee76
+UID:fb38e655-a624-45b5-befe-98e44e14a010
 DTSTAMP:20201006T000000Z
 DTSTART;VALUE=DATE:20201006
 SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Handed Out
@@ -420,16 +429,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8fc68ae3-492c-4989-8fe3-23ad98d9d427
+UID:4e4b3bdf-26f1-4828-a82c-cbcf0a6fae13
 DTSTAMP:20201006T000000Z
 DTSTART;VALUE=DATE:20201006
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Financial Aid Calculator Handed Out https://www.billmongan.com/Ursinus-CS173/Labs/FinancialAidCalculator
+DESCRIPTION:\nDeliverable: Lab: Financial Aid Calculator Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/FinancialAidCalculator
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:859fec84-d3a4-40e9-a2f8-695af0553799
+UID:8c6ba431-f414-4692-bb28-43b13041de7e
 DTSTAMP:20201007T000000Z
 DTSTART;VALUE=DATE:20201007
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -438,7 +447,7 @@ DESCRIPTION:Activities/Strings
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ef8cabee-6024-49ef-97f6-569c1a3fbabd
+UID:b8467a6a-9ef8-453f-bc34-a941b2efb8a4
 DTSTAMP:20201009T000000Z
 DTSTART;VALUE=DATE:20201009
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -447,7 +456,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:11705ef3-8e90-44b5-87ff-ec377784cca8
+UID:87ca53b6-08c3-43df-844f-6d89b76e23dc
 DTSTAMP:20201012T000000Z
 DTSTART;VALUE=DATE:20201012
 SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Due
@@ -456,7 +465,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:5e1744d3-25ca-4d20-9555-11e836e4cfe3
+UID:6030a101-329a-4e95-9846-b7e56b5303f7
 DTSTAMP:20201012T000000Z
 DTSTART;VALUE=DATE:20201012
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Parts 1 through 3 Due
@@ -465,7 +474,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:4233a387-ea71-4dc1-b49b-53acd7208ff9
+UID:0dea478e-3344-4b4e-a642-3e80980983ee
 DTSTAMP:20201012T000000Z
 DTSTART;VALUE=DATE:20201012
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Part 4 Handed Out
@@ -474,34 +483,43 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:03f8f6c5-c6eb-44e6-b55a-acc2e9ba12d5
+UID:9c3c8481-0cfb-4486-b425-c4231d19f660
 DTSTAMP:20201012T000000Z
 DTSTART;VALUE=DATE:20201012
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Iteration\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173/Labs/FinancialAidCalculator\nDeliverable: Programming Assignment: Purple America Parts 1 through 3 Due https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Purple America Part 4 Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica
+DESCRIPTION:Activities/Iteration\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/FinancialAidCalculator\nDeliverable: Programming Assignment: Purple America Parts 1 through 3 Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Purple America Part 4 Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:4143c481-4196-43b1-a65c-24daf1180ac8
+UID:5455434b-190e-4823-b41f-9ae84d09d10b
 DTSTAMP:20201013T000000Z
 DTSTART;VALUE=DATE:20201013
-SUMMARY:CS173 Intro to Computer Science: Lab: Iteration Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ccdc1536-ee9f-4d7e-a735-5231b3051f01
+UID:da437ee8-1ae3-4470-947c-ef734aa1ac27
+DTSTAMP:20201013T000000Z
+DTSTART;VALUE=DATE:20201013
+SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:acb5ac14-789c-48bc-871d-2b1186ad7aa2
 DTSTAMP:20201013T000000Z
 DTSTART;VALUE=DATE:20201013
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Iteration Handed Out
+DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/MonteCarloPi\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Strings/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:170f46d8-84a5-4650-a323-4369fd13a4f5
+UID:88a5c4c3-5653-4f42-93fe-ad0a5eabc33c
 DTSTAMP:20201014T000000Z
 DTSTART;VALUE=DATE:20201014
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -510,7 +528,7 @@ DESCRIPTION:\nReading: Ch. 4
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8df29eb5-e86c-4c54-a644-1406eafb4dfd
+UID:e6038862-e382-4919-8fcc-d47cf3d70e4d
 DTSTAMP:20201016T000000Z
 DTSTART;VALUE=DATE:20201016
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -519,7 +537,7 @@ DESCRIPTION:\nReading: Ch. 6.3-6.6
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:9abfc3cf-286f-479a-9912-b173cbe23c0e
+UID:5472961e-0bdf-4205-998b-2927fa7da226
 DTSTAMP:20201019T000000Z
 DTSTART;VALUE=DATE:20201019
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -528,25 +546,34 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:11cc7799-f5e3-4a43-a6d6-e985ec455ddd
+UID:008c96e8-33d4-4a42-8b52-00527dda7631
+DTSTAMP:20201020T000000Z
+DTSTART;VALUE=DATE:20201020
+SUMMARY:CS173 Intro to Computer Science: Participation: First Activity Notebook Check
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:efee80c4-b8b9-40ec-9f68-f60d292abdb2
 DTSTAMP:20201020T000000Z
 DTSTART;VALUE=DATE:20201020
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Participation: First Activity Notebook Check
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:4313bdb7-45ea-47fd-bcce-be27aee0b866
+UID:8421144e-73c7-4190-ae2a-4cd908bab217
 DTSTAMP:20201021T000000Z
 DTSTART;VALUE=DATE:20201021
-SUMMARY:CS173 Intro to Computer Science: Lab: Iteration Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:071def21-52cb-47be-a82b-8a06e7b99ab1
+UID:49f4998e-378c-4e24-b1d4-fa5e91e26224
 DTSTAMP:20201021T000000Z
 DTSTART;VALUE=DATE:20201021
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Part 4 Due
@@ -555,7 +582,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f2b110fc-e252-48a8-a9b4-4d14bc0405ae
+UID:9ec39f8c-36ee-43ee-a156-3dde58cef164
 DTSTAMP:20201021T000000Z
 DTSTART;VALUE=DATE:20201021
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
@@ -564,43 +591,43 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:7a2497bd-d85e-4c0f-a9de-0500f767a949
+UID:cf84cd7d-7066-4ae3-8fc3-d1309e6a8483
 DTSTAMP:20201021T000000Z
 DTSTART;VALUE=DATE:20201021
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Iteration Due\nDeliverable: Programming Assignment: Purple America Part 4 Due https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/DNAMutations
+DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/MonteCarloPi\nDeliverable: Programming Assignment: Purple America Part 4 Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/DNAMutations
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6e59788f-9ffd-4d19-8866-8370a5cccbdb
+UID:840c44e0-2f7a-443f-83f8-db1d55576ba4
 DTSTAMP:20201023T000000Z
 DTSTART;VALUE=DATE:20201023
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: String Manipulation Exercises https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8a8d7c25-cb40-4fd9-a8f4-2131a3b7a502
+UID:4d8008a2-08ed-4be1-b153-d8506658b4dc
 DTSTAMP:20201026T000000Z
 DTSTART;VALUE=DATE:20201026
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:Activities/Arrays
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:332d5913-1bfd-4b14-8178-ea1e65c26e13
+UID:ce715240-8a95-4c81-b214-fd62ce150be1
 DTSTAMP:20201027T000000Z
 DTSTART;VALUE=DATE:20201027
-SUMMARY:CS173 Intro to Computer Science: Lab: Bernouli Trials Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:a5952202-c80e-4f2e-b906-2e49105a029b
+UID:39fdf1e0-54b7-49eb-95c2-cb28da68b5f7
 DTSTAMP:20201027T000000Z
 DTSTART;VALUE=DATE:20201027
 SUMMARY:CS173 Intro to Computer Science: Debugging Table: First Check
@@ -609,34 +636,34 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:abb8873e-68f8-429b-9c57-e565bd0f1211
+UID:3b34ffe4-bb16-4a47-8aff-f42fda5a8662
 DTSTAMP:20201027T000000Z
 DTSTART;VALUE=DATE:20201027
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Bernouli Trials Handed Out\nDeliverable: Debugging Table: First Check
+DESCRIPTION:\nDeliverable: Lab: Array Averages Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/ArrayAveraging\nDeliverable: Debugging Table: First Check
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:9574c3df-b1a9-4b49-b884-37449c25f519
+UID:53d40388-ae14-4551-aefb-106404788d65
 DTSTAMP:20201028T000000Z
 DTSTART;VALUE=DATE:20201028
-SUMMARY:CS173 Intro to Computer Science: Lab: Bernouli Trials Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:a2c1a43f-2a86-40d4-9b4b-719a718d28fc
+UID:467c0fa2-4590-4532-8d5e-6280df1bdbc6
 DTSTAMP:20201028T000000Z
 DTSTART;VALUE=DATE:20201028
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Arrays\nReading: Ch. 6.1\nDeliverable: Lab: Bernouli Trials Due
+DESCRIPTION:\nReading: Ch. 6.1\nDeliverable: Lab: Array Averages Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/ArrayAveraging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:2d3e05fa-4480-4627-8256-027abfdd8037
+UID:e7e7a136-f0f8-4853-b348-b1c87052156b
 DTSTAMP:20201030T000000Z
 DTSTART;VALUE=DATE:20201030
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Due
@@ -645,7 +672,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f0de0d9a-15ee-4b98-bdf9-9bf8d36f0a53
+UID:efd62d14-48fd-47ff-86aa-361ca71c80aa
 DTSTAMP:20201030T000000Z
 DTSTART;VALUE=DATE:20201030
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Handed Out
@@ -654,16 +681,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:47ccccab-3ec9-4bcd-bc44-d3781f22d31e
+UID:6c05648a-ce78-4f3b-a8f9-456c91038a00
 DTSTAMP:20201030T000000Z
 DTSTART;VALUE=DATE:20201030
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: DNA Mutations Due https://www.billmongan.com/Ursinus-CS173/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/MiniCrypto
+DESCRIPTION:\nDeliverable: Programming Assignment: DNA Mutations Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/MiniCrypto
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:2590acaf-58f3-4a2a-8584-e31635d023f4
+UID:5f31d90d-81d9-47ea-ae95-20d02fd7dda9
 DTSTAMP:20201102T000000Z
 DTSTART;VALUE=DATE:20201102
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -672,7 +699,7 @@ DESCRIPTION:\nReading: Ch. 6.8
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:1a36db00-53b2-4bdc-aa09-1e4713bc9eec
+UID:b546cb0d-92fa-4446-8dcb-151b69873faf
 DTSTAMP:20201103T000000Z
 DTSTART;VALUE=DATE:20201103
 SUMMARY:CS173 Intro to Computer Science: Lab: ASCII Art Handed Out
@@ -681,7 +708,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:54b5026a-cc9f-49c5-b925-d24c695de3b6
+UID:43038f20-083e-43a7-b13b-e524f145497c
 DTSTAMP:20201103T000000Z
 DTSTART;VALUE=DATE:20201103
 SUMMARY:CS173 Intro to Computer Science: Exercise: Tic-Tac-Toe
@@ -690,25 +717,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:9088da8e-45b8-4333-bba2-550b09f40878
+UID:f2788535-e044-4c23-b6ba-37c5a893f3f0
 DTSTAMP:20201103T000000Z
 DTSTART;VALUE=DATE:20201103
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173/Labs/ASCIIArt\nDeliverable: Exercise: Tic-Tac-Toe https://www.billmongan.com/Ursinus-CS173/Modules/TicTacToe/Exercise
+DESCRIPTION:\nDeliverable: Lab: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/ASCIIArt\nDeliverable: Exercise: Tic-Tac-Toe https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/TicTacToe/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:649c6ad8-f60c-49c3-990e-f10d7498581b
+UID:8b37b998-8cf3-45b1-861b-ab252564ee41
 DTSTAMP:20201104T000000Z
 DTSTART;VALUE=DATE:20201104
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:Activities/NumberSystems
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:1dc42090-9617-4147-824c-6f246fb27789
+UID:26080d6e-3d8d-44ac-8348-dc1930c9eb20
 DTSTAMP:20201106T000000Z
 DTSTART;VALUE=DATE:20201106
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
@@ -717,7 +744,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:aa7a2edb-28cb-4ae6-988e-491ededaac0d
+UID:a45eb397-8ede-45ee-82a3-0c457856ec7e
 DTSTAMP:20201106T000000Z
 DTSTART;VALUE=DATE:20201106
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Part 5 Handed Out
@@ -726,16 +753,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8c32e682-6fd2-42f6-89ec-2554cd5c43e6
+UID:c3c464a1-5f92-49fa-9fc3-baa20fe45a94
 DTSTAMP:20201106T000000Z
 DTSTART;VALUE=DATE:20201106
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Ch. 6.8\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Purple America Part 5 Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica
+DESCRIPTION:Activities/HashMaps\nReading: Ch. 6.8\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Purple America Part 5 Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:27e11955-6dca-49b0-962d-6480ab4f7c30
+UID:6c18057c-487a-4622-9851-73d73a87d0b5
 DTSTAMP:20201109T000000Z
 DTSTART;VALUE=DATE:20201109
 SUMMARY:CS173 Intro to Computer Science: Lab: ASCII Art Due
@@ -744,88 +771,88 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:bb36c3a3-501f-4797-8c75-cc823b2c9d3e
+UID:ac82c21e-bf74-49e1-a10b-93ff26a1a9e8
 DTSTAMP:20201109T000000Z
 DTSTART;VALUE=DATE:20201109
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Classes\nReading: Ch. 8\nDeliverable: Lab: ASCII Art Due https://www.billmongan.com/Ursinus-CS173/Labs/ASCIIArt
+DESCRIPTION:Activities/Classes\nReading: Ch. 8\nDeliverable: Lab: ASCII Art Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/ASCIIArt
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8646ba2e-5b5f-452d-9c2b-991bd2b4dc96
+UID:5095570c-886b-4869-9336-a21f3e5c9e0a
 DTSTAMP:20201110T000000Z
 DTSTART;VALUE=DATE:20201110
-SUMMARY:CS173 Intro to Computer Science: Lab: HashMaps Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: HashMap Story Telling Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8e13c2db-2273-4d18-ae83-a9f0b812030a
+UID:bab6eb87-d271-45fa-a64d-a09d27b89255
 DTSTAMP:20201110T000000Z
 DTSTART;VALUE=DATE:20201110
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: HashMaps Handed Out
+DESCRIPTION:\nDeliverable: Lab: HashMap Story Telling Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/TellAStory
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6ab0f892-8ef3-49f6-ae16-9ab83521178a
+UID:0b0ff700-f475-4d7d-af66-552f392070c7
 DTSTAMP:20201111T000000Z
 DTSTART;VALUE=DATE:20201111
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:96193d79-81c1-4d32-b653-15f3bc5bb485
+DTSTAMP:20201113T000000Z
+DTSTART;VALUE=DATE:20201113
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:Activities/Inheritance
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:192da7ac-c30f-4cda-a383-ba78436d0f88
-DTSTAMP:20201113T000000Z
-DTSTART;VALUE=DATE:20201113
+UID:3a8ee564-3e65-4e34-b9e4-fabf3a716ea5
+DTSTAMP:20201116T000000Z
+DTSTART;VALUE=DATE:20201116
+SUMMARY:CS173 Intro to Computer Science: Lab: HashMap Story Telling Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:36c62f09-4809-43cf-94ba-4ec0e5556913
+DTSTAMP:20201116T000000Z
+DTSTART;VALUE=DATE:20201116
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Part 5 Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:391044bd-5f29-459d-a3df-fbab37af1f58
-DTSTAMP:20201113T000000Z
-DTSTART;VALUE=DATE:20201113
+UID:874098af-1418-4045-ac93-7864716b5536
+DTSTAMP:20201116T000000Z
+DTSTART;VALUE=DATE:20201116
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Parts 6 through 7 Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:971820fe-3b45-4f5a-a257-18c3249e6005
-DTSTAMP:20201113T000000Z
-DTSTART;VALUE=DATE:20201113
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: Purple America Part 5 Due https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Purple America Parts 6 through 7 Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:57d06465-8ebe-4215-b843-9c7a87b98c91
-DTSTAMP:20201116T000000Z
-DTSTART;VALUE=DATE:20201116
-SUMMARY:CS173 Intro to Computer Science: Lab: HashMaps Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:61f74d02-2f7b-4547-beb6-03d8e6a592a8
+UID:e40eb528-0f28-40ba-b440-8df0bfc4cad8
 DTSTAMP:20201116T000000Z
 DTSTART;VALUE=DATE:20201116
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: HashMaps Due
+DESCRIPTION:Activities/FileIO\nDeliverable: Lab: HashMap Story Telling Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/TellAStory\nDeliverable: Programming Assignment: Purple America Part 5 Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Purple America Parts 6 through 7 Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:14a12ded-8e72-414f-9431-f4d4ba6e022a
+UID:63c824a2-85c3-4ea8-b614-021b4c720a61
 DTSTAMP:20201117T000000Z
 DTSTART;VALUE=DATE:20201117
 SUMMARY:CS173 Intro to Computer Science: Lab: Ethical Case Studies Handed Out
@@ -834,52 +861,43 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:fe999a10-6df9-43d0-ac99-c498e8c5c921
+UID:a3441e9a-e199-4701-8f92-b073da7beaf5
 DTSTAMP:20201117T000000Z
 DTSTART;VALUE=DATE:20201117
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Ethical Case Studies Handed Out
+DESCRIPTION:\nDeliverable: Lab: Ethical Case Studies Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/EthicalConsiderations
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:bc2a03fe-a80f-4ef5-a948-ba4b155818b1
-DTSTAMP:20201118T000000Z
-DTSTART;VALUE=DATE:20201118
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Parts 6 through 7 Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:b17e626a-3cbe-4dd4-8bef-ad487209c1be
-DTSTAMP:20201118T000000Z
-DTSTART;VALUE=DATE:20201118
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:9dd65593-93ba-49a6-89d7-a125ab0f96ff
+UID:10e6dd3f-7ea3-4752-b252-c99a572ffa41
 DTSTAMP:20201118T000000Z
 DTSTART;VALUE=DATE:20201118
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Ch. 9.6.3\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nDeliverable: Programming Assignment: Purple America Parts 6 through 7 Due https://www.billmongan.com/Ursinus-CS173/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Iris Dataset Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/Iris
+DESCRIPTION:Activities/SearchingAndSorting\nReading: Ch. 9.6.3
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:14689d10-3ec5-4ad6-a542-fe11847ea1b8
+UID:b4955d20-caf1-466f-9880-ebe20fcde885
+DTSTAMP:20201120T000000Z
+DTSTART;VALUE=DATE:20201120
+SUMMARY:CS173 Intro to Computer Science: Exercise: Insertion Sort
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:87a6f94a-f0e4-4feb-940d-26d24e59f45a
 DTSTAMP:20201120T000000Z
 DTSTART;VALUE=DATE:20201120
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/SearchingAndSorting\nReading: Insertion Sort https://www.billmongan.com/Ursinus-CS173/Modules/InsertionSort/Module
+DESCRIPTION:\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b45fb5d4-3d16-40b3-948e-be5b686153c0
+UID:2b928b8b-9c8c-4298-bc1a-20b9ee1e45b7
 DTSTAMP:20201123T000000Z
 DTSTART;VALUE=DATE:20201123
 SUMMARY:CS173 Intro to Computer Science: Lab: Ethical Case Studies Due
@@ -888,70 +906,106 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:5c40f61c-a7a4-4956-bd9e-11c2fcfe6b20
+UID:ee2bbbe1-6a49-41da-883b-8ea515d9ccd4
+DTSTAMP:20201123T000000Z
+DTSTART;VALUE=DATE:20201123
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Purple America Parts 6 through 7 Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:55bf3681-8caf-4e68-9a52-4e7103ada61c
+DTSTAMP:20201123T000000Z
+DTSTART;VALUE=DATE:20201123
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1c253f0b-63a1-4c88-bfdb-cfbabfd49458
+DTSTAMP:20201123T000000Z
+DTSTART;VALUE=DATE:20201123
+SUMMARY:CS173 Intro to Computer Science: Exercise: Recursion
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:aa9e75a8-0a09-42bc-8086-49bd615967c1
 DTSTAMP:20201123T000000Z
 DTSTART;VALUE=DATE:20201123
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:Activities/Recursion\nReading: Recursion https://www.billmongan.com/Ursinus-CS173/Modules/Recursion/Module\nDeliverable: Lab: Ethical Case Studies Due
+DESCRIPTION:Activities/Recursion\nDeliverable: Lab: Ethical Case Studies Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/EthicalConsiderations\nDeliverable: Programming Assignment: Purple America Parts 6 through 7 Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/PurpleAmerica\nDeliverable: Programming Assignment: Iris Dataset Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/Iris\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/Recursion/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ed15b2d3-dcdc-4be2-a575-3344679996d1
+UID:1d137c25-c62e-49d6-bc5d-7289831d0350
 DTSTAMP:20201124T000000Z
 DTSTART;VALUE=DATE:20201124
-SUMMARY:CS173 Intro to Computer Science: Lab: Searching and Sorting Handed Out
+SUMMARY:CS173 Intro to Computer Science: Exercise: Merge Sort
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ffb7b094-ba93-420f-8019-c3528cf95f05
+UID:92e276c4-83b7-49aa-beba-fb78bc4ebfec
+DTSTAMP:20201124T000000Z
+DTSTART;VALUE=DATE:20201124
+SUMMARY:CS173 Intro to Computer Science: Lab: Drop the Lowest Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e60cc151-c147-4d23-942a-7d5c4f80fb3a
 DTSTAMP:20201124T000000Z
 DTSTART;VALUE=DATE:20201124
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Merge Sort https://www.billmongan.com/Ursinus-CS173/Modules/MergeSort/Module\nDeliverable: Lab: Searching and Sorting Handed Out
+DESCRIPTION:\nDeliverable: Exercise: Merge Sort https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/MergeSort/Module\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:bf5e0f7f-fd36-49f9-8128-5bcca0d06111
+UID:2aba7eb2-bd52-4372-a785-525d74375c52
 DTSTAMP:20201130T000000Z
 DTSTART;VALUE=DATE:20201130
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Due
+SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b69fafc3-21e3-40a7-9e0d-6faa57441bdc
+UID:70b96bd6-c54f-41f8-b240-e46cc02e492a
 DTSTAMP:20201130T000000Z
 DTSTART;VALUE=DATE:20201130
-SUMMARY:CS173 Intro to Computer Science: Lab: Searching and Sorting Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Drop the Lowest Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:2d301218-f336-426a-8e14-e4fb6faf59fa
+UID:31f3809c-ecf1-4cd9-a6ab-f842f861129a
 DTSTAMP:20201130T000000Z
 DTSTART;VALUE=DATE:20201130
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Dynamic Programming https://www.billmongan.com/Ursinus-CS173/Modules/DynamicProgramming/Module\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173/Assignments/Iris\nDeliverable: Lab: Searching and Sorting Due
+DESCRIPTION:Activities/DynamicProgramming\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Fall2020/Modules/DynamicProgramming/Module\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ebdea974-1501-4c91-9a3f-49b1ed636603
+UID:97beb43b-7714-41c7-b53c-8a9d1e784955
 DTSTAMP:20201201T000000Z
 DTSTART;VALUE=DATE:20201201
-SUMMARY:CS173 Intro to Computer Science: Final Project: Handed Out
+SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6c0e61ab-7260-40ed-9030-b3da30e36d0d
+UID:00554dac-ec08-433f-8cb1-d16547f3645f
 DTSTAMP:20201201T000000Z
 DTSTART;VALUE=DATE:20201201
 SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check
@@ -960,16 +1014,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:7bb76164-2f2a-42d2-9a80-f63dfdd8748b
+UID:614c0a35-d1b9-42fd-94a2-a0af7846d898
 DTSTAMP:20201201T000000Z
 DTSTART;VALUE=DATE:20201201
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Final Project: Handed Out\nDeliverable: Debugging Table: Second Check
+DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Projects/Final\nDeliverable: Debugging Table: Second Check
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:238d79e0-1b27-4c0d-b2e8-bfd1a3798bae
+UID:d2053ac9-094f-40bf-953b-41d147c595d9
+DTSTAMP:20201202T000000Z
+DTSTART;VALUE=DATE:20201202
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:c0eecb71-b2d8-486e-a7a6-9c9871ebae2e
 DTSTAMP:20201202T000000Z
 DTSTART;VALUE=DATE:20201202
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesizer Handed Out
@@ -978,25 +1041,34 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:d2dcb4ed-fe5e-4389-89bd-8778927e652a
+UID:c7a0da50-9096-4065-9983-890f628b9d7a
 DTSTAMP:20201202T000000Z
 DTSTART;VALUE=DATE:20201202
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: Guitar String Synthesizer Handed Out https://www.billmongan.com/Ursinus-CS173/Assignments/GuitarStringSynth
+DESCRIPTION:\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/Iris\nDeliverable: Programming Assignment: Guitar String Synthesizer Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/GuitarStringSynth
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:dde591c9-9568-453e-b438-4da661a661cb
+UID:6a4809a1-3761-4cc7-bea6-71d4d7ad2509
 DTSTAMP:20201204T000000Z
 DTSTART;VALUE=DATE:20201204
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Participation: Second Activity Notebook Check
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:23fbc03b-ed13-41ba-a2f5-98731b5b521f
+UID:0a1fc1ce-b310-41fa-80a9-38e46e362d3e
+DTSTAMP:20201204T000000Z
+DTSTART;VALUE=DATE:20201204
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Participation: Second Activity Notebook Check
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3ace0814-6b95-4790-a29e-21857ad0972b
 DTSTAMP:20201207T000000Z
 DTSTART;VALUE=DATE:20201207
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesizer Due
@@ -1005,16 +1077,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:83a06025-57a3-498b-a0fb-4887424b2d77
+UID:816e0046-651f-4ef1-a017-b9c3271fbd8b
 DTSTAMP:20201207T000000Z
 DTSTART;VALUE=DATE:20201207
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: Guitar String Synthesizer Due https://www.billmongan.com/Ursinus-CS173/Assignments/GuitarStringSynth
+DESCRIPTION:\nDeliverable: Programming Assignment: Guitar String Synthesizer Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Assignments/GuitarStringSynth
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:8454b2ab-cbfd-4935-a655-7758c6539efb
+UID:57c93a97-3529-4f89-b8f5-846e3966d66c
 DTSTAMP:20201208T000000Z
 DTSTART;VALUE=DATE:20201208
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1023,7 +1095,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:d16f138c-7a59-4581-b0a4-e368ca70b015
+UID:bb707678-c9fc-4083-825e-5ef568903719
 DTSTAMP:20201209T000000Z
 DTSTART;VALUE=DATE:20201209
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1032,25 +1104,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:791c22e6-ae58-48af-82a6-4f3db30c0095
+UID:b31a9c6d-db82-4b75-a0c5-9e2bcb1b2e96
 DTSTAMP:20201218T000000Z
 DTSTART;VALUE=DATE:20201218
-SUMMARY:CS173 Intro to Computer Science: Final Project: Due
+SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:0f8e7d53-d210-4f8b-a504-de2da6dd5210
+UID:9ba1b002-c295-48eb-9b87-1d3d8757aa04
 DTSTAMP:20201218T000000Z
 DTSTART;VALUE=DATE:20201218
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Final Project: Due
+DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Fall2020/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b8b78c64-905c-47d6-9ca9-2730678cf85f
+UID:7e6c9c12-9a16-412d-b80d-0c9e6c0aa9b0
 DTSTAMP:20201214T000000Z
 DTSTART;VALUE=DATE:20201214
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1059,7 +1131,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:795fdad2-412b-41e9-9f13-f7ae5213bac7
+UID:c8dd3ca2-784d-404c-9ac7-502fc656fe38
 DTSTAMP:20201215T000000Z
 DTSTART;VALUE=DATE:20201215
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1068,7 +1140,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:66f1593c-9e99-4278-b043-922f13cfe926
+UID:1096de05-d98a-4c20-820d-09e745eefce1
 DTSTAMP:20200907T100000
 DTSTART;TZID=US-Eastern:20200907T100000
 DTEND;TZID=US-Eastern:20200907T105000
@@ -1082,7 +1154,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:0b7dd019-d954-479b-8c90-c4be9e10124a
+UID:6bb61b59-2d59-40ea-95da-d627a2e05d5a
 DTSTAMP:20200907T123000
 DTSTART;TZID=US-Eastern:20200907T123000
 DTEND;TZID=US-Eastern:20200907T132000
@@ -1096,7 +1168,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6a384f09-3f57-4c63-9eb6-6a85fe137f22
+UID:064b7f3d-126d-4901-b06b-848e481fbbfe
 DTSTAMP:20200907T200000
 DTSTART;TZID=US-Eastern:20200907T200000
 DTEND;TZID=US-Eastern:20200907T210000
@@ -1110,7 +1182,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:6e3e5ceb-92b8-42cd-a288-7339fb688b63
+UID:c6140f8c-03ba-4b3a-abf9-e6c04255648c
 DTSTAMP:20200907T100000
 DTSTART;TZID=US-Eastern:20200907T100000
 DTEND;TZID=US-Eastern:20200907T105000
@@ -1124,7 +1196,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:f30afd43-fff7-4871-9dcb-2c5cae09bb65
+UID:711e9468-dca5-406a-9cbe-68f682e937a3
 DTSTAMP:20200907T200000
 DTSTART;TZID=US-Eastern:20200907T200000
 DTEND;TZID=US-Eastern:20200907T210000
@@ -1138,7 +1210,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b2fd54a6-c25e-427a-b0bd-26e197d95b87
+UID:365cce8a-e821-4609-bafc-a4c84568e040
 DTSTAMP:20200907T100000
 DTSTART;TZID=US-Eastern:20200907T100000
 DTEND;TZID=US-Eastern:20200907T105000
@@ -1152,7 +1224,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:e09e780c-2f0d-4f4c-b1f5-4b409758c27d
+UID:1a5d1a6f-deae-4a7c-beca-00fddadf5264
 DTSTAMP:20200907T123000
 DTSTART;TZID=US-Eastern:20200907T123000
 DTEND;TZID=US-Eastern:20200907T132000
@@ -1166,7 +1238,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b583e99e-deae-49f8-947a-90682b54c6b7
+UID:0e857138-84d7-4c17-a496-5a7ce8303013
 DTSTAMP:20200907T100000
 DTSTART;TZID=US-Eastern:20200907T100000
 DTEND;TZID=US-Eastern:20200907T105000
@@ -1180,7 +1252,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:1330aacd-ea00-4937-a514-47ae4e779c02
+UID:0f0dc7da-13b2-4c04-b55d-177897f73b09
 DTSTAMP:20200907T123000
 DTSTART;TZID=US-Eastern:20200907T123000
 DTEND;TZID=US-Eastern:20200907T132000
@@ -1194,7 +1266,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:bd41a6d1-d48d-4752-846c-3ce62150b361
+UID:610d05d0-d08c-4a83-af94-39975130d7cf
 DTSTAMP:20200918T000000Z
 DTSTART;VALUE=DATE:20200918
 SUMMARY:Add Deadline
@@ -1203,7 +1275,7 @@ DESCRIPTION:Add Deadline
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:ee41b9f2-5ab4-4d50-a745-fb15a8523732
+UID:690a174a-35a3-4cee-a513-6db5a5d92820
 DTSTAMP:20201104T000000Z
 DTSTART;VALUE=DATE:20201104
 SUMMARY:Drop with a W Deadline
@@ -1212,7 +1284,7 @@ DESCRIPTION:Drop with a W Deadline
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:b65c297b-4af7-4dc9-857e-6a1adb877242
+UID:443492f3-8578-4ec9-aa2c-17c32e1d2bcf
 DTSTAMP:20201023T000000Z
 DTSTART;VALUE=DATE:20201023
 SUMMARY:Mid Semester Grades Posted
@@ -1221,7 +1293,7 @@ DESCRIPTION:Mid Semester Grades Posted
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:fd9d6ef3-330b-4785-99cc-2f13bc090597
+UID:07c1ba74-03cc-42ee-aa49-9dafb3d899f7
 DTSTAMP:20201130T000000Z
 DTSTART;VALUE=DATE:20201130
 SUMMARY:2020 Transition to Remote Learning after Thanksgiving Break
@@ -1230,7 +1302,7 @@ DESCRIPTION:2020 Transition to Remote Learning after Thanksgiving Break
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:c5497d87-2535-41d7-9d0a-1bdbd9c30687
+UID:20dc3ebd-0202-477a-88a7-211cc78b42f2
 DTSTAMP:20201216T000000Z
 DTSTART;VALUE=DATE:20201216
 SUMMARY:Finals Week Begins
@@ -1239,7 +1311,7 @@ DESCRIPTION:Finals Week Begins
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:66428c06-6de4-4ce3-ad22-1974223bfe5f
+UID:35ad17dd-48f3-42ec-ab88-f73f43656657
 DTSTAMP:20201222T000000Z
 DTSTART;VALUE=DATE:20201222
 SUMMARY:Finals Week Ends

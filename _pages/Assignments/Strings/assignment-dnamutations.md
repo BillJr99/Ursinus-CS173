@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - DNA Mutations"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/jsxDUOIx"
   points: 100
   goals:
     - To manipulate strings using the substring method

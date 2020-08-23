@@ -7,7 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Financial Aid Calculator"
 info:
   coursenum: CS173
   githubclassroom:
-    clonelink: false
+    clonelink: "https://classroom.github.com/a/f2o9Azh6"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code
