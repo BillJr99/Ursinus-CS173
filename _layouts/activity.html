@@ -125,6 +125,24 @@ embed_directions: "You can try out some code examples in this embedded developme
     </ul>
     {% endif %}    
     
+    {% if page.info.try_partner %}
+    <h1>Try It with a Partner</h1>
+    <ul>
+    {% for entry in page.info.try_partner %}
+    <li>{{entry}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %} 
+
+    {% if page.info.try_own %}
+    <h1>Try It on Your Own</h1>
+    <ul>
+    {% for entry in page.info.try_own %}
+    <li>{{entry}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}   
+    
     {% if page.info.teacher_highlights %}
     <h1>Teacher Highlights</h1>
     <ul>
