@@ -269,7 +269,7 @@ schedule:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
 - week: "1"
-  date: "0"
+  date: "1"
   title: "Lab: Kepler's Third Law"
   readings: 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
