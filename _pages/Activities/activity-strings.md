@@ -9,7 +9,6 @@ info:
     - To be able to explain that a <code>String</code> is a class that stores text and provides functionality that manipulates that text.
     - To be able to explain that a <code>String</code> is immutable, and that new memory is allocated for a <code>String</code> when it is modified.
     - To be able to create and manipulate a <code>String</code>.
-    
     - To be able to invoke the <code>concat()</code>, <code>indexOf()</code>, <code>substring()</code> and <code>replace()</code> methods of a <code>String</code>.
   models:
     - title: "The <code>String</code>"
