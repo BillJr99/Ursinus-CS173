@@ -11,7 +11,7 @@ info:
     - To be able to override a method from a superclass.
     - To be able to call <code>super()</code> in a constructor or method.
     - To be able to explain the difference between an interface, an abstract class, and a superclass.
-    - To be able to inherit protected methods or fields from a superclass.
+    - To be able to inherit <code>protected</code> methods or fields from a superclass.
     
   models:
     - model: |
