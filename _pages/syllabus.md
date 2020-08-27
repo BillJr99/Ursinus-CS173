@@ -603,7 +603,7 @@ schedule:
     points: 3 
 - week: "11"
   date: "1"
-  title: "Lab: The High-Low Game" 
+  title: "Lab: Drop the Lowest" 
   deliverables:
   - dtitle: "Exercise: Merge Sort"
     dlink: "Modules/MergeSort/Module"  
