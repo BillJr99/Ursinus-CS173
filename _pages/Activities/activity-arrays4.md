@@ -8,9 +8,9 @@ info:
   prev: ./Arrays3
   
   goals: 
-    - To be able to create, access, and iterate an ArrayList
-    - To be able to explain that an ArrayList is a dynamic array that allows for expansion at runtime
-    - To be able to dynamically grow and shrink an ArrayList
+    - To be able to create, access, and iterate an <code>ArrayList</code>
+    - To be able to explain that an <code>ArrayList</code> is a dynamic array that allows for expansion at runtime
+    - To be able to dynamically grow and shrink an <code>ArrayList</code>
     - To use objects such as the <code>ArrayList</code> that accept templated/generic data types
 
   models:
