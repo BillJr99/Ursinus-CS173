@@ -30,7 +30,7 @@ info:
       title: The Fibonacci Sequence
       questions:
         - Despite the concise code, what is inefficient about this approach to the Fibonacci sequence?
-        - Try removing the recursive function calls: replace assignments or returns with array assignments, and write a loop instead.  
+        - "Try removing the recursive function calls: replace assignments or returns with array assignments, and write a loop instead."
         - Is your loop solving the problem from the top-down or bottom-up?  That is, is your loop counting up or down, and why?  How is this similar or different from the recursive approach?
   
 tags:
