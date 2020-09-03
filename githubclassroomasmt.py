@@ -102,6 +102,7 @@ class GHClassroomAsmt(unittest.TestCase):
         
         for asmt in asmts:
             title = ASMTTITLE + asmt
+            title = title.strip()
             self.createasmt(title[0:59], driver)
 
         driver.close()
