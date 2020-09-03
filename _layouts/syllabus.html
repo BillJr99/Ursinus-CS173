@@ -7,15 +7,19 @@ boilerplate:
     description: "We will be using Canvas to submit labs and to store all of the grades.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
     lmsname: "Canvas"
     lmslink: "https://ursinus.instructure.com/"
-  disability: "Ursinus College is committed to ensuring equal access and providing reasonable accommodations for students with disabilities. The Institute for Student Success works with students who have any kind of disability, whether apparent or non-apparent, learning, emotional, physical, or cognitive, and need accommodations to increase their access to this learning environment. I encourage you to reach out to the Director of Disability Services, Dr. Dolly Singley to discuss about supports and accommodations you may need. Dolly’s office is located in the Institute for Student Success in Lower Wismer. You can schedule a meeting with Dolly by using this link: <a href=\"https://dsingley.youcanbook.me/\">https://dsingley.youcanbook.me/</a>, by emailing her at <a href=\"mailto:dsingley@ursinus.edu\">dsingley@ursinus.edu</a> or by calling her at 1-484-762-4329. Students can also review accessibility and disabilities services online at <a href=\"https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/\">https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/</a>. Academic Honesty statement. See the <a href=\"https://www.ursinus.edu/offices/academic-affairs/faculty-resources/faculty-handbook/index.php\">Course Management</a> page in the Faculty Handbook for an explanation of college policies on plagiarism and other academic honesty violations."
+  disability: "Ursinus College is committed to ensuring equal access and providing reasonable accommodations for students with disabilities. The Institute for Student Success works with students who have any kind of disability, whether apparent or non-apparent, learning, emotional, physical, or cognitive, and need accommodations to increase their access to this learning environment. I encourage you to reach out to the Director of Disability Services, Dr. Dolly Singley to discuss about supports and accommodations you may need. Dolly’s office is located in the Institute for Student Success in Lower Wismer. You can schedule a meeting with Dolly by using this link: <a href=\"https://dsingley.youcanbook.me/\">https://dsingley.youcanbook.me/</a>, by emailing her at <a href=\"mailto:dsingley@ursinus.edu\">dsingley@ursinus.edu</a> or by calling her at 1-484-762-4329. Students can also review accessibility and disabilities services online at <a href=\"https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/\">https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/</a>."
   links:
     credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
-    disabilityservices: https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/current-students-/
     bear2bear: https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/
     mathhelproom: https://www.ursinus.edu/offices/institute-for-student-success/tutoring-help-sessions/math-help-room/
     academichonesty: https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/
     titleix: https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix/
     thequestions: https://www.ursinus.edu/quest/the-questions/
+    iss: https://www.ursinus.edu/offices/institute-for-student-success/
+    peercoaching: bit.ly/TutorCoachRequestForm
+    counseling: https://www.ursinus.edu/offices/wellness-center/counseling/
+    handbook: https://www.ursinus.edu/offices/academic-affairs/faculty-resources/faculty-handbook/index.php
+    writingspeaking: https://www.ursinus.edu/offices/center-for-writing-and-speaking/
   miscpolicies:
     - title: COVID-19 Requirements/Policy
       body: For in person sessions, you are required to wear a mask and you will be asked to leave the classroom if you are not properly wearing a mask. If you forget your face mask, disposable masks will be available in all buildings. DO NOT attend class if you do not feel well, just email me and let me know (see attendance policy above). In the event our course must go fully remote, we will continue towards achieving the course learning goals, but there may be adjustments to the schedule, content, assessments etc.  My office hours will mainly be conducted remotely to maintain physical distancing.
@@ -380,11 +384,10 @@ boilerplate:
     
     <a name="accommodations"></a>
     <h3>Accommodations</h3>
-    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of <a href="{{layout.boilerplate.links.disabilityservices}}">Disability Services</a> via email or at 484-762-4329.
-    
+    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of Disability Services.
     
     {% if layout.boilerplate.disability %}
-    <h3>Disability Statement</h3>
+    <p>
     {{ layout.boilerplate.disability }}
     {% endif %}
 
@@ -398,7 +401,7 @@ boilerplate:
         <div style="display: table-cell; padding:5px; vertical-align: top">
             Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. I am happy to discuss this in office hours in more detail.
             
-            Additionally, please know that the <a href="https://www.ursinus.edu/offices/wellness-center/counseling/">Wellness Center</a> is available for students and includes a crisis hour at 2-3pm each weekday.
+            Additionally, please know that the <a href="{{layout.boilerplate.links.counseling}}">Wellness Center</a> is available for students and includes a crisis hour at 2-3pm each weekday.
         </div>        
     </div>
     </div>
@@ -406,8 +409,12 @@ boilerplate:
 
     
     <h3>Peer Coaching</h3>
-    The <a href="https://www.ursinus.edu/offices/institute-for-student-success/">Institute for Student Success</a> offers <a href="bit.ly/TutorCoachRequestForm">Peer Coaching</a> that you can sign up for anytime.
+    The <a href="{{layout.boilerplate.links.iss}}">Institute for Student Success</a> offers <a href="{{layout.boilerplate.links.peercoaching}}">Peer Coaching</a> that you can sign up for anytime.
     
+    
+    
+    <h3>Center for Writing and Speaking</h3>
+    The <a href="{{layout.boilerplate.links.writingspeaking}}">Center for Writing and Speaking</a> is available for one-on-one and group appointments to advise you as you revise your writing projects and presentations.  They will even support your personal projects and extracurricular activities!  Please feel free and encouraged to review any and all writing and speaking work from this class with them.
     
     
     
@@ -418,7 +425,7 @@ boilerplate:
     
     
     <h3>Help Room</h3>
-    The math help room (Pfahler 102) is a great place to go if you are struggling. Students who have previously taken the course will be there to help you with the assignments. Visit the <a href="{{layout.boilerplate.links.mathhelproom}}">Math Help Room</a> page for more information. 
+    The Math Help Room (Pfahler 102) is a great place to go if you are struggling and is managed by the <a href="{{layout.boilerplate.links.iss}}">Institute for Student Success</a>. Students who have previously taken the course will be there to help you with the assignments. Visit the <a href="{{layout.boilerplate.links.mathhelproom}}">Math Help Room</a> page for more information. 
 
 
 
@@ -819,7 +826,7 @@ boilerplate:
     {% if layout.boilerplate.lms.title and layout.boilerplate.lms.description %}
     <h3>Course Management Systems: {{layout.boilerplate.lms.title}}</h3>
     {{layout.boilerplate.lms.description}}
-    <br />    
+    <br /><br />
     Since it is likely that students will have similar questions, it is much more efficient for me to answer them there so the whole class can see the answer, so it is possible that I will ask you to re-send a question on the forum that I get in e-mail (please do not be shy or take it personally if I do so; it means it was a great question and worth sharing with everyone!). There will be an anonymous option at the top of every chatroom to help facilitate this.
     {% endif %}
     
@@ -827,9 +834,11 @@ boilerplate:
     <a name="collaboration"></a>
     <h3>Collaboration Policy and Academic Integrity Policy</h3>
     Communication between students is allowed (and encouraged!), but it is expected that every student's code or writeups will be completely distinct! Please do not copy code off of the Internet (repurposing code from the Internet will probably make it harder anyway because the assignments are so specialized). Please cite any sources in addition to materials linked from the course website that you used to help in crafting your code and completing the assignment.
-
+    <br /><br />
+    See the <a href="{{layout.boilerplate.links.handbook}}">Course Management</a> page in the Faculty Handbook for an explanation of college policies on plagiarism and other academic honesty violations.
+    <br /><br />
     To encourage collaboration, students will be allowed to choose one or more "<strong>buddies</strong>" to work "near" during the assignment. Students are still expected to submit their own solutions, but they are allowed to provide substantial help to each other, and even to look at each others' code during the process. Students should indicate their buddies in the README upon assignment submission. Please let me know if you would like a buddy but are having trouble finding one.
-
+    <br /><br />
     Below is a table spelling out in more detail when and how you are allowed to share code with people (table style cribbed from <a href="https://www.cs.princeton.edu/courses/archive/spring19/cos126/syllabus.html">Princeton CS 126</a>).
     <br /><br />
     <strong>Please Note:</strong> The terms "exposing" and "viewing" exclude sending or ingesting electronically, which would be considered copying. Exposing and viewing are normally done in the context of in-person working or in the help room.  In addition, "Other People" includes internet sources!
