@@ -61,17 +61,20 @@ class GHClassroomAsmt(unittest.TestCase):
                 break
         
         if not coursesearchdone:
-            print("Course not found")
-            sys.exit(1)
+            print("Course not found: might already be on the course page; otherwise, this will fail")
         else:
             print("Found course index " + str(courseidx))
             
-        driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Archive'])[" + str(courseidx) + "]/following::h1[1]").click()
+            driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Archive'])[" + str(courseidx) + "]/following::h1[1]").click()           
         
         try:
             driver.find_element_by_link_text("New assignment").click() # if an assignment exists
         except:
-            driver.find_element_by_link_text("Create an assignment").click() # if this is the first assignment
+            try:
+                driver.find_element_by_link_text("Create an assignment").click() # if this is the first assignment
+            except Exception as e:
+                print(e)
+                sys.exit(-1)
 
         driver.find_element_by_id("assignment_title").click()
         driver.find_element_by_id("assignment_title").clear()
