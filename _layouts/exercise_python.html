@@ -8,6 +8,8 @@ facultyemail: "wmongan@ursinus.edu"
 formprocessordirections: "Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 
 submitformlinkdirections: "Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions."
+
+mynetid: wmongan
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -97,15 +99,26 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
         <div id="correctArea"></div>
         
         <p>
-        <strong>Enter your Ursinus netid before clicking run (non Ursinus students can simply enter their name):</strong> <input type="text" id="studentnetid" name="studentnetid" onchange="if(document.getElementById('studentnetid').value.length > 0) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;"><br>
+        <strong>Enter your Ursinus netid before clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit)</strong> 
+        </p>
+        <table>
+            <tr>
+                <td>
+                    Netid
+                </td>
+                <td>
+                    <input type="text" id="studentnetid" name="studentnetid" onchange="if(document.getElementById('studentnetid').value.length > 0) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;">
+                </td>
+            </tr>
+        </table>
+        
         {% if layout.formprocessor and layout.formprocessor != false %}
         {{ layout.formprocessordirections }}<br>
         {% endif %}
         {% if page.processor.submitformlink and page.processor.submitformlink != false %}
         {{ layout.submitformlinkdirections }}<br>
         {% endif %}
-        <br>
-        
+
         <button type = "button" onclick = "if(document.getElementById('studentnetid').value.length > 0) runCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your netid first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
         </p>
         
