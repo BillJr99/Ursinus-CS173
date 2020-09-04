@@ -268,6 +268,8 @@ schedule:
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
+  - rtitle: "Beginner's Java Reference Manual"
+    rlink: "http://www.ugrad.math.ubc.ca/Flat/reference.html"
 - week: "1"
   date: "1"
   title: "Lab: Kepler's Third Law"
