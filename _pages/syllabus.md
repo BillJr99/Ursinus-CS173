@@ -332,6 +332,9 @@ schedule:
 - week: "2"
   date: "3"
   title: "Conditionals"   
+  - dtitle: "Exercise: Conditionals"
+    dlink: "Modules/Conditionals/Exercise"  
+    points: 3   
 - week: "3"
   date: "0"
   title: "Functions and Methods"
@@ -349,10 +352,7 @@ schedule:
     points: 100
   - dtitle: "Lab: Debugging Due"    
     dlink: "Labs/Debugging"     
-    points: 100
-  - dtitle: "Exercise: Writing and Calling Functions"
-    dlink: "Modules/Functions/Exercise"  
-    points: 3      
+    points: 100   
 - week: "3"
   date: "1"
   title: "Lab: Functions"    
@@ -366,6 +366,9 @@ schedule:
   readings:
   - rtitle: "Style Guide"
     rlink: "Style-Guide" 
+  - dtitle: "Exercise: Writing and Calling Functions"
+    dlink: "Modules/Functions/Exercise"  
+    points: 3       
 - week: "3"
   date: "3"
   title: "Testing"  

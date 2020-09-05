@@ -22,6 +22,12 @@ processor:
     - incorrectcheck: |
         pos.includes("2.722")
       feedback: "Try again: you might be iterating once too many times; don't forget that initializing the variable counts as the first multiplication!" 
+    - incorrectcheck: |
+        pos.includes("2.613")
+      feedback: "Try again: don't forget to compound daily instead of monthly!" 
+    - incorrectcheck: |
+        pos.includes("2.83")
+      feedback: "Try again: don't forget to compound daily instead of monthly, and you might be iterating once too many times; initializing the variable counts as the first multiplication!" 
       
 files:
   - filename: "Driver.java"
