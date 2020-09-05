@@ -67,13 +67,13 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                System.out.print(pigLatin("trash"));
+                System.out.print(PigLatin.pigLatin("trash"));
                 System.out.print("-");
-                System.out.print(pigLatin("pig"));
+                System.out.print(PigLatin.pigLatin("pig"));
                 System.out.print("-");
-                System.out.print(pigLatin("smile"));
+                System.out.print(PigLatin.pigLatin("smile"));
                 System.out.print("-");
-                System.out.print(pigLatin("egg"));
+                System.out.print(PigLatin.pigLatin("egg"));
             }
         }
 
