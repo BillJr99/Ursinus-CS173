@@ -332,6 +332,7 @@ schedule:
 - week: "2"
   date: "3"
   title: "Conditionals"   
+  deliverables:
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
