@@ -316,7 +316,6 @@ schedule:
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "./Modules/Boolean/Exercise"
     points: 3
-    
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -440,6 +439,10 @@ schedule:
 - week: "6"
   date: "0"
   title: "Iteration"
+  deliverables:
+    - dtitle: "Exercise: Iteration"
+      dlink: "./Modules/Iteration/Exercise"    
+      points: 3  
 - week: "6"
   date: "1"
   title: "Iteration"  
