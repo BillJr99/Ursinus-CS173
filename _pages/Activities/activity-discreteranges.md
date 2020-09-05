@@ -133,6 +133,7 @@ info:
                 <code>-2,147,483,648</code> through <code>2,147,483,647</code>
             </div>            
         </div> 
+        <!--
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:25%; ">
                 <code>unsigned int</code>
@@ -147,6 +148,7 @@ info:
                 <code>0</code> through <code>4,294,967,295</code>
             </div>            
         </div> 
+        -->
         <div style="width: 100%; display: table-row; ">
             <div style="display: table-cell; padding:5px; width:25%; ">
                 <code>double</code>
