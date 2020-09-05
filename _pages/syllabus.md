@@ -367,6 +367,7 @@ schedule:
   readings:
   - rtitle: "Style Guide"
     rlink: "Style-Guide" 
+  deliverables:
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Exercise"  
     points: 3       
