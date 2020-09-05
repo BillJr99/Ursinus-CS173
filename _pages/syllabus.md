@@ -297,6 +297,7 @@ schedule:
   deliverables:
     - dtitle: "Exercise: Expressions Revisited"
       dlink: "./Modules/Expressions/Exercise2"    
+      points: 3
 - week: "1"
   date: "3"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -312,6 +313,10 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
     points: 100  
+  - dtitle: "Exercise: Boolean Expressions"
+    dlink: "./Modules/Boolean/Exercise"
+    points: 3
+    
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
