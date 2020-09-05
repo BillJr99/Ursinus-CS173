@@ -18,6 +18,10 @@ processor:
     var pos = feedbackString.trim();
   correctcheck: |
     pos.includes("2.71456")
+  incorrectchecks:
+    - incorrectcheck: |
+        pos.includes("2.722")
+      feedback: "Try again: you might be iterating once too many times; don't forget that initializing the variable counts as the first multiplication!" 
       
 files:
   - filename: "Driver.java"
