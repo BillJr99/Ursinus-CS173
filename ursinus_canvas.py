@@ -591,11 +591,11 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     points = 100                    
                 
                 description = dtitle.strip() 
-                
-                description = rchop(description, " Due")
 
                 # Create an Assignment Shell
                 if not (' handed out' in description.lower()):
+                    description = rchop(description, " Due")
+                    
                     duedate = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
                     duedate = getDateString(adddays(duedate, DUE_DATE_OFFSET)) # offset the due date as needed for the due time which is in UTC
                     
@@ -627,6 +627,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['content_id'] = assignment.id
                     inputdict['published'] = True
                     add_module_item(module, inputdict)
+                else:
+                    # Create a Module Entry for the Deliverable
+                    inputdict = {}
+                    inputdict['title'] = dtitle
+                    inputdict['type'] = "ExternalUrl"
+                    inputdict['external_url'] = addslash(homepage) + stripnobool(dlink)
+                    inputdict['new_tab'] = True            
+                    inputdict['published'] = True
+                    add_module_item(module, inputdict)  
                     
         if 'readings' in item:
             for reading in item['readings']:    
