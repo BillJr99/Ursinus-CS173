@@ -20,19 +20,16 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("122.583125")
+    pos.includes("122.58")
   incorrectchecks:
     - incorrectcheck: |
-        pos.includes("245.16625")
+        pos.includes("245.16")
       feedback: "Try again: don't forget to divide by 2!"    
     - incorrectcheck: |
-        pos.includes("245.16625")
-      feedback: "Try again: don't forget to divide by 2!"  
-    - incorrectcheck: |
-        pos.includes("24.516625")
+        pos.includes("24.51")
       feedback: "Try again: don't forget to square the time variable!"       
     - incorrectcheck: |
-        pos.includes("49.03325")
+        pos.includes("49.03")
       feedback: "Try again: don't forget to square the time variable, and divide by 2!"         
       
 files:
