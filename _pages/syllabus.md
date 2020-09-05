@@ -293,7 +293,10 @@ schedule:
   - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
   - rtitle: "Ch. 2.3, 2.5"
-    rlink: false      
+    rlink: false  
+  deliverables:
+    - dtitle: "Exercise: Expressions Revisited"
+      dlink: "./Modules/Expressions/Exercise2"    
 - week: "1"
   date: "3"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -301,9 +304,6 @@ schedule:
   readings:
   - rtitle: "Ch. 3"
     rlink: false   
-  deliverables:
-    - dtitle: "Exercise: Discrete Ranges"
-      dlink: "./Modules/DiscreteRanges/Exercise"
 - week: "2"
   date: "0"   
   title: "Conditionals"   
