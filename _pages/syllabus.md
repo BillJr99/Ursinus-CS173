@@ -456,7 +456,7 @@ schedule:
       points: 10
 - week: "6"
   date: "2"
-  title: "Iteration, Randomness, and the do loop"
+  title: "Iteration and the do loop"
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"    

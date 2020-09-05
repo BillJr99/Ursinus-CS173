@@ -4,9 +4,9 @@ permalink: /Activities/Functions
 title: "CS173: Intro to Computer Science - Functions"
 excerpt: "CS173: Intro to Computer Science - Functions"
 
-next: ./Random
-
 info:
+  next: ./Random
+  
   goals: 
     - To be able to call methods in various configurations (parameters, return values)
   models:
