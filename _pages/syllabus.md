@@ -476,6 +476,10 @@ schedule:
   date: "0"
   title: "Arrays" 
   link: "Activities/Arrays"
+  deliverables:
+  - dtitle: "Exercise: Strings Revisited"
+    dlink: "Modules/Strings/Exercise2"
+    points: 3  
 - week: "7"
   date: "1"
   title: "Lab: Arrays"
