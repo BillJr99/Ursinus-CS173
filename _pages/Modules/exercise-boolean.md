@@ -23,7 +23,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("20.420334999999998") && pos.includes("true");
+    pos.includes("20.420334999999998") && pos.includes("true")
       
 files:
   - filename: "Driver.java"
