@@ -301,6 +301,9 @@ schedule:
   readings:
   - rtitle: "Ch. 3"
     rlink: false   
+  deliverables:
+    - dtitle: "Exercise: Discrete Ranges"
+      dlink: "./Modules/DiscreteRanges/Exercise"
 - week: "2"
   date: "0"   
   title: "Conditionals"   
