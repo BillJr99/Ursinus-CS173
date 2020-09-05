@@ -42,9 +42,9 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                MyFile.printGrade(89.75);
-                MyFile.printGrade(96.9);
-                MyFile.printGrade(82.99);
+                GradePrinter.printGrade(89.75);
+                GradePrinter.printGrade(96.9);
+                GradePrinter.printGrade(82.99);
             }
         }    
 
