@@ -23,17 +23,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("122.58")
-  incorrectchecks:
-    - incorrectcheck: |
-        pos.includes("245.16")
-      feedback: "Try again: don't forget to divide by 2!"    
-    - incorrectcheck: |
-        pos.includes("24.51")
-      feedback: "Try again: don't forget to square the time variable!"       
-    - incorrectcheck: |
-        pos.includes("49.03")
-      feedback: "Try again: don't forget to square the time variable, and divide by 2!"         
+    pos.includes("20.420334999999998") && pos.includes("true");
       
 files:
   - filename: "Driver.java"
@@ -48,14 +38,22 @@ files:
                 
                 float pi = 3.14159;
                 
-                /* TODO: Print the circumference of this circle, which is pi * the diameter */
+                /* TODO: Declare a floating point variable circumference, 
+                   and set it equal to pi * the diameter */
+                float circumference = pi * diameter;
                 
-                /* The value should be 20.420335, which you can verify on your calculator.  
-                   But you might get something different!  Why? */
+                /* TODO: Print the circumference of this circle */
+                System.out.println(circumference);
                 
-                /* TODO: Write an if statement that checks if the circumference is "equal" 
-                   to this value by checking if it is greater than a nearby value and smaller 
-                   than a nearby value. */
+                /* The true circumference is 20.420335, which you can verify on your calculator.  
+                   But you might get something slightly different here!  Why? */
+                
+                /* TODO: Declare a boolean variable called isApproximatelyEqual, whose value is 
+                   true if the circumference is "approximately equal" to 20.420335, by checking 
+                   if it is greater than a nearby value and smaller than a nearby value. */
+
+                /* I'll print the value for you - don't change this! */
+                System.out.println(isApproximatelyEqual);
             }
         }    
 
