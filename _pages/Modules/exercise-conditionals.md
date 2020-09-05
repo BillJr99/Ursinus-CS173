@@ -31,6 +31,9 @@ files:
                 /* TODO: fill this in by printing the letter grade
                    For example, if the grade is 92, you should:
                    System.out.println("A-");
+                   
+                   You can assume that the grade variable contains the
+                   number grade you're checking.
                 */
             }
         }
