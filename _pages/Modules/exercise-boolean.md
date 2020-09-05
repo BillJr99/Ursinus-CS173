@@ -40,10 +40,8 @@ files:
                 
                 /* TODO: Declare a floating point variable circumference, 
                    and set it equal to pi * the diameter */
-                float circumference = pi * diameter;
                 
                 /* TODO: Print the circumference of this circle */
-                System.out.println(circumference);
                 
                 /* The true circumference is 20.420335, which you can verify on your calculator.  
                    But you might get something slightly different here!  Why? */
