@@ -34,8 +34,8 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
+                /* Don't change these! */
                 float diameter = 6.5;
-                
                 float pi = 3.14159;
                 
                 /* TODO: Declare a floating point variable circumference, 
