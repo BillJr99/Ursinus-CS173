@@ -238,7 +238,7 @@ schedule:
     points: 15
 - week: "0"
   date: "1"
-  title: "Lab: Introduction to Programming and The Development Environment and GitHub"   
+  title: "Course Overview Continued: The Development Environment and GitHub"   
   readings:
   - rtitle: "Getting Started with Git and Github"
     rlink: "Modules/Github/Module" 
