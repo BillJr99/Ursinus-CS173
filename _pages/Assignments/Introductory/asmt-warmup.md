@@ -78,6 +78,6 @@ Please take a moment to familiarize yourself with [the course syllabus]({{ site.
 1.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code during labs
 2.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code for regular assignments.
 3.  True/False: You may look at any classmate's code during a regular assignment.
-4.  What happens if you show up after the lecture has already started?
-5.  Where is the help room located?
-<!--6.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
+<!--4.  What happens if you show up after the lecture has already started?-->
+4.  Where is the help room located?
+<!--5.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
