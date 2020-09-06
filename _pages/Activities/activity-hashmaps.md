@@ -57,7 +57,7 @@ info:
                 data.put("date", "August 17, 2020");
                 data.put("page", "<html><body>Hello!</body></html>");
                 
-                browserCache.put("www.ursinus.edu", map);
+                browserCache.put("www.ursinus.edu", data);
            }
         }
         ]]></script>       
