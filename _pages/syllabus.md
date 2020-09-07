@@ -238,10 +238,7 @@ schedule:
     points: 15
 - week: "0"
   date: "1"
-  title: "Course Overview Continued: The Development Environment and GitHub"   
-  readings:
-  - rtitle: "Getting Started with Git and Github"
-    rlink: "Modules/Github/Module" 
+  title: "Course Overview Continued: The Development Environment"   
 - week: "0"
   date: "2"
   title: "A Brief History of Computer Science"  
@@ -276,6 +273,8 @@ schedule:
   readings: 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
     rlink: "Modules/Values/Module" 
+  - rtitle: "Getting Started with Git and Github"
+    rlink: "Modules/Github/Module" 
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
