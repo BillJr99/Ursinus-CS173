@@ -677,7 +677,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
 
             location = officehour['location']
             
-            summary = coursenum + " " + coursename + " Office Hours with " + instructorname
+            summary = coursenum + " " + coursename + " Drop-In / Office Hours with " + instructorname
             
             inputdict = {}
             inputdict['context_code'] = coursecontext
