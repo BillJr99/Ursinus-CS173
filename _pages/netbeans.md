@@ -17,6 +17,8 @@ Please visit these links to install the Java Development Kit (JDK) and NetBeans.
 
 * [Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html)
     * If you are prompted on the download page, you can select "JDK Download"
+    * About halfway down the page are the download files.  You can choose the one that matches your operating system.  Most likely, it's the one that says "Windows x64 Installer"
+    * You can find your download by opening a run dialog (Windows Key + R on Windows), typing "Downloads" in the box that appears, and hitting enter.  Double-clicking on the program you downloaded (the filename can be found on the webpage above) will start the process for you.
 * [NetBeans](https://netbeans.apache.org/download/index.html)
     * If you are prompted on the download page, you can click "Download" under the "Apache NetBeans" heading (there might be a version number of even the letters "LTS" - meaning "Long Term Support" version; these are fine)
 
