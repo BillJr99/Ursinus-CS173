@@ -375,8 +375,8 @@ schedule:
   title: "Testing"  
   link: "Activities/Testing"
   readings:
-  - rtitle: "NetBeans IDE and Testing"
-    rlink: "NetBeans"
+  - rtitle: "Testing with the NetBeans IDE"
+    rlink: "NetBeans/JUnit"
 - week: "4"
   date: "0"
   title: "Testing" 
