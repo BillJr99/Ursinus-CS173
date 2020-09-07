@@ -80,7 +80,7 @@ We will use these tools later in the semester, so you can skip them the first ti
 
 ### Writing Test Cases
 
-An important aspect of writing software is testing our code.  We will learn to do this during the class, and use the integrated unit test software built into Java and NetBeans. [Here is an article on using JUnit]({{ site.baseurl }}/NetBeans/Testing), the unit testing framework.
+An important aspect of writing software is testing our code.  We will learn to do this during the class, and use the integrated unit test software built into Java and NetBeans. [Here is an article on using JUnit]({{ site.baseurl }}/NetBeans/JUnit), the unit testing framework.
 
 ### Using the Debugger
 
