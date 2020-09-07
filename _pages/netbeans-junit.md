@@ -11,7 +11,7 @@ This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live
 
 ## Unit Testing
 
-Let's say we want to test this method we just wrote in the [introduction](..) article with [JUnit](https://netbeans.org/kb/docs/java/junit-intro.html). Right click on the class file, then choose `Tools -> Create/Update tests`
+Let's say we want to test the code method we provided in the [introduction](.) article with [JUnit](https://netbeans.org/kb/docs/java/junit-intro.html).   You can follow the instructions in [that article](.) to open the sample project in NetBeans.  Then, right click on the class file, then choose `Tools -> Create/Update tests`
 
 ![]({{ site.baseurl }}/images/netbeans/CreateUpdateTests.png)
 
