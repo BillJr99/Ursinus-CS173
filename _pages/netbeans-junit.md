@@ -11,7 +11,7 @@ This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live
 
 ## Unit Testing
 
-Let's say we want to test the code method we provided in the [introduction](../NetBeans) article with [JUnit](https://netbeans.org/kb/docs/java/junit-intro.html).   You can follow the instructions in [that article](../NetBeans) to open the sample project in NetBeans.  Then, right click on the class file, then choose `Tools -> Create/Update tests`
+Let's say we want to test the code method we provided in the [introduction](../NetBeans) article with [JUnit](https://netbeans.org/kb/docs/java/junit-intro.html).   You can follow the instructions in [that article](../NetBeans) to create the sample project in NetBeans.  Then, right click on the class file, then choose `Tools -> Create/Update tests` on the primary class of that project.
 
 ![]({{ site.baseurl }}/images/netbeans/CreateUpdateTests.png)
 
@@ -26,6 +26,9 @@ This will create a new file for testing with an example test method for each met
 If you are interested in trying this test case out for yourself, here is the code from the screenshot above.  This test case asks if 1 is an even number, and should pass because it expects that the function will return  `false`.
 
 ```java
+import org.junit.*;
+import static org.junit.Assert.*;
+
 public class NewClassTest {
 	public NewClassTest() {
 	}
