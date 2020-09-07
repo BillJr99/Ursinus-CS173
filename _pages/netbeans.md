@@ -17,10 +17,11 @@ Please visit these links to install the Java Development Kit (JDK) and NetBeans.
 
 * [Java Development Kit](https://www.oracle.com/java/technologies/javase-downloads.html)
     * If you are prompted on the download page, you can select "JDK Download"
-    * About halfway down the page are the download files.  You can choose the one that matches your operating system.  Most likely, it's the one that says "Windows x64 Installer"
+    * About halfway down the page are the download files.  You can choose the one that matches your operating system.  Most likely, it's the one that says "Windows x64 Installer" on Windows, or the one for MacOS if you are using a Mac.
     * You can find your download by opening a run dialog (Windows Key + R on Windows), typing "Downloads" in the box that appears, and hitting enter.  Double-clicking on the program you downloaded (the filename can be found on the webpage above) will start the process for you.
 * [NetBeans](https://netbeans.apache.org/download/index.html)
     * If you are prompted on the download page, you can click "Download" under the "Apache NetBeans" heading (there might be a version number of even the letters "LTS" - meaning "Long Term Support" version; these are fine)
+    * It's OK if the version number is higher than the ones in the screenshots in this article, the windows and menus should be the same!
 
 Here are a few notes to help you:
 
@@ -30,7 +31,7 @@ Here are a few notes to help you:
 
 **NOTE:** You may also use [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers), [IntelliJ Idea](https://www.jetbrains.com/idea/download/), or the terminal (`javac` and `java`) if you are more comfortable with them, but the default option is Netbeans, and we will be working through examples in class and in labs with Netbeans.  Also, there is a [combined download of Java and NetBeans](https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html) in a single installer.  You are welcome to use this, but it is an older version of the software, so things might look a little different from the examples in class.
 
-# Instructions for Creating NetBeans Projects And JUnit Tests
+# Instructions for Creating NetBeans Projects 
 
 To create a new project, first select `File->New Project`
 
@@ -52,40 +53,15 @@ Starting a new class like this without a package that you've chosen will create 
 
 ![]({{ site.baseurl }}/images/netbeans/ClassWithMethod.png)
 
-Let's say we want to test this method we just wrote with [JUnit](https://netbeans.org/kb/docs/java/junit-intro.html). Right click on the class file, then choose `Tools -> Create/Update tests`
+## Writing Test Cases
 
-![]({{ site.baseurl }}/images/netbeans/CreateUpdateTests.png)
-
-Then, check/uncheck the following boxes
-
-![]({{ site.baseurl }}/images/netbeans/TestOptions.png)
-
-This will create a new file for testing with an example test method for each method you created in your original class. You should be careful to comment out or delete the `fail` line at the end of the test, and be sure that your inputs and expected outputs are the expected behavior of your method. Once you've done this, you can right click on this file and click `run`, and the results of the test will be shown in a window:
-
-![]({{ site.baseurl }}/images/netbeans/RunTests.png)
-
-If you are interested in trying this test case out for yourself, here is the code from the screenshot above.  This test case asks if 1 is an even number, and should pass because it expects that the function will return  `false`.
-
-```java
-public class NewClassTest {
-	public NewClassTest() {
-	}
-
-	@Test
-	public void testIsEven() {
-		System.out.println("isEven");
-		int num = 1;
-		boolean expResult = false;
-		boolean result = NewClass.isEven(num);
-		assertEquals(result, expResult);
-		//fail("The test case failed");
-	}
-}
-```
+An important aspect of writing software is testing our code.  We will learn to do this during the class, and use the integrated unit test software built into Java and NetBeans.  We will use this tool later in the semester, so you can skip it the first time you're installing the software.  [Here is an article on using JUnit]({{ site.baseurl }}/NetBeans/Testing), the unit testing framework.
 
 ## Using the Debugger
 
 In addition to testing, NetBeans includes a debugger that can help identify errors in your code (especially when a test case fails!).  Here is an [article]({{ site.baseurl }}/NetBeans/Debugging) on using the NetBeans debugger for your projects.
+
+We will use this tool later in the semester, so you can skip it the first time you're installing the software.
 
 ## Exporting To Zip
 
