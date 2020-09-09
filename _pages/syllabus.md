@@ -232,6 +232,8 @@ schedule:
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
+  - rtitle: "Installing NetBeans"
+    rlink: "Modules/NetBeans/Module"     
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
