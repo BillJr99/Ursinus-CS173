@@ -27,7 +27,7 @@ layout: default
     
     {{ content }} 
     
-	{% if not page.info.skipsubmission %}
+	{% if page.info.skipsubmission == false %}
     <h2>Submission</h2>
     In your README, please describe your design, approach, and implementation.  Additionally, please answer any questions from the assignment, and include answers to the following questions:
     
