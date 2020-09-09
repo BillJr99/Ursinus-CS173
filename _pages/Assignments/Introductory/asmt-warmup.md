@@ -16,7 +16,6 @@ info:
     zipfilename: "HW0-master.zip"
     zipdirname: "HW0-master"
   points: 15
-  skipsubmission: true
   
 tags:
   - introduction
