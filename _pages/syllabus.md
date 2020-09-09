@@ -251,17 +251,14 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
-  - dtitle: "Exercise: The NetBeans IDE Software Environment"
-    dlink: "Modules/IDE/Module"    
-    points: 3    
 - week: "1"
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
   deliverables:
-  - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
-    dlink: "Modules/Expressions/Module"  
-    points: 3	  
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3      
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
@@ -279,9 +276,9 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
     points: 100
-  - dtitle: "Exercise: Epoch Time Overflow"
-    dlink: "Modules/EpochTime/Exercise"
-    points: 3    
+  - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
+    dlink: "Modules/Expressions/Module"  
+    points: 3	  
 - week: "1"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -294,16 +291,20 @@ schedule:
   - rtitle: "Ch. 2.3, 2.5"
     rlink: false  
   deliverables:
-    - dtitle: "Exercise: Expressions Revisited"
-      dlink: "./Modules/Expressions/Exercise2"    
-      points: 3
+  - dtitle: "Exercise: Epoch Time Overflow"
+    dlink: "Modules/EpochTime/Exercise"
+    points: 3  
 - week: "1"
   date: "3"
   title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
-    rlink: false   
+    rlink: false  
+  deliverables:
+  - dtitle: "Exercise: Expressions Revisited"
+    dlink: "./Modules/Expressions/Exercise2"    
+    points: 3  
 - week: "2"
   date: "0"   
   title: "Conditionals"   
