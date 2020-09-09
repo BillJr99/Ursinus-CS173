@@ -53,7 +53,10 @@ Starting a new class like this without a package that you've chosen will create 
 
 ![]({{ site.baseurl }}/images/netbeans/ClassWithMethod.png)
 
-# Coding Style
+## Good Coding Style, Testing, Debugging, and Exporting Your Projects
+We will use these tools later in the semester, so you can skip them the first time you're installing the software.  However, I'll include some guides here for when the time comes.
+
+### Writing with Good Coding Style with Help from the CheckStyle NetBeans Plugin
 
 Significant emphasis is placed upon [good coding style]({{ site.baseurl }}/Style-Guide) as we introduce the fundamental concepts of software development.  This is because it is so important to be able to read others' code easily.  Following a few guidelines will help all of us to write  consistent code in a way that does not hide the details of your approach in obscurity.  Even I must admit to forgetting the rationale behind complex code that I had written only a few weeks prior!  Had I followed these guidelines more closely, I would have saved so much time in the long run by not having to re-read, re-understand, and, sometimes, re-write my old code.  
 
@@ -73,10 +76,7 @@ Check the two plugins `Checkstyle Beans Library` and `Checkstyle Beans Plugin`, 
 
 Now CheckStyle should be installed.  One final step remains: to configure CheckStyle with the types of code style rules that should be checked.  CheckStyle is a nice tool for allowing teams to write consistent code together according to best practices, and also to standards (for example, Google has their own custom set of rules to ensure that everyone writes their code in the same style, even beyond best practices).  A configuration file is used to specify these rules.  We have created a style file that you can use that includes many of the [Style Guide]({{ site.baseurl }}/Style-Guide) rules, without adding too many additional rules that would be overly pedantic.  
 
-You can download our configuration file [here]({{ site.baseurl }}/files/checkstyle.xml).  To add our CheckStyle configuration file to the plugin, go to `Tools->Options` and then the `Miscellaneous` tab.  You will see a tab below this called `CheckStyle`.  Click `Browse` next to the `Configuration File` box, and select the file you just downloaded.
-
-## Testing, Debugging, and Exporting Your Projects
-We will use these tools later in the semester, so you can skip them the first time you're installing the software.  However, I'll include some guides here for when the time comes.
+You can download our configuration file [here]({{ site.baseurl }}/files/checkstyle.xml).  You can save this file by right-clicking on the link and clicking "Save As".  To add our CheckStyle configuration file to the plugin, go to `Tools->Options` and then the `Miscellaneous` tab.  You will see a tab below this called `CheckStyle`.  Click `Browse` next to the `Configuration File` box, and select the file you just downloaded (it is likely in your "Downloads" folder by default, which is fine!).
 
 ### Writing Test Cases
 
