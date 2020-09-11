@@ -24,6 +24,8 @@ tags:
 
 The purpose of this assignment is to get us setup for the course, both by getting to know each other better, and by setting up the software environment.
 
+We will submit this assignment using {{ page.info.chatname }}, so there is no need to write up any documentation or README (as we will in future programming assignments); it is fine to just follow the directions in each part and send me messages as appropriate.
+
 ## Personal Survey (5 Pts)
 
 I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on [{{ page.info.chatname }}]({{ page.info.chatlink }}).
