@@ -782,9 +782,12 @@ def parse_discussions(entries):
     for entry in entries:
         print(entry)
         
-        replies = entry.replies()
+        try:
+            replies = entry.replies()
         
-        parse_discussions(replies)
+            parse_discussions(replies)
+        except:
+            print("Error: No replies found")
 
 def usage():
     print("Usage:")
