@@ -5,8 +5,6 @@ title: "CS173: Intro to Computer Science - Overview of a Computer Program and Da
 excerpt: "CS173: Intro to Computer Science - Overview of a Computer Program and Data Types"
 
 info:
-  next: ./EscapeCharacters
-  
   goals: 
     - To identify the major components of a Java program, including a method and a class
     - To explain that binary data uses &quot;bits&quot; of <code>1&apos;s</code> and <code>0&apos;s</code> to represent data of various types, both numeric and textual

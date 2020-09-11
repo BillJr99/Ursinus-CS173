@@ -5,6 +5,8 @@ title: "CS173: Intro to Computer Science - Expressions"
 excerpt: "CS173: Intro to Computer Science - Expressions"
 
 info:
+  next: ./EscapeCharacters
+  
   goals: 
     - To write statements that manipulate values of different numeric types
     - To manipulate variables in a Java program

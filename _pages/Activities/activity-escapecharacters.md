@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Escape Characters"
 excerpt: "CS173: Intro to Computer Science - Escape Characters"
 
 info:
-  prev: ./DataTypes
+  prev: ./Expressions
   
   goals: 
     - To identify the use of escape characters
