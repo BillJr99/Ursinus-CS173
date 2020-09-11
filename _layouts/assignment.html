@@ -28,6 +28,9 @@ layout: default
     {{ content }} 
     
     <h2>Submission</h2>
+    {% if page.info.submission %}
+    {{ page.info.submission }}
+    {% else %}
     If you wrote code as part of this assignment, please include a README in which you describe your design, approach, and implementation.  Additionally, please answer any questions from the assignment, and include answers to the following questions:
     
     <ul>
@@ -36,6 +39,7 @@ layout: default
     <li>Your overall impression of the assignment. Did you love it, hate it, or were you neutral? One word answers are fine, but if you have any suggestions for the future let me know.</li>
     <li>Any other concerns that you have. For instance, if you have a bug that you were unable to solve but you made progress, write that here. The more you articulate the problem the more partial credit you will receive (it is fine to leave this blank).</li>
     </ul>
+    {% endif %}
 	
     {% if page.info.rubric %}
     <h1>Assignment Rubric</h1>
