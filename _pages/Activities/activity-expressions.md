@@ -177,6 +177,9 @@ info:
       title: Variables and Assignments Practice Coding Problems
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/to
       title: Review of Variables and Assignments
+  reflective_prompts:
+    - "What is the binary representation of the integer value <code>48</code>?"
+    - "What is the decimal representation of the binary value <code>01001</code>?"
 tags:
   - datatypes
   - expressions
