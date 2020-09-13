@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types 
 excerpt: "CS173: Intro to Computer Science - Introduction to Primitive Data Types and Expressions"
 
 info:
-  next: "./Exercise"
+  next: "./Module2"
   video: "https://www.youtube.com/embed/mzpZkjZN83k"
   
 ---
