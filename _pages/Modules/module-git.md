@@ -5,7 +5,7 @@ excerpt: "CS173: Intro to Computer Science - Cloning an Assignment with Github C
 title: "CS173: Intro to Computer Science - Cloning an Assignment with Github Classroom"
 
 info:
-  next: "../GithubClassroom/Module"
+  next: "./Module2"
   video: "https://www.youtube.com/embed/zl7fgkRjG_c"
   
 ---
