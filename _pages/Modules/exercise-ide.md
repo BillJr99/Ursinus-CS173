@@ -20,6 +20,10 @@ processor:
     var pos = feedbackString.split(" ");
   correctcheck: |
     pos.length > 1 && pos[0].toLowerCase() === "hello"
+  incorrectchecks:
+    - incorrectcheck: |
+        pos.length == 1
+      feedback: "Try again: try printing a space in between the word Hello and your name!"       
  
 files:
   - filename: "MyFirstProgram.java"
