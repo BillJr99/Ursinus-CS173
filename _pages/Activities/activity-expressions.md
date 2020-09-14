@@ -155,7 +155,7 @@ info:
         </div>    
       title: Manipulating Values with Operators
       questions:
-        - How are the values of idiv (the result of the integer division operation) and fdiv (the result of the floating point division operation) different and why?
+        - "How are the values of <code>idiv</code> (the result of the integer division operation) and <code>fdiv</code> (the result of the floating point division operation) different and why?"
         - What would happen if you attempt to divide by 0?  Feel free to try this in the code window below!
         - Notice the result of dividing <code>x / 2</code> if <code>x</code> is an <code>int</code>?  How about if <code>x</code> is a <code>double</code> or a <code>float</code>?
         - Suppose you had to divide two integers, but you want the result to be stored as a floating point value.  How could you ensure that this happens (there are several possibilities!)?
