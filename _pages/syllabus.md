@@ -280,9 +280,12 @@ schedule:
     points: 100
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
-    points: 3	  
+    points: 3
 - week: "1"
   date: "2"
+  title: "Expressions and Variables"  
+- week: "1"
+  date: "3"
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"
   readings:
@@ -296,8 +299,8 @@ schedule:
   - dtitle: "Exercise: Epoch Time Overflow"
     dlink: "Modules/EpochTime/Exercise"
     points: 3  
-- week: "1"
-  date: "3"
+- week: "2"
+  date: "0"
   title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
@@ -306,18 +309,7 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "./Modules/Expressions/Exercise2"    
-    points: 3  
-- week: "2"
-  date: "0"   
-  title: "Conditionals"   
-  link: "Activities/Conditionals"
-  deliverables:  
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "Labs/Kepler"    
-    points: 100  
-  - dtitle: "Exercise: Boolean Expressions"
-    dlink: "./Modules/Boolean/Exercise"
-    points: 3
+    points: 3 
 - week: "2"
   date: "1"
   title: "Lab: Debugging"  
@@ -327,10 +319,18 @@ schedule:
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
-    points: 100
+    points: 100    
 - week: "2"
-  date: "2"
-  title: "Conditionals"  
+  date: "2"   
+  title: "Conditionals"   
+  link: "Activities/Conditionals"
+  deliverables:  
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "Labs/Kepler"    
+    points: 100  
+  - dtitle: "Exercise: Boolean Expressions"
+    dlink: "./Modules/Boolean/Exercise"
+    points: 3
 - week: "2"
   date: "3"
   title: "Conditionals"   
