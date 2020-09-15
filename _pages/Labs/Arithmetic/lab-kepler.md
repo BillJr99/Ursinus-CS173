@@ -56,7 +56,7 @@ final double VARIABLE_NAME = 123.456
 * <span>\\(G = 6.6743015 \times 10^{-11} \frac{meters^{3}}{kg \times sec^{2}}\\)</span> 
     * This is represented in Java as 6.6743015e-11
 
-The following table provides your inputs for the planetary mass and semi-major axis length, as well as an approximate length of the year on that planet in Earth Days (to help you check your output).
+The following table provides your inputs for the planetary mass and semi-major axis length, as well as an approximate length of the year on that planet in Earth Days (to help you check your output).  These are approximations, so your values might be a little different because we're rounding some values, but this should give you a rough idea of the values you'll get.
 
 | Planet | m: Mass (kg) | a: Semi-major Axis Length (AU) | Approximate Length of Year (Earth Days) |
 |-|-|-|-|
