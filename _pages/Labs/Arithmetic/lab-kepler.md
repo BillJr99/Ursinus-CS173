@@ -103,7 +103,7 @@ Similarly, when converting the resulting orbital period from seconds to years, I
 ## What To Do
 
 * First, begin by declaring a `final double` variable `M`, and setting it to the value `1.989e30`.
-* Next, declare another `final double` variable `G`, with `a` value `6.6743015e-11`.
+* Next, declare another `final double` variable `G`, with the value `6.6743015e-11`.
 * Then, using the table above, declare `double` variables `m` and `a`, equal to the values in the table for one of the planets.  If you choose Venus, I suggest naming the variables `venusM` and `venusA`, so that you will know which ones are which later when computing the rest of the planetary orbits!
 * Multiply `a` by `149597870700L` to convert it from AU to meters.
 * Implement Kepler's Formula to compute `T`, the orbital period in seconds.  I recommend computing each part of the formula as a separate variable to make the code easier to write (and to read!).  For example, you might create a variable whose value is `M + m` first, and then multiply that by `G`.  Another variable could hold the numerator, which you might set to `4` before multiplying itself by Math.PI squared, and multiply that again by a "cubed."  Then you can divide those two variables as a new variable, and take the square root of that resulting variable.  There are many correct ways of doing this, though, so you don't have to follow this plan exactly!  This is just one approach that you are welcome to use.
