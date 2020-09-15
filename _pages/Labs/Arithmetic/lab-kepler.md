@@ -70,10 +70,10 @@ The following table provides your inputs for the planetary mass and semi-major a
 | Neptune | 1.024e26 | 30.0690 | 60190.03 |
 | Pluto  (a dwarf planet) | 1.309e22 | 39.4821 | 90600 |
 
-Astronomical Units (AU) is a unit of measure approximately defined as the distance from the earth to the sun.  However, notice that the units in the constants above use meters.  In order to use the axis length value in your formula, you will need to convert the length from AU to meters.  One AU is approximately 149,597,870,700 meters (represented in Java as `149597870700`, without the commas), so you can multiply the `AU` value in the table above by this value, as follows:
+Astronomical Units (AU) is a unit of measure approximately defined as the distance from the earth to the sun.  However, notice that the units in the constants above use meters.  In order to use the axis length value in your formula, you will need to convert the length from AU to meters.  One AU is approximately 149,597,870,700 meters (represented in Java as `149597870700L`, without the commas, and with an `L` to indicate that it is a "long" value, larger than a standard `int`), so you can multiply the `AU` value in the table above by this value, as follows:
 
 ```java
-final int metersPerAU = 149597870700;
+final int metersPerAU = 149597870700L;
 int AU = 0.38710;
 int meters = AU * metersPerAU;
 ```
