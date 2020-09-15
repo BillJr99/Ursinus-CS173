@@ -74,8 +74,8 @@ Astronomical Units (AU) is a unit of measure approximately defined as the distan
 
 ```java
 final long metersPerAU = 149597870700L;
-int AU = 0.38710;
-long meters = AU * metersPerAU;
+int mercuryAU = 0.38710;
+long mercuryMeters = mercuryAU * metersPerAU;
 ```
 
 Similarly, the formula yields the orbital period in seconds.  In order to output the orbital period in years, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth year.  
