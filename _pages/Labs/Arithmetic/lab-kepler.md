@@ -73,9 +73,9 @@ The following table provides your inputs for the planetary mass and semi-major a
 Astronomical Units (AU) is a unit of measure approximately defined as the distance from the earth to the sun.  However, notice that the units in the constants above use meters.  In order to use the axis length value in your formula, you will need to convert the length from AU to meters.  One AU is approximately 149,597,870,700 meters (represented in Java as `149597870700L`, without the commas, and with an `L` to indicate that it is a "long" value, larger than a standard `int`), so you can multiply the `AU` value in the table above by this value, as follows:
 
 ```java
-final int metersPerAU = 149597870700L;
+final long metersPerAU = 149597870700L;
 int AU = 0.38710;
-int meters = AU * metersPerAU;
+long meters = AU * metersPerAU;
 ```
 
 Similarly, the formula yields the orbital period in seconds.  In order to output the orbital period in years, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth year.  
