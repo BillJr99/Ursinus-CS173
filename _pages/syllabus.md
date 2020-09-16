@@ -294,11 +294,7 @@ schedule:
   - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
   - rtitle: "Ch. 2.3, 2.5"
-    rlink: false  
-  deliverables:
-  - dtitle: "Exercise: Epoch Time Overflow"
-    dlink: "Modules/EpochTime/Exercise"
-    points: 3  
+    rlink: false   
 - week: "2"
   date: "0"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -320,6 +316,9 @@ schedule:
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
     points: 100    
+  - dtitle: "Exercise: Epoch Time Overflow"
+    dlink: "Modules/EpochTime/Exercise"
+    points: 3     
 - week: "2"
   date: "2"   
   title: "Conditionals"   
