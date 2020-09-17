@@ -31,6 +31,8 @@ info:
         - What do you think the <code>//</code> characters represent?
     - title: Primitive Data Types
       model: |
+        <a title="Hellbus / Public domain" href="https://commons.wikimedia.org/wiki/File:Odometer_rollover.jpg"><img width="512" alt="Odometer rollover" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Odometer_rollover.jpg"></a>
+        <br>      
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">
             <div style="display: table-cell; padding:5px; width:33%; background-color: black; color: white;">
@@ -101,6 +103,8 @@ info:
         </div>
       questions:
         - What is the data type of the value <code>&quot;Hello World!&quot;</code>?
+        - Observe the odometer above.  What is the place value of each of the digits in a decimal system?  How would this odometer count if the only digits it could display were 1 and 0?  What would each place value be then?
+        - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?        
         - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
         - How might a computer represent a True/False boolean?
         - How might a computer represent the letter <code>&apos;A&apos;</code> or the word <code>&quot;Hi!&quot;</code>?
