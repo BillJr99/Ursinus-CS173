@@ -53,6 +53,8 @@ info:
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        import java.util.Scanner;
+        
         public class Main {
             /* Print a greeting to a friend
                @param name: the name of the friend
