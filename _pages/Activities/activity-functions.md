@@ -36,7 +36,7 @@ info:
                 double a = circleArea(r);
                 
                 System.out.print("The area of the circle is: ");
-                System.out.println(r);
+                System.out.println(a);
             }
         }
         ]]></script>     
