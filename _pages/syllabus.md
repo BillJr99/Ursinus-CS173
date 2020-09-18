@@ -20,7 +20,6 @@ info:
   course_end_date: "2020/12/15"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
-  tutor: "https://ursinus.co1.qualtrics.com/jfe/form/SV_a3RiafTYa3m7KN7"
   zoom:
   - section:
       zoomlink: "https://ursinus-edu.zoom.us/j/91450716052"
