@@ -228,6 +228,11 @@ boilerplate:
     <br>
     {% endif %}
     
+    {% if page.info.tutor %}
+    <li><strong>Math Help Room Tutoring Link:</strong> <a href="{{page.info.tutor}}">Tutor Sign Up Link</a></li>
+    <br>
+    {% endif %}    
+    
     {% if page.info.ical %}
     <li><strong>Course Calendar:</strong> <a href="{{ page.info.ical }}">Import the course calendar into your favorite calendar app with this link!</a></li><br>
     {% endif %}
