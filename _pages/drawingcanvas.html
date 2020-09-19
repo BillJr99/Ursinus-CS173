@@ -157,8 +157,8 @@ function fillgrid(e) {
     var y = e.offsetY || e.layerY - canvas.offsetTop;
     
     // What grid rectangle are we in?
-    var leftx = Math.floor(x * 1.0 / (gridwidth * subcols)) * (gridwidth * subcols);
-    var topy = Math.floor(y * 1.0 / (gridheight * subrows)) * (gridheight * subrows);
+    var leftx = Math.floor(x * 1.0 / (gridwidth / subcols)) * (gridwidth / subcols);
+    var topy = Math.floor(y * 1.0 / (gridheight / subrows)) * (gridheight / subrows);
     
     ctx.fillStyle = colorpicker.value;
     
