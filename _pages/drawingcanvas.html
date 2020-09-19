@@ -89,8 +89,14 @@ var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ylabels = "123456789";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
-var gridwidth = 160;
-var gridheight = 200;
+var numcols = 8;
+var numrows = 8;
+var gridwidth = 800 / numcols;
+var gridheight = 600 / numrows;
+
+// subcols and subrows provide subsquares within each grid element for the individual fill-ins
+var subcols = 5;
+var subrows = 3;
 
 function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
@@ -107,14 +113,14 @@ gridListeners();
 function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.strokeStyle = "black";
     
-    for (var x = 0; x <= bwidth; x += rwidth) {
+    for (var x = 0; x <= bwidth; x += rwidth / subcols) {
         ctx.moveTo(x, 0);
-        ctx.lineTo(x, bheight);
+        ctx.lineTo(x, bheight / subrows);
     }
 
-    for (var y = 0; y <= bheight; y += rheight) {
+    for (var y = 0; y <= bheight; y += rheight / subrows) {
         ctx.moveTo(0, y);
-        ctx.lineTo(bwidth, y);
+        ctx.lineTo(bwidth / subcols, y);
     }
     
     ctx.font = "18px Arial";
