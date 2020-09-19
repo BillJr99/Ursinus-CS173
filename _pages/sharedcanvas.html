@@ -21,7 +21,7 @@ excerpt: "Shared Canvas"
   
 </script>
 
-<canvas id="drawCanvas" width="800" height="600"></canvas>
+<canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
@@ -57,7 +57,9 @@ function draw(e) {
   var y = e.offsetY || e.layerY - canvas.offsetTop;
 
   plots.push({x: x, y: y});
-
+  
+  console.log(plots)
+  
   drawOnCanvas(plots);
 }
 
