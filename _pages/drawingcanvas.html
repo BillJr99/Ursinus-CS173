@@ -129,7 +129,7 @@ function doFayeSubscribe() {
 }
 
 function doFayeSend(message) {
-    client.publish('/messages', {
+    fayeclient.publish('/messages', {
       text: message
     });     
 }
