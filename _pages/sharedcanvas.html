@@ -39,7 +39,7 @@ var isActive = false;
 // array to collect coordinates
 var plots = [];
 
-function drawOnCanvas(color, plots) {
+function drawOnCanvas(color) {
   console.log(plots[0].x);
   console.log(plots[0].y);
   
@@ -61,7 +61,7 @@ function draw(e) {
 
   plots.push({x: x, y: y});
   
-  drawOnCanvas(plots);
+  drawOnCanvas();
 }
 
 function startDraw(e) {
