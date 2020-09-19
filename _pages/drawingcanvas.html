@@ -8,11 +8,15 @@ excerpt: "Drawing Canvas"
 
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
 
+Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
+<br>
+
 <canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
 var ctx = canvas.getContext('2d');
+var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
@@ -29,6 +33,12 @@ var plots = [];
 function drawOnCanvas(color) {
   console.log(plots[0].x);
   console.log(plots[0].y);
+  
+  color = colorpicker.select();
+  
+  console.log(color);
+  
+  ctx.fillstyle = color;
   
   ctx.beginPath();
   ctx.moveTo(plots[0].x, plots[0].y);
