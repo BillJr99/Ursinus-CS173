@@ -18,13 +18,16 @@ var canvas = document.getElementById('drawCanvas');
 var ctx = canvas.getContext('2d');
 var colorpicker = document.getElementById('colorpicker');
 
+var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var ylabels = "123456789";
+
 ctx.lineWidth = '3';
 
 canvas.addEventListener('mousedown', startDraw, false);
 canvas.addEventListener('mousemove', draw, false);
 canvas.addEventListener('mouseup', endDraw, false);
 
-makeGrid(canvas.width, canvas.height, 100, 100);
+makeGrid(canvas.width, canvas.height, 100, 75);
 
 // create a flag
 var isActive = false;
@@ -44,6 +47,14 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     for (var y = 0; y <= bheight; y += rheight) {
         ctx.moveTo(0, y);
         ctx.lineTo(bwidth, y);
+    }
+    
+    ctx.font = "18px Arial";
+    for(var x = 0; x <= bwidth; x += rwidth) {
+        for(var y = 0; y <= bheight; y += rheight) {
+            label = "A1";
+            ctx.fillText(label, x + (bwidth / 2.0), y + (bheight / 2.0));
+        }
     }
 
     ctx.stroke();
