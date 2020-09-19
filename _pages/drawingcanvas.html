@@ -6,6 +6,11 @@ excerpt: "Drawing Canvas"
     
 ---
 
+<!-- Run corresponding repl.it -->
+<script type="text/javascript" 
+        src="https://FayePubSub.billjr99.repl.co/faye/client.js">
+        </script>
+        
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
 
 Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
@@ -102,11 +107,41 @@ function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
 }
 
+// Pub-sub
+var fayeclient = new Faye.Client('https://FayePubSub.billjr99.repl.co');
+
+function doFayeSubscribe() {
+  fayeclient.subscribe('/messages', function(message) {
+    console.log("Message: " + message.text);
+    
+    var msg = message.text;
+    var msgparts = msg.split(',');
+    
+    var leftx = msgparts[0];
+    var topy = msgparts[1];
+    var rectwidth = msgparts[2];
+    var rectheight = msgparts[3];
+    var rectcolor = msgparts[4];
+    
+    // call drawrect method
+    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
+  });    
+}
+
+function doFayeSend(message) {
+    client.publish('/messages', {
+      text: message
+    });     
+}
+
 // call this to initialize the grid; comment to disable
 makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
 
 // call this to add click listener to fill in rectangle; comment to disable
 gridListeners();
+
+// call this to set up pub-sub; comment to disable
+doFayeSubscribe();
 
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
@@ -184,7 +219,10 @@ function fillgrid(e) {
     var leftx = Math.floor(x * 1.0 / (gridwidth / subcols)) * (gridwidth / subcols);
     var topy = Math.floor(y * 1.0 / (gridheight / subrows)) * (gridheight / subrows);
     
-    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value)
+    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value);
+    
+    // Send message to faye
+    doFayeSend(leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorpicker.value);
 }
 // ***** END OPTION: GRID SUPPORT *****
 
