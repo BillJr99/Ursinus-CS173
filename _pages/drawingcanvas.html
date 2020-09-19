@@ -34,8 +34,6 @@ var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
-makeColorPalettes();
-
 function colorpaletteclicked(e) {
     var id = e.target.id;
     
@@ -49,16 +47,6 @@ function colorpaletteclicked(e) {
     
     //console.log(id);
     //console.log(chosencolor);
-}
-
-function makeColorPalettes() {
-    for(var i = 1; i <= palettes.length; i++) {
-        var colorcanvas = document.getElementById('canvascolor' + i);
-        makeColorPalette(colorcanvas, palettes[i-1], i);
-        
-        // Add a listener here that, when clicked, sets the main color picker color value
-        colorcanvas.addEventListener('mousedown', colorpaletteclicked, false);        
-    }
 }
 
 function makeColorPalette(colorcanvas, fillcolor, label) {
@@ -78,8 +66,19 @@ function makeColorPalette(colorcanvas, fillcolor, label) {
         colorctx.strokeStyle = "black"; 
     }
     colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
-
 }
+
+function makeColorPalettes() {
+    for(var i = 1; i <= palettes.length; i++) {
+        var colorcanvas = document.getElementById('canvascolor' + i);
+        makeColorPalette(colorcanvas, palettes[i-1], i);
+        
+        // Add a listener here that, when clicked, sets the main color picker color value
+        colorcanvas.addEventListener('mousedown', colorpaletteclicked, false);        
+    }
+}
+
+makeColorPalettes();
 
 // ***** OPTION: GRID SUPPORT *****
 // for labeling the grid
