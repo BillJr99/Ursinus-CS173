@@ -14,7 +14,7 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
 <br><br>
-<table>
+<table cellpadding="0" cellspacing="0">
 <tr>
 <td>
 <canvas id="canvascolor1" width="66" height="100" style="border:1px solid #000000;"></canvas>
@@ -96,6 +96,9 @@ function colorpaletteclicked(e) {
     chosencolor = palettes[id - 1];
     
     colorpicker.value = chosencolor;
+    
+    console.log(id);
+    console.log(chosencolor);
 }
 
 function makeColorPalettes() {
