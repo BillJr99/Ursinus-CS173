@@ -151,7 +151,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         for(var y = 0; y <= bheight; y += rheight) {
             label = xlabels.charAt(xi % xlabels.length) + ylabels.charAt(yi % ylabels.length);
-            ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 12.0), y + (rheight / 2.0) - (rheight / 10.0));
+            ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0) - (rheight / 15.0));
             
             yi = yi + 1;
         }
