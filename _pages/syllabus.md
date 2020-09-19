@@ -129,7 +129,7 @@ instructors:
     starttime: "10:00 AM"
     endtime: "10:50 AM"
     location: "Virtual Office Hours on Microsoft Teams"
-  - day: "T"
+  - day: "W"
     starttime: "7:00 PM"
     endtime: "8:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"     
