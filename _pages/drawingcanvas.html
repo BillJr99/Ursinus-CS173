@@ -137,6 +137,10 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
 }
 
 function fillgrid(e) {
+    if(e.button != 0) { // left click only
+        return;
+    }
+    
     // cross-browser canvas coordinates
     var x = e.offsetX || e.layerX - canvas.offsetLeft;
     var y = e.offsetY || e.layerY - canvas.offsetTop;
@@ -200,6 +204,10 @@ function draw(e) {
 }
 
 function startDraw(e) {
+  if(e.button != 0) { // left click only
+      return;
+  }
+    
   isActive = true;
 }
 
