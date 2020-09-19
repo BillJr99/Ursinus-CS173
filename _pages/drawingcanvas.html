@@ -1,25 +1,12 @@
 ---
 layout: default
-permalink: /SharedCanvas
-title: "Shared Canvas"
-excerpt: "Shared Canvas"
+permalink: /DrawingCanvas
+title: "Drawing Canvas"
+excerpt: "Drawing Canvas"
     
 ---
 
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
-
-<!-- Include the PubNub Library -->
-<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
- 
-<!-- Instantiate PubNub -->
-<script type="text/javascript">
- 
-  var PUBNUB_demo = PUBNUB.init({
-    publish_key: 'Unique Publish Key Here',
-    subscribe_key: 'Unique Subscribe Key Here'
-  });
-  
-</script>
 
 <canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
