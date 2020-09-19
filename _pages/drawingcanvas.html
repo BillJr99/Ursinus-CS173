@@ -18,22 +18,25 @@ var canvas = document.getElementById('drawCanvas');
 var ctx = canvas.getContext('2d');
 var colorpicker = document.getElementById('colorpicker');
 
+ctx.lineWidth = '3';
+
+// ***** OPTION: GRID SUPPORT *****
+// for labeling the grid
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ylabels = "123456789";
 
-ctx.lineWidth = '3';
+var gridwidth = 100;
+var gridheight = 75;
 
-canvas.addEventListener('mousedown', startDraw, false);
-canvas.addEventListener('mousemove', draw, false);
-canvas.addEventListener('mouseup', endDraw, false);
+function gridListeners() {
+    canvas.addEventListener('mousedown', fillgrid, false);
+}
 
-makeGrid(canvas.width, canvas.height, 100, 75);
+// call this to initialize the grid
+makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
 
-// create a flag
-var isActive = false;
-
-// array to collect coordinates
-var plots = [];
+// call this to add click listener to fill in rectangle
+gridListeners();
 
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
@@ -68,6 +71,38 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
 
     ctx.stroke();
 }
+
+function fillgrid(e) {
+    // cross-browser canvas coordinates
+    var x = e.offsetX || e.layerX - canvas.offsetLeft;
+    var y = e.offsetY || e.layerY - canvas.offsetTop;
+    
+    // What grid rectangle are we in?
+    var leftx = Math.floor(x * 1.0 / gridwidth) * gridwidth;
+    var topy = Math.floor(y * 1.0 / gridheight) * gridheight;
+    
+    ctx.fillStyle = color;
+    
+    // Fill in that rectangle
+    context.fillRect(leftx,topy,gridwidth,gridheight);
+}
+// ***** END OPTION: GRID SUPPORT *****
+
+// ***** OPTION: FREE DRAW SUPPORT *****
+// create a flag for free drawing (if pen is on or off)
+var isActive = false;
+
+// array to collect coordinates for free drawing
+var plots = [];
+
+function freeDrawListeners() {
+    canvas.addEventListener('mousedown', startDraw, false);
+    canvas.addEventListener('mousemove', draw, false);
+    canvas.addEventListener('mouseup', endDraw, false);
+}
+
+// call this to add free draw listeners to attach the pen to the mouse
+// freeDrawListeners();
 
 function drawOnCanvas() {
   //console.log(plots[0].x);
@@ -110,4 +145,5 @@ function endDraw(e) {
   // empty the array
   plots = [];
 }
+// ***** END OPTION: FREE DRAW SUPPORT *****
 </script>
