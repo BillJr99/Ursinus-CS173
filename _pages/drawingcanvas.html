@@ -81,7 +81,7 @@ function fillgrid(e) {
     var leftx = Math.floor(x * 1.0 / gridwidth) * gridwidth;
     var topy = Math.floor(y * 1.0 / gridheight) * gridheight;
     
-    ctx.fillStyle = color;
+    ctx.fillStyle = colorpicker.value;
     
     // Fill in that rectangle
     context.fillRect(leftx,topy,gridwidth,gridheight);
