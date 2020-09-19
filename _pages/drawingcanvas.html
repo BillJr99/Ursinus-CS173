@@ -53,7 +53,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     for(var x = 0; x <= bwidth; x += rwidth) {
         for(var y = 0; y <= bheight; y += rheight) {
             label = "A1";
-            ctx.fillText(label, x + (bwidth / 2.0), y + (bheight / 2.0));
+            ctx.fillText(label, x + (rwidth / 2.0), y + (rheight / 2.0));
         }
     }
 
