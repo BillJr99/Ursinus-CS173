@@ -123,6 +123,8 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         ctx.lineTo(bwidth, y);
     }
     
+    ctx.stroke();
+    
     ctx.font = "18px Arial";
     ctx.strokeStyle = "red";
     ctx.strokeStyle = "red";
@@ -140,8 +142,6 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         xi = xi + 1;
     }
-
-    ctx.stroke();
     
     ctx.strokeStyle = "black";
     ctx.strokeStyle = "black";    
