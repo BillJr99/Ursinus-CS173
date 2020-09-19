@@ -24,6 +24,15 @@ excerpt: "Shared Canvas"
 <canvas id="drawCanvas" width="800" height="600"></canvas>
 
 <script type="text/javascript">
+var canvas = document.getElementById('drawCanvas');
+var ctx = canvas.getContext('2d');
+
+ctx.lineWidth = '3';
+
+canvas.addEventListener('mousedown', startDraw, false);
+canvas.addEventListener('mousemove', draw, false);
+canvas.addEventListener('mouseup', endDraw, false);
+
 // create a flag
 var isActive = false;
 
@@ -62,13 +71,4 @@ function endDraw(e) {
   // empty the array
   plots = [];
 }
-
-var canvas = document.getElementById('drawCanvas');
-var ctx = canvas.getContext('2d');
-
-ctx.lineWidth = '3';
-
-canvas.addEventListener('mousedown', startDraw, false);
-canvas.addEventListener('mousemove', draw, false);
-canvas.addEventListener('mouseup', endDraw, false);
 </script>
