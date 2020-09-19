@@ -125,7 +125,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     }
 
     for (var y = 0; y <= bheight; y += rheight / subrows) {
-        if(y % rwheight == 0) {
+        if(y % rheight == 0) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
