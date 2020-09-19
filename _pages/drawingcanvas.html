@@ -115,15 +115,17 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     
     for (var x = 0; x <= bwidth; x += rwidth / subcols) {
         ctx.moveTo(x, 0);
-        ctx.lineTo(x, bheight / subrows);
+        ctx.lineTo(x, bheight);
     }
 
     for (var y = 0; y <= bheight; y += rheight / subrows) {
         ctx.moveTo(0, y);
-        ctx.lineTo(bwidth / subcols, y);
+        ctx.lineTo(bwidth, y);
     }
     
     ctx.font = "18px Arial";
+    ctx.strokeStyle = "red";
+    ctx.strokeStyle = "red";
     var xi = 0;
     var yi = 0;
     for(var x = 0; x <= bwidth; x += rwidth) {
@@ -140,6 +142,9 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     }
 
     ctx.stroke();
+    
+    ctx.strokeStyle = "black";
+    ctx.strokeStyle = "black";    
 }
 
 function fillgrid(e) {
@@ -152,8 +157,8 @@ function fillgrid(e) {
     var y = e.offsetY || e.layerY - canvas.offsetTop;
     
     // What grid rectangle are we in?
-    var leftx = Math.floor(x * 1.0 / gridwidth) * gridwidth;
-    var topy = Math.floor(y * 1.0 / gridheight) * gridheight;
+    var leftx = Math.floor(x * 1.0 / (gridwidth * subcols)) * (gridwidth * subcols);
+    var topy = Math.floor(y * 1.0 / (gridheight * subrows)) * (gridheight * subrows);
     
     ctx.fillStyle = colorpicker.value;
     
