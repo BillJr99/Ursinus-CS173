@@ -164,6 +164,13 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.lineWidth = '3';
 }
 
+function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
+    ctx.fillStyle = rectcolor;
+    
+    // Fill in that rectangle
+    ctx.fillRect(leftx,topy,rectwidth,rectheight);
+}
+
 function fillgrid(e) {
     if(e.button != 0) { // left click only
         return;
@@ -177,10 +184,7 @@ function fillgrid(e) {
     var leftx = Math.floor(x * 1.0 / (gridwidth / subcols)) * (gridwidth / subcols);
     var topy = Math.floor(y * 1.0 / (gridheight / subrows)) * (gridheight / subrows);
     
-    ctx.fillStyle = colorpicker.value;
-    
-    // Fill in that rectangle
-    ctx.fillRect(leftx,topy,gridwidth / subcols,gridheight / subrows);
+    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value)
 }
 // ***** END OPTION: GRID SUPPORT *****
 
