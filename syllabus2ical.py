@@ -215,10 +215,12 @@ for item in postdict['schedule']:
         title = "N/A"
     if 'link' in item:
         link = item['link']
+        
+        if not link.startswith("http"): 
+            link = rchop(homepage, '/') + '/' + stripnobool(link)
     else:
         link = ""
      
-    
     startd = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU)
     description = stripnobool(link)
     
@@ -258,7 +260,6 @@ for item in postdict['schedule']:
         
             # Write the Assignment as an all-day event
             outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")        
-        
     # Write the lecture as an all-day event:
     outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(uuid.uuid4()) + "\r\nDTSTAMP:" + startd + "T000000Z" + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": Class Meeting\r\nLOCATION:\r\nDESCRIPTION:" + stripnobool(description) + "\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
     
