@@ -34,6 +34,9 @@ var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
+// palettes for pre made color choosers
+var palettes = ['#f39a4f', '#eb6092', '#4ab6d9', '#abcc51', '#f9c847', '#75be6f', '#b6d051', '#bcddc7', '#a7cbeb', '#86b8e6', '#000000', '#ffffff' ];
+
 function colorpaletteclicked(e) {
     var id = e.target.id;
     
@@ -84,9 +87,6 @@ makeColorPalettes();
 // for labeling the grid
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ylabels = "123456789";
-
-// palettes for pre made color choosers
-var palettes = ['#f39a4f', '#eb6092', '#4ab6d9', '#abcc51', '#f9c847', '#75be6f', '#b6d051', '#bcddc7', '#a7cbeb', '#86b8e6', '#000000', '#ffffff' ];
 
 // canvas width is 800x600 by default; use these to set the number of elements
 var gridwidth = 266;
