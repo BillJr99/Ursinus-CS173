@@ -97,8 +97,8 @@ function colorpaletteclicked(e) {
     
     colorpicker.value = chosencolor;
     
-    console.log(id);
-    console.log(chosencolor);
+    //console.log(id);
+    //console.log(chosencolor);
 }
 
 function makeColorPalettes() {
@@ -119,7 +119,9 @@ function makeColorPalette(colorcanvas, fillcolor, label) {
     colorctx.fillRect(0, 0, colorcanvas.width, colorcanvas.height);
     
     // Label the color with a number
-    colorctx.font = "18px Arial";    
+    colorctx.font = "18px Arial";
+    colorctx.fillStyle = "black";    
+    colorctx.strokeStyle = "black"; 
     colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
 }
 
