@@ -122,6 +122,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         ctx.moveTo(x, 0);
         ctx.lineTo(x, bheight);
+        ctx.stroke();
     }
 
     for (var y = 0; y <= bheight; y += rheight / subrows) {
@@ -133,13 +134,14 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         ctx.moveTo(0, y);
         ctx.lineTo(bwidth, y);
+        ctx.stroke();
     }
-    
-    ctx.stroke();
     
     ctx.font = "18px Arial";
     ctx.strokeStyle = "red";
     ctx.fillStyle = "red";
+    ctx.lineWidth = '3';
+    
     var xi = 0;
     var yi = 0;
     for(var x = 0; x <= bwidth; x += rwidth) {
@@ -154,6 +156,8 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         xi = xi + 1;
     }
+    
+    ctx.stroke();
     
     ctx.strokeStyle = "black";
     ctx.fillStyle = "black";    
