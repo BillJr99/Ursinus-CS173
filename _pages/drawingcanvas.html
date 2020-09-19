@@ -41,9 +41,9 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         ctx.lineTo(x, bheight);
     }
 
-    for (var x = 0; x <= bheight; x += rheight) {
-        ctx.moveTo(0, x);
-        ctx.lineTo(bwidth, x);
+    for (var y = 0; y <= bheight; y += rheight) {
+        ctx.moveTo(0, y);
+        ctx.lineTo(bwidth, y);
     }
 
     ctx.stroke();
