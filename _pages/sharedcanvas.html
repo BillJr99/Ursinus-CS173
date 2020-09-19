@@ -40,6 +40,9 @@ var isActive = false;
 var plots = [];
 
 function drawOnCanvas(color, plots) {
+  console.log(plots[0].x);
+  console.log(plots[0].y);
+  
   ctx.beginPath();
   ctx.moveTo(plots[0].x, plots[0].y);
 
@@ -57,8 +60,6 @@ function draw(e) {
   var y = e.offsetY || e.layerY - canvas.offsetTop;
 
   plots.push({x: x, y: y});
-  
-  console.log(plots)
   
   drawOnCanvas(plots);
 }
