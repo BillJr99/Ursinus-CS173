@@ -163,7 +163,7 @@ function fillgrid(e) {
     ctx.fillStyle = colorpicker.value;
     
     // Fill in that rectangle
-    ctx.fillRect(leftx,topy,gridwidth,gridheight);
+    ctx.fillRect(leftx,topy,gridwidth / subcols,gridheight / subrows);
 }
 // ***** END OPTION: GRID SUPPORT *****
 
