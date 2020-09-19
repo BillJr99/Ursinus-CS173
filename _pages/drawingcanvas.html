@@ -120,8 +120,13 @@ function makeColorPalette(colorcanvas, fillcolor, label) {
     
     // Label the color with a number
     colorctx.font = "18px Arial";
-    colorctx.fillStyle = "black";    
-    colorctx.strokeStyle = "black"; 
+    if(fillcolor == '#000000') {
+        colorctx.fillStyle = "white";    
+        colorctx.strokeStyle = "white";         
+    } else {
+        colorctx.fillStyle = "black";    
+        colorctx.strokeStyle = "black"; 
+    }
     colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
 }
 
