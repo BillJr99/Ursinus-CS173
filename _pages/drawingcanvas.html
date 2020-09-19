@@ -13,6 +13,48 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 
 <canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
 
+<br><br>
+<table>
+<tr>
+<td>
+<canvas id="canvascolor1" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor2" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor3" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor4" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor5" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor6" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor7" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor8" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor9" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor10" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor11" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+<td>
+<canvas id="canvascolor12" width="66" height="100" style="border:1px solid #000000;"></canvas>
+</td>
+</tr>
+</table>
+
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
 var ctx = canvas.getContext('2d');
@@ -24,6 +66,9 @@ ctx.lineWidth = '3';
 // for labeling the grid
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ylabels = "123456789";
+
+// palettes for pre made color choosers
+palettes = ['#f39a4f', '#eb6092', '#4ab6d9', '#abcc51', '#f9c847', '#75be6f', '#b6d051', '#bcddc7', '#a7cbeb', '#86b8e6', '#000000', '#ffffff' ];
 
 var gridwidth = 100;
 var gridheight = 75;
@@ -37,6 +82,37 @@ makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
 
 // call this to add click listener to fill in rectangle
 gridListeners();
+
+// call this to initalize the color choosers
+makeColorPalettes();
+
+function colorpaletteclicked(e) {
+    var id = e.target.id;
+    
+    id = id.replace("canvascolor", "");
+    
+    id = parseInt(id);
+    
+    chosencolor = palettes[id - 1];
+    
+    colorpicker.value = chosencolor;
+}
+
+function makeColorPalettes() {
+    for(var i = 1; i <= palettes.length; i++) {
+        var colorcanvas = document.getElementById('canvascolor' + i);
+        makeColorPalette(colorcanvas, palettes[i-1]);
+        
+        // Add a listener here that, when clicked, sets the main color picker color value
+        canvas.addEventListener('mousedown', colorpaletteclicked, false);        
+    }
+}
+
+function makeColorPalette(colorcanvas, fillcolor) {
+    var colorctx = colorcanvas.getContext('2d');
+    colorctx.fillStyle = fillcolor;
+    colorctx.fillRect(0, 0, colorcanvas.width, colorcanvas.height);
+}
 
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
