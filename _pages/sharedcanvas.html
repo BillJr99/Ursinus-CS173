@@ -1,0 +1,74 @@
+---
+layout: default
+permalink: /SharedCanvas
+title: "Shared Canvas"
+excerpt: "Shared Canvas"
+    
+---
+
+<!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
+
+<!-- Include the PubNub Library -->
+<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+ 
+<!-- Instantiate PubNub -->
+<script type="text/javascript">
+ 
+  var PUBNUB_demo = PUBNUB.init({
+    publish_key: 'Unique Publish Key Here',
+    subscribe_key: 'Unique Subscribe Key Here'
+  });
+  
+</script>
+
+<canvas id="drawCanvas" width="800" height="600"></canvas>
+
+<script type="text/javascript">
+// create a flag
+var isActive = false;
+
+// array to collect coordinates
+var plots = [];
+
+function drawOnCanvas(color, plots) {
+  ctx.beginPath();
+  ctx.moveTo(plots[0].x, plots[0].y);
+
+  for(var i=1; i<plots.length; i++) {
+    ctx.lineTo(plots[i].x, plots[i].y);
+  }
+  ctx.stroke();
+}
+
+function draw(e) {
+  if(!isActive) return;
+
+  // cross-browser canvas coordinates
+  var x = e.offsetX || e.layerX - canvas.offsetLeft;
+  var y = e.offsetY || e.layerY - canvas.offsetTop;
+
+  plots.push({x: x, y: y});
+
+  drawOnCanvas(plots);
+}
+
+function startDraw(e) {
+  isActive = true;
+}
+
+function endDraw(e) {
+  isActive = false;
+
+  // empty the array
+  plots = [];
+}
+
+var canvas = document.getElementById('drawCanvas');
+var ctx = canvas.getContext('2d');
+
+ctx.lineWidth = '3';
+
+canvas.addEventListener('mousedown', startDraw, false);
+canvas.addEventListener('mousemove', draw, false);
+canvas.addEventListener('mouseup', endDraw, false);
+</script>
