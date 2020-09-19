@@ -34,28 +34,6 @@ var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
-// ***** OPTION: GRID SUPPORT *****
-// for labeling the grid
-var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var ylabels = "123456789";
-
-// palettes for pre made color choosers
-var palettes = ['#f39a4f', '#eb6092', '#4ab6d9', '#abcc51', '#f9c847', '#75be6f', '#b6d051', '#bcddc7', '#a7cbeb', '#86b8e6', '#000000', '#ffffff' ];
-
-var gridwidth = 100;
-var gridheight = 75;
-
-function gridListeners() {
-    canvas.addEventListener('mousedown', fillgrid, false);
-}
-
-// call this to initialize the grid
-makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
-
-// call this to add click listener to fill in rectangle
-gridListeners();
-
-// call this to initalize the color choosers
 makeColorPalettes();
 
 function colorpaletteclicked(e) {
@@ -100,7 +78,29 @@ function makeColorPalette(colorcanvas, fillcolor, label) {
         colorctx.strokeStyle = "black"; 
     }
     colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
+
 }
+
+// ***** OPTION: GRID SUPPORT *****
+// for labeling the grid
+var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var ylabels = "123456789";
+
+// palettes for pre made color choosers
+var palettes = ['#f39a4f', '#eb6092', '#4ab6d9', '#abcc51', '#f9c847', '#75be6f', '#b6d051', '#bcddc7', '#a7cbeb', '#86b8e6', '#000000', '#ffffff' ];
+
+var gridwidth = 100;
+var gridheight = 75;
+
+function gridListeners() {
+    canvas.addEventListener('mousedown', fillgrid, false);
+}
+
+// call this to initialize the grid; comment to disable
+makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
+
+// call this to add click listener to fill in rectangle; comment to disable
+gridListeners();
 
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
@@ -165,7 +165,7 @@ function freeDrawListeners() {
     canvas.addEventListener('mouseup', endDraw, false);
 }
 
-// call this to add free draw listeners to attach the pen to the mouse
+// call this to add free draw listeners to attach the pen to the mouse; comment to disable
 // freeDrawListeners();
 
 function drawOnCanvas() {
