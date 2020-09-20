@@ -17,11 +17,15 @@ canvascolors:
   - '#86b8e6'
   - '#000000'
   - '#ffffff'
+  - '#d3d3d3'
   
 numcols: 8
 numrows: 8
 subcols: 5
 subrows: 3
+
+dogrid: true
+dofreedraw: false
 
 fayelink: "https://FayePubSub.billjr99.repl.co"
 ---
@@ -112,6 +116,7 @@ function makeColorPalettes() {
 
 makeColorPalettes();
 
+{% if page.dogrid %}
 // ***** OPTION: GRID SUPPORT *****
 // for labeling the grid
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -249,7 +254,9 @@ function fillgrid(e) {
     doFayeSend(leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorpicker.value);
 }
 // ***** END OPTION: GRID SUPPORT *****
+{% endif %}
 
+{% if page.dofreedraw %}
 // ***** OPTION: FREE DRAW SUPPORT *****
 // create a flag for free drawing (if pen is on or off)
 var isActive = false;
@@ -264,7 +271,7 @@ function freeDrawListeners() {
 }
 
 // call this to add free draw listeners to attach the pen to the mouse; comment to disable
-// freeDrawListeners();
+freeDrawListeners();
 
 function drawOnCanvas() {
   //console.log(plots[0].x);
@@ -312,4 +319,5 @@ function endDraw(e) {
   plots = [];
 }
 // ***** END OPTION: FREE DRAW SUPPORT *****
+{% endif %}
 </script>
