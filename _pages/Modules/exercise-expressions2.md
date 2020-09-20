@@ -1,8 +1,8 @@
 ---
 layout: exercise
 permalink: /Modules/Expressions/Exercise2
-title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types and Expressions"
-excerpt: "CS173: Intro to Computer Science - Introduction to to Primitive Data Types and Expressions"
+title: "CS173: Intro to Computer Science - Introduction to Primitive Data Types and Expressions Revisited"
+excerpt: "CS173: Intro to Computer Science - Introduction to to Primitive Data Types and Expressions Revisited"
 
 info:
   points: 3
