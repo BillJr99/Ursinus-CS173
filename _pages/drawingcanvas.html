@@ -188,13 +188,17 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     var xlines = 0;
     
     for (var x = 0; x <= bwidth; x += rwidth / subcols) {
-        if(xlines % subcols == 0)
+        if(xlines == 0)
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
         }
         
         xlines = xlines + 1;
+        
+        if(xlines == subcols) {
+            xlines = 0;
+        }
         
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -205,13 +209,17 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     var ylines = 0;
     
     for (var y = 0; y <= bheight; y += rheight / subrows) {
-        if(ylines % subrows == 0) {
+        if(ylines == 0) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
         }
         
         ylines = ylines + 1;
+        
+        if(ylines == subrows) {
+            ylines = 0;
+        }
         
         ctx.beginPath();
         ctx.moveTo(0, y);
