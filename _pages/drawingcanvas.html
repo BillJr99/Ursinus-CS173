@@ -40,8 +40,8 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 
 <style>
 #canvascontainer {
- width: 1000px;
- height: 750px;
+ width: 850px;
+ height: 650px;
 }
 
 #leftcanvas {   
@@ -65,16 +65,14 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <br><br>
 
-<div class="canvascontainer">
 <canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:50 }}" height="50" style="border:0px solid #ffffff;"></canvas>
 <br>
-<div>
+<div class="canvascontainer">
 <div class="leftcanvas">
 <canvas id="yheadercanvas" width="50" height="{{ page.canvasheight }}" style="border:0px solid #ffffff;"></canvas>
 </div>
 <div class="rightcanvas">
 <canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
-</div>
 </div>
 </div>
 
