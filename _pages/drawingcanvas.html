@@ -196,14 +196,14 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
             xlines = 0;
         }
         
-        if(xlines == 0 || totalxlines == (numcols * subcols) - 1) {
+        if(xlines == 0 || totalxlines == numcols * subcols) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
         }
 
         //console.log(xlines + " " + ctx.lineWidth + " " + x);
-        console.log(totalxlines + " " + xlines + " " + ((numcols * subcols) - 1) + " " + ctx.lineWidth);
+        console.log(totalxlines + " " + xlines + " " + (numcols * subcols) + " " + ctx.lineWidth);
         
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -222,7 +222,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
             ylines = 0;
         }
     
-        if(ylines == 0 || totalylines == (numrows * subrows) - 1) {
+        if(ylines == 0 || totalylines == numrows * subrows) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
