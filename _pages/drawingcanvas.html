@@ -38,6 +38,10 @@ dofreedraw: false
 fayelink: "https://FayePubSub.billjr99.repl.co"
 ---
 
+#canvascontainer {
+ width: 1000px;
+}
+
 {% if page.fayelink %}
 <!-- Run corresponding repl.it -->
 <script type="text/javascript" 
@@ -50,7 +54,7 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <br><br>
 
-<div>
+<div class="canvascontainer">
 <canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:50 }}" height="50" style="border:0px solid #ffffff;"></canvas>
 <br>
 <div>
