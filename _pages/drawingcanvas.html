@@ -28,7 +28,7 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 
 <!-- Run corresponding repl.it -->
 <script type="text/javascript" 
-        src="{{ layout.fayelink }}/faye/client.js">
+        src="{{ page.fayelink }}/faye/client.js">
         </script>
         
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
@@ -40,8 +40,8 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 
 <br><br>
 
-{% for i in (0..layout.canvascolors.size) %}
-{% if i < layout.canvascolors.size %}
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
 <canvas id="canvascolor{{ i }}" width="64" height="100" style="border:1px solid #000000;"></canvas>
 {% if i | modulo: 12 == 0 and i > 0 %}
 <br>
@@ -58,9 +58,9 @@ ctx.lineWidth = '3';
 
 // palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
 var palettes = [
-{% for i in (0..layout.canvascolors.size) %}
-{% if i < layout.canvascolors.size %}
-"{{ layout.canvascolors[i] }}", 
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
+"{{ page.canvascolors[i] }}", 
 {% endif %}
 {% endfor %}
 ];
@@ -117,21 +117,21 @@ var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ylabels = "123456789";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
-var numcols = {{ layout.numcols }};
-var numrows = {{ layout.numrows }};
+var numcols = {{ page.numcols }};
+var numrows = {{ page.numrows }};
 var gridwidth = 800 / numcols;
 var gridheight = 600 / numrows;
 
 // subcols and subrows provide subsquares within each grid element for the individual fill-ins
-var subcols = {{ layout.subcols }};
-var subrows = {{ layout.subrows }};
+var subcols = {{ page.subcols }};
+var subrows = {{ page.subrows }};
 
 function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
 }
 
 // Pub-sub
-var fayeclient = new Faye.Client('{{ layout.fayelink }}');
+var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
 function doFayeSubscribe() {
   fayeclient.subscribe('/messages', function(message) {
