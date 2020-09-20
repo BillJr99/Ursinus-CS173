@@ -256,7 +256,7 @@ function fillgrid(e) {
     
     {% if page.fayelink %}
     // Send message to faye
-    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue);
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value);
     {% endif %}
 }
 // ***** END OPTION: GRID SUPPORT *****
