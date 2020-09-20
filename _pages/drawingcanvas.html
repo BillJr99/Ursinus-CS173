@@ -192,11 +192,11 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         xlines = xlines + 1;
         totalxlines = totalxlines + 1;
         
-        if(xlines == subcols || totalxlines == numcols * subcols) {
+        if(xlines == subcols) {
             xlines = 0;
         }
         
-        if(xlines == 0) {
+        if(xlines == 0 || totalxlines == numcols * subcols) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
@@ -217,11 +217,11 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         ylines = ylines + 1;
         totalylines = totalylines + 1;
         
-        if(ylines == subrows || totalylines == numrows * subrows) {
+        if(ylines == subrows) {
             ylines = 0;
         }
     
-        if(ylines == 0) {
+        if(ylines == 0 || totalylines == numrows * subrows) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
