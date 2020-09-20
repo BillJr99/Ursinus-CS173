@@ -186,11 +186,13 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.strokeStyle = "black";
     
     var xlines = -1;
+    var totalxlines = 0;
     
     for (var x = 0; x <= bwidth; x += rwidth / subcols) {
         xlines = xlines + 1;
+        totalxlines = totalxlines + 1;
         
-        if(xlines == subcols) {
+        if(xlines == subcols || totalxlines == numcols * subcols) {
             xlines = 0;
         }
         
@@ -209,11 +211,13 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     }
 
     var ylines = -1;
+    var totalylines = 0;
     
     for (var y = 0; y <= bheight; y += rheight / subrows) {
         ylines = ylines + 1;
+        totalylines = totalylines + 1;
         
-        if(ylines == subrows) {
+        if(ylines == subrows || totalylines == numrows * subrows) {
             ylines = 0;
         }
     
