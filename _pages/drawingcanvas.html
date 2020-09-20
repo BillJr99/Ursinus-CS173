@@ -71,11 +71,11 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 
 <canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:50 }}" height="50" style="border:0px solid #ffffff;"></canvas>
 <br>
-<div class="canvascontainer">
-<div class="yheadercanvascontainer">
+<div id="canvascontainer">
+<div id="yheadercanvascontainer">
 <canvas id="yheadercanvas" width="50" height="{{ page.canvasheight }}" style="border:0px solid #ffffff;"></canvas>
 </div>
-<div class="maincanvascontainer">
+<div id="maincanvascontainer">
 <canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
 </div>
 </div>
