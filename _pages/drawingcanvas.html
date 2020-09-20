@@ -30,10 +30,12 @@ dofreedraw: false
 fayelink: "https://FayePubSub.billjr99.repl.co"
 ---
 
+{% if page.fayelink %}
 <!-- Run corresponding repl.it -->
 <script type="text/javascript" 
         src="{{ page.fayelink }}/faye/client.js">
         </script>
+{% endif %}
         
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
 
@@ -136,12 +138,13 @@ function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
 }
 
+{% if page.fayelink %}
 // Pub-sub
 var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
 function doFayeSubscribe() {
   fayeclient.subscribe('/messages', function(message) {
-    console.log("Message: " + message.text);
+    //console.log("Message: " + message.text);
     
     var msg = message.text;
     var msgparts = msg.split(',');
@@ -157,11 +160,14 @@ function doFayeSubscribe() {
   });    
 }
 
-function doFayeSend(message) {
+function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
+    
     fayeclient.publish('/messages', {
       text: message
     });     
 }
+{% endif %}
 
 // call this to initialize the grid; comment to disable
 makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
@@ -169,8 +175,10 @@ makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
 // call this to add click listener to fill in rectangle; comment to disable
 gridListeners();
 
+{% if page.fayelink %}
 // call this to set up pub-sub; comment to disable
 doFayeSubscribe();
+{% endif %}
 
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
@@ -250,8 +258,10 @@ function fillgrid(e) {
     
     drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value);
     
+    {% if page.fayelink %}
     // Send message to faye
-    doFayeSend(leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorpicker.value);
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue);
+    {% endif %}
 }
 // ***** END OPTION: GRID SUPPORT *****
 {% endif %}
