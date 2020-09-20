@@ -29,6 +29,9 @@ numrows: 8
 subcols: 5
 subrows: 3
 
+canvaswidth: 800
+canvasheight: 600
+
 dogrid: true
 dofreedraw: false
 
@@ -47,7 +50,10 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <br><br>
 
-<canvas id="drawCanvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
+<canvas id="xheadercanvas" width="{{ page.canvaswidth }}" height="50" style="border:1px solid #000000;"></canvas>
+<br>
+<canvas id="yheadercanvas" width="50" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
+<canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
 
 <br><br>
 
@@ -128,8 +134,8 @@ var ylabels = "123456789";
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
 var numcols = {{ page.numcols }};
 var numrows = {{ page.numrows }};
-var gridwidth = 800 / numcols;
-var gridheight = 600 / numrows;
+var gridwidth = {{ page.canvaswidth }} / numcols;
+var gridheight = {{ page.height }} / numrows;
 
 // subcols and subrows provide subsquares within each grid element for the individual fill-ins
 var subcols = {{ page.subcols }};
@@ -251,6 +257,40 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.strokeStyle = "black";
     ctx.fillStyle = "black";    
     ctx.lineWidth = '3';
+    
+    // Fill in the x header labels
+    var xheadercanvas = document.getElementById('xheadercanvas');
+    var xheaderctx = xheadercanvas.getContext('2d');
+    
+    xheaderctx.font = "18px Arial";
+    xheaderctx.strokeStyle = "red";
+    xheaderctx.fillStyle = "red";
+    xheaderctx.lineWidth = '3';
+    
+    var xi = 0;
+    for(var x = 0; x <= bwidth; x += rwidth) {
+        label = xlabels.charAt(xi % xlabels.length);
+        xheaderctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), 25);
+        
+        xi = xi + 1;
+    }   
+
+    // Fill in the y header labels
+    var yheadercanvas = document.getElementById('yheadercanvas');
+    var yheaderctx = yheadercanvas.getContext('2d');
+    
+    yheaderctx.font = "18px Arial";
+    yheaderctx.strokeStyle = "red";
+    yheaderctx.fillStyle = "red";
+    yheaderctx.lineWidth = '3';
+    
+    var yi = 0;
+    for(var y = 0; y <= bheight; y += rheight) {
+        label = ylabels.charAt(yi % ylabels.length);
+        yheaderctx.fillText(label, 25, y + (rheight / 2.0));
+        
+        yi = yi + 1;
+    }       
 }
 
 function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
