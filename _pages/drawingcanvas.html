@@ -40,7 +40,7 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 
 <style>
 #canvascontainer {
- width: {{ page.canvaswidth | plus:100 }}px;
+ width: {{ page.canvaswidth | plus:1000 }}px;
  height: {{ page.canvasheight | plus:10 }}px;
 }
 
@@ -301,7 +301,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     var xi = 0;
     for(var x = 0; x <= bwidth; x += rwidth) {
         label = xlabels.charAt(xi % xlabels.length);
-        xheaderctx.fillText(label, x + (rwidth / 2.0) + 100, 25);
+        xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
         
         xi = xi + 1;
     }   
