@@ -272,7 +272,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     var xi = 0;
     for(var x = 0; x <= bwidth; x += rwidth) {
         label = xlabels.charAt(xi % xlabels.length);
-        xheaderctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0) + 50, 25);
+        xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
         
         xi = xi + 1;
     }   
