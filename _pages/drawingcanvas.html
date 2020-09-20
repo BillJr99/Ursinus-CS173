@@ -185,21 +185,21 @@ doFayeSubscribe();
 function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.strokeStyle = "black";
     
-    var xlines = 0;
+    var xlines = -1;
     
     for (var x = 0; x <= bwidth; x += rwidth / subcols) {
-        if(xlines == 0) {
-            ctx.lineWidth = '3';
-        } else {
-            ctx.lineWidth = '1';
-        }
-        
         xlines = xlines + 1;
         
         if(xlines == subcols) {
             xlines = 0;
         }
         
+        if(xlines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+
         console.log(xlines + " " + ctx.lineWidth);
         
         ctx.beginPath();
@@ -208,21 +208,21 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         ctx.stroke();
     }
 
-    var ylines = 0;
+    var ylines = -1;
     
     for (var y = 0; y <= bheight; y += rheight / subrows) {
-        if(ylines == 0) {
-            ctx.lineWidth = '3';
-        } else {
-            ctx.lineWidth = '1';
-        }
-        
         ylines = ylines + 1;
         
         if(ylines == subrows) {
             ylines = 0;
         }
-        
+    
+        if(ylines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+                
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(bwidth, y);
