@@ -186,24 +186,19 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     ctx.strokeStyle = "black";
     
     var xlines = -1;
-    var totalxlines = -1;
     
-    for (var x = 0; x <= bwidth; x += rwidth / subcols) {
+    for (var x = 0; x <= bwidth + 1; x += rwidth / subcols) {
         xlines = xlines + 1;
-        totalxlines = totalxlines + 1;
         
         if(xlines == subcols) {
             xlines = 0;
         }
         
-        if(xlines == 0 || totalxlines == numcols * subcols) {
+        if(xlines == 0) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
         }
-
-        //console.log(xlines + " " + ctx.lineWidth + " " + x);
-        console.log(totalxlines + " " + xlines + " " + (numcols * subcols) + " " + ctx.lineWidth);
         
         ctx.beginPath();
         ctx.moveTo(x, 0);
@@ -212,17 +207,15 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     }
 
     var ylines = -1;
-    var totalylines = -1;
     
-    for (var y = 0; y <= bheight; y += rheight / subrows) {
+    for (var y = 0; y <= bheight + 1; y += rheight / subrows) {
         ylines = ylines + 1;
-        totalylines = totalylines + 1;
         
         if(ylines == subrows) {
             ylines = 0;
         }
     
-        if(ylines == 0 || totalylines == numrows * subrows) {
+        if(ylines == 0) {
             ctx.lineWidth = '3';
         } else {
             ctx.lineWidth = '1';
