@@ -73,14 +73,14 @@ The following table provides your inputs for the planetary mass and semi-major a
 Astronomical Units (AU) is a unit of measure approximately defined as the distance from the earth to the sun.  However, notice that the units in the constants above use meters.  In order to use the axis length value in your formula, you will need to convert the length from AU to meters.  One AU is approximately 149,597,870,700 meters (represented in Java as `149597870700L`, without the commas, and with an `L` to indicate that it is a "long" value, larger than a standard `int`), so you can multiply the `AU` value in the table above by this value, as follows:
 
 ```java
-final long metersPerAU = 149597870700L;
-int mercuryAU = 0.38710;
-long mercuryMeters = mercuryAU * metersPerAU;
+final double metersPerAU = 1.49597870700e11;
+double mercuryAU = 0.38710;
+double mercuryMeters = mercuryAU * metersPerAU;
 ```
 
 Similarly, the formula yields the orbital period in seconds.  In order to output the orbital period in years, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth year.  
 
-To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.  `Math.sqrt(x)` and `Math.pow(x, p)` accept and return values of type `double`, and, similarly, `Math.PI` is a `double`.  For example, the code snippet below computes the area of a circle with radius `6`:
+To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.  `Math.sqrt(x)` and `Math.pow(x, p)` accept and return values of type `double`, and, similarly, `Math.PI` is a `double`.  For example, the code snippet below computes the area of a circle with radius `6` (note, this code will not appear in your lab directly; it's just an example!):
 
 ```java
 double r = 6.0;
@@ -88,7 +88,7 @@ double rSquared = Math.pow(r, 2);
 double area = Math.PI * rSquared;
 ```
 
-An a coding example, to compute the average of two numbers, you might first add the two numbers, and then multiply by `0.5` (or divide by `2.0`), as follows:
+An another coding example (unrelated to the lab, but for reference), to compute the average of two numbers, you might first add the two numbers, and then multiply by `0.5` (or divide by `2.0`), as follows:
 
 ```java
 int x = 6;
