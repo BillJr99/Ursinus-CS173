@@ -91,3 +91,5 @@ In addition to testing, NetBeans includes a debugger that can help identify erro
 If you want to export your whole project to a zip, go to `File->Export Project->To ZIP`
 
 ![]({{ site.baseurl }}/images/netbeans/ExportToZip.png)
+
+Save your file with a `.zip` extension (that is, `MyProject.zip`).  You can click `Browse` on the export dialog to choose a location like your Desktop.
