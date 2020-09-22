@@ -341,7 +341,7 @@ schedule:
     points: 3   
 - week: "3"
   date: "0"
-  title: "Functions and Methods"
+  title: "Functions"
   link: "Activities/Functions"
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
@@ -364,26 +364,26 @@ schedule:
   - dtitle: "Lab: Averaging Functions Handed Out"    
     dlink: "Labs/AverageFunction" 
     points: 100
-- week: "3"
+- week: "2"
   date: "2"
-  title: "Coding Style and the Code Review"
-  readings:
-  - rtitle: "Style Guide"
-    rlink: "Style-Guide" 
+  title: "Functions"
   deliverables:
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Exercise"  
-    points: 3       
+    points: 3   
 - week: "3"
   date: "3"
-  title: "Testing"  
-  link: "Activities/Testing"
+  title: "Coding Style and the Code Review"
   readings:
-  - rtitle: "Testing with the NetBeans IDE"
-    rlink: "NetBeans/JUnit"
+  - rtitle: "Style Guide"
+    rlink: "Style-Guide"       
 - week: "4"
   date: "0"
   title: "Testing" 
+  readings:
+  - rtitle: "Testing with the NetBeans IDE"
+    rlink: "NetBeans/JUnit"  
+  link: "Activities/Testing"
   deliverables:
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
