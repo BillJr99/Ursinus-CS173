@@ -68,7 +68,6 @@ info:
       title: "Compound <code>if</code> conditionals"
       questions: 
         - What text should go into the <code>println</code> statement to indicate whether the person can vote (at least age 18) but also is too young to run for president (at least age 35)?
-        - Suppose we wished to <code>return</code> a <code>boolean</code> to <code>main()</code> indicating whether a person is old enough to vote but not old enough to run for President.  What modifications to the above code are needed?
         - "Consider the letter grade breakdown table on our <a href=\"../#grading\">course syllabus</a>.  Write a series of compound <code>if</code> statements that determines if your grade is an A+, an A, or an A-."
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
