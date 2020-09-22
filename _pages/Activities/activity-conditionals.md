@@ -29,7 +29,7 @@ info:
         ]]></script>     
       title: Conditionals for Selective Execution with <code>if</code> Statements
       questions:
-        - Try running the above program for different ages (say, 18, 34, 35, and 36)
+        - Try running the above program for different ages (say, 18, 34, 35, and 36).
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
     - model: |
