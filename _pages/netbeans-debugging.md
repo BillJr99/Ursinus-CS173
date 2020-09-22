@@ -18,7 +18,7 @@ We can see that the output is incorrect.  I've tried to double the value `5`, an
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-output.png)
 
 ## Unit Testing
-** If you have already been provided with code that has a known bug in it, you can skip directly to the <a href="#debugger">"Using the Debugger"</a> Step **
+**If you have already been provided with code that has a known bug in it, you can skip directly to the <a href="#debugger">"Using the Debugger"</a> Step**
 
 Although not specifically required for debugging, it's a good practice to create test cases to expose bugs.  Even if our output above was correct, we might have bugs that would cause our code to fail on other inputs.  It's a great idea to create a series of test cases that test a variety of values.  It's impossible to test every conceivable value, but "boundary cases" are often a good place to start (negative numbers, positive numbers, `1`, `-1`, `0`, very large numbers, very small numbers, and so on).
 
