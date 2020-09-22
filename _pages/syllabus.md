@@ -312,6 +312,8 @@ schedule:
   readings:
   - rtitle: "Debugging with NetBeans"
     rlink: "NetBeans/Debugging"
+  - rtitle: "Using the NetBeans Debugger"
+    rlink: "./Modules/Debugger/Module"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
