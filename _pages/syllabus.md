@@ -364,7 +364,7 @@ schedule:
   - dtitle: "Lab: Averaging Functions Handed Out"    
     dlink: "Labs/AverageFunction" 
     points: 100
-- week: "2"
+- week: "3"
   date: "2"
   title: "Functions"
   deliverables:
