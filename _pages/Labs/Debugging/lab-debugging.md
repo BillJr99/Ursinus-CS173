@@ -38,14 +38,18 @@ tags:
 
 In this lab, you will practice using the debugger to identify and fix a bug in a piece of code.  
 
+### Step 1: Download the Sample Project
 Begin by downloading and opening [this NetBeans project](../files/lab-debugging/DebugSample.zip).  This code attempts to compute the slope of the line connecting two Cartesian points.  Run the project.  You'll notice that the slope is 0, although this is incorrect.
 
+### Step 2: "Breaking" or Pausing the Program at a Certain Point
 Set a Line Breakpoint at line 25 of the code, and start the debugger until it breaks at this line.  **Hint**: you may wish to refer to our [debugger tutorial](../NetBeans/Debugging) for guidance on using the features of the debugger.  
 
+### Step 3: Adding a "Watch" to Inspect Variable Values
 When you run the debugger and it pauses ("breaks") somewhere in the code.  A pane appears at the bottom of the window indicating the variable types and values.  Here, you can inspect the values of the variables in your program at this point in the execution.  You can also add new watches.  Click to add a new watch, and enter `xdiff / ydiff` as the watch expression.  Note that you can even watch expressions, not just variables!
 
 What is the value of this watch, and what is its type?  Does its value make more sense given the context of its data type?  What happened to cause this program to fail, and what can be done to fix it?  **Hint**: you may wish to refer to our discussion of [Data Types, Operators, and Expressions](../Activities/Expressions).
 
+### Step 4: Fix the Bug!
 Make the needed repair, then stop and re-run the debugger.  Check the watch expression `xdiff / ydiff` again and verify that it is working correctly.
 
 ## Trivia
