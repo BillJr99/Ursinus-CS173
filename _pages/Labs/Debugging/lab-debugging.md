@@ -47,8 +47,8 @@ Set a Line Breakpoint at line 25 of the code, and start the debugger until it br
 ### Step 3: Adding a "Watch" to Inspect Variable Values
 When you run the debugger and it pauses ("breaks") somewhere in the code.  A pane appears at the bottom of the window indicating the variable types and values.  Here, you can inspect the values of the variables in your program at this point in the execution.  You can also add new watches.  Click to add a new watch, and enter `ydiff / xdiff` as the watch expression.  Note that you can even watch expressions, not just variables!
 
-### Step 4: Fix the Bug!
-What is the value of this watch, and what is its type?  Does its value make more sense given the context of its data type?  What happened to cause this program to fail, and what can be done to fix it?  **Hint**: you may wish to refer to our discussion of [Data Types, Operators, and Expressions](../Activities/Expressions).
+### Step 4: Fix the 2 Bugs!
+What is the value of this watch, and what is its type?  Does its value make more sense given the context of its data type?  What happened to cause this program to fail, and what can be done to fix it?  **Hint**: you may wish to refer to our discussion of [Data Types, Operators, and Expressions](../Activities/Expressions).  Fix the data types of the `xdiff` and `ydiff` inputs so that they divide as floating point values, rather than as integers.
 
 Also notice that the slope of the line you're expecting (`ydiff / xdiff`) differs from the expression in your code.  Fix the expression to correctly compute the slope!
 
