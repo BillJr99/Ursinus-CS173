@@ -90,3 +90,7 @@ Notice the red triangle becomes a grey triangle when the corresponding breakpoin
 Now that we are returning `result` from `doubleIt`, let's run our test case again.  Now, we've passed!
 
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-runtestcase2.png)
+
+Sometimes, you may find that you wish to stop the debugger and start over from the beginning.  To do this, click the red "stop" toolbar icon shown below, and then you can start the Debugger using the `Debug` menu like before!
+
+![]({{ site.baseurl }}/images/netbeans/debugging/debug-stopdebugger.png)

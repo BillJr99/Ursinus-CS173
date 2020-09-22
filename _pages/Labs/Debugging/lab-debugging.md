@@ -54,6 +54,10 @@ Also notice that the slope of the line you're expecting (`ydiff / xdiff`) differ
 
 Make the needed repair, then stop and re-run the debugger.  Check the watch expression `ydiff / xdiff` again and verify that it is working correctly.
 
+If you would like to re-run the debugger from the beginning, you can stop the current debugging session (because it might think you are still paused at a breakpoint!) using the stop toolbar button at the top of your window, as shown below.  Then, you can start the Debugger using the `Debug` menu like before!
+
+![]({{ site.baseurl }}/images/netbeans/debugging/debug-stopdebugger.png)
+
 ## Trivia
 
 Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only fixed 9 years later](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?
