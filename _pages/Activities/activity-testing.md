@@ -26,7 +26,7 @@ info:
       title: Choosing Unit Tests
       questions:
         - What's wrong with this code? (there is more than one answer!)
-        - How many calls would you make to `triangleArea` before you decide that it is "passing?"  What paramter inputs would you supply to those calls?
+        - How many calls would you make to <code>triangleArea</code> before you decide that it is "passing?"  What paramter inputs would you supply to those calls?
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Random;
