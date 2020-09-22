@@ -58,6 +58,8 @@ If you would like to re-run the debugger from the beginning, you can stop the cu
 
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-stopdebugger.png)
 
+You can submit this project as usual, by adding your README and exporting the project to a ZIP file for submission.
+
 ## Trivia
 
 Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only fixed 9 years later](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?
