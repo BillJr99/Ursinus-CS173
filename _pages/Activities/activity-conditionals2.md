@@ -34,11 +34,11 @@ info:
             
             public static void canRunForPresident(int age) {
                 if(age >= 35) {
-                    System.out.println(“You are old enough to run for President of the United States!”);
+                    System.out.println("You are old enough to run for President of the United States!");
                 } else if(age >= 18) {
-                    System.out.println(“You can’t run for President, but you are old enough to vote!”);
+                    System.out.println("You can’t run for President, but you are old enough to vote!");
                 } else {
-                    System.out.println(“You’re too young to run for President, and too young to vote.”);
+                    System.out.println("You’re too young to run for President, and too young to vote.");
                 }
             }
             
