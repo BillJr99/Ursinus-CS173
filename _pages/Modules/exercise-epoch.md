@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Epoch Time Overflow Calculator"
 
 info:
   points: 3
-  instructions: "Modify the EpochTimeOverflow.java file to print the year when the Epoch overflow occurs.  Since years are integers, you can use <code>Math.floor(x)</code> to convert round x down to the nearest whole number."
+  instructions: "Modify the EpochTimeOverflow.java file to print the year when the Epoch overflow occurs.  Since years are integers, you can use <code>Math.floor(x)</code> to convert round <code>x</code> down to the nearest whole number."
   goals:
     - To perform arithmetic using the Java programming language
     
