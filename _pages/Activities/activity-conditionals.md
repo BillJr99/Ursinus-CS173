@@ -16,14 +16,12 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public static void canRunForPresident(int age) {
+            public static void main(String[] args) {
+                int age = 38;
+                
                 if(age >= 35) {
                     System.out.println("You are old enough to run for President of the United States!");
                 }
-            }
-            
-            public static void main(String[] args) {
-                canRunForPresident(38);
             }
         }
         ]]></script>     
@@ -35,16 +33,14 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public static void canRunForPresident(int age) {
+            public static void main(String[] args) {
+                int age = 38;
+                
                 if(age >= 35) {
                     System.out.println("You are old enough to run for President of the United States!");
                 } else {
                     System.out.println("You're too young to run for President.");
                 }
-            }
-            
-            public static void main(String[] args) {
-                canRunForPresident(38);
             }
         }
         ]]></script>     

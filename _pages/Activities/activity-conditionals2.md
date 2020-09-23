@@ -16,9 +16,12 @@ info:
     - To implement complex conditional statements using boolean expression operators
   models:
     - model: |
+        <div>
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public static void canRunForPresident2(int age) {
+            public static void main(String[] args) {
+                int age = 38;
+                
                 if(age >= 18) {
                     System.out.println("You are old enough to vote!");
                     
@@ -31,8 +34,16 @@ info:
                     System.out.println("You're too young to run for President, and too young to vote.");
                 }
             }
-            
-            public static void canRunForPresident(int age) {
+        }
+        ]]></script>    
+        </div>
+        <br>
+        <div>
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                int age = 21;
+                
                 if(age >= 35) {
                     System.out.println("You are old enough to run for President of the United States!");
                 } else if(age >= 18) {
@@ -41,27 +52,21 @@ info:
                     System.out.println("You’re too young to run for President, and too young to vote.");
                 }
             }
-            
-            public static void main(String[] args) {
-                canRunForPresident(38);
-                canRunForPresident2(21);
-            }
         }
-        ]]></script>         
+        ]]></script>  
+        </div>
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
       questions:
         - Which code structure (<code>canRunForPresident</code> or <code>canRunForPresident2</code>) do you prefer and why?
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class Main {
-            public static void canVoteButNotRunForPresident(int age) {
+        public class Main {           
+            public static void main(String[] args) {
+                int age = 25;
+                
                 if(age >= 18 && age <= 35) {
                     System.out.println(""); // What should we say here?
                 }
-            }
-            
-            public static void main(String[] args) {
-                canVoteButNotRunForPresident(25);
             }
         }
         ]]></script>      
