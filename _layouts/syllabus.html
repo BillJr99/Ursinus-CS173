@@ -234,7 +234,11 @@ boilerplate:
     
     {% if page.info.class_notebook %}
     <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access our class notebook here!</a>  If you are unable to access the notebook, please let me know and I will share the document with your account.</li><br>
-    {% endif %}    
+    {% endif %}   
+
+    {% if page.info.teamshelproom %}
+    <li><strong>Help Room on Microsoft Teams:</strong> <a href="{{ page.info.teamshelproom }}">Click Here</a> to Go to the Teams Help Room Channel on Microsoft Teams.</li><br>
+    {% endif %}      
     
     {% if page.university.semester and page.university.academicyear %}
     <li><strong>Academic Term:</strong> {{page.university.semester}} {{page.university.academicyear}}</a></li>
