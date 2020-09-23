@@ -46,7 +46,7 @@ files:
                 /* TODO: Declare a float variable representing the amount of time that 
                    an object fell due to gravity.  Set this variable to 5 seconds. */
                 
-                /* TODO: Print out the time the object was in free-fall, which is (1/2) * g * time^2 */
+                /* TODO: Print out the distance the object was in free-fall, which is (1/2) * g * time^2 */
             }
         }    
 
