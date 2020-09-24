@@ -12,6 +12,7 @@ info:
     - To improve performance of a recursive algorithm by cacheing values via a Dynamic Program 
 
 canvasasmtid: "97804,97745"      
+canvaspoints: 3
   
 processor:  
   correctfeedback: "Correct!!" 

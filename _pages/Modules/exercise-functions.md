@@ -13,6 +13,7 @@ info:
     - To call a function from <code>main()</code> and use its return value
     
 canvasasmtid: "97780,97721"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 

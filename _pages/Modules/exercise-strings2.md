@@ -11,6 +11,7 @@ info:
     - To iterate over <code>String</code> variables and return part-way through the string iteration.
     
 canvasasmtid: "97790,97731"  
+canvaspoints: 3
       
 processor:  
   correctfeedback: "Correct!!" 

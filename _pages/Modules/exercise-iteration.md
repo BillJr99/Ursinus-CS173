@@ -11,6 +11,7 @@ info:
     - To use iteration to compute a discrete value
     
 canvasasmtid: "97786,97727"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 

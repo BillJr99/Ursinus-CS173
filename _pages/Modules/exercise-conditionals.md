@@ -11,6 +11,7 @@ info:
     - To use compound conditionals 
   
 canvasasmtid: "97778,97719"  
+canvaspoints: 3
   
 processor:  
   correctfeedback: "Correct!!" 

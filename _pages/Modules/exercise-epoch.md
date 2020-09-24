@@ -11,6 +11,7 @@ info:
     - To perform arithmetic using the Java programming language
   
 canvasasmtid: "97774,97715"  
+canvaspoints: 3
   
 processor:  
   correctfeedback: "Correct!!" 

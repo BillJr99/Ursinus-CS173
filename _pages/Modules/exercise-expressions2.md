@@ -14,7 +14,8 @@ info:
     - To manipulate a variable with arithmetic statements
 
 canvasasmtid: "97775,97716"    
-  
+canvaspoints: 3
+
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

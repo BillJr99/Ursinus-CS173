@@ -17,6 +17,7 @@ info:
     - To explain that a floating point value is represented imprecisely with a discrete binary representation
   
 canvasasmtid: "97777,97718"  
+canvaspoints: 3
   
 processor:  
   correctfeedback: "Correct!!" 

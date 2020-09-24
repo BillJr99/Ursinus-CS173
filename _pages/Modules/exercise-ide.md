@@ -13,6 +13,7 @@ info:
     - To write a Java statement
     
 canvasasmtid: "97772,97713"   
+canvaspoints: 3
   
 processor:  
   correctfeedback: "Correct!!" 

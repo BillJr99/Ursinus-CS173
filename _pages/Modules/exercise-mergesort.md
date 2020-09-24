@@ -13,6 +13,7 @@ info:
     - To swap two variables in memory
     
 canvasasmtid: "97803,97744"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 

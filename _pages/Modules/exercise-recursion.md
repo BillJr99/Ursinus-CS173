@@ -12,6 +12,7 @@ info:
     - To implement a recursive function call
     
 canvasasmtid: "97802,97743"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 

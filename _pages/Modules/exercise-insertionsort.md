@@ -13,6 +13,7 @@ info:
     - To implement the insertion sort algorithm
     
 canvasasmtid: "97799,97740"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 

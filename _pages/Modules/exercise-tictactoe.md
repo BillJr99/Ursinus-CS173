@@ -11,6 +11,7 @@ info:
     - To iterate over a 2-dimensional array
     
 canvasasmtid: "97794,97735"    
+canvaspoints: 3
     
 processor:  
   correctfeedback: "Correct!!" 
