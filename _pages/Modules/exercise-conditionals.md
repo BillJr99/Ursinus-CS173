@@ -9,7 +9,9 @@ info:
   instructions: "Modify the GradePrinter.java file to print the letter grade earned for a given final grade using an if statement, using our syllabus letter grade table."
   goals:
     - To use compound conditionals 
-    
+  
+canvasasmtid: "97778,97719"  
+  
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

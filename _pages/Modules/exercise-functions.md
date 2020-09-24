@@ -12,6 +12,8 @@ info:
     - To write a function that computes an expression and returns its result
     - To call a function from <code>main()</code> and use its return value
     
+canvasasmtid: "97780,97721"    
+    
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

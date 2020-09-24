@@ -15,7 +15,9 @@ info:
     - To write a compound boolean expression to verify a numeric range
     - To check the value of an imprecise floating point value
     - To explain that a floating point value is represented imprecisely with a discrete binary representation
-    
+  
+canvasasmtid: "97777,97718"  
+  
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

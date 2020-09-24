@@ -12,6 +12,8 @@ info:
     - To become familiar with the basic structure of a Java program
     - To write a Java statement
     
+canvasasmtid: "97772,97713"   
+  
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

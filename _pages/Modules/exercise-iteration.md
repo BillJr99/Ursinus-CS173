@@ -10,6 +10,8 @@ info:
   goals:
     - To use iteration to compute a discrete value
     
+canvasasmtid: "97786,97727"    
+    
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

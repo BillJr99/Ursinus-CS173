@@ -10,6 +10,8 @@ info:
   goals:
     - To iterate over a 2-dimensional array
     
+canvasasmtid: "97794,97735"    
+    
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

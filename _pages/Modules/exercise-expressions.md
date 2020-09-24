@@ -13,7 +13,9 @@ info:
     - To write a Java statement
     - To declare a variable
     - To manipulate a variable with arithmetic statements
-    
+  
+canvasasmtid: "97773,97714"    
+  
 processor:  
   correctfeedback: "Correct!!" 
   incorrectfeedback: "Try again"

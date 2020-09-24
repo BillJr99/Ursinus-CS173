@@ -9,6 +9,8 @@ info:
   instructions: "Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  Use this comparison function to determine if two <code>String</code>s are palendromes of each other.  Two <code>String</code>s are palnendromes if their sorted characters are equal to one another."
   goals:
     - To iterate over <code>String</code> variables.
+
+canvasasmtid: "97785,97726"    
     
 processor:  
   correctfeedback: "Correct!!" 
