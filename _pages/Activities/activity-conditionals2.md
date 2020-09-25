@@ -64,7 +64,7 @@ info:
             public static void main(String[] args) {
                 int age = 25;
                 
-                if(age >= 18 && age <= 35) {
+                if(age >= 18 && age < 35) { // Why < 35 and not <= 35?
                     System.out.println(""); // What should we say here?
                 }
             }

@@ -39,13 +39,13 @@ tags:
 
 In this lab, you will develop and use functions to modularize and re-use your code.  
 
-Consider the [grading table of our course syllabus](../#grading).  It lists grading weights for each component of the course (for example, programming assignments).  To compute your course grade, you would first average all your programming assignment grades together, and all the other grade component averages.  To compute the assignment average <span>\(\mu_{x}\)</span>, take the sum of each of your <span>\(n\)</span> assignment scores <span>\(x_{i}\)</span>, and divide by the number of assignments, as follows:
+Consider the [grading table of our course syllabus](../#grading).  It lists grading weights for each component of the course (for example, programming assignments).  To compute your course grade, you would first average all your programming assignment grades together, and all the other grade component averages.  To compute the assignment average <span>\\(\mu_{x}\\)</span>, take the sum of each of your <span>\\(n\\)</span> assignment scores <span>\\(x_{i}\\)</span>, and divide by the number of assignments, as follows:
 
-<br><span>\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\)</span><br>
+<br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\\)</span><br>
 
-Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\(w_{i}\)</span>, given by the syllabus (for example, a 50\% weight would be computed as 0.5 for that corresponding <span>\(w_{i}\)</span>):
+Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50\% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
 
-<br><span>\(\mu_{x} = \sum\limits_{i=1}{n} w_{i} \times x_{i}\)</span><br>
+<br><span>\\(\mu_{x} = \sum\limits_{i=1}{n} w_{i} \times x_{i}\\)</span><br>
 
 This is actually the same as the standard equally-weighted average, where w_{i} is \frac{1}{n}, giving equal weight to all the components.
 
