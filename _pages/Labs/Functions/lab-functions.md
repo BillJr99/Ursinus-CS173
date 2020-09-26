@@ -45,7 +45,7 @@ Consider the [grading table of our course syllabus](../#grading).  It lists grad
 
 Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
 
-<br><span>\\(\mu_{x} = \sum\limits_{i=1}^{n} w_{i} \times x_{i}\\)</span><br>
+<br><span>\\(\mu_{x} = \sum\limits_{i=1}^{n} w_{i} x_{i}\\)</span><br>
 
 This is actually the same as the standard equally-weighted average, where <span>\\(w_{i}\\)</span> is <span>\\(\frac{1}{n}\\)</span>, giving equal weight to all the components.
 
