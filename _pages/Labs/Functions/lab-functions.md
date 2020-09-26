@@ -49,6 +49,10 @@ Then, those averages are averaged - but not equally.  The weighted average is co
 
 This is actually the same as the standard equally-weighted average, where <span>\\(w_{i}\\)</span> is <span>\\(\frac{1}{n}\\)</span>, giving equal weight to all the components.
 
+For example, suppose assignments had a weight of 40%, and labs had a weight of 60%.  If your overall assignment grade is an 80%, and your overall lab grade is a 90%, your grade formula would be:
+
+<br><span>\\(0.4 \times 0.8 + 0.6 \times 0.9 = 0.32 + 0.54 = 0.86\\)</span> (or 86%)<br>
+
 Create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Compute your average lab grade, average assignment grade, etc., using equal weighted averaging.
 
 Then, take those computed averages, and compute a **weighted average** of them, using the weights in the syllabus.  Print out your final grade.
