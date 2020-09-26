@@ -150,7 +150,13 @@ instructors:
     starttime: "12:30 PM"
     endtime: "1:20 PM"
     location: "Networking Virtual Office Hours on Microsoft Teams"      
-  
+- name: Michael Tecce
+  title: Teaching Assistant
+  officehours: 
+  - day: "R"
+    starttime: "TBD"
+    endtime: "TBD"
+    location: "Virtual Office Hours on Microsoft Teams"  
 textbooks:
 - title: "Java for Everyone: Late Objects"
   authors: "Cay Horstmann"
