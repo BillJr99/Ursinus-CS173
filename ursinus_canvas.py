@@ -806,7 +806,7 @@ def usage():
 # Parse user options
 # https://docs.python.org/3/library/getopt.html
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:da", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments"])
+    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:d", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments"])
 except getopt.GetoptError as err:
     # print help information and exit:
     print(err)  # will print something like "option -z not recognized"
