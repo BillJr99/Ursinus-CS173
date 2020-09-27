@@ -778,17 +778,6 @@ def get_courseid(canvas, user):
 
     return int(courseid)
 
-def parse_discussions(entries):
-    for entry in entries:
-        print(entry)
-        
-        try:
-            replies = entry.replies()
-        
-            parse_discussions(replies)
-        except:
-            print("Error: No replies found")
-
 def usage():
     print("Usage:")
     print("\t[-h | --help]\tUsage Documentation")
@@ -868,18 +857,6 @@ process_markdown(markdownfile, canvas, course, courseid, coursehomepage)
 printlog("Hiding/Showing Tabs...")
 # Hide Navigation Tabs
 arrange_tabs(course)
-
-#printlog("Initiating Course Export...")
-# Export Course Content
-#course.export_content("zip")
-
-#printlog("Parsing Discussions...")
-# Gather all Discussion Topics    
-#topics = course.get_discussion_topics()
-#for topic in topics:
-#    entries = topic.get_topic_entries()
-#        
-#    parse_discussions(entries)
 
 printlog("Finished: Waiting for Child Threads to Terminate")
 # Clean Up
