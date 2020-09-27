@@ -873,13 +873,13 @@ arrange_tabs(course)
 # Export Course Content
 #course.export_content("zip")
 
-printlog("Parsing Discussions...")
+#printlog("Parsing Discussions...")
 # Gather all Discussion Topics    
-topics = course.get_discussion_topics()
-for topic in topics:
-    entries = topic.get_topic_entries()
-        
-    parse_discussions(entries)
+#topics = course.get_discussion_topics()
+#for topic in topics:
+#    entries = topic.get_topic_entries()
+#        
+#    parse_discussions(entries)
 
 printlog("Finished: Waiting for Child Threads to Terminate")
 # Clean Up
