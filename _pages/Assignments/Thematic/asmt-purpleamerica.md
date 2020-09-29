@@ -292,7 +292,7 @@ When you define the color of each county region earlier, compute the red, green,
 
 <span>\\(colorConcentration_{c = candidate} = \frac{votes_{c}}{\sum_{i \in candidates} votes_{i}}\\)</span>
 
-That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!
+That is, the concentration of a color is the ratio of total votes received by the candidate represented by that color.  Multiply that ratio by 255 and convert to an integer, and you have the RGB entry for that region.  Repeat this for red, green, and blue (one color for each candidate), and you have a complete color definition for that region!  In our `filledPolygon` code example above, where are the red, green, and blue color values set?  Make the colors parameters to your function to draw a polygon, and specify them using the red, green, and blue `colorConcentration` values you just computed!  Each region should now render on your screen using a color that blends the votes cast for each candidate from that region.
 
 Render the map using margin-of-victory color shading for the election of your choice.
 
