@@ -43,12 +43,12 @@ In this lab, you will develop and use functions to modularize and re-use your co
 
 Consider the [grading table of our course syllabus](../#grading).  It lists grading weights for each component of the course (for example, programming assignments).  To compute your course grade, you would first average all your programming assignment grades together, and all the other grade component averages.  To compute the assignment average <span>\\(\mu_{x}\\)</span>, take the sum of each of your <span>\\(n\\)</span> assignment scores <span>\\(x_{i}\\)</span>, and divide by the number of assignments, as follows:
 
-<br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\\)</span><br>
+<br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}^{n} x_{i}}{n}\\)</span><br>
 
 For example, suppose your assignment grades are 100, 75, and 80.  Your average assignment grade is the equally-weighted average:
 
 <div align="center">
-<br><span>\((1.0 + 0.75 + 0.80) / 3 = 0.85\)</span> (or 85%)<br>
+<br><span>\((1.0 + 0.75 + 0.80) / 3 = ((1.0 * 0.333) + (0.75 * 0.333) + (0.80 * 0.333)) = 0.85\)</span> (or 85%)<br>
 </div>
 
 **Note that I converted each grade to a `double`; I did this by dividing each one by 100.0.  This ensures that I am using floating point division throughout my program, and not integer division, in my calculations!  I suggest you do this as well.  Before you `return` your result, you can multiply by 100.0 again so that your grade is on a scale from 0 to 100.**
