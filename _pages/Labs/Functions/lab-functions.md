@@ -59,15 +59,20 @@ For example, suppose assignments had a weight of 40%, and labs had a weight of 6
 
 ## Part 1: Computing a Course Grade from a Weighted Average
 
-In this lab, you will create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Then, you will compute your average lab grade, average assignment grade, etc., using equal weighted averaging (by adding up all the grades and dividing by the number of grades).  Then, you will take those computed averages, and compute a **weighted average** of them, using a weighted average (by multiplying each score by the weight of that score, and adding those products together).  You will print out your final grade.  You can make up grades for these as an example, and it is fine to only consider labs and assignments.  Use a 60% weight for assignments and a 40% weight for labs (these are not the actual weights in our course, but will be fine for an example!).
+In this lab, you will create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Then, you will compute your average lab grade, average assignment grade, etc., using equal weighted averaging (by adding up all the grades and dividing by the number of grades).  Then, you will take those computed averages, and compute a **weighted average** of them, using a weighted average (by multiplying each score by the weight of that score, and adding those products together).  You will print out your final grade.  You can make up grades for these as an example, and it is fine to only consider labs and assignments.  
+
+**Use a 60% weight for assignments and a 40% weight for labs (these are not the actual weights in our course, but will be fine for an example!).**
 
 It is nice to be able to compute these averages without having to do so by hand, but you probably noticed how tedious is was to copy and paste, or re-write, your averaging code over and over again!  We can use functions to reduce this workload.
 
+### Computing an Equally-Weighted Average of Individual Grades
 Write a function `computeEqualAverage` that returns a `double`, and accepts `double`s for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as parameters to this function.  For this example, let's suppose you have three grades to compute (and, thus, three `double` parameters to this function).  This function adds up the grades and divides by the number of grades.
 
+### Computing a Weighted Average of these Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts `double`s for your course averages as well as the weights (since there is a lab average and an assignment average, and each has a weight, you should have four `double` parameters to this function).  This function multiplies each grade by its corresponding weight, and adds the resulting products together.
 
-Finally, modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).  For example, you can call the `computeEqualAverage` function to obtain your assignment average and to obtain your lab average, and then call `computeWeightedAverage` to weight them.  For example, once your two functions (`computeEqualAverage` and `computeWeightedAverage`) are written, you could call them as follows:
+### Putting it all Together: Calling these Functions to Compute a Course Final Grade
+Finally, write the body of your `main()` function to call the equal average function twice (once for assignments and once for labs), and then to pass those results as parameters to a call to the weight average function.  Specifically, you can call the `computeEqualAverage` function to obtain your assignment average and to obtain your lab average, and then call `computeWeightedAverage` to weight them.  For example, once your two functions (`computeEqualAverage` and `computeWeightedAverage`) are written, you could call them as follows:
 
 ```java
 // suppose our assignment grades were 60, 90, and 80: you should get approximately 76.667 as the average
