@@ -154,8 +154,8 @@ instructors:
   title: Teaching Assistant
   officehours: 
   - day: "R"
-    starttime: "TBD"
-    endtime: "TBD"
+    starttime: "4:00 PM"
+    endtime: "6:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"  
 textbooks:
 - title: "Java for Everyone: Late Objects"
