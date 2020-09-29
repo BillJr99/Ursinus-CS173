@@ -45,6 +45,14 @@ Consider the [grading table of our course syllabus](../#grading).  It lists grad
 
 <br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\\)</span><br>
 
+For example, suppose your assignment grades are 100, 75, and 80.  Your average assignment grade is the equally-weighted average:
+
+<div align="center">
+<br><span>\((1.0 + 0.75 + 0.80) / 3 = 0.85\)</span> (or 85%)<br>
+</div>
+
+**Note that I converted each grade to a `double`; I did this by dividing each one by 100.0.  This ensures that I am using floating point division throughout my program, and not integer division, in my calculations!  I suggest you do this as well.**
+
 Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
 
 <br><span>\\(\mu_{x} = \sum\limits_{i=1}^{n} w_{i} x_{i}\\)</span><br>
