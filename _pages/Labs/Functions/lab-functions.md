@@ -39,6 +39,8 @@ tags:
 
 In this lab, you will develop and use functions to modularize and re-use your code.  
 
+## Background
+
 Consider the [grading table of our course syllabus](../#grading).  It lists grading weights for each component of the course (for example, programming assignments).  To compute your course grade, you would first average all your programming assignment grades together, and all the other grade component averages.  To compute the assignment average <span>\\(\mu_{x}\\)</span>, take the sum of each of your <span>\\(n\\)</span> assignment scores <span>\\(x_{i}\\)</span>, and divide by the number of assignments, as follows:
 
 <br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\\)</span><br>
@@ -55,17 +57,31 @@ For example, suppose assignments had a weight of 40%, and labs had a weight of 6
 <br><span>\(0.4 \times 0.8 + 0.6 \times 0.9 = 0.32 + 0.54 = 0.86\)</span> (or 86%)<br>
 </div>
 
-Create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Compute your average lab grade, average assignment grade, etc., using equal weighted averaging.
+## Part 1: Computing a Course Grade from a Weighted Average
 
-Then, take those computed averages, and compute a **weighted average** of them, using the weights in the syllabus.  Print out your final grade.
+In this lab, you will create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Then, you will compute your average lab grade, average assignment grade, etc., using equal weighted averaging (by adding up all the grades and dividing by the number of grades).  Then, you will take those computed averages, and compute a **weighted average** of them, using a weighted average (by multiplying each score by the weight of that score, and adding those products together).  You will print out your final grade.  You can make up grades for these as an example, and it is fine to only consider labs and assignments.  Use a 60% weight for assignments and a 40% weight for labs (these are not the actual weights in our course, but will be fine for an example!).
 
 It is nice to be able to compute these averages without having to do so by hand, but you probably noticed how tedious is was to copy and paste, or re-write, your averaging code over and over again!  We can use functions to reduce this workload.
 
-Write a function `computeEqualAverage` that returns a `double`, and accepts `double`s for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as parameters to this function.
+Write a function `computeEqualAverage` that returns a `double`, and accepts `double`s for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as parameters to this function.  For this example, let's suppose you have three grades to compute (and, thus, three `double` parameters to this function).  This function adds up the grades and divides by the number of grades.
 
-Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts `double`s for your course averages.  Modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).
+Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts `double`s for your course averages as well as the weights (since there is a lab average and an assignment average, and each has a weight, you should have four `double` parameters to this function).  This function multiplies each grade by its corresponding weight, and adds the resulting products together.
 
-This program should be much shorter!  However, there is still some redundancy.  The two average functions are still essentially the same algorithm and perhaps essentially the same code.
+Finally, modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).  For example, you can call the `computeEqualAverage` function to obtain your assignment average and to obtain your lab average, and then call `computeWeightedAverage` to weight them.  For example, once your two functions (`computeEqualAverage` and `computeWeightedAverage`) are written, you could call them as follows:
+
+```java
+// suppose our assignment grades were 60, 90, and 80: you should get approximately 76.667 as the average
+double assignmentAverage = computeEqualAverage(60, 90, 80); 
+
+// suppose the lab grades were 80, 90, and 80: you should get approximately 83.333 as the average
+double labAverage = computeEqualAverage(80, 90, 80) 
+
+// the assignment weight is 60% and the lab weight is 40%.  You should get approximately 79.333 as the total grade.
+double finalGrade = computeWeightedAverage(assignmentAverage, 0.6, labAverage, 0.4); 
+```
+
+## Extra Credit (10%): Merging the Averaging Functions into a Generic Function
+This program should be much shorter than if you had duplicated all the code to compute these averages!  However, there is still some redundancy.  The two average functions are still essentially the same algorithm and perhaps essentially the same code.
 
 Write a function called `computeAverage` that returns a `double` and accepts the individual values as parameters, like the others.  This time, add individual `double` paramters for the weights.  Replace your call to `computeWeightedAverage` with a call to this function, passing the appropriate weights. 
 
