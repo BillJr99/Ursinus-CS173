@@ -6,6 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Functions"
 
 info:
   next: ./Random
+  prev: ./Functions
   
   goals: 
     - To be able to call methods in various configurations (parameters, return values)

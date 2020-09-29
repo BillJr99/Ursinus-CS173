@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Functions to Generate Random Numbers"
 excerpt: "CS173: Intro to Computer Science - Functions to Generate Random Numbers"
 
 info:
-  prev: ./Functions
+  prev: ./Functions2
   
   goals: 
     - To be able to utilize the methods Math class in code
