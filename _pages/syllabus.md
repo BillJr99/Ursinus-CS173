@@ -376,7 +376,7 @@ schedule:
   title: "Functions"
   deliverables:
   - dtitle: "Exercise: Writing and Calling Functions"
-    dlink: "Modules/Functions/Exercise"  
+    dlink: "Modules/Functions/Module"  
     points: 3   
 - week: "3"
   date: "3"
