@@ -75,7 +75,7 @@ MIDIPlayer player = new MIDIPlayer();
 Be sure to add the import for `MIDIPlayer` to your program (we'll go ahead and add the imports for the other library classes that we'll need later as well):
 
 ```java
-// These lines go above and outside of your main() function
+// These lines go above and outside of your public class line, right below the package line
 // They give you access to our library functions in your code
 
 import com.MIDI.MIDIPlayer;
