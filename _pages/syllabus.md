@@ -380,10 +380,7 @@ schedule:
     points: 3   
 - week: "3"
   date: "3"
-  title: "Coding Style and the Code Review"
-  readings:
-  - rtitle: "Style Guide"
-    rlink: "Style-Guide"       
+  title: "Functions"
 - week: "4"
   date: "0"
   title: "Testing" 
@@ -460,13 +457,16 @@ schedule:
       points: 3  
 - week: "6"
   date: "1"
-  title: "Iteration"  
+  title: "Iteration and the do loop"  
   deliverables:
     - dtitle: "Participation: First Activity Notebook Check"
       points: 10
 - week: "6"
   date: "2"
-  title: "Iteration and the do loop"
+  title: "Coding Style and the Code Review"
+  readings:
+  - rtitle: "Style Guide"
+    rlink: "Style-Guide"
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"    
