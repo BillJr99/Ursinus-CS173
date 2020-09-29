@@ -95,7 +95,7 @@ Finally, write the body of your `main()` function to call the equal average func
 double assignmentAverage = computeEqualAverage(60, 90, 80); 
 
 // suppose the lab grades were 80, 90, and 80: you should get approximately 83.333 as the average
-double labAverage = computeEqualAverage(80, 90, 80) 
+double labAverage = computeEqualAverage(80, 90, 80); 
 
 // the assignment weight is 60% and the lab weight is 40%.  You should get approximately 79.333 as the total grade.
 double finalGrade = computeWeightedAverage(assignmentAverage, 0.6, labAverage, 0.4); 
