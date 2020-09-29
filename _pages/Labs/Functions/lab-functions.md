@@ -101,7 +101,7 @@ double labAverage = computeEqualAverage(80, 90, 80);
 double finalGrade = computeWeightedAverage(assignmentAverage, 0.6, labAverage, 0.4); 
 ```
 
-## Extra Credit (10%): Merging the Averaging Functions into a Generalized Function
+## Extra Credit (10 Points): Merging the Averaging Functions into a Generalized Function
 This program should be much shorter than if you had duplicated all the code to compute these averages!  However, there is still some redundancy.  The two average functions are still essentially the same algorithm and perhaps essentially the same code.
 
 Write a function called `computeAverage` that returns a `double` and accepts the individual values as parameters, like the others.  This time, add individual `double` paramters for the weights.  Replace your call to `computeWeightedAverage` with a call to this function, passing the appropriate weights. 

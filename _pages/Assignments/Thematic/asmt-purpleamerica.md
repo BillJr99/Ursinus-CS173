@@ -108,11 +108,52 @@ dependencies {
 
 Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file into a subdirectory of your project called `libs`.
 
+In your program, you can add the following `import` line at the top:
+
+```java
+import edu.princeton.cs.algs4;
+```
+
 ### Basic Drawing Functionality
 To draw a figure, you can use the following code snippet:
 
+You can draw arcs and circles using the following methods, once you add the jar to your `libs` directory (and add the dependency line to your `build.gradle` file), by calling one of these functions from your program:
+
 ```java
-// Assumption: the edu.princeton.cs.algs4 package is imported in this file
+// Assumption: the edu.princeton.cs.algs4 package is imported in this file with
+// import edu.princeton.cs.algs4;
+
+//... then inside your class, and inside main(), you can call these functions:
+
+// x and y are the center coordinates of the circle
+// radius is the radius of the circle (or the circle traced by the arc)
+// angle1 and angle2 are the angles traced by the arc from the starting and ending points, respectively
+public static void arc(double x, double y, double radius, double angle1, double angle2)
+public static void circle(double x, double y, double radius)
+```
+
+Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.  Your happy face should have a circle for a face, circles for eyes inside, and an arc for the nose and smile.  For fun, add some eyebrows with arcs, too!
+
+## Part 3: Encapsulating Drawing Functionality in a Function
+
+### Creating a Function to Draw a Figure
+Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
+
+## Part 4: Using Iteration to Draw Several Figures
+
+### Using a Loop to Draw Multiple Figures
+Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
+
+## Part 5: Reading GPS Coordinates for the Polygons
+
+### Drawing a Custom Polygon using an Array of Coordinates
+Earlier, we drew circles and rectangles on the screen using x and y coordinates.  We can also draw custom polygons by providing the x and y coordinate of each corner (that is, where to draw each line of the polygon).  We can specify all the x and all the y coordinates at once using an array, which combines all the x and y points into a single variable.  Here is an example that you can try:
+
+```java
+// Assumption: the edu.princeton.cs.algs4 package is imported in this file with
+// import edu.princeton.cs.algs4;
+
+//... then inside your class, and inside main(), you can do this:
 
 // This is the RGB color of the polygon
 int red = 255;
@@ -128,31 +169,7 @@ Color color = new Color(red, green, blue);
 StdDraw.setPenRadius(); // This resets the pen thickness to the default
 StdDraw.setPenColor(color); 
 StdDraw.filledPolygon(x, y); 
-```
-
-In addition to a filled polygon, you can draw arcs and circles using the following methods:
-
-```java
-// x and y are the center coordinates of the circle
-// radius is the radius of the circle (or the circle traced by the arc)
-// angle1 and angle2 are the angles traced by the arc from the starting and ending points, respectively
-public static void arc(double x, double y, double radius, double angle1, double angle2)
-public static void circle(double x, double y, double radius)
-```
-
-Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.
-
-## Part 3: Encapsulating Drawing Functionality in a Function
-
-### Creating a Function to Draw a Figure
-Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
-
-## Part 4: Using Iteration to Draw Several Figures
-
-### Using a Loop to Draw Multiple Figures
-Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
-
-## Part 5: Reading GPS Coordinates for the Polygons
+``` 
 
 ### Reading the GPS Coordinates File
 
