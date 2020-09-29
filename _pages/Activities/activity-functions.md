@@ -83,9 +83,10 @@ info:
         }
         ]]></script>  
         <br>
-        <div align="center">
+        <div align="left">
         <code>
         <pre>
+        // Add this to your build.gradle file if using a NetBeans project
         run{
             standardInput = System.in
         }
