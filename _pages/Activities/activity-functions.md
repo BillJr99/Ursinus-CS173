@@ -82,11 +82,22 @@ info:
             }
         }
         ]]></script>  
+        <br>
+        <div align="center">
+        <code>
+        <pre>
+        run{
+            standardInput = System.in
+        }
+        </pre>
+        </code>
+        </div>
       title: The <code>void</code> Keyword
       questions:
         - What does the <code>void</code> keyword mean as a return type?
         - What does it mean if a function does not have any parameters, like <code>sayHelloWorld()</code>?  For example, how do you call a function like this?
-        - The <code>+</code> operator works on Strings as well as on numeric values.  &quot;Adding&quot; two strings together concatenates or combines them.  Re-write the <code>sayHello()</code> method so that it executes in just one <code>System.out.println()</code> statement.      
+        - The <code>+</code> operator works on Strings as well as on numeric values.  &quot;Adding&quot; two strings together concatenates or combines them.  Re-write the <code>sayHello()</code> method so that it executes in just one <code>System.out.println()</code> statement.  
+        - "Note that in NetBeans, to use the <code>Scanner<code> on <code>System.in</code>, you must add the snippet above to your <code>build.gradle</code> file, which you will find under the &quot;Build Scripts&quot; section of your project pane."
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
 
