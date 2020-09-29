@@ -115,8 +115,6 @@ import edu.princeton.cs.algs4;
 ```
 
 ### Basic Drawing Functionality
-To draw a figure, you can use the following code snippet:
-
 You can draw arcs and circles using the following methods, once you add the jar to your `libs` directory (and add the dependency line to your `build.gradle` file), by calling one of these functions from your program:
 
 ```java
@@ -145,31 +143,6 @@ Now, create a function called `drawHappyFace` that draws a face centered at coor
 Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
 
 ## Part 5: Reading GPS Coordinates for the Polygons
-
-### Drawing a Custom Polygon using an Array of Coordinates
-Earlier, we drew circles and rectangles on the screen using x and y coordinates.  We can also draw custom polygons by providing the x and y coordinate of each corner (that is, where to draw each line of the polygon).  We can specify all the x and all the y coordinates at once using an array, which combines all the x and y points into a single variable.  Here is an example that you can try:
-
-```java
-// Assumption: the edu.princeton.cs.algs4 package is imported in this file with
-// import edu.princeton.cs.algs4;
-
-//... then inside your class, and inside main(), you can do this:
-
-// This is the RGB color of the polygon
-int red = 255;
-int green = 255;
-int blue = 255;
-
-// x and y is an array of coordinates of the corners of the polygon - the polygon will be automatically closed by connecting the last point to the first point.  Here, the points are (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), and, finally, back to (0, 0) automatically.
-double[] x = {0, .2, .2, 0 };
-double[] y = {0,  0, .2, .2};
-    
-Color color = new Color(red, green, blue);
-   
-StdDraw.setPenRadius(); // This resets the pen thickness to the default
-StdDraw.setPenColor(color); 
-StdDraw.filledPolygon(x, y); 
-``` 
 
 ### Reading the GPS Coordinates File
 
@@ -276,6 +249,33 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
 </details>
 
 Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
+
+### Drawing a Custom Polygon using an Array of Coordinates
+Earlier, we drew circles and rectangles on the screen using x and y coordinates.  We can also draw custom polygons by providing the x and y coordinate of each corner (that is, where to draw each line of the polygon).  We can specify all the x and all the y coordinates at once using an array, which combines all the x and y points into a single variable.  Here is an example that you can try:
+
+```java
+// Assumption: the edu.princeton.cs.algs4 package is imported in this file with
+// import edu.princeton.cs.algs4;
+
+//... then inside your class, and inside main(), you can do this:
+
+// This is the RGB color of the polygon
+int red = 255;
+int green = 255;
+int blue = 255;
+
+// x and y is an array of coordinates of the corners of the polygon - the polygon will be automatically closed by connecting the last point to the first point.  Here, the points are (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), and, finally, back to (0, 0) automatically.
+double[] x = {0, .2, .2, 0 };
+double[] y = {0,  0, .2, .2};
+    
+Color color = new Color(red, green, blue);
+   
+StdDraw.setPenRadius(); // This resets the pen thickness to the default
+StdDraw.setPenColor(color); 
+StdDraw.filledPolygon(x, y); 
+``` 
+
+Now that you have an array of x and y coordinates scaled from 0 to 1, you can draw on the screen using these polygons!  Pass the arrays to `filledPolygon` using the code snippet above (replacing the array we gave you) to draw each region in the country.  Better yet, you can make a function to do this, so that you can pass the array for each region and draw them one by one!
 
 ## Part 7: Generating Color Codes from Electoral Votes
 
