@@ -76,6 +76,14 @@ It is nice to be able to compute these averages without having to do so by hand,
 ### Computing an Equally-Weighted Average of Individual Grades
 Write a function `computeEqualAverage` that returns a `double`, and accepts `double`s for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as parameters to this function.  For this example, let's suppose you have three grades to compute (and, thus, three `double` parameters to this function).  This function adds up the grades and divides by the number of grades.
 
+This function goes outside of your `main()` function, but inside of your class curly braces, and will look like this:
+
+```java
+public static double computeEqualAverage(double grade1, double grade2, double grade3) {
+    // compute the average of grade1, grade2, grade3 here, and return that value
+}
+```
+
 ### Computing a Weighted Average of these Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts `double`s for your course averages as well as the weights (since there is a lab average and an assignment average, and each has a weight, you should have four `double` parameters to this function).  This function multiplies each grade by its corresponding weight, and adds the resulting products together.
 
