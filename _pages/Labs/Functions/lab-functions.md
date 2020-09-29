@@ -107,3 +107,5 @@ This program should be much shorter than if you had duplicated all the code to c
 Write a function called `computeAverage` that returns a `double` and accepts the individual values as parameters, like the others.  This time, add individual `double` paramters for the weights.  Replace your call to `computeWeightedAverage` with a call to this function, passing the appropriate weights. 
 
 Finally, replace your call to `computeEqualAverage` with a call to `computeAverage`, passing the appropriate weights there as well (what should the weights be when computing an equal-weight average?).
+
+If you are only using assignments and labs for your averages, you will only have four values to pass to `comptueAverage` rather than 6.  You can pass zeroes for the extra two parameters, which will give the last zero a weight of 0, having no effect.
