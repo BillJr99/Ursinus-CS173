@@ -51,7 +51,7 @@ For example, suppose your assignment grades are 100, 75, and 80.  Your average a
 <br><span>\((1.0 + 0.75 + 0.80) / 3 = 0.85\)</span> (or 85%)<br>
 </div>
 
-**Note that I converted each grade to a `double`; I did this by dividing each one by 100.0.  This ensures that I am using floating point division throughout my program, and not integer division, in my calculations!  I suggest you do this as well.**
+**Note that I converted each grade to a `double`; I did this by dividing each one by 100.0.  This ensures that I am using floating point division throughout my program, and not integer division, in my calculations!  I suggest you do this as well.  Before you `return` your result, you can multiply by 100.0 again so that your grade is on a scale from 0 to 100.**
 
 Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
 
@@ -67,9 +67,9 @@ For example, suppose assignments had a weight of 40%, and labs had a weight of 6
 
 ## Part 1: Computing a Course Grade from a Weighted Average
 
-In this lab, you will create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Then, you will compute your average lab grade, average assignment grade, etc., using equal weighted averaging (by adding up all the grades and dividing by the number of grades).  Then, you will take those computed averages, and compute a **weighted average** of them, using a weighted average (by multiplying each score by the weight of that score, and adding those products together).  You will print out your final grade.  You can make up grades for these as an example, and it is fine to only consider labs and assignments.  
+In this lab, you will create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Then, you will compute your average lab grade, average assignment grade, etc., using equal weighted averaging (by adding up all the grades and dividing by the number of grades).  Then, you will take those computed averages, and compute a **weighted average** of them, using a weighted average (by multiplying each score by the weight of that score, and adding those products together).  You will print out your final grade.  
 
-**Use a 60% weight for assignments and a 40% weight for labs (these are not the actual weights in our course, but will be fine for an example!).**
+**You can make up grades for these as an example, and it is fine to only consider labs and assignments.  Use a 60% weight for assignments and a 40% weight for labs (these are not the actual weights in our course, but will be fine for an example!).**
 
 It is nice to be able to compute these averages without having to do so by hand, but you probably noticed how tedious is was to copy and paste, or re-write, your averaging code over and over again!  We can use functions to reduce this workload.
 
