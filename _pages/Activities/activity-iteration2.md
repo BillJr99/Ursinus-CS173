@@ -67,11 +67,11 @@ info:
                 Scanner input = new Scanner(System.in);
 
                 do {
-                    System.out.println(“Can you guess my number?”);
+                    System.out.println("Can you guess my number?");
                     guess = input.nextInt(); // read an integer from the keyboard
                 } while(guess != value);
 
-                System.out.println(“You got it!”);
+                System.out.println("You got it!");
             }
         }
         ]]></script>        
