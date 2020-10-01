@@ -47,8 +47,6 @@ info:
         - What might you change in the code to print only the even values between 0 and 9, changing only the line beginning with for?
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        import java.util.Scanner;
-        
         public class Main {
             public static void main(String[] args) {
                 System.out.println("Each team gets 3 turns!");
