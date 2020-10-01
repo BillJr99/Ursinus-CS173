@@ -52,7 +52,7 @@ info:
         - Compare the <code>Double d</code> to the <code>Double pi</code> in the example above.  Why is <code>3.14</code> less than <code>Math.PI</code>?
         - Why is <code>comp2</code> the value <code>0</code>?
         - Why is <code>equal</code> <code>false</code> in this example, when <code>i1</code> and <code>i2</code> have the same value <code>5</code>?
-        - The <code>Integer</code> class has a <code>static</code> method <code>intValue()</code>.  How might you use that to compare the underlying field values of the Integer objects <code>i1</code> and <code>i2</code> in order to correct the line boolean <code>equal = (i1 == i2);</code>?    
+        - The <code>Integer</code> class has a <code>static</code> method <code>intValue()</code>.  How might you use that to compare the underlying field values of the Integer objects <code>i1</code> and <code>i2</code> in order to correct the line <code>boolean equal = (i1 == i2);</code>?    
         - Implement a method <code>boolean equals(Book _book)</code> that returns <code>true</code> if the title and author of <code>_book</code> is the same as the title and author of the Book object on which equals is called (in other words, <code>this</code>).
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaAccessorMutatorExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
