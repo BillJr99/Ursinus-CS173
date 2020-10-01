@@ -102,9 +102,7 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/cookieOrderA.html
       title: Cookie Order
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/cookieOrderB.html 
-      title: Cookie Order with Removal     
-    - link: https://repl.it/community/classrooms/20700/assignments/146519
-      title: <code>ArrayList</code> Practice    
+      title: Cookie Order with Removal       
       
 tags:
   - arrays

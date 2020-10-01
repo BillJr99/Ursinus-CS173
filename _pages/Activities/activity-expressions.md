@@ -164,11 +164,7 @@ info:
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html	
       title: Expressions and Assignments
-  additional_practice:
-    - link: https://repl.it/community/classrooms/20700/assignments/146539
-      title: Creating <code>String</code> Variables
-    - link: https://repl.it/community/classrooms/20700/assignments/146530
-      title: Creating <code>int</code> Variables  
+  additional_practice: 
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html
       title: Compound Assignment Operators
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/Exercises.html

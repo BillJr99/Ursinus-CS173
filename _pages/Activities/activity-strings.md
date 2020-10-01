@@ -55,32 +55,10 @@ info:
       title: String Methods
 
   additional_practice:
-    - link: https://repl.it/community/classrooms/20700/assignments/146459
-      title: Printing the length of a <code>String</code>
-    - link: https://repl.it/community/classrooms/20700/assignments/146544
-      title: The <code>charAt</code> Method
-    - link: https://repl.it/community/classrooms/20700/assignments/146534
-      title: The <code>indexOf</code> Method
-    - link: https://repl.it/community/classrooms/20700/assignments/146536
-      title: Substrings
-    - link: https://repl.it/community/classrooms/20700/assignments/146558
-      title: <code>String</code> Methods Practice
-    - link: https://repl.it/community/classrooms/20700/assignments/146561
-      title: The <code>substring</code> method
-    - link: https://repl.it/community/classrooms/20700/assignments/146555
-      title: Testing for Substrings at the End of a <code>String</code>
-    - link: https://repl.it/community/classrooms/20700/assignments/146553
-      title: Testing for <code>String</code> Equality
-    - link: https://repl.it/community/classrooms/20700/assignments/146570
-      title: Reversing a <code>String</code>     
-    - link: https://repl.it/community/classrooms/20700/assignments/146565
-      title: Mixed Case
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-12-practice-coding.html
       title: Coding with Objects
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
       title: <code>String</code> Manipulation
-    - link: https://repl.it/community/classrooms/20700/assignments/146564
-      title: <code>String</code> Pluralizer
 tags:
   - strings
   

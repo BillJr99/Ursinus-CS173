@@ -61,12 +61,6 @@ info:
       title: Step Tracker Exercise
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/timeFRQ.html
       title: Time Class
-    - link: https://repl.it/community/classrooms/20700/assignments/146494
-      title: Stocks      
-    - link: https://repl.it/community/classrooms/20700/assignments/146500
-      title: Encapsulation
-    - link: https://repl.it/community/classrooms/20700/assignments/146506
-      title: Computing the Mean of an Array
   reflective_prompts:
     - How do you think encapsulation helps make things easier for other programmers to use our code?
 

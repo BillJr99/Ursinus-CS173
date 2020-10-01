@@ -17,10 +17,6 @@ info:
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
       title: <code>String</code> Iteration    
-    - link: https://repl.it/community/classrooms/20700/assignments/146533
-      title: Looping over Every Other Character of a <code>String</code>
-    - link: https://repl.it/community/classrooms/20700/assignments/146572
-      title: Printing Only the Vowels of a <code>String</code>
 
   models:
     - model: |

@@ -56,11 +56,7 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/Exercises.html
       title: <code>if</code> Statements
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-10-practice-coding.html
-      title: Code Practice with <code>if</code> Statements
-    - link: https://repl.it/community/classrooms/20700/assignments/146540
-      title: Practice with Conditionals
-    - link: https://repl.it/community/classrooms/20700/assignments/146545
-      title: Even or Odd?           
+      title: Code Practice with <code>if</code> Statements         
 
 tags:
   - boolean

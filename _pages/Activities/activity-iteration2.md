@@ -27,10 +27,6 @@ info:
       title: Iteration Practice Problems
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQselfDivisorA.html
       title: Self Divisors using the Modulus, Loops, and Conditionals
-    - link: https://repl.it/community/classrooms/20700/assignments/146541
-      title: Prime Checker
-    - link: https://repl.it/community/classrooms/20700/assignments/146559  
-      title: The Fibonacci Sequence
       
   models:
     - model: |
