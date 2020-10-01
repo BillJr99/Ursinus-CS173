@@ -20,9 +20,7 @@ info:
 
   models:
     - model: |
-        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        import java.util.Scanner;
-        
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[       
         public class Main {
             public static void main(String[] args) {
                 String x = "test";
