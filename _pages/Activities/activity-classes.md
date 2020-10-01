@@ -30,6 +30,7 @@ info:
       questions:
         - What do you like better about this version of the program as opposed to the prior one?
         - What are the values of the underlying object variables (“fields”) title, author, and pages for the Book objects <code>b1</code>, <code>b2</code>, <code>b3</code>, and <code>b4</code>? 
+        - What happens if you set <code>b3 = b2</code> and then manipulate the fields of <code>b2</code> or <code>b3</code>?
         - What do you think the <code>this</code> keyword means?
         - Why do you think we put underscore characters in the input parameters to the constructor, like <code>_pages</code>?     
       embed: |
