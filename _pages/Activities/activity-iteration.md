@@ -62,7 +62,23 @@ info:
         ]]></script>     
       title: Nested Loops
       questions:
-        - How many times does the inner loop print statement execute?        
+        - How many times does the inner loop print statement execute?
+        - How many times does the outer loop print statement execute?
+        - How many times does the first print statement execute, and why?
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                for(int i = 0; i < 10; i++); {
+                    System.out.println("Team " + i);
+                }
+            }
+        }
+        ]]></script>     
+      title: Finding the Error
+      questions:
+        - What does this program do if you execute it?
+        - Why does this program fail to do what you would expect?
         
 tags:
   - iterations
