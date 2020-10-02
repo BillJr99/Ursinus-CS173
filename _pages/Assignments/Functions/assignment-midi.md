@@ -150,6 +150,8 @@ Did you notice that part of the song repeats?  The first part is exactly the sam
 
 Define a function `playMainPart()` that contains the code to play the `C4 C4 G4 G4 A4 A4 G4` part, and modify your program so that you call this function each of the two times you want to play that part in the song.
 
+This function should accept one parameter of type `MIDIPlayer`, and when you call it from main, pass the `player` variable to it.  This way, your function will have access to the `player` variable!
+
 ## Part 4: Make Up Your Own Song
 Every answer is correct - be creative and play some notes.  Explore the Notes class and the Instruments class for a few examples that you can play.  Let me know if you come up with something fun that you'd be willing to share - we can take a few minutes in class sometime for a few "code demonstrations."
 
