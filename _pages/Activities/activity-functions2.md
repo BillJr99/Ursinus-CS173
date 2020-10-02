@@ -14,10 +14,10 @@ info:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            /* Return the area of a circle, given its radius
-             * @param radius: the radius of the circle
-             *        Precondition: radius >= 0
-             * @return the area of the circle in square units of the radius
+            /* Given an integer value, multiply it by two and return that value
+             * @param value: the value to multiply by two
+             *        Precondition: an integer
+             * @return the number that is twice the value of the input variable
              */
             public static int twice(int value) {
                 int result = 2 * value;
