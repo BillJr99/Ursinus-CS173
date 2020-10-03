@@ -44,3 +44,5 @@ public class NewClassTest {
 	}
 }
 ```
+
+You will notice that the `junit` library comes with some new functions: `assertEquals` and `fail`.  `assertEquals` will check that the two parameters (for example, `result` and `expResult` above) are equal, and fail the test if they are not.  There are other `assert` methods as well, that check for other conditions.  The `fail` method automatically fails the test, and is suitable for use in your own `if` statements.  If your test function executes to the end without failing somewhere (either by failing an assertion or by calling `fail` directly), the test is considered to have passed.
