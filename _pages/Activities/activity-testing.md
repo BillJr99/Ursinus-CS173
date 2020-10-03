@@ -27,7 +27,7 @@ info:
       questions:
         - What's wrong with this code? (there is more than one answer!)
         - How many calls would you make to <code>triangleArea</code> before you decide that it is "passing?"  What paramter inputs would you supply to those calls?
-        - Visit [this guide](../NetBeans/JUnit) and design a unit test for `triangleArea`.  You can just write the code in your notes: there is no need to compile or execute it now (we will do this in lab instead!).
+        - "Visit <a href=\"../NetBeans/JUnit\">this guide</a> and design a unit test for <code>triangleArea</code>.  You can just write the code in your notes: there is no need to compile or execute it now (we will do this in lab instead!)."
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Random;
@@ -60,7 +60,7 @@ info:
       questions:
         - What makes this a difficult function to test? 
         - What could we do to better facilitate testing a function like this?
-        - Print the random number `randomValue` in the `isHeads` function when you compute it.  Then, call `rng.setSeed(100);` right before the call to `rng.nextDouble()`, and try running the program again.  What do you notice?
+        - "Print the random number <code>randomValue</code> in the <code>isHeads</code> function when you compute it.  Then, call <code>rng.setSeed(100);</code> right before the call to <code>rng.nextDouble()</code>, and try running the program again.  What do you notice?"
         
 reflective_prompts:
   - Suppose a friend suggests that you should be testing your software with every possible input to ensure that the code works.  Why is this impossible?  How should you strategize your unit tests instead?
