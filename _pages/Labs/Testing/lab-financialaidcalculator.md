@@ -45,7 +45,7 @@ tags:
   
 ---
 
-In this lab \[[^1]\], you will practice with `if` statements and `if/else` statements, as well as with unit tests with JUnit. It will also serve as a gentle introduction/sneak preview of methods.
+In this lab \[[^1]\], you will practice with `if` statements and `if/else` statements, as well as with unit tests with JUnit. It will also serve as practice writing and calling functions (also known as "methods").
 
 A non-governmental organization got a large donation to help families in need, but they have so many families to help that they need a program to help automate calculating the amount of financial assistance for each family. The amount of aid depends both on the annual household income and the number of children in the family. The rules are as follows:
 
