@@ -74,7 +74,9 @@ Create a method `double computeAssistance(double income, int numKids)`, and fill
  * @return The amount of financial assistance in dollars and cents (a double)
  */
 public static double computeAssistance(double income, int numKids) {
-    // Your code goes here
+    double assistanceAmount = 0.0; // We'll start with $0 assistance as a placeholder value
+    // Your code goes here; update assistanceAmount to the correct value according to the rules above
+    return assistanceAmount;
 }
 ```
 
@@ -114,7 +116,7 @@ The results of all of the tests will be shown in the console. For instance, for 
 
 The reason for this behavior is as follows. By default, the code returns a "placeholder value" of $0.0 for all income levels and number of children. The first test has a high income that should receive zero aid, so this passes just fine. However, the second case has a mid level income of $35,000 with 5 kids, that should receive a total of $5,000 in aid by the rules above. In this case, the placeholder value of $0.0 is definitely not correct, so this second test will fail until you update your code.
 
-To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
+To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
 ## Extra Credit (10%)
 
