@@ -60,11 +60,11 @@ A non-governmental organization got a large donation to help families in need, b
 
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
-Complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).
+In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
 
-Create a method `double computeAssistance(double income, int numKids)`, and fill in the method that computes the proper amount of assistance, following the rules above.
+Create a method `double computeAssistance(double income, int numKids)`.  This function will go inside your class, along with your `main()` function.  Fill in the method that computes the proper amount of assistance, following the rules above.
 
 ```java
 /* Compute the amount of financial assistance given to a family, 
