@@ -58,13 +58,25 @@ A non-governmental organization got a large donation to help families in need, b
     * If the household has only one child, then provide $2,000 total.
 * If the annual household income is less than $20,000, then provide $2100 per child.
 
-## Part 1: Soliciting User Input (15%)
+## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
 Complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).
 
-## Part 2: Financial Assistance Calculator (85%)
+## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
 
-Fill in the method that computes the proper amount of assistance, following the rules above.
+Create a method `double computeAssistance(double income, int numKids)`, and fill in the method that computes the proper amount of assistance, following the rules above.
+
+```java
+/* Compute the amount of financial assistance given to a family, 
+ * given their income and number of children.
+ * @param income The annual family income
+ * @param numKids The number of children in the family
+ * @return The amount of financial assistance in dollars and cents (a double)
+ */
+public static double computeAssistance(double income, int numKids) {
+    // Your code goes here
+}
+```
 
 ### Hints
 
