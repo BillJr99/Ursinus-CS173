@@ -111,7 +111,7 @@ Now, jar files added to the libs directory of your project will be available for
 In your program, you can add the following `import` line at the top:
 
 ```java
-import edu.princeton.cs.algs4;
+import edu.princeton.cs.algs4.*;
 ```
 
 ### Basic Drawing Functionality
@@ -126,8 +126,14 @@ You can draw arcs and circles using the following methods, once you add the jar 
 // x and y are the center coordinates of the circle
 // radius is the radius of the circle (or the circle traced by the arc)
 // angle1 and angle2 are the angles traced by the arc from the starting and ending points, respectively
-public static void arc(double x, double y, double radius, double angle1, double angle2)
-public static void circle(double x, double y, double radius)
+public static void StdDraw.arc(double x, double y, double radius, double angle1, double angle2)
+public static void StdDraw.circle(double x, double y, double radius)
+```
+
+For example, you can draw a circle centered at the middle of the window, with a radius of 0.5 (since the window has dimensions 1 by 1, this circle will take up the whole window):
+
+```java
+StdDraw.circle(0.5, 0.5, 0.5); // put this inside your public static void main() function.
 ```
 
 Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.  Your happy face should have a circle for a face, circles for eyes inside, and an arc for the nose and smile.  For fun, add some eyebrows with arcs, too!
