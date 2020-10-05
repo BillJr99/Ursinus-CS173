@@ -126,7 +126,8 @@ You can draw arcs and circles using the following methods, once you add the jar 
 // x and y are the center coordinates of the circle
 // radius is the radius of the circle (or the circle traced by the arc)
 // angle1 and angle2 are the angles traced by the arc from the starting and ending points, respectively
-//      ... where 0 is the 3 o'clock position, and 90 is 12 o'clock, 180 is 9 o'clock, and 270 is 6 o'clock.  angle1 is where to start tracing the circle, and angle2 is where to stop.
+//      ... where 0 is the 3 o'clock position, and 90 is 12 o'clock, 180 is 9 o'clock, and 270 is 6 o'clock.  
+//      ... angle1 is where to start tracing the circle, and angle2 is where to stop.
 public static void arc(double x, double y, double radius, double angle1, double angle2)
 public static void circle(double x, double y, double radius)
 ```
