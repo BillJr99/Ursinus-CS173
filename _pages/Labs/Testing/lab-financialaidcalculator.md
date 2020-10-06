@@ -122,7 +122,7 @@ Coming up with proper test cases is an important part of software engineering th
 
 ### Creating Unit Tests
 
-Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.
+Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.  You don't have to enter the code that you see there - that's for a test project that the tutorial walks through; instead, we'll give you test case code to use below right here on this lab page.
 
 ### Running Unit Tests
 
