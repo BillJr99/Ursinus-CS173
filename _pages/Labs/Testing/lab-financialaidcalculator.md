@@ -60,7 +60,7 @@ A non-governmental organization got a large donation to help families in need, b
 
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
-In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.
+In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.  Here is a [guide](https://www.w3schools.com/java/java_user_input.asp) on reading user input - consider the `scanner.nextDouble()` function which will read a number from the user keyboard and return a `double` variable for you to use.
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
 
