@@ -407,11 +407,11 @@ schedule:
     points: 100    
 - week: "4"
   date: "2"
-  title: "Strings" 
-  link: "Activities/Strings"  
+  title: "Functions Code Review" 
 - week: "4"
   date: "3"
   title: "Strings"
+  link: "Activities/Strings"  
 - week: "5"
   date: "0"
   title: "Iteration"
