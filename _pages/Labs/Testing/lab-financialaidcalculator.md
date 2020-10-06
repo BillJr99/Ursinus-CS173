@@ -45,7 +45,7 @@ tags:
   
 ---
 
-In this lab \[[^1]\], you will practice with `if` statements and `if/else` statements, as well as with unit tests with JUnit. It will also serve as practice writing and calling functions (also known as "methods").
+In this lab \[[^1]\], you will practice with `if` statements and `if`/`else` statements, as well as with unit tests with JUnit. It will also serve as practice writing and calling functions (also known as "methods").
 
 A non-governmental organization got a large donation to help families in need, but they have so many families to help that they need a program to help automate calculating the amount of financial assistance for each family. The amount of aid depends both on the annual household income and the number of children in the family. The rules are as follows:
 
@@ -94,7 +94,7 @@ public static double computeAssistance(double income, int numKids) {
 
 ### Hints
 
-It is possible to do this assignment with a single stream of if/else blocks that use boolean expressions, but you may instead want to do it with nested if statements in some of them (it's your choice). Recall that a nested if statement is a statement such as the following:
+It is possible to do this assignment with a single stream of `if`/`else` blocks that use boolean expressions, but you may instead want to do it with nested if statements in some of them (it's your choice). Recall that a nested if statement is a statement such as the following:
 
 ```java
 if (a > b) {
