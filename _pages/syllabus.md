@@ -433,9 +433,6 @@ schedule:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
     dlink: "Labs/MonteCarloPi"  
     points: 100
-  - dtitle: "Exercise: Strings"
-    dlink: "Modules/Strings/Exercise"
-    points: 3
 - week: "5"
   date: "2"
   title: "Iteration and the for loop"
@@ -452,15 +449,18 @@ schedule:
   date: "0"
   title: "Iteration"
   deliverables:
-    - dtitle: "Exercise: Iteration"
-      dlink: "./Modules/Iteration/Exercise"    
-      points: 3  
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
 - week: "6"
   date: "1"
   title: "Iteration and the do loop"  
   deliverables:
     - dtitle: "Participation: First Activity Notebook Check"
-      points: 10
+      points: 10  
+    - dtitle: "Exercise: Iteration"
+      dlink: "./Modules/Iteration/Exercise"    
+      points: 3  
 - week: "6"
   date: "2"
   title: "Coding Style and the Code Review"
