@@ -43,6 +43,10 @@ Imagine a unit square with a circle inscribed.  The diameter of the circle is 1,
 
 **Question: what is the area of the square, and what is the area of the circle?**
 
+See [this article](https://academo.org/demos/estimating-pi-monte-carlo/) for an animation showing the estimation of the value of <span>\\(\pi\\)</span> as the ratio of the number of points that fall inside of the area of the circle to the number of points that fall inside the area of the square.
+
+## What to Do
+
 Generate 10 pairs of random numbers (x and y coordinates) between 0 and 1.  Only some (or perhaps none!) of these points lie inside the circle, but all of these points lie inside the unit square.  The ratio of the points inside the circle to the points inside the square should approximate the ratio of the area of the circle to the area of the square, given enough points.
 
 <span>\\(\frac{A_{circle}}{A_{square}} = \frac{\pi \times r^{2}}{s^{2}}\\)</span>
