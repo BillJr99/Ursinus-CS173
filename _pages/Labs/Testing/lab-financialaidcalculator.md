@@ -65,10 +65,19 @@ A non-governmental organization got a large donation to help families in need, b
 In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.  Here is a [guide](https://www.w3schools.com/java/java_user_input.asp) on reading user input - consider the `nextDouble()` function which will read a number from the user keyboard and return a `double` variable for you to use, and the `nextInt()` function which returns an `int`.  For example:
 
 ```java
+// don't forget to import java.util.Scanner; at the top (under the package line!)
+
+// the code below goes in your main() function
 Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
 // do this again using nextInt() for numKids
+```
+
+To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file:
+
+```
+run.standardInput = System.in;
 ```
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
