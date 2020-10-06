@@ -55,7 +55,8 @@ A non-governmental organization got a large donation to help families in need, b
     * If the household has two or fewer children, provide $500 per child.
 * If the annual household income is from $20,000 (inclusive) to $30,000 (not inclusive), then apply the following rules:
     * If the household has at least two children, then provide $1,500 per child.
-    * If the household has only one child, then provide $2,000 total.
+    * If the household has only one child (don't forget to use `==` for this!), then provide $2,000 total.
+    * If the household has no children, then no aid is provided.
 * If the annual household income is less than $20,000, then provide $2,100 per child.
 
 **Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!
