@@ -108,9 +108,12 @@ if (a > b && c > d) {
 
 Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in Netbeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
 
-Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it to create a unit test class with functions to test your program.
+### Creating Unit Tests
 
-### Creating and Running Unit Tests
+Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.
+
+### Running Unit Tests
+
 To run the unit tests, right click on this file and select "run," as shown below:
 
 ![Running a Unit Test in NetBeans](../images/lab-financialaidcalculator/RunUnitTest.png)
