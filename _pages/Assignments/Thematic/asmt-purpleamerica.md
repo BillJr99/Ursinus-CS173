@@ -146,6 +146,8 @@ Using these methods and examples, try drawing a "happy face" at the center of th
 ### Creating a Function to Draw a Figure
 Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
 
+Instead of hard-coding the `x`, `y`, and `radius` values for your face, calculate them based on the input parameters.  For example, your eyes might have a `y` value that is equal to the given `y` parameter plus or minus one-half the `radius` (this is just an example - feel free to play with the values like this and see where the eyes end up for yourself!).  I suggest hard-coding values at first to see the relationship between `x`, `y`, and `radius`, and the ultimate placement of the facial features.
+
 ## Part 4: Using Iteration to Draw Several Figures
 
 ### Using a Loop to Draw Multiple Figures
