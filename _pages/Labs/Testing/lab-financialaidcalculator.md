@@ -114,7 +114,7 @@ Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUn
 
 ### Running Unit Tests
 
-To run the unit tests, right click on this file and select "run," as shown below:
+To run the unit tests, right click on this unit test file (this is not the main class file that you normally edit in your project, but rather the unit test class file that you just created above!), and select `Run File`, as shown below:
 
 ![Running a Unit Test in NetBeans](../images/lab-financialaidcalculator/RunUnitTest.png)
 
