@@ -77,7 +77,10 @@ Create a method `double computeAssistance(double income, int numKids)`.  This fu
  */
 public static double computeAssistance(double income, int numKids) {
     double assistanceAmount = 0.0; // We'll start with $0 assistance as a placeholder value
+    
     // Your code goes here; update assistanceAmount to the correct value according to the rules above
+    // You can just update assistanceAmount inside the if statements, since we declared it at the top of this function.
+    
     return assistanceAmount;
 }
 ```
