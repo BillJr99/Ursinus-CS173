@@ -23,7 +23,7 @@ This will create a new file for testing with an example test method for each met
 
 ![]({{ site.baseurl }}/images/netbeans/RunTests.png)
 
-If you are interested in trying this test case out for yourself, here is the code from the screenshot above.  This test case asks if 1 is an even number, and should pass because it expects that the function will return  `false`.
+If you are interested in trying this test case out for yourself, here is the code from the screenshot above.  This test case asks if `1` is an even number, and should pass because it expects that the function will return  `false`.
 
 ```java
 import org.junit.*;
