@@ -61,6 +61,9 @@ A non-governmental organization got a large donation to help families in need, b
 
 **Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!
 
+## Part 0: Getting Started
+Create a new NetBeans project, but select a Maven project instead of a Gradle project for this one (some installations do not support the unit test framework in Gradle).  Right click on your package name under the project Source Packages, and click `New` and then `New Class`.  Call the class `Main` and click OK to get started.
+
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
 In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.  Here is a [guide](https://www.w3schools.com/java/java_user_input.asp) on reading user input - consider the `nextDouble()` function which will read a number from the user keyboard and return a `double` variable for you to use, and the `nextInt()` function which returns an `int`.  For example:
@@ -136,7 +139,7 @@ Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUn
 
 ### Running Unit Tests
 
-To run the unit tests, right click on this unit test file (this is not the main class file that you normally edit in your project, but rather the unit test class file that you just created above!), and select `Test File`, as shown below (it may be called `Run File` as well, which is also fine!):
+**To run the unit tests, right click on this unit test file (this is not the main class file that you normally edit in your project, but rather the unit test class file that you just created above!), and select `Test File`, as shown below (it may be called `Run File` as well, which is also fine!).**
 
 ![Running a Unit Test in NetBeans](../images/lab-financialaidcalculator/RunUnitTest.png)
 
@@ -146,7 +149,11 @@ The results of all of the tests will be shown in the console. For instance, for 
 
 The reason for this behavior is as follows. By default, the code returns a "placeholder value" of $0.0 for all income levels and number of children. The first test has a high income that should receive zero aid, so this passes just fine. However, the second case has a mid level income of $35,000 with 5 kids, that should receive a total of $5,000 in aid by the rules above. In this case, the placeholder value of $0.0 is definitely not correct, so this second test will fail until you update your code.
 
-To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
+To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  
+
+**Using Maven, the `@Test` annotation might be called `org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
+
+The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
 ## Extra Credit (10%)
 
