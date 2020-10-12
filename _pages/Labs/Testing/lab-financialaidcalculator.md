@@ -151,7 +151,7 @@ The reason for this behavior is as follows. By default, the code returns a "plac
 
 To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  
 
-**Using Maven, the `@Test` annotation might be called `org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
+**Using Maven, the `@Test` annotation might be called `@org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
 
 The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
