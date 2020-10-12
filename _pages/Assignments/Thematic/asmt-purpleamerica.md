@@ -153,6 +153,16 @@ Instead of hard-coding the `x`, `y`, and `radius` values for your face, calculat
 ### Using a Loop to Draw Multiple Figures
 Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
 
+You might, for example, have a loop like this:
+
+```java
+for(int i = 0; i < 2; i++) { // draw three faces
+    // TODO: Compute x and y based on the value of i
+    
+    // TODO: Call drawHappyFace with these values!
+}
+```
+
 ## Part 5: Reading GPS Coordinates for the Polygons
 
 ### Reading the GPS Coordinates File
