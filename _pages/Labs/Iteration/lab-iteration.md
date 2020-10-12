@@ -61,3 +61,34 @@ Amazingly, the ratio of data points inside the circle to those inside the square
 We know that a point `(x, y)` lies within a unit circle if <span>\\(x^{2} + y^{2} \leq 1\\)</span>.  Thus, you can create a program with a function `estimatePi` that accepts a parameter that specifies the number of pairs of random numbers `(x, y)` to generate.  Return the percentage of those random pairs that lie within the unit circle.
 
 Call this function for various numbers of iterations (for example, 10, 100, 1000, 10000, 100000, 1000000, and 10000000), and compute the error from the actual value of <span>\\(\frac{\pi}{4}\\)</span>.  Now, run it a second time: do the error values change?  If so, by how much?
+
+Here is an example loop that you might include in your `estimatePi` function, to get you started.  I recommend accepting an `int` parameter in `estimatePi` called `iterations` that indicates how many times to run the loop each time, as follows:
+
+```java
+public static double estimatePi(int iterations) {
+    int inCircle = 0;
+    
+    for(int i = 0; i < iterations; i++) {
+        // TODO: Compute a random x value
+        
+        // TODO: Compute a random y value
+        
+        // TODO: Compute x-squared and y-squared
+        
+        // TODO: if x-squared and y-squared is less than or equal to 1, increment a counter inCircle
+        
+    }
+    
+    // TODO: your estimate of pi is equal to four times the counter divided by iterations
+    
+    // TODO: Return the estimate of pi
+}
+
+public static void main(String[] args) {
+    double piEstimate = estimatePi(1000); // use 1000 iterations this time
+    
+    // TODO: Your error is Math.PI - piEstimate: print this error, your number of iterations, and your estimate of pi
+    
+    // TODO: Try putting this main code into a loop of its own, that starts with 10 iterations, and multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  This way, you will automatically run all your trials for you!
+}
+```
