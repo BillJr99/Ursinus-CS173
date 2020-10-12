@@ -156,8 +156,10 @@ Using a loop in your `main` function, call `drawHappyFace` to draw faces at seve
 You might, for example, have a loop like this:
 
 ```java
-for(int i = 0; i < 2; i++) { // draw three faces
+for(int i = 1; i <= 3; i++) { // draw three faces
     // TODO: Compute x and y based on the value of i
+    // ... remember that the coordinate plane goes from x = [0, 1] and y = [0, 1]
+    // ... so your calculated x and y points should be within 0 and 1
     
     // TODO: Call drawHappyFace with these values!
 }
