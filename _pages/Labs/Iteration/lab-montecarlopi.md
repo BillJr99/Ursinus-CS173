@@ -80,6 +80,8 @@ public static double estimatePi(int iterations) {
     }
     
     // TODO: your estimate of pi is equal to four times the counter divided by iterations
+    // ... but watch out for integer division!  Consider multiplying one of the integers by 1.0 
+    // ... during the division to ensure that you use floating point values that do not round!
     
     // TODO: Return the estimate of pi
 }
@@ -89,6 +91,8 @@ public static void main(String[] args) {
     
     // TODO: Your error is Math.PI - piEstimate: print this error, your number of iterations, and your estimate of pi
     
-    // TODO: Try putting this main code into a loop of its own, that starts with 10 iterations, and multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  This way, you will automatically run all your trials for you!
+    // TODO: Try putting this main code into a loop of its own, that starts with 10 iterations, and 
+    // multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  
+    // This way, you will automatically run all your trials for you!
 }
 ```
