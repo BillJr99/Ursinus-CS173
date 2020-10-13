@@ -66,17 +66,17 @@ files:
                  * to an array of individual characters.
                  * https://www.geeksforgeeks.org/sort-a-string-in-java-2-different-ways/
                  */
-                char xArray = x.toCharArray();
-                char yArray = y.toCharArray();
+                char[] xArray = x.toCharArray();
+                char[] yArray = y.toCharArray();
                 
                 xArray = Arrays.sort(xArray); // xArray now contains "abt"
                 yArray = Arrays.sort(yArray); // yArray now contains "abt"
                 
                 // Reconstruct the Strings from the sorted arrays
-                String x = new String(xArray); // x now contains "abt"
-                String y = new String(yArray); // y now contains "abt"
+                String x2 = new String(xArray); // x now contains "abt"
+                String y2 = new String(yArray); // y now contains "abt"
                 
-                boolean isPalendrome = CompareStrings.compare(x, y);
+                boolean isPalendrome = CompareStrings.compare(x2, y2);
                 
                 System.out.println(isPalendrome);
             }
