@@ -19,21 +19,11 @@ processor:
   submitformlink: false
   feedbackprocess: | 
     let ans1 = feedbackString.split("\n")[0].toLowerCase();
-    let ans2 = feedbackString.split("\n")[2].toLowerCase();
+    let ans2 = feedbackString.split("\n")[1].toLowerCase();
   correctcheck: |
     ans1 === 'true' && ans2 === 'false'
  
-files:
-  - filename: "Arrays.java"
-    name: arrays
-    ismain: false
-    isreadonly: true
-    isvisible: false
-    code: |
-        public class Arrays {
-            public static char[] sort(char[] a) { int n = a.length; for (int i = 1; i < n; ++i) { int k = a[i]; int j = i - 1; while (j >= 0 && a[j] > k) { a[j + 1] = a[j]; j = j - 1; } a[j + 1] = k; } return a; }
-        }
-    
+files:    
   - filename: "CompareStrings.java"
     name: comparestrings
     ismain: false
@@ -49,8 +39,12 @@ files:
             * @return true if the strings are equal, false if not
             */        
             public static boolean compare(String str1, String str2) {
-                // TODO: Fill this in
-                return false;
+                // TODO: If str1.length() is not equal to str2.length(), return false
+            
+                // TODO: Loop over each character and check that str1.charAt(i) equals str2.charAt(i).  
+                // ... If not, return false
+                
+                return true;
             }
         }
 
@@ -61,34 +55,20 @@ files:
     isvisible: true
     code: | 
         public class Driver {
-            public static void checkForPalendromes(String x, String y) {
-                /* Sorting the letters in a string by converting the string 
-                 * to an array of individual characters.
-                 * https://www.geeksforgeeks.org/sort-a-string-in-java-2-different-ways/
-                 */
-                char[] xArray = x.toCharArray();
-                char[] yArray = y.toCharArray();
+            public static void checkEqual(String x, String y) {
+                boolean isEqual = CompareStrings.compare(x, y);
                 
-                xArray = Arrays.sort(xArray); // xArray now contains "abt"
-                yArray = Arrays.sort(yArray); // yArray now contains "abt"
-                
-                // Reconstruct the Strings from the sorted arrays
-                String x2 = new String(xArray); // x now contains "abt"
-                String y2 = new String(yArray); // y now contains "abt"
-                
-                boolean isPalendrome = CompareStrings.compare(x2, y2);
-                
-                System.out.println(isPalendrome);
+                System.out.println(isEqual);
             }
                 
             public static void main(String[] args) {
                 String x = "bat";
-                String y = "tab";
-                checkForPalendromes(x, y);
+                String y = "bat";
+                checkEqual(x, y);
 
                 String a = "testing";
                 String b = "debugging";
-                checkForPalendromes(a, b);
+                checkEqual(a, b);
             }
         }
 
