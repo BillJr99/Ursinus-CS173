@@ -82,6 +82,7 @@ public static double estimatePi(int iterations) {
     // TODO: your estimate of pi is equal to four times the counter divided by iterations
     // ... but watch out for integer division!  Consider multiplying one of the integers by 1.0 
     // ... during the division to ensure that you use floating point values that do not round!
+    // ... if you get 3.0 as your estimate of pi, you might be integer dividing here by mistake.
     
     // TODO: Return the estimate of pi
 }
