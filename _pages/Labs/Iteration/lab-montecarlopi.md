@@ -69,9 +69,9 @@ public static double estimatePi(int iterations) {
     int inCircle = 0;
     
     for(int i = 0; i < iterations; i++) {
-        // TODO: Compute a random x value
+        // TODO: Compute a random x value using Math.random()
         
-        // TODO: Compute a random y value
+        // TODO: Compute a random y value using Math.random()
         
         // TODO: Compute x-squared and y-squared
         
@@ -94,5 +94,6 @@ public static void main(String[] args) {
     // TODO: Try putting this main code into a loop of its own, that starts with 10 iterations, and 
     // multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  
     // This way, you will automatically run all your trials for you!
+    // ... Try using a for loop that counts from i = 10 up to i = 1000000, with i*=10 to multiply i by 10
 }
 ```
