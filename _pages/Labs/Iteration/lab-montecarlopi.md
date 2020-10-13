@@ -96,5 +96,6 @@ public static void main(String[] args) {
     // multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  
     // This way, you will automatically run all your trials for you!
     // ... Try using a for loop that counts from i = 10 up to i = 1000000, with i*=10 to multiply i by 10
+    // ... all your code inside main (the call to piEstimate, and your print statements) will go inside this for loop!
 }
 ```
