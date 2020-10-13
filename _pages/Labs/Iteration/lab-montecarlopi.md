@@ -75,7 +75,8 @@ public static double estimatePi(int iterations) {
         
         // TODO: Compute x-squared and y-squared
         
-        // TODO: if x-squared and y-squared is less than or equal to 1, increment a counter inCircle (in other words, set inCircle equal to inCircle plus 1)
+        // TODO: if x-squared and y-squared is less than or equal to 1, increment a counter inCircle 
+        // ... (in other words, set inCircle equal to inCircle plus 1)
         
     }
     
@@ -90,12 +91,14 @@ public static double estimatePi(int iterations) {
 public static void main(String[] args) {
     double piEstimate = estimatePi(1000); // use 1000 iterations this time
     
-    // TODO: Your error is Math.PI - piEstimate: print this error, your number of iterations, and your estimate of pi
+    // TODO: Your error is Math.PI - piEstimate: print this error, your number of iterations, 
+    // ... and your estimate of pi
     
     // TODO: Try putting this main code into a loop of its own, that starts with 10 iterations, and 
     // multiplies by 10 each time through the loop, until you have performed 10000000 iterations.  
     // This way, you will automatically run all your trials for you!
     // ... Try using a for loop that counts from i = 10 up to i = 1000000, with i*=10 to multiply i by 10
-    // ... all your code inside main (the call to piEstimate, and your print statements) will go inside this for loop!
+    // ... all your code inside main (the call to piEstimate, and your print statements) will go inside 
+    // ... this for loop!
 }
 ```
