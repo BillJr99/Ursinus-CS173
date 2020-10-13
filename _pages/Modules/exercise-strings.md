@@ -41,7 +41,7 @@ files:
     isvisible: true
     code: |
         public class CompareStrings {
-            /**
+            /*
             * Compare the strings str1 and str2, character by character, 
             * and return true if they are equal and the same size.
             * @param str1 The first string to compare
