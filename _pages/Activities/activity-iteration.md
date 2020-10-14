@@ -79,6 +79,29 @@ info:
       questions:
         - What does this program do if you execute it?
         - Why does this program fail to do what you would expect?
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                int numHeads = 0;
+                
+                for(int i = 0; i < 10; i++); {
+                    double randomNumber = Math.random();
+                    
+                    if(randomNumber > 0.5) {
+                        numHeads = numHeads + 1;
+                    }
+                }
+                
+                System.out.println(numHeads); // heads or tails
+            }
+        }
+        ]]></script>     
+      title: Flipping a Coin
+      questions:
+        - How many times would you expect to land on heads?
+        - What would you change to flip the coin 100 times?  How many heads would you expect then?
+        - What would be the effect of changing the constant in the program from 0.5 to 0.3?
         
 tags:
   - iterations
