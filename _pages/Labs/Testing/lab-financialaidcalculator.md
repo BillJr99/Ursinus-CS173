@@ -153,6 +153,8 @@ To get full credit for this part of the assignment, **you must create enough uni
 
 **Using Maven, the `@Test` annotation might be called `@org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
 
+If there is a `testMain` test, you can remove that.  It is only necessary to test the `computeAssistance` function, since `main` just obtains user input and then passes them to the `computeAssistance` function.  So these tests automatically run your function for you without asking for input!
+
 The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
 ## Extra Credit (10%)
