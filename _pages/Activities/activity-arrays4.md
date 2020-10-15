@@ -15,7 +15,9 @@ info:
 
   models:
     - model: |
-        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[   
+        import java.util.ArrayList;
+        
         public class Main {
            public static void main(String[] args) {
               /* This is a class that encapsulates the behavior of an array,
