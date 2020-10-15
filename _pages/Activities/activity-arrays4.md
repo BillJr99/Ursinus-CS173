@@ -40,7 +40,7 @@ info:
               
               // This is called an Enhanced For Loop - a nice shortcut!
               for(String item: arr) {
-                System.out.println(x);
+                System.out.println(item);
               }
            }
         }
