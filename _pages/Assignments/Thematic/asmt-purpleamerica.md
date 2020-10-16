@@ -118,6 +118,11 @@ import edu.princeton.cs.algs4.*;
 You can draw arcs and circles using the following methods, once you add the jar to your `libs` directory (and add the dependency line to your `build.gradle` file), by calling one of these functions from your program:
 
 ```java
+// DO NOT COPY THIS PART OF THE CODE - THIS IS JUST A REFERENCE!
+// These are like Math.pow() - functions that the jar file provides
+// now you have functions called StdDraw.circle and StdDraw.arc, that 
+// look like the below functions.
+
 // Assumption: the edu.princeton.cs.algs4 package is imported in this file with
 // import edu.princeton.cs.algs4;
 
