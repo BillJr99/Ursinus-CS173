@@ -441,13 +441,13 @@ schedule:
     rlink: false  
 - week: "5"
   date: "3"
+  title: "Iteration"
+- week: "6"
+  date: "0"
   title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
-    rlink: false    
-- week: "6"
-  date: "0"
-  title: "Iteration"
+    rlink: false   
   deliverables:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
