@@ -467,6 +467,8 @@ schedule:
   readings:
   - rtitle: "Style Guide"
     rlink: "Style-Guide"
+  - rtitle: "AP Computer Science A YouTube Video Playlist"
+    rlink: "https://www.youtube.com/playlist?list=PLoGgviqq4845xKOY11PnkE7aqJC7-bYrd&app=desktop"
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"    
