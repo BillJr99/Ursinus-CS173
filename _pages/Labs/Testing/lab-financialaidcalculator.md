@@ -78,7 +78,7 @@ double income = myScanner.nextDouble();
 // do this again using nextInt() for numKids
 ```
 
-To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file:
+To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file, if you are using Gradle (if you are not using Gradle project, you can skip this step!):
 
 ```
 run.standardInput = System.in;
