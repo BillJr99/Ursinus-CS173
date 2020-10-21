@@ -82,15 +82,13 @@ Using the two functions you just wrote to compute the complement and the reverse
 ## Part 3: Inserting a Chain
 Given an NA chain string, an NA subchain, and a position, insert the subchain into the chain.  For example, `insert("ACCG", "TT", 2)` would return "ACTTCG" (recall that the indices start at 0, so the TT occupies position 3 and 4 in the string, which are indices 2 and 3.
 
-## Part 4: Removing a Chain
-Given an NA chain string and an NA subchain, remove all instances of the subchain from the chain.  For example, `remove("ACCGCC", "CC")` would return "AG".
-
-Note that Java Strings now have a method `replaceAll` that will do this for you.  I definitely encourage you to use this.  However, you may notice that these helper methods don't always exist across many of the string operations we're exploring here.  So, there is significant value in practicing with string indexing.  For full credit on this problem, implement your own replacement algorithm to accomplish this without calling a `replace` or `replaceAll` string method.  However, it would be a good idea to write a unit test that compares your results to a call to `replaceAll`, and you should feel both free and encouraged to do so!
-
-**Question: Why might you need to create an `ArrayList` to represent your new strings as you construct them, before returning the final result?  Why can't you simply construct a new empty string and append each character to it as you iterate?**
-
-## Part 5: Testing
+## Part 4: Testing
 
 Write unit tests for each part of this assignment.  You will need more than one test case per part.  Your test cases should include boundary conditions (for example, inserting or removing to the beginning, middle, and end of a string).  Your goal is to uncover errors with your test cases.  Because of 0-indexing, and off-by-one errors, an algorithm can appear to work fine as long as you manipulate the middle of a chain, but then break when you are dealing with the beginning or end.  Even I made an error while completing this assignment that was only uncovered when I tried to execute it at the end of a chain.  These mistakes are very easy to make, and you should assume that your code contains these bugs.  Think of testing like a game: your goal is to cause your software to break (that's how we identify bugs to fix and make our software more robust!).  
 
 **Question What test cases would you write in order to try to do that?**
+
+## Extra Credit (10%): Removing a Chain
+Given an NA chain string and an NA subchain, remove all instances of the subchain from the chain.  For example, `remove("ACCGCC", "CC")` would return "AG".
+
+Note that Java Strings now have a method `replaceAll` that will do this for you.  I definitely encourage you to use this.  However, you may notice that these helper methods don't always exist across many of the string operations we're exploring here.  So, there is significant value in practicing with string indexing.  For full credit on this problem, implement your own replacement algorithm to accomplish this without calling a `replace` or `replaceAll` string method.  However, it would be a good idea to write a unit test that compares your results to a call to `replaceAll`, and you should feel both free and encouraged to do so!
