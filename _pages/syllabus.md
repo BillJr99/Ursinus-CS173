@@ -504,10 +504,6 @@ schedule:
 - week: "7"
   date: "2"
   title: "Arrays" 
-  deliverables:
-  - dtitle: "Lab: Array Averages Due"
-    dlink: "Labs/ArrayAveraging"    
-    points: 100
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false    
@@ -531,6 +527,9 @@ schedule:
   date: "1"
   title: "Lab: ASCII Art"    
   deliverables:
+  - dtitle: "Lab: Array Averages Due"
+    dlink: "Labs/ArrayAveraging"    
+    points: 100  
   - dtitle: "Lab: ASCII Art Handed Out"
     dlink: "Labs/ASCIIArt" 
     points: 100
