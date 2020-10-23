@@ -235,7 +235,7 @@ Count of the Number of Polygon Latitude/Longitude corners`
  <blank line> 
 ```
 
-The region name (for example, the name of the county) is followed by the state name (for example, PA for Pennsylvania), followed by the number of coordinates.  Like before, Latitude and Longitude are separated by three spaces, but there is also a space at the beginning of each Latitude/Longitude line.
+The region name (for example, the name of the county) is followed by the state name (for example, PA for Pennsylvania), followed by the number of coordinates.  Like before, Latitude and Longitude are separated by three spaces, but there is also a space at the beginning of each Latitude/Longitude line.  
 
 ### Parsing the Region File
 Loop through the ArrayList, reading each line of text, and generate two arrays of doubles for each region.  These arrays (x and y) will contain the latitude/longitude coordinates of the polygon defined by each region in the file.  Every time you read a new region (from the start of the region all the way to a blank line indicating the end of the region), create a `HashMap` to store the values for that region.  The `HashMap` should contain the following keys:
@@ -254,8 +254,7 @@ You can use an ArrayList to store all the HashMaps from all the regions you just
 <details>
   <summary>How would you know if you have reached a newline in the file, and are thus finished reading a region?  (Click to reveal)</summary>
   
-  Each region is separated by a newline.  After removing whitespace from the line, the length of a blank line will be 0.
-  
+  Each region is separated by a newline.  After removing whitespace from the line, the length of a blank line will be 0.  You can use the `String.strip()` method to remove leading and trailing whitespace from a string, for example: `line = line.strip();`.
 </details>
 
 Then, you will need to convert the Latitude/Longitude coordinates from a String to a double.  The standard library function `Double.parseDouble()` will do this for you, by taking a String parameter and returning its numeric value as a `double`.
