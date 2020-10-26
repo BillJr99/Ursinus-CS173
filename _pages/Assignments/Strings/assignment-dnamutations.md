@@ -60,6 +60,7 @@ Given two strings, compute their percentage difference, character by character. 
 ## Part 2: Detecting an Antisense
 Next, write a function to search one NA chain for the existence of an antisense.  As a parameter, pass the sense chain whose antisense you are searching for.  Return a boolean if you find it.  This function will need to call two other functions - one to compute the complement of the sense (the "antisense"), and next function to reverse that antisense chain string.  If you do those two things first, detecting the antisense becomes a simpler matter of searching one string for another.
 
+### An Example
 For example, `public static boolean detectAntisense(String chain, String sense)` should compute the complement of `sense`, reverse the variable `sense`, and then search for `sense` in `chain`.  As a specific example, 
 
 `detectAntisense("ACATGCTATGTA", "ACAT");`
@@ -67,6 +68,25 @@ For example, `public static boolean detectAntisense(String chain, String sense)`
 should compute the complement of the sense `ACAT` (which is `TGTA`), and then reverse it to obtain the antisense (which is `ATGT`).  Finally, return `true` if the antisense `ATGT` is found in the `chain` (which is `ACATGCTATGTA`) -- and in this case, it is (so we return `true`)!
 
 Loop through the string, character by character, and obtain a substring starting at that point (up to the length of the antisense you're seeking).  If that substring matches your antisense, your search is successful.  If you reach the end of the string without finding the antisense, return `false`.
+
+### Looping over a String
+To loop over every character of a string, you can loop as follows:
+
+```java
+for(int i = 0; i < str.length(); i++) {
+    System.out.println(str.charAt(i)); // as an example, this prints every character in the string!
+}
+```
+
+Or, to loop backwards (for example, to reverse a `String`), you can try this:
+
+```java
+String reversed = "";
+for(int i = str.length() - 1; i >= 0; i--) { // why str.length() - 1?
+    reversed = reversed + str.charAt(i); // append to the new String, one character at a time
+                                         // from the end to the beginning of the original String
+}
+```
 
 When manipulating string indices, it is very important to avoid off-by-one errors.  For example, the `substring(start, end)` method starts at the index `start` but ends at the index `end - 1`, which can be confusing.  Compounding the confusion is that string indices start counting at 0, like most arrays do.  From the [javadoc documentation](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#substring(int,%20int)) for `substring`, we see that the `substring(1, 5)` of "smiles" is "mile".  
 
