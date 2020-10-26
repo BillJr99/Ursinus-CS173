@@ -67,7 +67,7 @@ For example, `public static boolean detectAntisense(String chain, String sense)`
 
 should compute the complement of the sense `ACAT` (which is `TGTA`), and then reverse it to obtain the antisense (which is `ATGT`).  Finally, return `true` if the antisense `ATGT` is found in the `chain` (which is `ACATGCTATGTA`) -- and in this case, it is (so we return `true`)!
 
-Loop through the string, character by character, and obtain a substring starting at that point (up to the length of the antisense you're seeking).  If that substring matches your antisense, your search is successful.  If you reach the end of the string without finding the antisense, return `false`.
+You can use the string `indexOf()` method to search for one String inside another.  If `indexOf` returns `-1`, meaning you did not find the antisense in the chain, return `false`.  Otherwise, return `true`.
 
 ### Looping over a String
 To loop over every character of a string, you can loop as follows:
