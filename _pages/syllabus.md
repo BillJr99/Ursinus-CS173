@@ -519,8 +519,7 @@ schedule:
     points: 100
 - week: "8"
   date: "0"
-  title: "Arrays"
-      
+  title: "Arrays"    
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
