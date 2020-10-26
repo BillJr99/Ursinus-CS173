@@ -492,6 +492,9 @@ schedule:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
     points: 3  
+  readings:  
+  - rtitle: "Ch. 6.1"
+    rlink: false     
 - week: "7"
   date: "1"
   title: "Lab: Arrays"
@@ -503,13 +506,10 @@ schedule:
     points: 10
 - week: "7"
   date: "2"
-  title: "Arrays" 
-  readings:  
-  - rtitle: "Ch. 6.1"
-    rlink: false    
+  title: "String Iteration Workshop" 
 - week: "7"
   date: "3"
-  title: "2D Arrays" 
+  title: "Arrays" 
   deliverables:  
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
@@ -519,10 +519,8 @@ schedule:
     points: 100
 - week: "8"
   date: "0"
-  title: "ArrayLists and Generic/Template Data Structures"
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false        
+  title: "Arrays"
+      
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
@@ -538,10 +536,16 @@ schedule:
     points: 3    
 - week: "8"
   date: "2"
+  title: "ArrayLists and Generic/Template Data Structures"
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false  
+- week: "8"
+  date: "3"    
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"
-- week: "8"
-  date: "3"
+- week: "9"
+  date: "0"
   title: "HashMaps and Caches"  
   link: "Activities/HashMaps"  
   deliverables:
@@ -553,18 +557,7 @@ schedule:
     points: 25
   readings:
   - rtitle: "Ch. 6.8"
-    rlink: false     
-- week: "9"
-  date: "0"
-  title: "Classes and Object Data Types" 
-  link: "Activities/Classes"
-  deliverables:
-  - dtitle: "Lab: ASCII Art Due"
-    dlink: "Labs/ASCIIArt"      
-    points: 100
-  readings:
-  - rtitle: "Ch. 8"
-    rlink: false    
+    rlink: false       
 - week: "9"
   date: "1"
   title: "Lab: HashMaps"
@@ -574,7 +567,15 @@ schedule:
     points: 100
 - week: "9"
   date: "2"
-  title: "Classes"
+  title: "Classes and Object Data Types" 
+  link: "Activities/Classes"
+  deliverables:
+  - dtitle: "Lab: ASCII Art Due"
+    dlink: "Labs/ASCIIArt"      
+    points: 100
+  readings:
+  - rtitle: "Ch. 8"
+    rlink: false      
 - week: "9"
   date: "3"
   title: "Classes"
