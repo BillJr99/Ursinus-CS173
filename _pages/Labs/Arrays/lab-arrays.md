@@ -56,8 +56,18 @@ Then, take those computed averages, and compute a **weighted average** of them, 
 
 It is nice to be able to compute these averages without having to do so by hand, but you probably noticed how tedious is was to copy and paste, or re-write, your averaging code over and over again!  We can use functions to reduce this workload.
 
+## Part 1: Equal Averages
 Write a function `computeEqualAverage` that returns a `double`, and accepts an array of `double` for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as an array parameter to this function.
 
+Each time you return an equal average (for example, the equal average of your lab grades, the equal average of your assignment grades, and so on), insert those into an array called `courseAverages` that you will pass to `computeWeightedAverage` later.  You can create an array of a certain size like this:
+
+`double[] averages = new double[4];`
+
+where you know up-front that you will store 4 averages (for example, assignments, labs, projects, and attendance).  You have to specify how many elements you are storing up-front for now (we will improve upon this again later!).
+
+Each time you call `computeEqualAverage`, store the result in one of these elements (for example, `averages[0] = computeEqualAverage(grades);`.
+
+## Part 2: Weighted Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages.  Modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).
 
 This program should be much shorter!  However, there is still some redundancy.  The two average functions are still essentially the same algorithm and perhaps essentially the same code.
