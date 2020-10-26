@@ -94,16 +94,19 @@ If you are looping through your string, take care to stop searching not only pri
 
 Prior to writing your code, draw a grid representing the string you're searching for, and number the indices from 0 to the length of the string.  Then draw a grid representing the chain you're searching within (again, from 0 to the length of that chain).  Step through the search procedure on paper so that you can see the indices that you'll be working with.  **How do your indices relate to the lengths of the source and target subchains?**  This will provide you the answers you need to implement your algorithm!
 
-### Computing the Complement of an NA Chain
-Given an NA chain string, return a new string representing its complement.  This should be a string of the same length as the original; however, each character should be replaced with its complement.  That is, all the A's should be switched to T's (and vice-versa), and all the C's should become G's (and vice-versa).
+### Step 1: Computing the Complement of an NA Sense
+Given an NA chain string, return a new string representing its complement.  This should be a string of the same length as the original; however, each character should be replaced with its complement.  That is, all the A's should be switched to T's (and vice-versa), and all the C's should become G's (and vice-versa).  So, the sense `ACAT` becomes `TGTA`.
 
 **Question: why do you need to return a new string?  Since strings are represented as arrays of characters, why can't you manipulate the input string paramter directly?  Even if you could, why do you think it is a good idea to create a new string anyway?**
 
-### Reversing a Chain
-Given an NA chain string, return a new string of the same length but with all the characters reversed.  That is, "ATCG" becomes "GCTA".
+### Step 2: Reversing the NA Sense
+Given an NA chain string, return a new string of the same length but with all the characters reversed.  That is, "ATCG" becomes "GCTA".  You will reverse the complement of the sense that you computed in Step 1.  So, in our example, `TGTA` (the complement of the sense `ACAT`) becomes `ATGT`.
 
-### Compute an Antisense
-Using the two functions you just wrote to compute the complement and the reverse of a chain, write a function to compute the antisense of a given NA chain.  To do this, compute the complement of the chain, and then reverse it.
+### Step 3: Compute an Antisense
+Using the two functions you just wrote to compute the complement and the reverse of a chain, write a function to compute the antisense of a given NA chain.  To do this, compute the complement of the chain, and then reverse it.  To do this, simply call the function you wrote for Step 1 to compute the complement, passing it the sense (not the original chain, but the sense you're searching for; for example, if your primary function is `detectAntisense("ACATGCTATGTA", "ACAT");`, you would compute this on `ACAT`); then, call your Step 2 function to reverse the result.
+
+### Step 4: Find the Antisense
+Finally, determine if the antisense is located inside the chain.  So, in our example, you would search for `ATGT` in `ACATGCTATGTA`, because the sense you are seeking is `ACAT`.  You can use the `chain.indexOf()` to help you here - feel free to look it up to see how it works!
 
 ## Part 3: Inserting a Chain
 Given an NA chain string, an NA subchain, and a position, insert the subchain into the chain.  For example, `insert("ACCG", "TT", 2)` would return "ACTTCG" (recall that the indices start at 0, so the TT occupies position 3 and 4 in the string, which are indices 2 and 3.
