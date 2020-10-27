@@ -44,7 +44,7 @@ Consider the [grading table of our course syllabus](../#grading).  It lists grad
 
 <br><span>\\(\mu_{x} = \frac{\sum\limits_{i=1}{n} x_{i}}{n}\\)</span><br>
 
-Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50\% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
+Then, those averages are averaged - but not equally.  The weighted average is computed by multiplying each of your component averages by a weight <span>\\(w_{i}\\)</span>, given by the syllabus (for example, a 50% weight would be computed as 0.5 for that corresponding <span>\\(w_{i}\\)</span>):
 
 <br><span>\\(\mu_{x} = \sum\limits_{i=1}{n} w_{i} \times x_{i}\\)</span><br>
 
