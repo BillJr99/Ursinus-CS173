@@ -67,6 +67,20 @@ where you know up-front that you will store 4 averages (for example, assignments
 
 Each time you call `computeEqualAverage`, store the result in one of these elements (for example, `averages[0] = computeEqualAverage(grades);` where `grades` is a `double[]`, an array of `double` values representing your collection of individual grades: `double[] grades`).
 
+You can create a pre-initialized array of grades like this:
+
+```java
+double[] assignmentGrades = {90, 100, 80};
+double[] labGrades = {95, 100, 85};
+```
+
+You can pass each of these to calls to `computeEqualAverage`, and assign the result to each index of `averages`, for example:
+
+```java
+averages[0] = computeEqualAverage(assignmentGrades);
+// ... and so on
+```
+
 ## Part 2: Weighted Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages.  Modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).
 
