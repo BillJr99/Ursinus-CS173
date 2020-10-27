@@ -65,7 +65,7 @@ Each time you return an equal average (for example, the equal average of your la
 
 where you know up-front that you will store 4 averages (for example, assignments, labs, projects, and attendance).  You have to specify how many elements you are storing up-front for now (we will improve upon this again later!).
 
-Each time you call `computeEqualAverage`, store the result in one of these elements (for example, `averages[0] = computeEqualAverage(grades);`).
+Each time you call `computeEqualAverage`, store the result in one of these elements (for example, `averages[0] = computeEqualAverage(grades);` where `grades` is a `double[]`, an array of `double` values representing your collection of individual grades: `double[] grades`).
 
 ## Part 2: Weighted Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages.  Modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).
