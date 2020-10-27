@@ -59,7 +59,7 @@ It is nice to be able to compute these averages without having to do so by hand,
 ## Part 1: Equal Averages
 Write a function `computeEqualAverage` that returns a `double`, and accepts an array of `double` for your individual grades.  Modify your program so that you replace your equal-weight averaging with calls to this function.  Pass your individual grades as an array parameter to this function.
 
-Each time you return an equal average (for example, the equal average of your lab grades, the equal average of your assignment grades, and so on), insert those into an array called `courseAverages` that you will pass to `computeWeightedAverage` later.  You can create an array of a certain size like this in your `main()` function, and then pass it to your `computeEqualAverage` function as a `double[]` parameter:
+Each time you return an equal average (for example, the equal average of your lab grades, the equal average of your assignment grades, and so on), insert those into an array called `courseAverages` that you will pass to `computeWeightedAverage` later.  You can create an array of a certain size like this in your `main()` function, and each of these will hold the result of one of your calls to `computeEqualAverage`:
 
 `double[] averages = new double[4];`
 
