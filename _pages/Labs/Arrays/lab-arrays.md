@@ -48,7 +48,7 @@ Then, those averages are averaged - but not equally.  The weighted average is co
 
 <br><span>\\(\mu_{x} = \sum\limits_{i=1}{n} w_{i} \times x_{i}\\)</span><br>
 
-This is actually the same as the standard equally-weighted average, where w_{i} is \frac{1}{n}, giving equal weight to all the components.
+This is actually the same as the standard equally-weighted average, where <span>\\(w_{i}\\)</span> is <span>\\(\frac{1}{n}\\)</span>, giving equal weight to all the components.
 
 Create a program that assigns variable values to labs, assignments, etc., according to the syllabus grade breakdown.  Compute your average lab grade, average assignment grade, etc., using equal weighted averaging.
 
