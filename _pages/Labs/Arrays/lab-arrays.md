@@ -82,10 +82,4 @@ averages[0] = computeEqualAverage(assignmentGrades);
 ```
 
 ## Part 2: Weighted Averages
-Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages.  Modify your program to replace your weighted average computation with a call to this function (again passing the average values as parameters).
-
-This program should be much shorter!  However, there is still some redundancy.  The two average functions are still essentially the same algorithm and perhaps essentially the same code.
-
-Write a function called `computeAverage` that returns a `double` and accepts the individual values as an array, like the others.  This time, add an additional array of `double` to represent the weights.  Replace your call to `computeWeightedAverage` with a call to this function, passing the appropriate weights. 
-
-Finally, replace your call to `computeEqualAverage` with a call to `computeAverage`, passing the appropriate weights there as well (what should the weights be when computing an equal-weight average?).
+Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages, and an additional array of `double` to represent the weights.  Call this function passing the average array and a weights array as parameters.
