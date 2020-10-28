@@ -1,0 +1,122 @@
+<html>
+<head>
+
+<script src = "process-manager.js"></script>
+<script src = "runtime.js"></script>
+<script src = "wasm-tools.js"></script>
+
+</head>
+<body>
+
+<button onclick="compile()">compile</button>
+<button onclick="run()">run</button>
+
+<script>
+
+let exampleCode = `#include <stdio.h>
+
+int main() {
+    for (int i = 0; i < 100; i++) {
+        printf("Hello world\\n");
+    }
+    return 0;
+}
+`
+console.log(exampleCode);
+let workerPath = "scripts/";
+
+class ProcessUI {
+    constructor(name) {
+        this.name = name;
+        this.runButton = document.getElementById(name + '-run');
+        this.rebootButton = document.getElementById(name + '-reboot');
+        this.statusElem = document.getElementById(name + '-status');
+        this.iframeContainer = document.getElementById(name + '-iframe-container');
+        this.state = '';
+        this.wasReady = false;
+
+        this.process = new ProcessManager(name, name, workerPath)
+        this.process.setStatus = this.setStatus.bind(this);
+        this.process.print = this.print.bind(this);
+        this.process.printErr = this.printErr.bind(this);
+    }
+
+    reboot() {
+        this.process.terminate();
+        this.process.start();
+    }
+
+    setStatus(state, status) {
+        console.log(this.name, state + ':', status);
+        this.state = state;
+    };
+
+    print({ text }) {
+        console.log(this.name, 'stdout:', text);
+    };
+
+    printErr({ text }) {
+        console.log(this.name, 'stderr:', text);
+    };
+}
+
+let clang = new ProcessUI('clang');
+let runtime = new ProcessUI('runtime');
+let clangOutput = null;
+
+clang.process.print({ text: 'Preparing clang...\n\n' });
+clang.process.workerCompileDone = args => {
+    if (args.result)
+        console.log('wasm size: ' + args.result.length + '\n');
+    clangOutput = args.result;
+    clang.process.setStatus('ready', 'Ready');
+};
+
+runtime.process.print({ text: 'Preparing runtime...\n\n' });
+runtime.process.workerRunDone = args => {
+    runtime.process.setStatus('ready', 'Ready');
+};
+runtime.process.workerDebugReplaceBinary = args => {
+    console.log('new size:  ' + args.newBinary.length + '\n');
+    clangOutput = args.newBinary;
+};
+runtime.process.workerSendRun = function () {
+    runtime.process.setStatus('busy', 'Running');
+    runtime.process.postMessage({
+        function: 'run',
+        wasmBinary: clangOutput,
+    });
+};
+
+clang.process.start();
+runtime.process.start();
+
+
+function compile() {
+    console.log("clang.state = " + clang.state);
+    if (clang.state !== 'ready')
+        return;
+    clangOutput = null;
+    clang.process.setStatus('busy', 'Running');
+    clang.process.worker.postMessage({
+        function: 'compile',
+        code: exampleCode,
+    });
+}
+
+function run() {
+    runtime.process.setStatus('busy', 'Running');
+    if (!(clangOutput === null)) {
+        console.log("Running");
+        runtime.process.worker.postMessage({
+            function: 'run',
+            wasmBinary: clangOutput,
+        });
+    }
+
+}
+
+</script>
+
+</body>
+</html>
