@@ -71,7 +71,7 @@ info:
         InsertionSort(int[] A) {
             // Take each element of the array, from left to right
             for(int i = 1; i < A.length; i++) {
-                   int val = A[i];
+                int val = A[i];
 
                 //… and put it into place in sorted order on the left side
                 for(int j = i - 1; i >= 0; i--) {
