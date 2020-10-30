@@ -41,6 +41,12 @@ child_threads = []
 skipdiscussions = False
 skipassignments = False
             
+def makelink(base, url):
+    if url.startswith("http"):
+        return url
+    else:
+        return base + url
+
 def addslash(str):
     if not (str.endswith("/")):
         return str + "/"
@@ -572,7 +578,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             inputdict = {}
             inputdict['title'] = title
             inputdict['type'] = "ExternalUrl"
-            inputdict['external_url'] = addslash(homepage) + stripnobool(link)
+            inputdict['external_url'] = makelink(addslash(homepage), stripnobool(link))
             inputdict['new_tab'] = True
             inputdict['published'] = True
             add_module_item(module, inputdict)
@@ -613,7 +619,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
-                    inputdict['description'] = description + " (" + addslash(homepage) + stripnobool(dlink) + ")"
+                    inputdict['description'] = description + " (" + makelink(addslash(homepage), stripnobool(dlink)) + ")"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
                     inputdict['position'] = asmtidx
                     
@@ -632,7 +638,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict = {}
                     inputdict['title'] = dtitle
                     inputdict['type'] = "ExternalUrl"
-                    inputdict['external_url'] = addslash(homepage) + stripnobool(dlink)
+                    inputdict['external_url'] = makelink(addslash(homepage), stripnobool(dlink))
                     inputdict['new_tab'] = True            
                     inputdict['published'] = True
                     add_module_item(module, inputdict)  
@@ -649,7 +655,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 inputdict = {}
                 inputdict['title'] = rtitle
                 inputdict['type'] = "ExternalUrl"
-                inputdict['external_url'] = addslash(homepage) + stripnobool(rlink)
+                inputdict['external_url'] = makelink(addslash(homepage), stripnobool(rlink))
                 inputdict['new_tab'] = True            
                 inputdict['published'] = True
                 add_module_item(module, inputdict)                  
