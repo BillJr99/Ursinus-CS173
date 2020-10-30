@@ -512,7 +512,7 @@ schedule:
   title: "Arrays"   
 - week: "8"
   date: "0"
-  title: "Arrays"    
+  title: "2D Arrays"    
 - week: "8"
   date: "1"
   title: "Lab: ASCII Art"    
