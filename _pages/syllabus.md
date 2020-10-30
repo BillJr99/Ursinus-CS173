@@ -532,6 +532,13 @@ schedule:
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false  
+  deliverables: 
+  - dtitle: "Programming Assignment: DNA Mutations Due"
+    dlink: "Assignments/DNAMutations" 
+    points: 100  
+  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25    
 - week: "8"
   date: "3"    
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -540,13 +547,6 @@ schedule:
   date: "0"
   title: "HashMaps and Caches"  
   link: "Activities/HashMaps"  
-  deliverables: 
-  - dtitle: "Programming Assignment: DNA Mutations Due"
-    dlink: "Assignments/DNAMutations" 
-    points: 100  
-  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false       
