@@ -509,14 +509,7 @@ schedule:
   title: "String Iteration Workshop" 
 - week: "7"
   date: "3"
-  title: "Arrays" 
-  deliverables:  
-  - dtitle: "Programming Assignment: DNA Mutations Due"
-    dlink: "Assignments/DNAMutations" 
-    points: 100    
-  - dtitle: "Programming Assignment: Mini Crypto Handed Out"
-    dlink: "Assignments/MiniCrypto" 
-    points: 100
+  title: "Arrays"   
 - week: "8"
   date: "0"
   title: "Arrays"    
@@ -547,10 +540,10 @@ schedule:
   date: "0"
   title: "HashMaps and Caches"  
   link: "Activities/HashMaps"  
-  deliverables:
-  - dtitle: "Programming Assignment: Mini Crypto Due"
-    dlink: "Assignments/MiniCrypto" 
-    points: 100
+  deliverables: 
+  - dtitle: "Programming Assignment: DNA Mutations Due"
+    dlink: "Assignments/DNAMutations" 
+    points: 100  
   - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
     dlink: "Assignments/PurpleAmerica"   
     points: 25
