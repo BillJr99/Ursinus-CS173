@@ -31,7 +31,11 @@ files:
     code: | 
         public class TicTacToe {
             public static boolean checkWinningTicTacToe(char[][] board) {
-
+                // return true if a winning tic-tac-toe board is given
+                // for example, if the first element in any row is equal to the second element in that row, and also equal to the third element in that row.
+                // ... the same logic is applied to every column, and to both diagonals of the board.
+                
+                // Use a loop to check each element of a row/column/diagonal.  The .length property of an array variable will be helpful in determining the bounds of (when to stop) the loop
             }
         }  
 

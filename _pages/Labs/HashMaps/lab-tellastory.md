@@ -47,10 +47,52 @@ tags:
 
 In this lab, you will use `HashMap`s to tell a dynamic story.  
 
-Create a `HashMap` called `places` that define the different places you can go in your story.  These will map to an array of `String`s.  The first `String` is the name of the place.  The second `String` is a narration of your story upon entering that location.  Print this narration to the screen.
+Create a `HashMap` called `places` that define the different places you can go in your story.  These will map to a `String`.  The key `String` is the name of the place.  The second `String` (the value at that key) is a narration of your story upon entering that location.  Print this narration to the screen.
 
-The remaining elements in your array will be Strings - the keys that you can go to from the current location.  Print out the list of keys and the names of those locations (you can look them up in the `HashMap`).  The user will enter the next location, and you will loop until reaching the `end` key.
+Create another `HashMap` called `moves` that gives a list of possible places one can go given the current room.  This will map to a value that is an array or an `ArrayList` of `String` values, each of which is a room key from the `places` array.  For example, `moves['courtyard']` would contain the value `'classroom'` if one can go to the classroom from the courtyard.  `courtyard` and `classroom` should each be a key in `moves` and in `places`. Print out the list of keys and the names of those locations (you can look them up in the `HashMap`).  
+
+You should have at least 5 possible rooms, and at least 3 of those rooms should have a choice of at least 2 possible next locations.
+
+The user will enter the next location, and you will loop until reaching the `end` key.  Add the following line to `build.gradle` to support reading `System.in` from NetBeans when using a Gradle project.
+
+```
+run.standardInput = System.in;
+```
 
 Finally, include a hash entry for `start` and `end` from which your story will begin and end.  Use an appropriate loop structure to terminate the story when the `end` key is reached.
 
-Creativity is encouraged, but not graded!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!
+The following template will help you get started:
+
+```java
+    public static void main(String[] args) {
+        HashMap<String, String> places = new HashMap<String, String>();
+        HashMap<String, String[]> moves = new HashMap<String, String[]>();
+
+        // Create the list of rooms and narrations!
+        places.put("start", "You are in a large room.");
+        
+        // What movements are possible between locations?  
+        // There should be one key for every key in places above.
+        String[] startMoves = {"start"}; // TODO: fix this to be a different set of rooms - it is an infinite loop if you can only go right back to start!
+        moves.put("start", startMoves);
+        
+        String[] middleMoves = {"start", "end"};
+        moves.put("middle", middleMoves);
+
+        // Where are we starting the story?
+        String currentRoom = "start";
+        
+        // TODO: write a loop that continues until currentroom is "end"
+        // TODO: print out each room's story narration, and a list of possible moves from that room
+        // TODO: then, prompt the user and read a string (scanner.nextLine()) that will be the next room, and repeat for that room!
+        // Don't forget to print the ending story message at the end!
+    }
+```
+
+**In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
+
+## Extra Credit (Up to 15%): Best Story Competition
+Creativity is encouraged, but not required for a grade!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!  You will receive 7.5% extra credit for entering your submission, and the class will vote on their favorite story (the winner will receive an additional 7.5% extra credit).
+
+## Extra Credit (10%): Conditional Rooms
+Modify your program to have conditionals, in which your rooms print certain things depending on whether other conditions have been met.  For example, if you reach one room after visiting another, print something different in your story.

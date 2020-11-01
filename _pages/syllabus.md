@@ -535,10 +535,7 @@ schedule:
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
-    points: 100  
-  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25    
+    points: 100   
 - week: "8"
   date: "3"    
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -549,7 +546,11 @@ schedule:
   link: "Activities/HashMaps"  
   readings:
   - rtitle: "Ch. 6.8"
-    rlink: false       
+    rlink: false  
+  deliverables:
+  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25     
 - week: "9"
   date: "1"
   title: "Lab: HashMaps"
@@ -578,13 +579,7 @@ schedule:
   deliverables:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
-    points: 100
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25    
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25    
+    points: 100  
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"
@@ -592,6 +587,12 @@ schedule:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"    
     points: 100
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25    
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25      
 - week: "10"
   date: "2"
   title: "Searching and Sorting" 

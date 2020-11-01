@@ -39,7 +39,7 @@ tags:
   
 ---
 
-In this lab \[[^1]\], you will work with with 2D arrays in Java with a concrete, visual application. Students will write a program to automatically generate ["ASCII Art"](https://en.wikipedia.org/wiki/ASCII_art), which is text that approximates a given image. An example is given above with the UC logo. In this assignment, we will restrict ourselves to characters in the ASCII subset of UTF-8, including lowercase letters, uppercase letters, and some special characters; hence the name "ASCII Art."
+In this lab \[[^1]\], you will work with with 2D arrays in Java with a concrete, visual application. Students will write a program to automatically generate ["ASCII Art"](https://en.wikipedia.org/wiki/ASCII_art), which is text that approximates a given image. An example is given below with the UC logo. In this assignment, we will restrict ourselves to characters in the ASCII subset of UTF-8, including lowercase letters, uppercase letters, and some special characters; hence the name "ASCII Art."
 
 Please [download](../files/lab-asciiart/ASCIIArt_master.zip) the skeleton code for this assignment. You will be editing `src/ASCIIArt.java`.
 

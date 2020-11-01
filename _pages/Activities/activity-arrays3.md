@@ -38,6 +38,8 @@ info:
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
       questions:
         - How would you describe a 2D array in terms of usual 1D arrays?
+        - Does the first index indicate the row or the column of the 2D array?
+        - How might you create a 3-dimensional array?
         - Run this code in the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a>.  What is the output?
         - Re-draw the arrays <code>mat1</code> and <code>mat2</code> as a square grid. 
         - Is it possible to re-size these arrays if you need to add additional elements later?  If so, how, and if not, why not?
