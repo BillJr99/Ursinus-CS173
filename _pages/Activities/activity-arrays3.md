@@ -19,9 +19,9 @@ info:
               int[][] mat1 = new int[10][10];
               int[][] mat2 = { { 1, 0 }, { 0, 1 } };
               
-              // This is the length of the "outer vector" - the number of columns
+              // This is the length of the "outer vector" - the number of rows
               for(int i = 0; i < mat2.length; i++) {
-                // This is the length of the "inner vector" - the number of rows
+                // This is the length of the "inner vector" - the number of columns
                 for(int j = 0; j < mat2[i].length; j++) {
                     System.out.println(mat2[i][j]);
                 }
