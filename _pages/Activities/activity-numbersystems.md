@@ -19,7 +19,7 @@ info:
         - Write out the representation for the character <code>'B'</code> in binary, and also the character <code>'b'</code>.  How does their binary differ?
         - How do you think a <code>boolean isLowerCase(char x)</code> function might work?
     - model: |
-        <iframe src="https://www.rapidtables.com/web/color/RGB_Color.html" width="100%">
+        Visit this page: <a href="https://www.rapidtables.com/web/color/RGB_Color.html">https://www.rapidtables.com/web/color/RGB_Color.html</a>
       title: RGB Colors
       questions:
         - What three colors are used to define all colors on the color wheel?
