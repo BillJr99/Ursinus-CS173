@@ -101,7 +101,7 @@ You should fill in `ASCIIArt.java` to print out rows of text to create ASCII art
 * For each non-overlapping block, average the grayscale values in that block, find the character with the closest grayscale value according to `GRAYSCALE_VALUES`, and print that character out. Print line breaks at the end of each row of blocks.
 
 ## Hints
-* In the Horstmann book, example 6.3.2 is a helpful reference for finding averages, and example 6.3.3 is a helpful example for finding the closest value to another value when you're converting from brightness to a character.
+* In the Horstmann book, example 6.3.2 is a helpful reference for finding averages, and example 6.3.3 is a helpful example for finding the closest value to another value when you're converting from brightness to a character.  This is similar to finding the minimum value in a list - except that you are now finding the minimum difference from your greyscale value (how can you compute this?).
 * You'll have to come up with your own way of organizing the code, but it may be a good idea to make a separate method to compute the average grayscale value in a block, and to call this method within a loop that loops through all blocks. You may also want to make a method that finds the character that's closest to a particular grayscale value.
 * As usual, a part of your grade will be on style. So, among other things, be sure you're naming your variables and methods appropriately.
 * Be careful not to go out of bounds when extracting blocks. Blocks at the edges may be smaller than other blocks since you'll run out of space.
