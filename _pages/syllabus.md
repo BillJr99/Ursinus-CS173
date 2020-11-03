@@ -528,18 +528,17 @@ schedule:
     points: 3    
 - week: "8"
   date: "2"
-  title: "ArrayLists and Generic/Template Data Structures"
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false  
+  title: "Array Workshop"
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
     points: 100   
 - week: "8"
-  date: "3"    
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
-  link: "Activities/NumberSystems"
+  date: "3"  
+  title: "ArrayLists and Generic/Template Data Structures"
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false   
 - week: "9"
   date: "0"
   title: "HashMaps and Caches"  
@@ -571,7 +570,8 @@ schedule:
     rlink: false      
 - week: "9"
   date: "3"
-  title: "Classes"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"
 - week: "10"
   date: "0"
   title: "File I/O"
