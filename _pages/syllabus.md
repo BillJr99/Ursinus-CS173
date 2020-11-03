@@ -586,13 +586,7 @@ schedule:
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"    
-    points: 100
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25    
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25      
+    points: 100     
 - week: "10"
   date: "2"
   title: "Searching and Sorting" 
@@ -609,7 +603,13 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
-    points: 3     
+    points: 3 
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25    
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25     
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -617,13 +617,7 @@ schedule:
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"   
-    points: 100
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100     
+    points: 100    
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
     points: 3 
@@ -648,6 +642,12 @@ schedule:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100     
 - week: "12"
   date: "1"
   title: "Lab: Final Project Brainstorm"    
@@ -660,13 +660,6 @@ schedule:
 - week: "12"
   date: "2"
   title: "Recursion and Dynamic Programming"   
-  deliverables:
-  - dtitle: "Programming Assignment: Iris Dataset Due"
-    dlink: "Assignments/Iris"
-    points: 100  
-  - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
-    dlink: "Assignments/GuitarStringSynth"           
-    points: 100
 - week: "12"
   date: "3"
   title: "Final Project Workshop"  
@@ -677,9 +670,13 @@ schedule:
   date: "0"
   title: "Final Project Workshop"
   deliverables:
-  - dtitle: "Programming Assignment: Guitar String Synthesizer Due"
-    dlink: "Assignments/GuitarStringSynth"  
-    points: 100    
+  deliverables:
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100  
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
+    dlink: "Assignments/GuitarStringSynth"           
+    points: 100  
 - week: "13"
   date: "1"
   title: "Final Project Workshop" 
@@ -695,7 +692,11 @@ schedule:
     points: 100
 - week: "14"
   date: "0"
-  title: "Final Project Presentations"   
+  title: "Final Project Presentations"
+  deliverables:
+  - dtitle: "Programming Assignment: Guitar String Synthesizer Due"
+    dlink: "Assignments/GuitarStringSynth"  
+    points: 100      
 - week: "14"
   date: "1"
   title: "Final Project Presentations"      
