@@ -683,7 +683,7 @@ schedule:
 - week: "13"
   date: "2"
   title: "Final Project Workshop"    
-- week: "14"
+- week: "13"
   date: "3"
   title: "Review"     
   deliverables:
