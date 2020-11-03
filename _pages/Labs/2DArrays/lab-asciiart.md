@@ -97,7 +97,7 @@ When you do this, you should take all non-overlapping blocks in the image that y
 ## Code to Write
 You should fill in `ASCIIArt.java` to print out rows of text to create ASCII art following the above procedure. You will have to come up with your own methods and way of organizing the code, but you should do the following steps at some point:
 
-* Specify a width and height of a block
+* Specify a width and height of a block.  For example, if your width is 4 and your height is 8, you will iterate over the first 8 rows, and the first 4 columns, computing the average greyscale value in the image.  You would then consider the first 8 rows and the next set of 4 columns, and so on.  When you reach the end of the row, repeat this process for the next set of 8 rows.  Your function and loop should not hard code the width and height: they should be variables and function parameters!
 * For each non-overlapping block, average the grayscale values in that block, find the character with the closest grayscale value according to `GRAYSCALE_VALUES`, and print that character out. Print line breaks at the end of each row of blocks.
 
 ## Hints
