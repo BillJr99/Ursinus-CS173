@@ -91,4 +91,6 @@ if(ch == "X") {
 
 You should use a loop in your submission.  To check your iteration, a test case is included that checks a 4x4 board for tic-tac-toe using the same rules as the standard 3x3 board (that is, that the whole column, row, or diagonal is filled with the same player's mark).  In other words, you are now searching for 4 marks in a row, but should use the same logic as you had written when using the 3x3 board.  
 
+One way to go about this is to count how many X's and O's you find in a given row, column, or diagonal (three separate loops).  If the total number of X's or O's is equal to the length of that row, column, or diagonal, you can return `true`.  If, after all of these checks, you haven't found one of these winning conditions, return `false`.
+
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)
