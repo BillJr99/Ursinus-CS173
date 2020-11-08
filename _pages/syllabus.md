@@ -176,8 +176,8 @@ textbooks:
   freelyavailable: https://greenteapress.com/wp/think-java/
 
 objectives:
-- objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions." 
-- objective: "Implement algorithms that utilize conditionals and iteration over data structures including Strings and Arrays to solve problems."
+- objective: "Identify the appropriate control structures (if statements, switch statements, loop types) to use to solve different problems, and learn to choose efficient solutions over brute force solutions" 
+- objective: "Implement algorithms that utilize conditionals and iteration over data structures including Strings and Arrays to solve problems"
 - objective: "Describe and convert the encodings by which data types are stored as numeric values"
 - objective: "Identify and apply data types appropriate to the design of a programming solution to a given problem"
 - objective: "To design and implement appropriate unit tests for a given software system to detect errors in a program"
