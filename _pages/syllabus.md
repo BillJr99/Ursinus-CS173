@@ -188,7 +188,7 @@ objectives:
 goals:
 - goal: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
 - goal: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
-- goal: "Write software that is easy to read and to maintain by others"
+- goal: "Write software that is easy to read and to maintain by others."
 - goal: "Implement and engineer multi-component systems that solve real world problems."
 
 grade_breakdown:
