@@ -89,6 +89,15 @@ The following template will help you get started:
     }
 ```
 
+Note that you should use a loop to scan over your keys to check which room you are in; that is, you should **not** have a separate `if` statement for every room that you are using!  You can loop over the keys in your `HashMap` like this:
+
+```java
+for (String room : places.keySet()) {
+    // room will be the name of each room
+    // and you can check if that's equal to the one the user input!
+}
+```
+
 **In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
 
 ## Extra Credit (Up to 15%): Best Story Competition
