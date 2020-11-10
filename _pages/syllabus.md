@@ -559,19 +559,19 @@ schedule:
     points: 100
 - week: "9"
   date: "2"
-  title: "Classes and Object Data Types" 
-  link: "Activities/Classes"
+  title: "File I/O and Workshop"
+  link: "Activities/FileIO"    
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
     dlink: "Labs/ASCIIArt"      
-    points: 100
-  readings:
-  - rtitle: "Ch. 8"
-    rlink: false      
+    points: 100    
 - week: "9"
   date: "3"
-  title: "File I/O and Workshop"
-  link: "Activities/FileIO"  
+  title: "Classes and Object Data Types" 
+  link: "Activities/Classes"
+  readings:
+  - rtitle: "Ch. 8"
+    rlink: false    
 - week: "10"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
