@@ -567,15 +567,15 @@ schedule:
     points: 100    
 - week: "9"
   date: "3"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"  
+- week: "10"
+  date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"
   readings:
   - rtitle: "Ch. 8"
-    rlink: false    
-- week: "10"
-  date: "0"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
-  link: "Activities/NumberSystems"
+    rlink: false      
   deliverables:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
