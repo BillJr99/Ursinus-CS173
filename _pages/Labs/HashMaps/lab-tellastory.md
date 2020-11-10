@@ -47,6 +47,7 @@ tags:
 
 In this lab, you will use `HashMap`s to tell a dynamic story.  
 
+## Part 1: The Story
 Create a `HashMap` called `places` that define the different places you can go in your story.  These will map to a `String`.  The key `String` is the name of the place.  The second `String` (the value at that key) is a narration of your story upon entering that location.  Print this narration to the screen.
 
 Create another `HashMap` called `moves` that gives a list of possible places one can go given the current room.  This will map to a value that is an array or an `ArrayList` of `String` values, each of which is a room key from the `places` array.  For example, `moves["courtyard"]` would contain the value `"classroom"` if one can go to the classroom from the courtyard.  `courtyard` and `classroom` should each be a key in `moves` and in `places`. Print out the list of keys and the names of those locations (you can look them up in the `HashMap`).  
@@ -97,8 +98,6 @@ String story = places.get(currentRoom);      // gets the story associated with a
 String[] nextSteps = moves.get(currentRoom); // gets the set of next moves the user can take
 ```
 
-**In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
-
 ### For Additional Context: Using HashMap Keys
 You may or may not need the following in this lab, but for context, you can loop over the keys in your `HashMap`, and compare them to `String` variables or literal values like this:
 
@@ -115,6 +114,10 @@ for (String room : places.keySet()) {
     // As usual, you can pass a variable instead of a literal string like "start" here!
 }
 ```
+
+## Part 2: Graphing Your Story Rooms and Move Transitions
+
+**In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
 
 ## Extra Credit (Up to 15%): Best Story Competition
 Creativity is encouraged, but not required for a grade!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!  You will receive 7.5% extra credit for entering your submission, and the class will vote on their favorite story (the winner will receive an additional 7.5% extra credit).
