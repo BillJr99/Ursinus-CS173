@@ -15,12 +15,18 @@ info:
     - To select and implement appropriate test cases to check boundary cases and potential off-by-one errors
     - To memory map strings on paper and to validate that mapping using the step debugger
   rubric:
-    - weight: 60
+    - weight: 40
       description: Algorithm Implementation
       preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
       beginning: The algorithm fails on the test inputs due to one or more minor issues
       progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
       proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+    - weight: 20
+      description: Test Cases
+      preemerging: Testing was performed outside of the unit test framework, or not performed at all
+      beginning: Trivial test cases are provided in a unit test framework
+      progressing: Test cases that cover some, but not all, boundary cases and branches of the program are provided
+      proficient: Test cases that cover all boundary cases and branches of the program are provided
     - weight: 30
       description: Code Quality and Documentation
       preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
@@ -31,8 +37,8 @@ info:
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed, and with at least superficial responses to the bolded questions throughout
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
+      progressing: The program is submitted according to the directions with a minor omission or correction needed
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
 
 tags:
   - strings
