@@ -54,6 +54,8 @@ Create another `HashMap` called `moves` that gives a list of possible places one
 
 You should have at least 5 possible rooms, and at least 3 of those rooms should have a choice of at least 2 possible next locations.
 
+**Does your end room need a moves transition to other rooms?  Why or why not?  (You could map it to an empty array if you wanted).**
+
 The user will enter the next location, and you will loop until reaching the `end` key.  Add the following line to `build.gradle` to support reading `System.in` from NetBeans when using a Gradle project.
 
 ```
@@ -95,6 +97,7 @@ The following template will help you get started:
         String currentRoom = "start";
         
         // TODO: write a loop that continues until currentroom is "end"
+        // What kind of loop do you need here?
         // TODO: print out each room's story narration, and a list of possible moves 
         // ... from that room
         // TODO: then, prompt the user and read a string (scanner.nextLine()) that 
