@@ -69,11 +69,11 @@ The following template will help you get started:
         HashMap<String, String> places = new HashMap<String, String>();
         HashMap<String, String[]> moves = new HashMap<String, String[]>();
 
-        // Create the list of rooms and narrations!
+        // TODO: Create the list of rooms and narrations! (Keep the start room, and be sure to add an end room!)
         places.put("start", "You are in a large room.");
         places.put("middle", "You are in another room."); // you are welcome to change this, it's just an example!
         
-        // What movements are possible between locations?  
+        // TODO: What movements are possible between locations?  Add an array here for each room!
         // There should be one key for every key in places above.
         String[] startMoves = {"start", "middle"}; // TODO: fix this to be a different set of rooms that you can move to.
         moves.put("start", startMoves);
@@ -81,7 +81,7 @@ The following template will help you get started:
         String[] middleMoves = {"start", "end"}; // my example "middle" room can move to the starting room or to the end room; again, this is just an example!
         moves.put("middle", middleMoves);
 
-        // Where are we starting the story?
+        // Where are we starting the story?  (Leave this alone!)
         String currentRoom = "start";
         
         // TODO: write a loop that continues until currentroom is "end"
