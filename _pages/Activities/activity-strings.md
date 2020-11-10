@@ -45,6 +45,7 @@ info:
         - What is the difference between <code>x = x.concat(y)</code> and <code>x = x + y</code> for <code>String</code> objects <code>x</code> and <code>y</code>?
         - What is the difference between the two <code>indexOf()</code> methods given above? How do you know which version you are calling from a program?
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
+        - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
 
