@@ -130,6 +130,17 @@ for (String room : places.keySet()) {
 }
 ```
 
+### For Additional Context: Printing an Array
+You won't be able to `System.out.println` an array - so you'll need to print each item in a loop.  For example:
+
+```java
+// assuming you have a String[] possibleMoves array
+// you will modify this for your own variables, of course!
+for(int i = 0; i < possibleMoves.length; i++) {
+    System.out.println(possibleMoves[i]);
+}
+```
+
 ## Part 2: Graphing Your Story Rooms and Move Transitions
 
 **In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
