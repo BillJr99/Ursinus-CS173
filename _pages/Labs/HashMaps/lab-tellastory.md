@@ -65,7 +65,11 @@ Finally, include a hash entry for `start` and `end` from which your story will b
 The following template will help you get started:
 
 ```java
+    // Before you begin, put the following 1 line at the top of your program, under the "package" line
+    // import java.util.HashMap
+    
     public static void main(String[] args) {
+        // If Java gives you a "redundant type arguments" warning, you can ignore it!
         HashMap<String, String> places = new HashMap<String, String>();
         HashMap<String, String[]> moves = new HashMap<String, String[]>();
 
