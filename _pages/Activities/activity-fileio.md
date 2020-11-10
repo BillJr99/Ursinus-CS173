@@ -30,9 +30,9 @@ info:
             }
         }
         ]]></script>          
-      title: "User Input with the <code>Scanner<code>"
+      title: "User Input with the <code>Scanner</code>"
       questions:
-        - "What is <code>System.in<code>?"
+        - "What is <code>System.in</code>?"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.nio.file.Files;
