@@ -96,6 +96,11 @@ Note that you should use a loop to scan over your keys to check which room you a
 for (String room : places.keySet()) {
     // room will be the name of each room
     // and you can check if that's equal to the one the user input!
+    
+    // For example, to check if a key is equal to a particular string:
+    //    if(room.equals("start")) {
+    //    }
+    // As usual, you can pass a variable instead of a literal string like "start" here!
 }
 ```
 
