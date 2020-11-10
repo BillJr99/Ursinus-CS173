@@ -570,12 +570,12 @@ schedule:
     rlink: false      
 - week: "9"
   date: "3"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
-  link: "Activities/NumberSystems"
+  title: "File I/O and Workshop"
+  link: "Activities/FileIO"  
 - week: "10"
   date: "0"
-  title: "File I/O"
-  link: "Activities/FileIO"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"
   deliverables:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
