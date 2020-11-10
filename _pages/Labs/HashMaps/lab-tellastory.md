@@ -90,23 +90,31 @@ The following template will help you get started:
     }
 ```
 
-Note that you should use a loop to scan over your keys to check which room you are in; that is, you should **not** have a separate `if` statement for every room that you are using!  Instead, you can use the `.get(key)` method of a `HashMap` variable to get the corresponding value.
+Note that you should use a loop to scan over your keys to check which room you are in; that is, you should **not** have a separate `if` statement for every room that you are using!  Instead, you can use the `.get(key)` method of a `HashMap` variable to get the corresponding value.  For example:
 
-You may or may not need this in this lab, but for context, you can loop over the keys in your `HashMap` like this:
+```java
+String story = places.get(currentRoom);      // gets the story associated with a room
+String[] nextSteps = moves.get(currentRoom); // gets the set of next moves the user can take
+```
+
+**In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
+
+### For Additional Context: Using HashMap Keys
+You may or may not need the following in this lab, but for context, you can loop over the keys in your `HashMap`, and compare them to `String` variables or literal values like this:
 
 ```java
 for (String room : places.keySet()) {
     // room will be the name of each room
     // and you can check if that's equal to the one the user input!
     
-    // For example, to check if a key is equal to a particular string:
+    // The String.equals(String) method allows you to compare two strings, letter by letter, 
+    // ... and return true if they are the same (and false if they are not!).
+    // For example, to check if a key is equal to a particular String:
     //    if(room.equals("start")) {
     //    }
     // As usual, you can pass a variable instead of a literal string like "start" here!
 }
 ```
-
-**In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
 
 ## Extra Credit (Up to 15%): Best Story Competition
 Creativity is encouraged, but not required for a grade!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!  You will receive 7.5% extra credit for entering your submission, and the class will vote on their favorite story (the winner will receive an additional 7.5% extra credit).
