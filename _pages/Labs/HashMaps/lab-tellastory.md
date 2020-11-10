@@ -69,24 +69,32 @@ The following template will help you get started:
         HashMap<String, String> places = new HashMap<String, String>();
         HashMap<String, String[]> moves = new HashMap<String, String[]>();
 
-        // TODO: Create the list of rooms and narrations! (Keep the start room, and be sure to add an end room!)
+        // TODO: Create the list of rooms and narrations! 
+        // (Keep the start room, and be sure to add an end room!)
         places.put("start", "You are in a large room.");
         places.put("middle", "You are in another room."); // you are welcome to change this, it's just an example!
         
-        // TODO: What movements are possible between locations?  Add an array here for each room!
+        // TODO: What movements are possible between locations?  
+        // Add an array here for each room!
         // There should be one key for every key in places above.
-        String[] startMoves = {"start", "middle"}; // TODO: fix this to be a different set of rooms that you can move to.
+        // TODO: fix this to be a different set of rooms that you can move to, as you like.
+        String[] startMoves = {"start", "middle"}; 
         moves.put("start", startMoves);
         
-        String[] middleMoves = {"start", "end"}; // my example "middle" room can move to the starting room or to the end room; again, this is just an example!
+        // TODO: fix this to be a different set of rooms that you can move to, as you like.
+        // my example "middle" room can move to the starting room or to the end room; 
+        // ... again, this is just an example!
+        String[] middleMoves = {"start", "end"}; 
         moves.put("middle", middleMoves);
 
         // Where are we starting the story?  (Leave this alone!)
         String currentRoom = "start";
         
         // TODO: write a loop that continues until currentroom is "end"
-        // TODO: print out each room's story narration, and a list of possible moves from that room
-        // TODO: then, prompt the user and read a string (scanner.nextLine()) that will be the next room, and repeat for that room!
+        // TODO: print out each room's story narration, and a list of possible moves 
+        // ... from that room
+        // TODO: then, prompt the user and read a string (scanner.nextLine()) that 
+        // ... will be the next room, and repeat for that room!
         // Don't forget to print the ending story message at the end!
     }
 ```
