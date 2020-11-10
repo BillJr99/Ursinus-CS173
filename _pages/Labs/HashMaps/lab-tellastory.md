@@ -70,13 +70,14 @@ The following template will help you get started:
 
         // Create the list of rooms and narrations!
         places.put("start", "You are in a large room.");
+        places.put("middle", "You are in another room."); // you are welcome to change this, it's just an example!
         
         // What movements are possible between locations?  
         // There should be one key for every key in places above.
-        String[] startMoves = {"start"}; // TODO: fix this to be a different set of rooms - it is an infinite loop if you can only go right back to start!
+        String[] startMoves = {"start", "middle"}; // TODO: fix this to be a different set of rooms that you can move to.
         moves.put("start", startMoves);
         
-        String[] middleMoves = {"start", "end"};
+        String[] middleMoves = {"start", "end"}; // my example "middle" room can move to the starting room or to the end room; again, this is just an example!
         moves.put("middle", middleMoves);
 
         // Where are we starting the story?
