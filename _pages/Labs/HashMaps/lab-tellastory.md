@@ -136,3 +136,18 @@ Creativity is encouraged, but not required for a grade!  Let me know in your doc
 
 ## Extra Credit (10%): Conditional Rooms
 Modify your program to have conditionals, in which your rooms print certain things depending on whether other conditions have been met.  For example, if you reach one room after visiting another, print something different in your story.
+
+The `HashMap` does not tell you directly if you have visited a room - it just stores the data that goes with each room.  You can keep track of this in a number of ways: for example, with an integer that counts how many times you have visited a room.  Here's an example:
+
+```java
+// put this at the top of your program, 
+// so that it initializes in the beginning of main()
+int startRoomVisits = 0; 
+
+// This goes in your loop, as you go from room to room!
+if(currentRoom.equals("start")) {
+    startRoomVisits = startRoomVisits + 1;
+}
+```
+
+You can check these values inside your loop as well, and learn which room you have visited, and how many times you've been there (and what other rooms you've seen before).  If you have a lot of room, you might consider making an array or `HashMap` of these values to map them to the individual rooms for convenience!
