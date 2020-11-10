@@ -96,13 +96,15 @@ The following template will help you get started:
         // Where are we starting the story?  (Leave this alone!)
         String currentRoom = "start";
         
-        // TODO: write a loop that continues until currentroom is "end"
+        // TODO: write a loop that continues until currentRoom is "end"
         // What kind of loop do you need here?
         // TODO: print out each room's story narration, and a list of possible moves 
         // ... from that room
         // TODO: then, prompt the user and read a string (scanner.nextLine()) that 
         // ... will be the next room, and repeat for that room!
-        // Don't forget to print the ending story message at the end!
+        
+        // TODO: Don't forget to print the ending story message at the end!
+        // ... after your currentRoom loop terminates
     }
 ```
 
