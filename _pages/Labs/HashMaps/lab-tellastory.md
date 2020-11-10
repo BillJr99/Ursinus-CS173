@@ -113,20 +113,18 @@ String story = places.get(currentRoom);      // gets the story associated with a
 String[] nextSteps = moves.get(currentRoom); // gets the set of next moves the user can take
 ```
 
-### For Additional Context: Using HashMap Keys
-You may or may not need the following in this lab, but for context, you can loop over the keys in your `HashMap`, and compare them to `String` variables or literal values like this:
+### For Additional Context: Checking String Equality
+To check if two `String`s are equal, you can do this:
 
 ```java
-for (String room : places.keySet()) {
-    // room will be the name of each room
-    // and you can check if that's equal to the one the user input!
-    
-    // The String.equals(String) method allows you to compare two strings, letter by letter, 
-    // ... and return true if they are the same (and false if they are not!).
-    // For example, to check if a key is equal to a particular String:
-    //    if(room.equals("start")) {
-    //    }
-    // As usual, you can pass a variable instead of a literal string like "start" here!
+// if they're equal
+if(str1.equals(str2)) {
+
+}
+
+// if they're not equal
+if(!str1.equals(str2)) {
+
 }
 ```
 
