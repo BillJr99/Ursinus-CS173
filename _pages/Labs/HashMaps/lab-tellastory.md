@@ -90,7 +90,9 @@ The following template will help you get started:
     }
 ```
 
-Note that you should use a loop to scan over your keys to check which room you are in; that is, you should **not** have a separate `if` statement for every room that you are using!  You can loop over the keys in your `HashMap` like this:
+Note that you should use a loop to scan over your keys to check which room you are in; that is, you should **not** have a separate `if` statement for every room that you are using!  Instead, you can use the `.get(key)` method of a `HashMap` variable to get the corresponding value.
+
+You may or may not need this in this lab, but for context, you can loop over the keys in your `HashMap` like this:
 
 ```java
 for (String room : places.keySet()) {
