@@ -115,6 +115,8 @@ String story = places.get(currentRoom);      // gets the story associated with a
 String[] nextSteps = moves.get(currentRoom); // gets the set of next moves the user can take
 ```
 
+**What happens if you call `places.get` with a room that doesn't exist in your program?**
+
 ### For Additional Context: Checking String Equality
 To check if two `String`s are equal, you can do this:
 
