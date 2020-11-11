@@ -183,6 +183,7 @@ A set of GPS coordinates for each county in the United States can be found [here
     // import java.io.BufferedReader;
     // import java.io.FileReader;
     // import java.util.ArrayList;
+    // import java.io.IOException;
     
     /**
      * Read a text file, line by line, into an array of Strings
