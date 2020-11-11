@@ -193,7 +193,7 @@ A set of GPS coordinates for each county in the United States can be found [here
      * @return the contents parameter, which now contains an array of strings corresponding to the lines read from the file
      * @throws IOException if the file cannot be read (i.e., if it does not exist, or if the user does not have the required permissions to read the file)
      */
-    public String[] readFile(String filePath) throws IOException {
+    public static String[] readFile(String filePath) throws IOException {
         ArrayList<String> contents = new ArrayList<String>();
         
         /* https://www.journaldev.com/709/java-read-file-line-by-line */
