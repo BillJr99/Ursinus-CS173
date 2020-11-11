@@ -179,6 +179,11 @@ Now we can read the GPS coordinates of the regions to be drawn.  Each region is 
 A set of GPS coordinates for each county in the United States can be found [here](http://nifty.stanford.edu/2014/wayne-purple-america/data/USA-county.txt).  You can use the `readFile` function below to read a file into an ArrayList of String values (one entry for each line in the file), so that we can parse the entries in this file.
 
 ```java
+    // import the following at the top and remove the comments:
+    // import java.io.BufferedReader;
+    // import java.io.FileReader;
+    // import java.util.ArrayList;
+    
     /**
      * Read a text file, line by line, into an array of Strings
      * Adapted from https://www.journaldev.com/709/java-read-file-line-by-line
