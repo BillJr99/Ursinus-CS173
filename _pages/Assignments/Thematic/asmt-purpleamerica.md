@@ -249,14 +249,17 @@ Count of the Number of Polygon Latitude/Longitude corners`
 The region name (for example, the name of the county) is followed by the state name (for example, PA for Pennsylvania), followed by the number of coordinates.  Like before, Latitude and Longitude are separated by three spaces, but there is also a space at the beginning of each Latitude/Longitude line.  
 
 ### Parsing the Region File
-Loop through the array, reading each line of text, and generate two arrays of doubles for each region.  These arrays (x and y) will contain the latitude/longitude coordinates of the polygon defined by each region in the file.  Every time you read a new region (from the start of the region all the way to a blank line indicating the end of the region), create a `HashMap` to store the values for that region.  The `HashMap` should contain the following keys:
+Loop through the array, reading each line of text, and generate two arrays of doubles for each region.  These arrays (x and y) will contain the latitude/longitude coordinates of the polygon defined by each region in the file.  Every time you read a new region (from the start of the region all the way to a blank line indicating the end of the region), create a `HashMap` to store the values for that region.  The `HashMap` should map a `String` (the region name) to a `HashMap<String, Double[]>` to contain the coordinates:
 
 * RegionName: a String containing the name of the region
-* State: a String containing the state in which that region is located
-* x: a `double[]` containing the array of x coordinates of the polygon
-* y: a `double[]` containing the array of y coordinates of the polygon
+* Coordinates: another HashMap containing the GPS latitude and longitude coordinates
 
-You can use an ArrayList or an array to store all the HashMaps from all the regions you just read.  Note that you will need to remove the extra spaces within the Strings that you read, and "tokenize" the Latitude and Longitude values from each line (since both coordinates appear on each line of text).  The following functions will help you do this:
+The Coordinates `HashMap` should map a `String` to a `Double[]` or an `ArrayList<Double>`, containining the following keys:
+
+* x: an array of `Double` values containing the array of x coordinates of the polygon
+* y: an array of `Double` values containing the array of y coordinates of the polygon
+
+Note that you will need to remove the extra spaces within the Strings that you read, and "tokenize" the Latitude and Longitude values from each line (since both coordinates appear on each line of text).  The following functions will help you do this:
 
 * `String.split(String delimiter)`: return an array of Strings, with one entry for word or "token" on the input String object on which split is called, where each word is separated by a "delimiter" given in the method parameter (note that our coordinate sare separated or delimited by three spaces)
 * `String.strip()`: return a new string that is the original string being called upon but with any leading or trailing whitespace removed
