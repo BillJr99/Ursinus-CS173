@@ -582,7 +582,8 @@ schedule:
     points: 100  
 - week: "10"
   date: "1"
-  title: "Lab: Drop the Lowest"    
+  title: "Lab: Drop the Lowest"   
+  deliverables:  
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100  
