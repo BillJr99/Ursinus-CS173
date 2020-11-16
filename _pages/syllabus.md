@@ -589,15 +589,14 @@ schedule:
     points: 100  
 - week: "10"
   date: "2"
-  title: "Searching and Sorting" 
-  link: "Activities/SearchingAndSorting"  
-  readings:
-  - rtitle: "Ch. 9.6.3"
-    rlink: false   
+  title: "Classes and Object Data Types"  
 - week: "10"
   date: "3"
   title: "Searching and Sorting" 
+  link: "Activities/SearchingAndSorting"   
   readings:   
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   deliverables:
