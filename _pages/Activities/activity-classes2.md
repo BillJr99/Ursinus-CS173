@@ -12,6 +12,7 @@ info:
     - To be able to compare two objects by their memory address, and by their underlying data through accessors or through an <code>equals()</code> method.
     - To be able to selectively protect and expose class data with the <code>public</code> and <code>private</code> keywords, and write accessors and mutators to interface with objects of the class.
     - To be able to write classes with an appropriate filename, level of abstraction, and encapsulation.
+    - To be able to utilize wrapper classes (<code>Integer</code>, <code>Double</code>) to enable functionality upon the primitive types.
     
   models:
     - model: |

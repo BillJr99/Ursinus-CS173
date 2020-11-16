@@ -10,7 +10,6 @@ info:
   goals: 
     - To be able to explain that classes provide methods and variables that represent complex nouns or ideas as a collection of data and functionality.
     - To be able to differentiate between a class and an object of that type.
-    - To be able to utilize wrapper classes (<code>Integer</code>, <code>Double</code>) to enable functionality upon the primitive types.
     - To be able to invoke constructors using the <code>new</code> keyword.
     
   models:
