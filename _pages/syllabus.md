@@ -582,11 +582,10 @@ schedule:
     points: 100  
 - week: "10"
   date: "1"
-  title: "Lab: Ethical Case Studies"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"    
-    points: 100     
+  title: "Lab: Drop the Lowest"    
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropLowest" 
+    points: 100  
 - week: "10"
   date: "2"
   title: "Searching and Sorting" 
@@ -614,31 +613,18 @@ schedule:
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
   link: "Activities/Recursion"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"   
-    points: 100    
+  deliverables: 
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
     points: 3 
-- week: "11"
-  date: "1"
-  title: "Lab: Drop the Lowest" 
-  deliverables:
-  - dtitle: "Exercise: Merge Sort"
-    dlink: "Modules/MergeSort/Module"  
-    points: 3 
-  - dtitle: "Lab: Drop the Lowest Handed Out"
-    dlink: "Labs/DropLowest" 
-    points: 100
 - week: "12"
   date: "0"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"
   deliverables:
-  - dtitle: "Exercise: Dynamic Programming"
-    dlink: "Modules/DynamicProgramming/Module"   
-    points: 3     
+  - dtitle: "Exercise: Merge Sort"
+    dlink: "Modules/MergeSort/Module"  
+    points: 3   
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
@@ -656,7 +642,10 @@ schedule:
     dlink: "Projects/Final"    
     points: 100
   - dtitle: "Debugging Table: Second Check"
-    points: 10    
+    points: 10 
+  - dtitle: "Exercise: Dynamic Programming"
+    dlink: "Modules/DynamicProgramming/Module"   
+    points: 3         
 - week: "12"
   date: "2"
   title: "Recursion and Dynamic Programming"   
