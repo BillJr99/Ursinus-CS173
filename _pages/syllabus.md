@@ -636,7 +636,10 @@ schedule:
     points: 100     
 - week: "12"
   date: "1"
-  title: "Lab: Final Project Brainstorm"    
+  title: "Lab: Final Project Brainstorm and Ethical Case Studies" 
+  readings:
+  - rtitle: "Ethical Case Studies"
+    rlink: "Labs/EthicalConsiderations"  
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
