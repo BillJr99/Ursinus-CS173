@@ -660,7 +660,6 @@ schedule:
   date: "0"
   title: "Final Project Workshop"
   deliverables:
-  deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
     points: 100  
