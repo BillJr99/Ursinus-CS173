@@ -17,8 +17,8 @@ info:
       description: Algorithm Implementation
       preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
       beginning: The algorithm fails on the test inputs due to one or more minor issues
-      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
-      proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but includes only a single class, or would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
+      proficient: A reasonable algorithm with multiple classes is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
     - weight: 20
       description: Test Cases
       preemerging: Testing was performed outside of the unit test framework, or not performed at all
@@ -50,6 +50,8 @@ tags:
 ---
 
 In this project, you will propose a topic of your choosing and a group of at least 2 and up to 3 total members.  The project must be approved by the instructor before it may commence, but the topic is entirely up to you.  Multidisciplinary projects with a broader impact are encouraged, and you are welcome to collaborate with a stakeholder outside the department for inspiration on potential projects (this person is not to contribute code, only disciplinary context).
+
+In addition to the class in which you will write your `main()` function, your project should include and utilize at least one additional class with at least one constructor and at least one non-static method inside.
 
 You will use git or another version control system to coordinate between your team.  
 
