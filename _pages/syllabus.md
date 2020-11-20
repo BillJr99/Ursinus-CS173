@@ -606,9 +606,9 @@ schedule:
   - dtitle: "Programming Assignment: Purple America Part 5 Due"
     dlink: "Assignments/PurpleAmerica"    
     points: 25    
-  - dtitle: "Programming Assignment: Purple America Part 6 Handed Out"
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
     dlink: "Assignments/PurpleAmerica"   
-    points: 15     
+    points: 25     
 - week: "11"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -628,12 +628,9 @@ schedule:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
-  - dtitle: "Programming Assignment: Purple America Part 6 Due"
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
     dlink: "Assignments/PurpleAmerica"   
-    points: 15
-  - dtitle: "Programming Assignment: Purple America Part 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 10    
+    points: 25
   - dtitle: "Programming Assignment: Iris Dataset Handed Out"
     dlink: "Assignments/Iris"      
     points: 100     
@@ -675,11 +672,7 @@ schedule:
   date: "1"
   title: "Final Project Workshop" 
 - week: "13"
-  date: "2"
-  title: "Final Project Workshop"  
-  - dtitle: "Programming Assignment: Purple America Part 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 10    
+  date: "2"   
 - week: "13"
   date: "3"
   title: "Review"     
