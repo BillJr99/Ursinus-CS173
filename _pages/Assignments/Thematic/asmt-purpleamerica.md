@@ -296,7 +296,7 @@ Earlier, we drew circles and rectangles on the screen using x and y coordinates.
 // Assumption: the edu.princeton.cs.algs4 package is imported in this file with
 // import edu.princeton.cs.algs4;
 
-//... then inside your class, and inside main(), you can do this:
+//... then you can do this:
 
 // This is the RGB color of the polygon
 int red = 255;
@@ -316,11 +316,11 @@ StdDraw.filledPolygon(x, y);
 
 ### What to Do
 
-When you parse your coordinate file, notice that the minimum and maximum latitude and longitude coordinates are given at the top of the file.  Read them prior to your loop and store them as your `minX`, `minY`, `maxX`, and `maxY` values.  Then, in a loop, iterate over your `HashMap` set of counties to obtain the coordinates, and pass the `x` and `y` arrays to the polygon drawing function you drew just above.
+When you parse your coordinate file, notice that the minimum and maximum latitude and longitude coordinates are given at the top of the file.  Read them prior to your loop and store them as your `minX`, `minY`, `maxX`, and `maxY` values.  
 
-Now that you have an array of x and y coordinates scaled from 0 to 1, you can draw on the screen using these polygons!  Pass the arrays to `filledPolygon` using the code snippet above (replacing the array we gave you) to draw each region in the country.  Better yet, you can make a function to do this, so that you can pass the array for each region and draw them one by one!  Write a function that takes an `ArrayList<Double>` and draws the polygon using the above code snippet.
+Now that you have an array of x and y coordinates scaled from 0 to 1, you can draw on the screen using these polygons!  Pass the arrays to `filledPolygon` using the code snippet above (replacing the array we gave you) to draw each region in the country.  Better yet, you can make a function to do this, so that you can pass the array for each region and draw them one by one!  Write a function that takes an `ArrayList<Double>` and draws the polygon using the above code snippet.  Let's call it `drawRegion(ArrayList<Double> x, ArrayList<Double> y)`
 
-Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
+Then, in a loop, iterate over your `HashMap` set of counties to obtain the coordinates, and scale them to a 0 to 1 plane using the math formulas to scale according to the minimum and maximum x and y in the file (see above!).  Create new ArrayLists for the scaled values, or modify the values directly in your `x` and `y` arrays.  Pass the scaled `x` and `y` `ArrayList`s to the `drawRegion` polygon drawing function you wrote just above.  Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
 
 ## Part 7: Generating Color Codes from Electoral Votes
 
