@@ -303,7 +303,11 @@ int red = 255;
 int green = 255;
 int blue = 255;
 
-// x and y is an array of coordinates of the corners of the polygon - the polygon will be automatically closed by connecting the last point to the first point.  Here, the points are (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), and, finally, back to (0, 0) automatically.
+/* x and y is an array of coordinates of the corners of the polygon - 
+the polygon will be automatically closed by connecting the last point 
+to the first point.  Here, the points are 
+(0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), 
+and, finally, back to (0, 0) automatically. */
 double[] x = {0, .2, .2, 0 };
 double[] y = {0,  0, .2, .2};
     
