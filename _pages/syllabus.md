@@ -618,10 +618,7 @@ schedule:
   date: "0"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"
-  deliverables:
-  - dtitle: "Exercise: Merge Sort"
-    dlink: "Modules/MergeSort/Module"  
-    points: 3   
+  deliverables:  
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100
@@ -655,9 +652,9 @@ schedule:
   deliverables:
     - dtitle: "Participation: Second Activity Notebook Check"
       points: 10  
-    - dtitle: "Exercise: Dynamic Programming"
-      dlink: "Modules/DynamicProgramming/Module"   
-      points: 3         
+    - dtitle: "Exercise: Merge Sort"
+      dlink: "Modules/MergeSort/Module"  
+      points: 3       
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
@@ -671,6 +668,10 @@ schedule:
 - week: "13"
   date: "1"
   title: "Final Project Workshop" 
+  deliverables:
+    - dtitle: "Exercise: Dynamic Programming"
+      dlink: "Modules/DynamicProgramming/Module"   
+      points: 3           
 - week: "13"
   date: "2"   
 - week: "13"
