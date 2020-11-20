@@ -600,9 +600,6 @@ schedule:
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   deliverables:
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3 
   - dtitle: "Programming Assignment: Purple America Part 5 Due"
     dlink: "Assignments/PurpleAmerica"    
     points: 25    
@@ -613,10 +610,10 @@ schedule:
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
   link: "Activities/Recursion"
-  deliverables: 
-  - dtitle: "Exercise: Recursion"
-    dlink: "Modules/Recursion/Module"
-    points: 3 
+  deliverables:
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3   
 - week: "12"
   date: "0"
   title: "Recursion and Dynamic Programming"  
@@ -646,9 +643,9 @@ schedule:
     points: 100
   - dtitle: "Debugging Table: Second Check"
     points: 10 
-  - dtitle: "Exercise: Dynamic Programming"
-    dlink: "Modules/DynamicProgramming/Module"   
-    points: 3         
+  - dtitle: "Exercise: Recursion"
+    dlink: "Modules/Recursion/Module"
+    points: 3     
 - week: "12"
   date: "2"
   title: "Recursion and Dynamic Programming"   
@@ -658,6 +655,9 @@ schedule:
   deliverables:
     - dtitle: "Participation: Second Activity Notebook Check"
       points: 10  
+    - dtitle: "Exercise: Dynamic Programming"
+      dlink: "Modules/DynamicProgramming/Module"   
+      points: 3         
 - week: "13"
   date: "0"
   title: "Final Project Workshop"
