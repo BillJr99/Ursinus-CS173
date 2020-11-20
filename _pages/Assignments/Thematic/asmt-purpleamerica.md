@@ -289,8 +289,6 @@ If you know the largest and smallest X,Y values from the whole file (hint: you d
   
 </details>
 
-Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
-
 ### Drawing a Custom Polygon using an Array of Coordinates
 Earlier, we drew circles and rectangles on the screen using x and y coordinates.  We can also draw custom polygons by providing the x and y coordinate of each corner (that is, where to draw each line of the polygon).  We can specify all the x and all the y coordinates at once using an array, which combines all the x and y points into a single variable.  Here is an example that you can try:
 
@@ -316,7 +314,13 @@ StdDraw.setPenColor(color);
 StdDraw.filledPolygon(x, y); 
 ``` 
 
-Now that you have an array of x and y coordinates scaled from 0 to 1, you can draw on the screen using these polygons!  Pass the arrays to `filledPolygon` using the code snippet above (replacing the array we gave you) to draw each region in the country.  Better yet, you can make a function to do this, so that you can pass the array for each region and draw them one by one!
+### What to Do
+
+When you parse your coordinate file, notice that the minimum and maximum latitude and longitude coordinates are given at the top of the file.  Read them prior to your loop and store them as your `minX`, `minY`, `maxX`, and `maxY` values.  Then, in a loop, iterate over your `HashMap` set of counties to obtain the coordinates, and pass the `x` and `y` arrays to the polygon drawing function you drew just above.
+
+Now that you have an array of x and y coordinates scaled from 0 to 1, you can draw on the screen using these polygons!  Pass the arrays to `filledPolygon` using the code snippet above (replacing the array we gave you) to draw each region in the country.  Better yet, you can make a function to do this, so that you can pass the array for each region and draw them one by one!  Write a function that takes an `ArrayList<Double>` and draws the polygon using the above code snippet.
+
+Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
 
 ## Part 7: Generating Color Codes from Electoral Votes
 
