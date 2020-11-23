@@ -598,7 +598,7 @@ schedule:
   - rtitle: "Ch. 9.6.3"
     rlink: false   
   - rtitle: "Interactive Demo of Insertion Sort"
-    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
+    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"     
   deliverables:
   - dtitle: "Programming Assignment: Purple America Part 5 Due"
     dlink: "Assignments/PurpleAmerica"    
@@ -609,6 +609,9 @@ schedule:
 - week: "11"
   date: "0"
   title: "Searching and Sorting"
+  readings:
+  - rtitle: "Sorting Methods"
+    rlink: "Modules/SortingMethods/Module"
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
