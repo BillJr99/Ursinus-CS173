@@ -608,16 +608,15 @@ schedule:
     points: 25     
 - week: "11"
   date: "0"
-  title: "Algorithms: Recursion and Merge Sort" 
-  link: "Activities/Recursion"
+  title: "Searching and Sorting"
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
     points: 3   
 - week: "12"
   date: "0"
-  title: "Recursion and Dynamic Programming"  
-  link: "Activities/DynamicProgramming"
+  title: "Algorithms: Recursion and Merge Sort" 
+  link: "Activities/Recursion"  
   deliverables:  
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
@@ -645,7 +644,8 @@ schedule:
     points: 3     
 - week: "12"
   date: "2"
-  title: "Recursion and Dynamic Programming"   
+  title: "Recursion and Dynamic Programming"  
+  link: "Activities/DynamicProgramming"    
 - week: "12"
   date: "3"
   title: "Final Project Workshop"  
