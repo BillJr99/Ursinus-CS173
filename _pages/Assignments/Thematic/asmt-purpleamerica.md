@@ -318,6 +318,26 @@ StdDraw.setPenColor(color);
 StdDraw.filledPolygon(x, y); 
 ``` 
 
+`StdDraw.filledPolygon` takes in an array of doubles (`double[]`).  If you are using an `ArrayList<Double>`, you can convert it to a `double[]` by pasting and calling this function into your program:
+
+```java
+// call this with:
+// double[] xArr = toArray(x);
+// where x is an ArrayList<Double>
+// and you can pass x to filledPolygon (repeat for y!)
+public static double[] toArray(ArrayList<Double> arr) { 
+        // Make an array big enough to hold everything in the ArrayList
+        double[] result = new double[arr.size()];
+        
+        // now copy each value!
+        for(int i = 0; i < arr.size(); i++) {
+            result[i] = arr.get(i);
+        }
+        
+        return result;
+}
+```
+
 ### What to Do
 
 When you parse your coordinate file, notice that the minimum and maximum latitude and longitude coordinates are given at the top of the file.  Read them prior to your loop and store them as your `minX`, `minY`, `maxX`, and `maxY` values.  
