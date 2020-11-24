@@ -102,6 +102,8 @@ The following template will help you get started:
         // ... from that room
         // TODO: then, prompt the user and read a string (scanner.nextLine()) that 
         // ... will be the next room, and repeat for that room!
+        // The room the user picks should be in the places.get(currentRoom) array,
+        // ... so that only valid moves are made!
         
         // TODO: Don't forget to print the ending story message at the end!
         // ... after your currentRoom loop terminates
