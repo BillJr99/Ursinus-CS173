@@ -300,15 +300,16 @@ Earlier, we drew circles and rectangles on the screen using x and y coordinates.
 //... then you can do this:
 
 // This is the RGB color of the polygon
-int red = 255;
-int green = 255;
-int blue = 255;
+int red = 0;
+int green = 0;
+int blue = 0;
 
 /* x and y is an array of coordinates of the corners of the polygon - 
 the polygon will be automatically closed by connecting the last point 
 to the first point.  Here, the points are 
 (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), 
-and, finally, back to (0, 0) automatically. */
+and, finally, back to (0, 0) automatically.
+You will replace this with your own arrays. */
 double[] x = {0, .2, .2, 0 };
 double[] y = {0,  0, .2, .2};
     
