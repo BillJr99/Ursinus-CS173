@@ -322,7 +322,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         yi = 0;
         
         for(var y = 0; y <= bheight; y += rheight) {
-            label = xlabels.charAt(xi % xlabels.length) + yi.toString(); // ylabels.charAt(yi % ylabels.length)
+            label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); // ylabels.charAt(yi % ylabels.length)
             ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0));
             
             yi = yi + 1;
@@ -363,7 +363,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     
     var yi = 0;
     for(var y = 0; y <= bheight; y += rheight) {
-        label = yi.toString(); // ylabels.charAt(yi % ylabels.length);
+        label = (yi + 1).toString(); // ylabels.charAt(yi % ylabels.length);
         yheaderctx.fillText(label, 25, y + (rheight / 2.0));
         
         yi = yi + 1;
