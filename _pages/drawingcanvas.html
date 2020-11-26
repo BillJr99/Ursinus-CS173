@@ -206,7 +206,6 @@ makeColorPalettes();
 // ***** OPTION: GRID SUPPORT *****
 // for labeling the grid
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var ylabels = "123456789";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
 var numcols = {{ page.numcols }};
@@ -322,7 +321,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         yi = 0;
         
         for(var y = 0; y <= bheight; y += rheight) {
-            label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); // ylabels.charAt(yi % ylabels.length)
+            label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); 
             ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0));
             
             yi = yi + 1;
@@ -349,6 +348,8 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         label = xlabels.charAt(xi % xlabels.length);
         xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
         
+        console.log(x + " (" + xi + "): " + label + " (" + rwidth + ", " + bwidth + ")");
+        
         xi = xi + 1;
     }   
 
@@ -363,7 +364,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     
     var yi = 0;
     for(var y = 0; y <= bheight; y += rheight) {
-        label = (yi + 1).toString(); // ylabels.charAt(yi % ylabels.length);
+        label = (yi + 1).toString(); 
         yheaderctx.fillText(label, 25, y + (rheight / 2.0));
         
         yi = yi + 1;
