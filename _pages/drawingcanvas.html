@@ -76,6 +76,9 @@ dogrid: true
 dofreedraw: false
 
 fayelink: "https://FayePubSub.billjr99.repl.co"
+
+instructionslink: "../files/drawingcanvas-ucbear2/Merged.pdf"
+
 ---
 
 <style>
@@ -137,6 +140,11 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 {% endif %}
 {% endif %}
 {% endfor %}
+
+{% if page.instructionslink %}
+<br><br>
+<a href="{{ page.instructionslink }}">Click here for the Instructions</a>
+{% endif %}
 
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
