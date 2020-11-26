@@ -317,10 +317,10 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     
     var xi = 0;
     var yi = 0;
-    for(var x = 0; x <= bwidth; x += rwidth) {
+    for(var x = 0; x < bwidth; x += rwidth) {
         yi = 0;
         
-        for(var y = 0; y <= bheight; y += rheight) {
+        for(var y = 0; y < bheight; y += rheight) {
             label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); 
             ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0));
             
@@ -344,11 +344,11 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     xheaderctx.lineWidth = '3';
     
     var xi = 0;
-    for(var x = 0; x <= bwidth; x += rwidth) {
+    for(var x = 0; x < bwidth; x += rwidth) {
         label = xlabels.charAt(xi % xlabels.length);
         xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
         
-        console.log(x + " (" + xi + "): " + label + " (" + rwidth + ", " + bwidth + ")");
+        //console.log(x + " (" + xi + "): " + label + " (" + rwidth + ", " + bwidth + ")");
         
         xi = xi + 1;
     }   
@@ -363,7 +363,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     yheaderctx.lineWidth = '3';
     
     var yi = 0;
-    for(var y = 0; y <= bheight; y += rheight) {
+    for(var y = 0; y < bheight; y += rheight) {
         label = (yi + 1).toString(); 
         yheaderctx.fillText(label, 25, y + (rheight / 2.0));
         
