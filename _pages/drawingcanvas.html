@@ -5,34 +5,59 @@ title: "Drawing Canvas"
 excerpt: "Drawing Canvas"
     
 canvascolors:
-  - '#eb00ff'
-  - '#7d7300'
-  - '#55a2a9'
-  - '#ffa200'
-  - '#cccccc'
-  - '#ffea00'
-  - '#0042ff'
-  - '#e22b7c'
-  - '#f89318'
-  - '#d0d222'
-  - '#2e8c8e'
-  - '#1c80c4'
-  - '#d3ddd8'
-  - '#000000'
-  - '#ffffff'
-  - '#f39a4f'
-  - '#eb6092'
-  - '#4ab6d9'
-  - '#abcc51'
-  - '#f9c847'
-  - '#75be6f'
-  - '#b6d051'
-  - '#bcddc7'
-  - '#a7cbeb'
-  - '#86b8e6'
+  - color: '#eb00ff'
+    show: true
+  - color: '#7d7300'
+    show: true
+  - color: '#55a2a9'
+    show: true
+  - color: '#ffa200'
+    show: true
+  - color: '#cccccc'
+    show: true
+  - color: '#ffea00'
+    show: true
+  - color: '#0042ff'
+    show: true
+  - color: '#e22b7c'
+    show: false
+  - color: '#f89318'
+    show: false
+  - color: '#d0d222'
+    show: false
+  - color: '#2e8c8e'
+    show: false
+  - color: '#1c80c4'
+    show: false
+  - color: '#d3ddd8'
+    show: false
+  - color: '#000000'
+    show: false
+  - color: '#ffffff'
+    show: false
+  - color: '#f39a4f'
+    show: false
+  - color: '#eb6092'
+    show: false
+  - color: '#4ab6d9'
+    show: false
+  - color: '#abcc51'
+    show: false
+  - color: '#f9c847'
+    show: false
+  - color: '#75be6f'
+    show: false
+  - color: '#b6d051'
+    show: false
+  - color: '#bcddc7'
+    show: false
+  - color: '#a7cbeb'
+    show: false
+  - color: '#86b8e6'
+    show: false
   
-numcols: 7
-numrows: 8
+numcols: 4
+numrows: 5
 subcols: 5
 subrows: 3
 
@@ -112,7 +137,9 @@ ctx.lineWidth = '3';
 var palettes = [
 {% for i in (0..page.canvascolors.size) %}
 {% if i < page.canvascolors.size %}
-"{{ page.canvascolors[i] }}", 
+{% if page.canvascolors[i].show %}
+"{{ page.canvascolors[i].color }}", 
+{% endif %}
 {% endif %}
 {% endfor %}
 ];
