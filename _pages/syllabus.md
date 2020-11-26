@@ -677,6 +677,8 @@ schedule:
       points: 3           
 - week: "13"
   date: "2"   
+  title: "CS Education Week: Post-It Pandemonium"
+  link: "./DrawingCanvas"
 - week: "13"
   date: "3"
   title: "Review"     
