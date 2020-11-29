@@ -123,7 +123,7 @@ public static String[] commaSeparate(String line) {
 }
 ```
 
-## Part 2: Obtaining the Features
+## Part 2: Obtaining the Features: Mean of the Sepal and Petal Length and Width
 Using an `ArrayList`, gather all the sepal lengths, sepal widths, petal lengths, and petal widths by iterating over the text file and splitting each line.  If the classification is a `setosa` flower, store that in a separate array.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.
 
 Each of these columns will always be in the same position, so to obtain the `SepalLength` value of a given line, it will always be the same index of the array returned by `commaSeparate`.  **Specifically, given the example file columns and values given above, what array index will contain the `SepalLength`, `SepalWidth`, `PetalLength`, `PetalWidth`, and `SpeciesClassification` from your "tokenized" array?**
@@ -135,23 +135,43 @@ You can convert each `String` number to its true numeric value like the below.  
 Double val = Double.parseDouble(str); 
 ```
 
-Compute the mean and variance of these arrays.  The formulas for the mean and variance are provided for your convenience:
+Write a function that computes the mean of an array of `double` values or an `ArrayList<Double>` (whichever would be more convenient for you!).  Use this function to compute the mean of these arrays.  The formula for the mean is provided for your convenience:
 
 Mean (<span>\\(\mu\\)</span>): <span>\\(\mu = \frac{\sum\limits_{i=1}^{n} x_{i}}{n}\\)</span><br>
-Variance (<span>\\(\sigma^{2}\\)</span>): <span>\\(\sigma^{2} = \frac{\sum\limits_{i=1}^{n} ((x_{i}-\mu)^{2})}{n}\\)</span>
+
+When you have finished, you should have called this function 12 times on 12 different arrays, and obtained the mean of:
+
+1. an array containing the sepal lengths of the array of `Iris-setosa` flowers
+2. an array containing the sepal lengths of the array of `Iris-versicolor` flowers
+3. an array containing the sepal lengths of the array of `Iris-virginica` flowers
+4. an array containing the sepal widths of the array of `Iris-setosa` flowers
+5. an array containing the sepal widths of the array of `Iris-versicolor` flowers
+6. an array containing the sepal widths of the array of `Iris-virginica` flowers
+7. an array containing the petal lengths of the array of `Iris-setosa` flowers
+8. an array containing the petal lengths of the array of `Iris-versicolor` flowers
+9. an array containing the petal lengths of the array of `Iris-virginica` flowers
+10. an array containing the petal widths of the array of `Iris-setosa` flowers
+11. an array containing the petal widths of the array of `Iris-versicolor` flowers
+12. an array containing the petal widths of the array of `Iris-virginica` flowers
+
+**Hint: you might consider making an array of these 12 arrays when you first create them, so that you can call your mean function in a very simple loop (and avoid having to paste the function call 12 different times!).**
 
 ## Part 3: Classifying a New Flower
-Using the Means you just computed, which we call our data featuress, we will try to determine the classification of an unknown flower.  Make up values for a flower based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space.  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
+Using the means you just computed, which we call our data features, we will try to determine the classification of an unknown flower, by comparing it to the examples we've just learned!
+
+Make up values for a flower (any values you like!) based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of our four original columns, separated into each of the three species: the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space (one dimension for each of the four columns).  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
 
 Euclidean Distance: <span>\\(d = \sqrt{(x_{petalLength}-\mu_{petalLength})^{2} + (x_{petalWidth}-\mu_{petalWidth})^{2} + (x_{sepalLength}-\mu_{sepalLength})^{2} + (x_{sepalWidth}-\mu_{sepalWidth})^{2}}\\)</span>
 
-Where <span>\\(\mu\\)</span> represents the mean of a particular feature (such as the `petalWidth`) for a particular flower (such as the `versicolor`).  This means that we're computing the mean of all the `petalWidth` values that corresponded to the `versicolor` flower.
+Where <span>\\(\mu\\)</span> represents one of the means of a particular feature (such as the `petalWidth`) for a particular flower (such as the `versicolor`) that you computed in Part 2.  
+
+Because you will be computing several of these distance measurements, begin by writing a function that computes the Euclidean Distance.  This function will accept your unknown flower `sepalLength`, `sepalWidth`, `petalLength`, and `petalWidth`, as well as the mean of one species' `sepalLength`, `sepalWidth`, `petalLength`, and `petalWidth` that you computed in Part 2.  **Hint: you don't have to pass all 12 means here from Part 2!  We will call this function three times, each time passing it four of the means corresponding to one of the species (for example, just the four virginica means, or just the four setosa means).  That's because we will compare the three Euclidean Distances (virginica, setosa, versicolor) that we get for our unknown flower, and predict that our unknown flower species is the one with the smallest of the three Euclidean Distances!**
 
 You will compute three of these Euclidean Distances: one using the means of the `setosa` flower, one using the means of the `versicolor` flower, and one using the means of the `virginica` flower.  `x` is your made up flower that you're looking to classify.  So, for the first Euclidean Distance, when you consider the `setosa` flower, you should compute <span>\\(\mu_{petalLength}\\)</span>, <span>\\(\mu_{petalWidth}\\)</span>, <span>\\(\mu_{sepalLength}\\)</span>, and <span>\\(\mu_{sepalWidth}\\)</span> as the means of those columns, but only for those rows that correspond to a `setosa` classification in the input data set.  By doing this, we are "teaching" our algorithm about what a `setosa` flower "looks like" according to these data features.  This is called "training" the algorithm.  If we provide enough examples, and as long as the features that we compute from those examples (like the mean) differentiate one flower from another, we'll be able to predict unknown flowers based on its own features by comparing them to the training features we're computing now.  In this case, that comparison is being made using the Euclidean Distance, which tells us how "close" or "far" an unknown flower is from the training features (in this case, the means) we observed.
 
-Print out all of your Euclidean Distances, and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Change the values of your made up flower and see how you do predicting it!
+Print out all of your Euclidean Distances, and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Read in values for the petal and sepal lengths and widths (as `double` values) from the user via the keyboard for a made up flower, and make the prediction!
 
-## Part 4: Experimenting with the Data
+## Extra Credit (15 Points): Experimenting with the Data
 
 ### Classifying the Input Samples
 Iterate a second time over each line of the Iris Dataset CSV file (or over the `ArrayList<String>` that you generated by reading it the first time, if you still have that variable!).  This time, pretend that you do not know the classification, and use those values as your "made up flower" to be classified.  In your program, compare your classification to the actual classification from the CSV, and print out your accuracy rate.
@@ -197,9 +217,7 @@ Here are a few questions to consider about the data:
 * **Which columns would you use for our approach?**  
 * **Based on your findings, which two flowers do you think are most easily distinguished between each other, and why?**
 
-## Extra Credit (10 Points)
-
-For extra credit, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  **Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?**
+Finally, remove the columns you selected based on the Linear Fisher Discriminant in Part 4, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  **Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?**
 
 ## Ethical Use of Learning Algorithms
 
