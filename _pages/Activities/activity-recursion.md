@@ -91,7 +91,16 @@ info:
         - Suppose you are playing the &quot;high-low&quot; game, in which you have to guess a number, and are told that the correct value is higher or lower than your guess.  What would be the best first guess, if you knew the value was between <code>1</code> and <code>10</code>?        
         - How do you know that a value will definitely be found in the right half of the array?  How about on the left half of the array?
         - Now, suppose you are playing the same "high-low" game, but instead of knowing the range of values you’re looking for, you know how big the array is that you’re searching.  You are still told whether your value is higher or lower than your guess.  Which element would you pick for your guess?  In mathematics, this element or value is known as the ______ of the list?
-        - Try searching for the value <code>8</code>.  Write down which indices of the array you are searching within (initially <code>0</code> through <code>9</code>), and the index of your guess, at each step of the search, until you find the value <code>8</code>.  How many guesses were required?  How many guesses would have been required if the list was not sorted?        
+        - Try searching for the value <code>8</code>.  Write down which indices of the array you are searching within (initially <code>0</code> through <code>9</code>), and the index of your guess, at each step of the search, until you find the value <code>8</code>.  How many guesses were required?  How many guesses would have been required if the list was not sorted?                
+    - model: |
+        <a href=https://www.geeksforgeeks.org/merge-sort/>Merge Sort</a> views the problem of sorting as a recursive one: sorting a large list is the same as breaking the list in half, sorting each of those, and then "merging" them together as if they were a deck of cards being shuffled.
+      title: Efficient Sorting with Recursion - <code>Merge Sort</code>
+      questions:
+        - What would the base case of <code>Merge Sort</code> be?  When might you stop splitting the array in half?
+        - Given two sorted arrays, how would you go about merging them together?
+        - Write the pseudocde for <code>Merge Sort</code> - there are exactly 3 steps (recursively calling the left half, followed by the right half, followed by a call to the merge step completed above).
+        - What indices would you provide to sort the left half, right half, and merge steps at each recursive iteration? 
+        - Enter the code for <a href=https://www.geeksforgeeks.org/merge-sort/>Merge Sort</a> into the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a> and execute it step-by-step.        
     - model: |
         Quick Sort views the problem of sorting as a recursive one: sorting a large list is the same as sorting two smaller lists.  The problem gets smaller at each step as long as we learn the correct sorted position of one item at every step (just like with Selection Sort and Insertion Sort).    
         <br>
@@ -102,17 +111,7 @@ info:
         - Notice that the problems aren’t always divided exactly into halves.  That’s because the algorithm is &quot;partitioning&quot; the values according to the last value of the array.  What would be the ideal choice of an element to &quot;partition&quot; around (this element is known as the &quot;pivot&quot;)?
         - The &quot;partition&quot; results in two sub-problems, with sub-arrays that include all the elements from the main problem, except for one.  Which element is left out, and why?
         - After each recursive iteration of Quick Sort, how many elements are placed into their correct position?  Where are they located?
-        - Enter the code for <a href=https://www.geeksforgeeks.org/quick-sort/>Quick Sort</a> into the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a> and execute it step-by-step.
-        
-    - model: |
-        <a href=https://www.geeksforgeeks.org/merge-sort/>Merge Sort</a> views the problem of sorting as a recursive one: sorting a large list is the same as breaking the list in half, sorting each of those, and then "merging" them together as if they were a deck of cards being shuffled.
-      title: Efficient Sorting with Recursion - <code>Merge Sort</code>
-      questions:
-        - What would the base case of <code>Merge Sort</code> be?  When might you stop splitting the array in half?
-        - Given two sorted arrays, how would you go about merging them together?
-        - Write the pseudocde for <code>Merge Sort</code> - there are exactly 3 steps (recursively calling the left half, followed by the right half, followed by a call to the merge step completed above).
-        - What indices would you provide to sort the left half, right half, and merge steps at each recursive iteration? 
-        - Enter the code for <a href=https://www.geeksforgeeks.org/merge-sort/>Merge Sort</a> into the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a> and execute it step-by-step.        
+        - Enter the code for <a href=https://www.geeksforgeeks.org/quick-sort/>Quick Sort</a> into the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a> and execute it step-by-step.        
   
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/rEasyMC.html
