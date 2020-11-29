@@ -647,11 +647,11 @@ schedule:
     points: 3     
 - week: "12"
   date: "2"
-  title: "Recursion and Dynamic Programming"  
-  link: "Activities/DynamicProgramming"    
+  title: "Algorithms: Recursion and Merge Sort"  
 - week: "12"
   date: "3"
-  title: "Final Project Workshop"  
+  title: "Recursion and Dynamic Programming"  
+  link: "Activities/DynamicProgramming"  
   deliverables:
     - dtitle: "Participation: Second Activity Notebook Check"
       points: 10  
