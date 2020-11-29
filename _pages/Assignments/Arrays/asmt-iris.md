@@ -74,6 +74,8 @@ Before we begin, open the CSV file in your favorite spreadsheet program.  You'll
 
 ![Sepal Width vs Sepal Length Plot, with Flower Classifications Color Coded from scikit-learn](https://scikit-learn.org/stable/_images/sphx_glr_plot_iris_dataset_002.png)
 
+Notice that some points are clearly off to the left from the other two groups, while two groups are intermixed along the bottom right of the graph.  That's because the sepal width and sepal length does not perfectly separate our species of flowers into unique clusters.  If we add a third dimension to our graph by adding, say, the petal length (or even add more dimensions: arrays can have dimensions beyond what we can visualize!), we might be able to separate those points even further.  If the clusters of data are far apart, we can guess which cluster a new, unknown data point belongs to, by measuing how far it is from the center of each cluster and inferring that it belongs to the nearest center.  In this assignment, we will write a program to compute centroids of three species (virginica, versicolor, and setosa flowers) over four dimensions (sepal length, sepal width, petal length, and petal width), and compute the nearest of these three 4-D centroids to a flower whose species we do not know but whose petal and sepal length and width we can measure!
+
 ## Step 1: Reading the CSV File
 Open the CSV file for reading.  Since it is a CSV file, a `BufferedReader` is a good choice, as we can read the text line-by-line.  Using the `split` function, you can obtain an array of values for each row.  This array will contain the sepal length, sepal width, petal length, petal width, and the known classification of that particular flower.  The `split` function accepts a `String` parameter representing the delimiter character on which to split.  For a CSV, that's the comma character.
 
@@ -125,19 +127,8 @@ public static String[] commaSeparate(String line) {
 
 Save the `iris.data` file into your project directory under a `data` subdirectory, and verify that you can read the CSV file, comma separate each line of the array you get back in a loop, and print the array values to the screen as a test.  The `filePath` that you pass to `readCSV` will be `data/iris.data`.  **Hint: you do not have to modify the `commaSeparate` or `readCSV` functions to do this, and you should not!  Rather, call each of these functions from `main()` instead.**
 
-## Step 2: Processing the Input
-Now, you will use an `ArrayList`, gather all the sepal lengths, sepal widths, petal lengths, and petal widths by iterating over the text file and splitting each line.  If the classification is a `setosa` flower, store that in a separate array.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.
-
-Each of these columns will always be in the same position, so to obtain the `SepalLength` value of a given line, it will always be the same index of the array returned by `commaSeparate`.  **Specifically, given the example file columns and values given above, what array index will contain the `SepalLength`, `SepalWidth`, `PetalLength`, `PetalWidth`, and `SpeciesClassification` from your "tokenized" array?**
-
-You can convert each `String` number to its true numeric value like the below.  Note that you should not convert textual (non-numeric) `String` values!  So, if a `String` contains the species, like `Iris-setosa`, that should be read into a `String` and not converted to a `Double`; rather, the lengths and widths should!
-
-```java
-// For example, if str contains "3.14", then val will be the Double 3.14
-Double val = Double.parseDouble(str); 
-```
-
-Loop over your array of lines and comma separate ("tokenize") each one in a loop.  In the same loop, decide what species of flower you have.  One of the values of your tokenized `line` array will contain the species (the same index each time!).  You can use the `String.equals()` method to determine if your species equals `Iris-setosa`, `Iris-versicolor`, or `Iris-virginica`.  Use an `if` statement to figure out which one!  Finally, put each of the four numeric values into each of four arrays corresponding to its value (the sepal length, sepal width, petal length, or petal width).  As a reminder, you will know which value is which because they'll always be in the same order, and so they will have the same array index each time.  For example, the sepal length will always be index `[0]`.  Your `if` statement will show you which of the three sets of 4 arrays you're inserting into during this iteration of the loop (the set corresponding to the setosa flower, the virginica flower, or the versicolor flower).  You will have created 12 arrays:
+## Step 2: Processing the Input and Separating Each Row of Values into Separate Arrays Based on their Species and Column
+Now, you will use the `ArrayList` that you generated by reading the CSV file, comma-separate (or "tokenize") each line in a loop into an array of tokens; in the loop (but after you tokenize each line), you will gather the sepal length, sepal width, petal length, petal width, and species from the array of tokens.  If the species is a `setosa` flower, store the petal length into an array made just for setosa flower petal lengths.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.  You will have created 12 arrays of `Double` values:
 
 1. an array containing the sepal lengths of the array of `Iris-setosa` flowers
 2. an array containing the sepal lengths of the array of `Iris-versicolor` flowers
@@ -154,7 +145,18 @@ Loop over your array of lines and comma separate ("tokenize") each one in a loop
 
 **Hint: you might optionally consider making an array of these 12 arrays when you first create them, so that you can call your mean function in a very simple loop (and avoid having to paste the function call 12 different times!).**
 
-## Step 3: Obtaining the Features: Mean of the Sepal and Petal Length and Width
+Each of these columns will always be in the same position, so to obtain the `SepalLength` value of a given line, it will always be the same index of the array returned by `commaSeparate`.  **Specifically, given the example file columns and values given above, what array index will contain the `SepalLength`, `SepalWidth`, `PetalLength`, `PetalWidth`, and `SpeciesClassification` from your "tokenized" array?**
+
+Note that these arrays contain `Double` values, even though your tokens array is of `String`s.  You can convert each `String` (that contains text representing a number) to its true numeric value using the `Double.parseDouble()` function (example below).  Note that you should not convert textual (non-numeric) `String` values!  So, if a `String` contains the species, like `Iris-setosa`, that should be read into a `String` and not converted to a `Double`; rather, the lengths and widths should!
+
+```java
+// For example, if str contains "3.14", then val will be the Double 3.14
+Double val = Double.parseDouble(str); 
+```
+
+In summary, loop over your array of lines and comma separate ("tokenize") each one in a loop.  In the same loop, decide what species of flower you have.  One of the values of your tokenized `line` array will contain the species (the same index each time!).  You can use the `String.equals()` method to determine if your species equals `Iris-setosa`, `Iris-versicolor`, or `Iris-virginica`.  Use an `if` statement to figure out which one!  Finally, put each of the four numeric values into each of four arrays corresponding to its value (the sepal length, sepal width, petal length, or petal width).  As a reminder, you will know which value is which because they'll always be in the same order, and so they will have the same array index each time.  For example, the sepal length will always be index `[0]`.  Your `if` statement will show you which of the three sets of 4 arrays you're inserting into during this iteration of the loop (the set corresponding to the setosa flower, the virginica flower, or the versicolor flower).  
+
+## Step 3: Obtaining the Features: the Mean of the Sepal and Petal Length and Width of Each Species
 Write a function that computes the mean of an array of `double` values or an `ArrayList<Double>` (whichever would be more convenient for you!).  Use this function to compute the mean of these arrays.  The formula for the mean is provided for your convenience:
 
 Mean (<span>\\(\mu\\)</span>): <span>\\(\mu = \frac{\sum\limits_{i=1}^{n} x_{i}}{n}\\)</span><br>
@@ -164,7 +166,7 @@ When you have finished, you should have called this function 12 times on 12 diff
 ## Step 4: Classifying a New Flower
 Using the means you just computed, which we call our data features, we will try to determine the classification of an unknown flower, by comparing it to the examples we've just learned!
 
-Make up values for a flower (any values you like!) based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of our four original columns, separated into each of the three species: the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space (one dimension for each of the four columns).  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  The means with the smallest distance is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
+Make up values for a flower (any values you like!) based on the data that you see in the Iris data set.  Try to choose values that you know should align with one classification of flower over the others (that is, choose values close to the bunch of values for a particular type of flower); this way, you can check your work.  To classify our unknown flower, we will consider the means of our four original columns, separated into each of the three species: the sepal lengths, sepal widths, petal lengths, and petal widths as points in 4-dimensional space (one dimension for each of the four columns).  Your unknown flower is also a point in 4-D space, and it is going to be closer to one of those mean points than it is to the others.  I will call these points "centroids" - the center of the mean of the sepal length, sepal width, petal lenth, and petal width for a particular species.  The centroid with the smallest distance to our unknown flower is going to be our prediction.  From geometry, you may recall the Euclidean Distance as a measure of precisely this distance.  Here is the formula:
 
 Euclidean Distance: <span>\\(d = \sqrt{(x_{petalLength}-\mu_{petalLength})^{2} + (x_{petalWidth}-\mu_{petalWidth})^{2} + (x_{sepalLength}-\mu_{sepalLength})^{2} + (x_{sepalWidth}-\mu_{sepalWidth})^{2}}\\)</span>
 
@@ -174,7 +176,7 @@ Because you will be computing several of these distance measurements, begin by w
 
 You will compute three of these Euclidean Distances: one using the means of the `setosa` flower, one using the means of the `versicolor` flower, and one using the means of the `virginica` flower.  `x` is your made up flower that you're looking to classify.  So, for the first Euclidean Distance, when you consider the `setosa` flower, you should compute <span>\\(\mu_{petalLength}\\)</span>, <span>\\(\mu_{petalWidth}\\)</span>, <span>\\(\mu_{sepalLength}\\)</span>, and <span>\\(\mu_{sepalWidth}\\)</span> as the means of those columns, but only for those rows that correspond to a `setosa` classification in the input data set.  By doing this, we are "teaching" our algorithm about what a `setosa` flower "looks like" according to these data features.  This is called "training" the algorithm.  If we provide enough examples, and as long as the features that we compute from those examples (like the mean) differentiate one flower from another, we'll be able to predict unknown flowers based on its own features by comparing them to the training features we're computing now.  In this case, that comparison is being made using the Euclidean Distance, which tells us how "close" or "far" an unknown flower is from the training features (in this case, the means) we observed.
 
-Print out all of your Euclidean Distances, and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Read in values for the petal and sepal lengths and widths (as `double` values) from the user via the keyboard for a made up flower, and make the prediction!
+Print out all three of your Euclidean Distances (one distance from your unknown flower to the centroid of the setosa flowers, one to the centroid of the versicolor flowers, and one to the centroid of the virginica flowers), and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Read in values for the petal and sepal lengths and widths (as `double` values) from the user via the keyboard for a made up flower, and make the prediction!
 
 ## Extra Credit (15 Points): Experimenting with the Data
 
