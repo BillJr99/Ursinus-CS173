@@ -123,6 +123,8 @@ public static String[] commaSeparate(String line) {
 }
 ```
 
+Save the `iris.data` file into your project directory under a `data` subdirectory, and verify that you can read the CSV file, comma separate each line of the array you get back in a loop, and print the array values to the screen as a test.  The `filePath` that you pass to `readCSV` will be `data/iris.data`.  **Hint: you do not have to modify the `commaSeparate` or `readCSV` functions to do this, and you should not!  Rather, call each of these functions from `main()` instead.**
+
 ## Part 2: Processing the Input
 Now, you will use an `ArrayList`, gather all the sepal lengths, sepal widths, petal lengths, and petal widths by iterating over the text file and splitting each line.  If the classification is a `setosa` flower, store that in a separate array.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.
 
