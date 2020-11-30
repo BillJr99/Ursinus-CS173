@@ -124,7 +124,7 @@ You can draw arcs and circles using the following methods, once you add the jar 
 // look like the below functions.
 
 // Assumption: the edu.princeton.cs.algs4 package is imported in this file with
-// import edu.princeton.cs.algs4;
+// import edu.princeton.cs.algs4.*;
 
 //... then inside your class, and inside main(), you can call these functions:
 
@@ -294,7 +294,7 @@ Earlier, we drew circles and rectangles on the screen using x and y coordinates.
 
 ```java
 // Assumption: the edu.princeton.cs.algs4 package is imported in this file with
-// import edu.princeton.cs.algs4;
+// import edu.princeton.cs.algs4.*;
 // import java.awt.Color;
 
 //... then you can do this:
