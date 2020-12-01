@@ -670,7 +670,7 @@ schedule:
     points: 100    
 - week: "13"
   date: "1"
-  title: "Final Project Workshop" 
+  title: "Final Project Workshop and Ethical Case Studies" 
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
