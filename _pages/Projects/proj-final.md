@@ -32,11 +32,11 @@ info:
       progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
       proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
     - weight: 10
-      description: Presentation
-      preemerging: No presentation was provided, the presentation could not be viewed, or the presentation was not on the subject of the final project
-      beginning: A presentation was provided that summarizes the project, but does not provide a demo or discuss broader impacts
-      progressing: A presentation was provided that summarizes the project, provides a demo, and discusses broader impacts
-      proficient: A presentation was provided that that summarizes the project, provides a demo, discusses broader impacts, and highlights challenges overcome and methodologies for developing the system as a group
+      description: Presentation and Participation
+      preemerging: No presentation was provided, the presentation could not be viewed, or the presentation was not on the subject of the final project; one or more students did not participate in the project and the matter was not addressed by the team to the instructor
+      beginning: A presentation was provided that summarizes the project, but does not provide a demo or discuss broader impacts; each student participated in a meangful way
+      progressing: A presentation was provided that summarizes the project, provides a demo, and discusses broader impacts; all students participated in either the project or the presentation
+      proficient: A presentation was provided that that summarizes the project, provides a demo, discusses broader impacts, and highlights challenges overcome and methodologies for developing the system as a group; all students participated in both the project and the presentation
     - weight: 10
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
@@ -53,9 +53,9 @@ In this project, you will propose a topic of your choosing and a group of at lea
 
 In addition to the class in which you will write your `main()` function, your project should include and utilize at least one additional class with at least one constructor and at least one non-static method inside.
 
-You will use git or another version control system to coordinate between your team.  
+You may use git or another version control system to coordinate between your team.  **Each student shall contribute by checking in meaningful contributions to the project on the version control system.  If a version control system is not used, code sections should be commented with the initials or recognized pseudonym of the student.**
 
-Finally, prepare as a team a project presentation that you will present live to the class for final presentations.  
+Finally, prepare as a team a project presentation that you will present live to the class for final presentations.  **Each student must have a speaking role** at the presentation.
 
 ## Group Formation
 
