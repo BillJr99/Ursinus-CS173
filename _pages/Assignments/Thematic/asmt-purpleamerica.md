@@ -309,7 +309,8 @@ the polygon will be automatically closed by connecting the last point
 to the first point.  Here, the points are 
 (0, 0), (0.2, 0), (0.2, 0.2), (0, 0.2), 
 and, finally, back to (0, 0) automatically.
-You will replace this with your own arrays. */
+You will replace this with your own arrays.
+Do not copy these x and y arrays - you'll use paramters instead! */
 double[] x = {0, .2, .2, 0 };
 double[] y = {0,  0, .2, .2};
     
