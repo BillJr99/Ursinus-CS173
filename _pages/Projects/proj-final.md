@@ -55,4 +55,4 @@ In addition to the class in which you will write your `main()` function, your pr
 
 You will use git or another version control system to coordinate between your team.  
 
-Finally, prepare as a team a project presentation using a screencast (such as [Screencast-O-Matic](https://screencast-o-matic.com/)) that you will share with the class for final presentations.  Alternatively, you may choose to present to a live class audience, as time permits.
+Finally, prepare as a team a project presentation that you will present live to the class for final presentations.  
