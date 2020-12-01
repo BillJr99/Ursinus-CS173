@@ -92,7 +92,11 @@ public static ArrayList<String> readCSV(String filePath) {
         BufferedReader br = new BufferedReader(new FileReader(filePath))
         String line;
         while((line = br.readLine()) != null) {
-            lines.add(line);
+            // only add the line if it has non-whitespace content
+            // strip() removes leading and trailing whitespace
+            if(line.strip().length() > 0) { 
+                lines.add(line);
+            }
         }
     } catch(IOException e) { // if an error occurs, do this!
         System.err.println("Error reading CSV file!");
