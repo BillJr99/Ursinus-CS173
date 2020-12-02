@@ -38,7 +38,7 @@ processor:
         }
     }
   correctcheck: |
-    i1 > -1 && i2 > -1 && i2 > i1
+    equal
  
 files:
   - filename: "MergeSort.java"
