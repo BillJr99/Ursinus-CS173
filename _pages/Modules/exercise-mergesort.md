@@ -39,13 +39,13 @@ files:
                 int[] result = {};
                 if (arr.length < 5) {
                     result = cloneArray(arr);
-                    insertionSort(result);
+                    ArrayUtilities.insertionSort(result);
                 }
                 else {
                     result = new int[arr.length];
                     int halfway = (int)(arr.length / 2);
-                    int[] list1 = cloneArrayPart(arr, 0, halfway);
-                    int[] list2 = cloneArrayPart(arr, halfway, arr.length);
+                    int[] list1 = ArrayUtilities.cloneArrayPart(arr, 0, halfway);
+                    int[] list2 = ArrayUtilities.cloneArrayPart(arr, halfway, arr.length);
                     list1 = mergeSort(list1);
                     list2 = mergeSort(list2);
                     int i1 = 0;
