@@ -20,8 +20,23 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    let i1 = feedbackString.indexOf("fib(20) = 10946, counts = 39");
-    let i2 = feedbackString.indexOf("fib(30) = 1346269, counts = 21"); 
+    let arr1 = feedbackString.split("\n")[0].split(" ");
+    let arr2 = feedbackString.split("\n")[1].split(" ");
+    for (let i = 1; i < arr1.length; i++) {
+        arr1[i-1] = parseInt(arr1[i]);
+        arr2[i-1] = parseInt(arr2[i]);
+    }
+    arr1.length = arr1.length - 1;
+    arr2.length = arr2.length - 1;
+    arr1.sort(function(a, b){return a-b});
+    console.log(arr1);
+    console.log(arr2);
+    let equal = true;
+    for (let i = 0; i < arr1.length && equal; i++) {
+        if (arr1[i] != arr2[i]) {
+            equal = false;
+        }
+    }
   correctcheck: |
     i1 > -1 && i2 > -1 && i2 > i1
  
@@ -38,7 +53,7 @@ files:
             public static int[] mergeSort(int[] arr) {
                 int[] result = {};
                 if (arr.length < 5) {
-                    result = cloneArray(arr);
+                    result = ArrayUtilities.cloneArray(arr);
                     ArrayUtilities.insertionSort(result);
                 }
                 else {
