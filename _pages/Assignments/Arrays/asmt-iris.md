@@ -182,6 +182,13 @@ You will compute three of these Euclidean Distances: one using the means of the 
 
 Print out all three of your Euclidean Distances (one distance from your unknown flower to the centroid of the setosa flowers, one to the centroid of the versicolor flowers, and one to the centroid of the virginica flowers), and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Read in values for the petal and sepal lengths and widths (as `double` values) from the user via the keyboard for a made up flower, and make the prediction!
 
+### Adding the Scanner to a NetBeans Gradle Project
+To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file, if you are using Gradle (if you are not using Gradle project, you can skip this step!):
+
+```
+run.standardInput = System.in;
+```
+
 ## Extra Credit (15 Points): Experimenting with the Data
 
 ### Classifying the Input Samples
