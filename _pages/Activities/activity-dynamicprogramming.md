@@ -12,7 +12,7 @@ info:
     - model: |   
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
-            public static void fibonacci(int n) {
+            public static int fibonacci(int n) {
                 if(n <= 0) {
                     return 0;
                 } else if(n <= 2) {
