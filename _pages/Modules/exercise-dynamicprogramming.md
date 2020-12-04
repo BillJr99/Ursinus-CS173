@@ -42,15 +42,15 @@ files:
             }
 
             public Recursion() {
-                fibMem = new HashMap<>();
+                fibMem = new HashMap<Integer, Integer>();
             }
 
-            public int fib(int N) {
+            public int fib(Integer N) {
                 counts++; // Keep this here so it counts correctly
                 // TODO: If the result is already
                 // in memory, do not compute it here.
                 // Instead, get it from memory
-                int result = 1;
+                Integer result = 1;
                 if (N > 1) {
                     result = fib(N-1) + fib(N-2);
                 }
