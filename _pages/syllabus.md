@@ -664,10 +664,7 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
-    points: 100  
-  - dtitle: "Programming Assignment: Guitar String Synthesizer Handed Out"
-    dlink: "Assignments/GuitarStringSynth"           
-    points: 100    
+    points: 100     
 - week: "13"
   date: "1"
   title: "Final Project Workshop and Ethical Case Studies" 
@@ -689,10 +686,6 @@ schedule:
 - week: "14"
   date: "1"
   title: "Final Project Presentations"  
-  deliverables:
-  - dtitle: "Programming Assignment: Guitar String Synthesizer Due"
-    dlink: "Assignments/GuitarStringSynth"  
-    points: 100   
 university:
   semester: "Fall"
   academicyear: "2020-21"
