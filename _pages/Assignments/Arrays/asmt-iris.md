@@ -89,7 +89,7 @@ public static ArrayList<String> readCSV(String filePath) {
     ArrayList<String> lines = new ArrayList<String>();
     
     try {
-        BufferedReader br = new BufferedReader(new FileReader(filePath))
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line;
         while((line = br.readLine()) != null) {
             // only add the line if it has non-whitespace content
