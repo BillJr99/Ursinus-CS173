@@ -676,6 +676,9 @@ schedule:
   date: "2"   
   title: "CS Education Week: Post-It Pandemonium"
   link: "./DrawingCanvas"
+  readings:
+  - rtitle: "Instructions"
+    rlink: "./files/drawingcanvas-ucbear2/Merged.pdf"
 - week: "13"
   date: "3"
   title: "Final Project Presentations"     
