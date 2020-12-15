@@ -278,7 +278,7 @@ public static double[] getPluckedSound(int note, double duration, double decay)
 ```
 
 The steps are as follows:
-1. Given a note, find it's period `T` to the nearest integer by using your method that computes the period.
+1. Given a note, find its period `T` to the nearest integer by using your method that computes the period.
 2. Setup an array with enough samples to hold `duration` seconds audio.
 3. Fill in the first `T` samples with random noise using your noise method.
 4. Process all of the rest of the samples one by one in order, starting at index `T`. Each value should be the average of the two adjacent samples `T` indices back multiplied by a factor of `decay`. For example, if you're at index 150 and your period is 100, you should average samples at indices 50 and 51. This simulates a traveling wave over a string of length `T` that decays and dampens "low frequencies" first, and is referred to as a "digital waveguide."
