@@ -223,7 +223,7 @@ letter_grades:
 - letter: "C-"
   range: "69.5-72.99"
 - letter: "D+"
-  range: "69-69.49"
+  range: "67-69.49"
 - letter: "D"
   range: "63-66.99"
 - letter: "D-"
