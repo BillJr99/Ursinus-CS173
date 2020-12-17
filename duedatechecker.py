@@ -6,7 +6,7 @@ from dateutil import tz
 import os
 from mailjet_rest import Client # pip install mailjet_rest
 
-HEADER = 'Early Warning: https://campusweb.ursinus.edu/intranet/apps/AcademicWarning/default.aspx\nAttendance as class participation?\nExam grades\nGrading\nMidterm checkin\nJamboard?'
+HEADER = 'Early Warning: https://campusweb.ursinus.edu/intranet/apps/AcademicWarning/default.aspx\nExam grades\nGrading\nMidterm checkin'
 
 # https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
 def rchop(s, suffix):
