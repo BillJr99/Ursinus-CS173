@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Kepler's Third Law"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/O8ZYHB2u"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code

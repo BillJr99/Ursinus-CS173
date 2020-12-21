@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Purple America"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/E9q6QJNl"
   points: 100
   goals:
     - To manipulate String variables in common ways using practical data found on the web for a meaningful purpose.
@@ -92,21 +90,15 @@ The color wheel below from Wikipedia shows some example color mixtures.  These v
 ### Adding the Princeton stdlib Library to Your Project
 The `edu.princeton.cs.algs4.StdDraw` class contains a library that will draw polygons and other shapes on a window.  The coordinates of this window are assumed to range from [0, 1].  This class is contained in the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file provided by Robert Sedgewick.
 
-To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
+First, download the jar to a location you'll remember.  To use this jar, after creating a Java project in NetBeans as usual, right-click on the project in your left project navigation pane (you can click the `Window` menu and select `Projects` if you don't see this), and click `Properties`, as shown:
 
-```
-compile fileTree(dir: 'libs', include: '*.jar')
-```
+![]({{ site.baseurl }}/images/netbeans/ProjectProperties.png)
 
-If you do not have a dependencies section, you can add one as follows:
+Click the `Libraries` category on the left side of the window that appears.  Then click, the `+` sign next to the word `Classpath`, and click `Add JAR/Folder`, as shown:
 
-```
-dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-}
-```
+![]({{ site.baseurl }}/images/netbeans/LibrariesAnt.png)
 
-Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file into a subdirectory of your project called `libs`.
+Finally, navigate to the jar file you downloaded earlier, and double click on it to add it to your project.  Click OK to close the window, and you're done!
 
 In your program, you can add the following `import` line at the top:
 
@@ -115,7 +107,7 @@ import edu.princeton.cs.algs4.*;
 ```
 
 ### Basic Drawing Functionality
-You can draw arcs and circles using the following methods, once you add the jar to your `libs` directory (and add the dependency line to your `build.gradle` file), by calling one of these functions from your program:
+You can draw arcs and circles using the following methods, once you add the jar to your project, by calling one of these functions from your program:
 
 ```java
 // DO NOT COPY THIS PART OF THE CODE - THIS IS JUST A REFERENCE!

@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Estimating Pi with Monte Carlo Simu
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/5lbeaWNk"
   points: 100
   goals:
     - To use iteration to solve problems while avoiding the need to write duplicate code

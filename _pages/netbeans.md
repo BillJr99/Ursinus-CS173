@@ -37,15 +37,15 @@ To create a new project, first select `File->New Project`
 
 ![]({{ site.baseurl }}/images/netbeans/NewProject.png)
 
-Then, select the projcet type "Java Application" under the "Java for Gradle" section, and click Next
+Then, select the projcet type "Java Application" under the "Java with Ant" section, and click Next
 
-![]({{ site.baseurl }}/images/netbeans/JavaApplication.png)
+![]({{ site.baseurl }}/images/netbeans/JavaApplicationAnt.png)
 
 Choose a location and a name for the project. You can uncheck the "Create Main Class" box unless, you want a file with an automatically generated file that runs when you click the play button for this project. But we're going to start from scratch in this example without a main
 
-![]({{ site.baseurl }}/images/netbeans/ProjectName.png)
+![]({{ site.baseurl }}/images/netbeans/ProjectNameAnt.png)
 
-When you create a new project for the first time, NetBeans may prompt you to complete the installation of some software (for example, Gradle).  This is a one-time occurrence, and you can allow it to do so if asked.
+When you create a new project for the first time, NetBeans may prompt you to complete the installation of some software or to "resolve the project" (which configures it to run on your computer).  This is a one-time occurrence, if you even see this at all, and you can allow it to do so if asked.
 
 Once the project has been created, you can make a new class by right clicking on default projects and clicking `New->Java Class`. This will create a new Java file with the name of the class you've chosen
 

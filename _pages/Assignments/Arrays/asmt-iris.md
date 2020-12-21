@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - The Iris Dataset"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/aUBQKbnb"
   points: 100
   goals:
     - To use File I/O to read and process a text file dataset
@@ -181,13 +179,6 @@ Because you will be computing several of these distance measurements, begin by w
 You will compute three of these Euclidean Distances: one using the means of the `setosa` flower, one using the means of the `versicolor` flower, and one using the means of the `virginica` flower.  `x` is your made up flower that you're looking to classify.  So, for the first Euclidean Distance, when you consider the `setosa` flower, you should compute <span>\\(\mu_{petalLength}\\)</span>, <span>\\(\mu_{petalWidth}\\)</span>, <span>\\(\mu_{sepalLength}\\)</span>, and <span>\\(\mu_{sepalWidth}\\)</span> as the means of those columns, but only for those rows that correspond to a `setosa` classification in the input data set.  By doing this, we are "teaching" our algorithm about what a `setosa` flower "looks like" according to these data features.  This is called "training" the algorithm.  If we provide enough examples, and as long as the features that we compute from those examples (like the mean) differentiate one flower from another, we'll be able to predict unknown flowers based on its own features by comparing them to the training features we're computing now.  In this case, that comparison is being made using the Euclidean Distance, which tells us how "close" or "far" an unknown flower is from the training features (in this case, the means) we observed.
 
 Print out all three of your Euclidean Distances (one distance from your unknown flower to the centroid of the setosa flowers, one to the centroid of the versicolor flowers, and one to the centroid of the virginica flowers), and choose the flower corresponding to the smallest Euclidean Distance you calculated.  That is your prediction.  Read in values for the petal and sepal lengths and widths (as `double` values) from the user via the keyboard for a made up flower, and make the prediction!
-
-### Adding the Scanner to a NetBeans Gradle Project
-To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file, if you are using Gradle (if you are not using Gradle project, you can skip this step!):
-
-```
-run.standardInput = System.in;
-```
 
 ## Extra Credit (15 Points): Experimenting with the Data
 

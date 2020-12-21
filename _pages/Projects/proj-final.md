@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Final Project"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/g/vijt1ro6"
   points: 100
   goals:
     - To demonstrate the fundamental concepts of programming in a unified project

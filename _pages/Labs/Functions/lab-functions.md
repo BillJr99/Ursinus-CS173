@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Averaging Functions"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/7Pyr5KjF"
   points: 100
   goals:
     - To develop functions to abstract program concepts

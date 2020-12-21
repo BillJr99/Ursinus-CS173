@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Public-Key Cryptography"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/EhOq4AkN"  
   points: 100
   goals:
     - To relate the mathematics of modern encryption systems to applied principles of information hiding
@@ -97,19 +95,15 @@ The encryption key <span>\\(C = 3337\\)</span> and <span>\\(e = 79\\)</span> mak
 The idea is that 1019 is very difficult to find even knowing <span>\\(e = 79\\)</span> and <span>\\(C = 3337\\)</span>.  That's because we'd need to be able to factor 3337 into two numbers that, when one is subtracted from each and multiplied together, give 3220 -- such that 79 is relatively prime to that number.  If factoring was easy, we could try every number until we found it.  Luckily, it isn't so easy.   Still, cryptosystems are subject to attacks similar to those you do in the newspaper, and there are some tricks (padding, salting) to dealing with that.  What would you do?  Some devices like RSA keys generate RSA values every minute.  This is because we believe that even if these numbers can be factored, it would take more than a minute to do so, and thus the security maintained.
 
 ## RSAMath Library
-The mathematics functions used in this assignment are provided in the jar file library [rsamath.jar]({{ site.baseurl }}/files/asmt-minicrypto/rsamath.jar).  To use this jar, after creating a Gradle Java project in Netbeans, add the following line inside the `dependencies` section of your `build.gradle` file:
+The mathematics functions used in this assignment are provided in the jar file library [rsamath.jar]({{ site.baseurl }}/files/asmt-minicrypto/rsamath.jar).  First, download the jar to a location you'll remember.  To use this jar, after creating a Java project in NetBeans as usual, right-click on the project in your left project navigation pane (you can click the `Window` menu and select `Projects` if you don't see this), and click `Properties`, as shown:
 
-```
-compile fileTree(dir: 'libs', include: '*.jar')
-```
+![]({{ site.baseurl }}/images/netbeans/ProjectProperties.png)
 
-If you do not have a dependencies section, you can add one as follows:
+Click the `Libraries` category on the left side of the window that appears.  Then click, the `+` sign next to the word `Classpath`, and click `Add JAR/Folder`, as shown:
 
-```
-dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-}
-```
+![]({{ site.baseurl }}/images/netbeans/LibrariesAnt.png)
+
+Finally, navigate to the jar file you downloaded earlier, and double click on it to add it to your project.  Click OK to close the window, and you're done!
 
 Now, jar files added to the libs directory of your project will be available for use in your code.  You can download the [rsamath.jar]({{ site.baseurl }}/files/rsamath/rsamath.jar) file into a subdirectory of your project called `libs`.
 

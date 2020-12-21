@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Financial Aid Calculator"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/f2o9Azh6"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code
@@ -62,7 +60,7 @@ A non-governmental organization got a large donation to help families in need, b
 **Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!
 
 ## Part 0: Getting Started
-Create a new NetBeans project, but select a Maven project instead of a Gradle project for this one (some installations do not support the unit test framework in Gradle).  Right click on your package name under the project Source Packages, and click `New` and then `New Class`.  Call the class `Main` and click OK to get started.
+Create a new NetBeans project as usual.  Right click on your package name under the project Source Packages, and click `New` and then `New Class`.  Call the class `Main` and click OK to get started.
 
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
@@ -76,12 +74,6 @@ Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
 // do this again using nextInt() for numKids
-```
-
-To enable the Scanner in NetBeans, so that you can input values in the output pane at the bottom of NetBeans, you can add the following line at the very bottom of your `build.gradle` file, if you are using Gradle (if you are not using Gradle project, you can skip this step!):
-
-```
-run.standardInput = System.in;
 ```
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)

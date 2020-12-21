@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Using the Debugger"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/XLL23LHq"
   points: 100
   goals:
     - To use the debugger to identify code bugs
@@ -51,8 +49,6 @@ When you run the debugger and it pauses ("breaks") somewhere in the code.  A pan
 
 ### Step 4: Fix the 2 Bugs!
 What is the value of this watch, and what is its type?  Does its value make more sense given the context of its data type?  What happened to cause this program to fail, and what can be done to fix it?  **Hint**: you may wish to refer to our discussion of [Data Types, Operators, and Expressions](../Activities/Expressions).  Fix the data types of the `xdiff` and `ydiff` inputs so that they divide as floating point values, rather than as integers.
-
-Also notice that the slope of the line you're expecting (`ydiff / xdiff`) differs from the expression in your code.  Fix the expression to correctly compute the slope!
 
 Make the needed repair, then stop and re-run the debugger.  Check the watch expression `ydiff / xdiff` again and verify that it is working correctly.
 

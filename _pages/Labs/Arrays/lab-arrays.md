@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Array Averaging"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/aYohLOSL"
   points: 100
   goals:
     - To use arrays to store collections of values

@@ -7,27 +7,23 @@ excerpt: "CS173: Intro to Computer Science"
 info:
   course_number: CS173
   course_sections: 
-  - section: "B"
-  - section: "C"
+  - section: "A"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Fall2020/"
-  chatlink: https://groupme.com/join_group/60668915/dGoprIMb
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2021/"
   teamshelproom: https://teams.microsoft.com/l/channel/19%3a6ddddb88493946fa956387e9543a3b06%40thread.tacv2/Mongan%2520Drop-In%2520Office%2520Hours?groupId=b16dcd6b-3522-4564-8306-9051a92c68ba&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021
+  jamboard: https://jamboard.google.com/d/1l5PXZaFBgqYtWNqbS3W1ykWIrpO7S1pHx1kfQOQ0lMQ/edit?usp=sharing
   ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
-  course_start_date: "2020/09/07"
-  course_end_date: "2020/12/15"
+  course_start_date: "2021/01/18"
+  course_end_date: "2020/05/05"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
   zoom:
   - section:
-      zoomlink: "https://ursinus-edu.zoom.us/j/91450716052"
-      phonenumberlink: "https://ursinus-edu.zoom.us/u/ah7EJXKY2"
-  - section:
-      zoomlink: "https://ursinus-edu.zoom.us/j/99939384648"
-      phonenumberlink: "https://ursinus-edu.zoom.us/u/ab9KdLEJza"
+      zoomlink: "https://ursinus-edu.zoom.us/j/98712172074"
+      phonenumberlink: "https://ursinus-edu.zoom.us/u/adXC6KGbJy"
   class_meets_days:
     isM: true
     isT: true
@@ -39,52 +35,27 @@ info:
   class_meets_locations:
   - section:
     - day: "M"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "Tent 1"
-    - day: "T"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "Tent 5"
-    - day: "W"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "Tent 1"
-    - day: "F"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "Tent 1"
-  - section:
-    - day: "M"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Tent 1"
+      place: "Kaleidoscope"
     - day: "T"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Tent 5"
+      place: "Bookstore"
     - day: "W"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Tent 1"
+      place: "Kaleidoscope"
     - day: "F"
       starttime: "11:00 AM"
       endtime: "11:50 AM"
-      place: "Tent 1"
+      place: "Kaleidoscope"
   midtermexam: 
     - mdate: "TBD"
       mstarttime: "TBD"
       mendtime: "TBD"
-      mroom: "TBD"
-    - mdate: "TBD"
-      mstarttime: "TBD"
-      mendtime: "TBD"
-      mroom: "TBD"      
+      mroom: "TBD"     
   finalexam: 
-    - fdate: "TBD"
-      fstarttime: "TBD"
-      fendtime: "TBD"
-      froom: "TBD"
     - fdate: "TBD"
       fstarttime: "TBD"
       fendtime: "TBD"
@@ -117,48 +88,29 @@ instructors:
   picture: /images/profile.png
   officehours:
   - day: "M"
-    starttime: "10:00 AM"
-    endtime: "10:50 AM"
+    starttime: "1:30 PM"
+    endtime: "3:30 PM"
     location: "Virtual Office Hours on Microsoft Teams"
   - day: "M"
-    starttime: "12:30 PM"
-    endtime: "1:20 PM"
+    starttime: "5:00 PM"
+    endtime: "6:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"  
-  - day: "M"
-    starttime: "7:00 PM"
-    endtime: "8:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams"      
   - day: "T"
     starttime: "10:00 AM"
     endtime: "10:50 AM"
     location: "Virtual Office Hours on Microsoft Teams"   
   - day: "W"
-    starttime: "10:00 AM"
-    endtime: "10:50 AM"
-    location: "Virtual Office Hours on Microsoft Teams"    
+    starttime: "1:30 PM"
+    endtime: "3:30 PM"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "W"
-    starttime: "12:30 PM"
-    endtime: "1:20 PM"
-    location: "Virtual Office Hours on Microsoft Teams"    
-  - day: "W"
-    starttime: "7:00 PM"
-    endtime: "8:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams"     
-  - day: "F"
-    starttime: "10:00 AM"
-    endtime: "10:50 AM"
-    location: "Virtual Office Hours on Microsoft Teams"     
-  - day: "F"
-    starttime: "12:30 PM"
-    endtime: "1:20 PM"
-    location: "Networking Virtual Office Hours on Microsoft Teams"      
-- name: Michael Tecce
-  title: Teaching Assistant
-  officehours: 
-  - day: "R"
-    starttime: "4:00 PM"
+    starttime: "5:00 PM"
     endtime: "6:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams"  
+    location: "Virtual Office Hours on Microsoft Teams"
+  - day: "F"
+    starttime: "1:30 PM"
+    endtime: "3:30 PM"
+    location: "Virtual Office Hours on Microsoft Teams"    
 textbooks:
 - title: "Java for Everyone: Late Objects"
   authors: "Cay Horstmann"
@@ -235,7 +187,7 @@ letter_grades:
 
 schedule:
 - week: "0"
-  date: "0"
+  date: "2"
   title: "Course Overview: What is Computer Science?"
   link: "../Ursinus-CS173-Overview"
   readings:
@@ -248,14 +200,14 @@ schedule:
     dlink: "Assignments/Warmup"
     points: 15
 - week: "0"
-  date: "1"
+  date: "3"
   title: "Course Overview Continued: The Development Environment"   
-- week: "0"
-  date: "2"
+- week: "1"
+  date: "0"
   title: "A Brief History of Computer Science"  
   link: "../Ursinus-CS173-CSHistory"  
-- week: "0"
-  date: "3"
+- week: "1"
+  date: "1"
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
   deliverables:
@@ -263,7 +215,7 @@ schedule:
     dlink: "Assignments/Warmup"  
     points: 15
 - week: "1"
-  date: "0"
+  date: "2"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
   deliverables:
@@ -276,6 +228,20 @@ schedule:
   - rtitle: "Beginner's Java Reference Manual"
     rlink: "http://www.ugrad.math.ubc.ca/Flat/reference.html"
 - week: "1"
+  date: "3"
+  title: "Expressions and Variables" 
+- week: "2"
+  date: "0"
+  title: "Ranges and Quantization of Data Types" 
+  link: "Activities/DiscreteRanges"
+  readings:
+  - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
+    rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
+  - rtitle: "Pac-Man Map 256 Glitch"
+    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false   
+- week: "2"
   date: "1"
   title: "Lab: Kepler's Third Law"
   readings: 
@@ -290,22 +256,8 @@ schedule:
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
     points: 3
-- week: "1"
-  date: "2"
-  title: "Expressions and Variables"  
-- week: "1"
-  date: "3"
-  title: "Ranges and Quantization of Data Types" 
-  link: "Activities/DiscreteRanges"
-  readings:
-  - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
-    rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
-  - rtitle: "Pac-Man Map 256 Glitch"
-    rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
-  - rtitle: "Ch. 2.3, 2.5"
-    rlink: false   
 - week: "2"
-  date: "0"
+  date: "2"
   title: "Boolean Logic Expressions, DeMorgan's Law"
   link: "Activities/Boolean"
   readings:
@@ -316,6 +268,24 @@ schedule:
     dlink: "./Modules/Expressions/Exercise2"    
     points: 3 
 - week: "2"
+  date: "3"   
+  title: "Conditionals"   
+  link: "Activities/Conditionals"
+  deliverables:  
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "Labs/Kepler"    
+    points: 100  
+  - dtitle: "Exercise: Boolean Expressions"
+    dlink: "./Modules/Boolean/Exercise"
+    points: 3
+- week: "3"
+  date: "0"
+  title: "Conditionals"   
+  deliverables:
+  - dtitle: "Exercise: Conditionals"
+    dlink: "Modules/Conditionals/Exercise"  
+    points: 3     
+- week: "3"
   date: "1"
   title: "Lab: Debugging"  
   readings:
@@ -329,27 +299,9 @@ schedule:
     points: 100    
   - dtitle: "Exercise: Epoch Time Overflow"
     dlink: "Modules/EpochTime/Exercise"
-    points: 3     
-- week: "2"
-  date: "2"   
-  title: "Conditionals"   
-  link: "Activities/Conditionals"
-  deliverables:  
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "Labs/Kepler"    
-    points: 100  
-  - dtitle: "Exercise: Boolean Expressions"
-    dlink: "./Modules/Boolean/Exercise"
-    points: 3
-- week: "2"
-  date: "3"
-  title: "Conditionals"   
-  deliverables:
-  - dtitle: "Exercise: Conditionals"
-    dlink: "Modules/Conditionals/Exercise"  
-    points: 3   
+    points: 3       
 - week: "3"
-  date: "0"
+  date: "2"
   title: "Functions"
   link: "Activities/Functions"
   readings:
@@ -367,24 +319,24 @@ schedule:
     dlink: "Labs/Debugging"     
     points: 100   
 - week: "3"
+  date: "3"
+  title: "Functions"
+  deliverables:
+  - dtitle: "Exercise: Writing and Calling Functions"
+    dlink: "Modules/Functions/Module"  
+    points: 3   
+- week: "4"
+  date: "0"
+  title: "Functions"    
+- week: "4"
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
   - dtitle: "Lab: Averaging Functions Handed Out"    
     dlink: "Labs/AverageFunction" 
     points: 100
-- week: "3"
-  date: "2"
-  title: "Functions"
-  deliverables:
-  - dtitle: "Exercise: Writing and Calling Functions"
-    dlink: "Modules/Functions/Module"  
-    points: 3   
-- week: "3"
-  date: "3"
-  title: "Functions"
 - week: "4"
-  date: "0"
+  date: "2"
   title: "Testing" 
   readings:
   - rtitle: "Testing with the NetBeans IDE"
@@ -399,23 +351,23 @@ schedule:
     points: 100
   - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Handed Out"
     dlink: "Assignments/PurpleAmerica"
-    points: 25
+    points: 25   
 - week: "4"
+  date: "3"
+  title: "Functions Code Review" 
+- week: "5"
+  date: "0"
+  title: "Strings"
+  link: "Activities/Strings"  
+- week: "5"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
   deliverables:
   - dtitle: "Lab: Financial Aid Calculator Handed Out"
     dlink: "Labs/FinancialAidCalculator"  
-    points: 100    
-- week: "4"
-  date: "2"
-  title: "Functions Code Review" 
-- week: "4"
-  date: "3"
-  title: "Strings"
-  link: "Activities/Strings"  
+    points: 100   
 - week: "5"
-  date: "0"
+  date: "2"
   title: "Iteration"
   link: "Activities/Iteration"
   deliverables:
@@ -429,23 +381,23 @@ schedule:
     dlink: "Assignments/PurpleAmerica"        
     points: 25
 - week: "5"
+  date: "3"
+  title: "Iteration and the for loop"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
+- week: "6"
+  date: "0"
+  title: "Iteration"    
+- week: "6"
   date: "1"
   title: "Lab: Iteration" 
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
     dlink: "Labs/MonteCarloPi"  
     points: 100
-- week: "5"
-  date: "2"
-  title: "Iteration and the for loop"
-  readings:
-  - rtitle: "Ch. 4"
-    rlink: false  
-- week: "5"
-  date: "3"
-  title: "Iteration"
 - week: "6"
-  date: "0"
+  date: "3"
   title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
@@ -454,8 +406,8 @@ schedule:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
-- week: "6"
-  date: "1"
+- week: "7"
+  date: "0"
   title: "Iteration and the do loop"  
   deliverables:
     - dtitle: "Participation: First Activity Notebook Check"
@@ -463,7 +415,7 @@ schedule:
     - dtitle: "Exercise: Iteration"
       dlink: "./Modules/Iteration/Exercise"    
       points: 3  
-- week: "6"
+- week: "7"
   date: "2"
   title: "Coding Style and the Code Review"
   readings:
@@ -480,13 +432,13 @@ schedule:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
-- week: "6"
+- week: "7"
   date: "3"
   title: "String Manipulation" 
   readings:
     - rtitle: "String Manipulation Exercises"
       rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
-- week: "7"
+- week: "8"
   date: "0"
   title: "Arrays" 
   link: "Activities/Arrays"
@@ -497,7 +449,16 @@ schedule:
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false     
-- week: "7"
+- week: "8"
+  date: "2"
+  title: "String Iteration Workshop" 
+- week: "8"
+  date: "3"
+  title: "Arrays"   
+- week: "9"
+  date: "0"
+  title: "2D Arrays"
+- week: "9"
   date: "1"
   title: "Lab: Arrays"
   deliverables:
@@ -505,17 +466,32 @@ schedule:
     dlink: "Labs/ArrayAveraging"
     points: 100  
   - dtitle: "Debugging Table: First Check"
-    points: 10
-- week: "7"
+    points: 10    
+- week: "9"
   date: "2"
-  title: "String Iteration Workshop" 
-- week: "7"
-  date: "3"
-  title: "Arrays"   
-- week: "8"
+  title: "Array Workshop"
+  deliverables: 
+  - dtitle: "Programming Assignment: DNA Mutations Due"
+    dlink: "Assignments/DNAMutations" 
+    points: 100   
+- week: "9"
+  date: "3"  
+  title: "ArrayLists and Generic/Template Data Structures"
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false   
+- week: "10"
   date: "0"
-  title: "2D Arrays"    
-- week: "8"
+  title: "HashMaps and Caches"  
+  link: "Activities/HashMaps"  
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false  
+  deliverables:
+  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25 
+- week: "10"
   date: "1"
   title: "Lab: ASCII Art"    
   deliverables:
@@ -527,52 +503,28 @@ schedule:
     points: 100
   - dtitle: "Exercise: Tic-Tac-Toe"
     dlink: "Modules/TicTacToe/Exercise"  
-    points: 3    
-- week: "8"
-  date: "2"
-  title: "Array Workshop"
-  deliverables: 
-  - dtitle: "Programming Assignment: DNA Mutations Due"
-    dlink: "Assignments/DNAMutations" 
-    points: 100   
-- week: "8"
-  date: "3"  
-  title: "ArrayLists and Generic/Template Data Structures"
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false   
-- week: "9"
-  date: "0"
-  title: "HashMaps and Caches"  
-  link: "Activities/HashMaps"  
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false  
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25     
-- week: "9"
-  date: "1"
-  title: "Lab: HashMaps"
-  deliverables:
-  - dtitle: "Lab: HashMap Story Telling Handed Out"
-    dlink: "Labs/TellAStory"
-    points: 100
-- week: "9"
-  date: "2"
+    points: 3     
+- week: "10"
+  date: "3"
   title: "File I/O and Workshop"
   link: "Activities/FileIO"    
   deliverables:
   - dtitle: "Lab: ASCII Art Due"
     dlink: "Labs/ASCIIArt"      
     points: 100    
-- week: "9"
-  date: "3"
+- week: "11"
+  date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"  
-- week: "10"
-  date: "0"
+- week: "11"
+  date: "1"
+  title: "Lab: HashMaps"
+  deliverables:
+  - dtitle: "Lab: HashMap Story Telling Handed Out"
+    dlink: "Labs/TellAStory"
+    points: 100  
+- week: "11"
+  date: "2"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"
   readings:
@@ -582,56 +534,16 @@ schedule:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
     points: 100  
-- week: "10"
-  date: "1"
+- week: "11"
+  date: "3"
   title: "Lab: Drop the Lowest"   
   deliverables:  
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100  
-- week: "10"
-  date: "2"
-  title: "Classes and Object Data Types"  
-- week: "10"
-  date: "3"
-  title: "Searching and Sorting" 
-  link: "Activities/SearchingAndSorting"   
-  readings:   
-  - rtitle: "Ch. 9.6.3"
-    rlink: false   
-  - rtitle: "Interactive Demo of Insertion Sort"
-    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"     
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25    
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25     
-- week: "11"
-  date: "0"
-  title: "Searching and Sorting"
-  readings:
-  - rtitle: "Sorting Methods"
-    rlink: "Modules/SortingMethods/Module"
-  deliverables:
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3   
 - week: "12"
   date: "0"
-  title: "Algorithms: Recursion and Merge Sort" 
-  link: "Activities/Recursion"  
-  deliverables:  
-  - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropLowest"  
-    points: 100
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100     
+  title: "Classes and Object Data Types"
 - week: "12"
   date: "1"
   title: "Lab: Final Project Brainstorm and Ethical Case Studies" 
@@ -646,11 +558,58 @@ schedule:
     points: 10 
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
-    points: 3     
+    points: 3   
 - week: "12"
   date: "2"
-  title: "Algorithms: Recursion and Merge Sort"  
+  title: "Searching and Sorting" 
+  link: "Activities/SearchingAndSorting"   
+  readings:   
+  - rtitle: "Ch. 9.6.3"
+    rlink: false   
+  - rtitle: "Interactive Demo of Insertion Sort"
+    rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"     
+  deliverables:
+  - dtitle: "Programming Assignment: Purple America Part 5 Due"
+    dlink: "Assignments/PurpleAmerica"    
+    points: 25    
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25     
 - week: "12"
+  date: "3"
+  title: "Searching and Sorting"
+  readings:
+  - rtitle: "Sorting Methods"
+    rlink: "Modules/SortingMethods/Module"
+  deliverables:
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3   
+- week: "13"
+  date: "0"
+  title: "Algorithms: Recursion and Merge Sort" 
+  link: "Activities/Recursion"  
+  deliverables:  
+  - dtitle: "Lab: Drop the Lowest Due"
+    dlink: "Labs/DropLowest"  
+    points: 100
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100  
+- week: "13"
+  date: "1"
+  title: "Final Project Workshop and Ethical Case Studies" 
+  deliverables:
+    - dtitle: "Exercise: Dynamic Programming"
+      dlink: "Modules/DynamicProgramming/Module"   
+      points: 3      
+- week: "13"
+  date: "2"
+  title: "Algorithms: Recursion and Merge Sort"  
+- week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"  
@@ -660,35 +619,33 @@ schedule:
     - dtitle: "Exercise: Merge Sort"
       dlink: "Modules/MergeSort/Module"  
       points: 3       
-- week: "13"
+- week: "14"
   date: "0"
   title: "Final Project Workshop"
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
-    points: 100     
-- week: "13"
-  date: "1"
-  title: "Final Project Workshop and Ethical Case Studies" 
-  deliverables:
-    - dtitle: "Exercise: Dynamic Programming"
-      dlink: "Modules/DynamicProgramming/Module"   
-      points: 3           
-- week: "13"
-  date: "2"   
+    points: 100              
+- week: "14"
+  date: "1"   
   title: "CS Education Week: Post-It Pandemonium"
   link: "./DrawingCanvas"
-- week: "13"
-  date: "3"
+- week: "14"
+  date: "2"
   title: "Final Project Presentations"     
   deliverables:
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"   
     points: 100
 - week: "14"
-  date: "0"
+  date: "3"
   title: "Final Project Presentations" 
-  reschedule: "Tuesday, December 15, 2020"   
+- week: "15"
+  date: "1"
+  title: "Final Project Presentations" 
+- week: "15"
+  date: "2"
+  title: "Final Project Presentations"   
 university:
   semester: "Fall"
   academicyear: "2020-21"
@@ -747,12 +704,13 @@ university:
   - date: "2020/11/26"
   - date: "2020/11/27" 
   springholidays:
-  - date: "2021/03/08"  
-  - date: "2021/03/09"
-  - date: "2021/03/10"
-  - date: "2021/03/11"
-  - date: "2021/03/12"
-    
+  - date: "2021/01/18"  
+  - date: "2021/02/18"  
+  - date: "2021/03/3"  
+  - date: "2021/03/9"
+  - date: "2021/03/16" 
+  - date: "2021/03/31"    
+  
 ---
 
 ## Overview

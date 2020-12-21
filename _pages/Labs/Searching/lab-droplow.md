@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Searching: Dropping the Lowest Scor
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/XWrevmFf"
   points: 100
   goals:
     - To search an array using iterative approaches

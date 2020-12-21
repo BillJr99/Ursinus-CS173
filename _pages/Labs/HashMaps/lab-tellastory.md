@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Tell a Story with HashMaps"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/KW7gYBFu"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code
@@ -56,13 +54,7 @@ You should have at least 5 possible rooms, and at least 3 of those rooms should 
 
 **Does your end room need a moves transition to other rooms?  Why or why not?  (You could map it to an empty array if you wanted).**
 
-The user will enter the next location, and you will loop until reaching the `end` key.  Add the following line to `build.gradle` to support reading `System.in` from NetBeans when using a Gradle project.
-
-```
-run.standardInput = System.in;
-```
-
-Finally, include a hash entry for `start` and `end` from which your story will begin and end.  Use an appropriate loop structure to terminate the story when the `end` key is reached.
+The user will enter the next location, and you will loop until reaching the `end` key.  Finally, include a hash entry for `start` and `end` from which your story will begin and end.  Use an appropriate loop structure to terminate the story when the `end` key is reached.
 
 The following template will help you get started:
 

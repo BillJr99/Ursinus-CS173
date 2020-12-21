@@ -9,9 +9,8 @@ info:
   officehourspoll: "https://www.when2meet.com/?9311271-8GY4a"
   class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202020"
   class_notebook_name: "OneNote"
-  chatlink: "https://groupme.com/join_group/60668915/dGoprIMb"
-  chatname: "GroupMe"
-  submission: "We will submit this assignment using GroupMe, so there is no need to write up any documentation (as we will in future programming assignments) nor is it necessary to submit anything to Canvas.  It is fine to just follow the directions in each part and send me messages as appropriate!"
+  chatname: "Microsoft Teams"
+  submission: "We will complete this assignment using Teams, so there is no need to write up any documentation (as we will in future programming assignments) nor is it necessary to submit anything to Canvas.  It is fine to just follow the directions in each part and send me messages as appropriate!"
   testproject:
     ziplink: "../files/asmt-warmup/HW0-master.zip"
     zipfilename: "HW0-master.zip"
@@ -27,7 +26,7 @@ The purpose of this assignment is to get us setup for the course, both by gettin
 
 ## Personal Survey (5 Pts)
 
-I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on [{{ page.info.chatname }}]({{ page.info.chatlink }}).
+I gave a couple of fun facts about myself in the class, but I want to get to know you all better. So please submit answers to the following questions as a private message to me on {{ page.info.chatname }}.
 
 1.  Your Name, Your Nickname (if applicable) / Preferred Pronouns
 2.  What is your reason for taking the course? (Blunt honesty is perfectly fine here, if applicable)
@@ -62,7 +61,7 @@ Next, expand `Source Packages -> hw0` and double click on `GoodCode.java`. Once 
 
 ![]({{ site.baseurl }}/images/asmt-warmup/GoodCode.png)
 
-Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to [{{ page.info.chatname }}]({{ page.info.chatlink }}).
+Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to {{ page.info.chatname }}.
 
 ### Class Notebook
 
@@ -74,7 +73,7 @@ You can access the Ursinus network remotely by using a Virtual Private Network (
 
 ## Syllabus (5pts)
 
-Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on [{{ page.info.chatname }}]({{ page.info.chatlink }}) with the answers to the following questions**
+Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on {{ page.info.chatname }} with the answers to the following questions**
 
 1.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code during labs
 2.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code for regular assignments.

@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - Guitar String Synthesier with the K
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/0_JMejAT"
   points: 100
   goals:
     - To implement an arithmetic expression into executable code

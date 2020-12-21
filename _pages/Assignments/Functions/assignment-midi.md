@@ -6,8 +6,6 @@ excerpt: "CS173: Intro to Computer Science - MIDI Audio"
 
 info:
   coursenum: CS173
-  githubclassroom:
-    clonelink: "https://classroom.github.com/a/mfQDVf2s"
   points: 100
   goals:
     - To implement functions to facilitate code re-use
@@ -41,21 +39,19 @@ The [Musical Instrument Digital Interface (MIDI)](https://en.wikipedia.org/wiki/
 
 ## Adding the MIDI library to your project
 
-To use this jar, after creating a Gradle Java project in NetBeans, add the following line inside the `dependencies` section of your `build.gradle` file.  In NetBeans, this file can be found under the `Build Scripts` section under your project listing on the left side of your screen.
+We can download libraries of new functions that we can use in our projects; these are packaged conveniently in a single file called a `jar` file.  `jar` files added to the libs directory of your project will be available for use in your code.  Download the [MIDILib.jar]({{ site.baseurl }}/files/asmt-midi/MIDILib.jar) file into a location you'll remember (your Downloads directory is fine, or you can use a subdirectory of your project called `libs`).  
 
-```
-compile fileTree(dir: 'libs', include: '*.jar')
-```
+To use this jar, after creating a Java project in NetBeans as usual, right-click on the project in your left project navigation pane (you can click the `Window` menu and select `Projects` if you don't see this), and click `Properties`, as shown:
 
-If you do not have a dependencies section, you can add one as follows below.  If you do have a section already called dependencies (and you probably do), you can just add the line above inside its curly braces.
+![]({{ site.baseurl }}/images/netbeans/ProjectProperties.png)
 
-```
-dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
-}
-```
+Click the `Libraries` category on the left side of the window that appears.  Then click, the `+` sign next to the word `Classpath`, and click `Add JAR/Folder`, as shown:
 
-Now, jar files added to the libs directory of your project will be available for use in your code.  Download and copy the [MIDILib.jar]({{ site.baseurl }}/files/asmt-midi/MIDILib.jar) file into a subdirectory of your project called `libs`.  See the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) for more information about the library \[[^1], [^2], [^3], [^4], [^5], [^6]\].
+![]({{ site.baseurl }}/images/netbeans/LibrariesAnt.png)
+
+Finally, navigate to the jar file you downloaded earlier, and double click on it to add it to your project.  Click OK to close the window, and you're done!
+
+To learn what functionality our new jar file has provided us, see the [Javadoc]({{ site.baseurl }}/files/asmt-midi/javadoc/index.html) for more information about the library \[[^1], [^2], [^3], [^4], [^5], [^6]\].
 
 [^1]: [http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java](http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java)
 [^2]: [https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies)

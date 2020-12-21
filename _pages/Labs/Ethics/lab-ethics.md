@@ -6,6 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Ethics in Algorithms"
 
 info:
   coursenum: CS173
+  points: 100
   goals:
     - To identify and reason about professional ethics and responsibilities in software and computing
 
