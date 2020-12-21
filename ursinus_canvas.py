@@ -625,7 +625,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
-                    inputdict['description'] = description + " (" + makelink(addslash(homepage), stripnobool(dlink)) + ")"
+                    inputdict['description'] = description + " (<a href=\"" + makelink(addslash(homepage), stripnobool(dlink)) + "\">" + makelink(addslash(homepage), stripnobool(dlink)) + "</a>)"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
                     inputdict['position'] = asmtidx
                     
