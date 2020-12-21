@@ -1,0 +1,946 @@
+---
+layout: default
+
+boilerplate:
+  lms: 
+    title: Canvas, Microsoft Teams, GroupMe
+    description: "We will be using Canvas to post all of the grades.  For the most part, we will submit work using professional standard tools for software collaboration (called git) that we will discuss as a class.  I will let you know this in assignment directions, so you'll always know how to submit work.  For all other discussions and announcements for the course, we will be using OneNote through <a href=\"https://insights.ursinus.edu/display/LEI/Microsoft+Teams\">Microsoft Teams</a>, which is linked to your Office suite through Ursinus, so you are automatically enrolled. There you can ask and answer questions about the lecture content and assignments.  Additionally, I have created a GroupMe chat which is tied to my mobile device for real-time questions and discussions."
+    lmsname: "Canvas"
+    lmslink: "https://ursinus.instructure.com/"
+  disability: "Ursinus College is committed to ensuring equal access and providing reasonable accommodations for students with disabilities. The Institute for Student Success works with students who have any kind of disability, whether apparent or non-apparent, learning, emotional, physical, or cognitive, and need accommodations to increase their access to this learning environment. I encourage you to reach out to the Director of Disability Services, Dr. Dolly Singley to discuss about supports and accommodations you may need. Dolly’s office is located in the Institute for Student Success in Lower Wismer. You can schedule a meeting with Dolly by using this link: <a href=\"https://dsingley.youcanbook.me/\">https://dsingley.youcanbook.me/</a>, by emailing her at <a href=\"mailto:dsingley@ursinus.edu\">dsingley@ursinus.edu</a> or by calling her at 1-484-762-4329. Students can also review accessibility and disabilities services online at <a href=\"https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/\">https://www.ursinus.edu/offices/institute-for-student-success/students-with-disabilities/</a>."
+  links:
+    credithours: https://www.ursinus.edu/offices/academic-affairs/accreditation/campus-resources/credit-hours/
+    bear2bear: https://www.ursinus.edu/offices/student-financial-services/grants-scholarships-loans/bear2bear-student-emergency-fund/
+    academichonesty: https://www.ursinus.edu/student-life/handbook/academic-policies/academic-honesty/
+    titleix: https://www.ursinus.edu/offices/prevention-and-advocacy/title-ix-and-sexual-misconduct-resources/
+    thequestions: https://www.ursinus.edu/quest/the-questions/
+    iss: https://www.ursinus.edu/offices/institute-for-student-success/
+    peercoaching: http://bit.ly/TutorCoachRequestForm
+    counseling: https://www.ursinus.edu/offices/wellness-center/counseling/
+    handbook: https://www.ursinus.edu/offices/academic-affairs/faculty-resources/faculty-handbook/index.php
+    writingspeaking: https://www.ursinus.edu/offices/center-for-writing-and-speaking/
+  miscpolicies:
+    - title: COVID-19 Requirements/Policy
+      body: For in person sessions, you are required to wear a mask and you will be asked to leave the classroom if you are not properly wearing a mask. If you forget your face mask, disposable masks will be available in all buildings. DO NOT attend class if you do not feel well; you are always welcome to attend remotely, but just contact me if you are unable to attend class at all. In the event our course must go fully remote, we will continue towards achieving the course learning goals, but there may be adjustments to the schedule, content, assessments etc.  My drop-in / office hours will mainly be conducted remotely to maintain physical distancing.
+---
+
+<!-- 
+  Adapted from https://raw.githubusercontent.com/DS4PS/course-template/master/_layouts/index.html
+  https://stackoverflow.com/questions/5619202/converting-a-string-to-a-date-in-javascript
+  https://www.w3resource.com/javascript-exercises/javascript-date-exercise-42.php
+  https://stackoverflow.com/questions/4822852/how-to-get-the-day-of-week-and-the-month-of-the-year
+  https://www.oreilly.com/library/view/amazon-hacks/0596005423/ch01s07.html
+  https://stackoverflow.com/questions/48246538/wider-body-in-a-github-pages-site
+-->
+<script language="JavaScript">
+	function strtodate(x) {
+		var parts = x.split('/');
+		var mydate = new Date(parts[0], parts[1] - 1, parts[2]); 
+		return mydate;
+	}
+	
+	function addweeks(dt, n) 
+	{
+		return new Date(dt.setDate(dt.getDate() + (n * 7)));      
+	}
+	
+	function adddays(dt, n)
+	{
+		return new Date(dt.setDate(dt.getDate() + (n))); 
+	}
+	
+	function getdayofweek(dt)
+	{
+		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+		var day = days[ dt.getDay() ];
+		
+		return day;
+	}
+	
+	function getmonthofyear(dt)
+	{
+		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+		var month = months[ dt.getMonth() ];
+		
+		return month;
+	}
+	
+	function getDateString(dt)
+	{
+		var prnDt =  getdayofweek(dt) + ", " + getmonthofyear(dt) + " " + dt.getDate() + ", " + dt.getFullYear();
+		return prnDt;
+	}
+	
+	function getDayNum(dayidx, M, T, W, R, F, S, U) {
+		var daynum = 0;
+		
+		if(M == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 0;
+			}
+		}
+		
+		if(T == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 1;
+			}				
+		}
+
+		if(W == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 2;
+			}				
+		}	
+
+		if(R == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 3;
+			}				
+		}				
+		
+		if(F == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 4;
+			}				
+		}
+		
+		if(S == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 5;
+			}				
+		}
+		
+		if(U == true) {
+			dayidx--;
+			
+			if(dayidx == -1) {
+				daynum = 6;
+			}				
+		}
+		
+		return daynum;
+	}
+	
+    <!-- Assumes startdate is a Monday -->
+	function getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U)
+	{
+		var dt = strtodate(startdate);
+		
+		weeknum = parseInt(weeknum);
+		dayidx = parseInt(dayidx);
+
+		dt = addweeks(dt, weeknum);
+		
+		daynum = getDayNum(dayidx, M, T, W, R, F, S, U);
+		
+		dt = adddays(dt, daynum);
+		
+		return getDateString(dt);
+	}
+    
+    function getFullDay(d) {
+        if(d == "M") return "Monday";
+        if(d == "T") return "Tuesday";
+        if(d == "W") return "Wednesday";
+        if(d == "R") return "Thursday";
+        if(d == "F") return "Friday";
+        if(d == "S") return "Saturday";
+        if(d == "U") return "Sunday";
+        return "Day";
+    }
+</script>
+
+
+
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>
+    
+    [ <a href="#courseinfo">Course Info</a> | <a href="#objectives">Course Objectives and Goals</a> | <a href="#resources">Resources</a> | <a href="#instructors">Instructors</a> | <a href="#textbooks">Textbooks</a> | <a href="#schedule">Schedule</a> |{% if page.grade_breakdown %} <a href="#grading">Grading</a> |{% endif%} <a href="#policies">Course Policies</a> | <a href="#mainbody">Course Details</a> ]
+    <br><br>
+
+
+    
+    {% if page.info.banner %}
+    <div style="clear: both;">
+    {{ page.info.banner }}
+    </div>
+    {% endif %}
+
+
+
+    {% if page.info.welcome_message %}
+    {{ page.info.welcome_message }}
+    {% endif %}
+    
+
+
+    <a name="courseinfo"></a>
+    <h2>Course Info</h2> 
+ 
+    <ul>
+
+    {% if page.info.course_number and page.info.course_title %}
+    <li><strong>Course Number and Title:</strong> {{page.info.course_number}} - {{page.info.course_title}}
+    
+    {% if page.info.course_sections %}
+    <ul>
+    {% for section in page.info.course_sections %}
+    <li>Section {{section.section}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endif %}
+    
+    {% if page.info.credit_hours %}
+    <li><strong>Credit Hours:</strong> {{ page.info.credit_hours }}</li>
+    <ul>
+    <li><a href="{{layout.boilerplate.links.credithours}}">Credit Hours</a> include "contact time" in the classroom and outside course work.  It is expected that the sum of classroom time and outside course work time should add up to three times the listed credit hours per week.</li>
+    </ul>
+    {% endif %}    
+    
+    {% if page.permalink %}
+    <li><strong>Course Webpage:</strong> <a href="{{site.baseurl}}">{{site.url}}{{site.baseurl}}</a></li>
+    <br>
+    {% endif %}
+    
+    {% if layout.boilerplate.lms.lmslink %}
+    <li><strong>LMS ({{ layout.boilerplate.lms.lmsname }}):</strong> <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a></li>
+    <br>
+    {% endif %}
+    
+    {% if page.info.chatlink %}
+    <li><strong>Course Group Chat Link:</strong> <a href="{{page.info.chatlink}}">Join our class chat channel here!</a></li>
+    <br>
+    {% endif %}
+    
+    {% if page.info.ical %}
+    <li><strong>Course Calendar:</strong> <a href="{{ page.info.ical }}">Import the course calendar into your favorite calendar app with this link!</a></li><br>
+    {% endif %}
+    
+    {% if page.info.class_notebook %}
+    <li><strong>Class Notebook:</strong> <a href="{{ page.info.class_notebook }}">Access our class notebook here!</a>  If you are unable to access the notebook, please let me know and I will share the document with your account.</li><br>
+    {% endif %}   
+
+    {% if page.info.teamshelproom %}
+    <li><strong>Help Room on Microsoft Teams:</strong> <a href="{{ page.info.teamshelproom }}">Click Here</a> to Go to the Teams Help Room Channel on Microsoft Teams.</li><br>
+    {% endif %}      
+    
+    {% if page.university.semester and page.university.academicyear %}
+    <li><strong>Academic Term:</strong> {{page.university.semester}} {{page.university.academicyear}}</a></li>
+    <br>
+    {% endif %}
+    
+    {% if page.info.course_start_date and page.info.course_end_date %}
+    <li><strong>Term Start and End:</strong> <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_start_date}}")));</script> through <script language="JavaScript">document.write(getDateString(strtodate("{{page.info.course_end_date}}")));</script> </strong></li>
+    <br>
+    {% endif %}
+    
+    {% if page.info.course_prerequisites %}
+    <li><strong>Course Prerequisites:</strong> {{page.info.course_prerequisites}}</li>   
+    <br>    
+    {% endif %}
+    
+    {% if page.info.class_meets_locations and page.info.course_sections %}
+    <li><strong>Class Meeting Locations and Times:</strong></li>  
+    <ul>
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    <li><strong>Section {{ page.info.course_sections[i].section }}:</strong></li>
+    <ul>
+    {% for meeting in page.info.class_meets_locations[i].section %}
+    <li><script language="JavaScript">document.write(getFullDay("{{meeting.day}}"));</script>s from {{meeting.starttime}} to {{meeting.endtime}} in {{meeting.place}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    
+    {% if page.info.zoom %}
+    <li><strong>Zoom Link for Class Sessions (see <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a> for password and session recordings):</strong></li> 
+    <ul>    
+    {% for i in (0..page.info.zoom.size) %}
+    {% if i < page.info.zoom.size %}
+    <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom[i].section.zoomlink }}">{{ page.info.zoom[i].section.zoomlink }}</a></li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    
+    {% if page.info.midtermexam and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.midtermexam[i].mdate != "TBD" %}
+    <li><strong>Midterm Exam:</strong></li>
+    {% break %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    <ul>
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.midtermexam[i].mdate != "TBD" %}
+    <li>Section {{ page.info.course_sections[i].section }}: {{ page.info.midtermexam[i].mdate }} from {{ page.info.midtermexam[i].mstarttime }} to {{ page.info.midtermexam[i].mendtime }} in {{ page.info.midtermexam[i].mroom }}</li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.info.finalexam and page.info.course_sections %}
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.finalexam[i].fdate != "TBD" %}    
+    <li><strong>Final Exam:</strong></li>
+    {% break %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}    
+    <ul>
+    {% for i in (0..page.info.course_sections.size) %}
+    {% if i < page.info.course_sections.size %}
+    {% if page.info.finalexam[i].fdate != "TBD" %}
+    <li>Section {{ page.info.course_sections[i].section }}: {{ page.info.finalexam[i].fdate }} from {{ page.info.finalexam[i].fstarttime }} to {{ page.info.finalexam[i].fendtime }} in {{ page.info.finalexam[i].froom }}</li>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+    {% endif %}     
+
+
+    {% if page.info.course_description %}
+    <li><strong>Course Description</strong>: {{ page.info.course_description }}</li>
+    {% endif %}    
+    
+    </ul>
+
+
+
+
+    <a name="objectives"></a>
+    <h2>Course Learning Objectives and Learning Goals</h2>
+    
+    
+    
+    <h3>Learning Objectives</h3>
+    {% if page.objectives %}
+    <ol>
+    {% endif %}
+
+    {% for item in page.objectives %}
+    <li>{{ item.objective }}</li>
+    {% endfor %}
+
+    {% if page.objectives %}
+    </ol>
+    {% endif %}
+
+
+
+    <h3>Learning Goals</h3>
+    {% if page.goals %}
+    <ol>
+    {% endif %}
+
+    {% for item in page.goals %}
+    <li>{{ item.goal }}</li>
+    {% endfor %}
+
+    {% if page.goals %}
+    </ol>
+    {% endif %}
+    
+    
+    
+    <h3>The Questions</h3>
+    Throughout the course, we will be thematically guided by the <a href="{{ layout.boilerplate.links.thequestions}}">Ursinus Questions</a>:
+    
+    <ul>
+    <li>What should matter to me?</li>
+    <li>How should we live together?</li>
+    <li>How can we understand the world?</li>
+    <li>What will I do?</li>
+    </ul>
+    
+    
+    
+    
+    <a name="resources"></a>
+    <h2>Resources</h2>
+    
+    <a name="accommodations"></a>
+    <h3>Accommodations</h3>
+    Ursinus College and your instructor are committed to ensuring equal access and providing reasonable accommodations for all students. If you have, or think you have, a disability in any area such as, mental health, attention, learning, chronic health, sensory, or physical, please contact the Director of Disability Services.
+    
+    {% if layout.boilerplate.disability %}
+    <p>
+    {{ layout.boilerplate.disability }}
+    {% endif %}
+
+    
+    <h3>Let's Talk</h3>
+    <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+    <div style="width: 100%; display: table-row;">
+        <div style="display: table-cell; padding:5px; vertical-align: bottom">
+            <img src="./images/letstalk.jpg" alt="Let's Talk Poster"> 
+        </div>
+        <div style="display: table-cell; padding:5px; vertical-align: top">
+            Mental health care is increasingly recognized as a crucial service for the undergraduate population. To decrease the barrier for entry, Ursinus college will be providing additional drop-in hours during the semester. Please refer to the flyer below for the awesome program. I am happy to discuss this in drop-in / office hours in more detail.
+            
+            Additionally, please know that the <a href="{{layout.boilerplate.links.counseling}}">Wellness Center</a> is available for students and includes a crisis hour at 2-3pm each weekday.
+        </div>        
+    </div>
+    </div>
+
+
+    
+    <h3>Peer Coaching</h3>
+    The <a href="{{layout.boilerplate.links.iss}}">Institute for Student Success</a> offers <a href="{{layout.boilerplate.links.peercoaching}}">Peer Coaching</a> that you can sign up for anytime.
+    
+    
+    
+    <h3>Center for Writing and Speaking</h3>
+    The <a href="{{layout.boilerplate.links.writingspeaking}}">Center for Writing and Speaking</a> is available for one-on-one and group appointments to advise you as you revise your writing projects and presentations.  They will even support your personal projects and extracurricular activities!  Please feel free and encouraged to review any and all writing and speaking work from this class with them.
+    
+    
+    
+    <a name="bear2bear"></a>
+    <h3>Bear2Bear</h3>
+    The <a href="{{layout.boilerplate.links.bear2bear}}">Bear2Bear</a> fund is a student emergency fund established to assist with temporary emergency financial circumstances.   
+    
+    
+    
+    <h3>Help Room</h3>
+    The Math Help Room (Pfahler 102) is a great place to go if you are struggling and is managed by the <a href="{{layout.boilerplate.links.iss}}">Institute for Student Success</a>. Students who have previously taken the course will be there to help you with the assignments. 
+
+
+
+    <a name="instructors"></a>
+    <h2>Course Instructors and Drop-In / Office Hours</h2>
+
+    <table id="instructorstable" class="table table-condensed" cellspacing="10">
+    <thead>
+    <tr>
+    <th><span><strong>Role</strong></span></th>
+    <th><span><strong>Name and Contact Information</strong></span></th>
+    <th><span><strong>Drop-In / Office Hours</strong></span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% for item in page.instructors %}
+
+    <tr>
+    <td>
+    {% if item.title %}
+    {{ item.title }}
+    {% endif %}
+    </td>
+    <td>
+    {% if item.webpage_url %}
+      <a href="{{item.webpage_url}}">
+    {% endif %}
+    
+    {{item.name}}
+    
+    {%if item.picture and item.title and item.name %}
+    <br>
+    <img src="{{ item.picture }}" alt="Picture of {{ item.title }} {{ item.name }}">
+    {% endif %}
+
+    {% if item.webpage_url %}
+      </a>
+    {% endif %}
+    {% if item.phone %}<br>Phone: {{item.phone}}{% endif %}
+    {% if item.email %}<br>E-Mail: <a href="mailto:{{item.email}}" title="email">{{item.email}}</a> {% endif %}
+    {% if item.office %}<br>Office: {{item.office}} {% endif %}
+    </td>
+    <td>
+    {% if item.officehours %}<ul>{% endif %}
+    {% for officehour in item.officehours %}
+    <li><script language="JavaScript">document.write(getFullDay("{{officehour.day}}"));</script>s from {{officehour.starttime}} to {{officehour.endtime}} in {{officehour.location}}</li>
+    {% endfor %}
+    {% if item.officehours %}</ul>{% endif %}
+    </td>
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+    Drop-In / office hours are certainly available for asking questions about the course, about your assignments, and other academic questions you may have.  You do not need an appointment to come to drop-in hours, and you do not even need to have an agenda or set questions!  You can come and just have a general chat about things with us.  If you cannot make it to drop-in hours, you can contact us for an appointment as well.  Drop-In hours are also for non-instructional topics of conversation: you can talk with me about your adjustments to college life, your long-term goals, advice about your academic journey, and most other things.  If I don't know the answer to something or if I don't feel I am the best person to offer you advice about it, I will be happy to help connect you with the right people.  In other words, don't be afraid to ask me things that you think are "off topic" - I love teaching because I love to be a resource for you on your journey.  I'll be happy to see you there.
+
+
+
+
+
+
+
+
+
+    <a name="textbooks"></a>
+    <h2>Textbooks</h2>
+    <table  id="textbookstable" class="table table-condensed" cellspacing="10">
+    <thead>
+    <tr>
+    <th><span><strong>Required?</strong></span></th>
+    <th><span><strong>Title</strong></span></th>
+    <th><span><strong>Author</strong></span></th>
+    <th><span><strong>Edition</strong></span></th>
+    <th><span><strong>ISBN</strong></span></th>
+    <th><span><strong>Freely Available?</strong></span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for item in page.textbooks %}
+    <tr align="left">
+    <td align="left">
+    {% if item.isrequired %}
+        Required
+    {% else %}
+        Recommended / Supplemental
+    {% endif %}
+    </td>
+    
+    <td align="left">
+    {% if item.title or item.image %}
+      {% if item.link %}
+        <a href="{{ item.link }}">
+      {% endif %}
+      
+      {% if item.image %}
+      <center><img src="{{item.image}}" alt="Picture of the cover of the book entitled {{item.title}}"></center> 
+      <br>     
+      {% endif %}
+      {{item.title}}
+      
+      {% if item.link %}
+        </a>
+      {% endif %}
+    {% endif %}    
+    </td>
+      
+    <td>
+    {% if item.authors %}      
+      {{item.authors}}
+    {% endif %}
+    </td>
+
+    <td>
+    {% if item.edition %}
+      {{item.edition}}
+    {% endif %}
+    </td>
+
+    <td>
+    {% if item.isbn %}
+      {{item.isbn}}
+    {% endif %}
+    </td>
+    
+    <td>
+    {% if item.freelyavailable %}
+      <a href="{{item.freelyavailable}}">Online Version</a>
+    {% endif %}
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    
+    <strong>Please Note:</strong> The cost of the book may be prohibitive for some students, so please note that renting the book is much cheaper. Please communicate as early as possible if you are having trouble obtaining the book, rather than keeping this to yourself, so that we can work on a solution together.  If you are experiencing a financial hardship, please consider the <a href="#bear2bear">Bear2Bear Emergency Fund</a> for temporary relief applications.
+
+
+
+
+    <a name="schedule"></a>
+    <h2>Course Schedule</h2>    
+
+    {% if page.schedule %}    
+    <table  id="scheduletable" class="table table-condensed" cellspacing="10">
+    <thead>
+    <tr>
+    <th><span><strong>Week</strong></span></th>
+    <th><span><strong>Date</strong></span></th>
+    <th><span><strong>Title</strong></span></th>
+    <th><span><strong>Readings</strong></span></th>
+    <th><span><strong>Deliverables</strong></span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for item in page.schedule %}
+    <tr align="left">
+
+    <td align="left">
+    <!-- Assumes week numbers are counted from 0 in the markdown definition to facilitate date calculation, and that the start date is a Monday -->
+    {% assign week_num = item.week | to_integer %}
+    <strong>Week {{ week_num | plus: 1 }}</strong>
+    </td>
+
+    <td align="left">
+    <strong><script language="JavaScript">document.write(getCourseDate("{{page.info.course_start_date}}", "{{item.week}}", "{{item.date}}", {{page.info.class_meets_days.isM}}, {{page.info.class_meets_days.isT}}, {{page.info.class_meets_days.isW}}, {{page.info.class_meets_days.isR}}, {{page.info.class_meets_days.isF}}, {{page.info.class_meets_days.isS}}, {{page.info.class_meets_days.isU}}));</script></strong>
+    </td>
+
+    <td align="left">
+    {% if item.title %}
+    {% if item.link %}<a href="{{item.link}}">{% endif %}
+    {{ item.title }}
+    {% if item.link %}</a>{% endif %}
+    {% endif %}
+    </td>
+
+    <td align="left">
+    {% if item.readings %}
+    <ul>
+    {% endif %}
+
+    {% for reading in item.readings %}
+    <li>
+    {% if reading.rlink %}
+    <a href="{{reading.rlink}}">
+    {% endif %}
+    {{reading.rtitle}}
+    {% if reading.rlink %}
+    </a>
+    {% endif %}
+    </li>
+    {% endfor %}
+
+    {% if item.readings %}
+    </ul>
+    {% endif %}
+    </td>
+
+    <td align="left">
+    {% if item.deliverables %}
+    <ul>
+    {% endif %}
+    {% for deliverable in item.deliverables %}
+    <li>
+    {% if deliverable.dlink %}
+    <a href="{{deliverable.dlink}}">
+    {% endif %}
+    {{deliverable.dtitle}}
+    {% if deliverable.dlink %}
+    </a>
+    {% endif %}
+    </li>
+    {% endfor %}
+
+    {% if item.deliverables %}
+    </ul>
+    {% endif %}
+    </td>
+
+    </tr>
+    {% endfor %}
+
+    </table>  
+    {% endif %}
+    
+    {% if page.university.semester == "Fall" and page.university.fallholidays %}
+    Please note the following holidays this term:
+    <ul>
+    {% for holiday in page.university.fallholidays %}
+    <li><script language="JavaScript">document.write(getDateString(strtodate("{{holiday.date}}")));</script></li>
+    {% endfor %}
+    </ul>
+    {% elsif page.university.semester == "Spring" and page.university.springholidays %}
+    Please note the following holidays this term:
+    <ul>
+    {% for holiday in page.university.springholidays %}
+    <li><script language="JavaScript">document.write(getDateString(strtodate("{{holiday.date}}")));</script></li>
+    {% endfor %}
+    </ul>    
+    {% endif %}
+    
+    {% if page.university and page.university.semester %}
+    Please note the following key calendar dates:
+
+    {% if page.university.semester == "Fall" and page.university.fall %}
+    <ul>
+    {% for keydate in page.university.fall %}
+    {% if keydate.kdisplay == true %}<li><strong>{{keydate.kname}}</strong>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
+    {% endfor %}
+    </ul>
+    {% elsif page.university.semester == "Spring" and page.university.spring %}
+    <ul>
+    {% for keydate in page.university.spring %}
+    {% if keydate.kdisplay == true %}<li><strong>{{keydate.kname}}</strong>: <script language="JavaScript">document.write(getDateString(strtodate("{{keydate.kdate}}")));</script></li>{% endif %}
+    {% endfor %}
+    </ul>   
+    {% endif %}       
+    {% endif %}
+
+
+
+    {% if page.grade_breakdown %}
+    <a name="grading"></a>
+    <h2>Grade Breakdown</h2>
+    Letter grades will be assigned on the scale below at the end of the course. "Grade grubbing" is not conducive to professional practice; every assignment has or will have very precise expectations and point breakdowns, and I will evaluate submitted work carefully according to these standards. I will also return assignments in a timely manner, and the running weighted grades will be updated frequently. Therefore, I expect a commensurate level of respect from you. In sum, you should know where you stand at all times, there will be plenty of opportunities to improve your standing, and there should be no surprises at the end of the course.    
+    
+    <h3>Grading Table</h3>
+    <table  id="gradingtable" class="table table-condensed" cellspacing="10">
+    <thead>
+    <tr>
+    <th><span><strong>Item</strong></span></th>
+    <th><span><strong>Weight</strong></span></th>
+    </tr>
+    </thead>
+
+    <tbody>    
+    
+    {% for item in page.grade_breakdown %}
+    <tr align="left">
+    <td align="left">
+    {{ item.category }}
+    </td>
+    <td align="left">
+    {{ item.weight }}
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+    
+
+    {% if page.letter_grades %}
+    <h3>Letter Grades</h3>
+    <table  id="lettergradestable" class="table table-condensed" cellspacing="10">
+    <thead>
+    <tr>
+    <th><span><strong>Letter</strong></span></th>
+    <th><span><strong>Grade Range</strong></span></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for item in page.letter_grades %}
+    <tr align="left">
+    <td align="left">
+    {{ item.letter }}
+    </td>
+    <td align="left">
+    {{ item.range }}
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% endif %}
+    
+    
+    {% if page.contract and (page.contract.a or page.contract.b or page.contract.c or page.contract.d) %}
+    <h3>Contract Grading</h3>
+    
+    {% if page.contract.a %}
+    <h4>To Receive an A</h4>
+    <ul>
+    {% for item in page.contract.a %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.contract.b %}
+    <h4>To Receive a B</h4>
+    <ul>
+    {% for item in page.contract.b %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.contract.c %}
+    <h4>To Receive a C</h4>
+    <ul>
+    {% for item in page.contract.c %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>   
+    {% endif %}
+
+    {% if page.contract.d %}
+    <h4>To Receive a D</h4>
+    <ul>
+    {% for item in page.contract.d %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>      
+    {% endif %}
+    {% endif %}
+    {% endif %}    
+		
+
+    
+		      
+    
+    <a name="policies"></a>
+    <h2>Course Policies</h2>
+ 
+    <div style="float: right; margin-left: 5px;">
+    <!--<p>--><a href="http://blogs.onlineeducation.touro.edu/15-rules-netiquette-online-discussion-boards/"><img src="http://blogs.onlineeducation.touro.edu/wp-content/uploads/2014/05/Netiquette-Online-Discussion-Boards-infographic.png" alt="Netiquette in Online Discussion Boards infographic" width="511px" border="0" /></a><!--</p>--><br />
+    <!--<p>--><!--<strong>--><small><!--Please include attribution to the-->Courtesy of the <a href="http://blogs.onlineeducation.touro.edu/" title="Online Education Blog of Touro College">Online Education Blog of Touro College</a><!--with this graphic-->.</small><!--</strong>--><!--</p>--><br />
+    <!--<p>-->
+    </div> 
+ 
+    <a name="environment"></a> 
+    <h3>Classroom Environment and Inclusivity Standards</h3>    
+    My goal is to foster a environment in which students across all axes of diversity feel welcome and valued, both by me and by their peers. Axes of diversity include, but are not limited to, age, background, beliefs, race, ethnicity, gender/gender identity/gender expression (please feel free to tell me in person or over e-mail which pronouns I should use), national origin, religious affiliation, and sexual orientation. Discrimination of any form will not be tolerated.
+    
+    Furthermore, I want all students to feel comfortable expressing their opinions or confusion at any point in the course, as long as they do so respectfully. As I will stress over and over, being confused is an important part of the process of learning computer science. Therefore, I will not tolerate any form of put-downs by one student towards another about their confusion or progress in the class. Learning computer science and struggling to grow is not <a href="https://i0.wp.com/katielmartin.com/wp-content/uploads/2019/02/1_9HzbByi2Uzit8474Rp4ZPg-1.jpg?w=550&ssl=1">always comfortable</a>, but I want it to feel safe.  Much of this material is probably new to everyone, and those with some prior experience likely recall a time when it was new to them, too.  Remember that <strong>this is not a competition</strong>: helping others to grow is itself a richly rewarding professional development opportunity.  
+    
+    In order to allow for equitable access to class for students who may be attend and participating remotely, I may record our class sessions. These recordings will only be available on our Canvas site. I will announce that we are recording in the beginning of any classes of this kind; out of respect and privacy for me and all class members, please do not download, copy, or redistribute class recordings.
+    
+    
+    
+    
+    <h3>Online Communication Policy</h3>
+    Since this is a class-wide communication, the following rules apply to message groups and electronic communications:
+    <ol>
+    <li>Students are expected to be respectful and mindful of the <a href="#environment">classroom environment and inclusivity standards</a>.</li>
+    <li>They are equally applicable to a virtual environment as they are in class.</li>
+    <li>Students are not permitted to share direct answers or questions which might completely give away answers to any homework problems or labs publicly on Microsoft Teams. When in doubt, please send me a direct message there.</li>
+    <li>I will attempt to answer questions real time during my virtual drop-in / office hours. Otherwise, I will make every attempt to respond within 24 hours. Of course, students can and should still respond to each other outside of these intervals, when appropriate!</li>
+    <li>Students may ask anonymous questions.</li>
+    </ol>
+       
+    
+    
+    {% if layout.boilerplate.lms.title and layout.boilerplate.lms.description %}
+    <h3>Course Management Systems: {{layout.boilerplate.lms.title}}</h3>
+    {{layout.boilerplate.lms.description}}
+    <br /><br />
+    Since it is likely that students will have similar questions, it is much more efficient for me to answer them there so the whole class can see the answer, so it is possible that I will ask you to re-send a question on the forum that I get in e-mail (please do not be shy or take it personally if I do so; it means it was a great question and worth sharing with everyone!). There will be an anonymous option at the top of every chatroom to help facilitate this.
+    {% endif %}
+    
+    
+    <a name="collaboration"></a>
+    <h3>Collaboration Policy and Academic Integrity Policy</h3>
+    Communication between students is allowed (and encouraged!), but it is expected that every student's code or writeups will be completely distinct! Please do not copy code off of the Internet (repurposing code from the Internet will probably make it harder anyway because the assignments are so specialized). Please cite any sources in addition to materials linked from the course website that you used to help in crafting your code and completing the assignment.
+    <br /><br />
+    See the <a href="{{layout.boilerplate.links.handbook}}">Course Management</a> page in the Faculty Handbook for an explanation of college policies on plagiarism and other academic honesty violations.
+    <br /><br />
+    To encourage collaboration, students will be allowed to choose one or more "<strong>buddies</strong>" to work "near" during the assignment. Students are still expected to submit their own solutions, but they are allowed to provide substantial help to each other, and even to look at each others' code during the process. Students should indicate their buddies in the README upon assignment submission. Please let me know if you would like a buddy but are having trouble finding one.
+    <br /><br />
+    Below is a table spelling out in more detail when and how you are allowed to share code with people (table style cribbed from <a href="https://www.cs.princeton.edu/courses/archive/spring19/cos126/syllabus.html">Princeton CS 126</a>).
+    <br /><br />
+    <strong>Please Note:</strong> The terms "exposing" and "viewing" exclude sending or ingesting electronically, which would be considered copying. Exposing and viewing are normally done in the context of in-person working or in the help room.  In addition, "Other People" includes internet sources!
+    <br />
+        <table id="collaborationtable" class="table table-condensed" cellspacing="10">
+        <thead>
+          <tr>
+            <th></th>
+            <th><strong>Your Buddy</strong></th>
+            <th><strong>Course Staff</strong></th>
+            <th><strong>Course Grads</strong></th>
+            <th><strong>Classmates</strong></th>
+            <th><strong>Others</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Discuss Concepts With</strong></td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>Acknowledge Collaboration With</strong></td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>OK</td>
+          </tr>
+          <tr>
+            <td><strong>Expose Your Code/Solutions To</strong></td>
+            <td>ALL EXCEPT<br>Assignments</td>
+            <td>OK</td>
+            <td>OK</td>
+            <td>In-Class<br>Exercises</td>
+            <td>NO</td>
+          </tr>
+          <tr>
+            <td><strong>View the Code/Solutions Of</strong></td>
+            <td>ALL EXCEPT<br>Assignments</td>
+            <td>OK</td>
+            <td>NO</td>
+            <td>In-Class<br>Exercises</td>
+            <td>NO</td>
+          </tr>
+          <tr>
+            <td><strong>Copy Code/Solutions From</strong></td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+            <td>NO</td>
+          </tr>
+        </tbody>
+        </table>
+    <br />
+    If the work you submit appears to be copied from previous work or the collaboration policy has been violated in any way according to the College <a href="{{layout.boilerplate.links.academichonesty}}">Academic Honesty</a> policy, regardless of intent, then it may be an academic dishonesty case, and it will be referred to the Associate Dean for Academic Affairs.  I am required to make this report in every occurrence, so it is best to speak with me first if there are any questions about the policy or expectations.  You should feel free to have these conversations with me anytime prior to making your submission without fear of penalty.
+    
+    
+    
+    {% if page.info.flexible_submission_policy %}
+    <h3>Flexible Submission Policy</h3>
+    {{ page.info.flexible_submission_policy }}
+    {% endif %}
+    
+    
+    
+    <h3>Title IX</h3>
+    Title IX is a federal law, under which it is prohibited to discriminate, harass, or commit misconduct on the basis of gender or sex.  The <a href="{{layout.boilerplate.links.titleix}}">Title IX Coordinator</a> is available to receive inquiries and to investigate allegations in this regard.  
+    
+    
+    
+    <h3>Inclement Weather and Class Cancellation Policy</h3>
+    In the event that the College closes due to inclement weather or other circumstances, our in-person class sessions, drop-in / office hours, labs, or other meetings will not be held.  I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply).  If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those.  I will communicate this plan to the department so that it can be posted on my office door if it is feasible to do so.  This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal.  Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well.
+    
+    
+    {% if layout.boilerplate.miscpolicies %}
+    <h3>Miscellaneous Policies</h3>
+    <ul>
+    {% for policy in layout.boilerplate.miscpolicies %}
+    <li><strong>{{policy.title}}:</strong> {{policy.body}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    
+    <h3>Student Perception of Teaching Questionnaire (SPTQ)</h3>
+    I will be soliciting student feedback through the SPTQ and possibly through other forms of commentary.  This feedback greatly assists me and the department as we develop our courses and overall curriculum for this program.  This course has benefitted from the feedback of those students who took the course before you, and your feedback will help maintain and improve the course for those to follow.  I strongly encourage you to participate in this important and valuable process.
+    
+    
+    <h3>Syllabus Subject to Change</h3>
+    I will do my best to provide all relevant information about the course on this syllabus.  Sometimes, exigent circumstances, the pace of the class, or other circumstances will warrant minor revisions to the syllabus.  For example, inclement weather or other campus closure might affect the course schedule and assignment deadlines; in addition, I may find that the class benefits from spending more time on a particular topic, and adjust accordingly.  Although I try to avoid rescheduling drop-in / office hours, it may become necessary from time to time to accommodate other events in the College.  Should any revisions be necessary, I commit to making any revisions in my estimation of the best interests of the class, and commit to communicating those changes to you as soon as I make them. 
+    
+    
+    <a name="mainbody"></a>
+    <h1>Course Details</h1>
+    {{ content }} 
+  </div>
+</div>

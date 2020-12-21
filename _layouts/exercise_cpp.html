@@ -1,0 +1,439 @@
+---
+layout: default
+
+formprocessor: "https://mathcs.ursinus.edu:8082/"
+enctype: "application/x-www-form-urlencoded"
+facultyemail: "wmongan@ursinus.edu"
+
+formprocessordirections: "Click <code>compile</code> to compile your code.  If it succeeds with no syntax errors, then click <code>run</code> to run your code.  If it passes the tests, it will automatically submit to Canvas and send you an e-mail. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
+
+submitformlinkdirections: "Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions."
+---
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/util.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+
+<style>
+.image_off, #home:hover .image_on{
+   display:none
+}
+.image_on, #home:hover .image_off{
+   display:block
+}
+{% for file in page.files %}
+{% if file.ismain == false %}
+#{{ file.name }}Editor {
+    {% if file.isvisible == true %}
+    position: relative;
+    width: 700px;
+    height: 250px;
+    {% else %}
+    position: fixed;
+    bottom: 10px;
+    visibility: hidden
+    {% endif %}
+}
+{% else %}
+#mainEditor {
+    {% if file.isvisible == true %}
+    position: relative;
+    width: 700px;
+    height: 100px;
+    {% else %}
+    position: fixed;
+    bottom: 10px;
+    visibility: hidden
+    {% endif %}
+}
+{% endif %}
+{% endfor %}
+
+#compilerText {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+
+#feedbackText {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+
+</style>
+
+<script src="{{site.baseurl}}/assets/js/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src = "{{site.baseurl}}/assets/js/cpp/process-manager.js"></script>
+<script src = "{{site.baseurl}}/assets/js/cpp/runtime.js"></script>
+<script src = "{{site.baseurl}}/assets/js/cpp/wasm-tools.js"></script>
+
+<div id="main" role="main">
+  <div class="archive">    
+    <h1 class="page__title">{{ page.title }}{% if page.info.points %} ({{page.info.points}} Points){% endif %}</h1>
+        C++ frontend developed by, <a href="https://www.ursinus.edu/live/profiles/4502-christopher-tralie">Professor Tralie</a>, adopted from code by <a href = "https://github.com/tbfleming/cib">Todd Fleming</a>.  Canvas Autograder Developed by <a href="https://www.ursinus.edu/live/profiles/4502-christopher-tralie">Professor Tralie</a> and <a href="https://www.ursinus.edu/live/profiles/5313-william-mongan">Professor Mongan</a>.
+
+        {% if page.info.prev or page.info.next %}
+        <p>
+        {% if page.info.prev %}
+        <button onclick="window.location.href = '{{ page.info.prev }} ';"> &lt--- Previous</button>
+        {% endif %}
+        {% if page.info.next %}
+        <button onclick="window.location.href = '{{ page.info.next }}';">Next ---&gt</button>
+        {% endif %}
+        </p>
+        <HR>
+        {% endif %}
+        
+        {% if page.info.goals %}
+        <h1>Exercise Goals</h1>
+        The goals of this exercise are:
+        <ol>
+        {% for goal in page.info.goals %}
+        <li>{{goal}}</li>
+        {% endfor %}
+        </ol>
+        {% endif %}
+        
+        {% if page.info.instructions %}
+        {{ page.info.instructions }}
+        {% endif %}
+        
+        
+        <!-- Must name main file "main" and the div tag here/css/processing code below is hardcoded to mainEditor -->
+        {% for file in page.files %}
+        {% if file.isvisible == true %}
+        <h3>{{ file.filename }}</h3>
+        {% endif %}
+        
+        {% if file.ismain == true %}<div id="mainEditor">{% else %}<div id="{{ file.name }}Editor">{% endif %}{{ file.code | strip }}</div>
+        {% endfor %}
+        
+        <h3>Compiler Feedback</h3>
+        <div id="compilerText"></div>
+        <h3>Program Output</h3>
+        <div id="feedbackText"></div>
+
+
+        <div id="correctArea"></div>
+        
+        <p>
+            
+            {% if layout.formprocessor and layout.formprocessor != false %}
+            {{ layout.formprocessordirections }}<br>
+            {% endif %}
+            {% if page.processor.submitformlink and page.processor.submitformlink != false %}
+            {{ layout.submitformlinkdirections }}<br>
+            {% endif %}
+        
+        <strong>Please Enter your Ursinus netid before clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>ctralie</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit)</strong> 
+
+        <table>
+            <tr>
+                <td>
+                    Netid
+                </td>
+                <td>
+                    <input type="text" id="studentnetid" name="studentnetid" onchange="if(document.getElementById('studentnetid').value.length > 0) document.getElementById('runbutton').disabled = false; else document.getElementById('runbutton').disabled = true;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type = "button" onclick = "compile()" id="compilebutton">Compile</button>
+                </td>
+                <td>
+                    <button type = "button" onclick = "if(document.getElementById('studentnetid').value.length > 0) run(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your netid first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
+                </td>
+            </tr>
+        </table>
+
+        </p>
+
+
+        <script>
+        let correctArea = document.getElementById("correctArea");
+        let correctlyAnswered = false;
+        let numAttempts = 0;
+
+        var editors = new Array();
+
+        {% for file in page.files %}
+        {% if file.ismain == true %}
+        let mainEditor = ace.edit("mainEditor");
+        mainEditor.setFontSize(16);
+        mainEditor.session.setMode("ace/mode/c_cpp");
+        {% if file.isreadonly == true %}
+        mainEditor.setReadOnly(true);            
+        {% else %}
+        mainEditor.setReadOnly(false);            
+        {% endif %}
+        {% else %}
+        let {{ file.name }}Editor = ace.edit("{{ file.name }}Editor");
+        {{ file.name }}Editor.setFontSize(16);
+        {{ file.name }}Editor.session.setMode("ace/mode/c_cpp");
+        {% if file.isreadonly == true %}
+        {{ file.name }}Editor.setReadOnly(true);            
+        {% else %}
+        {{ file.name }}Editor.setReadOnly(false);            
+        {% endif %} 
+        editors.push({{ file.name }}Editor);
+        {% endif %}
+        {% endfor %}
+
+        let compiler = ace.edit("compilerText");
+        compiler.setFontSize(16);
+        compiler.renderer.setShowGutter(false);
+
+        let feedback = ace.edit("feedbackText");
+        feedback.setFontSize(16);
+        feedback.renderer.setShowGutter(false);
+
+        <!-- https://stackoverflow.com/questions/7542586/new-formdata-application-x-www-form-urlencoded -->
+        function urlencodeFormData(fd){
+            var s = '';
+            function encode(s){ return encodeURIComponent(s).replace(/%20/g,'+'); }
+            for(var pair of fd.entries()){
+                if(typeof pair[1]=='string'){
+                    s += (s?'&':'') + encode(pair[0])+'='+encode(pair[1]);
+                }
+            }
+            return s;
+        }
+
+        /**
+         * Send code to the server with a POST command
+         * @param {boolean} vpnwarn Whether to warn about connecting to a vpn
+         * @param {boolean} halfcredit Whether this is a half credit submission
+         */
+        function postCode(vpnwarn, halfcredit) {
+            <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
+            {% if layout.formprocessor and layout.formprocessor != false %}
+            submitcode = '';
+            
+            for (var i in editors) {
+                submitcode += editors[i].getValue();
+                submitcode += "\n\n";
+            }
+            submitcode += mainEditor.getValue() + "\n\n";
+            
+            var xhttp = new XMLHttpRequest();
+            xhttp.onerror = function(e){
+                if (vpnwarn) {
+                    alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+                }
+            };
+
+            xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
+            xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
+            
+            var formdata = new FormData();
+            formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
+            formdata.append("magic", "ursinus"); // required
+            formdata.append("title", "{{ page.title | strip }}"); // required
+            formdata.append("studentnetid", document.getElementById("studentnetid").value.toLowerCase()); //required
+            formdata.append("code", submitcode);
+            {% if page.canvasasmtid %}
+            formdata.append("canvasasmtid", "{{page.canvasasmtid}}");
+            {% endif %}
+            {% if page.canvaspoints %}
+            formdata.append("canvaspoints", "{{page.canvaspoints}}");
+            {% endif %}
+            if (halfcredit) {
+                formdata.append("canvashalfcredit", true);
+            }
+            
+            xhttp.send(urlencodeFormData(formdata));                    
+            {% endif %}
+        }
+
+
+
+        let workerPath = "{{site.baseurl}}/assets/js/cpp/scripts/";
+        class ProcessUI {
+            constructor(name, feedbackElem) {
+                this.text = "";
+                this.name = name;
+                this.feedbackElem = feedbackElem;
+                this.state = '';
+                this.wasReady = false;
+                this.timesRun = 0;
+
+                this.process = new ProcessManager(name, name, workerPath)
+                this.process.setStatus = this.setStatus.bind(this);
+                this.process.print = this.print.bind(this);
+                this.process.printErr = this.printErr.bind(this);
+            }
+
+            resetText() {
+                this.text = "";
+            }
+
+            reboot() {
+                this.process.terminate();
+                this.process.start();
+            }
+
+            setStatus(state, status, doPrint) {
+                if (doPrint === undefined) {
+                    doPrint = true;
+                }
+                if (doPrint) {
+                    this.feedbackElem.setValue(state + ' ', status);
+                }
+                this.state = state;
+            };
+
+            print({ text }) {
+                this.text += text + "\n";
+                this.feedbackElem.setValue(this.text);
+                //this.feedbackElem.setValue(this.text.replace(/\n/g, "\n"));
+            };
+
+            printErr({ text }) {
+                this.text += text + "\n";
+                this.feedbackElem.setValue(this.text);
+                //this.feedbackElem.setValue(this.text.replace(/\n/g, "\n"));
+            };
+        }
+
+        let clang = new ProcessUI('clang', compiler);
+        let runtime = new ProcessUI('runtime', feedback);
+        let clangOutput = null;
+
+        clang.process.print({ text: 'Preparing clang...\n\n' });
+        clang.process.workerCompileDone = args => {
+            correctArea.innerHTML = "";
+            clangOutput = args.result;
+            clang.process.setStatus('ready', 'Ready', false);
+            if (args.result) {
+                let s = "Compiled successfully: wasm size: " + args.result.length + ' bytes\n';
+                compiler.setValue(s);
+            }
+        };
+
+        function checkAnswer() {
+            numAttempts++;
+            {{ page.processor.feedbackprocess | strip }}
+            if ({{ page.processor.correctcheck | strip}}) {
+                correctlyAnswered = true;
+                correctArea.innerHTML = "<h3><font color = #00AA00>{{ page.processor.correctfeedback | strip}}</font></h3>";
+                <!-- Setting a page.processor.submitformlink in the markdown will pop up an iframe with a page of your choice -->
+                {% if page.processor.submitformlink and page.processor.submitformlink != false %}
+                correctArea.innerHTML += `
+                <iframe src = "{{ page.processor.submitformlink | strip }}" width=800 height=500>
+                `;
+                {% endif %}
+                
+                postCode(true, false);
+            }
+            {% if page.processor.incorrectchecks %}
+            {% for check in page.processor.incorrectchecks %}
+            else if ({{ check.incorrectcheck | strip}}) {
+                correctArea.innerHTML = "<h3><font color = red>{{ check.feedback | strip }}</font></h3>";
+            }
+            {% endfor %}
+            {% endif %}
+            else {
+                correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
+            }
+
+            {% if page.canvashalftries %}
+            if (!correctlyAnswered && numAttempts == {{ page.canvashalftries }}) {
+                postCode(false, true);
+            }
+            {% endif %}
+        }
+
+        runtime.process.print({ text: 'Preparing runtime...\n\n' });
+        runtime.process.workerRunDone = args => {
+            runtime.timesRun++;
+            if (runtime.timesRun < 3) {
+                // For some reason it needs to be run more than once
+                // for the text to fully update
+                runtime.resetText();
+                runtime.process.worker.postMessage({
+                    function: 'run',
+                    wasmBinary: clangOutput,
+                });
+            }
+            else {
+                runtime.process.setStatus('ready', 'Ready', false);
+                feedback.setValue(runtime.text);
+                checkAnswer();
+            }
+
+        };
+        runtime.process.workerDebugReplaceBinary = args => {
+            console.log('new size:  ' + args.newBinary.length + '\n');
+            clangOutput = args.newBinary;
+        };
+        runtime.process.workerSendRun = function () {
+            runtime.process.setStatus('busy', 'Running');
+            runtime.process.postMessage({
+                function: 'run',
+                wasmBinary: clangOutput,
+            });
+        };
+
+        clang.process.start();
+        runtime.process.start();
+
+
+        function getCodeText() {
+            let codeText = "";
+            for (var i in editors) {
+                codeText += editors[i].getValue();
+                codeText += "\n";
+            }
+            codeText += mainEditor.getValue();
+            return codeText;
+        }
+
+        let compiledCode = "";
+
+        function compile() {
+            correctArea.innerHTML = "<font color = blue>Compiling...</font>";
+            if (clang.state !== 'ready') {
+                alert("Compiler not finished loading yet");
+                return;
+            }
+            clangOutput = null;
+            clang.process.setStatus('busy', 'Running');
+            let codeText = getCodeText();
+            compiledCode = codeText;
+            console.log(codeText);
+            clang.process.worker.postMessage({
+                function: 'compile',
+                code: codeText,
+            });
+        }
+        
+        function run() {
+            runtime.timesRun = 0;
+            correctArea.innerHTML = "<font color = blue>Running...</font>";
+            let codeText = getCodeText();
+            if (!(codeText === compiledCode)) {
+                compiler.setValue("Warning: It looks like you edited code since you last compiled\nBe sure to compile again before running!");
+            }
+            runtime.process.setStatus('busy', 'Running');
+            if (clangOutput === null) {
+                alert("Need to compile code first!");
+            }
+            else {
+                runtime.resetText();
+                runtime.process.worker.postMessage({
+                    function: 'run',
+                    wasmBinary: clangOutput,
+                });
+            }
+
+        }
+        </script>        
+        
+    {{ content }} 
+  </div>
+</div>

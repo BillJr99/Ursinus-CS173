@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}{% if page.info.points %} ({{page.info.points}} Points){% endif %}</h1>
+
+    {% if page.info.goals %}
+    <h1>Assignment Goals</h1>
+    The goals of this assignment are:
+    <ol>
+    {% for goal in page.info.goals %}
+    <li>{{goal}}</li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+
+    <h1>The Assignment</h1>
+    {% if page.info.githubclassroom and page.info.githubclassroom.clonelink %}
+    If (and only if) you are using GitHub to submit, you can clone this assignment from GitHub Classroom at <a href="{{ page.info.githubclassroom.clonelink }}">{{ page.info.githubclassroom.clonelink }}</a>.  Otherwise, you may skip this step!
+    <br /><br />
+    {% endif %}
+    
+    {{ content }} 
+    
+    <h2>Submission</h2>
+    {% if page.info.submission %}
+    {{ page.info.submission }}
+    {% else %}
+    If you wrote code as part of this assignment, please include a README in which you describe your design, approach, and implementation.  Additionally, please answer any questions from the assignment, and include answers to the following questions:
+    
+    <ul>
+    <li>If collaboration with a buddy was permitted, did you work with a buddy on this assignment? If so, who?</li>
+    <li>Approximately how many hours it took you to finish this assignment (I will not judge you for this at all...I am simply using it to gauge if the assignments are too easy or hard)?</li>
+    <li>Your overall impression of the assignment. Did you love it, hate it, or were you neutral? One word answers are fine, but if you have any suggestions for the future let me know.</li>
+    <li>Any other concerns that you have. For instance, if you have a bug that you were unable to solve but you made progress, write that here. The more you articulate the problem the more partial credit you will receive (it is fine to leave this blank).</li>
+    </ul>
+    {% endif %}
+	
+    {% if page.info.rubric %}
+    <h1>Assignment Rubric</h1>
+    <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Pre-Emerging (< 50%)</th>
+        <th>Beginning (50%)</th>
+        <th>Progressing (85%)</th>
+        <th>Proficient (100%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in page.info.rubric %}
+      <tr>
+        <td>{{item.description}} ({{item.weight}}%)</td>
+        <td>{{item.preemerging}}</td>
+        <td>{{item.beginning}}</td>
+        <td>{{item.progressing}}</td>
+        <td>{{item.proficient}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+    {% endif %}
+    
+    
+    
+    {% if page.info.contract and (page.info.contract.a or page.info.contract.b or page.info.contract.c or page.info.contract.d ) %}
+    <h1>Contract Grading</h1>
+    
+    {% if page.info.contract.a %}
+    <h2>To Receive an A</h2>
+    <ul>
+    {% for item in page.info.contract.a %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.info.contract.b %}
+    <h2>To Receive a B</h2>
+    <ul>
+    {% for item in page.info.contract.b %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if page.info.contract.c %}    
+    <h2>To Receive a C</h2>
+    <ul>
+    {% for item in page.info.contract.c %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>    
+    {% endif %}
+    
+    {% if page.info.contract.d %}    
+    <h2>To Receive a D</h2>
+    <ul>
+    {% for item in page.info.contract.d %}
+    <li>{{item}}</li>
+    {% endfor %}
+    </ul>        
+    {% endif %}
+    {% endif %}
+  </div>
+</div>
