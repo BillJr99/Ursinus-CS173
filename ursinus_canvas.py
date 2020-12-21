@@ -432,6 +432,9 @@ def create_calendar_event(canvas, inputdict):
         canvas.create_calendar_event(inputdict)
     except exceptions.ResourceDoesNotExist:
         print("Calendar Event Creation: Resource Does Not Exist")
+
+def create_late_policy(course, inputdict):
+    course.create_late_policy(inputdict)
     
 def process_markdown(fname, canvas, course, courseid, homepage):
     f = open(fname, 'r')
@@ -453,6 +456,9 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     isF = postdict['info']['class_meets_days']['isF']
     isS = postdict['info']['class_meets_days']['isS']
     isU = postdict['info']['class_meets_days']['isU']
+    
+    late_penalty_per_period = float(postdict['info']['late_penalty_per_period'])
+    late_penalty_period = postdict['info']['late_penalty_period']
     
     printlog("Replacing Syllabus Page with Course Homepage...")
     
@@ -659,6 +665,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 inputdict['new_tab'] = True            
                 inputdict['published'] = True
                 add_module_item(module, inputdict)                  
+    
+    printlog("Writing Late Policy...")
+    inputdict = {}
+    inputdict['late_policy'] = {}
+    inputdict['late_policy']['late_submission_deduction_enabled'] = True
+    inputdict['late_policy']['missing_submission_deduction_enabled'] = True
+    inputdict['late_policy']['late_submission_deduction'] = late_penalty_per_period
+    inputdict['late_policy']['late_submission_interval'] = late_penalty_period
+    create_late_policy(course, inputdict)
     
     printlog("Writing Office Hours...")
     

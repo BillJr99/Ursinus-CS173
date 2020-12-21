@@ -89,7 +89,9 @@ info:
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  No prior permission is required for flexible submission, which allows up to 2 days to be used during the semester by each student.  For example, one deliverable may be submitted 2 days late, or two deliverables may each be submitted 1 day late.  After these 2 days are utilized, subsequent deliverables may be submitted after the deadline, awarding up to: 95% credit for work submitted up to 6 hours past the deadline, 90% credit for work submitted up to 24 hours past the deadline, 80% credit for work submitted up to 48 hours past the deadline, and 50% credit for work submitted up to 7 days past the deadline.  To exercise flexible submission, please e-mail the instructor after submitting your deliverable, indicating: a) which deliverable you have submitted past the deadline, and b) how many flex days you wish to use (if any)." 
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 3% per day if submitted before 11:59 PM Easter Time on the day submitted." 
+  late_penalty_per_period: 3
+  late_penalty_period: "day"
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
