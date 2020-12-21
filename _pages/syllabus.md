@@ -60,7 +60,7 @@ info:
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 3% per day if submitted before 11:59 PM Easter Time on the day submitted." 
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 3% per day if submitted before 11:59 PM Easter Time on the day submitted.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy." 
   late_penalty_per_period: 3
   late_penalty_period: "day"
   banner: |
@@ -249,8 +249,6 @@ schedule:
   readings: 
   - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
     rlink: "Modules/Values/Module" 
-  - rtitle: "Getting Started with Git and Github"
-    rlink: "Modules/Github/Module" 
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
@@ -309,8 +307,6 @@ schedule:
   readings:
   - rtitle: "Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Using External Libraries in Your NetBeans Project"
-    rlink: "Modules/Library/Module"     
   - rtitle: "Reading User Input"
     rlink: "https://www.w3schools.com/java/java_user_input.asp"  
   deliverables:
@@ -606,6 +602,9 @@ schedule:
 - week: "13"
   date: "1"
   title: "Lab: Final Project Workshop and Ethical Case Studies" 
+  readings:
+  - rtitle: "Getting Started with Git and Github"
+    rlink: "Modules/Github/Module"   
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
