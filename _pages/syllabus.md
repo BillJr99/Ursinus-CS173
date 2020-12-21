@@ -147,14 +147,16 @@ goals:
 
 grade_breakdown:
 - category: "Programming Assignments"
-  weight: "40%"
+  weight: "35%"
 - category: "Labs"
   weight: "30%"
 - category: "Final Project"
   weight: "15%"
-- category: "Class Participation, Quizzes and Pre-Lab Exercises"
+- category: "Quizzes and Pre-Lab Exercises"
   weight: "10%"
 - category: "Debugging Table"
+  weight: "5%"
+- category: "Participation"
   weight: "5%"
 
 letter_grades:
@@ -271,10 +273,7 @@ schedule:
   date: "3"   
   title: "Conditionals"   
   link: "Activities/Conditionals"
-  deliverables:  
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "Labs/Kepler"    
-    points: 100  
+  deliverables:   
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "./Modules/Boolean/Exercise"
     points: 3
@@ -282,6 +281,9 @@ schedule:
   date: "0"
   title: "Conditionals"   
   deliverables:
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "Labs/Kepler"    
+    points: 100   
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3     
@@ -314,10 +316,7 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
-    points: 100
-  - dtitle: "Lab: Debugging Due"    
-    dlink: "Labs/Debugging"     
-    points: 100   
+    points: 100  
 - week: "3"
   date: "3"
   title: "Functions"
@@ -327,7 +326,11 @@ schedule:
     points: 3   
 - week: "4"
   date: "0"
-  title: "Functions"    
+  title: "Functions" 
+  deliverables:
+  - dtitle: "Lab: Debugging Due"    
+    dlink: "Labs/Debugging"     
+    points: 100   
 - week: "4"
   date: "1"
   title: "Lab: Functions"    
@@ -343,9 +346,6 @@ schedule:
     rlink: "NetBeans/JUnit"  
   link: "Activities/Testing"
   deliverables:
-  - dtitle: "Lab: Averaging Functions Due"    
-    dlink: "Labs/AverageFunction"  
-    points: 100
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
     points: 100
@@ -359,6 +359,10 @@ schedule:
   date: "0"
   title: "Strings"
   link: "Activities/Strings"  
+  deliverables:
+  - dtitle: "Lab: Averaging Functions Due"    
+    dlink: "Labs/AverageFunction"  
+    points: 100  
 - week: "5"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -370,10 +374,7 @@ schedule:
   date: "2"
   title: "Iteration"
   link: "Activities/Iteration"
-  deliverables:
-  - dtitle: "Lab: Financial Aid Calculator Due"
-    dlink: "Labs/FinancialAidCalculator"  
-    points: 100    
+  deliverables:   
   - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Due"
     dlink: "Assignments/PurpleAmerica"  
     points: 25
@@ -388,7 +389,11 @@ schedule:
     rlink: false  
 - week: "6"
   date: "0"
-  title: "Iteration"    
+  title: "Iteration"   
+  deliverables:
+  - dtitle: "Lab: Financial Aid Calculator Due"
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100   
 - week: "6"
   date: "1"
   title: "Lab: Iteration" 
@@ -491,13 +496,13 @@ schedule:
   - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
     dlink: "Assignments/PurpleAmerica"   
     points: 25 
+  - dtitle: "Lab: Array Averages Due"
+    dlink: "Labs/ArrayAveraging"    
+    points: 100     
 - week: "10"
   date: "1"
   title: "Lab: ASCII Art"    
-  deliverables:
-  - dtitle: "Lab: Array Averages Due"
-    dlink: "Labs/ArrayAveraging"    
-    points: 100  
+  deliverables: 
   - dtitle: "Lab: ASCII Art Handed Out"
     dlink: "Labs/ASCIIArt" 
     points: 100
@@ -507,15 +512,15 @@ schedule:
 - week: "10"
   date: "3"
   title: "File I/O and Workshop"
-  link: "Activities/FileIO"    
-  deliverables:
-  - dtitle: "Lab: ASCII Art Due"
-    dlink: "Labs/ASCIIArt"      
-    points: 100    
+  link: "Activities/FileIO"      
 - week: "11"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"  
+  deliverables:
+  - dtitle: "Lab: ASCII Art Due"
+    dlink: "Labs/ASCIIArt"      
+    points: 100    
 - week: "11"
   date: "1"
   title: "Lab: HashMaps"
@@ -530,29 +535,25 @@ schedule:
   readings:
   - rtitle: "Ch. 8"
     rlink: false      
-  deliverables:
-  - dtitle: "Lab: HashMap Story Telling Due"
-    dlink: "Labs/TellAStory"
-    points: 100  
 - week: "11"
   date: "3"
-  title: "Lab: Drop the Lowest"   
-  deliverables:  
-  - dtitle: "Lab: Drop the Lowest Handed Out"
-    dlink: "Labs/DropLowest" 
-    points: 100  
+  title: "Classes and Object Data Types"  
 - week: "12"
   date: "0"
   title: "Classes and Object Data Types"
+  deliverables:
+  - dtitle: "Lab: HashMap Story Telling Due"
+    dlink: "Labs/TellAStory"
+    points: 100    
 - week: "12"
   date: "1"
-  title: "Lab: Final Project Brainstorm and Ethical Case Studies" 
-  readings:
-  - rtitle: "Ethical Case Studies"
-    rlink: "Labs/EthicalConsiderations"  
+  title: "Lab: Drop the Lowest and Ethical Case Studies" 
   deliverables:
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"    
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropLowest" 
+    points: 100      
+  - dtitle: "Ethical Case Studies Handed Out"
+    dlink: "Labs/EthicalConsiderations"      
     points: 100
   - dtitle: "Debugging Table: Second Check"
     points: 10 
@@ -599,13 +600,19 @@ schedule:
   - dtitle: "Programming Assignment: Iris Dataset Handed Out"
     dlink: "Assignments/Iris"      
     points: 100  
+  - dtitle: "Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100      
 - week: "13"
   date: "1"
-  title: "Final Project Workshop and Ethical Case Studies" 
+  title: "Lab: Final Project Workshop and Ethical Case Studies" 
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
-      points: 3      
+      points: 3  
+    - dtitle: "Final Project: Project and Presentation Handed Out"
+      dlink: "Projects/Final"    
+      points: 100      
 - week: "13"
   date: "2"
   title: "Algorithms: Recursion and Merge Sort"  
@@ -632,14 +639,14 @@ schedule:
   link: "./DrawingCanvas"
 - week: "14"
   date: "2"
-  title: "Final Project Presentations"     
+  title: "Final Project Workshop"     
+- week: "14"
+  date: "3"
+  title: "Final Project Workshop" 
   deliverables:
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"   
-    points: 100
-- week: "14"
-  date: "3"
-  title: "Final Project Presentations" 
+    points: 100  
 - week: "15"
   date: "1"
   title: "Final Project Presentations" 
@@ -647,7 +654,7 @@ schedule:
   date: "2"
   title: "Final Project Presentations"   
 university:
-  semester: "Fall"
+  semester: "Spring"
   academicyear: "2020-21"
   fall:
   - kname: "Add Deadline"
