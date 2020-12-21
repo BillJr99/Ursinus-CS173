@@ -686,8 +686,9 @@ schedule:
     dlink: "Projects/Final"   
     points: 100
 - week: "14"
-  date: "1"
-  title: "Final Project Presentations"  
+  date: "0"
+  title: "Final Project Presentations" 
+  reschedule: "Tuesday, December 15, 2020"   
 university:
   semester: "Fall"
   academicyear: "2020-21"
