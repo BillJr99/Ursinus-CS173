@@ -9,37 +9,6 @@
 what the following rules do, please see the checkstyle configuration
 page at http://checkstyle.sourceforge.net/config.html -->
 <module name="Checker">
-  <module name="FileTabCharacter">
-    <!-- Checks that there are no tab characters in the file.
-    -->
-  </module>
-  <module name="NewlineAtEndOfFile"/>
-  <module name="RegexpSingleline">
-    <!-- Checks that FIXME is not used in comments.  TODO is preferred.
-    -->
-    <property name="format" value="((//.*)|(\*.*))FIXME" />
-    <property name="message" value='TODO is preferred to FIXME.  e.g. "TODO(royw): Refactor when v2 is released."' />
-  </module>
-  <module name="RegexpSingleline">
-    <!-- Checks that TODOs are named.  (Actually, just that they are followed
-         by an open paren.)
-    -->
-    <property name="format" value="((//.*)|(\*.*))TODO[^(^s]" />
-    <property name="message" value='All TODOs should be named.  e.g. "TODO(royw): Refactor when v2 is released."' />
-  </module>
-  <!--
-  <module name="RegexpSingleline">
-    <property name="format" value="[ \t]+$"/>
-    <property name="message" value="Lines may not have a trailing whitespace."/>
-  </module>
-  -->
-  <!-- Grabbed from
-       https://github.com/Jasig/cas/blob/master/checkstyle-rules.xml -->
-  <module name="RegexpSingleline">
-    <property name="severity" value="warning"/>
-    <property name="format" value="junit.framework"/>
-    <property name="message" value="The package junit.framework belongs to JUnit v3. Use org.junit instead."/>
-  </module>
   <!-- All Java AST specific tests live under TreeWalker module. -->
   <module name="TreeWalker">
     <!--
@@ -49,17 +18,6 @@ page at http://checkstyle.sourceforge.net/config.html -->
     <module name="RedundantImport">
       <!-- Checks for redundant import statements. -->
       <property name="severity" value="warning"/>
-    </module>
-    <module name="ImportOrder">
-      <!-- Checks for out of order import statements. -->
-      <property name="severity" value="warning"/>
-      <!-- Turn off import ordering until we can get IntelliJ to do the right
-            thing by default.
-      -->
-      <property name="ordered" value="false"/>
-      <!-- This ensures that static imports go first. -->
-      <property name="option" value="top"/>
-      <property name="tokens" value="STATIC_IMPORT, IMPORT"/>
     </module>
     <module name="IllegalImport"/>
     <module name="UnusedImports">
@@ -256,34 +214,9 @@ page at http://checkstyle.sourceforge.net/config.html -->
     </module>
     <module name="SuppressWarningsHolder"/>
     
-      <!-- Other Checks -->
-      <!-- Must have class / interface header comments -->
-      <module name="JavadocType"/>
-        <module name="JavadocMethod">
-          <property name="allowUndeclaredRTE" value="true"/>
-          <property name="allowThrowsTagsForSubclasses" value="true"/>
-          <property name="validateThrows" value="false"/>
-        </module>
-
-        <!-- Require field javadoc -->
-        <module name="JavadocVariable"/>
-                    
-        <!-- No public fields -->
-        <module name="VisibilityModifier">
-           <property name="protectedAllowed" value="true"/>
-        </module>  
-      
+      <!-- Other Checks -->     
         <!-- Switch statements should be complete and with independent cases (fall through checks for break) -->
         <module name="MissingSwitchDefault" />
-        
-        <!-- Method parameters and local variables should not hide fields, except in constructors and setters -->
-        <module name="HiddenField">
-            <property name="ignoreConstructorParameter" value="true" />
-            <property name="ignoreSetter" value="true" />
-        </module>
-        
-        <!--  Don't use too widespread catch (Exception, Throwable, RuntimeException)  -->
-        <module name="IllegalCatch" />
         
         <!-- Don't use = or != for string comparisons -->
         <module name="StringLiteralEquality" />
@@ -298,7 +231,4 @@ page at http://checkstyle.sourceforge.net/config.html -->
         <module name="MagicNumber"/>
   </module>
   <module name="SuppressWarningsFilter" />
-  
-  <!-- Require package javadoc -->
-  <module name="JavadocPackage"/>
 </module>
