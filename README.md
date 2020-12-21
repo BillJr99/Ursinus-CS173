@@ -1,1 +1,1 @@
-Master repository for CS173 class
+CS173 class
