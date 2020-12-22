@@ -51,7 +51,8 @@ files:
                 
                 /* TODO: Declare a boolean variable called isApproximatelyEqual, whose value is 
                    true if the circumference is "approximately equal" to 20.420335, by checking 
-                   if it is greater than a nearby value and smaller than a nearby value. */
+                   if it is greater than a nearby value like 20.42 and smaller than a nearby 
+                   value like 20.43. */
 
                 /* I'll print the value for you - don't change this! */
                 System.out.println(isApproximatelyEqual);

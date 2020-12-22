@@ -48,6 +48,27 @@ info:
         - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+    - title: "Working with <code>String</code>s"
+      model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Main {
+            public static void main(String[] args) {
+                String x = "Test";
+                String y = new String("Test");
+                
+                if(x.equals(y)) {
+                    System.out.println("x and y contain the same text!");
+                }
+                
+                String z = "tan";
+                System.out.println(z.substring(1, 2) + z.substring(0, 1));
+            }
+        }
+        ]]></script> 
+      questions: 
+        - Why is it necessary to write <code>x.equals(y)</code> instead of <code>x == y</code> to check if two <code>String</code> objects contain the same text?       
+        - What does the print statement output for the string <code>z</code>?
+        - How might you print only the "est" characters from <code>x</code> using the <code>substring</code> method?
 
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	

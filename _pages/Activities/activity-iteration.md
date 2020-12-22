@@ -16,8 +16,6 @@ info:
       title: <code>for</code> Loops
      
   additional_practice:
-    - link: https://repl.it/community/classrooms/20700/assignments/146567
-      title: Counting Practice
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html
       title: Nested Loops      
 

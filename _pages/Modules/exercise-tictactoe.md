@@ -18,9 +18,9 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    var pos = feedbackString;
+    let ans = feedbackString.split("-");
   correctcheck: |
-    pos.trim() === "true"
+    ans[0] === "true" && ans[1] === "false"
  
 files:
   - filename: "TicTacToe.java"
@@ -54,18 +54,15 @@ files:
                 };
                 
                 char[][] board2 = new char[][] {
-                    { "X", "O", "X", "-" },
-                    { "O", "O", "X", "-" },
-                    { "-", "-", "X", "-" },
-                    { "-", "-", "X", "O" }
+                    { "X", "O", "X" },
+                    { "O", "O", "-" },
+                    { "-", "-", "X" }
                 };
                 
                 boolean isWinner1 = TicTacToe.checkWinningTicTacToe(board1);
                 boolean isWinner2 = TicTacToe.checkWinningTicTacToe(board2);
-                
-                boolean bothWinners = isWinner1 && isWinner2;
-                
-                System.out.println(bothWinners);
+                              
+                System.out.print(isWinner1 + "-" + isWinner2);
             }
         }         
 

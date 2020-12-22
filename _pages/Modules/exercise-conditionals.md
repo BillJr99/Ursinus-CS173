@@ -20,7 +20,11 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.split(/\r?\n/);
   correctcheck: |
-    pos[0] === "A-" && pos[1] === "A+" && pos[2] === "B-"
+    pos[0] === "A-" && pos[1] === "A+" && pos[2] === "B-" && pos.length == 3
+  incorrectchecks:
+    - incorrectcheck: |
+        pos.length > 3
+      feedback: "Try again: your function should only print one line per call, since only one if/else statement should be true for each grade provided"      
       
 files:
   - filename: "GradePrinter.java"
