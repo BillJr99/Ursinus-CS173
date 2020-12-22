@@ -23,10 +23,6 @@ info:
     d:
     - "At least one new entry is made into the Debugging Table"
     - "The entries do not contain both a description of the error and a brief explanation about how to fix the error"
-    f:
-    - "No entries are made into the Debugging Table, or the entries are incomplete"
-    - "No reasonable attempt is made to correct the errors encountered"
-    
     
 tags:
   - debuggingtable
