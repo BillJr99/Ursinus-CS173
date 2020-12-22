@@ -220,7 +220,7 @@ schedule:
     dlink: "Assignments/Warmup"  
     points: 15
   - dtitle: "Participation: Pre-Assessment"
-    dlink: "./Assignments/Participation/SelfAssessment"
+    dlink: "./Assignments/Participation/PreAssessment"
     points: 10      
 - week: "1"
   date: "2"
@@ -532,6 +532,7 @@ schedule:
     dlink: "Labs/ArrayAveraging"
     points: 100  
   - dtitle: "Debugging Table: First Check"
+    dlink: "Assignments/DebuggingTable"
     points: 10    
 - week: "9"
   date: "2"
@@ -637,6 +638,7 @@ schedule:
     dlink: "Labs/EthicalConsiderations"      
     points: 100
   - dtitle: "Debugging Table: Second Check"
+    dlink: "Assignments/DebuggingTable"
     points: 10 
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
