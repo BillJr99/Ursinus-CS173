@@ -482,6 +482,14 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     add_discussion_topic(course, inputdict)
     
     inputdict = {}
+    inputdict['title'] = "Class Activity Questions"
+    inputdict['message'] = "This space will be used to answer class activity questions."
+    inputdict['discussion_type'] = "threaded"
+    inputdict['pinned'] = True
+    inputdict['published'] = True
+    add_discussion_topic(course, inputdict)    
+    
+    inputdict = {}
     inputdict['title'] = "Water Cooler"
     inputdict['message'] = "This is an open space - feel free to socialize here, post items that are on-topic or off-topic.  I do ask that you adhere to the classroom etiquitte and standards."
     inputdict['discussion_type'] = "threaded"
