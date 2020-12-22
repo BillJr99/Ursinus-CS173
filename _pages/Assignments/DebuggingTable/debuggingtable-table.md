@@ -8,22 +8,22 @@ info:
   coursenum: CS173
   points: 10
   contract:
-  - a: 
+    a: 
     - "At least five new entries are made into the Debugging Table"
     - "Each entry contains a description of the error, and a brief explanation about how to fix the error"
     - "At least 80% of the explanations on how to correct the errors are correct"
-  - b:
+    b:
     - "At least three new entries are made into the Debugging Table"
     - "Each entry contains a description of the error, and a brief explanation about how to fix the error"
     - "At least 70% of the explanations on how to correct the errors are correct"
-  - c:
+    c:
     - "At least two new entries are made into the Debugging Table"
     - "Each entry contains a description of the error, and a brief explanation about how to fix the error"
     - "A reasonable effort is made to describe how to fix each of the errors encountered, even if the explanation is incorrect"
-  - d:
+    d:
     - "At least one new entry is made into the Debugging Table"
     - "The entries do not contain both a description of the error and a brief explanation about how to fix the error"
-  - f:
+    f:
     - "No entries are made into the Debugging Table, or the entries are incomplete"
     - "No reasonable attempt is made to correct the errors encountered"
     

@@ -17,7 +17,7 @@ At various times during the course, you will be asked to write a brief self-asse
 
 ## Self-Assessment
 
-During each self-assessment, you should evaluate and provide a grade on your performance in light of the areas you highlighted in the [Pre-assessment](./PreAssessment) stage.  Areas to consider in your self-evaluation might include some or all of the following items (and beyond) \[[^1]\]:
+During each self-assessment, you should evaluate and provide a grade on your performance in light of the areas you highlighted in the [Pre-Assessment](./PreAssessment) stage.  Areas to consider in your self-evaluation might include some or all of the following items (and beyond) \[[^1]\]:
 
 * Completing your work on-time
 * Showing up regularly
