@@ -203,7 +203,8 @@ schedule:
     points: 15
 - week: "0"
   date: "3"
-  title: "Course Overview Continued: The Development Environment"   
+  title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
+  link: "./DrawingCanvas"  
 - week: "1"
   date: "0"
   title: "A Brief History of Computer Science"  
@@ -723,18 +724,17 @@ schedule:
       points: 10  
     - dtitle: "Exercise: Merge Sort"
       dlink: "Modules/MergeSort/Module"  
-      points: 3       
+      points: 3   
 - week: "14"
   date: "0"
+  title: "Review"  
+- week: "14"
+  date: "1"
   title: "Final Project Workshop"
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
     points: 100              
-- week: "14"
-  date: "1"   
-  title: "CS Education Week: Post-It Pandemonium"
-  link: "./DrawingCanvas"
 - week: "14"
   date: "2"
   title: "Final Project Workshop"     
