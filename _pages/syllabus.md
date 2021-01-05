@@ -393,8 +393,8 @@ schedule:
   readings:
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
-  - dtitle: "Strings Video"
-    dlink: "Modules/Strings/Module"    
+  - rtitle: "Strings Video"
+    rlink: "Modules/Strings/Module"    
 - week: "5"
   date: "0"
   title: "Strings"
