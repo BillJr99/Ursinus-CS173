@@ -378,6 +378,8 @@ schedule:
   readings:
   - rtitle: "Testing with the NetBeans IDE"
     rlink: "NetBeans/JUnit"  
+  - rtitle: "Unit Testing Video"
+    rlink: "Modules/Testing/Module"
   link: "Activities/Testing"
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Due"
