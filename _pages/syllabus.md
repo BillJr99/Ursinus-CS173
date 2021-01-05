@@ -341,6 +341,8 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html"    
   - rtitle: "Reading User Input"
     rlink: "https://www.w3schools.com/java/java_user_input.asp"  
+  - rtitle: "Adding Libraries to NetBeans Projects"
+    rlink: "Modules/Library/Module"
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
