@@ -226,9 +226,6 @@ page at http://checkstyle.sourceforge.net/config.html -->
         
         <!-- No empty brace blocks -->
         <module name="EmptyBlock"/>    
-        
-        <!-- Magic Number checks -->
-        <module name="MagicNumber"/>
   </module>
   <module name="SuppressWarningsFilter" />
 </module>
