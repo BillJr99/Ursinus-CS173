@@ -393,6 +393,8 @@ schedule:
   readings:
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
+  - dtitle: "Strings Video"
+    dlink: "Modules/Strings/Module"    
 - week: "5"
   date: "0"
   title: "Strings"
@@ -474,8 +476,6 @@ schedule:
   readings:
   - rtitle: "Style Guide"
     rlink: "Style-Guide"
-  - rtitle: "AP Computer Science A YouTube Video Playlist"
-    rlink: "https://www.youtube.com/playlist?list=PLoGgviqq4845xKOY11PnkE7aqJC7-bYrd&app=desktop"
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"    
@@ -504,6 +504,8 @@ schedule:
     rlink: false 
   - rtitle: "Creating and Accessing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
+  - rtitle: "Array Videos"
+    rlink: "Modules/Arrays/Module"
 - week: "8"
   date: "2"
   title: "String Iteration Workshop" 
