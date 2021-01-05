@@ -489,12 +489,15 @@ schedule:
     points: 100    
 - week: "7"
   date: "3"
-  title: "String Manipulation" 
+  title: "String Manipulation Workshop" 
   readings:
     - rtitle: "String Manipulation Exercises"
       rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
 - week: "8"
   date: "0"
+  title: "String Manipulation Workshop"       
+- week: "8"
+  date: "2"
   title: "Arrays" 
   link: "Activities/Arrays"
   deliverables:
@@ -508,9 +511,6 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
   - rtitle: "Array Videos"
     rlink: "Modules/Arrays/Module"
-- week: "8"
-  date: "2"
-  title: "String Iteration Workshop" 
 - week: "8"
   date: "3"
   title: "Arrays"   
