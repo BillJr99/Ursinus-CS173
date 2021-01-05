@@ -703,9 +703,6 @@ schedule:
 - week: "13"
   date: "1"
   title: "Lab: Final Project Workshop and Ethical Case Studies" 
-  readings:
-  - rtitle: "Getting Started with Git and Github"
-    rlink: "Modules/Github/Module"   
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
