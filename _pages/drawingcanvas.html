@@ -79,6 +79,14 @@ fayelink: "https://FayePubSub.billjr99.repl.co"
 
 instructionslink: "./files/drawingcanvas-ucbear2/Merged.pdf"
 
+links:
+  - title: Visualizing Video at the Speed of Light
+    link: https://www.youtube.com/watch?v=EtsXgODHMWk
+  - title: A Camera that Can See Around Corners
+    link: https://www.youtube.com/watch?v=Ir7wCAQINqw
+  - title: How a TV Works in Slow Motion (warning: flashing lights)
+    link: https://www.youtube.com/watch?v=3BJU2drrtCM
+    
 ---
 
 <style>
@@ -144,7 +152,15 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 {% if page.instructionslink %}
 <br><br>
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
+<br><br>
 {% endif %}
+
+{% for i in (0..page.links.size) %}
+{% if i < page.links.size %}
+<a href="{{page.links[i].link}}">{{page.links[i].title}}</a><br>
+{% endif %}
+{% endfor %}
+<br><br>
 
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
