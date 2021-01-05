@@ -584,7 +584,7 @@ schedule:
     points: 3     
 - week: "10"
   date: "3"
-  title: "File I/O and Workshop"
+  title: "File I/O"
   link: "Activities/FileIO"      
 - week: "11"
   date: "0"
