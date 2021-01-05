@@ -606,7 +606,7 @@ boilerplate:
 
     <td align="left">
     {% if item.reschedule %}
-    <strong>{{item.reschedule}}</strong>
+    <strong><span style="color: red;">{{item.reschedule}} (Rescheduled)</span></strong>
     {% else %}
     <strong><script language="JavaScript">document.write(getCourseDate("{{page.info.course_start_date}}", "{{item.week}}", "{{item.date}}", {{page.info.class_meets_days.isM}}, {{page.info.class_meets_days.isT}}, {{page.info.class_meets_days.isW}}, {{page.info.class_meets_days.isR}}, {{page.info.class_meets_days.isF}}, {{page.info.class_meets_days.isS}}, {{page.info.class_meets_days.isU}}));</script></strong>
     {% endif %}
