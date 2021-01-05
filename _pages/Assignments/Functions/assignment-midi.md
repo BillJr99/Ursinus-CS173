@@ -160,7 +160,7 @@ player.playNote(101, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY); // F7 note
 
 You will find a complete list of [notes](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies) (the numeric value is the first column, and the note is the fourth column), and [instruments](http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java) (see the `instrumentNames` variable halfway through the code listing), in case you would like to customize.  Note, however, that this is completely optional: it is perfectly OK to use only the notes and instruments I've provided in the library.  I provide these references only for your entertainment in case you would like to get creative here!
 
-## Part 5: Just for Fun...
+## Part 5 (Optional): Just for Fun...
 
 When we explore arrays and loops, we will see how we can represent a song like this using a single variable (an "array") that represents the entire collection of notes, and this can be played using a single call to the function to play all the notes.  "Loops" can iterate over these collections, one by one, and automatically play each note, so that you don't have to copy your code like you did here.
 
