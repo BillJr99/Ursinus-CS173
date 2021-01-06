@@ -249,12 +249,12 @@ schedule:
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"
   readings:
+  - rtitle: "Ch. 2.3, 2.5"
+    rlink: false     
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
   - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
-  - rtitle: "Ch. 2.3, 2.5"
-    rlink: false   
   - rtitle: "Casting and Ranges"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"
 - week: "2"
