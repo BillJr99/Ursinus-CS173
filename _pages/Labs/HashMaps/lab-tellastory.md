@@ -54,7 +54,24 @@ You should have at least 5 possible rooms, and at least 3 of those rooms should 
 
 **Does your end room need a moves transition to other rooms?  Why or why not?  (You could map it to an empty array if you wanted).**
 
-The user will enter the next location, and you will loop until reaching the `end` key.  Finally, include a hash entry for `start` and `end` from which your story will begin and end.  Use an appropriate loop structure to terminate the story when the `end` key is reached.
+The user will enter the next location, and you will loop until reaching the `end` key.  Before setting `currentRoom` to the user's next room choice (that they just entered via the `Scanner`), look up the 
+`moves` `HashMap` corresponding to `currentRoom`.  This will give you an array of `String`s, with each 
+`String` containing a room that you can move to from the current one.  Loop over each item of this array
+and determine if the user's room entry is in the set of valid moves.  If the user's choice is not in the set of moves corresponding to the current room, continue to prompt them in a loop until they enter a valid choice.  You might wish to write a function
+to assist you with this:
+
+```public static boolean contains(String[] roomMoves, String val) {
+    boolean result = false; // assume the value is not in the array, and try to find it
+    
+    // TODO: Loop over each String in roomMoves
+    
+        // TODO: if the array element is equal to val, set result to true
+        
+    return result;
+}
+```
+
+Finally, include a hash entry for `start` and `end` from which your story will begin and end.  Use an appropriate loop structure to terminate the story when the `end` key is reached.
 
 The following template will help you get started:
 
@@ -75,13 +92,18 @@ The following template will help you get started:
         // TODO: What movements are possible between locations?  
         // Add an array here for each room!
         // There should be one key for every key in places above.
-        // TODO: fix this to be a different set of rooms that you can move to, as you like.
+        // Here is an example for the "start" room - it goes to a room
+        // ... called "middle" or to a room called "start." 
+        // ... You can decide and add more rooms or change them here.
+        // Note that the name of the room must match the name of the room
+        // ... you used in the places HashMap above!
         String[] startMoves = {"start", "middle"}; 
         moves.put("start", startMoves);
         
-        // TODO: fix this to be a different set of rooms that you can move to, as you like.
-        // my example "middle" room can move to the starting room or to the end room; 
-        // ... again, this is just an example!
+        // Here, my example "middle" room can move to the starting 
+        // ... room or to the end room; again, this is just an example!
+        // ... You should have one of these blocks for each of your 
+        // ... places rooms that you defined above.
         String[] middleMoves = {"start", "end"}; 
         moves.put("middle", middleMoves);
 
@@ -90,12 +112,20 @@ The following template will help you get started:
         
         // TODO: write a loop that continues until currentRoom is "end"
         // What kind of loop do you need here?
-        // TODO: print out each room's story narration, and a list of possible moves 
-        // ... from that room
-        // TODO: then, prompt the user and read a string (scanner.nextLine()) that 
-        // ... will be the next room, and repeat for that room!
-        // The room the user picks should be in the places.get(currentRoom) array,
-        // ... so that only valid moves are made!
+            // TODO: inside that loop, print out each room's 
+            // ... story narration, and a list of possible moves 
+            // ... from that room
+        
+            // TODO: then, still inside the loop,
+            // ... prompt the user and read a string (scanner.nextLine()) that 
+            // ... will be the next room, and repeat for that room!
+            
+            // TODO: The room the user picks should be in the places.get(currentRoom) array,
+            // ... so that only valid moves are made!  Once you get the array from the moves 
+            // ... HashMap given current room user just entered, loop over that 
+            // ... array of moves and determine if the "next room" that the user just entered
+            // ... is in that array.  If it is not, loop and ask the user to enter a room again
+            // ... until they enter a room that is in the currentRoom moves array.
         
         // TODO: Don't forget to print the ending story message at the end!
         // ... after your currentRoom loop terminates

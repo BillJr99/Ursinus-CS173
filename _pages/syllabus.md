@@ -204,7 +204,11 @@ schedule:
 - week: "0"
   date: "3"
   title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
-  link: "./DrawingCanvas"  
+  link: "./DrawingCanvas"
+  deliverables:
+  - dtitle: "Participation: Pre-Assessment Handed Out"
+    dlink: "./Assignments/Participation/PreAssessment"
+    points: 10   
 - week: "1"
   date: "0"
   title: "A Brief History of Computer Science"  
@@ -220,9 +224,6 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
-  - dtitle: "Participation: Pre-Assessment"
-    dlink: "./Assignments/Participation/PreAssessment"
-    points: 10      
 - week: "1"
   date: "2"
   title: "Programming Statements, Expressions, and Operators"
@@ -243,7 +244,11 @@ schedule:
   title: "Expressions and Variables"
   readings:
   - rtitle: "Compound Assignment Operators"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html"  
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
+  deliverables:
+  - dtitle: "Participation: Pre-Assessment Due"
+    dlink: "./Assignments/Participation/PreAssessment"
+    points: 10        
 - week: "2"
   date: "0"
   title: "Ranges and Quantization of Data Types" 
@@ -312,9 +317,7 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
     points: 100   
-  - dtitle: "Exercise: Conditionals"
-    dlink: "Modules/Conditionals/Exercise"  
-    points: 3     
+  
 - week: "3"
   date: "1"
   title: "Lab: Debugging"  
@@ -326,9 +329,9 @@ schedule:
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
-    points: 100    
-  - dtitle: "Exercise: Epoch Time Overflow"
-    dlink: "Modules/EpochTime/Exercise"
+    points: 100 
+  - dtitle: "Exercise: Conditionals"
+    dlink: "Modules/Conditionals/Exercise"  
     points: 3       
 - week: "3"
   date: "2"
@@ -347,6 +350,9 @@ schedule:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
     points: 100  
+  - dtitle: "Exercise: Epoch Time Overflow"
+    dlink: "Modules/EpochTime/Exercise"
+    points: 3           
 - week: "3"
   date: "3"
   title: "Functions"
@@ -445,6 +451,9 @@ schedule:
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
+  - dtitle: "Participation: First Self-Assessment Handed Out"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10      
 - week: "6"
   date: "1"
   title: "Lab: Iteration" 
@@ -467,13 +476,10 @@ schedule:
 - week: "7"
   date: "0"
   title: "Iteration and the do loop"  
-  deliverables:
-    - dtitle: "Participation: First Self-Assessment"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10  
+  deliverables: 
     - dtitle: "Exercise: Iteration"
       dlink: "./Modules/Iteration/Exercise"    
-      points: 3  
+      points: 3        
 - week: "7"
   date: "2"
   title: "Coding Style and the Code Review"
@@ -481,8 +487,6 @@ schedule:
   - rtitle: "Style Guide"
     rlink: "Style-Guide"
   deliverables:
-  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
-    dlink: "Labs/MonteCarloPi"    
   - dtitle: "Programming Assignment: Purple America Part 4 Due"
     dlink: "Assignments/PurpleAmerica"  
     points: 25
@@ -495,9 +499,16 @@ schedule:
   readings:
     - rtitle: "String Manipulation Exercises"
       rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
+  deliverables:
+    - dtitle: "Participation: First Self-Assessment Due"
+      dlink: "./Assignments/Participation/SelfAssessment"
+      points: 10    
 - week: "8"
   date: "0"
-  title: "String Manipulation Workshop"       
+  title: "String Manipulation Workshop" 
+  deliverables:
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"   
 - week: "8"
   date: "2"
   title: "Arrays" 
@@ -506,6 +517,9 @@ schedule:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
     points: 3  
+  - dtitle: "Debugging Table: First Check Handed Out"
+    dlink: "Assignments/DebuggingTable"
+    points: 10        
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
@@ -538,7 +552,7 @@ schedule:
   - dtitle: "Lab: Array Averages Handed Out"
     dlink: "Labs/ArrayAveraging"
     points: 100  
-  - dtitle: "Debugging Table: First Check"
+  - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
 - week: "9"
@@ -643,13 +657,7 @@ schedule:
     points: 100      
   - dtitle: "Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
-    points: 100
-  - dtitle: "Debugging Table: Second Check"
-    dlink: "Assignments/DebuggingTable"
-    points: 10 
-  - dtitle: "Exercise: Recursion"
-    dlink: "Modules/Recursion/Module"
-    points: 3   
+    points: 100  
 - week: "12"
   date: "2"
   title: "Searching and Sorting" 
@@ -694,13 +702,7 @@ schedule:
   deliverables:  
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
-    points: 100
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100  
+    points: 100 
   - dtitle: "Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100      
@@ -716,21 +718,35 @@ schedule:
       points: 100      
 - week: "13"
   date: "2"
-  title: "Algorithms: Recursion and Merge Sort"  
+  title: "Algorithms: Recursion and Merge Sort"
+  deliverables:
+  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
+    dlink: "Assignments/PurpleAmerica"   
+    points: 25
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100   
 - week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"  
   deliverables:
-    - dtitle: "Participation: Second Self-Assessment"
+    - dtitle: "Participation: Second Self-Assessment Handed Out"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10  
-    - dtitle: "Exercise: Merge Sort"
-      dlink: "Modules/MergeSort/Module"  
-      points: 3   
+      points: 10 
+    - dtitle: "Exercise: Recursion"
+      dlink: "Modules/Recursion/Module"
+      points: 3       
 - week: "14"
   date: "0"
   title: "Review"  
+  deliverables:
+    - dtitle: "Exercise: Merge Sort"
+      dlink: "Modules/MergeSort/Module"  
+      points: 3  
+    - dtitle: "Debugging Table: Second Check Handed Out"
+      dlink: "Assignments/DebuggingTable"
+      points: 10       
 - week: "14"
   date: "1"
   title: "Final Project Workshop"
@@ -740,7 +756,11 @@ schedule:
     points: 100              
 - week: "14"
   date: "2"
-  title: "Final Project Workshop"     
+  title: "Final Project Workshop"  
+  deliverables:
+    - dtitle: "Participation: Second Self-Assessment Handed Out"
+      dlink: "./Assignments/Participation/SelfAssessment"
+      points: 10    
 - week: "14"
   date: "3"
   title: "Final Project Workshop" 
@@ -751,9 +771,17 @@ schedule:
 - week: "15"
   date: "1"
   title: "Final Project Presentations" 
+  deliverables:
+    - dtitle: "Debugging Table: Second Check Due"
+      dlink: "Assignments/DebuggingTable"
+      points: 10    
 - week: "15"
   date: "2"
-  title: "Final Project Presentations"   
+  title: "Final Project Presentations"  
+  deliverables:
+    - dtitle: "Participation: Second Self-Assessment Due"
+      dlink: "./Assignments/Participation/SelfAssessment"
+      points: 10      
 university:
   semester: "Spring"
   academicyear: "2020-21"
