@@ -147,7 +147,7 @@ mdcontents = f.read()
 post = frontmatter.loads(mdcontents)
 postdict = post.to_dict()
 
-outfname = '_pages/' + postdict['info']['course_number'] + '.ics'
+outfname = 'files/' + postdict['info']['course_number'] + '.ics'
 outf = open(outfname, 'w')
 
 coursenum = postdict['info']['course_number']
