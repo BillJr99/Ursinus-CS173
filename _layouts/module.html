@@ -50,7 +50,9 @@ layout: default
         
         {% if page.info.video %}
         <p>
-        Please watch the video below{% if page.info.next %}, and when you're finished, click the "NEXT" button to proceed{% endif %}.
+        Please watch the video below{% if page.info.next %}, and when you're finished, click the "NEXT" button to proceed{% endif %}.  
+        <br>
+        Note that some videos may show "Resource Unavailable" as the thumbnail - this is just the preview, and the video should play normally upon clicking the "Play" button.
         </p>
         <iframe width="{% if page.info.videowidth %}{{page.info.videowidth}}{% else %}560{% endif %}" height="{% if page.info.videoheight %}{{page.info.videoheight}}{% else %}315{% endif %}" src="{{ page.info.video }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         {% endif %}
