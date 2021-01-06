@@ -23,6 +23,8 @@ jobs:
         run: pip install --upgrade uuid
       - name: Install frontmatter
         run: pip install --upgrade python-frontmatter        
+      - name: Install dateutil
+        run: pip install --upgrade python-dateutil         
       - name: Build updated research output file
         run: python syllabus2ical.py
       - name: Commit new ical file
