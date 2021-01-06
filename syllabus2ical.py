@@ -3,6 +3,7 @@ import sys
 from datetime import datetime,timedelta
 import uuid
 from dateutil import tz
+import os
 
 # https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
 def rchop(s, suffix):
@@ -147,8 +148,14 @@ mdcontents = f.read()
 post = frontmatter.loads(mdcontents)
 postdict = post.to_dict()
 
+if not os.path.exists("files"):
+    try:
+        os.makedirs("files")
+    except:
+        pass
+        
 outfname = 'files/' + postdict['info']['course_number'] + '.ics'
-outf = open(outfname, 'w')
+outf = open(outfname, 'w+')
 
 coursenum = postdict['info']['course_number']
 coursename = postdict['info']['course_title']
