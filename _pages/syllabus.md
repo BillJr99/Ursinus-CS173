@@ -102,7 +102,7 @@ instructors:
   - day: "W"
     starttime: "1:30 PM"
     endtime: "3:30 PM"
-    location: "One-on-One Virtual Office Hours on Microsoft Teams"
+    location: "Virtual Office Hours on Microsoft Teams"
   - day: "W"
     starttime: "5:00 PM"
     endtime: "6:00 PM"

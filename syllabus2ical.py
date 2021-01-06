@@ -144,11 +144,11 @@ else:
 f = open(fname, 'r')
 mdcontents = f.read()
 
-outfname = '_pages/' + postdict['info']['course_number'] + '.ics'
-outf = open(outfname, 'w')
-
 post = frontmatter.loads(mdcontents)
 postdict = post.to_dict()
+
+outfname = '_pages/' + postdict['info']['course_number'] + '.ics'
+outf = open(outfname, 'w')
 
 coursenum = postdict['info']['course_number']
 coursename = postdict['info']['course_title']
