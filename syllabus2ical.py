@@ -137,14 +137,14 @@ def geticalday(d):
         return ""
     
 if len(sys.argv) <= 1:
-    print("Specify md file")
-    sys.exit(0)
-
-fname = sys.argv[1]
+    fname = "_pages/syllabus.md"
+else:
+    fname = sys.argv[1]
+    
 f = open(fname, 'r')
 mdcontents = f.read()
 
-outfname = 'out.ics'
+outfname = '_pages/' + postdict['info']['course_number'] + '.ics'
 outf = open(outfname, 'w')
 
 post = frontmatter.loads(mdcontents)
