@@ -380,7 +380,7 @@ schedule:
   readings:
   - rtitle: "Testing with the NetBeans IDE"
     rlink: "NetBeans/JUnit"  
-  - rtitle: "Unit Testing Video"
+  - rtitle: "Unit Testing Review"
     rlink: "Modules/Testing/Module"
   link: "Activities/Testing"
   deliverables:
@@ -397,7 +397,7 @@ schedule:
   readings:
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
-  - rtitle: "Strings Video"
+  - rtitle: "Strings Review"
     rlink: "Modules/Strings/Module"    
 - week: "5"
   date: "0"
@@ -511,7 +511,7 @@ schedule:
     rlink: false 
   - rtitle: "Creating and Accessing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
-  - rtitle: "Array Videos"
+  - rtitle: "Array Review"
     rlink: "Modules/Arrays/Module"
 - week: "8"
   date: "3"
