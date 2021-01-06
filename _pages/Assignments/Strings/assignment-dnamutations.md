@@ -125,3 +125,7 @@ Write unit tests for each part of this assignment.  You will need more than one 
 Given an NA chain string and an NA subchain, remove all instances of the subchain from the chain.  For example, `remove("ACCGCC", "CC")` would return "AG".
 
 Note that Java Strings now have a method `replaceAll` that will do this for you.  I definitely encourage you to use this.  However, you may notice that these helper methods don't always exist across many of the string operations we're exploring here.  So, there is significant value in practicing with string indexing.  For full credit on this problem, implement your own replacement algorithm to accomplish this without calling a `replace` or `replaceAll` string method.  However, it would be a good idea to write a unit test that compares your results to a call to `replaceAll`, and you should feel both free and encouraged to do so!
+
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  

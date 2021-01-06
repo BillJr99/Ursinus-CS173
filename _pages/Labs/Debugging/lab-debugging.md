@@ -58,6 +58,10 @@ If you would like to re-run the debugger from the beginning, you can stop the cu
 
 You can submit this project as usual, by adding your README and exporting the project to a ZIP file for submission.
 
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+
 ## Trivia
 
 Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only fixed 9 years later](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?

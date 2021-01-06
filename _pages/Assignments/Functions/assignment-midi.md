@@ -200,3 +200,7 @@ MIDIPlayer.rest(Notes.NOTE_WHOLE);
 ```
 
 Take a look at the `playChord` function call.  **What is different about it from the calls to `playNote`?**  We know that it is playing multiple notes together (in this case, A4 and A3).  **How do we know this?**
+
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  

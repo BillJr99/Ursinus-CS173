@@ -108,6 +108,7 @@ Similarly, when converting the resulting orbital period from seconds to years, I
 * Convert `T` from seconds to days by dividing by the number of seconds in a day.  If you'd like, you can do this by dividing by the number of seconds in a minute, then dividing that by the number of minutes in an hour, and then dividing that by the number of hours in a day.
 * Print `T`, the orbital period in days.  You can check your work using the table above, which provides the approximate period in days for each planet.
 * Repeat this process for the remaining planets, such that your program prints out all of the orbital periods when you run it.  For now, you can copy and paste your code and modify the variable values to do this, but we'll learn an easier way soon!
-* Don't forget to comment your code to describe what you are doing using `//`, and write up a README describing what you have done to accompany your submission.  You can save your README file in your project directory.
+* Don't forget to comment your code to describe what you are doing using `//`, and write up a README describing what you have done to accompany your submission.  You can save your README file in your project directory.  
+* When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)

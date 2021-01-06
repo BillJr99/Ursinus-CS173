@@ -107,3 +107,7 @@ Write a function called `computeAverage` that returns a `double` and accepts the
 Finally, replace your call to `computeEqualAverage` with a call to `computeAverage`, passing the appropriate weights there as well (what should the weights be when computing an equal-weight average?).
 
 If you are only using assignments and labs for your averages, you will only have four values to pass to `comptueAverage` rather than 6.  You can pass zeroes for the extra two parameters, which will give the last zero a weight of 0, having no effect.
+
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.

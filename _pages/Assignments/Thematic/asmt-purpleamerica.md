@@ -403,3 +403,7 @@ You may have noticed that the map of the United States appears somewhat distorte
 
 ### Extra Credit 4: Improving Accessibility
 One of the challenges associated with producing visualizations is that they may not be universally productive and accessible.  For example, those with visual impairments will not benefit from this visualization.  Choose a color contrast palette with better contrast (cite any sources used when identifying such color palettes), and add a textual represnetation in the middle of each state (or pointing to the state) that indicates the percentage and winner in that state.
+
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  

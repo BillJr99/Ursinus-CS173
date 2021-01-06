@@ -48,3 +48,7 @@ Put all of the above code into a function, and you will call that function from 
 Within `main()`, call this function several times, each with a different sized array.  You will plot the number of steps that were needed against the size of the array.  You can use a loop with a random number generator to generate scores.  I suggest creating a function that generates and returns an `ArrayList<Double>`, in which you pass the desired size of the array as a function parameter.  The function then uses a random number generator to fill the array and return it.  Then, you can call this from `main()` within a loop, so that you try it multiple times without having to copy and paste your code!
 
 To plot your results, you can copy or type the iteration counts you receive into Microsoft Excel and generate a line graph.  Your first column will be the size of the array that you used, and your second column will be the number of iterations that were required to find the smallest element in that array.  Thus, your x-axis will be the size of the array, and your y-axis will be the number of iterations.  What do you notice about the shape and direction of this graph?
+
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.

@@ -232,6 +232,10 @@ Here are a few questions to consider about the data:
 
 Finally, remove the columns you selected based on the Linear Fisher Discriminant, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  **Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?**
 
+## Submission
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+
 ## Ethical Use of Learning Algorithms
 
 ### Avoiding Discrimination
