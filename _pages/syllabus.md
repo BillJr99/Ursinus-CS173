@@ -855,7 +855,7 @@ Roughly once every week, students will be expected to engage with pre-lab materi
 Every week, we will have a lab session where students get a chance to practice concepts we just learned in a safe and [collaborative](#collaboration) environment. Tasks will be given that serve as warm-ups for the larger assignments, and final submissions will be graded on a scale from 0 to 2. Students will have a chance to refine their submissions until the Friday of every week, and there will be help from the Lab T.A.s listed above.
 
 ### Assignments
-The bulk of the grade in the course will be earned by completing roughly 8 individual programming assignments. Be sure to start them early! Note that [collaboration and sharing rules](#collaboration) differ slightly for labs and assignments.
+The bulk of the grade in the course will be earned by completing labs and individual programming assignments. Be sure to start them early! Note that [collaboration and sharing rules](#collaboration) differ slightly for labs and assignments.
 
 <a name="debugging"></a>
 ### Debugging Table \[[^1]\]
