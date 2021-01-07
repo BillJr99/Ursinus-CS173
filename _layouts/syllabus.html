@@ -647,18 +647,19 @@ boilerplate:
     <ul>
     {% endif %}
     {% for deliverable in item.deliverables %}
-    {% if deliverable.dtitle contains 'Handed Out' %}
-    {% assign makebold = "" %}
-    {% else %}
-    {% assign makebold = "font-weight:bold" %}
-    {% endif %}
     <li>
     {% if deliverable.dlink %}
-    <a {{makebold}} href="{{deliverable.dlink}}">
+    {% if deliverable.dtitle contains 'Handed Out' %}
+    <small>
+    {% endif %}
+    <a href="{{deliverable.dlink}}">
     {% endif %}
     {{deliverable.dtitle}}
     {% if deliverable.dlink %}
     </a>
+    {% if deliverable.dtitle contains 'Handed Out' %}
+    </small>
+    {% endif %}    
     {% endif %}
     </li>
     {% endfor %}
