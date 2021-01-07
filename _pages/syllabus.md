@@ -116,7 +116,7 @@ textbooks:
   authors: "Cay Horstmann"
   edition: "2nd Edition"
   isbn: "978-1-118-06331-6"
-  link: https://ursinus.bncollege.com/shop/ursinus/textbook/java-for-everyonelate-objects-600000752036?sectionId=100504759&displayStoreId=42559&sectionList=&booksAddedforSec=&fromTBList=true
+  link: https://ursinus.bncollege.com/shop/ursinus/textbook/java-for-everyonelate-objects-600000752036?sectionId=100504758&displayStoreId=42559&sectionList=&booksAddedforSec=&fromTBList=true
   image: https://bookinfo.mbsdirect.net/TextbookInfo/Covers/1118063317.gif
   isrequired: true 
   freelyavailable: false
@@ -536,6 +536,10 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
   - rtitle: "2D Arrays Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
+  deliverables:
+  - dtitle: "Exercise: Four-in-a-Row"
+    dlink: "Modules/FourInARow/Exercise"  
+    points: 3
 - week: "9"
   date: "1"
   title: "Lab: Arrays"
