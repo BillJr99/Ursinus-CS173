@@ -393,9 +393,6 @@ schedule:
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
     points: 100
-  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Handed Out"
-    dlink: "Assignments/PurpleAmerica"
-    points: 25   
 - week: "4"
   date: "3"
   title: "Strings"
@@ -426,13 +423,6 @@ schedule:
   date: "2"
   title: "Iteration"
   link: "Activities/Iteration"
-  deliverables:   
-  - dtitle: "Programming Assignment: Purple America Parts 1 through 3 Due"
-    dlink: "Assignments/PurpleAmerica"  
-    points: 25
-  - dtitle: "Programming Assignment: Purple America Part 4 Handed Out"
-    dlink: "Assignments/PurpleAmerica"        
-    points: 25
 - week: "5"
   date: "3"
   title: "Iteration and the for loop"
@@ -487,9 +477,6 @@ schedule:
   - rtitle: "Style Guide"
     rlink: "Style-Guide"
   deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 4 Due"
-    dlink: "Assignments/PurpleAmerica"  
-    points: 25
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
@@ -533,6 +520,9 @@ schedule:
   readings:
   - rtitle: "Traversing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"
+  - dtitle: "Ethical Case Studies Handed Out"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100      
 - week: "9"
   date: "0"
   title: "2D Arrays"
@@ -561,7 +551,10 @@ schedule:
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
-    points: 100   
+    points: 100 
+  - dtitle: "Programming Assignment: ASCII Art Handed Out"
+    dlink: "Assignments/ASCIIArt" 
+    points: 100    
 - week: "9"
   date: "3"  
   title: "ArrayLists and Generic/Template Data Structures"
@@ -574,6 +567,10 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
   - rtitle: "ArrayList Iteration"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"
+  deliverables: 
+  - dtitle: "Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100     
 - week: "10"
   date: "0"
   title: "HashMaps and Caches"  
@@ -582,22 +579,12 @@ schedule:
   - rtitle: "Ch. 6.8"
     rlink: false  
   deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25 
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
     points: 100     
 - week: "10"
   date: "1"
-  title: "Lab: ASCII Art"    
-  deliverables: 
-  - dtitle: "Lab: ASCII Art Handed Out"
-    dlink: "Labs/ASCIIArt" 
-    points: 100
-  - dtitle: "Exercise: Tic-Tac-Toe"
-    dlink: "Modules/TicTacToe/Exercise"  
-    points: 3     
+  title: "Lab: Ethical Case Studies"    
 - week: "10"
   date: "3"
   title: "File I/O"
@@ -605,11 +592,10 @@ schedule:
 - week: "11"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
-  link: "Activities/NumberSystems"  
-  deliverables:
-  - dtitle: "Lab: ASCII Art Due"
-    dlink: "Labs/ASCIIArt"      
-    points: 100    
+  link: "Activities/NumberSystems"    
+  - dtitle: "Programming Assignment: ASCII Art Due"
+    dlink: "Assignments/ASCIIArt" 
+    points: 100  
 - week: "11"
   date: "1"
   title: "Lab: HashMaps"
@@ -650,14 +636,11 @@ schedule:
     points: 100    
 - week: "12"
   date: "1"
-  title: "Lab: Drop the Lowest and Ethical Case Studies" 
+  title: "Lab: Drop the Lowest" 
   deliverables:
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100      
-  - dtitle: "Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100  
 - week: "12"
   date: "2"
   title: "Searching and Sorting" 
@@ -669,13 +652,6 @@ schedule:
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
-  deliverables:
-  - dtitle: "Programming Assignment: Purple America Part 5 Due"
-    dlink: "Assignments/PurpleAmerica"    
-    points: 25    
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Handed Out"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25     
 - week: "12"
   date: "3"
   title: "Searching and Sorting"
@@ -703,9 +679,6 @@ schedule:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100 
-  - dtitle: "Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100      
 - week: "13"
   date: "1"
   title: "Lab: Final Project Workshop and Ethical Case Studies" 
@@ -720,9 +693,6 @@ schedule:
   date: "2"
   title: "Algorithms: Recursion and Merge Sort"
   deliverables:
-  - dtitle: "Programming Assignment: Purple America Parts 6 through 7 Due"
-    dlink: "Assignments/PurpleAmerica"   
-    points: 25
   - dtitle: "Programming Assignment: Iris Dataset Handed Out"
     dlink: "Assignments/Iris"      
     points: 100   
