@@ -35,26 +35,34 @@ files:
     code: | 
         public class FourInARow {
             public static int checkWinning(int[][] board) {
-                // winner is 0 if there is no winner, 1 if team 1 wins, and 2 if team 2 wins.
+                // winner is 0 if there is no winner, 1 if team 1 wins, 
+                // ... and 2 if team 2 wins.
                 int winner = 0;
 
-                // the counts are the number of consecutive entries for team 1 or team 2 in a particular column
+                // the counts are the number of consecutive entries for team 1,
+                // ... or team 2 in a particular column
                 int count1 = 0;
                 int count2 = 0;
 
-                // this outer loop counts over all the rows, and we would normally iterate across each row with the inner loop
-                // ... but we want to loop down every column, so I'm switching the i and j indices so that we loop down
-                // ... each column instead!
+                // this outer loop counts over all the rows, and we would normally 
+                // ... iterate across each row with the inner loop
+                // ... but we want to loop down every column, so I'm switching the 
+                // ... i and j indices so that we loop down each column instead!
                 for(int j = 0; j < board.length; j++) {
-                  // TODO: initialize count1 and count2 to 0 so that we have a fresh count within each column
+                  // TODO: initialize count1 and count2 to 0 so that we have a 
+                  // ... fresh count within each column
 
                   // now, loop down each of the columns to look for a winner
                   for(int i = 0; i < board[j].length; i++) {
-                    // TODO: if board[i][j] is 1, tally one for team1's count.  similarly, if board[i][j] is 2, tally 1 for team2
-                    // ... BUT, also reset the other team's count to 0 (since they can't be winning if they don't have 4 in a row!).
-                    // ... what should you do in the "else" clause here, if board[i][j] is 0?
+                    // TODO: if board[i][j] is 1, tally one for team1's count,  
+                    // ... and similarly, if board[i][j] is 2, tally 1 for team2.
+                    // ... BUT, also reset the other team's count to 0 (since they 
+                    // ... can't be winning if they don't have 4 in a row!).
+                    // ... what should you do in the "else" clause here, 
+                    // ... if board[i][j] is 0?
 
-                    // TODO: if count1 or count2 is 4, set winner to 1 (if count1 is 4), or 2 (if count2 is 4)
+                    // TODO: if count1 or count2 is 4, set winner to 1 (if count1 is 4), 
+                    // ... or 2 (if count2 is 4)
                   }
                 }
 
