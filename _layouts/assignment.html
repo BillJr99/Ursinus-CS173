@@ -22,8 +22,9 @@ layout: default
     {% if page.info.goals %}
     <h1>Background Reading and References</h1>
     Please refer to the following readings and examples offering templates to help get you started:
-    <ol>
+    <ul>
     {% for reading in page.info.readings %}
+    <li>
     {% if reading.rlink %}
     <a href="{{reading.rlink}}">
     {% endif %}
@@ -31,8 +32,9 @@ layout: default
     {% if reading.rlink %}
     </a>
     {% endif %}
+    </li>
     {% endfor %}
-    </ol>
+    </ul>
     {% endif %}    
 
     <h1>The Assignment</h1>
