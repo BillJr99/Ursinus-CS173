@@ -650,16 +650,16 @@ boilerplate:
     <li>
     {% if deliverable.dlink %}
     {% if deliverable.dtitle contains 'Handed Out' %}
-    <small>
+    <span>
+    {% else %}
+    <span style="font-weight: bold">
     {% endif %}
     <a href="{{deliverable.dlink}}">
     {% endif %}
     {{deliverable.dtitle}}
     {% if deliverable.dlink %}
     </a>
-    {% if deliverable.dtitle contains 'Handed Out' %}
-    </small>
-    {% endif %}    
+    </span>
     {% endif %}
     </li>
     {% endfor %}
