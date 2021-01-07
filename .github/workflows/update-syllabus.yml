@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - "_pages/syllabus.md"
+      - "files/*.ics"
   pull_request:
     paths:
       - "_pages/syllabus.md"
+      - "files/*.ics"
 
 jobs:
   update_ical:
