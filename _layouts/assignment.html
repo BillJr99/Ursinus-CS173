@@ -18,6 +18,22 @@ layout: default
     {% endfor %}
     </ol>
     {% endif %}
+    
+    {% if page.info.goals %}
+    <h1>Background Reading and References</h1>
+    Please refer to the following readings and examples offering templates to help get you started:
+    <ol>
+    {% for reading in page.info.readings %}
+    {% if reading.rlink %}
+    <a href="{{reading.rlink}}">
+    {% endif %}
+    {{reading.rtitle}}
+    {% if reading.rlink %}
+    </a>
+    {% endif %}
+    {% endfor %}
+    </ol>
+    {% endif %}    
 
     <h1>The Assignment</h1>
     {% if page.info.githubclassroom and page.info.githubclassroom.clonelink %}

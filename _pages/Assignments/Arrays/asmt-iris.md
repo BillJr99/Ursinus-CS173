@@ -31,7 +31,14 @@ info:
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
       progressing: The program is submitted according to the directions with a minor omission or correction needed, and with at least superficial responses to the bolded questions throughout
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution, and thoughtful answers to the bolded questions throughout
-
+  readings:
+    - rtitle: "Strings Activity"
+      rlink: "../Activities/Strings"
+    - rtitle: "Arrays Activity"
+      rlink: "../Activities/Arrays"      
+    - rtitle: "Iteration Activity"
+      rlink: "../Activities/Iteration"      
+      
 tags:
   - strings
   - arrays

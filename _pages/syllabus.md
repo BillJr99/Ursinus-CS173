@@ -317,7 +317,6 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
     points: 100   
-  
 - week: "3"
   date: "1"
   title: "Lab: Debugging"  
@@ -430,7 +429,11 @@ schedule:
   - rtitle: "Ch. 4"
     rlink: false  
   - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"    
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
+  deliverables:
+  - dtitle: "Programming Assignment: Mini Crypto Handed Out"
+    dlink: "Assignments/MiniCrypto"      
+    points: 100   
 - week: "6"
   date: "0"
   title: "Iteration"   
@@ -480,6 +483,9 @@ schedule:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
+  - dtitle: "Programming Assignment: Mini Crypto Due"
+    dlink: "Assignments/MiniCrypto"      
+    points: 100       
 - week: "7"
   date: "3"
   title: "String Manipulation Workshop" 
@@ -602,6 +608,9 @@ schedule:
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
     points: 100  
+  - dtitle: "Programming Assignment: Guitar String Synthesis Handed Out"
+    dlink: "Assignments/GuitarStringSynth"      
+    points: 100         
 - week: "11"
   date: "1"
   title: "Lab: HashMaps"
@@ -670,6 +679,12 @@ schedule:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
     points: 3   
+  - dtitle: "Programming Assignment: Guitar String Synthesis Due"
+    dlink: "Assignments/GuitarStringSynth"      
+    points: 100     
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100      
 - week: "13"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -697,11 +712,7 @@ schedule:
       points: 100      
 - week: "13"
   date: "2"
-  title: "Algorithms: Recursion and Merge Sort"
-  deliverables:
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100   
+  title: "Algorithms: Recursion and Merge Sort" 
 - week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  

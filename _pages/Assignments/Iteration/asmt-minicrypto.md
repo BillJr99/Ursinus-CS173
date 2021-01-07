@@ -31,6 +31,11 @@ info:
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
       progressing: The program is submitted according to the directions with a minor omission or correction needed
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution    
+  readings:
+    - rtitle: "Strings Activity"
+      rlink: "../Activities/Strings"
+    - rtitle: "Iteration Activity"
+      rlink: "../Activities/Iteration"      
       
 tags:
   - strings
@@ -165,7 +170,7 @@ Now, write a program to accept your partner's public key, and your private key. 
 
 Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the char to an int:
 
-`char X = (int) c;`
+`int X = (int) c; // where c is a char`
 
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!
 
@@ -198,3 +203,7 @@ Create your own versions of each of the functions in the RSAMath library given t
 ## Submission
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+
+## A Note About Export Controls
+
+Some governments, including the United States, have [export controls on cryptographic technologies](https://en.wikipedia.org/wiki/Export_of_cryptography_from_the_United_States). 
