@@ -520,6 +520,7 @@ schedule:
   readings:
   - rtitle: "Traversing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"
+  deliverables:
   - dtitle: "Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
     points: 100      
@@ -593,6 +594,7 @@ schedule:
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"    
+  deliverables:
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
     points: 100  
