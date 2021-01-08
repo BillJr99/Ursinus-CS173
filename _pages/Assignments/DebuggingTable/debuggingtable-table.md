@@ -40,7 +40,9 @@ Example.java:5: error: cannot find symbol
   symbol:   variable y
   location: class Example
 
-I had initialized a variable x in the following example, but accidentally printed a variable called y.  Since y didn't exist, the print statement on line 5 of my Example.java file failed.  I changed this to print x instead, and it worked!
+I had initialized a variable x in the following example, but accidentally printed a variable called y.  
+Since y didn't exist, the print statement on line 5 of my Example.java file failed.  
+I changed this to print x instead, and it worked!
 
 int x = 5;
 System.out.println(y);
