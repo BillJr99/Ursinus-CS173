@@ -43,6 +43,8 @@ info:
       rlink: "../Activities/Boolean Expressions"      
     - rtitle: "Conditionals Activity"
       rlink: "../Activities/Conditionals"  
+  questions:
+    - "On paper, how much financial aid would a household receive if their income is $35,000 with one child?  What questions did you have to ask to determine which rule to apply, and how did you compute the amount once you had the correct rule?"      
 
 tags:
   - testing
@@ -160,8 +162,8 @@ The reference solution has 6 test cases, including the first two that are provid
 
 Print the money with commas in appropriate spots. For example, print $12,000 instead of $12000. You can assume that the amount of aid is less than a million dollars, so that you will need at most one comma.  You may find [this guide](https://www.cs.colostate.edu/~cs160/.Summer16/resources/Java_printf_method_quick_reference.pdf) helpful, using a function called `System.out.printf`.
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie) and [Prof. Ann Marie Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling)

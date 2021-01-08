@@ -35,7 +35,10 @@ info:
     - rtitle: "Iteration Activity"
       rlink: "../Activities/Iteration"      
     - rtitle: "Conditionals Activity"
-      rlink: "../Activities/Conditionals"      
+      rlink: "../Activities/Conditionals"  
+  questions:
+    - "What character is closest to pixel value 0.1?  How did you figure that out?"
+    - "Suppose there are 20 pixels per row for an image that you're reading, your block size is 8 pixels wide, and you are reading the top row.  The upper left corner is pixel (0, 0).  What is the x pixel location for the next block that you read, and for the last block that you'll read in that row?"  
       
 tags:
   - math
@@ -200,8 +203,8 @@ As an optional part of this assignment, students may create a submission as part
 
 In your README, in addition to the standard questions, please also indicate if you have a submission for the art contest. If so, do you give your permission to post publicly on the class web site? What name/pseudonym should I use when posting?
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)  

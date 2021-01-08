@@ -69,32 +69,7 @@ Kevin Wayne \[[^1]\] developed a [SIGCSE Nifty Assignment](http://nifty.stanford
 
 [^1]: Nick Parlante, Julie Zelenski, Josh Hug, John Nicholson, John DeNero, Antti Laaksonen, Arto Vihavainen, Frank McCown, and Kevin Wayne. 2014. Nifty assignments. In Proceedings of the 45th ACM technical symposium on Computer science education (SIGCSE ’14). Association for Computing Machinery, New York, NY, USA, 621–622. DOI:[https://doi.org/10.1145/2538862.2538995](https://doi.org/10.1145/2538862.2538995)
 
-## Part 1: Number Systems and RGB Color Coding
-
-### Color Coding
-To create the color codings, the proportion of votes cast for each of (up to) three candidates is converted into a RGB color.  An RGB color is defined by a "tuple," or collection of values: each value in this 3-tuple represents the proportion of red, blue, and green to be mixed in to the color shown.  This is called a 3-tuple because there are three values in the tuple (the red, blue, and green proportion).
-
-We will use 24-bit color in this example, meaning that each of the three values (red, green, and blue) in the tuple can be represented with an 8-bit value.  
-
-<details>
-  <summary>How many different values can you represent with an 8-bit value?  In other words, how many different pure "red" colors are there?  There will be an equal number of pure "blue" and pure "green" values as well.  (Click to reveal)</summary>
-  
-  Since each of the 8 bits is a binary bit value (0 or 1), there are two possibilities for each of the eight bit fields.  Thus, there are <span>\(2^{8}\)</span> different values that can be represented using an 8-bit entry, or 256 distinct shades of pure red, pure blue, or pure green.  This includes the colors black (a value of 0) and white (a value of 255).
-  
-</details>
-
-<details>
-  <summary>How many different values can you represent with a 24-bit value?  In other words, how many different colors can we work with in total?  (Click to reveal)</summary>
-  
-  There are <span>\(2^{24}\)</span> or approximately 16 million colors that we can represent as combinations of the 256 possible red values, 256 possible blue values, and 256 possible green values.  This is the same as combining three entries of up to 256 possibilities each (the 256 reds, 256 greens, and 256 blues), or <span>\(256^{3}\)</span>.  By the law of exponents, <span>\(2^{24} = (2^{8})^{3} = 256^{3}\)</span>.
-  
-</details> 
-
-The color wheel below from Wikipedia shows some example color mixtures.  These values are in hexadecimal, so they range from 0x00 to 0xff for decimal values 0 to 255.  Here is a [guide](https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/number-systems-introduction) from Khan Academy to number systems and converting between hexadecimal, binary, and decimal. 
-
-![RGB Color Wheel from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif/800px-Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif)
-
-## Part 2: Drawing Figures
+## Background: Drawing Figures
 
 ### Adding the Princeton stdlib Library to Your Project
 The `edu.princeton.cs.algs4.StdDraw` class contains a library that will draw polygons and other shapes on a window.  The coordinates of this window are assumed to range from [0, 1].  This class is contained in the [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) file provided by Robert Sedgewick.
@@ -145,33 +120,9 @@ StdDraw.circle(0.5, 0.5, 0.5); // put this inside your public static void main()
 StdDraw.arc(0.5, 0.5, 0.4, 90, 270); // this draws a circle inside, but only a semi-circle
 ```
 
-Using these methods and examples, try drawing a "happy face" at the center of the window.  Recall that the coordinate plane of the window on the x and y axes ranges from 0 to 1, so your coordinates should always be in this range.  Your happy face should have a circle for a face, circles for eyes inside, and an arc for the nose and smile.  For fun, add some eyebrows with arcs, too!
+Here is a [list of all the functions provided by StdDraw](https://introcs.cs.princeton.edu/java/stdlib/javadoc/StdDraw.html#method.summary), in addition to the `circle` and `arc` functions given above.
 
-## Part 3: Encapsulating Drawing Functionality in a Function
-
-### Creating a Function to Draw a Figure
-Now, create a function called `drawHappyFace` that draws a face centered at coordinates given as function parameters.
-
-Instead of hard-coding the `x`, `y`, and `radius` values for your face, calculate them based on the input parameters.  For example, your eyes might have a `y` value that is equal to the given `y` parameter plus or minus one-half the `radius` (this is just an example - feel free to play with the values like this and see where the eyes end up for yourself!).  I suggest hard-coding values at first to see the relationship between `x`, `y`, and `radius`, and the ultimate placement of the facial features.
-
-## Part 4: Using Iteration to Draw Several Figures
-
-### Using a Loop to Draw Multiple Figures
-Using a loop in your `main` function, call `drawHappyFace` to draw faces at several different positions on the screen.
-
-You might, for example, have a loop like this:
-
-```java
-for(int i = 1; i <= 3; i++) { // draw three faces
-    // TODO: Compute x and y based on the value of i
-    // ... remember that the coordinate plane goes from x = [0, 1] and y = [0, 1]
-    // ... so your calculated x and y points should be within 0 and 1
-    
-    // TODO: Call drawHappyFace with these values!
-}
-```
-
-## Part 5: Reading GPS Coordinates for the Polygons
+## Part 1: Reading GPS Coordinates for the Polygons
 
 ### Reading the GPS Coordinates File
 
@@ -274,7 +225,7 @@ Note that you will need to remove the extra spaces within the Strings that you r
 
 Then, you will need to convert the Latitude/Longitude coordinates from a String to a double.  The standard library function `Double.parseDouble()` will do this for you, by taking a String parameter and returning its numeric value as a `double`.
 
-## Part 6: Scaling the Coordinates to a Graphical Plane
+## Part 2: Scaling the Coordinates to a Graphical Plane
 
 ### Converting the Latitude / Longitude Values to a [0, 1] Coordinate Plane
 If you know the largest and smallest X,Y values from the whole file (hint: you do!), you can call these `maxX` and `maxY`, and compute the relative position on a [0,1] coordinate plane.
@@ -350,7 +301,7 @@ Now that you have an array of x and y coordinates scaled from 0 to 1, you can dr
 
 Then, in a loop, iterate over your `HashMap` set of counties to obtain the coordinates, and scale them to a 0 to 1 plane using the math formulas to scale according to the minimum and maximum x and y in the file (see above!).  Create new ArrayLists for the scaled values, or modify the values directly in your `x` and `y` arrays.  Pass the scaled `x` and `y` `ArrayList`s to the `drawRegion` polygon drawing function you wrote just above.  Try passing these newly scaled x and y coordinate arrays to your polygon drawing function; they should now render (albeit in a single color).
 
-## Part 7: Generating Color Codes from Electoral Votes
+## Part 3: Generating Color Codes from Electoral Votes
 
 ### Reading the Electoral Votes File and Generating the Color Codes
 Coordinate data for other geographic regions (for example, a state-by-state map of the United States, or a map of each state by county) can be found [here](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america-data.zip).  In addition, this file contains the election results for a given year (for example, USA1968.txt for the state-by-state presidential election in 1968, or PA2008.txt for the county-by-county presidential election results in Pennsylvania in 2008).  The format of this file is a [Comma Separated Value (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values) file, meaning that each token on a line is separated by a comma character (as opposed to spaces which we used earlier).  The first line is a header line, giving the labels for each column in the file (for example, the name of each candidate).  This can be ignored; each subsequent line contains:
@@ -413,6 +364,6 @@ You may have noticed that the map of the United States appears somewhat distorte
 ### Extra Credit 4: Improving Accessibility
 One of the challenges associated with producing visualizations is that they may not be universally productive and accessible.  For example, those with visual impairments will not benefit from this visualization.  Choose a color contrast palette with better contrast (cite any sources used when identifying such color palettes), and add a textual represnetation in the middle of each state (or pointing to the state) that indicates the percentage and winner in that state.
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  

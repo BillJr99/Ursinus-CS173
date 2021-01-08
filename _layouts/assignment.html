@@ -45,6 +45,17 @@ layout: default
     
     {{ content }} 
     
+    {% if page.info.questions %}
+    <h2>Design Questions to Help You Begin</h2>
+    Please answer the following questions in your README file before you begin writing your program.
+    
+    <ol>
+    {% for question in page.info.questions %}
+    <li>{{question}}</li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+    
     <h2>Submission</h2>
     {% if page.info.submission %}
     {{ page.info.submission }}

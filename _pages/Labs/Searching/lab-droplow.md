@@ -32,7 +32,10 @@ info:
     - rtitle: "Arrays Activity"
       rlink: "../Activities/Arrays"  
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"  
+      rlink: "../Activities/Iteration" 
+  questions:
+    - "Given an array containing the following values: <code>7, 8, 4, 2, 6, 5</code>, which index contains the smallest value?  What questions or comparisons did you have to ask to locate it?  What values did you have to keep track of?"
+    - "Given an array containing the following values: <code>0, 8, 4, 2, 6, 5</code>, which index contains the smallest value?  What questions or comparisons did you have to ask to locate it?  What values did you have to keep track of?"
       
 tags:
   - searching
@@ -54,6 +57,6 @@ Within `main()`, call this function several times, each with a different sized a
 
 To plot your results, you can copy or type the iteration counts you receive into Microsoft Excel and generate a line graph.  Your first column will be the size of the array that you used, and your second column will be the number of iterations that were required to find the smallest element in that array.  Thus, your x-axis will be the size of the array, and your y-axis will be the number of iterations.  What do you notice about the shape and direction of this graph?
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.

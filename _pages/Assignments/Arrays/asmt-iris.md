@@ -37,7 +37,9 @@ info:
     - rtitle: "Arrays Activity"
       rlink: "../Activities/Arrays"      
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"      
+      rlink: "../Activities/Iteration"   
+  questions:
+    - "On paper, read the first four lines of the Iris CSV file where the flower is Setosa, where the flower is Virginica, and where the flower is Versicolor.  Still on paper, group the numbers into three separate lists, according to the flower species.  What is the average sepal length of the Virginica flowers?"
       
 tags:
   - strings
@@ -239,9 +241,9 @@ Here are a few questions to consider about the data:
 
 Finally, remove the columns you selected based on the Linear Fisher Discriminant, and plot your new classification accuracies for N=1, 5, 10, and the whole dataset like you did in that part.  **Did you sacrifice any classification accuracy (and how much, if so) by removing one or more columns with relatively low LDA score?**
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
 
 ## Ethical Use of Learning Algorithms
 

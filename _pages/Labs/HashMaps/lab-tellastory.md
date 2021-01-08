@@ -43,7 +43,10 @@ info:
       rlink: "../Activities/Iteration"
     - rtitle: "HashMaps Activity"
       rlink: "../Activities/HashMaps"
-      
+  questions:
+    - "What would happen if you tried to look up a room that does not exist in your <code>places</code> map?  Try it to be sure!"
+    - "What would happen if you tried to look up a room called <code>middle</code> when your <code>places</code> map contains a room called <code>Middle</code> instead?  Try it to be sure!"
+    
 tags:
   - hashmaps
   - iteration
@@ -199,6 +202,6 @@ if(currentRoom.equals("start")) {
 
 You can check these values inside your loop as well, and learn which room you have visited, and how many times you've been there (and what other rooms you've seen before).  If you have a lot of room, you might consider making an array or `HashMap` of these values to map them to the individual rooms for convenience!
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.

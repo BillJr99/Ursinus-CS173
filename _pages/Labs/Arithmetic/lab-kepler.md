@@ -34,7 +34,13 @@ info:
       rlink: "../Activities/DataTypes"
     - rtitle: "Expressions Activity"
       rlink: "../Activities/Expressions"      
-      
+  questions:
+    - "What code is required to compute the value of <code>a</code> raised to the power of 3?"
+    - "What code is required to compute the value of <code>Math.pi</code> raised to the power of 2?"
+    - "What code is required to compute the denominator of Kepler's formula?"
+    - "What code is required to compute the numerator of Kepler's formula?"
+    - "What variables are different for each planet's computation?  Which variables are re-used for all planets?"
+    
 tags:
   - math
   
@@ -114,6 +120,6 @@ Similarly, when converting the resulting orbital period from seconds to years, I
 * Print `T`, the orbital period in days.  You can check your work using the table above, which provides the approximate period in days for each planet.
 * Repeat this process for the remaining planets, such that your program prints out all of the orbital periods when you run it.  For now, you can copy and paste your code and modify the variable values to do this, but we'll learn an easier way soon!
 * Don't forget to comment your code to describe what you are doing using `//`, and write up a README describing what you have done to accompany your submission.  You can save your README file in your project directory.  
-* When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+* When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)

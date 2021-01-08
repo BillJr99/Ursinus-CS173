@@ -356,9 +356,9 @@ playFile("HappyBirthday.txt");
 #### Hints
 * If you have a String `s` of comma-separated values, then `s.split(",")` will return an array of Strings that are on either side of the commas. For instance, `"11,12,13".split(",")` will return the array `{"11", "12", "13"}`. You will then need to convert each to the correct type. The function `Integer.parseInt(string)` will convert a string to an integer, and the function `Double.parseDouble(string)` will convert a string to a double.
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)
 [^2]: Adapted from [Princeton COS126 course](https://www.cs.princeton.edu/courses/archive/spring19/cos126/assignments/guitar-hero/)

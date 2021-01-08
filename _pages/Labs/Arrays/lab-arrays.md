@@ -89,6 +89,6 @@ averages[0] = computeEqualAverage(assignmentGrades);
 ## Part 2: Weighted Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts an array of `double` for your course averages, and an additional array of `double` to represent the weights.  Call this function passing the average array and a weights array as parameters.
 
-## Submission
+## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.

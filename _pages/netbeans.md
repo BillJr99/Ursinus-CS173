@@ -95,3 +95,6 @@ If you want to export your whole project to a zip, go to `File->Export Project->
 ![]({{ site.baseurl }}/images/netbeans/ExportToZip.png)
 
 Save your file with a `.zip` extension (that is, `MyProject.zip`).  You can click `Browse` on the export dialog to choose a location like your Desktop.
+
+# Apporto
+The NetBeans IDE software is also installed on Apporto, which can be reached from the cloud.  Here are [instructions](https://www.ursinus.edu/live/files/3550-apporto-instructionspdf) on how to access the software through Apporto.

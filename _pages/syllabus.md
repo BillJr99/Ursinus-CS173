@@ -392,6 +392,9 @@ schedule:
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
     points: 100
+  - dtitle: "Programming Assignment: Drawing Faces Handed Out"
+    dlink: "Assignments/Faces"
+    points: 100
 - week: "4"
   date: "3"
   title: "Strings"
@@ -433,7 +436,10 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
-    points: 100   
+    points: 100  
+  - dtitle: "Programming Assignment: Drawing Faces Due"
+    dlink: "Assignments/Faces"
+    points: 100    
 - week: "6"
   date: "0"
   title: "Iteration"   
@@ -702,7 +708,7 @@ schedule:
     points: 100 
 - week: "13"
   date: "1"
-  title: "Lab: Final Project Workshop and Ethical Case Studies" 
+  title: "Lab: Final Project Workshop" 
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
