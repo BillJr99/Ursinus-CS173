@@ -44,7 +44,7 @@ I had initialized a variable x in the following example, but accidentally printe
 Since y didn't exist, the print statement on line 5 of my Example.java file failed.  
 I changed this to print x instead, and it worked!
 
-int x = 5;
+int x = 99;
 System.out.println(y);
 ```
 
