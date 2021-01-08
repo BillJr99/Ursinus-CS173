@@ -632,6 +632,11 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['allowed_extensions'].append('gz')
                     inputdict['allowed_extensions'].append('rar')
                     inputdict['allowed_extensions'].append('7z')
+                    if not ('Programming Assignment:' in description.lower()):
+                        inputdict['allowed_extensions'].append('pdf')
+                        inputdict['allowed_extensions'].append('doc')
+                        inputdict['allowed_extensions'].append('docx')
+                        inputdict['allowed_extensions'].append('txt')
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
