@@ -49,7 +49,7 @@ info:
   questions:
     - "Given a <code>String</code> &quot;<code>Computing</code>&quot;, what beginning and ending indices would you pass to <code>substring</code> to retrieve the letters &quot;<code>put</code>&quot;?"
     - "Suppose you have a <code>String</code> <code>x = </code>&quot;<code>CS</code>&quot; and a String <code>y = </code>&quot;<code>173</code>&quot;.  How would you create a <code>String z</code> that combines the two strings to be <code>CS 173</code> without re-typing <code>CS</code> or <code>173</code>?"
-    - "Suppose you have a <code>String x = </code>&quot;<code>hamburger</code>&quot;, and you wish to change it to &quot;<code>cheeseburgerburger</code>&quot;.  What calls to <code>x.substring()</code> would allow you to do this?"
+    - "Suppose you have a <code>String x = </code>&quot;<code>hamburger</code>&quot;, and you wish to change it to &quot;<code>cheeseburger</code>&quot;.  What calls to <code>x.substring()</code> would allow you to do this?"
 
 tags:
   - strings
