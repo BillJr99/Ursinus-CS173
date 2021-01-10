@@ -10,7 +10,7 @@ info:
   goals:
     - To use iteration to compute a discrete value
     
-canvasasmtid: "97786,97727"    
+canvasasmtid: "107097"    
 canvaspoints: 3
     
 processor:  

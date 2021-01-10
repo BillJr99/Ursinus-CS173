@@ -434,7 +434,7 @@ def create_calendar_event(canvas, inputdict):
         print("Calendar Event Creation: Resource Does Not Exist")
 
 def create_late_policy(course, inputdict):
-    course.create_late_policy(inputdict)
+    course.create_late_policy(**inputdict)
     
 def process_markdown(fname, canvas, course, courseid, homepage):
     f = open(fname, 'r')

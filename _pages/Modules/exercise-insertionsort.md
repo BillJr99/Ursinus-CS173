@@ -12,7 +12,7 @@ info:
     - To swap two variables in memory
     - To implement the insertion sort algorithm
     
-canvasasmtid: "97799,97740"    
+canvasasmtid: "107109"    
 canvaspoints: 3
     
 processor:  

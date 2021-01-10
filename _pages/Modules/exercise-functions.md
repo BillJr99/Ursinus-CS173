@@ -13,7 +13,7 @@ info:
     - To write a function that computes an expression and returns its result
     - To call a function from <code>main()</code> and use its return value
     
-canvasasmtid: "97780,97721"    
+canvasasmtid: "107090"    
 canvaspoints: 3
     
 processor:  

@@ -13,9 +13,8 @@ info:
   course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2021/"
   teamshelproom: https://teams.microsoft.com/l/channel/19%3a6ddddb88493946fa956387e9543a3b06%40thread.tacv2/Mongan%2520Drop-In%2520Office%2520Hours?groupId=b16dcd6b-3522-4564-8306-9051a92c68ba&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
   class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021
-  jamboard: https://jamboard.google.com/d/1l5PXZaFBgqYtWNqbS3W1ykWIrpO7S1pHx1kfQOQ0lMQ/edit?usp=sharing
   ical: files/CS173.ics
-  course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
+  course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop running Windows, Mac OS, or most variants of Linux, that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2021/01/18"
   course_end_date: "2020/05/05"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
@@ -539,7 +538,7 @@ schedule:
   - rtitle: "Traversing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"
   deliverables:
-  - dtitle: "Ethical Case Studies Handed Out"
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
     points: 100      
 - week: "9"
@@ -591,7 +590,7 @@ schedule:
   - rtitle: "ArrayList Iteration"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"
   deliverables: 
-  - dtitle: "Ethical Case Studies Due"
+  - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100     
 - week: "10"

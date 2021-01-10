@@ -13,7 +13,7 @@ info:
     - To declare a variable
     - To manipulate a variable with arithmetic statements
 
-canvasasmtid: "97775,97716"    
+canvasasmtid: "107085"    
 canvaspoints: 3
 
 processor:  
