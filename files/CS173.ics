@@ -1,0 +1,1344 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:US-Eastern
+LAST-MODIFIED:20070101T000000Z
+TZURL:http://zones.stds_r_us.net/tz/US-Eastern
+BEGIN:STANDARD
+DTSTART:19671029T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19870405T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:886f028c-faf9-4b47-89ab-b4b9495bbdfd
+DTSTAMP:20210118T110000
+DTSTART;TZID=US-Eastern:20210118T110000
+DTEND;TZID=US-Eastern:20210118T115000
+RRULE:FREQ=WEEKLY;BYDAY=MO;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Section A Class Meeting
+LOCATION:Kaleidoscope
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e897273f-77b6-405e-a555-ed795cd17b61
+DTSTAMP:20210118T110000
+DTSTART;TZID=US-Eastern:20210118T110000
+DTEND;TZID=US-Eastern:20210118T115000
+RRULE:FREQ=WEEKLY;BYDAY=TU;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Section A Class Meeting
+LOCATION:Bookstore
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:0cafa7a7-3a13-47f8-bb05-5ee0c53eae1e
+DTSTAMP:20210118T110000
+DTSTART;TZID=US-Eastern:20210118T110000
+DTEND;TZID=US-Eastern:20210118T115000
+RRULE:FREQ=WEEKLY;BYDAY=WE;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Section A Class Meeting
+LOCATION:Kaleidoscope
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:29e3a590-f9be-4f62-8a92-c8cc6e5b08f9
+DTSTAMP:20210118T110000
+DTSTART;TZID=US-Eastern:20210118T110000
+DTEND;TZID=US-Eastern:20210118T115000
+RRULE:FREQ=WEEKLY;BYDAY=FR;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Section A Class Meeting
+LOCATION:Kaleidoscope
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3ee27cbd-402f-4fa0-b3c2-abda1e6d73ab
+DTSTAMP:20210120T000000Z
+DTSTART;VALUE=DATE:20210120
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Warmup Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:4f09f992-149d-4e77-b7e7-c814822192e6
+DTSTAMP:20210120T000000Z
+DTSTART;VALUE=DATE:20210120
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/../Ursinus-CS173-Overview\nReading: NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2021/NetBeans\nReading: Installing NetBeans https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/NetBeans/Module\nDeliverable: Programming Assignment: Warmup Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Warmup
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:a530e590-c88a-4d9f-8cbd-08b81633fdc8
+DTSTAMP:20210122T000000Z
+DTSTART;VALUE=DATE:20210122
+SUMMARY:CS173 Intro to Computer Science: Participation: Pre-Assessment Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:fdde6759-6a74-428a-af58-cde2da066730
+DTSTAMP:20210122T000000Z
+DTSTART;VALUE=DATE:20210122
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/./DrawingCanvas\nDeliverable: Participation: Pre-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/PreAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:49cbbff4-6dc5-4d65-b510-56f25aa7cf50
+DTSTAMP:20210125T000000Z
+DTSTART;VALUE=DATE:20210125
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/../Ursinus-CS173-CSHistory
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:da45facd-a00c-4bca-b352-66340965ff87
+DTSTAMP:20210126T000000Z
+DTSTART;VALUE=DATE:20210126
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Warmup Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:939951fc-c384-4043-b15e-85324cc6853a
+DTSTAMP:20210126T000000Z
+DTSTART;VALUE=DATE:20210126
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Intro to NetBeans Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9c00bd30-fa01-4449-8c29-fa2e8b67f906
+DTSTAMP:20210126T000000Z
+DTSTART;VALUE=DATE:20210126
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DataTypes\nReading: Variables and Data Types https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Warmup\nDeliverable: Programming Assignment: Intro to NetBeans Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:4d6664a1-e3f7-4e2c-9a26-1be9a086ab96
+DTSTAMP:20210127T000000Z
+DTSTART;VALUE=DATE:20210127
+SUMMARY:CS173 Intro to Computer Science: Exercise: The NetBeans IDE Software Environment
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:53f6f021-52d6-4e77-8ac6-fb1e35950448
+DTSTAMP:20210127T000000Z
+DTSTART;VALUE=DATE:20210127
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual http://www.ugrad.math.ubc.ca/Flat/reference.html\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:440cd029-8cdb-453e-914a-bff29241fd0e
+DTSTAMP:20210129T000000Z
+DTSTART;VALUE=DATE:20210129
+SUMMARY:CS173 Intro to Computer Science: Participation: Pre-Assessment Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:7a9c23f2-8016-4253-ab77-fc50168a7c0c
+DTSTAMP:20210129T000000Z
+DTSTART;VALUE=DATE:20210129
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nDeliverable: Participation: Pre-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/PreAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:88d4bc3e-7192-434b-a0d7-c6e9e66af494
+DTSTAMP:20210201T000000Z
+DTSTART;VALUE=DATE:20210201
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:a20f7dd3-923b-41b1-8853-43503c1b07de
+DTSTAMP:20210202T000000Z
+DTSTART;VALUE=DATE:20210202
+SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:319ad8d0-510d-463d-97c4-010cbc5638c3
+DTSTAMP:20210202T000000Z
+DTSTART;VALUE=DATE:20210202
+SUMMARY:CS173 Intro to Computer Science: Exercise: Introduction to Primitive Data Types and Expressions
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:0642d979-277a-4847-ba05-5c7d653c50ae
+DTSTAMP:20210202T000000Z
+DTSTART;VALUE=DATE:20210202
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Intro to NetBeans Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:def14698-af83-4d51-b290-8a4bb6efc0a3
+DTSTAMP:20210202T000000Z
+DTSTART;VALUE=DATE:20210202
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Review of Data Types, Expressions, ASCII, and Floating Point encodings https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Values/Module\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Kepler\nDeliverable: Exercise: Introduction to Primitive Data Types and Expressions https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Expressions/Module\nDeliverable: Programming Assignment: Intro to NetBeans Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:bea6de44-dd56-484f-ae2c-ce47c65f572e
+DTSTAMP:20210203T000000Z
+DTSTART;VALUE=DATE:20210203
+SUMMARY:CS173 Intro to Computer Science: Exercise: Expressions Revisited
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:c890c87f-bebe-4c2f-992e-d20f2e6fd47a
+DTSTAMP:20210203T000000Z
+DTSTART;VALUE=DATE:20210203
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Boolean\nReading: Ch. 3\nReading: Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Spring2021/./Modules/Expressions/Exercise2
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:2485f182-a446-49a0-bd59-3f27eaf48b6e
+DTSTAMP:20210205T000000Z
+DTSTART;VALUE=DATE:20210205
+SUMMARY:CS173 Intro to Computer Science: Exercise: Boolean Expressions
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:b3c256c3-7a50-4990-87c3-f20590f138bb
+DTSTAMP:20210205T000000Z
+DTSTART;VALUE=DATE:20210205
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Conditionals\nReading: if Statements and Control Flow https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-2-ifs.html\nReading: Compound Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2021/./Modules/Boolean/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:95558f90-3830-469f-82f0-6a3f8414b881
+DTSTAMP:20210208T000000Z
+DTSTART;VALUE=DATE:20210208
+SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:807daaa3-5bd0-49ed-928e-cb8b1a419e27
+DTSTAMP:20210208T000000Z
+DTSTART;VALUE=DATE:20210208
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: if-else Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-3-if-else.html\nReading: else if Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-4-else-ifs.html\nReading: DeMorgan's Laws https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-6-DeMorgan.html\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Kepler
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3e418ecd-f915-482d-acbd-717f0cffb178
+DTSTAMP:20210209T000000Z
+DTSTART;VALUE=DATE:20210209
+SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:87af238b-0ac2-4ba7-b3b0-08e4da22c271
+DTSTAMP:20210209T000000Z
+DTSTART;VALUE=DATE:20210209
+SUMMARY:CS173 Intro to Computer Science: Exercise: Conditionals
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:8b9b995f-53f3-48c2-9403-2f06eb73d704
+DTSTAMP:20210209T000000Z
+DTSTART;VALUE=DATE:20210209
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Debugging with NetBeans https://www.billmongan.com/Ursinus-CS173-Spring2021/NetBeans/Debugging\nReading: Using the NetBeans Debugger https://www.billmongan.com/Ursinus-CS173-Spring2021/./Modules/Debugger/Module\nDeliverable: Lab: Debugging Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Debugging\nDeliverable: Exercise: Conditionals https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Conditionals/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:31198472-16b0-4429-ab54-6125eab840e8
+DTSTAMP:20210210T000000Z
+DTSTART;VALUE=DATE:20210210
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:f1cfa635-92b0-4de0-a2c2-a4b7b3d090c4
+DTSTAMP:20210210T000000Z
+DTSTART;VALUE=DATE:20210210
+SUMMARY:CS173 Intro to Computer Science: Exercise: Epoch Time Overflow
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:b0d9c740-be0f-4546-836d-48ce2fab1c48
+DTSTAMP:20210210T000000Z
+DTSTART;VALUE=DATE:20210210
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Functions\nReading: Ch. 5 (except 5.9)\nReading: Calling Functions without Parameters https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html\nReading: Reading User Input https://www.w3schools.com/java/java_user_input.asp\nReading: Adding Libraries to NetBeans Projects https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Library/Module\nDeliverable: Programming Assignment: MIDI Audio Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MIDI\nDeliverable: Exercise: Epoch Time Overflow https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/EpochTime/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:032ea0c8-5d1a-4343-a294-5821ded6e52d
+DTSTAMP:20210212T000000Z
+DTSTART;VALUE=DATE:20210212
+SUMMARY:CS173 Intro to Computer Science: Exercise: Writing and Calling Functions
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9484f153-6637-4b35-8489-98ecfa23d841
+DTSTAMP:20210212T000000Z
+DTSTART;VALUE=DATE:20210212
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Calling Functions with Parameters https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\nDeliverable: Exercise: Writing and Calling Functions https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Functions/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:6998a657-ee7b-4ed6-b755-f724ce7acd60
+DTSTAMP:20210215T000000Z
+DTSTART;VALUE=DATE:20210215
+SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3f9bffef-5fd6-4598-bcce-08ecd9720dc9
+DTSTAMP:20210215T000000Z
+DTSTART;VALUE=DATE:20210215
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Debugging
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:5095ed58-fe8a-4c3b-a011-fc4f9735e5fe
+DTSTAMP:20210216T000000Z
+DTSTART;VALUE=DATE:20210216
+SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:236b0919-1f6e-4c9e-8769-4c07146930da
+DTSTAMP:20210216T000000Z
+DTSTART;VALUE=DATE:20210216
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Averaging Functions Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/AverageFunction
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:4a598095-9418-49d5-98e8-b88fea48140f
+DTSTAMP:20210217T000000Z
+DTSTART;VALUE=DATE:20210217
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1b67fff7-2f47-4f1b-b537-cf56a37b2874
+DTSTAMP:20210217T000000Z
+DTSTART;VALUE=DATE:20210217
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Drawing Faces Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:07e7f1e5-f571-4cd7-a8b7-d387b5076c0a
+DTSTAMP:20210217T000000Z
+DTSTART;VALUE=DATE:20210217
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Testing\nReading: Testing with the NetBeans IDE https://www.billmongan.com/Ursinus-CS173-Spring2021/NetBeans/JUnit\nReading: Unit Testing Review https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Testing/Module\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MIDI\nDeliverable: Programming Assignment: Drawing Faces Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Faces
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:16926df2-034c-4b38-9cfa-e969d4bf4bdc
+DTSTAMP:20210219T000000Z
+DTSTART;VALUE=DATE:20210219
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Strings\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Strings/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:eba5843f-14cb-481f-8c60-615f42d3eb25
+DTSTAMP:20210222T000000Z
+DTSTART;VALUE=DATE:20210222
+SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:7f1c333a-528e-43b5-b2dc-f0edf3b60ecf
+DTSTAMP:20210222T000000Z
+DTSTART;VALUE=DATE:20210222
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/AverageFunction
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:60425a44-6ec3-4884-b56b-c1b5b6d21f51
+DTSTAMP:20210223T000000Z
+DTSTART;VALUE=DATE:20210223
+SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:64575064-2e37-4393-b10b-87ac2b46a1b3
+DTSTAMP:20210223T000000Z
+DTSTART;VALUE=DATE:20210223
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Financial Aid Calculator Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/FinancialAidCalculator
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:2d5daaa3-2f7d-4b37-a15d-7999dd86ae25
+DTSTAMP:20210224T000000Z
+DTSTART;VALUE=DATE:20210224
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Iteration
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:c7068abe-900e-427c-96f4-c26cf769961e
+DTSTAMP:20210226T000000Z
+DTSTART;VALUE=DATE:20210226
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:cac5cd45-ea15-4d24-b57e-cb5283bf29d3
+DTSTAMP:20210226T000000Z
+DTSTART;VALUE=DATE:20210226
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Drawing Faces Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9f742b16-d100-489d-a066-ffbbc355bb75
+DTSTAMP:20210226T000000Z
+DTSTART;VALUE=DATE:20210226
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Drawing Faces Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Faces
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:dceac8c7-86c0-48f7-be0a-000915d9f5b6
+DTSTAMP:20210301T000000Z
+DTSTART;VALUE=DATE:20210301
+SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:0d186dff-efbf-4ea6-bdc1-204e0cf6be8c
+DTSTAMP:20210301T000000Z
+DTSTART;VALUE=DATE:20210301
+SUMMARY:CS173 Intro to Computer Science: Participation: First Self-Assessment Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:677a6216-1a31-4bf8-aec1-475eeae454dd
+DTSTAMP:20210301T000000Z
+DTSTART;VALUE=DATE:20210301
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Loops with Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/FinancialAidCalculator\nDeliverable: Participation: First Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:725f89c6-a762-407e-93a4-225d370e9277
+DTSTAMP:20210302T000000Z
+DTSTART;VALUE=DATE:20210302
+SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:59f5573c-8f3b-4c63-939e-5d183d444c11
+DTSTAMP:20210302T000000Z
+DTSTART;VALUE=DATE:20210302
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/MonteCarloPi
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9c3c872f-4454-4f51-a6e0-5f6c40224336
+DTSTAMP:20210305T000000Z
+DTSTART;VALUE=DATE:20210305
+SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:bd918463-1cc3-4d54-892a-e6d13c175fd5
+DTSTAMP:20210305T000000Z
+DTSTART;VALUE=DATE:20210305
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Strings/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:345d1860-306c-460d-a36d-aab8db4fa106
+DTSTAMP:20210308T000000Z
+DTSTART;VALUE=DATE:20210308
+SUMMARY:CS173 Intro to Computer Science: Exercise: Iteration
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:ee0acad1-598f-4eab-b7ee-6da91438ae7c
+DTSTAMP:20210308T000000Z
+DTSTART;VALUE=DATE:20210308
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Exercise: Iteration https://www.billmongan.com/Ursinus-CS173-Spring2021/./Modules/Iteration/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e0286cce-2036-48ae-a523-ccf13d2c0904
+DTSTAMP:20210310T000000Z
+DTSTART;VALUE=DATE:20210310
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:d337e0c6-bce7-4a04-b4ad-ed6b2f3eebc8
+DTSTAMP:20210310T000000Z
+DTSTART;VALUE=DATE:20210310
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:d025cdb7-ea0c-4043-93d8-bc7293689106
+DTSTAMP:20210310T000000Z
+DTSTART;VALUE=DATE:20210310
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2021/Style-Guide\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MiniCrypto
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:bb3f2bc7-6e2f-4bd2-a2fc-17834a9cb264
+DTSTAMP:20210312T000000Z
+DTSTART;VALUE=DATE:20210312
+SUMMARY:CS173 Intro to Computer Science: Participation: First Self-Assessment Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:fdf76f21-d672-497d-8dd9-4fa6561b8a9d
+DTSTAMP:20210312T000000Z
+DTSTART;VALUE=DATE:20210312
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: String Manipulation Exercises https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html\nDeliverable: Participation: First Self-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:b36518f0-e9d3-43aa-b80d-bc5a8a0ee34b
+DTSTAMP:20210315T000000Z
+DTSTART;VALUE=DATE:20210315
+SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:f61f3780-538e-4625-9361-e562fadd38e2
+DTSTAMP:20210315T000000Z
+DTSTART;VALUE=DATE:20210315
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/MonteCarloPi
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:025fef02-3bce-454b-bcca-506ce2a8f20b
+DTSTAMP:20210317T000000Z
+DTSTART;VALUE=DATE:20210317
+SUMMARY:CS173 Intro to Computer Science: Exercise: Strings Revisited
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9e08344c-2786-4e53-b28e-0085f1532cb9
+DTSTAMP:20210317T000000Z
+DTSTART;VALUE=DATE:20210317
+SUMMARY:CS173 Intro to Computer Science: Debugging Table: First Check Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:115ff6d4-d189-496b-8d9c-c8bcfc42d9bc
+DTSTAMP:20210317T000000Z
+DTSTART;VALUE=DATE:20210317
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Arrays\nReading: Ch. 6.1\nReading: Creating and Accessing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html\nReading: Array Review https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Arrays/Module\nDeliverable: Exercise: Strings Revisited https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Strings/Exercise2\nDeliverable: Debugging Table: First Check Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:ee56f1f7-b387-4134-a3b7-ff2398809e26
+DTSTAMP:20210319T000000Z
+DTSTART;VALUE=DATE:20210319
+SUMMARY:CS173 Intro to Computer Science: Ethical Case Studies Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:8c15c8e8-8095-417c-9fdf-ab447bdac0b3
+DTSTAMP:20210319T000000Z
+DTSTART;VALUE=DATE:20210319
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Traversing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html\nDeliverable: Ethical Case Studies Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/EthicalConsiderations
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:684e11ae-3978-4b90-aec6-e5e6d6c30c92
+DTSTAMP:20210322T000000Z
+DTSTART;VALUE=DATE:20210322
+SUMMARY:CS173 Intro to Computer Science: Exercise: Four-in-a-Row
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:dd878b80-28da-4702-8283-b1e5e223b43b
+DTSTAMP:20210322T000000Z
+DTSTART;VALUE=DATE:20210322
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Nested Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html\nReading: Loop Analysis https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html\nReading: 2D Arrays Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html\nReading: 2D Arrays Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/FourInARow/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:333d4e08-b89b-4495-aeeb-f9eac8869dcb
+DTSTAMP:20210323T000000Z
+DTSTART;VALUE=DATE:20210323
+SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:dbed6246-c3c9-4bb3-bf97-2ea5ae39ed2e
+DTSTAMP:20210323T000000Z
+DTSTART;VALUE=DATE:20210323
+SUMMARY:CS173 Intro to Computer Science: Debugging Table: First Check Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:bc809091-1fa3-46bb-b7be-8bc785e62c7e
+DTSTAMP:20210323T000000Z
+DTSTART;VALUE=DATE:20210323
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Array Averages Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/ArrayAveraging\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:202bba91-2d74-4ffa-a251-8d9f3d0ed407
+DTSTAMP:20210324T000000Z
+DTSTART;VALUE=DATE:20210324
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e65b151a-c1fb-4f37-b9fc-911e4bddebae
+DTSTAMP:20210324T000000Z
+DTSTART;VALUE=DATE:20210324
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: ASCII Art Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:953483e7-825a-44c4-9656-7ec00f5b4248
+DTSTAMP:20210324T000000Z
+DTSTART;VALUE=DATE:20210324
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Programming Assignment: DNA Mutations Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DNAMutations\nDeliverable: Programming Assignment: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/ASCIIArt
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:673c8aec-4566-44f5-8d3f-93293c6296dc
+DTSTAMP:20210326T000000Z
+DTSTART;VALUE=DATE:20210326
+SUMMARY:CS173 Intro to Computer Science: Ethical Case Studies Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:72aefb3e-f682-472d-9110-81d8626b859f
+DTSTAMP:20210326T000000Z
+DTSTART;VALUE=DATE:20210326
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Ch. 6.8\nReading: ArrayList Objects https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html\nReading: ArrayList Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html\nReading: ArrayList Iteration https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html\nDeliverable: Ethical Case Studies Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/EthicalConsiderations
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:ce3176cc-6468-41f5-b472-1a3b7f81708a
+DTSTAMP:20210329T000000Z
+DTSTART;VALUE=DATE:20210329
+SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:da42ad49-5d29-4216-8ae6-4f6c3e2db266
+DTSTAMP:20210329T000000Z
+DTSTART;VALUE=DATE:20210329
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/HashMaps\nReading: Ch. 6.8\nDeliverable: Lab: Array Averages Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/ArrayAveraging
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:8bfe0cbc-8042-426d-a619-55e410543b71
+DTSTAMP:20210330T000000Z
+DTSTART;VALUE=DATE:20210330
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3ba8decb-cfc1-4b22-ae12-eeb59ca3a496
+DTSTAMP:20210402T000000Z
+DTSTART;VALUE=DATE:20210402
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/FileIO
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:df0c1d72-dc5b-44b7-9298-c25b46b3b081
+DTSTAMP:20210405T000000Z
+DTSTART;VALUE=DATE:20210405
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: ASCII Art Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:8df88826-8d18-422a-8455-2791841c63fc
+DTSTAMP:20210405T000000Z
+DTSTART;VALUE=DATE:20210405
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesis Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:86ef698c-0555-4e09-8a04-cea2104424a4
+DTSTAMP:20210405T000000Z
+DTSTART;VALUE=DATE:20210405
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/NumberSystems\nDeliverable: Programming Assignment: ASCII Art Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/ASCIIArt\nDeliverable: Programming Assignment: Guitar String Synthesis Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/GuitarStringSynth
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:9cdc5b48-3b9e-4004-b2fa-6ebedc9832c6
+DTSTAMP:20210406T000000Z
+DTSTART;VALUE=DATE:20210406
+SUMMARY:CS173 Intro to Computer Science: Lab: HashMap Story Telling Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:5d023145-72b1-4f43-a746-669397518ce2
+DTSTAMP:20210406T000000Z
+DTSTART;VALUE=DATE:20210406
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: HashMap Story Telling Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/TellAStory
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:eba35f90-9c85-48ab-abbf-a99d05370d9c
+DTSTAMP:20210407T000000Z
+DTSTART;VALUE=DATE:20210407
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:44a9495c-d23c-4892-8587-8495da17f799
+DTSTAMP:20210409T000000Z
+DTSTART;VALUE=DATE:20210409
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Constructors https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1a2fb655-6ec7-4e28-8db3-40687036ce24
+DTSTAMP:20210412T000000Z
+DTSTART;VALUE=DATE:20210412
+SUMMARY:CS173 Intro to Computer Science: Lab: HashMap Story Telling Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:c6df0cc8-a5fa-4862-9bbf-4ce421e6c408
+DTSTAMP:20210412T000000Z
+DTSTART;VALUE=DATE:20210412
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Accessors https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html\nReading: Mutators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html\nReading: Static Variables and Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html\nDeliverable: Lab: HashMap Story Telling Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/TellAStory
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:cb016d51-b029-4878-a460-aeaf8e893c40
+DTSTAMP:20210413T000000Z
+DTSTART;VALUE=DATE:20210413
+SUMMARY:CS173 Intro to Computer Science: Lab: Drop the Lowest Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:df5e5745-b4b4-4981-a035-cc70bf22d9d6
+DTSTAMP:20210413T000000Z
+DTSTART;VALUE=DATE:20210413
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/DropLowest
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:cdd9838b-222c-4427-86e1-bcbd89424e40
+DTSTAMP:20210414T000000Z
+DTSTART;VALUE=DATE:20210414
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/SearchingAndSorting\nReading: Ch. 9.6.3\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:c8464c04-94e8-4a30-8f96-660ee388f6dd
+DTSTAMP:20210416T000000Z
+DTSTART;VALUE=DATE:20210416
+SUMMARY:CS173 Intro to Computer Science: Exercise: Insertion Sort
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:77deec6c-8c70-496f-af07-f2a3fe43ca26
+DTSTAMP:20210416T000000Z
+DTSTART;VALUE=DATE:20210416
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesis Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:957cdcdd-4d47-4cf4-b98a-343e0f07a69d
+DTSTAMP:20210416T000000Z
+DTSTART;VALUE=DATE:20210416
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:d7cd57f9-59e5-4797-a675-ab4596aefd83
+DTSTAMP:20210416T000000Z
+DTSTART;VALUE=DATE:20210416
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Sorting Methods https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/SortingMethods/Module\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/InsertionSort/Module\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: Iris Dataset Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:2a601014-1ffb-461d-8d03-b364b96b1016
+DTSTAMP:20210419T000000Z
+DTSTART;VALUE=DATE:20210419
+SUMMARY:CS173 Intro to Computer Science: Lab: Drop the Lowest Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:333bf9a3-2b67-4b03-a091-02eff770e6bf
+DTSTAMP:20210419T000000Z
+DTSTART;VALUE=DATE:20210419
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Recursion\nReading: Recursion Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html\nReading: Recursion Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html\nReading: Recursive Searching and Sorting https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/DropLowest
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:512a8eee-8b0d-4b15-a1e6-48a49730c74c
+DTSTAMP:20210420T000000Z
+DTSTART;VALUE=DATE:20210420
+SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:774ea194-5d07-4558-98a8-8e13b3451259
+DTSTAMP:20210420T000000Z
+DTSTART;VALUE=DATE:20210420
+SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:ab982375-8920-4c67-8e57-5418e0a23176
+DTSTAMP:20210420T000000Z
+DTSTART;VALUE=DATE:20210420
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Projects/Final
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:021ea5a9-941d-4e4a-aa26-744262d09103
+DTSTAMP:20210421T000000Z
+DTSTART;VALUE=DATE:20210421
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:f72e293b-8f88-462f-b35b-b07a0fd9b7bb
+DTSTAMP:20210423T000000Z
+DTSTART;VALUE=DATE:20210423
+SUMMARY:CS173 Intro to Computer Science: Participation: Second Self-Assessment Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:08d87de3-9eb0-4f1f-989f-c668e4b507ef
+DTSTAMP:20210423T000000Z
+DTSTART;VALUE=DATE:20210423
+SUMMARY:CS173 Intro to Computer Science: Exercise: Recursion
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:aa33c09d-3634-422b-a9ea-a9474c114e63
+DTSTAMP:20210423T000000Z
+DTSTART;VALUE=DATE:20210423
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DynamicProgramming\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Recursion/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:3829406e-ace4-4e6b-b3a3-f6a2899fb2ad
+DTSTAMP:20210426T000000Z
+DTSTART;VALUE=DATE:20210426
+SUMMARY:CS173 Intro to Computer Science: Exercise: Merge Sort
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:dd2a11c2-6c76-42f1-8521-f22258a1ae9b
+DTSTAMP:20210426T000000Z
+DTSTART;VALUE=DATE:20210426
+SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:45eaa0e8-aac4-41b8-a8d0-6a283ccb9255
+DTSTAMP:20210426T000000Z
+DTSTART;VALUE=DATE:20210426
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Exercise: Merge Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/MergeSort/Module\nDeliverable: Debugging Table: Second Check Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:7707ea0c-100f-432e-8fd4-1e382884b88f
+DTSTAMP:20210427T000000Z
+DTSTART;VALUE=DATE:20210427
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:800cf55f-7a8e-4356-9286-8772dcdfbb1d
+DTSTAMP:20210427T000000Z
+DTSTART;VALUE=DATE:20210427
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e4348898-4f93-46cd-b810-ab095f7f6b9a
+DTSTAMP:20210428T000000Z
+DTSTART;VALUE=DATE:20210428
+SUMMARY:CS173 Intro to Computer Science: Participation: Second Self-Assessment Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:5e0a425a-3e2b-43b7-a92a-cd320f792ed3
+DTSTAMP:20210428T000000Z
+DTSTART;VALUE=DATE:20210428
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:7b5c9c98-369d-4db2-8e73-842da0328cea
+DTSTAMP:20210430T000000Z
+DTSTART;VALUE=DATE:20210430
+SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:640c19fd-aa82-477d-8ce6-c13c31a69aa3
+DTSTAMP:20210430T000000Z
+DTSTART;VALUE=DATE:20210430
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Projects/Final
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:4448a772-f3a5-4957-8570-74c42b39df4d
+DTSTAMP:20210504T000000Z
+DTSTART;VALUE=DATE:20210504
+SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:f4b832d2-39af-494d-8c55-1f334537657c
+DTSTAMP:20210504T000000Z
+DTSTART;VALUE=DATE:20210504
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Debugging Table: Second Check Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:191f5d1e-89a7-4a3d-9663-cfa69f033884
+DTSTAMP:20210505T000000Z
+DTSTART;VALUE=DATE:20210505
+SUMMARY:CS173 Intro to Computer Science: Participation: Second Self-Assessment Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1a5aa4e4-7198-4947-a05b-b8a50c7ac4e7
+DTSTAMP:20210505T000000Z
+DTSTART;VALUE=DATE:20210505
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:471c4bf6-65c4-4d27-9d60-fbbadeecff7c
+DTSTAMP:20210118T133000
+DTSTART;TZID=US-Eastern:20210118T133000
+DTEND;TZID=US-Eastern:20210118T153000
+RRULE:FREQ=WEEKLY;BYDAY=MO;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:113d30cb-7b18-4d4d-b2fe-5734110386f7
+DTSTAMP:20210118T170000
+DTSTART;TZID=US-Eastern:20210118T170000
+DTEND;TZID=US-Eastern:20210118T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:7a39e29f-de33-4006-888c-2823ed754b10
+DTSTAMP:20210118T100000
+DTSTART;TZID=US-Eastern:20210118T100000
+DTEND;TZID=US-Eastern:20210118T105000
+RRULE:FREQ=WEEKLY;BYDAY=TU;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:0da68ad6-a741-48f7-b411-397ee932417e
+DTSTAMP:20210118T133000
+DTSTART;TZID=US-Eastern:20210118T133000
+DTEND;TZID=US-Eastern:20210118T153000
+RRULE:FREQ=WEEKLY;BYDAY=WE;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1d2d45c3-4930-431c-93e3-bff59b613b12
+DTSTAMP:20210118T170000
+DTSTART;TZID=US-Eastern:20210118T170000
+DTEND;TZID=US-Eastern:20210118T180000
+RRULE:FREQ=WEEKLY;BYDAY=WE;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:24f6e966-b61a-4dec-845f-a6186bf41d88
+DTSTAMP:20210118T133000
+DTSTART;TZID=US-Eastern:20210118T133000
+DTEND;TZID=US-Eastern:20210118T153000
+RRULE:FREQ=WEEKLY;BYDAY=FR;INTERVAL=1;UNTIL=20200505T235959Z
+EXDATE:20210118
+EXDATE:20210218
+EXDATE:20210303
+EXDATE:20210309
+EXDATE:20210316
+EXDATE:20210331
+SUMMARY:CS173 Intro to Computer Science Office Hours with William Mongan
+LOCATION:Virtual Office Hours on Microsoft Teams
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:5df224e3-a371-40ea-941c-2786b6d9c182
+DTSTAMP:20210202T000000Z
+DTSTART;VALUE=DATE:20210202
+SUMMARY:Add Deadline
+LOCATION:
+DESCRIPTION:Add Deadline
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:e8ae4478-d6be-4ede-8529-887ba335ce1f
+DTSTAMP:20210324T000000Z
+DTSTART;VALUE=DATE:20210324
+SUMMARY:Drop with a W Deadline
+LOCATION:
+DESCRIPTION:Drop with a W Deadline
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:93254462-ae94-464a-b7ba-2653e39adb40
+DTSTAMP:20210305T000000Z
+DTSTART;VALUE=DATE:20210305
+SUMMARY:Mid Semester Grades Posted
+LOCATION:
+DESCRIPTION:Mid Semester Grades Posted
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:020dc492-9bdf-4738-b377-0435620f53a2
+DTSTAMP:20210506T000000Z
+DTSTART;VALUE=DATE:20210506
+SUMMARY:Reading Day
+LOCATION:
+DESCRIPTION:Reading Day
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:35a44459-4f78-4748-8903-eec66a53dd99
+DTSTAMP:20210514T000000Z
+DTSTART;VALUE=DATE:20210514
+SUMMARY:Baccalaureate
+LOCATION:
+DESCRIPTION:Baccalaureate
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:f78c334d-9618-415c-9243-61755e882f96
+DTSTAMP:20210515T000000Z
+DTSTART;VALUE=DATE:20210515
+SUMMARY:Commencement
+LOCATION:
+DESCRIPTION:Commencement
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:1d7cc1ba-cad8-49e4-b6f8-e698745c56d5
+DTSTAMP:20210507T000000Z
+DTSTART;VALUE=DATE:20210507
+SUMMARY:Finals Week Begins
+LOCATION:
+DESCRIPTION:Finals Week Begins
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:37e1c03b-04f8-49df-ba7f-b8595ee10a18
+DTSTAMP:20210513T000000Z
+DTSTART;VALUE=DATE:20210513
+SUMMARY:Finals Week Ends
+LOCATION:
+DESCRIPTION:Finals Week Ends
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
