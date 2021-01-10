@@ -32,6 +32,7 @@ Here are a few notes to help you:
 **NOTE:** You may also use [Eclipse](https://www.eclipse.org/downloads/packages/release/kepler/sr1/eclipse-ide-java-developers), [IntelliJ Idea](https://www.jetbrains.com/idea/download/), or the terminal (`javac` and `java`) if you are more comfortable with them, but the default option is Netbeans, and we will be working through examples in class and in labs with Netbeans.  Also, there is a [combined download of Java and NetBeans](https://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-3413139-esa.html) in a single installer.  You are welcome to use this, but it is an older version of the software, so things might look a little different from the examples in class.
 
 # Instructions for Creating NetBeans Projects 
+<a name="newproject"></a>
 
 To create a new project, first select `File->New Project`
 

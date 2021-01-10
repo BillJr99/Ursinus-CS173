@@ -224,6 +224,9 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
+  - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
+    dlink: "Assignments/NetBeans"
+    points: 100
 - week: "1"
   date: "2"
   title: "Programming Statements, Expressions, and Operators"
@@ -276,7 +279,10 @@ schedule:
     points: 100
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
-    points: 3
+    points: 3  
+  - dtitle: "Programming Assignment: Intro to NetBeans Due"
+    dlink: "Assignments/NetBeans"
+    points: 100      
 - week: "2"
   date: "2"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -289,7 +295,7 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "./Modules/Expressions/Exercise2"    
-    points: 3 
+    points: 3     
 - week: "2"
   date: "3"   
   title: "Conditionals"   
