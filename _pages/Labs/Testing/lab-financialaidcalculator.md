@@ -43,6 +43,10 @@ info:
       rlink: "../Activities/Boolean Expressions"      
     - rtitle: "Conditionals Activity"
       rlink: "../Activities/Conditionals"  
+    - rtitle: "Unit Testing Tutorial"
+      rlink: "../NetBeans/JUnit"
+    - rtitle: "Unit Testing Video Walkthrough"
+      rlink: "../Modules/Testing/Module"
   questions:
     - "On paper, how much financial aid would a household receive if their income is $35,000 with one child?  What questions did you have to ask to determine which rule to apply, and how did you compute the amount once you had the correct rule?"      
 
