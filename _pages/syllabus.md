@@ -779,7 +779,8 @@ schedule:
   deliverables:
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10      
+      points: 10   
+      
 university:
   semester: "Spring"
   academicyear: "2020-21"
