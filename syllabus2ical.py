@@ -14,7 +14,7 @@ def genuid():
     
     if uidseed == -1:
         # https://stackoverflow.com/questions/17888152/parse-string-to-int-when-string-contains-a-number-extra-characters
-        uidseed = int(''.join(c for c in coursenum if c.isdigit())) * 1e10
+        uidseed = int(''.join(c for c in coursenum if c.isdigit())) * 10000000000
     
     UUID_x = uuid.UUID(int=uidseed)
     uidseed = uidseed + 1
