@@ -14,10 +14,10 @@ def genuid():
     
     if uidseed == -1:
         # https://stackoverflow.com/questions/17888152/parse-string-to-int-when-string-contains-a-number-extra-characters
-        uidseed = int(''.join(c for c in coursenum if c.isdigit()))
+        uidseed = int(''.join(c for c in coursenum if c.isdigit())) * 1e10
     
     UUID_x = uuid.UUID(int=uidseed)
-    uidseed = uidseed * 10
+    uidseed = uidseed + 1
     return UUID_x 
 
 # https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
