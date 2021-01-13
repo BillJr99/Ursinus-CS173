@@ -751,35 +751,31 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
-    points: 100              
+    points: 100     
+  - dtitle: "Participation: Second Self-Assessment Handed Out"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10     
 - week: "14"
   date: "2"
   title: "Final Project Workshop"  
   deliverables:
-    - dtitle: "Participation: Second Self-Assessment Handed Out"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10    
-- week: "14"
-  date: "3"
-  title: "Final Project Workshop" 
-  deliverables:
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"   
-    points: 100  
-- week: "15"
-  date: "1"
+    points: 100     
+- week: "14"
+  date: "3"
   title: "Final Project Presentations" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
-      points: 10    
+      points: 10 
 - week: "15"
-  date: "2"
-  title: "Final Project Presentations"  
-  deliverables:
+  date: "0"
+  title: "Final Project Presentations" 
+  deliverables:   
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10   
+      points: 10         
       
 university:
   semester: "Spring"
@@ -819,6 +815,15 @@ university:
   - kname: "Mid Semester Grades Posted"
     kdate: "2021/03/5"
     kdisplay: false
+  - kname: "Designated Tuesday Schedule"
+    kdate: "2021/04/30"
+    kdisplay: true
+  - kname: "Designated Wednesday Schedule"
+    kdate: "2021/05/3"
+    kdisplay: true
+  - kname: "Designated Thursday Schedule"
+    kdate: "2021/05/5"
+    kdisplay: true    
   - kname: "Reading Day"
     kdate: "2021/05/6"
     kdisplay: false    
@@ -840,6 +845,7 @@ university:
   - date: "2020/11/27" 
   springholidays:
   - date: "2021/01/18"  
+  - date: "2021/01/19"  
   - date: "2021/02/18"  
   - date: "2021/03/3"  
   - date: "2021/03/9"
