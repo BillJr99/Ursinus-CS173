@@ -757,25 +757,24 @@ schedule:
     points: 10     
 - week: "14"
   date: "2"
-  title: "Final Project Workshop"  
-  deliverables:
-  - dtitle: "Final Project: Project and Presentation Due"
-    dlink: "Projects/Final"   
-    points: 100     
+  title: "Final Project Workshop"      
 - week: "14"
   date: "3"
-  title: "Final Project Presentations" 
+  title: "Final Project Workshop" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
 - week: "15"
   date: "0"
-  title: "Final Project Presentations" 
+  title: "Final Project Workshop" 
   deliverables:   
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
       points: 10         
+    - dtitle: "Final Project: Project and Presentation Due"
+      dlink: "Projects/Final"   
+      points: 100       
       
 university:
   semester: "Spring"
