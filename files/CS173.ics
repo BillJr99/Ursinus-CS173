@@ -986,25 +986,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091467
 DTSTAMP:20210419T000000Z
 DTSTART;VALUE=DATE:20210419
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Handed Out
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Recursion\nReading: Recursion Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html\nReading: Recursion Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html\nReading: Recursive Searching and Sorting https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/DropLowest
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091468
-DTSTAMP:20210420T000000Z
-DTSTART;VALUE=DATE:20210420
-SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
+DTSTAMP:20210419T000000Z
+DTSTART;VALUE=DATE:20210419
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Recursion\nReading: Recursion Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html\nReading: Recursion Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html\nReading: Recursive Searching and Sorting https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/DropLowest\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091469
 DTSTAMP:20210420T000000Z
 DTSTART;VALUE=DATE:20210420
-SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Handed Out
+SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1015,7 +1015,7 @@ DTSTAMP:20210420T000000Z
 DTSTART;VALUE=DATE:20210420
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Projects/Final
+DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
