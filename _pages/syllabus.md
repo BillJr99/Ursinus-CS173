@@ -110,6 +110,7 @@ instructors:
     starttime: "1:30 PM"
     endtime: "3:30 PM"
     location: "Virtual Office Hours on Microsoft Teams"    
+    
 textbooks:
 - title: "Java for Everyone: Late Objects"
   authors: "Cay Horstmann"
@@ -751,10 +752,7 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
-    points: 100     
-  - dtitle: "Participation: Second Self-Assessment Handed Out"
-    dlink: "./Assignments/Participation/SelfAssessment"
-    points: 10     
+    points: 100        
 - week: "14"
   date: "2"
   title: "Final Project Workshop"      
