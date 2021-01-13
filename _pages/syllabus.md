@@ -767,7 +767,7 @@ schedule:
       points: 10 
 - week: "15"
   date: "0"
-  title: "Final Project Workshop" 
+  title: "Review" 
   deliverables:   
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
