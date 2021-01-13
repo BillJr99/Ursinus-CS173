@@ -711,6 +711,9 @@ schedule:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"  
     points: 100 
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
+    points: 100          
 - week: "13"
   date: "1"
   title: "Lab: Final Project Workshop" 
@@ -718,9 +721,6 @@ schedule:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
       points: 3  
-    - dtitle: "Final Project: Project and Presentation Handed Out"
-      dlink: "Projects/Final"    
-      points: 100      
 - week: "13"
   date: "2"
   title: "Algorithms: Recursion and Merge Sort" 
