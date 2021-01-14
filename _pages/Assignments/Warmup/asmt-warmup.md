@@ -71,6 +71,8 @@ We will use an electronic shared notebook throughout the class.  You'll be able 
 
 You can access the Ursinus network remotely by using a Virtual Private Network (VPN).  This is a protocol and software package that connect your computer to the Ursinus network using your login and password, allowing you to access computers and resources (like library resources) that would normally require you to be physically located on the campus network.  Please follow [these](https://www.ursinus.edu/offices/information-technology/technology-support/hardware-and-software-help/remote-connections-and-vpn/) instructions to connect to the VPN.  When submitting class exercises, you will connect to the VPN so that we can authenticate and determine which student is completing which exercise.
 
+**If you are planning to access course materials while off-campus, for example, if you are a commuting student, please contact techsupport@ursinus.edu and request to be given access to the VPN.**
+
 ## Syllabus (5pts)
 
 Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on {{ page.info.chatname }} with the answers to the following questions**
