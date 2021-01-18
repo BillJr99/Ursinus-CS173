@@ -766,10 +766,14 @@ schedule:
 - week: "15"
   date: "0"
   title: "Review" 
-  deliverables:   
+  deliverables:
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10         
+      points: 10     
+- week: "15"
+  date: "1"
+  title: "Review"   
+  deliverables:         
     - dtitle: "Final Project: Project and Presentation Due"
       dlink: "Projects/Final"   
       points: 100       
