@@ -87,8 +87,8 @@ instructors:
   picture: /images/profile.png
   officehours:
   - day: "M"
-    starttime: "1:30 PM"
-    endtime: "3:30 PM"
+    starttime: "1:00 PM"
+    endtime: "3:00 PM"
     location: "Virtual Office Hours on Microsoft Teams"
   - day: "M"
     starttime: "5:00 PM"
