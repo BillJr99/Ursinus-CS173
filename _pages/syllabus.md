@@ -110,6 +110,17 @@ instructors:
     starttime: "1:30 PM"
     endtime: "3:30 PM"
     location: "Virtual Office Hours on Microsoft Teams"    
+- name: "Institute for Student Success"
+  title: "Drop-In Session to Ask Questions and Work with Classmates"
+  officehours:
+  - day: "T"
+    starttime: "1:30 PM"
+    endtime: "2:30 PM"
+    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom Link Available Here</a>" 
+  - day: "R"
+    starttime: "12:00 PM"
+    endtime: "1:00 PM"
+    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom Link Available Here</a>"
     
 textbooks:
 - title: "Java for Everyone: Late Objects"
