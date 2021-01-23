@@ -259,6 +259,8 @@ schedule:
   readings:
   - rtitle: "Compound Assignment Operators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
+  - rtitle: "Variables and Assignment Expressions Video"
+    rlink: "https://www.youtube.com/embed/vhV97hyV0fc"    
   deliverables:
   - dtitle: "Participation: Pre-Assessment Due"
     dlink: "./Assignments/Participation/PreAssessment"
@@ -276,12 +278,16 @@ schedule:
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
   - rtitle: "Casting and Ranges"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"
+  - rtitle: "ASCII Encoding Video"
+    rlink: "https://www.youtube.com/embed/5aJKKgSEUnY"
+  - rtitle: "Floating Point Values Video"
+    rlink: "https://www.youtube.com/embed/PZRI1IfStY0"    
+  - rtitle: "Number Systems and Binary Encoding"
+    rlink: "https://www.youtube.com/embed/ku4KOFQ-bB4"        
 - week: "2"
   date: "1"
   title: "Lab: Kepler's Third Law"
   readings: 
-  - rtitle: "Review of Data Types, Expressions, ASCII, and Floating Point encodings"
-    rlink: "Modules/Values/Module" 
   - rtitle: "Using the Math Class"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html"
   deliverables:
