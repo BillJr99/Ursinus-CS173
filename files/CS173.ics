@@ -208,7 +208,7 @@ DTSTAMP:20210129T000000Z
 DTSTART;VALUE=DATE:20210129
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nDeliverable: Participation: Pre-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/PreAssessment
+DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nReading: Variables and Assignment Expressions Video https://www.youtube.com/embed/vhV97hyV0fc\nDeliverable: Participation: Pre-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/PreAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -217,7 +217,7 @@ DTSTAMP:20210201T000000Z
 DTSTART;VALUE=DATE:20210201
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html\nReading: ASCII Encoding Video https://www.youtube.com/embed/5aJKKgSEUnY\nReading: Floating Point Values Video https://www.youtube.com/embed/PZRI1IfStY0\nReading: Number Systems and Binary Encoding https://www.youtube.com/embed/ku4KOFQ-bB4
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -253,7 +253,7 @@ DTSTAMP:20210202T000000Z
 DTSTART;VALUE=DATE:20210202
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Review of Data Types, Expressions, ASCII, and Floating Point encodings https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Values/Module\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Kepler\nDeliverable: Exercise: Introduction to Primitive Data Types and Expressions https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Expressions/Module\nDeliverable: Programming Assignment: Intro to NetBeans Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
+DESCRIPTION:\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/Kepler\nDeliverable: Exercise: Introduction to Primitive Data Types and Expressions https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Expressions/Module\nDeliverable: Programming Assignment: Intro to NetBeans Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
