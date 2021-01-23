@@ -282,7 +282,7 @@ schedule:
     rlink: "https://www.youtube.com/embed/5aJKKgSEUnY"
   - rtitle: "Floating Point Values Video"
     rlink: "https://www.youtube.com/embed/PZRI1IfStY0"    
-  - rtitle: "Number Systems and Binary Encoding"
+  - rtitle: "Number Systems and Binary Encoding Video"
     rlink: "https://www.youtube.com/embed/ku4KOFQ-bB4"        
 - week: "2"
   date: "1"
