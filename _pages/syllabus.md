@@ -251,11 +251,7 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"    
 - week: "1"
   date: "3"
-  title: "Expressions and Variables"
-  deliverables:
-  - dtitle: "Exercise: The NetBeans IDE Software Environment"
-    dlink: "Modules/IDE/Module"    
-    points: 3        
+  title: "Expressions and Variables"       
   readings:
   - rtitle: "Compound Assignment Operators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
@@ -265,6 +261,9 @@ schedule:
   - dtitle: "Participation: Pre-Assessment Due"
     dlink: "./Assignments/Participation/PreAssessment"
     points: 10        
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3     
 - week: "2"
   date: "0"
   title: "Ranges and Quantization of Data Types" 
