@@ -9,7 +9,7 @@ excerpt: "CS173: Intro to Computer Science - NetBeans Software Environment"
 
 # Troubleshooting
 
-## Java JDK Failure After Upgrading to Mac OS Big Sur
+## Java JRE Moved After Upgrading to Mac OS Big Sur
 Run the following command to find the current JRE installation:
 ```
 java -version
