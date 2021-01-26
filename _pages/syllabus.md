@@ -242,10 +242,6 @@ schedule:
   date: "2"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
-  deliverables:
-  - dtitle: "Exercise: The NetBeans IDE Software Environment"
-    dlink: "Modules/IDE/Module"    
-    points: 3      
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
@@ -256,6 +252,10 @@ schedule:
 - week: "1"
   date: "3"
   title: "Expressions and Variables"
+  deliverables:
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3        
   readings:
   - rtitle: "Compound Assignment Operators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
