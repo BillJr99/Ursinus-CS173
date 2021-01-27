@@ -685,7 +685,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     inputdict = {}
     inputdict['late_policy'] = {}
     inputdict['late_policy']['late_submission_deduction_enabled'] = True
-    inputdict['late_policy']['missing_submission_deduction_enabled'] = True
+    inputdict['late_policy']['missing_submission_deduction_enabled'] = False
     inputdict['late_policy']['late_submission_deduction'] = late_penalty_per_period
     inputdict['late_policy']['late_submission_interval'] = late_penalty_period
     create_late_policy(course, inputdict)
