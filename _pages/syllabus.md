@@ -246,7 +246,7 @@ schedule:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
   - rtitle: "Beginner's Java Reference Manual"
-    rlink: "http://www.ugrad.math.ubc.ca/Flat/reference.html"
+    rlink: "https://www.tutorialspoint.com/java/java_quick_guide.htm"
   - rtitle: "Expressions and Assignment Statements"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"    
 - week: "1"
