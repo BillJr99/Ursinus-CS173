@@ -40,6 +40,7 @@ child_threads = []
 
 skipdiscussions = False
 skipassignments = False
+skipofficehours = True
             
 def makelink(base, url):
     if url.startswith("http"):
@@ -690,45 +691,46 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     inputdict['late_policy']['late_submission_interval'] = late_penalty_period
     create_late_policy(course, inputdict)
     
-    printlog("Writing Office Hours...")
-    
-    # Write Office Hours as a Recurring Event
-    for instructor in postdict['instructors']:
-        instructorname = instructor['name']
+    if skipofficehours == False:
+        printlog("Writing Office Hours...")
         
-        for officehour in instructor['officehours']:     
-            day = officehour['day']
-            daynum = getDayCodeNum(officehour['day'])
+        # Write Office Hours as a Recurring Event
+        for instructor in postdict['instructors']:
+            instructorname = instructor['name']
             
-            dt = parseDate(startdate)
-            dt = adddays(dt, daynum)
-            
-            dtstart = getDateString(dt)
-            dtstart = dtstart + "T"
-            dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) 
+            for officehour in instructor['officehours']:     
+                day = officehour['day']
+                daynum = getDayCodeNum(officehour['day'])
+                
+                dt = parseDate(startdate)
+                dt = adddays(dt, daynum)
+                
+                dtstart = getDateString(dt)
+                dtstart = dtstart + "T"
+                dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) 
 
-            dtend = getDateString(dt) # assume no event overlaps a day boundary, ends on start date
-            dtend = dtend + "T"
-            dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time
+                dtend = getDateString(dt) # assume no event overlaps a day boundary, ends on start date
+                dtend = dtend + "T"
+                dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time
 
-            location = officehour['location']
-            
-            summary = coursenum + " " + coursename + " Drop-In / Office Hours with " + instructorname
-            
-            inputdict = {}
-            inputdict['context_code'] = coursecontext
-            inputdict['title'] = summary.strip()
-            inputdict['description'] = summary.strip()
-            inputdict['location_name'] = location.strip()
-            inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend
-            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-            inputdict['all_day'] = False
-            inputdict['duplicate'] = {}
-            inputdict['duplicate']['frequency'] = "weekly"
-            inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
-            
-            create_calendar_event(canvas, inputdict)  
+                location = officehour['location']
+                
+                summary = coursenum + " " + coursename + " Drop-In / Office Hours with " + instructorname
+                
+                inputdict = {}
+                inputdict['context_code'] = coursecontext
+                inputdict['title'] = summary.strip()
+                inputdict['description'] = summary.strip()
+                inputdict['location_name'] = location.strip()
+                inputdict['start_at'] = dtstart
+                inputdict['end_at'] = dtend
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
+                inputdict['all_day'] = False
+                inputdict['duplicate'] = {}
+                inputdict['duplicate']['frequency'] = "weekly"
+                inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
+                
+                create_calendar_event(canvas, inputdict)  
 
     printlog("Writing Exams...")
     
@@ -826,12 +828,13 @@ def usage():
     print("\t[-e | --duetime]\t Latest Due Time in UTC for Your Time Zone (i.e., T045959Z for Eastern Time)")
     print("\t[-d | --discussions]\tDo not delete or re-create discussion topics and entries")
     print("\t[-s | --assignments]\tDo not delete or re-create assignments (but still re-arrange existing ones in modules view)")
+    print("\t[-o | --noofficehours]\tDo not delete or re-create office hours")
     print("\nDo not create an assignment group called Assignments, and do prefix assignment names with the desired Assignment Group Name: Deliverable")
     
 # Parse user options
 # https://docs.python.org/3/library/getopt.html
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:ds", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments"])
+    opts, args = getopt.getopt(sys.argv[1:], "hc:m:w:a:u:t:e:dso", ["help", "courseid=", "markdown=", "webpage=", "apikey=", "userid=", "timezone=", "duetime=", "discussions", "assignments", "noofficehours"])
 except getopt.GetoptError as err:
     # print help information and exit:
     print(err)  # will print something like "option -z not recognized"
@@ -866,6 +869,8 @@ for o, a in opts:
         skipdiscussions = True
     elif o in ("-s", "--assignments"):
         skipassignments = True
+    elif o in ("-o", "--noofficehours"):
+        skipofficehours = True        
 
 if USER_ID is None:
     USER_ID = input("Enter User ID (get from API_URL + /api/v1/users/self): ")
