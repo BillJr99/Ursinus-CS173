@@ -79,6 +79,7 @@ The following table provides your inputs for the planetary mass and semi-major a
 | Neptune | 1.024e26 | 30.0690 | 60190.03 |
 | Pluto  (a dwarf planet) | 1.309e22 | 39.4821 | 90600 |
 
+## Converting Astronomical Units to Meters
 Astronomical Units (AU) is a unit of measure approximately defined as the distance from the earth to the sun.  However, notice that the units in the constants above use meters.  In order to use the axis length value in your formula, you will need to convert the length from AU to meters.  One AU is approximately 149,597,870,700 meters, which we will represent as a double (since the value itself is larger than the maximum value of an `int`), so you can multiply the `AU` value in the table above by this value, as follows:
 
 ```java
@@ -87,7 +88,14 @@ double mercuryAU = 0.38710;
 double mercuryMeters = mercuryAU * metersPerAU;
 ```
 
-Similarly, the formula yields the orbital period in seconds.  In order to output the orbital period in years, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth year.  
+## Some Arithmetic Expression Examples for Reference
+Here is a coding example (unrelated to the lab, but for reference), to compute the average of two numbers, you might first add the two numbers, and then multiply by `0.5` (or divide by `2.0`), as follows:
+
+```java
+int x = 6;
+int y = 12;
+double average = 0.5 * (x + y);
+```
 
 To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.  `Math.sqrt(x)` and `Math.pow(x, p)` accept and return values of type `double`, and, similarly, `Math.PI` is a `double`.  For example, the code snippet below computes the area of a circle with radius `6` (note, this code will not appear in your lab directly; it's just an example!):
 
@@ -97,19 +105,11 @@ double rSquared = Math.pow(r, 2);
 double area = Math.PI * rSquared;
 ```
 
-An another coding example (unrelated to the lab, but for reference), to compute the average of two numbers, you might first add the two numbers, and then multiply by `0.5` (or divide by `2.0`), as follows:
-
-```java
-int x = 6;
-int y = 12;
-double average = 0.5 * (x + y);
-```
-
-I strongly suggest computing the portions of this formula one item at a time, rather than implementing the entire formula as a single line of code.  Thus, I would compute the numerator separately from the denominator, then compute the square root of the quotient.  You might even compute the division first and then separately take the square root of it.  This keeps your code short and your arithmetic concise, and each of these makes your code easier to read, understand, and fix!
-
-Similarly, when converting the resulting orbital period from seconds to years, I recommend dividing the orbital period by the product of the number of days in an Earth year times the number of hours in a day, times the number of minutes in an hour, times the number of seconds in a minute.  This will make your program easier to read and understand.
+## Converting the Orbital Period from Seconds to Days
+Just as you converted Astronomical Units (AU) to meters, Kepler's formula yields the orbital period in seconds.  In order to output the orbital period in Earth days, you will need to convert it by dividing the number of seconds by the number of seconds in an Earth day.  I recommend dividing the orbital period by the product of the number of hours in a day, times the number of minutes in an hour, times the number of seconds in a minute.  This will make your program easier to read and understand.
 
 ## What To Do
+I strongly suggest computing the portions of this formula one item at a time, rather than implementing the entire formula as a single line of code.  Thus, I would compute the numerator separately from the denominator, then compute the square root of the quotient.  You might even compute the division first and then separately take the square root of it.  This keeps your code short and your arithmetic concise, and each of these makes your code easier to read, understand, and fix!
 
 * First, begin by declaring a `final double` variable `M`, and setting it to the value `1.989e30`.
 * Next, declare another `final double` variable `G`, with the value `6.6743015e-11`.
