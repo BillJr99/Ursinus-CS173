@@ -8,6 +8,8 @@ facultyemail: "wmongan@ursinus.edu"
 formprocessordirections: "Click <code>compile</code> to compile your code.  If it succeeds with no syntax errors, then click <code>run</code> to run your code.  If it passes the tests, it will automatically submit to Canvas and send you an e-mail. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
 
 submitformlinkdirections: "Clicking Run below will check your work and, if it passes, make a page appear above that you can use to submit your work or with further instructions."
+
+mynetid: wmongan
 ---
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
@@ -130,7 +132,7 @@ submitformlinkdirections: "Clicking Run below will check your work and, if it pa
             {{ layout.submitformlinkdirections }}<br>
             {% endif %}
         
-        <strong>Please Enter your Ursinus netid before clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>ctralie</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit)</strong> 
+        <strong>Please Enter your Ursinus netid before clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit).</strong> 
 
         <table>
             <tr>
