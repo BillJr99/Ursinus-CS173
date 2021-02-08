@@ -1,5 +1,7 @@
 ---
 layout: default
+
+styleguide: "https://www.billmongan.com/Ursinus-CS173/Style-Guide"
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -137,6 +139,12 @@ layout: default
     {% endfor %}
     </ul>        
     {% endif %}
+    {% endif %}
+    
+    {% if layout.styleguide %}
+    <br><p>
+    Please refer to the <a href="{{layout.styleguide}}">Style Guide</a> for code quality examples and guidelines.
+    </p>
     {% endif %}
   </div>
 </div>
