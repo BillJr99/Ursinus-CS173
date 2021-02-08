@@ -30,6 +30,8 @@ Right-clicking on the test class file and clicking `Test File` will cause the te
 
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-runtestcase.png)
 
+A more detailed guide on unit testing is available [here](./JUnit).
+
 <a name="debugger"></a>
 ## Using the Debugger
 Now that we have a failed test case, let's create a `Breakpoint` that will cause our program to pause its execution at a certain point, and allow us to inspect our variables and the state of the program.  This allows us to confirm at various parts of the program that things are executing the way we expect.  Thus, we can use a `Breakpoint` to narrow down where in the code our program is failing.
