@@ -9,10 +9,13 @@ info:
   points: 100
   goals:
     - To identify and reason about professional ethics and responsibilities in software and computing
-
+  readings:
+    - rtitle: "MIT Publication of Additional Ethics in Computing Case Studies"
+      rlink: "https://mit-serc.pubpub.org/"
+      
 tags:
   - ethics
- 
+  
 ---
 
 In this lab, you will work with a group to discuss and report out on an ethical case study.  Your group will be assigned a particular case study, but you should read all of them, as we will discuss them together in class.
