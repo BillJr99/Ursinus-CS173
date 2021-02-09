@@ -69,10 +69,10 @@ info:
             <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="100%" style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/512px-Iris_dataset_scatterplot.svg.png"></a>
         </div>
         <div style="display: table-cell; padding:5px; width:33%;">
-            <img width="100%" style="display:block;" alt="TAP Class Diagram" src="http://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
+            <img width="100%" style="display:block;" alt="TAP Class Diagram" src="https://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">
         </div>
         <div style="display: table-cell; padding:5px; width:33%;">
-            <img width="100%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
+            <img width="100%" style="display:block;" alt="SimBaby Wireless Respiratory Analysis with the Smart Fabric Bellyband" src="https://www.billmongan.com/files/media/software-iotframework/simbaby.jpg">
         </div>
     </div>
     </div>
@@ -140,7 +140,6 @@ textbooks:
   edition: "1st Edition"
   isbn: "978-1491929568"
   link: https://greenteapress.com/wp/think-java/
-  image: https://images.amazon.com/images/P/1491929561.01._PI_SCMZZZZZZZ_.jpg
   isrequired: false   
   freelyavailable: https://greenteapress.com/wp/think-java/
 
