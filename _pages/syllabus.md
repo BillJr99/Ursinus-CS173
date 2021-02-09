@@ -140,7 +140,7 @@ textbooks:
   edition: "1st Edition"
   isbn: "978-1491929568"
   link: https://greenteapress.com/wp/think-java/
-  image: http://images.amazon.com/images/P/1491929561.01._PI_SCMZZZZZZZ_.jpg
+  image: https://images.amazon.com/images/P/1491929561.01._PI_SCMZZZZZZZ_.jpg
   isrequired: false   
   freelyavailable: https://greenteapress.com/wp/think-java/
 
