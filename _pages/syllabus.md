@@ -698,8 +698,8 @@ schedule:
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
-  - rtitle: "Sorting Methods"
-    rlink: "Modules/SortingMethods/Module"
+  - rtitle: "Sorting Methods Video"
+    rlink: "https://www.youtube.com/embed/WaNLJf8xzC4"
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"    
   deliverables:
