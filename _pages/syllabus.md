@@ -681,14 +681,14 @@ schedule:
     dlink: "Labs/TellAStory"
     points: 100    
 - week: "12"
-  date: "1"
+  date: "2"
   title: "Lab: Drop the Lowest" 
   deliverables:
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest" 
     points: 100      
 - week: "12"
-  date: "2"
+  date: "3"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"   
   readings:   
@@ -698,14 +698,10 @@ schedule:
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
-- week: "12"
-  date: "3"
-  title: "Searching and Sorting"
-  readings:
   - rtitle: "Sorting Methods"
     rlink: "Modules/SortingMethods/Module"
   - rtitle: "Sorting Algorithms"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"    
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
@@ -870,7 +866,8 @@ university:
   - date: "2021/03/3"  
   - date: "2021/03/9"
   - date: "2021/03/16" 
-  - date: "2021/03/31"    
+  - date: "2021/03/31"  
+  - date: "2021/04/13"  
   
 ---
 
