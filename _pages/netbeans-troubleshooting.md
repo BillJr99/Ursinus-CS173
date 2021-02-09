@@ -24,7 +24,7 @@ vim /Applications/NetBeans/Apache\ NetBeans\ 12.1.app/Contents/Resources/NetBean
 and update the line that says `netbeans_jdkhome` to the following (note that the comment character `#` has been removed, if present):
 
 ```
-netbeans_jdkhome="YOUR-JRE-DIRECTORY-JERE"
+netbeans_jdkhome="YOUR-JRE-DIRECTORY-HERE"
 ```
 
 Save and exit, and re-start NetBeans.
