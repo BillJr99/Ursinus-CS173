@@ -84,6 +84,12 @@ public static double computeEqualAverage(double grade1, double grade2, double gr
 }
 ```
 
+Your formula should look something like this:
+
+<div align="center">
+<br><span>\((grade1 + grade2 + grade3) / 3.0\)</span><br>
+</div>
+
 ### Computing a Weighted Average of these Averages
 Now, write a function `computeWeightedAverage` that also returns a `double`, and accepts `double`s for your course averages as well as the weights (since there is a lab average and an assignment average, and each has a weight, you should have four `double` parameters to this function).  This function multiplies each grade by its corresponding weight, and adds the resulting products together.  Your formula should look something like this:
 
