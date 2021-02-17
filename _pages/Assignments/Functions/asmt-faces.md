@@ -101,7 +101,7 @@ Using the `StdDraw` methods and examples above, try drawing a "happy face" at th
 * a circle for a face
 * circles for eyes inside the face circle
 * an arc for the nose 
-* an arc for the smile.  
+* an arc for the smile  
 
 For fun, you can add some eyebrows with arcs, too!
 
