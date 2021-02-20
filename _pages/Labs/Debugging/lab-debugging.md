@@ -44,7 +44,7 @@ In this lab, you will practice using the debugger to identify and fix a bug in a
 ### Step 1: Download the Sample Project
 Begin by downloading and opening [this NetBeans project](../files/lab-debugging/DebugSample.zip).  Once you open the project, it may be necessary to close and re-open NetBeans to refresh the project files.
 
-This code attempts to compute the slope of the line connecting two Cartesian points.  Run the project.  You'll notice that the slope is 0, although this is incorrect.
+This code attempts to compute the slope of the line connecting two Cartesian points.  Run the project.  You'll notice that the slope is `1`, although this is incorrect.
 
 ### Step 2: "Breaking" or Pausing the Program at a Certain Point
 Set a Line Breakpoint at line 25 of the code, and start the debugger until it breaks at this line.  **Hint**: you may wish to refer to our [debugger tutorial](../NetBeans/Debugging) for guidance on using the features of the debugger.  
