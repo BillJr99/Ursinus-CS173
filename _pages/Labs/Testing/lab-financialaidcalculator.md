@@ -40,7 +40,7 @@ info:
     - rtitle: "Expressions Activity"
       rlink: "../Activities/Expressions"  
     - rtitle: "Boolean Expressions Activity"
-      rlink: "../Activities/Boolean Expressions"      
+      rlink: "../Activities/Boolean"      
     - rtitle: "Conditionals Activity"
       rlink: "../Activities/Conditionals"  
     - rtitle: "Unit Testing Tutorial"
