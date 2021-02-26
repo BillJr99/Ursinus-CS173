@@ -149,7 +149,7 @@ The `RSAMath.endecrypt(X, E, C)` function will help you to do this, by encryptin
 ### Decrypt Data Using a Private Key
 Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.  
 
-The procedure is similar to that used to encrypt a value.
+The procedure is similar to that used to encrypt a value.  The `RSAMath.endecrypt(X, D, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.  
 
 Here is an example:
 
@@ -168,15 +168,29 @@ Write test cases that encrypt values using your public key, and decrypt them usi
 ## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
 Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a String parameter, and for each character in the string, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
 
+Your loop to obtain each character from the String will look something like this:
+
+```java
+String msg = "This is a secret message!";
+for(int i = 0; i < msg.length(); i++) {
+    // get each character from the string - the first one will be the letter T, followed by h, and so on...
+    char c = msg.charAt(i); 
+    
+    // TODO: encrypt this character and print the encrypted value to the screen
+}
+```
+
 Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the char to an int:
 
 `int X = (int) c; // where c is a char`
 
-Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!
+Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!  **For example, you can read each encrypted `int` value from the user keyboard using the `Scanner`, and enter a negative number to indicate that you have finished reading.  Continue reading and decrypting characters in a loop `while` the input is not negative!**
 
-The procedure to do this is similar to that used to encrypt each character, except that the value to be decrypted is the encrypted value of the ASCII value used before, and the key is the private key (D, C) associated with the public key that was used to encrypt it.  You can cast the ASCII int value you obtain back to a char, and either print it or concatenate it with a String.
+The procedure to do this is similar to that used to encrypt each character, except that the value to be decrypted is the encrypted value of the ASCII value used before, and the key is the private key (D, C) associated with the public key that was used to encrypt it.  You can cast the ASCII int value you obtain back to a char, and either print it or concatenate it with a `String`.  
 
-## Breaking Someone's Private Key Using Only Their Public Key
+**Hint: You will encrypt data using your partner's public key values `E` and `C`, and decrypt usnig your own private key values `D` and `C`.  The values of `C` will not be the same, since they are for two different keys (your partner's and your own)!**
+
+## Step 3: Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
 
 <details>
@@ -188,7 +202,7 @@ Going back through the RSA algorithm, how did you compute your private key from 
 
 Since these are small keys, you can compute <span>\\(M = \phi(C)\\)</span> directly, either by factoring C into its prime numbers A and B, and computing <span>\\(M = (A-1)(B-1)\\)</span>, or by computing the Totient of C directly (notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B).    
 
-Write and test a program to accept a public key, and compute the private key.  Compute your partner's private key from their public key, and test that you can obtain your own private key given your public key.  This program should only accept E and C, the public key, as inputs.
+Write and test a program to accept a public key.  To do this, compute your partner's private key from their public key, and test that you can obtain your own private key given your public key.  Print the private key to the screen and verify that it is correct with your partner.  This program should only accept E and C, the public key, as inputs.
 
 Here is an example:
 
