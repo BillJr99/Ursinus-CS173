@@ -174,7 +174,7 @@ Your loop to obtain each character from the String will look something like this
 String msg = "This is a secret message!";
 for(int i = 0; i < msg.length(); i++) {
     // get each character from the string - the first one will be the letter T, followed by h, and so on...
-    char c = msg.charAt(i); 
+    char x = msg.charAt(i); 
     
     // TODO: encrypt this character and print the encrypted value to the screen
 }
@@ -182,7 +182,7 @@ for(int i = 0; i < msg.length(); i++) {
 
 Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the char to an int:
 
-`int X = (int) c; // where c is a char`
+`int asciiX = (int) x; // where c is a char`
 
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!  **For example, you can read each encrypted `int` value from the user keyboard using the `Scanner`, and enter a negative number to indicate that you have finished reading.  Continue reading and decrypting characters in a loop `while` the input is not negative!**
 
