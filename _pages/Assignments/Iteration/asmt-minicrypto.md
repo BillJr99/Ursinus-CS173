@@ -110,7 +110,7 @@ Click the `Libraries` category on the left side of the window that appears.  The
 
 Finally, navigate to the jar file you downloaded earlier, and double click on it to add it to your project.  Click OK to close the window, and you're done!
 
-Now, jar files added to the libs directory of your project will be available for use in your code.  You can download the [rsamath.jar]({{ site.baseurl }}/files/rsamath/rsamath.jar) file into a subdirectory of your project called `libs`.
+Now, jar files added to the libs directory of your project will be available for use in your code.  You can download the [rsamath.jar]({{ site.baseurl }}/files/asmt-minicrypto/rsamath.jar) file into a subdirectory of your project called `libs`.
 
 To see which functions are available in the RSAMath library, see the [Javadoc]({{ site.baseurl }}/files/asmt-minicrypto/doc/index.html).  The `RSAMath` class is implemented in the `cs4hs11.rsalibrary` package, which you can import in your program.  *The methods are not static, but you can create an `RSAMath` object and then call the functions on the resulting object.*  Here is a listing of the methods you'll find in this library:
 
