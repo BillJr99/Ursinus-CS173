@@ -148,7 +148,9 @@ Color color = new Color(red, green, blue);
 StdDraw.setPenColor(color); 
 ```
 
-Modify your `drawHappyFace` function to accept three additional `int` parameters for red, green, and blue, and set the color in the beginning of your function so that the face draws in the color you specify.  Modify your `main` function to provide red, green, and blue values of your choosing to each of your calls to `drawHappyFace`: use different colors each time!
+Modify your `drawHappyFace` function to accept three additional `int` parameters for red, green, and blue, and set the color in the beginning of your function so that the face draws in the color you specify (each color is a mixture of red, green, and blue, with values ranging from 0 to 255).  Modify your `main` function to provide red, green, and blue values of your choosing to each of your calls to `drawHappyFace`: use different colors each time!
+
+You can visit [this page](https://www.rapidtables.com/web/color/RGB_Color.html) to identify red, green, and blue values for your favorite colors.  
 
 ## Exporting your Project for Submission
 
