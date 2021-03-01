@@ -162,6 +162,13 @@ If there is a `testMain` test, you can remove that.  It is only necessary to tes
 
 The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
+**Note**: You may need to replace your import lines, if you see the word `jupiter` in them.  You can delete the imports in your test file and replace them with these instead, if so:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+```
+
 ## Extra Credit (10%)
 
 Print the money with commas in appropriate spots. For example, print $12,000 instead of $12000. You can assume that the amount of aid is less than a million dollars, so that you will need at most one comma.  You may find [this guide](https://www.cs.colostate.edu/~cs160/.Summer16/resources/Java_printf_method_quick_reference.pdf) helpful, using a function called `System.out.printf`.

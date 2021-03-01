@@ -32,5 +32,13 @@ Save and exit, and re-start NetBeans.
 ## Directory Permissions After Upgrading to Mac OS Big Sur
 On some computers, opening, importing, saving, or exporting a project or library fails to access certain user directories like `Desktop` or `Downloads`.  Under the user directory, there is a directory called `NetBeansProjects` that can be accessed by NetBeans.  Using the filesystem or Finder, files in directories like `Downloads` can be moved to the `NetBeansProjects` directory prior to using them in NetBeans.
 
+## Unit Tests
+**Note**: You may need to replace your import lines, if you see the word `jupiter` in them.  You can delete the imports in your test file and replace them with these instead, if so:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+```
+
 # Apporto
 The NetBeans IDE software is also installed on Apporto, which can be reached from the cloud.  Here are [instructions](https://www.ursinus.edu/live/files/3550-apporto-instructionspdf) on how to access the software through Apporto.
