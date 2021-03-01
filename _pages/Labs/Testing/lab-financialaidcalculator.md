@@ -154,6 +154,8 @@ The results of all of the tests will be shown in the console. For instance, for 
 
 The reason for this behavior is as follows. By default, the code returns a "placeholder value" of $0.0 for all income levels and number of children. The first test has a high income that should receive zero aid, so this passes just fine. However, the second case has a mid level income of $35,000 with 5 kids, that should receive a total of $5,000 in aid by the rules above. In this case, the placeholder value of $0.0 is definitely not correct, so this second test will fail until you update your code.
 
+The `assertEquals` functions takes three parameters: the expected answer, the actual answer from running the funciton, and a tolerance (how close you must get to the answer to be correct).  We want to be exact, so a third parameter of `0.0` is appropriate here.
+
 To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  
 
 **Using Maven, the `@Test` annotation might be called `@org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
