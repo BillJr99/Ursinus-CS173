@@ -19,6 +19,13 @@ Then, check/uncheck the following boxes
 
 ![]({{ site.baseurl }}/images/netbeans/TestOptions.png)
 
+**Note**: You may need to replace your import lines, if you see the word `jupiter` in them.  You can specify `JUnit 4` in the `Create/Update Tests` window when you create your tests (it's ok to re-create them if needed), and then delete the imports in your test file and replace them with these instead, if so:
+
+```java
+import org.junit.Test;
+import static org.junit.Assert.*;
+```
+
 This will create a new file for testing with an example test method for each method you created in your original class. You should be careful to comment out or delete the `fail` line at the end of the test, and be sure that your inputs and expected outputs are the expected behavior of your method. Once you've done this, you can right click on this file and click `run`, and the results of the test will be shown in a window:
 
 ![]({{ site.baseurl }}/images/netbeans/RunTests.png)
