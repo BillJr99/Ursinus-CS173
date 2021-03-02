@@ -75,7 +75,7 @@ public static double estimatePi(int iterations) {
         
         // TODO: Compute x-squared and y-squared
         
-        // TODO: if x-squared and y-squared is less than or equal to 1, increment a counter inCircle 
+        // TODO: if x-squared added to y-squared is less than or equal to 1, increment a counter inCircle 
         // ... (in other words, set inCircle equal to inCircle plus 1)
         
     }
