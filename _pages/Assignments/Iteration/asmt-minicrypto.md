@@ -137,6 +137,21 @@ Here is an example:
 
 ![Key Generator]({{ site.baseurl }}/images/asmt-minicrypto/genkey.png)
 
+So, to get started, you can compute `E` as follows:
+
+```java
+// do this import at the very top
+// import cs4hs11.rsalibrary.RSAMath;
+
+long A; // assign this to a prime number, perhaps from the Scanner or by computing one via a function
+long B; // assign this to a prime number, perhaps from the Scanner or by computing one via a function
+long C = A*B;
+
+RSAMath rsa = new RSAMath();
+long M = rsa.totient(C); // M should be equal to (A-1)*(B-1) in this example, because A and B are prime numbers and C = A * B
+long E = rsa.coprime(M);
+```
+
 ### Encrypt Data Using a Public Key
 Given a public key (E and C) as parameters, write a function to encrypt a given value, and return the encrypted value.  Print this value to the screen.
 
