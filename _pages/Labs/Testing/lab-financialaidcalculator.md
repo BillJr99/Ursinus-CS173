@@ -156,20 +156,18 @@ The reason for this behavior is as follows. By default, the code returns a "plac
 
 The `assertEquals` functions takes three parameters: the expected answer, the actual answer from running the funciton, and a tolerance (how close you must get to the answer to be correct).  We want to be exact, so a third parameter of `0.0` is appropriate here.
 
-To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  
-
-**Using Maven, the `@Test` annotation might be called `@org.junit.jupiter.api.Test`, which is fine; use this if that is what you see here!**
-
-If there is a `testMain` test, you can remove that.  It is only necessary to test the `computeAssistance` function, since `main` just obtains user input and then passes them to the `computeAssistance` function.  So these tests automatically run your function for you without asking for input!
-
-The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
-
 **Note**: You may need to replace your import lines, if you see the word `jupiter` in them.  You can specify `JUnit 4` in the `Create/Update Tests` window when you create your tests (it's ok to re-create them if needed), and then delete the imports in your test file and replace them with these instead, if so:
 
 ```java
 import org.junit.Test;
 import static org.junit.Assert.*;
 ```
+
+To get full credit for this part of the assignment, **you must create enough unit tests so that every block of code you write is covered by at least one test**. In other words, every `if` and `else` statement should be tested by at least one of your test cases, so create a `@Test` function with sample values that exercise every part of your code.  
+
+If there is a `testMain` test, you can remove that.  It is only necessary to test the `computeAssistance` function, since `main` just obtains user input and then passes them to the `computeAssistance` function.  So these tests automatically run your function for you without asking for input!
+
+The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
 
 ## Extra Credit (10%)
 
