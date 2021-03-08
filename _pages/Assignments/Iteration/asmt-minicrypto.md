@@ -234,6 +234,15 @@ Here is an example:
 
 ![Key Cracker]({{ site.baseurl }}/images/asmt-minicrypto/keycrack.png)
 
+## Summary
+
+As a summary, here is what to do.  You might want to write separate programs (projects) for each of these, and export and submit each of them.  It's up to you!
+
+* Generate a key to share with the class.  Share your `E` and `C` public key with the class, but keep your `D` private key value a secret that you will use later!
+* Use someone else's public key (`E` and `C`) to encrypt a secret message to them, one character at a time.  You can loop over the characters of a `String` to do this.  Share your encrypted numeric values with that person.
+* When someone shares a message with you, use your own private key (`D` and `C`) to decrypt them to characters, one by one, and print them to the screen.  What message did you get?  Note that this `C` is different than the one you used to encrypt something to your classmate in the prior step: you used their `C` value instead!  Here, you are using your own value of `C`.
+* Take someone's public key (`E` and `C`) and compute `M` and `D` from it.  Did it match their private key?  Why is this hard to do with actual public keys on the internet?
+
 ## Extra Credit (15 Points)
 
 ### Implement the RSAMath functions
