@@ -193,15 +193,27 @@ for(int i = 0; i < msg.length(); i++) {
 }
 ```
 
-Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the char to an int:
+Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the `char` to a `long` (a `long` is a whole number like an `int`, but it is double the size of an `int`):
 
-`int asciiX = (int) x; // where c is a char`
+`long asciiX = (long) x; // where c is a char`
 
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!  **For example, you can read each encrypted `int` value from the user keyboard using the `Scanner`, and enter a negative number to indicate that you have finished reading.  Continue reading and decrypting characters in a loop `while` the input is not negative!**
 
 The procedure to do this is similar to that used to encrypt each character, except that the value to be decrypted is the encrypted value of the ASCII value used before, and the key is the private key (D, C) associated with the public key that was used to encrypt it.  You can cast the ASCII int value you obtain back to a char, and either print it or concatenate it with a `String`.  
 
 **Hint: You will encrypt data using your partner's public key values `E` and `C`, and decrypt usnig your own private key values `D` and `C`.  The values of `C` will not be the same, since they are for two different keys (your partner's and your own)!**
+
+When you decrypt a secret message using your own private key, you'll get back a `long`, as follows:
+
+```java
+long decrypted = RSAMath.endecrypt(encrypted, D, C);
+```
+
+You can convert the `long` back to a `char` for printing as follows:
+
+```java
+char decryptedChar = (char) decrypted;
+```
 
 ## Step 3: Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
