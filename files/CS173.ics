@@ -615,31 +615,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09143c
 DTSTAMP:20210310T000000Z
 DTSTART;VALUE=DATE:20210310
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2021/Style-Guide
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09143d
-DTSTAMP:20210310T000000Z
-DTSTART;VALUE=DATE:20210310
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143e
-DTSTAMP:20210310T000000Z
-DTSTART;VALUE=DATE:20210310
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2021/Style-Guide\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MiniCrypto
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143f
 DTSTAMP:20210312T000000Z
 DTSTART;VALUE=DATE:20210312
 SUMMARY:CS173 Intro to Computer Science: Participation: First Self-Assessment Due
@@ -648,7 +630,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091440
+UID:00000000-0000-0000-0000-0192cc09143e
 DTSTAMP:20210312T000000Z
 DTSTART;VALUE=DATE:20210312
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -657,10 +639,28 @@ DESCRIPTION:\nReading: String Manipulation Exercises https://runestone.academy/r
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091441
+UID:00000000-0000-0000-0000-0192cc09143f
 DTSTAMP:20210315T000000Z
 DTSTART;VALUE=DATE:20210315
 SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091440
+DTSTAMP:20210315T000000Z
+DTSTART;VALUE=DATE:20210315
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091441
+DTSTAMP:20210315T000000Z
+DTSTART;VALUE=DATE:20210315
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -671,7 +671,7 @@ DTSTAMP:20210315T000000Z
 DTSTART;VALUE=DATE:20210315
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/MonteCarloPi
+DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/MonteCarloPi\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/MiniCrypto
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
