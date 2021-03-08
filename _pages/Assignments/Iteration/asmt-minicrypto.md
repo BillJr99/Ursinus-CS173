@@ -84,7 +84,7 @@ For now, we can look up <span>\\(\phi(881)\\)</span> on a website like [http://p
 
 To generate RSA keys, first select two prime numbers A (say, 47) and B (say, 71).  Normally, A and B should be very large -- a small map was easy to break, after all!  Multiply them together and call that <span>\\(C = AB = 47 \times 71 = 3337\\)</span>.  
 
-Now compute <span>\\(\phi(C) = \phi(AB) = 3220\\)</span>, and call this number (the totient of C) M.  Pick an encryption key that is coprime to <span>\\(M = 3220\\)</span>.  There are mathematical ways of doing this (the [Extended Euclidean GCD Algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)), but let's just pick one since we're using small enough numbers -- how about 79.   Take my word for now that it is easy to do, especially with a computer.  Call this <span>\\(E = 79\\)</span>.
+Now compute <span>\\(\phi(C) = \phi(AB) = \phi(A)\phi(B) = (A-1)(B-1) = 46 \times 70 = 3220\\)</span>, and call this number (the totient of C) M.  Pick an encryption key that is coprime to <span>\\(M = 3220\\)</span>.  There are mathematical ways of doing this (the [Extended Euclidean GCD Algorithm](https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm)), but let's just pick one since we're using small enough numbers -- how about 79.   Take my word for now that it is easy to do, especially with a computer.  Call this <span>\\(E = 79\\)</span>.
 
 The decryption key is the modular inverse of the encryption key <span>\\(E  (mod \; 3220)\\)</span>.  Call this <span>\\(d = 79^{-1} = 79^{\phi(3220)-1} (mod \; 3220)\\)</span>.  Recall how to do this (keep in mind that 79 is coprime to M = 3220 -- what a great idea, because we can use our formula!).  So <span>\\(r^{-1} = r^{\phi(M) -1} (mod \; M)\\)</span> works.  According to [http://www25.brinkster.com/denshade/totient.html](http://www25.brinkster.com/denshade/totient.html), <span>\\(\phi(M) = 1056\\)</span>, but we could compute it.  So now we have <span>\\(79^{-1} = 79^{1056 - 1} (mod \; 3220) = 791055 (mod \; 3220) = 1019\\)</span>.
 
@@ -128,7 +128,7 @@ To generate your public key:
 
 1. Choose two prime numbers A and B.  Make these prime numbers at least 2 digits in length, but no more than 3 digits.  In practice, the values are much larger, but this is a demonstration.
 2. Compute <span>\\(C = AB\\)</span>.
-3. Compute <span>\\(M = \phi(C)\\)</span> using the `RSAMath.totient(C)` method.
+3. Compute <span>\\(M = \phi(C)\\)</span> using the `RSAMath.totient(C)` method.  This will be equal to (A-1)*(B-1) if your values of A and B are prime.
 4. Compute E, a value co-prime to M.  The `RSAMath.coprime(M)` method can help you do this.
 5. Compute D, the modular inverse of <span>\\(E (mod \; M)\\)</span>.  The `RSAMath.mod_inverse(E, M)` method can help you do this.
 
@@ -226,7 +226,7 @@ Going back through the RSA algorithm, how did you compute your private key from 
   
 </details>
 
-Since these are small keys, you can compute <span>\\(M = \phi(C)\\)</span> directly, either by factoring C into its prime numbers A and B, or by computing the Totient of C directly (notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B).    
+Since these are small keys, you can compute the Totient of C (<span>\\(M = \phi(C)\\)</span>) directly, or by computing <span>\\(M = (A-1)(B-1)\\)</span>.  Notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B.    
 
 Write and test a program to accept a public key.  To do this, compute your partner's private key from their public key, and test that you can obtain your own private key given your public key.  Print the private key to the screen and verify that it is correct with your partner.  This program should only accept E and C, the public key, as inputs.
 
