@@ -509,14 +509,7 @@ schedule:
   title: "Coding Style and the Code Review"
   readings:
   - rtitle: "Style Guide"
-    rlink: "Style-Guide"
-  deliverables:
-  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
-    dlink: "Assignments/DNAMutations"  
-    points: 100    
-  - dtitle: "Programming Assignment: Mini Crypto Due"
-    dlink: "Assignments/MiniCrypto"      
-    points: 100       
+    rlink: "Style-Guide"      
 - week: "7"
   date: "3"
   title: "String Manipulation Workshop" 
@@ -532,7 +525,14 @@ schedule:
   title: "String Manipulation Workshop" 
   deliverables:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
-    dlink: "Labs/MonteCarloPi"   
+    dlink: "Labs/MonteCarloPi"
+    points: 100
+  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
+    dlink: "Assignments/DNAMutations"  
+    points: 100    
+  - dtitle: "Programming Assignment: Mini Crypto Due"
+    dlink: "Assignments/MiniCrypto"      
+    points: 100     
 - week: "8"
   date: "2"
   title: "Arrays" 
