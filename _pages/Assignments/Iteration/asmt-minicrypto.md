@@ -126,10 +126,11 @@ Once you generate those prine numbers (let's call them A and B), you can generat
 
 To generate your public key:
 
-1. Compute <span>\\(C = AB\\)</span>.
-2. Compute <span>\\(M = \phi(C)\\)</span> using the `RSAMath.totient(C)` method.
-3. Compute E, a value co-prime to M.  The `RSAMath.coprime(M)` method can help you do this.
-4. Compute D, the modular inverse of <span>\\(E (mod \; M)\\)</span>.  The `RSAMath.mod_inverse(E, M)` method can help you do this.
+1. Choose two prime numbers A and B.  Make these prime numbers at least 2 digits in length, but no more than 3 digits.  In practice, the values are much larger, but this is a demonstration.
+2. Compute <span>\\(C = AB\\)</span>.
+3. Compute <span>\\(M = \phi(C)\\)</span> using the `RSAMath.totient(C)` method.
+4. Compute E, a value co-prime to M.  The `RSAMath.coprime(M)` method can help you do this.
+5. Compute D, the modular inverse of <span>\\(E (mod \; M)\\)</span>.  The `RSAMath.mod_inverse(E, M)` method can help you do this.
 
 Here is an example:
 
@@ -146,7 +147,7 @@ long B; // assign this to a prime number, perhaps from the Scanner or by computi
 long C = A*B;
 
 RSAMath rsa = new RSAMath();
-long M = rsa.totient(C); // M should be equal to (A-1)*(B-1) in this example, because A and B are prime numbers and C = A * B
+long M = rsa.totient(C); 
 long E = rsa.coprime(M);
 ```
 
@@ -225,7 +226,7 @@ Going back through the RSA algorithm, how did you compute your private key from 
   
 </details>
 
-Since these are small keys, you can compute <span>\\(M = \phi(C)\\)</span> directly, either by factoring C into its prime numbers A and B, and computing <span>\\(M = (A-1)(B-1)\\)</span>, or by computing the Totient of C directly (notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B).    
+Since these are small keys, you can compute <span>\\(M = \phi(C)\\)</span> directly, either by factoring C into its prime numbers A and B, or by computing the Totient of C directly (notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B).    
 
 Write and test a program to accept a public key.  To do this, compute your partner's private key from their public key, and test that you can obtain your own private key given your public key.  Print the private key to the screen and verify that it is correct with your partner.  This program should only accept E and C, the public key, as inputs.
 
