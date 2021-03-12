@@ -23,7 +23,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("3")        
+    pos === "3"        
  
 files:
   - filename: "Driver.java"
