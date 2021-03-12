@@ -20,10 +20,10 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString.trim();
   correctcheck: |
-    pos.includes("2.71456")
+    pos.includes("2.71456") || pos.includes("2.722014")
   incorrectchecks:
     - incorrectcheck: |
-        pos.includes("2.722")
+        pos.includes("2.722004")
       feedback: "Try again: you might be iterating once too many times; don't forget that initializing the variable counts as the first multiplication!" 
     - incorrectcheck: |
         pos.includes("2.613")
