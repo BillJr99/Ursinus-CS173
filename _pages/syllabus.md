@@ -122,8 +122,8 @@ instructors:
     endtime: "5:00 PM"
     location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom - Link Available Here</a>" 
   - day: "R"
-    starttime: "12:00 PM"
-    endtime: "1:00 PM"
+    starttime: "7:00 PM"
+    endtime: "8:00 PM"
     location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom - Link Available Here</a>"
     
 textbooks:
