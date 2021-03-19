@@ -31,11 +31,11 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution
   readings:
     - rtitle: "Arrays Activity"
-      rlink: "../../Activities/Arrays"
+      rlink: "../Activities/Arrays"
     - rtitle: "Iteration Activity"
-      rlink: "../../Activities/Iteration"      
+      rlink: "../Activities/Iteration"      
     - rtitle: "Conditionals Activity"
-      rlink: "../../Activities/Conditionals"  
+      rlink: "../Activities/Conditionals"  
   questions:
     - "What character is closest to pixel value 0.1?  How did you figure that out?"
     - "Suppose there are 20 pixels per row for an image that you're reading, your block size is 8 pixels wide, and you are reading the top row.  The upper left corner is pixel (0, 0).  What is the x pixel location for the next block that you read, and for the last block that you'll read in that row?"  
@@ -49,7 +49,7 @@ tags:
 
 In this assignment \[[^1]\], you will work with with 2D arrays in Java with a concrete, visual application. Students will write a program to automatically generate ["ASCII Art"](https://en.wikipedia.org/wiki/ASCII_art), which is text that approximates a given image. An example is given below with the UC logo. In this assignment, we will restrict ourselves to characters in the ASCII subset of UTF-8, including lowercase letters, uppercase letters, and some special characters; hence the name "ASCII Art."
 
-Please [download](../../files/asmt-asciiart/ASCIIArt_master.zip) the skeleton code for this assignment. You will be editing `src/ASCIIArt.java`.
+Please [download](../files/asmt-asciiart/ASCIIArt_master.zip) the skeleton code for this assignment. You will be editing `src/ASCIIArt.java`.
 
 ## Background: Grayscale Images and Text
 
@@ -62,7 +62,7 @@ double[][] image = getGrayscaleArray(picture);
 
 This code will load in the Ursinus image at the top of this page as a grayscale image. The figure below shows an example of how to index three different pixels in this image, as well as their value in the array. As you can see, pixels which are darker have a value closer to 0, and pixels which are lighter have a value closer to 1.
 
-![Three Ursinus Bears in greyscale with sample pixels identified](../../images/asmt-asciiart/Pixels.png)
+![Three Ursinus Bears in greyscale with sample pixels identified](../images/asmt-asciiart/Pixels.png)
 
 To turn this into text, we observe that certain characters are "darker" than others if we squint our eyes; that is, certain characters require more ink than others to draw in the same area. Our goal, therefore, will be to print out darker characters for darker images in the region, and lighter characters for lighter regions. Let's consider using all of the character below, for example:
 
@@ -72,7 +72,7 @@ To turn this into text, we observe that certain characters are "darker" than oth
 
 This can be represented as a constant string `GRAYSCALE_CHARS`, and can be found in the sample code provided. If you look closely, you will see that these characters have been sorted roughly in order from darkest to lightest. Assuming you're using the default font in Netbeans's console, the image below shows these characters blown up, along with the percentage of the canvas taken up by their ink:
 
-![Grayscale characters with their relative ink weights, in descending order by their weight](../../images/asmt-asciiart/sorted.png)
+![Grayscale characters with their relative ink weights, in descending order by their weight](../images/asmt-asciiart/sorted.png)
 
 A constant array called `GRAYSCALE_VALUES` has also been provided, which is parallel to the array `GRAYSCALE_CHARS`, and which holds a 0 for the darkest one and a 1 for the lightest one. For instance:
 
@@ -88,15 +88,15 @@ At this point, we could simply print out a row of text for each row in the grays
 
 If we take a block in a bright region, the average grayscale is very high, so it ends up getting a single quote, which has very little ink.
 
-![Ursinus flag with a bright pixel in the upper right region highlighted](../../images/asmt-asciiart/Flag_24_48.png)
+![Ursinus flag with a bright pixel in the upper right region highlighted](../images/asmt-asciiart/Flag_24_48.png)
 
 If we take a dark region in the tree, the average is quite low, and it gets an uppercase B, which is one of the characters that uses the most ink.
 
-![Ursinus flag with a dark pixel in the upper right region highlighted](../../images/asmt-asciiart/Flag_48_24.png)
+![Ursinus flag with a dark pixel in the upper right region highlighted](../images/asmt-asciiart/Flag_48_24.png)
 
 If we take a block that's one one of the bricks, it's somewhere in between, so the average is about middle gray, which ends up getting a lowercase c, which uses a medium amount of ink.
 
-![Ursinus flag with a medium-dark pixel in the upper right region highlighted](../../images/asmt-asciiart/Flag_280_32.png)
+![Ursinus flag with a medium-dark pixel in the upper right region highlighted](../images/asmt-asciiart/Flag_280_32.png)
 
 When you do this, you should take all non-overlapping blocks in the image that you can. So, for instance, the above image is `466x466` pixels. This means that if we use a block that's 8 tall and 4 wide, we can fit 59 blocks from top to bottom and 117 blocks from left to right. For instance, the block that started at row 28 and column 32 in the above image is 35 rows down and 8 columns over.
 
@@ -121,7 +121,7 @@ Below are some examples of ASCII art generated with a working implementation.
 ### Ursinus Bear Logo
 The following image has been provided in the starter code `Examples/` directory.
 
-![Ursinus Bear Logo](../../images/asmt-asciiart/ursinus.png)
+![Ursinus Bear Logo](../images/asmt-asciiart/ursinus.png)
 
 You can load this in with the following code
 
@@ -132,12 +132,12 @@ double[][] image = getGrayscaleArray(picture);
 
 Using blocks with 4 rows tall and 2 columns wide, we get the following ASCII art image:
 
-![Ursinus Bear Logo ASCII Rendering](../../images/asmt-asciiart/ursinus_4_2_text.png)
+![Ursinus Bear Logo ASCII Rendering](../images/asmt-asciiart/ursinus_4_2_text.png)
 
 ### Parker's Pumpkin
 The following image has been provided in the starter code `Examples/` directory. It was created by Parker Fairchild in CS 476.
 
-![Parker's Pumpkin](../../images/asmt-asciiart/pumpkin.png)
+![Parker's Pumpkin](../images/asmt-asciiart/pumpkin.png)
 
 You can load this in with the following code
 
@@ -148,12 +148,12 @@ double[][] image = getGrayscaleArray(picture);
 
 Using blocks with 4 rows tall and 2 columns wide, we get the following ASCII art image:
 
-![Parker's Pumpkin ASCII Rendering](../../images/asmt-asciiart/pumpkin_4_2_text.png)
+![Parker's Pumpkin ASCII Rendering](../images/asmt-asciiart/pumpkin_4_2_text.png)
 
 ### Mona Lisa
 The following image has been provided in the starter code `Examples/` directory. 
 
-![Mona Lisa](../../images/asmt-asciiart/MonaLisa.png)
+![Mona Lisa](../images/asmt-asciiart/MonaLisa.png)
 
 You can load this in with the following code
 
@@ -164,12 +164,12 @@ double[][] image = getGrayscaleArray(picture);
 
 Using blocks with 4 rows tall and 2 columns wide, we get the following ASCII art image:
 
-![Mona Lisa ASCII Rendering](../../images/asmt-asciiart/MonaLisa_4_2_text.png)
+![Mona Lisa ASCII Rendering](../images/asmt-asciiart/MonaLisa_4_2_text.png)
 
 ### R2 D2
 The following image has been provided in the starter code `Examples/` directory. 
 
-![R2 D2](../../images/asmt-asciiart/r2d2.png)
+![R2 D2](../images/asmt-asciiart/r2d2.png)
 
 You can load this in with the following code
 
@@ -180,12 +180,12 @@ double[][] image = getGrayscaleArray(picture);
 
 Using blocks with 8 rows tall and 4 columns wide, we get the following ASCII art image:
 
-![R2 D2 ASCII Rendering](../../images/asmt-asciiart/r2d2_8_4_text.png)
+![R2 D2 ASCII Rendering](../images/asmt-asciiart/r2d2_8_4_text.png)
 
 ### Ursinus Flag
 The following image has been provided in the starter code `Examples/` directory. 
 
-![Ursinus Flag](../../images/asmt-asciiart/ursinusFlag.png)
+![Ursinus Flag](../images/asmt-asciiart/ursinusFlag.png)
 
 You can load this in with the following code
 
@@ -196,7 +196,7 @@ double[][] image = getGrayscaleArray(picture);
 
 Using blocks with 2 rows tall and 1 column wide, we get the following ASCII art image:
 
-![Ursinus Flag ASCII Rendering](../../images/asmt-asciiart/ursinusFlag_2_1_text.png)
+![Ursinus Flag ASCII Rendering](../images/asmt-asciiart/ursinusFlag_2_1_text.png)
 
 ## Extra Credit: Art Contest
 As an optional part of this assignment, students may create a submission as part of an art contest. Any submission whatsoever will receive 7.5% extra credit points, and the winner will receive an additional 7.5% extra cedit points.
@@ -205,6 +205,6 @@ In your README, in addition to the standard questions, please also indicate if y
 
 ## Exporting your Project for Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)  
