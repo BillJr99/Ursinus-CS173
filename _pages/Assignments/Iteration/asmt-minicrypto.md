@@ -128,7 +128,7 @@ To generate your public key:
 
 1. Choose two prime numbers A and B.  Make these prime numbers at least 2 digits in length, but no more than 3 digits.  In practice, the values are much larger, but this is a demonstration.
 2. Compute <span>\\(C = AB\\)</span>.
-3. Compute <span>\\(M = \phi(C)\\)</span> using the `RSAMath.totient(C)` method.  This will be equal to `(A-1)*(B-1)` if your values of A and B are prime.
+3. Compute <span>\\(M = \phi(C)\\)</span> by computing `(A-1)*(B-1)`.  This will be equal to the result of the `RSAMath.totient(C)` method if your values of A and B are prime.
 4. Compute E, a value co-prime to M.  The `RSAMath.coprime(M)` method can help you do this.
 5. Compute D, the modular inverse of <span>\\(E (mod \; M)\\)</span>.  The `RSAMath.mod_inverse(E, M)` method can help you do this.
 
@@ -147,7 +147,7 @@ long B; // assign this to a prime number, perhaps from the Scanner or by computi
 long C = A*B;
 
 RSAMath rsa = new RSAMath();
-long M = rsa.totient(C); 
+long M = (A-1)*(B-1); // equal to rsa.totient(C), but much easier to compute! 
 long E = rsa.coprime(M);
 ```
 
