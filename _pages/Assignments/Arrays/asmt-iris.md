@@ -102,7 +102,7 @@ public static ArrayList<String> readCSV(String filePath) {
             // only add the line if it has non-whitespace content
             // strip() removes leading and trailing whitespace
             if(line.strip().length() > 0) { 
-                lines.add(line);
+                /* TODO: append the line to the lines ArrayList */
             }
         }
     } catch(IOException e) { // if an error occurs, do this!
