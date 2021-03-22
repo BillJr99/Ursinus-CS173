@@ -20,11 +20,7 @@ processor:
   feedbackprocess: | 
     let ans = feedbackString.split("-");
   correctcheck: |
-    ans[0] === "1" && ans[1] === "0" && ans[1] === "2"
-  incorrectchecks:
-    - incorrectcheck: |
-        ans[0] === "1" && ans[1] === "0" && ans[1] === "2"
-      feedback: "Try again: don't forget to re-initialize your counts to 0 right before the inner loop begins, so that your count from one column doesn't wrap around and count the top of the next column!"        
+    ans[0] === "1" && ans[1] === "0" && ans[2] === "2"       
  
 files:
   - filename: "FourInARow.java"
