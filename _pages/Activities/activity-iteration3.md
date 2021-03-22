@@ -25,7 +25,7 @@ info:
             public static void main(String[] args) {               
                 String str = "Hello!";
                 
-                for(int i = 0; i < str.length(); i++); {
+                for(int i = 0; i < str.length(); i++) {
                     System.out.println("Give me a " + str.charAt(i));
                 }
             }
