@@ -795,25 +795,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091450
 DTSTAMP:20210326T000000Z
 DTSTART;VALUE=DATE:20210326
-SUMMARY:CS173 Intro to Computer Science: Lab: Ethical Case Studies Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: Ch. 6.8\nReading: ArrayList Objects https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html\nReading: ArrayList Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html\nReading: ArrayList Iteration https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091451
-DTSTAMP:20210326T000000Z
-DTSTART;VALUE=DATE:20210326
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+DTSTAMP:20210329T000000Z
+DTSTART;VALUE=DATE:20210329
+SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Due
 LOCATION:
-DESCRIPTION:\nReading: Ch. 6.8\nReading: ArrayList Objects https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html\nReading: ArrayList Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html\nReading: ArrayList Iteration https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html\nDeliverable: Lab: Ethical Case Studies Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/EthicalConsiderations
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091452
 DTSTAMP:20210329T000000Z
 DTSTART;VALUE=DATE:20210329
-SUMMARY:CS173 Intro to Computer Science: Lab: Array Averages Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Ethical Case Studies Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -824,7 +824,7 @@ DTSTAMP:20210329T000000Z
 DTSTART;VALUE=DATE:20210329
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/HashMaps\nReading: Ch. 6.8\nDeliverable: Lab: Array Averages Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/ArrayAveraging
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/HashMaps\nReading: Ch. 6.8\nDeliverable: Lab: Array Averages Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/ArrayAveraging\nDeliverable: Lab: Ethical Case Studies Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Labs/EthicalConsiderations
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
