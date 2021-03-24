@@ -608,11 +608,7 @@ schedule:
   - rtitle: "ArrayList Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
   - rtitle: "ArrayList Iteration"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"
-  deliverables: 
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100     
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
 - week: "10"
   date: "0"
   title: "HashMaps and Caches"  
@@ -623,6 +619,9 @@ schedule:
   deliverables:
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
+    points: 100     
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
     points: 100     
 - week: "10"
   date: "1"
