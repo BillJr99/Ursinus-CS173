@@ -44,12 +44,15 @@ files:
                 // ... iterate across each row with the inner loop
                 // ... but we want to loop down every column, so I'm switching the 
                 // ... i and j indices so that we loop down each column instead!
-                for(int j = 0; j < board.length; j++) {
+                // the number of columns is board[0].length - the size of the first row
+                // ... (we'll assume they're all the same, so we'll just pick the first one!)
+                for(int j = 0; j < board[0].length; j++) {
                   // TODO: initialize count1 and count2 to 0 so that we have a 
                   // ... fresh count within each column
 
                   // now, loop down each of the columns to look for a winner
-                  for(int i = 0; i < board[j].length; i++) {
+                  // the number of rows is board.length
+                  for(int i = 0; i < board.length; i++) {
                     // TODO: if board[i][j] is 1, tally one for team1's count,  
                     // ... and similarly, if board[i][j] is 2, tally 1 for team2.
                     // ... BUT, also reset the other team's count to 0 (since they 
