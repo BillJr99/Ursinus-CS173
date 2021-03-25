@@ -182,6 +182,8 @@ Write test cases that encrypt values using your public key, and decrypt them usi
 ## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
 Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a String parameter, and for each character in the string, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
 
+### Encrypting a Message to Your Partner Using Their E and C Key Values
+
 Your loop to obtain each character from the String will look something like this:
 
 ```java
@@ -197,6 +199,8 @@ for(int i = 0; i < msg.length(); i++) {
 Each encrypted value X will be the ASCII value of each character in a String.  You can iterate over the characters of the string, and obtain a char value representing each character in the loop.  A char is really an integer whose value is the ASCII value of that character.  So, you can obtain the numeric ASCII value of the character by casting the `char` to a `long` (a `long` is a whole number like an `int`, but it is double the size of an `int`):
 
 `long asciiX = (long) x; // where c is a char`
+
+### Decrypting a Message from Your Partner Using Your D and C Key Values
 
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!  **For example, you can read each encrypted `int` value from the user keyboard using the `Scanner`, and enter a negative number to indicate that you have finished reading.  Continue reading and decrypting characters in a loop `while` the input is not negative!**
 
