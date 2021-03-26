@@ -51,7 +51,7 @@ In this assignment \[[^1]\], you will work with with 2D arrays in Java with a co
 
 Please [download](../files/asmt-asciiart/ASCIIArt_master.zip) the skeleton code for this assignment. You will be editing `src/ASCIIArt.java`.
 
-## Background: Grayscale Images and Text
+## Part 1: Grayscale Images and Text
 
 As we discussed in our 2D arrays module, a 2D array is a natural data structure for image data, since an image is a two dimensional object with both an x and y coordinate for each pixel. In this assignment, we will be dealing with grayscale images, in which each pixel goes from black (0) to white (1). We usually treat the outer array index as a row (y coordinate) and the inner array index as a column (x coordinate). For instance, let's run the following code, using the methods provided in the assignment:
 
@@ -83,7 +83,7 @@ System.out.print(GRAYSCALE_VALUES[2]);
 
 prints out `B 0.08205`. This indicates that a `B` is a darker character, with a grayscale value of only about `0.08`.
 
-## Background: Rectangular Averaging
+## Part 2: Rectangular Averaging
 At this point, we could simply print out a row of text for each row in the grayscale image, and print out the character at the index of `GRAYSCALE_VALUES` with the closest grayscale value. However, not only would this print out way too many characters, but the characters are only printed out half as wide as they are tall, so this would end up printing out an image that's stretched out by a factor of 2 vertically (the "aspect ratio" would be wrong). To address both of these problems, we can output a single character per block of pixels. In particular, we can average all of the grayscale values in a rectangular block that's twice as tall as it is wide, and print out a single character for this block. To see an example, let's consider taking a block that's 8 pixels tall and 4 pixels wide in different parts of an image of an Ursinus flag.
 
 If we take a block in a bright region, the average grayscale is very high, so it ends up getting a single quote, which has very little ink.
@@ -105,8 +105,10 @@ When you do this, you should take all non-overlapping blocks in the image that y
 ## Code to Write
 You should fill in `ASCIIArt.java` to print out rows of text to create ASCII art following the above procedure. You will have to come up with your own methods and way of organizing the code, but you should do the following steps at some point:
 
-* Specify a width and height of a block.  For example, if your width is 4 and your height is 8, you will iterate over the first 8 rows, and the first 4 columns, computing the average greyscale value in the image.  You would then consider the first 8 rows and the next set of 4 columns, and so on.  When you reach the end of the row, repeat this process for the next set of 8 rows.  Your function and loop should not hard code the width and height: they should be variables and function parameters!
-* For each non-overlapping block, average the grayscale values in that block, find the character with the closest grayscale value according to `GRAYSCALE_VALUES`, and print that character out. Print line breaks at the end of each row of blocks.
+* Begin by computing each pixel individually (that is, a width and height of 1).  Find the index of the greyscale value nearest to your pixel, and retrieve the corresponding index from the greyscale characters array.  This is the character that most closely resembles your pixel.
+* Print that pixel to the screen as you move across the row of pixels.  Print line breaks at the end of each row of blocks.
+* Now, modify this program to specify a width and height of a block.  For example, if your width is 4 and your height is 8, you will iterate over the first 8 rows, and the first 4 columns, computing the average greyscale value in the image.  You would then consider the first 8 rows and the next set of 4 columns, and so on.  When you reach the end of the row, repeat this process for the next set of 8 rows.  Your function and loop should not hard code the width and height: they should be variables and function parameters!
+* For each non-overlapping block, average the greyscale values in that block, find the character with the closest grayscale value according to `GRAYSCALE_VALUES`, and print that character out, like you did before.
 
 ## Hints
 * In the Horstmann book, example 6.3.2 is a helpful reference for finding averages, and example 6.3.3 is a helpful example for finding the closest value to another value when you're converting from brightness to a character.  This is similar to finding the minimum value in a list - except that you are now finding the minimum difference from your greyscale value (how can you compute this?).
