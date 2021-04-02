@@ -44,7 +44,7 @@ info:
         - What is different about the data type that defines the <code>HashMap</code> variable in this program?  What do the extra parameters mean?
         - What would you change in the program above to store the number of students enrolled in each course, instead of the instructor of each course?
         - What other types of data could you represent with a <code>HashMap</code>?
-        - Suppose you are developing a web browser that accesses web pages.  You want to **cache** the pages, so that you only access them once, to save on I/O, network calls, and your data plan.  How might a <code>HashMap</code> help you to do this?  What would be the key and the value?
+        - "Suppose you are developing a web browser that accesses web pages.  You want to <strong>cache</strong> the pages, so that you only access them once, to save on I/O, network calls, and your data plan.  How might a <code>HashMap</code> help you to do this?  What would be the key and the value?"
     - model: |         
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[   
         import java.util.HashMap;
