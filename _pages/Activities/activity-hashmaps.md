@@ -16,7 +16,7 @@ info:
        <a title="© 2010 by Tomasz Sienicki [user: tsca, mail: tomasz.sienicki at gmail.com] / CC BY (https://creativecommons.org/licenses/by/3.0)" href="https://commons.wikimedia.org/wiki/File:Telefonbog_ubt-1.JPG"><img width="512" alt="Telefonbog ubt-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Telefonbog_ubt-1.JPG"></a>
       title: "Data Maps"
       questions:
-        - Consider the dictionary and phone book above.  When you look something up in each of them, what are you looking up, and what are you looking **for**?  What are the data types?
+        - "Consider the dictionary and phone book above.  When you look something up in each of them, what are you looking up, and what are you looking <strong>for</strong>?  What are the data types?"
         - What are some ways that we make these lookups easier?  How are the data organized, and what part of the data is organized that way?  
         - A phone book maps ______ to ______, and a dictionary maps ______ to ______.
         - In computing, we tend to say that we map keys to values.  For the phone book and dictionary, what is the key, and what is the value?
