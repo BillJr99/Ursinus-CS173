@@ -70,7 +70,8 @@ The user will enter the next location, and you will loop until reaching the `end
 and determine if the user's room entry is in the set of valid moves.  If the user's choice is not in the set of moves corresponding to the current room, continue to prompt them in a loop until they enter a valid choice.  You might wish to write a function
 to assist you with this:
 
-```public static boolean contains(String[] roomMoves, String val) {
+```java
+public static boolean contains(String[] roomMoves, String val) {
     boolean result = false; // assume the value is not in the array, and try to find it
     
     // TODO: Loop over each String in roomMoves
@@ -167,7 +168,7 @@ if(!str1.equals(str2)) {
 ```
 
 ### For Additional Context: Printing an Array
-You won't be able to `System.out.println` an array - so you'll need to print each item in a loop.  For example:
+You won't be able to `System.out.println` an array - so you'll need to print each item in a loop.  If you print an array variable directly, you might see an output like this: `[I@76ed5528`.  This means that the variable is an integer array beginning at memory address `0x76ed5528`.  Instead, you should print each value of the array, one element at a time.  That's exactly what a loop is for! Here's how to do it:
 
 ```java
 // assuming you have a String[] possibleMoves array
