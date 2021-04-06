@@ -8,9 +8,10 @@ info:
   coursenum: CS173
   points: 100
   goals:
-    - To implement an arithmetic expression into executable code
-    - To map variables to expression parameters
-    - To identify and implement appropriate unit test cases
+    - "To use a <code>HashMap</code> to associate keys with values"
+    - To use a loop to input validated user data
+    - To search an array for a value, and determine if that value is contained by the given array
+    - To loop over and print values from an array
   rubric:
     - weight: 60
       description: Algorithm Implementation
@@ -44,6 +45,8 @@ info:
 tags:
   - hashmaps
   - iteration
+  - arrays
+  - strings
   
 ---
 
