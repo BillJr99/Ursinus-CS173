@@ -152,6 +152,12 @@ String[] nextSteps = moves.get(currentRoom); // gets the set of next moves the u
 
 **What happens if you call `places.get` with a room that doesn't exist in your program?**
 
+### Summary: What To Do
+1. Create a `HashMap` of places that your story will contain.  This will map a room location to the story narrative that should display when the user arrives in that room.  You can lookup this map based on the `currentRoom` variable, and print the resulting value, to tell the story!
+2. Create a `HashMap` of moves that maps each place in the array of places that you can move to next.  You'll print the contents of this array after you print the story narrative, to invite the user to input where to go next.  **Hint: the place names must match the ones you used in the first map of story places!  This is case sensitive, so if you call a place `dorm` in the first `HashMap`, you must call it `dorm` in this one, too.**
+3. Allow the user to enter one of these places to go to next.  Make sure that place is in the array of places that you can go from the current room.  If the user enters a place that is not in the set of valid places, continue asking the user where to go next.  **What kind of loop should you use for this? Hint: this loop should go inside your outer story loop!**
+4. Repeat steps 1 through 3 until `currentRoom` is equal to `end`.  **Hint: Don't forget to print the story message that goes with the `end` place!  You may need to print this outside of the loop, if your loop terminates as soon as the `currentRoom` variable becomes `end`.**
+
 ### For Additional Context: Checking String Equality
 To check if two `String`s are equal, you can do this:
 
