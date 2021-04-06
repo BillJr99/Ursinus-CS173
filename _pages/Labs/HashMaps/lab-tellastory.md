@@ -68,14 +68,14 @@ Here is an example table illustrating what a `places` map might look like (note 
 
 Here is an example table illustrating what a corresponding `moves` map might look like (note that each value here is a `String[]` array, and that the keys and values here are the same as the keys in the `places` map!):
 
-|    key    |            value           |
-|:---------:|:--------------------------:|
-| start     | {"classroom", "courtyard"} |
-| classroom | {"start", "courtyard"}     |
-| courtyard | {"start", "classroom"}     |
-| end       | {}                         |
+|    key    |            value               |
+|:---------:|:------------------------------:|
+| start     | {"classroom", "courtyard"}     |
+| classroom | {"start", "courtyard", "end"}  |
+| courtyard | {"start", "classroom", "end"}  |
+| end       | {}                             |
 
-You should have at least 5 possible rooms, and at least 3 of those rooms should have a choice of at least 2 possible next locations.
+At the bottom of the page, you'll see a nice diagram illustrating this `moves` map.  **You should have at least 5 possible rooms, and at least 3 of those rooms should have a choice of at least 2 possible next locations.**
 
 **Does your end room need a moves transition to other rooms?  Why or why not?  (You could map it to an empty array if you wanted).**
 
