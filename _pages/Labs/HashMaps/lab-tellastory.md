@@ -63,7 +63,7 @@ Here is an example table illustrating what a `places` map might look like (note 
 | courtyard | Welcome to the courtyard!  |
 | end       | The end!                   |
 
-Here is an example table illustrating what a corresponding `moves` map might look like (note that each value here is a `String[]` array, and that the keys are the same as the keys in the `places` map!):
+Here is an example table illustrating what a corresponding `moves` map might look like (note that each value here is a `String[]` array, and that the keys and values here are the same as the keys in the `places` map!):
 
 |    key    |            value           |
 |:---------:|:--------------------------:|
