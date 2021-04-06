@@ -52,7 +52,25 @@ In this lab, you will use `HashMap`s to tell a dynamic story.
 ## Part 1: The Story
 Create a `HashMap` called `places` that define the different places you can go in your story.  These will map to a `String`.  The key `String` is the name of the place.  The second `String` (the value at that key) is a narration of your story upon entering that location.  Print this narration to the screen.
 
-Create another `HashMap` called `moves` that gives a list of possible places one can go given the current room.  This will map to a value that is an array or an `ArrayList` of `String` values, each of which is a room key from the `places` array.  For example, `moves["courtyard"]` would contain the value `"classroom"` if one can go to the classroom from the courtyard.  `courtyard` and `classroom` should each be a key in `moves` and in `places`. Print out the list of keys and the names of those locations (you can look them up in the `HashMap`).  
+Create another `HashMap` called `moves` that gives a list of possible places one can go given the current room.  This will map to a value that is an array or an `ArrayList` of `String` values, each of which is a room key from the `places` array.  For example, `moves.get("courtyard")` would contain the value `"classroom"` if one can go to the classroom from the courtyard.  `courtyard` and `classroom` should each be a key in `moves` and in `places`. Print out the list of keys and the names of those locations (you can look them up in the `HashMap`).  
+
+Here is an example table illustrating what a `places` map might look like (note that each value is a `String`!):
+
+|    key    |            value           |
+|:---------:|:--------------------------:|
+| start     | This is the starting room! |
+| classroom | I am in a classroom!       |
+| courtyard | Welcome to the courtyard!  |
+| end       | The end!                   |
+
+Here is an example table illustrating what a corresponding `moves` map might look like (note that each value here is a `String[]` array, and that the keys are the same as the keys in the `places` map!):
+
+|    key    |            value           |
+|:---------:|:--------------------------:|
+| start     | {"classroom", "courtyard"} |
+| classroom | {"start", "courtyard"}     |
+| courtyard | {"start", "classroom"}     |
+| end       | {}                         |
 
 You should have at least 5 possible rooms, and at least 3 of those rooms should have a choice of at least 2 possible next locations.
 
