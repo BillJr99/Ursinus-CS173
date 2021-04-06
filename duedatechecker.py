@@ -216,10 +216,10 @@ if len(message) > 0:
     
     #print(message)
     
-    MAILJET_KEY = os.environ['MAILJET_KEY']
-    MAILJET_SECRET = os.environ['MAILJET_SECRET']
+    if 'MAILJET_KEY' in os.environ and 'MAILJET_SECRET' in os.environ:
+        MAILJET_KEY = os.environ['MAILJET_KEY']
+        MAILJET_SECRET = os.environ['MAILJET_SECRET']
     
-    if (len(MAILJET_KEY) > 0 and len(MAILJET_SECRET) > 0):
         #print(MAILJET_KEY)
         #print(MAILJET_SECRET)
         
