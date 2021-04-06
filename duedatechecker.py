@@ -257,7 +257,7 @@ if len(message) > 0:
         msg['From'] = "wmongan@ursinus.edu"
         msg['To'] = "wmongan@ursinus.edu"
         
-        with smtplib.SMTP('localhost', port) as server:            
+        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:            
             server.sendmail(sender, receivers, msg.as_string())  
         
 f.close()
