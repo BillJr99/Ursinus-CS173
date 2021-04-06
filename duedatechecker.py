@@ -258,6 +258,6 @@ if len(message) > 0:
         msg['To'] = "wmongan@ursinus.edu"
         
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:            
-            server.sendmail(sender, receivers, msg.as_string())  
+            server.sendmail("wmongan@ursinus.edu", "wmongan@ursinus.edu", msg.as_string())  
         
 f.close()
