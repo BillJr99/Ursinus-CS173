@@ -200,6 +200,10 @@ for(int i = 0; i < possibleMoves.length; i++) {
 
 **In your README, include a graph (either a drawing or in text is fine!) that shows the progression of your rooms from one to the next.**
 
+Here is an example diagram from my story example above:
+
+![Story State Diagram](../images/lab-tellastory/state-diagram.png)
+
 ## Extra Credit (Up to 15%): Best Story Competition
 Creativity is encouraged, but not required for a grade!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!  You will receive 7.5% extra credit for entering your submission, and the class will vote on their favorite story (the winner will receive an additional 7.5% extra credit).
 
