@@ -5,6 +5,8 @@ import uuid
 from dateutil import tz
 import os
 from mailjet_rest import Client # pip install mailjet_rest
+from email.mime.text import MIMEText
+import smtplib
 
 HEADER = 'Early Warning: https://campusweb.ursinus.edu/intranet/apps/AcademicWarning/default.aspx\nExam grades\nGrading\nMidterm checkin\nAttendance Reports: https://ursinus-edu.zoom.us/account/my/report?from=11/01/2020&to=11/30/2020'
 
@@ -217,33 +219,45 @@ if len(message) > 0:
     MAILJET_KEY = os.environ['MAILJET_KEY']
     MAILJET_SECRET = os.environ['MAILJET_SECRET']
     
-    #print(MAILJET_KEY)
-    #print(MAILJET_SECRET)
-    
-    mailjet = Client(auth=(MAILJET_KEY, MAILJET_SECRET), version='v3.1')
+    if (len(MAILJET_KEY) > 0 and len(MAILJET_SECRET) > 0):
+        #print(MAILJET_KEY)
+        #print(MAILJET_SECRET)
+        
+        mailjet = Client(auth=(MAILJET_KEY, MAILJET_SECRET), version='v3.1')
 
-    data = {
-      'Messages': [
-        {
-          "From": {
-            "Email": "wmongan@ursinus.edu",
-            "Name": "William Mongan"
-          },
-          "To": [
+        data = {
+          'Messages': [
             {
-            "Email": "wmongan@ursinus.edu",
-            "Name": "William Mongan"
+              "From": {
+                "Email": "wmongan@ursinus.edu",
+                "Name": "William Mongan"
+              },
+              "To": [
+                {
+                "Email": "wmongan@ursinus.edu",
+                "Name": "William Mongan"
+                }
+              ],
+              "Subject": "Ursinus Deliverables Reminder",
+              "TextPart": message,
+              "HTMLPart": message.replace('\n', '<br>')
             }
-          ],
-          "Subject": "Ursinus Deliverables Reminder",
-          "TextPart": message,
-          "HTMLPart": message.replace('\n', '<br>')
+          ]
         }
-      ]
-    }
-    
-    result = mailjet.send.create(data=data)
-    #print(result.status_code)
-    #print(result.json())
-    
+        
+        result = mailjet.send.create(data=data)
+        #print(result.status_code)
+        #print(result.json())
+    else:
+        SMTP_SERVER = os.environ['SMTP_SERVER'] # smtp.ursinus.edu
+        SMTP_PORT = os.environ['SMTP_PORT'] # 25
+        
+        msg = MIMEText(message)
+        msg['Subject'] = "Ursinus Deliverables Reminder"
+        msg['From'] = "wmongan@ursinus.edu"
+        msg['To'] = "wmongan@ursinus.edu"
+        
+        with smtplib.SMTP('localhost', port) as server:            
+            server.sendmail(sender, receivers, msg.as_string())  
+        
 f.close()
