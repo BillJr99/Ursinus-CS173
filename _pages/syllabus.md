@@ -56,8 +56,8 @@ info:
       mroom: "TBD"     
   finalexam: 
     - fdate: "2021/05/11"
-      fstarttime: "1 PM"
-      fendtime: "4 PM"
+      fstarttime: "1:00 PM"
+      fendtime: "4:00 PM"
       froom: "REMOTE"
   flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 11:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 3% per day if submitted before 11:59 PM Eastern Time on the day submitted.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
   late_penalty_per_period: 3
