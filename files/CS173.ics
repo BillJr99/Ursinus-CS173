@@ -948,31 +948,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091461
 DTSTAMP:20210416T000000Z
 DTSTART;VALUE=DATE:20210416
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesis Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/SearchingAndSorting\nReading: Ch. 9.6.3\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Methods Video https://www.youtube.com/embed/WaNLJf8xzC4\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091462
-DTSTAMP:20210416T000000Z
-DTSTART;VALUE=DATE:20210416
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091463
-DTSTAMP:20210416T000000Z
-DTSTART;VALUE=DATE:20210416
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/SearchingAndSorting\nReading: Ch. 9.6.3\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Methods Video https://www.youtube.com/embed/WaNLJf8xzC4\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/InsertionSort/Module\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: Iris Dataset Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091464
 DTSTAMP:20210419T000000Z
 DTSTART;VALUE=DATE:20210419
 SUMMARY:CS173 Intro to Computer Science: Final Project: Project and Presentation Handed Out
@@ -981,7 +963,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091465
+UID:00000000-0000-0000-0000-0192cc091463
 DTSTAMP:20210419T000000Z
 DTSTART;VALUE=DATE:20210419
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -990,10 +972,28 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Recur
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091466
+UID:00000000-0000-0000-0000-0192cc091464
 DTSTAMP:20210420T000000Z
 DTSTART;VALUE=DATE:20210420
 SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091465
+DTSTAMP:20210420T000000Z
+DTSTART;VALUE=DATE:20210420
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Guitar String Synthesis Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091466
+DTSTAMP:20210420T000000Z
+DTSTART;VALUE=DATE:20210420
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1004,7 +1004,7 @@ DTSTAMP:20210420T000000Z
 DTSTART;VALUE=DATE:20210420
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module
+DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: Iris Dataset Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1074,18 +1074,18 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09146f
 DTSTAMP:20210427T000000Z
 DTSTART;VALUE=DATE:20210427
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091470
-DTSTAMP:20210427T000000Z
-DTSTART;VALUE=DATE:20210427
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+DTSTAMP:20210428T000000Z
+DTSTART;VALUE=DATE:20210428
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Due
 LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1094,7 +1094,7 @@ DTSTAMP:20210428T000000Z
 DTSTART;VALUE=DATE:20210428
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/Iris
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
