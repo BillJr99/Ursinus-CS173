@@ -701,13 +701,7 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
-    points: 3   
-  - dtitle: "Programming Assignment: Guitar String Synthesis Due"
-    dlink: "Assignments/GuitarStringSynth"      
-    points: 100     
-  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-    dlink: "Assignments/Iris"      
-    points: 100      
+    points: 3         
 - week: "13"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -729,7 +723,13 @@ schedule:
   deliverables:
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
-      points: 3  
+      points: 3
+    - dtitle: "Programming Assignment: Guitar String Synthesis Due"
+      dlink: "Assignments/GuitarStringSynth"      
+      points: 100     
+    - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+      dlink: "Assignments/Iris"      
+      points: 100      
 - week: "13"
   date: "2"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -756,14 +756,14 @@ schedule:
       points: 10       
 - week: "14"
   date: "1"
-  title: "Final Project Workshop"
+  title: "Final Project Workshop"      
+- week: "14"
+  date: "2"
+  title: "Final Project Workshop" 
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
-    points: 100        
-- week: "14"
-  date: "2"
-  title: "Final Project Workshop"      
+    points: 100    
 - week: "14"
   date: "3"
   title: "Final Project Workshop" 
