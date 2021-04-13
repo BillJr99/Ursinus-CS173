@@ -682,11 +682,7 @@ schedule:
     points: 100    
 - week: "12"
   date: "2"
-  title: "Lab: Drop the Lowest" 
-  deliverables:
-  - dtitle: "Lab: Drop the Lowest Handed Out"
-    dlink: "Labs/DropLowest" 
-    points: 100      
+  title: "Classes and Object Data Types"      
 - week: "12"
   date: "3"
   title: "Searching and Sorting" 
@@ -724,9 +720,6 @@ schedule:
   - rtitle: "Recursive Searching and Sorting"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"
   deliverables:  
-  - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropLowest"  
-    points: 100 
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100          
