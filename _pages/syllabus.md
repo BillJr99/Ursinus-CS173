@@ -698,10 +698,6 @@ schedule:
     rlink: "https://www.youtube.com/embed/WaNLJf8xzC4"
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"    
-  deliverables:
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3         
 - week: "13"
   date: "0"
   title: "Algorithms: Recursion and Merge Sort" 
@@ -714,6 +710,9 @@ schedule:
   - rtitle: "Recursive Searching and Sorting"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"
   deliverables:  
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3           
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100          
