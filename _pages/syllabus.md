@@ -708,27 +708,27 @@ schedule:
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"
   - rtitle: "Recursive Searching and Sorting"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"
-  deliverables:  
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3           
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"    
-    points: 100          
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"        
 - week: "13"
   date: "1"
-  title: "Lab: Final Project Workshop" 
+  title: "Lab: Final Project Workshop"    
+  deliverables:            
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
+    points: 100    
+- week: "13"
+  date: "2"
+  title: "Algorithms: Recursion and Merge Sort" 
   deliverables:
     - dtitle: "Programming Assignment: Guitar String Synthesis Due"
       dlink: "Assignments/GuitarStringSynth"      
       points: 100     
     - dtitle: "Programming Assignment: Iris Dataset Handed Out"
       dlink: "Assignments/Iris"      
-      points: 100      
-- week: "13"
-  date: "2"
-  title: "Algorithms: Recursion and Merge Sort" 
+      points: 100
+    - dtitle: "Exercise: Insertion Sort"
+      dlink: "Modules/InsertionSort/Module"  
+      points: 3       
 - week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  
