@@ -65,5 +65,5 @@ Should a member of the team fail to participate to the standards set in the prop
 
 ## Version Control (15% Extra Credit)
 
-See [this video](../Modules/Github/Module) for more information on using Git as a version control system to synchronize your project with your partners!  
+See [this video](../Modules/Github/Module) for more information on using Git as a version control system to synchronize your project with your partners, and [this video](https://www.youtube.com/watch?v=5rgp8HkRTzc) for a tutorial on using Git with NetBeans.
 
