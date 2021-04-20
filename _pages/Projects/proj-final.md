@@ -62,3 +62,8 @@ To form a group, students should draft a text document including the names of al
 Students who do not submit the proposal document described above (even if they are named in another group's proposal) within 3 days of the project hand-out date will be assigned to a group and notified via e-mail.
 
 Should a member of the team fail to participate to the standards set in the proposal document described above, one or more members of the group shall notify that student via e-mail of specific tasks from the proposal document that have been agreed to, along with a deadline to communicate with the group (copy me on the e-mail message).  If the student does not respond within 2 days of that message, the group should notify me via e-mail, and I will investigate and, if appropriate, I may re-organize the team by moving one or more members to other groups (whom I will notify via e-mail), or by removing the student from the group (whom I will notify via e-mail).  
+
+## Version Control (15% Extra Credit)
+
+See [this video](../Modules/Github/Module) for more information on using Git as a version control system to synchronize your project with your partners!  
+
