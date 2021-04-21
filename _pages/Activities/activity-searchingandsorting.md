@@ -74,7 +74,7 @@ info:
                 int val = A[i];
 
                 //… and put it into place in sorted order on the left side
-                for(int j = i - 1; i >= 0; i--) {
+                for(int j = i - 1; j >= 0; j--) {
                     if(A[j] > val) {    // "duck-duck-goose" 
                         A[j+1] = A[j];  // if this isn’t the position,
                     }                   // slide the element that’s there 
