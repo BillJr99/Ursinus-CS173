@@ -759,11 +759,7 @@ schedule:
       points: 3  
 - week: "14"
   date: "2"
-  title: "Final Project Workshop" 
-  deliverables:
-  - dtitle: "Programming Assignment: Iris Dataset Due"
-    dlink: "Assignments/Iris"
-    points: 100    
+  title: "Final Project Workshop"    
 - week: "14"
   date: "3"
   title: "Final Project Workshop" 
@@ -785,7 +781,10 @@ schedule:
     - dtitle: "Final Project: Project and Presentation Due"
       dlink: "Projects/Final"   
       points: 100       
-      
+    - dtitle: "Programming Assignment: Iris Dataset Due"
+      dlink: "Assignments/Iris"
+      points: 100 
+    
 university:
   semester: "Spring"
   academicyear: "2020-21"
