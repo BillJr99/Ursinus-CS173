@@ -1020,31 +1020,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091469
 DTSTAMP:20210423T000000Z
 DTSTART;VALUE=DATE:20210423
-SUMMARY:CS173 Intro to Computer Science: Exercise: Recursion
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DynamicProgramming\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09146a
-DTSTAMP:20210423T000000Z
-DTSTART;VALUE=DATE:20210423
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DynamicProgramming\nDeliverable: Participation: Second Self-Assessment Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Recursion/Module
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09146b
-DTSTAMP:20210426T000000Z
-DTSTART;VALUE=DATE:20210426
-SUMMARY:CS173 Intro to Computer Science: Exercise: Merge Sort
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09146c
 DTSTAMP:20210426T000000Z
 DTSTART;VALUE=DATE:20210426
 SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Handed Out
@@ -1053,43 +1035,43 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09146d
+UID:00000000-0000-0000-0000-0192cc09146b
 DTSTAMP:20210426T000000Z
 DTSTART;VALUE=DATE:20210426
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Merge Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/MergeSort/Module\nDeliverable: Debugging Table: Second Check Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+DESCRIPTION:\nDeliverable: Debugging Table: Second Check Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09146c
+DTSTAMP:20210427T000000Z
+DTSTART;VALUE=DATE:20210427
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09146d
+DTSTAMP:20210428T000000Z
+DTSTART;VALUE=DATE:20210428
+SUMMARY:CS173 Intro to Computer Science: Exercise: Recursion
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09146e
-DTSTAMP:20210427T000000Z
-DTSTART;VALUE=DATE:20210427
-SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09146f
-DTSTAMP:20210427T000000Z
-DTSTART;VALUE=DATE:20210427
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091470
 DTSTAMP:20210428T000000Z
 DTSTART;VALUE=DATE:20210428
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/Recursion/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091471
+UID:00000000-0000-0000-0000-0192cc09146f
 DTSTAMP:20210430T000000Z
 DTSTART;VALUE=DATE:20210430
 SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Due
@@ -1098,19 +1080,37 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091472
+UID:00000000-0000-0000-0000-0192cc091470
+DTSTAMP:20210430T000000Z
+DTSTART;VALUE=DATE:20210430
+SUMMARY:CS173 Intro to Computer Science: Exercise: Merge Sort
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091471
 DTSTAMP:20210430T000000Z
 DTSTART;VALUE=DATE:20210430
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Debugging Table: Second Check Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable
+DESCRIPTION:\nDeliverable: Debugging Table: Second Check Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/DebuggingTable\nDeliverable: Exercise: Merge Sort https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/MergeSort/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091472
+DTSTAMP:20210503T000000Z
+DTSTART;VALUE=DATE:20210503
+SUMMARY:CS173 Intro to Computer Science: Participation: Second Self-Assessment Due
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091473
 DTSTAMP:20210503T000000Z
 DTSTART;VALUE=DATE:20210503
-SUMMARY:CS173 Intro to Computer Science: Participation: Second Self-Assessment Due
+SUMMARY:CS173 Intro to Computer Science: Exercise: Dynamic Programming
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1121,7 +1121,7 @@ DTSTAMP:20210503T000000Z
 DTSTART;VALUE=DATE:20210503
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment
+DESCRIPTION:\nDeliverable: Participation: Second Self-Assessment Due https://www.billmongan.com/Ursinus-CS173-Spring2021/./Assignments/Participation/SelfAssessment\nDeliverable: Exercise: Dynamic Programming https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/DynamicProgramming/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
