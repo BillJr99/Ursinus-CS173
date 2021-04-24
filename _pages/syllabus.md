@@ -736,30 +736,24 @@ schedule:
   deliverables:
     - dtitle: "Participation: Second Self-Assessment Handed Out"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10 
-    - dtitle: "Exercise: Recursion"
-      dlink: "Modules/Recursion/Module"
-      points: 3       
+      points: 10     
 - week: "14"
   date: "0"
   title: "Review"  
   deliverables:
-    - dtitle: "Exercise: Merge Sort"
-      dlink: "Modules/MergeSort/Module"  
-      points: 3  
     - dtitle: "Debugging Table: Second Check Handed Out"
       dlink: "Assignments/DebuggingTable"
       points: 10       
 - week: "14"
   date: "1"
   title: "Final Project Workshop" 
-  deliverables:
-    - dtitle: "Exercise: Dynamic Programming"
-      dlink: "Modules/DynamicProgramming/Module"   
-      points: 3  
 - week: "14"
   date: "2"
-  title: "Final Project Workshop"    
+  title: "Final Project Workshop" 
+  deliverables:
+    - dtitle: "Exercise: Recursion"
+      dlink: "Modules/Recursion/Module"
+      points: 3     
 - week: "14"
   date: "3"
   title: "Final Project Workshop" 
@@ -767,13 +761,19 @@ schedule:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
+    - dtitle: "Exercise: Merge Sort"
+      dlink: "Modules/MergeSort/Module"  
+      points: 3        
 - week: "15"
   date: "0"
   title: "Review" 
   deliverables:
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10     
+      points: 10  
+    - dtitle: "Exercise: Dynamic Programming"
+      dlink: "Modules/DynamicProgramming/Module"   
+      points: 3        
 - week: "15"
   date: "1"
   title: "Review"   
