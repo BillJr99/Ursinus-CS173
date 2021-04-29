@@ -234,12 +234,12 @@ It is also possible for the halfstep to be negative, in which case the formula y
 
 <span>\\(T = \frac{44100}{440 \times 2^{\frac{-2}{12}}} \approx 112.5\\)</span>
 
-Your first task is to implement this equation in the `getPeriod` method in `GuitarString.java`. You should round the period you return to the nearest integer.
+Your first task is to implement this equation in the `getPeriod(int halfStep)` method in `GuitarString.java`. You should round the period you return to the nearest integer.
 
 #### Hints
 * Be sure you're using the correct types here, and cast if you have to! In particular, `h/12` should be a decimal number.
-* Use the Math.pow function to raise a number to a power.
-* Use the Math.round() function to round to the nearest integer.
+* Use the `Math.pow()` function to raise a number to a power.
+* Use the `Math.round()` function to round to the nearest integer.
 
 ### Part 2: Random Samples (25%)
 The next step of the algorithm consists of coming up with some "random noise," which sounds like static. In the context of the Karplus Strong algorithm, this can be thought of as randomly stimulating the string with a pluck. To do this, you will complete the method:
@@ -273,6 +273,7 @@ If you were to plot the first 2000 samples of the array, they would look somethi
 
 #### Hints
 * You can make use of Java's function `Math.random()`, which returns a random number between 0.0 and 1.0.
+* How can you manipulate this random number to become a value between 0.0 and 2.0?  Then, you can further manipulate the value to be a number between -1.0 and 1.0.
 
 ### Part 3: The Final Plucked Sound (50%)
 
