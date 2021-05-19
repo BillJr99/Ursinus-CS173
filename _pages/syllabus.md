@@ -216,6 +216,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
     points: 15
+    submission_types: "noupload"
 - week: "0"
   date: "3"
   title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
@@ -224,6 +225,7 @@ schedule:
   - dtitle: "Participation: Pre-Assessment Handed Out"
     dlink: "./Assignments/Participation/PreAssessment"
     points: 10   
+    submission_types: "written"
 - week: "1"
   date: "0"
   title: "A Brief History of Computer Science"  
@@ -239,6 +241,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
+    submission_types: "noupload"
   - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
     dlink: "Assignments/NetBeans"
     points: 100
@@ -264,10 +267,12 @@ schedule:
   deliverables:
   - dtitle: "Participation: Pre-Assessment Due"
     dlink: "./Assignments/Participation/PreAssessment"
-    points: 10        
+    points: 10   
+    submission_types: "written"    
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
     points: 3     
+    submission_types: "noupload"
 - week: "2"
   date: "0"
   title: "Ranges and Quantization of Data Types" 
@@ -300,6 +305,7 @@ schedule:
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
     points: 3  
+    submission_types: "noupload"
   - dtitle: "Programming Assignment: Intro to NetBeans Due"
     dlink: "Assignments/NetBeans"
     points: 100      
@@ -315,7 +321,8 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "./Modules/Expressions/Exercise2"    
-    points: 3     
+    points: 3   
+    submission_types: "noupload"    
 - week: "2"
   date: "3"   
   title: "Conditionals"   
@@ -329,6 +336,7 @@ schedule:
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "./Modules/Boolean/Exercise"
     points: 3
+    submission_types: "noupload"
 - week: "3"
   date: "0"
   title: "Conditionals"  
@@ -357,7 +365,8 @@ schedule:
     points: 100 
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
-    points: 3       
+    points: 3   
+    submission_types: "noupload"
 - week: "3"
   date: "2"
   title: "Functions"
@@ -377,7 +386,8 @@ schedule:
     points: 100  
   - dtitle: "Exercise: Epoch Time Overflow"
     dlink: "Modules/EpochTime/Exercise"
-    points: 3           
+    points: 3     
+    submission_types: "noupload"    
 - week: "3"
   date: "3"
   title: "Functions"
@@ -388,6 +398,7 @@ schedule:
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Module"  
     points: 3   
+    submission_types: "noupload"
 - week: "4"
   date: "0"
   title: "Functions" 
@@ -478,7 +489,8 @@ schedule:
     points: 100   
   - dtitle: "Participation: First Self-Assessment Handed Out"
     dlink: "./Assignments/Participation/SelfAssessment"
-    points: 10      
+    points: 10  
+    submission_types: "written"    
 - week: "6"
   date: "1"
   title: "Lab: Iteration" 
@@ -498,13 +510,15 @@ schedule:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
+    submission_types: "noupload"
 - week: "7"
   date: "0"
   title: "Iteration and the do loop"  
   deliverables: 
     - dtitle: "Exercise: Iteration"
       dlink: "./Modules/Iteration/Exercise"    
-      points: 3        
+      points: 3  
+      submission_types: "noupload"      
 - week: "7"
   date: "2"
   title: "Coding Style and the Code Review"
@@ -520,7 +534,8 @@ schedule:
   deliverables:
     - dtitle: "Participation: First Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10    
+      points: 10 
+      submission_types: "written"      
 - week: "8"
   date: "0"
   title: "String Manipulation Workshop" 
@@ -541,10 +556,12 @@ schedule:
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
-    points: 3  
+    points: 3 
+    submission_types: "noupload"    
   - dtitle: "Debugging Table: First Check Handed Out"
     dlink: "Assignments/DebuggingTable"
     points: 10        
+    submission_types: "written"
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
@@ -561,7 +578,8 @@ schedule:
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
-    points: 100      
+    points: 100 
+    submission_types: "written"    
 - week: "9"
   date: "0"
   title: "2D Arrays"
@@ -578,6 +596,7 @@ schedule:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
+    submission_types: "noupload"
 - week: "9"
   date: "1"
   title: "Lab: Arrays"
@@ -588,6 +607,7 @@ schedule:
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
+    submission_types: "written"
 - week: "9"
   date: "2"
   title: "Array Workshop"
@@ -623,7 +643,8 @@ schedule:
     points: 100     
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
-    points: 100     
+    points: 100  
+    submission_types: "written"    
 - week: "10"
   date: "1"
   title: "Lab: Ethical Case Studies"    
@@ -728,7 +749,8 @@ schedule:
       points: 100
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
-      points: 3       
+      points: 3 
+      submission_types: "noupload"      
 - week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  
@@ -736,14 +758,16 @@ schedule:
   deliverables:
     - dtitle: "Participation: Second Self-Assessment Handed Out"
       dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10     
+      points: 10  
+      submission_types: "written"      
 - week: "14"
   date: "0"
   title: "Review"  
   deliverables:
     - dtitle: "Debugging Table: Second Check Handed Out"
       dlink: "Assignments/DebuggingTable"
-      points: 10       
+      points: 10 
+      submission_types: "written"      
 - week: "14"
   date: "1"
   title: "Final Project Workshop" 
@@ -753,7 +777,8 @@ schedule:
   deliverables:
     - dtitle: "Exercise: Recursion"
       dlink: "Modules/Recursion/Module"
-      points: 3     
+      points: 3      
+      submission_types: "noupload"
 - week: "14"
   date: "3"
   title: "Final Project Workshop" 
@@ -761,9 +786,11 @@ schedule:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
+      submission_types: "written"
     - dtitle: "Exercise: Merge Sort"
       dlink: "Modules/MergeSort/Module"  
-      points: 3        
+      points: 3  
+      submission_types: "noupload"      
 - week: "15"
   date: "0"
   title: "Review" 
@@ -771,9 +798,11 @@ schedule:
     - dtitle: "Participation: Second Self-Assessment Due"
       dlink: "./Assignments/Participation/SelfAssessment"
       points: 10  
+      submission_types: "written"
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
       points: 3        
+      submission_types: "noupload"
 - week: "15"
   date: "1"
   title: "Review"   

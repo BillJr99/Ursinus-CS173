@@ -30,8 +30,9 @@ API_URL = "https://ursinus.instructure.com/"
 # Obtain User ID from API_URL + /api/v1/users/self
 
 CANVAS_TIME_ZONE = "America/New_York"
-DUE_TIME = "T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
-DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above
+DUE_TIME = "" #"T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
+DUE_DATE_OFFSET = 0 # 1 # add 1 day to make things due the next morning per the due time above
+DUE_DATE_FORMAT = "%Y%m%d" # "%Y%m%dT%H%M%SZ"
 
 TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
 TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video" ] # which navigation pane items to force show if they are already hidden
@@ -342,6 +343,7 @@ def create_assignment(course, inputdict):
         return
 
     asmt = course.create_assignment(inputdict)
+    
     return asmt
     
 # Create Assignment Group: https://canvas.instructure.com/doc/api/assignment_groups.html#method.assignment_groups_api.create
@@ -625,26 +627,72 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict = {}
                     inputdict['name'] = description
                     inputdict['submission_types'] = []
-                    inputdict['submission_types'].append('online_upload')
-                    inputdict['allowed_extensions'] = []
-                    inputdict['allowed_extensions'].append('zip')
-                    inputdict['allowed_extensions'].append('bz2')
-                    inputdict['allowed_extensions'].append('tar')
-                    inputdict['allowed_extensions'].append('gz')
-                    inputdict['allowed_extensions'].append('rar')
-                    inputdict['allowed_extensions'].append('7z')
-                    if not ('Programming Assignment:' in description.lower()):
-                        inputdict['allowed_extensions'].append('pdf')
-                        inputdict['allowed_extensions'].append('doc')
-                        inputdict['allowed_extensions'].append('docx')
-                        inputdict['allowed_extensions'].append('txt')
+                    if "submission_types" in deliverable and "noupload" in deliverable['submission_types'].lower():
+                        inputdict['submission_types'].append('on_paper')
+                    else:
+                        inputdict['submission_types'].append('online_upload')
+                        inputdict['allowed_extensions'] = []
+                        inputdict['allowed_extensions'].append('zip')
+                        inputdict['allowed_extensions'].append('bz2')
+                        inputdict['allowed_extensions'].append('tar')
+                        inputdict['allowed_extensions'].append('gz')
+                        inputdict['allowed_extensions'].append('rar')
+                        inputdict['allowed_extensions'].append('7z')
+                        if "submission_types" in deliverable and "written" in deliverable['submission_types'].lower():
+                            inputdict['allowed_extensions'].append('pdf')
+                            inputdict['allowed_extensions'].append('doc')
+                            inputdict['allowed_extensions'].append('docx')
+                            inputdict['allowed_extensions'].append('txt')
                     inputdict['notify_of_update'] = True
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
                     inputdict['description'] = description + " (<a href=\"" + makelink(addslash(homepage), stripnobool(dlink)) + "\">" + makelink(addslash(homepage), stripnobool(dlink)) + "</a>)"
-                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, "%Y%m%dT%H%M%SZ")) 
+                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
+                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                     inputdict['position'] = asmtidx
                     
+                    # https://canvas.instructure.com/doc/api/rubrics.html
+                    # 
+                    if "rubricpath" in deliverable:
+                        rubricpath = deliverable['rubricpath']
+                        rubricf = open(rubricpath, 'r')
+                        rubricmdcontents = rubricf.read()
+                        rubricpost = frontmatter.loads(rubricmdcontents)
+                        rubricpostdict = rubricpost.to_dict()  
+                        if "rubric" in rubricpostdict:
+                            rubric = rubricpostdict['rubric']                        
+                            
+                            inputdict['rubric'] = {}
+                            inputdict['rubric']['title'] = "Rubric"
+                            inputdict['rubric']['points_possible'] = points
+                            inputdict['rubric']['free_form_criterion_comments'] = True
+                            inputdict['rubric']['use_for_grading'] = True
+                            inputdict['rubric']['purpose'] = "Grading"
+                            inputdict['rubric']['criteria'] = {}
+                            
+                            criteriaidx = 0
+                            for criteria in rubric:
+                                inputdict['rubric']['criteria'][criteriaidx] = {}
+                                inputdict['rubric']['criteria'][criteriaidx]['description'] = criteria['description']
+                                inputdict['rubric']['criteria'][criteriaidx]['long_description'] = criteria['description']
+                                inputdict['rubric']['criteria'][criteriaidx]['criterion_use_range'] = True
+                                criteriapoints = points * float(rubric['weight'])
+                                inputdict['rubric']['criteria'][criteriaidx]['points'] = criteriapoints
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'] = {}
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['description'] = "Pre-Emerging"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['long_description'] = rubric['preemerging']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['points'] = criteriapoints * 0.25
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['description'] = "Beginning"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['long_description'] = rubric['beginning']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['points'] = criteriapoints * 0.50
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['description'] = "Progressing"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['long_description'] = rubric['progressing']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['points'] = criteriapoints * 0.85
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['description'] = "Proficient"
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['long_description'] = rubric['proficient']
+                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['points'] = criteriapoints * 1.00                                 
+                                criteriaidx = criteriaidx + 1
+                            
                     assignment = create_assignment(course, inputdict)
                     asmtidx = asmtidx + 1
                     
@@ -687,8 +735,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     inputdict = {}
     inputdict['late_policy'] = {}
     inputdict['late_policy']['late_submission_deduction_enabled'] = True
-    inputdict['late_policy']['missing_submission_deduction_enabled'] = False
-    #inputdict['late_policy']['missing_submission_deduction'] = 100
+    inputdict['late_policy']['missing_submission_deduction_enabled'] = True
+    inputdict['late_policy']['missing_submission_deduction'] = 100
     inputdict['late_policy']['late_submission_deduction'] = late_penalty_per_period
     inputdict['late_policy']['late_submission_interval'] = late_penalty_period
     create_late_policy(course, inputdict)
