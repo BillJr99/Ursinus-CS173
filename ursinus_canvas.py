@@ -12,37 +12,48 @@ from datetime import datetime, timedelta
 import threading
 import time
 import random
+from urllib import request, parse
 
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
 
 # CONSIDERATION
-# Add assignment rubrics and point values (course.create_rubric) from assignment pages to facilitate grading (also to update point values)
-## https://canvas.instructure.com/doc/api/rubrics.html
 # course.create_course_section - separate calendar?  duplicate assignments, etc?
 # Change course calendar entries to timetables: which can possibly be done on a per-section basis
 ## https://canvas.instructure.com/doc/api/calendar_events.html#method.calendar_events_api.set_course_timetable
 # Tie to learning outcomes
-# Hide unused links
 
 API_URL = "https://ursinus.instructure.com/"
 # Generate key at API_URL + profile/settings
 # Obtain User ID from API_URL + /api/v1/users/self
 
 CANVAS_TIME_ZONE = "America/New_York"
-DUE_TIME = "" #"T045959Z" # this time is no earlier than 11:59PM Eastern Time during EST or EDT
-DUE_DATE_OFFSET = 0 # 1 # add 1 day to make things due the next morning per the due time above
-DUE_DATE_FORMAT = "%Y%m%d" # "%Y%m%dT%H%M%SZ"
+DUE_TIME = "T035959Z" # this time is no earlier than 10:59PM Eastern Time during EST or EDT
+DUE_DATE_OFFSET = 1 # 1 # add 1 day to make things due the next morning per the due time above if GMT is after midnight
+DUE_DATE_FORMAT = "%Y%m%dT%H%M%SZ"
 
-TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Rubrics", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
-TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video" ] # which navigation pane items to force show if they are already hidden
+TABS_TO_HIDE = ["Quizzes", "Outcomes", "Collaborations", "Files", "Pages", "Announcements", "Conferences", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video", "Rubrics" ] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
 
 skipdiscussions = False
 skipassignments = False
 skipofficehours = True
-            
+
+def canvas_http_request(endpoint, inputdict=None, method="GET"):
+    header = {"Authorization": "Bearer %s" % API_KEY}
+
+    if not (inputdict is None):
+        data = parse.urlencode(inputdict).encode()
+        header['Content-Type'] = 'application/x-www-form-urlencoded'
+    else:
+        data = None
+    
+    req =  request.Request(rchop(API_URL, '/') + endpoint, data=data, headers=header, method=method) 
+    resp = request.urlopen(req)   
+    return resp
+    
 def makelink(base, url):
     if url.startswith("http"):
         return url
@@ -97,11 +108,10 @@ def dodelete(item, dosleep=True):
         except exceptions.CanvasException:
             print("Deleting: Canvas Error")
             repeat = True
-        except:
-            print("Deleting: Unknown Error")
-            repeat = True
-            
-    
+        except Exception as ex:
+            print("Deleting: Unknown Error - " + repr(ex))
+            repeat = False
+             
 def delete_all_events(canvas, coursecontext):
     events = canvas.get_calendar_events(all_events = True, context_codes = [coursecontext])
     
@@ -120,7 +130,31 @@ def delete_all_assignments(course):
         t = threading.Thread(target=dodelete, args=(assignment,))
         child_threads.append(t)
         t.start()           
-           
+
+# DELETE /api/v1/courses/:course_id/rubrics/:id
+def delete_rubric(rubric, dosleep=True):
+    if dosleep: # for rate limiting
+        sleeptime = random.randint(5, 20)
+        time.sleep(sleeptime)
+        
+    rubric = None
+    try:
+        rubric = canvas_http_request('/api/v1/courses/' + str(courseid) + '/rubrics/' + str(rubric.id), method="DELETE")
+    except:
+        print("Error Deleting Rubric")
+        
+    return rubric
+    
+def delete_all_rubrics(course):
+    if skipassignments:
+        return
+        
+    rubrics = course.get_rubrics()
+    for rubric in rubrics:        
+        t = threading.Thread(target=delete_rubric, args=(rubric,))
+        child_threads.append(t)
+        t.start()  
+        
 def delete_all_modules(course):
     modules = course.get_modules()
     
@@ -143,7 +177,7 @@ def delete_all_modules(course):
         t.start()   
             
 def delete_all_assignment_groups(course):
-    if skipdiscussions:
+    if skipassignments:
         return
         
     groups = course.get_assignment_groups()
@@ -151,7 +185,7 @@ def delete_all_assignment_groups(course):
     for group in groups:
         t = threading.Thread(target=dodelete, args=(group,))
         child_threads.append(t)
-        t.start()   
+        t.start()         
         
 def delete_all_discussion_topics(course):
     if skipdiscussions:
@@ -191,18 +225,21 @@ def delete_old_data(course, canvas, coursecontext):
     t3 = threading.Thread(target=delete_all_modules, args=(course,))
     t4 = threading.Thread(target=delete_all_assignment_groups, args=(course,))
     t5 = threading.Thread(target=delete_all_discussion_topics, args=(course,))
+    t6 = threading.Thread(target=delete_all_rubrics, args=(course,))
     
     child_threads.append(t1)
     child_threads.append(t2)
     child_threads.append(t3)
     child_threads.append(t4)
     child_threads.append(t5)
+    child_threads.append(t6)
     
     t1.start()
     t2.start()
     t3.start()
     t4.start()
     t5.start()
+    t6.start()
     
     # Avoid a race condition in which newly added items are deleted when gathered by these threads
     for t in child_threads:
@@ -345,6 +382,14 @@ def create_assignment(course, inputdict):
     asmt = course.create_assignment(inputdict)
     
     return asmt
+    
+# Create a Rubric
+# https://canvas.instructure.com/doc/api/rubrics.html
+# https://canvasapi.readthedocs.io/en/stable/rubric-ref.html#canvasapi.rubric.Rubric
+# POST /api/v1/courses/:course_id/rubrics
+def create_rubric(course, inputdict): 
+    rubric = course.create_rubric(**inputdict)    
+    return rubric
     
 # Create Assignment Group: https://canvas.instructure.com/doc/api/assignment_groups.html#method.assignment_groups_api.create
 def create_assignmentgroup(course, inputdict):
@@ -648,13 +693,20 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['points_possible'] = points
                     inputdict['description'] = description + " (<a href=\"" + makelink(addslash(homepage), stripnobool(dlink)) + "\">" + makelink(addslash(homepage), stripnobool(dlink)) + "</a>)"
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
-                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
+                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                     inputdict['position'] = asmtidx
+                            
+                    assignment = create_assignment(course, inputdict)
+                    asmtidx = asmtidx + 1
                     
-                    # https://canvas.instructure.com/doc/api/rubrics.html
-                    # 
+                    assignmentid = assignment.id
+                    
+                    # Create a Rubric for this Assignment if Specified
                     if "rubricpath" in deliverable:
+                        inputdict = {}
+                        
                         rubricpath = deliverable['rubricpath']
+                        printlog("Adding Rubric from " + rubricpath)
                         rubricf = open(rubricpath, 'r')
                         rubricmdcontents = rubricf.read()
                         rubricpost = frontmatter.loads(rubricmdcontents)
@@ -662,45 +714,68 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         if "info" in rubricpostdict and "rubric" in rubricpostdict['info']:
                             rubric = rubricpostdict['info']['rubric']                        
                             
+                            inputdict['rubric_association_id'] = assignmentid
+                            
                             inputdict['rubric'] = {}
-                            inputdict['rubric']['title'] = "Rubric"
+                            inputdict['rubric']['title'] = description + " Rubric"
                             inputdict['rubric']['points_possible'] = points
-                            inputdict['rubric']['free_form_criterion_comments'] = True
-                            inputdict['rubric']['use_for_grading'] = True
-                            inputdict['rubric']['purpose'] = "Grading"
+                            inputdict['rubric']['free_form_criterion_comments'] = False
+                            inputdict['rubric']['skip_updating_points_possible'] = False
+                            inputdict['rubric']['read_only'] = False
+                            inputdict['rubric']['reusable'] = True
                             inputdict['rubric']['criteria'] = {}
+                            
+                            inputdict['rubric_association'] = {}
+                            inputdict['rubric_association']['use_for_grading'] = True
+                            inputdict['rubric_association']['purpose'] = "grading"
+                            inputdict['rubric_association']['association_id'] = assignmentid
+                            inputdict['rubric_association']['association_type'] = "Assignment"
+                            inputdict['rubric_association']['bookmarked'] = True
                             
                             criteriaidx = 0
                             for criteria in rubric:
-                                inputdict['rubric']['criteria'][criteriaidx] = {}
-                                inputdict['rubric']['criteria'][criteriaidx]['description'] = criteria['description']
-                                inputdict['rubric']['criteria'][criteriaidx]['long_description'] = criteria['description']
-                                inputdict['rubric']['criteria'][criteriaidx]['criterion_use_range'] = True
-                                criteriapoints = points * float(rubric['weight'])
-                                inputdict['rubric']['criteria'][criteriaidx]['points'] = criteriapoints
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'] = {}
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['description'] = "Pre-Emerging"
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['long_description'] = rubric['preemerging']
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][0]['points'] = criteriapoints * 0.25
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['description'] = "Beginning"
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['long_description'] = rubric['beginning']
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][1]['points'] = criteriapoints * 0.50
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['description'] = "Progressing"
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['long_description'] = rubric['progressing']
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][2]['points'] = criteriapoints * 0.85
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['description'] = "Proficient"
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['long_description'] = rubric['proficient']
-                                inputdict['rubric']['criteria'][criteriaidx]['ratings'][3]['points'] = criteriapoints * 1.00                                 
+                                criteriadict = {}
+                                criteriadict['description'] = criteria['description']
+                                criteriadict['long_description'] = criteria['description']
+                                criteriadict['criterion_use_range'] = True
+                                criteriapoints = (points * float(criteria['weight']) / 100)
+                                criteriadict['points'] = criteriapoints
+                                criteriadict['ratings'] = {}
+                                
+                                ratingdict = {}
+                                ratingdict['description'] = "Pre-Emerging"
+                                ratingdict['long_description'] = criteria['preemerging']
+                                ratingdict['points'] = (criteriapoints * 0.25)
+                                criteriadict['ratings'][0] = ratingdict
+                                
+                                ratingdict = {}
+                                ratingdict['description'] = "Beginning"
+                                ratingdict['long_description'] = criteria['beginning']
+                                ratingdict['points'] = (criteriapoints * 0.50)
+                                criteriadict['ratings'][1] = ratingdict
+                                
+                                ratingdict = {}
+                                ratingdict['description'] = "Progressing"
+                                ratingdict['long_description'] = criteria['progressing']
+                                ratingdict['points'] = (criteriapoints * 0.85)
+                                criteriadict['ratings'][2] = ratingdict
+                                
+                                ratingdict = {}
+                                ratingdict['description'] = "Proficient"
+                                ratingdict['long_description'] = criteria['proficient']
+                                ratingdict['points'] = (criteriapoints * 1.00)                              
+                                criteriadict['ratings'][3] = ratingdict
+                                
+                                inputdict['rubric']['criteria'][criteriaidx] = criteriadict
                                 criteriaidx = criteriaidx + 1
-                            
-                    assignment = create_assignment(course, inputdict)
-                    asmtidx = asmtidx + 1
+
+                        create_rubric(course, inputdict)
                     
                     # Create a Module Entry for the Assignment
                     inputdict = {}
                     inputdict['title'] = description
                     inputdict['type'] = 'Assignment'
-                    inputdict['content_id'] = assignment.id
+                    inputdict['content_id'] = assignmentid
                     inputdict['published'] = True
                     add_module_item(module, inputdict)
                 else:
