@@ -659,8 +659,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         rubricmdcontents = rubricf.read()
                         rubricpost = frontmatter.loads(rubricmdcontents)
                         rubricpostdict = rubricpost.to_dict()  
-                        if "rubric" in rubricpostdict:
-                            rubric = rubricpostdict['rubric']                        
+                        if "info" in rubricpostdict and "rubric" in rubricpostdict['info']:
+                            rubric = rubricpostdict['info']['rubric']                        
                             
                             inputdict['rubric'] = {}
                             inputdict['rubric']['title'] = "Rubric"

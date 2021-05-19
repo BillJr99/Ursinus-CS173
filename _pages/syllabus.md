@@ -245,6 +245,7 @@ schedule:
   - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
     dlink: "Assignments/NetBeans"
     points: 100
+    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
 - week: "1"
   date: "2"
   title: "Programming Statements, Expressions, and Operators"
@@ -302,13 +303,15 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
     points: 100
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
     points: 3  
     submission_types: "noupload"
   - dtitle: "Programming Assignment: Intro to NetBeans Due"
     dlink: "Assignments/NetBeans"
-    points: 100      
+    points: 100 
+    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"    
 - week: "2"
   date: "2"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -350,7 +353,8 @@ schedule:
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
-    points: 100   
+    points: 100  
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"    
 - week: "3"
   date: "1"
   title: "Lab: Debugging"  
@@ -363,6 +367,7 @@ schedule:
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
     points: 100 
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
@@ -384,6 +389,7 @@ schedule:
   - dtitle: "Programming Assignment: MIDI Audio Handed Out"
     dlink: "Assignments/MIDI" 
     points: 100  
+    rubricpath: "_pages/Assignments/Functions/asmt-midi.md"
   - dtitle: "Exercise: Epoch Time Overflow"
     dlink: "Modules/EpochTime/Exercise"
     points: 3     
@@ -409,6 +415,7 @@ schedule:
   - dtitle: "Lab: Debugging Due"    
     dlink: "Labs/Debugging"     
     points: 100   
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"
 - week: "4"
   date: "1"
   title: "Lab: Functions"    
@@ -416,6 +423,7 @@ schedule:
   - dtitle: "Lab: Averaging Functions Handed Out"    
     dlink: "Labs/AverageFunction" 
     points: 100
+    rubricpath: "_pages/Labs/Functions/lab-functions.md"
 - week: "4"
   date: "2"
   title: "Testing" 
@@ -429,9 +437,11 @@ schedule:
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
     points: 100
+    rubricpath: "_pages/Assignments/Functions/asmt-midi.md"
   - dtitle: "Programming Assignment: Drawing Faces Handed Out"
     dlink: "Assignments/Faces"
     points: 100
+    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"
 - week: "4"
   date: "3"
   title: "Strings"
@@ -451,6 +461,7 @@ schedule:
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
     points: 100  
+    rubricpath: "_pages/Labs/Functions/lab-functions.md"
 - week: "5"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -458,6 +469,7 @@ schedule:
   - dtitle: "Lab: Financial Aid Calculator Handed Out"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
+    rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"
 - week: "5"
   date: "2"
   title: "Iteration"
@@ -474,9 +486,11 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
     points: 100  
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"   
   - dtitle: "Programming Assignment: Drawing Faces Due"
     dlink: "Assignments/Faces"
-    points: 100    
+    points: 100  
+    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"    
 - week: "6"
   date: "0"
   title: "Iteration"   
@@ -487,6 +501,7 @@ schedule:
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
+    rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"
   - dtitle: "Participation: First Self-Assessment Handed Out"
     dlink: "./Assignments/Participation/SelfAssessment"
     points: 10  
@@ -498,6 +513,7 @@ schedule:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
     dlink: "Labs/MonteCarloPi"  
     points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
 - week: "6"
   date: "3"
   title: "Iteration, Randomness, and the while loop"  
@@ -543,12 +559,15 @@ schedule:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"
     points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
+    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"       
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
-    points: 100     
+    points: 100    
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"       
 - week: "8"
   date: "2"
   title: "Arrays" 
@@ -604,6 +623,7 @@ schedule:
   - dtitle: "Lab: Array Averages Handed Out"
     dlink: "Labs/ArrayAveraging"
     points: 100  
+    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"       
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
@@ -615,9 +635,11 @@ schedule:
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
     points: 100 
+    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"       
   - dtitle: "Programming Assignment: ASCII Art Handed Out"
     dlink: "Assignments/ASCIIArt" 
     points: 100    
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"       
 - week: "9"
   date: "3"  
   title: "ArrayLists and Generic/Template Data Structures"
@@ -641,6 +663,7 @@ schedule:
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
     points: 100     
+    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"       
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100  
@@ -660,9 +683,11 @@ schedule:
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
     points: 100  
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"
   - dtitle: "Programming Assignment: Guitar String Synthesis Handed Out"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100         
+    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"
 - week: "11"
   date: "1"
   title: "Lab: HashMaps"
@@ -670,6 +695,7 @@ schedule:
   - dtitle: "Lab: HashMap Story Telling Handed Out"
     dlink: "Labs/TellAStory"
     points: 100  
+    rubricpath: "_pages/Labs/HashMaps/lab-tellastory.md"
 - week: "11"
   date: "2"
   title: "Classes and Object Data Types" 
@@ -701,6 +727,7 @@ schedule:
   - dtitle: "Lab: HashMap Story Telling Due"
     dlink: "Labs/TellAStory"
     points: 100    
+    rubricpath: "_pages/Labs/HashMaps/lab-tellastory.md"
 - week: "12"
   date: "2"
   title: "Classes and Object Data Types"      
@@ -737,16 +764,19 @@ schedule:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100    
+    rubricpath: "_pages/Projects/proj-final.md"
 - week: "13"
   date: "2"
   title: "Algorithms: Recursion and Merge Sort" 
   deliverables:
     - dtitle: "Programming Assignment: Guitar String Synthesis Due"
       dlink: "Assignments/GuitarStringSynth"      
-      points: 100     
+      points: 100   
+      rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"
     - dtitle: "Programming Assignment: Iris Dataset Handed Out"
       dlink: "Assignments/Iris"      
       points: 100
+      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
       points: 3 
@@ -810,9 +840,11 @@ schedule:
     - dtitle: "Final Project: Project and Presentation Due"
       dlink: "Projects/Final"   
       points: 100       
+      rubricpath: "_pages/Projects/proj-final.md"
     - dtitle: "Programming Assignment: Iris Dataset Due"
       dlink: "Assignments/Iris"
       points: 100 
+      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"
     
 university:
   semester: "Spring"
