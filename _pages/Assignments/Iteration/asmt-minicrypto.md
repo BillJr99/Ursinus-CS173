@@ -11,7 +11,7 @@ info:
     - To relate the mathematics of modern encryption systems to applied principles of information hiding
     - To implement mathematical theory in the Java programming language
     - To apply library functionality from external jar files and build upon existing functionality
-    - To implement algorithms that iterate over characters in a string and over elements in an array
+    - "To implement algorithms that iterate over characters in a <code>String</code> and over elements in an array"
   rubric:
     - weight: 60
       description: Algorithm Implementation
@@ -180,7 +180,7 @@ Here is an example:
 Write test cases that encrypt values using your public key, and decrypt them using your private key, and assert that the final decrypted value matches your original input.  Also try encrypting with your private key and decrypting with your public key, to ensure that the keys are proper inverses of one another.
 
 ## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
-Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a String parameter, and for each character in the string, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
+Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a `String` parameter, and for each character in the `String`, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
 
 ### Encrypting a Message to Your Partner Using Their E and C Key Values
 
