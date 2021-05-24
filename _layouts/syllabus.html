@@ -772,7 +772,8 @@ boilerplate:
     {% endif %}
     
     
-    {% if page.contract and (page.contract.a or page.contract.b or page.contract.c or page.contract.d) %}
+    {% if page.contract %} 
+    {% if page.contract.a or page.contract.b or page.contract.c or page.contract.d %}
     <h3>Contract Grading</h3>
     
     {% if page.contract.a %}
@@ -812,7 +813,7 @@ boilerplate:
     {% endif %}
     {% endif %}
     {% endif %}    
-		
+	{% endif %} 	
 
     
 		      

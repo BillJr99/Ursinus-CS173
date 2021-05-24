@@ -101,7 +101,8 @@ styleguide: "https://www.billmongan.com/Ursinus-CS173/Style-Guide"
     
     
     
-    {% if page.info.contract and (page.info.contract.a or page.info.contract.b or page.info.contract.c or page.info.contract.d) %}
+    {% if page.info.contract %} 
+    {% if page.info.contract.a or page.info.contract.b or page.info.contract.c or page.info.contract.d %}
     <h1>Contract Grading</h1>
     
     {% if page.info.contract.a %}
@@ -138,6 +139,7 @@ styleguide: "https://www.billmongan.com/Ursinus-CS173/Style-Guide"
     <li>{{item}}</li>
     {% endfor %}
     </ul>        
+    {% endif %}
     {% endif %}
     {% endif %}
     
