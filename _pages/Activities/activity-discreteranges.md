@@ -56,7 +56,7 @@ info:
                 64 bits = 8 bytes
             </div>
             <div style="display: table-cell; padding:5px; width:33%;">
-                <span>\(2^{64}\)</span> = approximately <span>\(18 \times 10^{18}\)</span> values</span>
+                <span>\(2^{64}\)</span> = approximately <span>\(18 \times 10^{18}\)</span> values
             </div>
         </div>  
         <div style="width: 100%; display: table-row;">
