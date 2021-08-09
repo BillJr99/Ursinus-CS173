@@ -519,10 +519,6 @@ schedule:
 - week: "6"
   date: "2"
   title: "Midterm Exam"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100    
 - week: "6"
   date: "3"
   title: "Iteration and the for loop"
@@ -609,14 +605,18 @@ schedule:
   - rtitle: "Ch. 7"
     rlink: false  
   deliverables:
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100  
-    submission_types: "written"       
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"  
+    points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"    
 - week: "9"
   date: "1"
-  title: "Lab: Ethical Case Studies"
+  title: "Lab: Strings"
   deliverables:
+  - dtitle: "Lab: Strings Handed Out"
+    dlink: "Labs/Strings"  
+    points: 100
+    rubricpath: "_pages/Labs/Strings/lab-strings.md"  
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
@@ -634,7 +634,11 @@ schedule:
   - rtitle: "Creating and Accessing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
   - rtitle: "Array Review"
-    rlink: "Modules/Arrays/Module"    
+    rlink: "Modules/Arrays/Module"   
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100        
 - week: "10"
   date: "0"
   title: "Arrays"
@@ -654,6 +658,10 @@ schedule:
   date: "1"
   title: "Lab: Arrays"
   deliverables:
+  - dtitle: "Lab: Strings Due"
+    dlink: "Labs/Strings"  
+    points: 100
+    rubricpath: "_pages/Labs/Strings/lab-strings.md"    
   - dtitle: "Lab: Array Averages Handed Out"
     dlink: "Labs/ArrayAveraging"
     points: 100  
@@ -698,7 +706,7 @@ schedule:
   - dtitle: "Lab: Code Review Handed Out"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-codereview.md"   
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
     points: 100  
@@ -721,7 +729,12 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
 - week: "11"
   date: "3"
-  title: "ArrayLists and Generic/Template Data Structures"    
+  title: "ArrayLists and Generic/Template Data Structures"   
+  deliverables:
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100  
+    submission_types: "written"  
 - week: "12"
   date: "0"
   title: "Classes and Object Data Types" 
@@ -737,10 +750,10 @@ schedule:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-codereview.md"       
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"      
 - week: "12"
   date: "1"
-  title: ""     
+  title: "Lab: Ethical Case Studies"        
 - week: "13"
   date: "0"
   title: "Classes and Object Data Types"  
@@ -749,7 +762,12 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"   
 - week: "13"
   date: "1"
-  title: "" 
+  title: "Lab: Drop the Lowest"
+  deliverables:
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropTheLowest"
+    points: 100
+    rubricpath: "_pages/Labs/Searching/lab-dropthelowest.md"
 - week: "13"
   date: "2"
   title: "Classes and Object Data Types" 
@@ -759,7 +777,7 @@ schedule:
   - rtitle: "Mutators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
   - rtitle: "Static Variables and Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"    
 - week: "13"
   date: "3"
   title: "Searching and Sorting" 
@@ -804,7 +822,12 @@ schedule:
       submission_types: "written"     
 - week: "14"
   date: "1"
-  title: "" 
+  title: "Review" 
+  deliverables:
+  - dtitle: "Lab: Drop the Lowest Due"
+    dlink: "Labs/DropTheLowest"
+    points: 100
+    rubricpath: "_pages/Labs/Searching/lab-dropthelowest.md"    
 - week: "14"
   date: "2"
   title: "Presentations" 
@@ -815,7 +838,7 @@ schedule:
       submission_types: "noupload"
 - week: "14"
   date: "3"
-  title: "Review" 
+  title: "Presentations" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
