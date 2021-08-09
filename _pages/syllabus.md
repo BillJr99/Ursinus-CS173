@@ -157,7 +157,7 @@ goals:
 - goal: "Articulate the difference between computer programming and computer science, and explain the role of programming in computer science."
 - goal: "Become a patient problem solver by utilizing the edit -> compile -> run loop, along with basic debugging skills."
 - goal: "Write software that is easy to read and to maintain by others."
-- goal: "Implement and engineer multi-component systems that solve real world problems."
+- goal: "Implement and engineer multi-component systems that solve tangible problems."
 
 grade_breakdown:
 - category: "Programming Assignments"
@@ -294,7 +294,10 @@ schedule:
   - dtitle: "Programming Assignment: Intro to NetBeans Due"
     dlink: "Assignments/NetBeans"
     points: 50 
-    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"    
+    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 35
 - week: "2"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -570,7 +573,7 @@ schedule:
     dlink: "Labs/EthicalConsiderations"      
     points: 100  
     submission_types: "written"   
-- week: "10"
+- week: "8"
   date: "1"
   title: "Lab: Ethical Case Studies"  
   deliverables:
@@ -584,8 +587,11 @@ schedule:
     rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"     
 - week: "8"
   date: "2"
-  title: "Arrays" 
-  link: "Activities/Arrays"
+  title: "File I/O"
+  link: "Activities/FileIO"  
+  readings:
+  - rtitle: "Ch. 7"
+    rlink: false  
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
@@ -595,6 +601,13 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10        
     submission_types: "written"
+- week: "8"
+  date: "3"
+  title: "File I/O"
+- week: "9"
+  date: "0"
+  title: "Arrays"
+  link: "Activities/Arrays"
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
@@ -602,29 +615,6 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
   - rtitle: "Array Review"
     rlink: "Modules/Arrays/Module"
-- week: "8"
-  date: "3"
-  title: "Arrays"   
-  readings:
-  - rtitle: "Traversing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"   
-- week: "9"
-  date: "0"
-  title: "2D Arrays"
-  readings:
-  - rtitle: "Nested Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
-  - rtitle: "Loop Analysis"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"
-  - rtitle: "2D Arrays Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
-  - rtitle: "2D Arrays Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
-  deliverables:
-  - dtitle: "Exercise: Four-in-a-Row"
-    dlink: "Modules/FourInARow/Exercise"  
-    points: 3
-    submission_types: "noupload"
 - week: "9"
   date: "1"
   title: "Lab: Arrays"
@@ -639,7 +629,10 @@ schedule:
     submission_types: "written"
 - week: "9"
   date: "2"
-  title: "Array Workshop"
+  title: "Arrays"
+  readings:
+  - rtitle: "Traversing Arrays"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"   
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
@@ -651,6 +644,23 @@ schedule:
     rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"       
 - week: "9"
   date: "3"  
+  title: "2D Arrays"
+  readings:
+  - rtitle: "Nested Loops"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
+  - rtitle: "Loop Analysis"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"
+  - rtitle: "2D Arrays Part 1"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
+  - rtitle: "2D Arrays Part 2"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
+  deliverables:
+  - dtitle: "Exercise: Four-in-a-Row"
+    dlink: "Modules/FourInARow/Exercise"  
+    points: 3
+    submission_types: "noupload"    
+- week: "10"
+  date: "0"
   title: "ArrayLists and Generic/Template Data Structures"
   readings:
   - rtitle: "Ch. 6.8"
@@ -660,14 +670,7 @@ schedule:
   - rtitle: "ArrayList Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
   - rtitle: "ArrayList Iteration"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
-- week: "10"
-  date: "0"
-  title: "HashMaps and Caches"  
-  link: "Activities/HashMaps"  
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false  
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"   
   deliverables:
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
@@ -681,8 +684,7 @@ schedule:
   title: ""   
 - week: "10"
   date: "3"
-  title: "File I/O"
-  link: "Activities/FileIO"      
+  title: ""     
 - week: "11"
   date: "0"
   title: ""      
@@ -697,12 +699,7 @@ schedule:
     rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"
 - week: "11"
   date: "1"
-  title: "Lab: HashMaps"
-  deliverables:
-  - dtitle: "Lab: HashMap Story Telling Handed Out"
-    dlink: "Labs/TellAStory"
-    points: 100  
-    rubricpath: "_pages/Labs/HashMaps/lab-tellastory.md"
+  title: ""
 - week: "11"
   date: "2"
   title: "Classes and Object Data Types" 
@@ -730,11 +727,6 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
   - rtitle: "Static Variables and Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"
-  deliverables:
-  - dtitle: "Lab: HashMap Story Telling Due"
-    dlink: "Labs/TellAStory"
-    points: 100    
-    rubricpath: "_pages/Labs/HashMaps/lab-tellastory.md"
 - week: "12"
   date: "1"
   title: ""     
@@ -761,15 +753,13 @@ schedule:
   title: ""    
 - week: "13"
   date: "2"
-  title: "Algorithms: Recursion and Merge Sort" 
+  title: "Algorithms: Recursion" 
   link: "Activities/Recursion" 
   readings:
   - rtitle: "Recursion Part 1"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
   - rtitle: "Recursion Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"
-  - rtitle: "Recursive Searching and Sorting"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html" 
   deliverables:
     - dtitle: "Programming Assignment: Guitar String Synthesis Due"
       dlink: "Assignments/GuitarStringSynth"      
@@ -785,11 +775,10 @@ schedule:
       submission_types: "noupload" 
 - week: "13"
   date: "3"
-  title: "Recursion and Dynamic Programming"  
-  link: "Activities/DynamicProgramming"  
+  title: ""  
 - week: "14"
   date: "0"
-  title: "Review"  
+  title: ""  
   deliverables:
     - dtitle: "Debugging Table: Second Check Handed Out"
       dlink: "Assignments/DebuggingTable"
@@ -808,20 +797,12 @@ schedule:
       submission_types: "noupload"
 - week: "14"
   date: "3"
-  title: "" 
+  title: "Review" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
-      submission_types: "written"
-    - dtitle: "Exercise: Merge Sort"
-      dlink: "Modules/MergeSort/Module"  
-      points: 3  
-      submission_types: "noupload"  
-    - dtitle: "Exercise: Dynamic Programming"
-      dlink: "Modules/DynamicProgramming/Module"   
-      points: 3        
-      submission_types: "noupload"      
+      submission_types: "written"   
     - dtitle: "Programming Assignment: Iris Dataset Due"
       dlink: "Assignments/Iris"
       points: 100 

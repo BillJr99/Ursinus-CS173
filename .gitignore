@@ -3,7 +3,10 @@ uploadghclassroom.sh
 updatecalendar.sh
 geckodriver.log
 do-jekyll.sh
+text2qti.sh
 Gemfile
 _site/**
 .sass-cache/**
 Gemfile.lock
+.text2qti.bespon
+_pages/Quizzes/qti_*.md
