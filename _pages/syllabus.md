@@ -441,16 +441,16 @@ schedule:
     rubricpath: "_pages/Labs/Conditionals/lab-conditionals.md"     
   readings:
   - rtitle: "Calling Functions that Return Values"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
 - week: "4"
   date: "3"
   title: "Testing" 
+  link: "Activities/Testing"    
   readings:
   - rtitle: "Testing with the NetBeans IDE"
     rlink: "NetBeans/JUnit"  
   - rtitle: "Unit Testing Review"
     rlink: "Modules/Testing/Module"
-  link: "Activities/Testing"
   deliverables:
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
@@ -468,7 +468,7 @@ schedule:
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
   - rtitle: "Strings Review"
-    rlink: "Modules/Strings/Module"    
+    rlink: "Modules/Strings/Module"        
 - week: "5"
   date: "1"
   title: "Lab: Unit Testing" 
@@ -476,7 +476,7 @@ schedule:
   - dtitle: "Lab: Unit Testing Handed Out"
     dlink: "Labs/UnitTesting"  
     points: 100   
-    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"
+    rubricpath: "_pages/Labs/Testing/lab-unittesting.md" 
 - week: "5"
   date: "2"
   title: "Strings"
@@ -489,11 +489,11 @@ schedule:
     points: 100  
     rubricpath: "_pages/Labs/Functions/lab-functions.md"    
 - week: "5"
-  date: "2"
+  date: "3"
   title: "Iteration"
   link: "Activities/Iteration"
-- week: "5"
-  date: "3"
+- week: "6"
+  date: "0"
   title: "Iteration and the for loop"
   readings:
   - rtitle: "Ch. 4"
@@ -509,17 +509,10 @@ schedule:
     dlink: "Assignments/Faces"
     points: 100  
     rubricpath: "_pages/Assignments/Functions/asmt-faces.md"    
-- week: "6"
-  date: "0"
-  title: "Iteration"   
-  readings:
-  - rtitle: "Loops with Strings"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"
-  deliverables:
   - dtitle: "Lab: Unit Testing Due"
     dlink: "Labs/UnitTesting"  
     points: 100   
-    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"
+    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"    
 - week: "6"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -537,6 +530,10 @@ schedule:
     points: 100    
 - week: "6"
   date: "3"
+  title: "Iteration"   
+  readings:
+  - rtitle: "Loops with Strings"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"  
   title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
@@ -813,7 +810,7 @@ schedule:
   title: "" 
 - week: "14"
   date: "2"
-  title: "" 
+  title: "Presentations" 
   deliverables:
     - dtitle: "Exercise: Recursion"
       dlink: "Modules/Recursion/Module"
