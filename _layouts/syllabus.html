@@ -279,9 +279,9 @@ boilerplate:
     {% if page.info.zoom %}
     <li><strong>Zoom Link for Class Sessions (see <a href="{{ layout.boilerplate.lms.lmslink }}">{{ layout.boilerplate.lms.lmsname }}</a> for password, and class recordings can be found on {{ page.info.zoom.zoomrecordings }}):</strong></li> 
     <ul>    
-    {% for i in (0..page.info.zoom.size) %}
+    {% for i in (0..page.info.zoom.links.size) %}
     {% if i < page.info.zoom.size %}
-    <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom[i].section.zoomlink }}">{{ page.info.zoom[i].section.zoomlink }}</a></li>
+    <li><strong>Section {{ page.info.course_sections[i].section }} (see <a href="{{ page.info.zoom.links[i].section.phonenumberlink }}">Zoom phone number list</a> for dial-in):</strong> <a href="{{ page.info.zoom.links[i].section.zoomlink }}">{{ page.info.zoom.links[i].section.zoomlink }}</a></li>
     {% endif %}
     {% endfor %}
     </ul>

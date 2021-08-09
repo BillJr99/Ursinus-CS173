@@ -370,6 +370,7 @@ schedule:
 - week: "3"
   date: "1"
   title: "Lab: Conditionals"
+  deliverables:
   - dtitle: "Lab: Conditionals Handed Out"    
     dlink: "Labs/Conditionals"     
     points: 100   
