@@ -33,6 +33,8 @@ info:
       title: "User Input with the <code>Scanner</code>"
       questions:
         - "What is <code>System.in</code>?"
+        - "How would you use the <code>scanner</code> object to ask the user to enter their grade in the class; keep asking them to enter their grade until it is an A, B, C, D, or F."
+        - "The <code>Scanner</code> class also includes a function called `nextInt` which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range!)"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.nio.file.Files;
