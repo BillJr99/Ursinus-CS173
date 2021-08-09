@@ -8,21 +8,18 @@ info:
   course_number: CS173
   course_sections: 
   - section: "A"
+  - section: "B"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2021/"
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Fall2021/"
   teamshelproom: https://teams.microsoft.com/l/channel/19%3a6ddddb88493946fa956387e9543a3b06%40thread.tacv2/Mongan%2520Drop-In%2520Office%2520Hours?groupId=b16dcd6b-3522-4564-8306-9051a92c68ba&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202021
   ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop running Windows, Mac OS, or most variants of Linux, that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
-  course_start_date: "2021/01/18"
-  course_end_date: "2021/05/05"
+  course_start_date: "2021/08/30"
+  course_end_date: "2021/12/10"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
-  zoom:
-  - section:
-      zoomlink: "https://ursinus-edu.zoom.us/j/98712172074"
-      phonenumberlink: "https://ursinus-edu.zoom.us/u/adXC6KGbJy"
   class_meets_days:
     isM: true
     isT: true
@@ -34,33 +31,54 @@ info:
   class_meets_locations:
   - section:
     - day: "M"
-      starttime: "11:00 AM"
-      endtime: "11:50 AM"
-      place: "Kaleidoscope"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "IDC 116"
     - day: "T"
-      starttime: "11:00 AM"
-      endtime: "11:50 AM"
-      place: "Bookstore"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "IDC 116"
     - day: "W"
-      starttime: "11:00 AM"
-      endtime: "11:50 AM"
-      place: "Kaleidoscope"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "IDC 116"
     - day: "F"
-      starttime: "11:00 AM"
-      endtime: "11:50 AM"
-      place: "Kaleidoscope"
+      starttime: "9:00 AM"
+      endtime: "9:50 AM"
+      place: "IDC 116"
+  - section:
+    - day: "M"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "IDC 116"
+    - day: "T"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "IDC 116"
+    - day: "W"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "IDC 116"
+    - day: "F"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "IDC 116"     
   midtermexam: 
     - mdate: "TBD"
       mstarttime: "TBD"
       mendtime: "TBD"
-      mroom: "TBD"     
+      mroom: "TBD" 
+    - mdate: "TBD"
+      mstarttime: "TBD"
+      mendtime: "TBD"
+      mroom: "TBD"       
   finalexam: 
-    - fdate: "2021/05/11"
-      fstarttime: "1:00 PM"
-      fendtime: "4:00 PM"
-      froom: "REMOTE"
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 3% per day if submitted before 10:59 PM Eastern Time on the day submitted.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
-  late_penalty_per_period: 3
+    - fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
+      froom: "TBD"
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 5% per day if submitted before 10:59 PM Eastern Time on the day submitted.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
+  late_penalty_per_period: 5
   late_penalty_period: "day"
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -87,44 +105,21 @@ instructors:
   picture: /images/profile.png
   officehours:
   - day: "M"
-    starttime: "5:00 PM"
-    endtime: "6:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"  
+    starttime: "12:00 PM"
+    endtime: "2:00 PM"
+    location: "Pfahler Hall 101L"  
   - day: "T"
-    starttime: "9:00 AM"
-    endtime: "10:50 AM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"   
-  - day: "T"
-    starttime: "2:00 PM"
-    endtime: "3:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"       
-  - day: "W"
-    starttime: "5:00 PM"
-    endtime: "6:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"
-  - day: "R"
-    starttime: "9:00 AM"
-    endtime: "10:00 AM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"    
-  - day: "R"
     starttime: "11:00 AM"
-    endtime: "12:00 PM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"        
+    endtime: "2:00 AM"
+    location: "Pfahler Hall 101L"        
+  - day: "W"
+    starttime: "12:00 PM"
+    endtime: "2:00 PM"
+    location: "Pfahler Hall 101L"        
   - day: "F"
-    starttime: "1:30 PM"
-    endtime: "3:30 PM"
-    location: "Virtual Office Hours on Microsoft Teams Help Room"    
-- name: "Institute for Student Success"
-  title: "Drop-In Session to Ask Questions and Work with Classmates"
-  officehours:
-  - day: "T"
-    starttime: "4:00 PM"
-    endtime: "5:00 PM"
-    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom - Link Available Here</a>" 
-  - day: "R"
-    starttime: "7:00 PM"
-    endtime: "8:00 PM"
-    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Zoom - Link Available Here</a>"
+    starttime: "12:00 PM"
+    endtime: "2:00 PM"
+    location: "Pfahler Hall 101L"    
     
 textbooks:
 - title: "Java for Everyone: Late Objects"
@@ -164,15 +159,17 @@ grade_breakdown:
 - category: "Programming Assignments"
   weight: "35%"
 - category: "Labs"
-  weight: "30%"
-- category: "Final Project"
-  weight: "15%"
-- category: "Quizzes and Pre-Lab Exercises"
+  weight: "20%"
+- category: "Midterm Exam"
   weight: "10%"
+- category: "Pre-Lab Exercises"
+  weight: "10%"
+- category: "Quizzes"
+  weight: "10%"  
 - category: "Debugging Table"
   weight: "5%"
-- category: "Participation"
-  weight: "5%"
+- category: "Final Exam"
+  weight: "10%"  
 
 letter_grades:
 - letter: "A+"
@@ -204,7 +201,7 @@ letter_grades:
 
 schedule:
 - week: "0"
-  date: "2"
+  date: "0"
   title: "Course Overview: What is Computer Science?"
   link: "../Ursinus-CS173-Overview"
   readings:
@@ -218,20 +215,15 @@ schedule:
     points: 15
     submission_types: "noupload"
 - week: "0"
-  date: "3"
+  date: "1"
   title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
   link: "./DrawingCanvas"
-  deliverables:
-  - dtitle: "Participation: Pre-Assessment Handed Out"
-    dlink: "./Assignments/Participation/PreAssessment"
-    points: 10   
-    submission_types: "written"
-- week: "1"
-  date: "0"
+- week: "0"
+  date: "2"
   title: "A Brief History of Computer Science"  
   link: "../Ursinus-CS173-CSHistory"  
-- week: "1"
-  date: "1"
+- week: "0"
+  date: "3"
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
   readings:
@@ -244,10 +236,10 @@ schedule:
     submission_types: "noupload"
   - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
     dlink: "Assignments/NetBeans"
-    points: 100
+    points: 50
     rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
 - week: "1"
-  date: "2"
+  date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
   readings:
@@ -256,26 +248,33 @@ schedule:
   - rtitle: "Beginner's Java Reference Manual"
     rlink: "https://www.tutorialspoint.com/java/java_quick_guide.htm"
   - rtitle: "Expressions and Assignment Statements"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"    
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"
 - week: "1"
-  date: "3"
+  date: "1"
+  title: "Lab: Kepler's Third Law"
+  readings: 
+  - rtitle: "Using the Math Class"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html"  
+  deliverables:
+  - dtitle: "Lab: Kepler's Third Law Handed Out"    
+    dlink: "Labs/Kepler"
+    points: 100
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"  
+- week: "1"
+  date: "2"
   title: "Expressions and Variables"       
   readings:
   - rtitle: "Compound Assignment Operators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
   - rtitle: "Variables and Assignment Expressions Video"
     rlink: "https://www.youtube.com/embed/vhV97hyV0fc"    
-  deliverables:
-  - dtitle: "Participation: Pre-Assessment Due"
-    dlink: "./Assignments/Participation/PreAssessment"
-    points: 10   
-    submission_types: "written"    
+  deliverables:  
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
     points: 3     
     submission_types: "noupload"
-- week: "2"
-  date: "0"
+- week: "1"
+  date: "3"
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"
   readings:
@@ -286,7 +285,22 @@ schedule:
   - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
   - rtitle: "Casting and Ranges"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"  
+  deliverables:
+  - dtitle: "Programming Assignment: Intro to NetBeans Due"
+    dlink: "Assignments/NetBeans"
+    points: 50 
+    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"    
+- week: "2"
+  date: "0"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  link: "Activities/NumberSystems"    
+  deliverables:
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "Labs/Kepler"    
+    points: 100  
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"    
+  readings:
   - rtitle: "ASCII Encoding Video"
     rlink: "https://www.youtube.com/embed/5aJKKgSEUnY"
   - rtitle: "Floating Point Values Video"
@@ -295,23 +309,21 @@ schedule:
     rlink: "https://www.youtube.com/embed/ku4KOFQ-bB4"        
 - week: "2"
   date: "1"
-  title: "Lab: Kepler's Third Law"
-  readings: 
-  - rtitle: "Using the Math Class"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html"
-  deliverables:
-  - dtitle: "Lab: Kepler's Third Law Handed Out"    
-    dlink: "Labs/Kepler"
-    points: 100
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"
+  title: "Lab: Debugging"  
+  readings:
+  - rtitle: "Debugging with NetBeans"
+    rlink: "NetBeans/Debugging"
+  - rtitle: "Using the NetBeans Debugger"
+    rlink: "./Modules/Debugger/Module"
+  deliverables:  
+  - dtitle: "Lab: Debugging Handed Out"    
+    dlink: "Labs/Debugging"
+    points: 100 
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
     points: 3  
-    submission_types: "noupload"
-  - dtitle: "Programming Assignment: Intro to NetBeans Due"
-    dlink: "Assignments/NetBeans"
-    points: 100 
-    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"    
+    submission_types: "noupload"  
 - week: "2"
   date: "2"
   title: "Boolean Logic Expressions, DeMorgan's Law"
@@ -351,23 +363,17 @@ schedule:
   - rtitle: "DeMorgan's Laws"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-6-DeMorgan.html"
   deliverables:
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "Labs/Kepler"    
-    points: 100  
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"    
+  - dtitle: "Lab: Debugging Due"    
+    dlink: "Labs/Debugging"     
+    points: 100   
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"    
 - week: "3"
   date: "1"
-  title: "Lab: Debugging"  
-  readings:
-  - rtitle: "Debugging with NetBeans"
-    rlink: "NetBeans/Debugging"
-  - rtitle: "Using the NetBeans Debugger"
-    rlink: "./Modules/Debugger/Module"
-  deliverables:  
-  - dtitle: "Lab: Debugging Handed Out"    
-    dlink: "Labs/Debugging"
-    points: 100 
-    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"
+  title: "Lab: Conditionals"
+  - dtitle: "Lab: Conditionals Handed Out"    
+    dlink: "Labs/Conditionals"     
+    points: 100   
+    rubricpath: "_pages/Labs/Conditionals/lab-conditionals.md"   
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
@@ -408,14 +414,14 @@ schedule:
 - week: "4"
   date: "0"
   title: "Functions" 
+  deliverables:
+  - dtitle: "Lab: Conditionals Due"    
+    dlink: "Labs/Conditionals"     
+    points: 100   
+    rubricpath: "_pages/Labs/Conditionals/lab-conditionals.md"     
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
-  deliverables:
-  - dtitle: "Lab: Debugging Due"    
-    dlink: "Labs/Debugging"     
-    points: 100   
-    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"
 - week: "4"
   date: "1"
   title: "Lab: Functions"    
@@ -502,10 +508,6 @@ schedule:
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"
-  - dtitle: "Participation: First Self-Assessment Handed Out"
-    dlink: "./Assignments/Participation/SelfAssessment"
-    points: 10  
-    submission_types: "written"    
 - week: "6"
   date: "1"
   title: "Lab: Iteration" 
@@ -513,9 +515,13 @@ schedule:
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
     dlink: "Labs/MonteCarloPi"  
     points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"  
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100 
+    submission_types: "written"     
 - week: "6"
-  date: "3"
+  date: "2"
   title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
@@ -527,14 +533,18 @@ schedule:
     dlink: "Modules/Strings/Exercise"
     points: 3
     submission_types: "noupload"
-- week: "7"
-  date: "0"
+- week: "6"
+  date: "3"
   title: "Iteration and the do loop"  
   deliverables: 
-    - dtitle: "Exercise: Iteration"
-      dlink: "./Modules/Iteration/Exercise"    
-      points: 3  
-      submission_types: "noupload"      
+  - dtitle: "Exercise: Iteration"
+    dlink: "./Modules/Iteration/Exercise"    
+    points: 3  
+    submission_types: "noupload"    
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"
+    points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"         
 - week: "7"
   date: "2"
   title: "Coding Style and the Code Review"
@@ -546,20 +556,19 @@ schedule:
   title: "String Manipulation Workshop" 
   readings:
     - rtitle: "String Manipulation Exercises"
-      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"
-  deliverables:
-    - dtitle: "Participation: First Self-Assessment Due"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10 
-      submission_types: "written"      
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
 - week: "8"
   date: "0"
   title: "String Manipulation Workshop" 
   deliverables:
-  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
-    dlink: "Labs/MonteCarloPi"
-    points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100  
+    submission_types: "written"   
+- week: "10"
+  date: "1"
+  title: "Lab: Ethical Case Studies"  
+  deliverables:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
@@ -567,7 +576,7 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
     points: 100    
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"       
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"     
 - week: "8"
   date: "2"
   title: "Arrays" 
@@ -593,12 +602,7 @@ schedule:
   title: "Arrays"   
   readings:
   - rtitle: "Traversing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"
-  deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100 
-    submission_types: "written"    
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"   
 - week: "9"
   date: "0"
   title: "2D Arrays"
@@ -663,22 +667,20 @@ schedule:
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
     points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"       
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100  
-    submission_types: "written"    
+    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"  
 - week: "10"
   date: "1"
-  title: "Lab: Ethical Case Studies"    
+  title: "" 
+- week: "10"
+  date: "2"
+  title: ""   
 - week: "10"
   date: "3"
   title: "File I/O"
   link: "Activities/FileIO"      
 - week: "11"
   date: "0"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
-  link: "Activities/NumberSystems"    
+  title: ""      
   deliverables:
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
@@ -729,10 +731,13 @@ schedule:
     points: 100    
     rubricpath: "_pages/Labs/HashMaps/lab-tellastory.md"
 - week: "12"
+  date: "1"
+  title: ""     
+- week: "12"
   date: "2"
   title: "Classes and Object Data Types"      
-- week: "12"
-  date: "3"
+- week: "13"
+  date: "0"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"   
   readings:   
@@ -747,27 +752,19 @@ schedule:
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"    
 - week: "13"
-  date: "0"
+  date: "1"
+  title: ""    
+- week: "13"
+  date: "2"
   title: "Algorithms: Recursion and Merge Sort" 
-  link: "Activities/Recursion"  
+  link: "Activities/Recursion" 
   readings:
   - rtitle: "Recursion Part 1"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"
   - rtitle: "Recursive Searching and Sorting"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"        
-- week: "13"
-  date: "1"
-  title: "Lab: Final Project Workshop"    
-  deliverables:            
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"    
-    points: 100    
-    rubricpath: "_pages/Projects/proj-final.md"
-- week: "13"
-  date: "2"
-  title: "Algorithms: Recursion and Merge Sort" 
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-2-recursive-search-sort.html"   
   deliverables:
     - dtitle: "Programming Assignment: Guitar String Synthesis Due"
       dlink: "Assignments/GuitarStringSynth"      
@@ -780,16 +777,11 @@ schedule:
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
       points: 3 
-      submission_types: "noupload"      
+      submission_types: "noupload" 
 - week: "13"
   date: "3"
   title: "Recursion and Dynamic Programming"  
   link: "Activities/DynamicProgramming"  
-  deliverables:
-    - dtitle: "Participation: Second Self-Assessment Handed Out"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10  
-      submission_types: "written"      
 - week: "14"
   date: "0"
   title: "Review"  
@@ -800,10 +792,10 @@ schedule:
       submission_types: "written"      
 - week: "14"
   date: "1"
-  title: "Final Project Workshop" 
+  title: "" 
 - week: "14"
   date: "2"
-  title: "Final Project Workshop" 
+  title: "" 
   deliverables:
     - dtitle: "Exercise: Recursion"
       dlink: "Modules/Recursion/Module"
@@ -811,7 +803,7 @@ schedule:
       submission_types: "noupload"
 - week: "14"
   date: "3"
-  title: "Final Project Workshop" 
+  title: "" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
@@ -820,107 +812,87 @@ schedule:
     - dtitle: "Exercise: Merge Sort"
       dlink: "Modules/MergeSort/Module"  
       points: 3  
-      submission_types: "noupload"      
-- week: "15"
-  date: "0"
-  title: "Review" 
-  deliverables:
-    - dtitle: "Participation: Second Self-Assessment Due"
-      dlink: "./Assignments/Participation/SelfAssessment"
-      points: 10  
-      submission_types: "written"
+      submission_types: "noupload"  
     - dtitle: "Exercise: Dynamic Programming"
       dlink: "Modules/DynamicProgramming/Module"   
       points: 3        
-      submission_types: "noupload"
-- week: "15"
-  date: "1"
-  title: "Review"   
-  deliverables:         
-    - dtitle: "Final Project: Project and Presentation Due"
-      dlink: "Projects/Final"   
-      points: 100       
-      rubricpath: "_pages/Projects/proj-final.md"
+      submission_types: "noupload"      
     - dtitle: "Programming Assignment: Iris Dataset Due"
       dlink: "Assignments/Iris"
       points: 100 
       rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"
     
 university:
-  semester: "Spring"
-  academicyear: "2020-21"
+  semester: "Fall"
+  academicyear: "2021-22"
   fall:
   - kname: "Add Deadline"
-    kdate: "2020/09/18"
+    kdate: "2021/09/10"
     kdisplay: true
-  - kname: "Drop with a W Deadline"
-    kdate: "2020/11/4"
-    kdisplay: true  
   - kname: "Mid Semester Grades Posted"
-    kdate: "2020/10/23"
-    kdisplay: false
-  - kname: "2020 Transition to Remote Learning after Thanksgiving Break"
-    kdate: "2020/11/30"
-    kdisplay: true
-  - kname: "Designated Thursday Schedule"
-    kdate: "2020/12/14"
-    kdisplay: true
-  - kname: "Designated Friday Schedule"
-    kdate: "2020/12/15"    
-    kdisplay: true    
+    kdate: "2021/10/15"
+    kdisplay: false    
+  - kname: "Drop with a W Deadline"
+    kdate: "2021/10/27"
+    kdisplay: true  
+  - kname: "Reading Day"
+    kdate: "2021/12/11"
+    kdisplay: true     
   - kname: "Finals Week Begins"
-    kdate: "2020/12/16"
+    kdate: "2021/12/13"
     kdisplay: false
   - kname: "Finals Week Ends"
-    kdate: "2020/12/22"
+    kdate: "2021/12/18"
     kdisplay: false
   spring:
   - kname: "Add Deadline"
-    kdate: "2021/02/2"
-    kdisplay: true
-  - kname: "Drop with a W Deadline"
-    kdate: "2021/03/24"
+    kdate: "2022/02/1"
     kdisplay: true
   - kname: "Mid Semester Grades Posted"
-    kdate: "2021/03/5"
-    kdisplay: false
-  - kname: "Designated Tuesday Schedule"
-    kdate: "2021/04/30"
-    kdisplay: true
-  - kname: "Designated Wednesday Schedule"
-    kdate: "2021/05/3"
+    kdate: "2021/03/4"
+    kdisplay: false    
+  - kname: "Drop with a W Deadline"
+    kdate: "2022/03/23"
     kdisplay: true
   - kname: "Designated Thursday Schedule"
-    kdate: "2021/05/5"
-    kdisplay: true    
+    kdate: "2022/05/4"
+    kdisplay: false     
   - kname: "Reading Day"
-    kdate: "2021/05/6"
+    kdate: "2022/05/5"
     kdisplay: false    
-  - kname: "Baccalaureate"
-    kdate: "2021/05/14"
-    kdisplay: false
-  - kname: "Commencement"
-    kdate: "2021/05/15"
-    kdisplay: false
   - kname: "Finals Week Begins"
-    kdate: "2021/05/07"
+    kdate: "2022/05/06"
     kdisplay: false
   - kname: "Finals Week Ends"
-    kdate: "2021/05/13"
-    kdisplay: false    
+    kdate: "2022/05/12"
+    kdisplay: false       
+  - kname: "Baccalaureate"
+    kdate: "2022/05/13"
+    kdisplay: false
+  - kname: "Commencement"
+    kdate: "2022/05/14"
+    kdisplay: false 
   fallholidays:
-  - date: "2020/11/25"
-  - date: "2020/11/26"
-  - date: "2020/11/27" 
+  - date: "2021/10/16"
+  - date: "2021/10/17"
+  - date: "2021/10/18"
+  - date: "2021/10/19"
+  - date: "2021/11/24"
+  - date: "2021/11/25"
+  - date: "2021/11/26"
+  - date: "2021/11/27"
+  - date: "2021/11/28"
   springholidays:
-  - date: "2021/01/18"  
-  - date: "2021/01/19"  
-  - date: "2021/02/18"  
-  - date: "2021/03/3"  
-  - date: "2021/03/9"
-  - date: "2021/03/16" 
-  - date: "2021/03/31"  
-  - date: "2021/04/13"  
+  - date: "2022/01/17"  
+  - date: "2022/03/5"  
+  - date: "2022/03/6"  
+  - date: "2022/03/7"  
+  - date: "2022/03/8"  
+  - date: "2022/03/9"  
+  - date: "2022/03/10"  
+  - date: "2022/03/11"  
+  - date: "2022/03/12"  
+  - date: "2022/03/13"  
   
 ---
 
@@ -966,22 +938,21 @@ As part of embracing bugs in the class, students will keep a running tab of synt
 
 ## Classroom Participation
 
-### Group Work \[[^1]\]
-In addition to ordinary participation that follows the natural rhythm of a lecture, most days there will be at least one followup problem, which is a question that follows on the heels of newly presented material. Students will split into groups of 2 and try to write some code to address a particular problem. When a group of students believe they have figured out the answer, they raise their hand. The other students can continue to work while I verify that the answer is correct. If the answer is correct, the students present the answer to the class. If the group is not correct upon my checking, then the groups continue this process until one gets it correct.
-
-Other ways to help your fellow classmates in class are as follows:
+Classroom activities are intended to directly benefit you as you practice with the material from the class.  However, participating in these activities also provides you an opportunity to develop interpersonal and collaborative skills by working with others!  Some ways to help your fellow classmates in class are as follows:
 
 * Helping to teach a student a topic during office hours.
 * Certain calls for participation in class
 * Particularly helpful or insightful messages on Microsoft Teams
 * Finding mistakes in the book or on the assigned homework and labs
 
-### Class Participation and Classroom Etiquette \[[^1]\]
+### Group Work \[[^1]\]
+In addition to ordinary participation that follows the natural rhythm of a lecture, on many days there will be at least one followup problem, which is a question that follows on the heels of newly presented material. Students will split into small groups and try to write some code to address a particular problem. When a group of students believe they have figured out the answer, they raise their hand. The other students can continue to work while I verify that the answer is correct. If the answer is correct, and the students present the answer to the class. If the group is not correct upon my checking, then the groups continue this process until one gets it correct.
+
+### Classroom Etiquette \[[^1]\]
 For classroom attendance, the following rules apply:
 
 * Please be attentive during class. There will be class exercises that involve coding, but class time should be used for learning computer science. It is imperative that technology be used for this purpose during our class time together. **Alternatively, please try to think of this as a safe space away from social media.** We could all use a break, and we are fortunate to have a good excuse to make that space.
 * Please follow common courtesy. For instance, you can bring food and drink as long as it's not distracting, but please clean up after yourself if you do. Our janitorial staff deserves the utmost respect and help with their job.
-* In-class exercises and "low stakes" activities will take place individually and in groups to assess our progress together.  These exercises will be given both synchronously (for example, in-class activities, pair programming exercises) and asynchronously (for example, pre-lab exercises, peer code reviews, book surveys) and will be graded on a participation basis.  These are given equal weight and form the basis of the class participation score.
-* If a class session is remote, please feel free to make choices that make you most comfortable.  For example, I will record these sessions for students who cannot make the session or for those who would benefit from a review of the material.  I'd encourage you to enable your video feed if it is available, but if you need leave your video off, you feel free to do so; however, if you find that this becomes necessary on a prolonged basis, please see me to discuss.  Please keep your microphone on mute to avoid background noises while others are speaking; however, please do not feel "mic fright" about unmuting to speak up and participate anytime.  If, however, you would prefer to communicate via the chat interface (either exclusively or in combination with your audio/video), you should feel free to do that.  Whether in-person or remote, all I ask is that you engage as best you can; the material is challenging but fun, and we're all here to learn new things together.
+* In-class exercises and "low stakes" activities will take place individually and in groups to assess our progress together.  These exercises will be given both synchronously (for example, in-class activities, pair programming exercises) and asynchronously (for example, pre-lab exercises, peer code reviews, book surveys) and will be graded on a participation basis.  
 
 [^1]: This introduction is adapted from Dr. Tralie's CS173 [Course Syllabus](http://www.ctralie.com/Teaching/CS173_S2020/index.html).

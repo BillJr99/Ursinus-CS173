@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Introduction to Java Programming wi
 
 info:
   coursenum: CS173
-  points: 100
+  points: 50
   goals:
     - To write and execute a Java program
     - To use the NetBeans Integrated Development Environment
