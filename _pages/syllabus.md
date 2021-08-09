@@ -487,19 +487,14 @@ schedule:
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
     points: 100  
-    rubricpath: "_pages/Labs/Functions/lab-functions.md"    
+    rubricpath: "_pages/Labs/Functions/lab-functions.md"   
 - week: "5"
   date: "3"
-  title: "Iteration"
-  link: "Activities/Iteration"
+  title: "Strings"  
 - week: "6"
   date: "0"
-  title: "Iteration and the for loop"
-  readings:
-  - rtitle: "Ch. 4"
-    rlink: false  
-  - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
+  title: "Iteration"
+  link: "Activities/Iteration"
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
@@ -512,7 +507,7 @@ schedule:
   - dtitle: "Lab: Unit Testing Due"
     dlink: "Labs/UnitTesting"  
     points: 100   
-    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"    
+    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"      
 - week: "6"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -530,6 +525,14 @@ schedule:
     points: 100    
 - week: "6"
   date: "3"
+  title: "Iteration and the for loop"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
+  - rtitle: "for Loops"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"      
+- week: "7"
+  date: "2"
   title: "Iteration"   
   readings:
   - rtitle: "Loops with Strings"
@@ -546,7 +549,7 @@ schedule:
     points: 3
     submission_types: "noupload"
 - week: "7"
-  date: "2"
+  date: "3"
   title: "Iteration and the do loop"  
   deliverables: 
   - dtitle: "Exercise: Iteration"
@@ -557,18 +560,12 @@ schedule:
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"       
-- week: "7"
-  date: "3"
+- week: "8"
+  date: "0"
   title: "Coding Style and the Code Review"
   readings:
   - rtitle: "Style Guide"
     rlink: "Style-Guide"      
-- week: "8"
-  date: "0"
-  title: "String Manipulation Workshop" 
-  readings:
-    - rtitle: "String Manipulation Exercises"
-      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
   deliverables:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
@@ -577,7 +574,7 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
     points: 100    
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"        
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"                
 - week: "8"
   date: "1"
   title: "Lab: Iteration" 
@@ -588,6 +585,12 @@ schedule:
     rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"         
 - week: "8"
   date: "2"
+  title: "String Manipulation Workshop" 
+  readings:
+    - rtitle: "String Manipulation Exercises"
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
+- week: "8"
+  date: "3"
   title: "String Manipulation Workshop"
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
@@ -598,21 +601,18 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10        
     submission_types: "written"
-- week: "8"
-  date: "3"
+- week: "9"
+  date: "0"
   title: "File I/O"
   link: "Activities/FileIO"  
   readings:
   - rtitle: "Ch. 7"
-    rlink: false     
-- week: "9"
-  date: "0"
-  title: "File I/O"
+    rlink: false  
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100  
-    submission_types: "written"   
+    submission_types: "written"       
 - week: "9"
   date: "1"
   title: "Lab: Ethical Case Studies"
@@ -623,6 +623,9 @@ schedule:
     submission_types: "written"
 - week: "9"
   date: "2"
+  title: "File I/O"
+- week: "9"
+  date: "3"
   title: "Arrays"
   link: "Activities/Arrays"
   readings:  
@@ -632,8 +635,8 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
   - rtitle: "Array Review"
     rlink: "Modules/Arrays/Module"    
-- week: "9"
-  date: "3"
+- week: "10"
+  date: "0"
   title: "Arrays"
   readings:
   - rtitle: "Traversing Arrays"
@@ -648,9 +651,6 @@ schedule:
     points: 100    
     rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"   
 - week: "10"
-  date: "0"
-  title: "Array Workshop"  
-- week: "10"
   date: "1"
   title: "Lab: Arrays"
   deliverables:
@@ -664,7 +664,10 @@ schedule:
     points: 10    
     submission_types: "written"
 - week: "10"
-  date: "2"  
+  date: "2"
+  title: "Array Workshop"      
+- week: "10"
+  date: "3"  
   title: "2D Arrays"
   readings:
   - rtitle: "Nested Loops"
@@ -680,26 +683,14 @@ schedule:
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
     submission_types: "noupload"  
-- week: "10"
-  date: "3"
-  title: "2D Arrays"  
-- week: "11"
+- week: "1"
   date: "0"
-  title: "ArrayLists and Generic/Template Data Structures"
-  readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false  
-  - rtitle: "ArrayList Objects"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html"  
-  - rtitle: "ArrayList Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
-  - rtitle: "ArrayList Iteration"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"        
+  title: "2D Arrays" 
   deliverables:
   - dtitle: "Lab: Array Averages Due"
     dlink: "Labs/ArrayAveraging"    
     points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"      
+    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"             
 - week: "11"
   date: "1"
   title: "Lab: Code Review"
@@ -718,9 +709,21 @@ schedule:
     rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"  
 - week: "11"
   date: "2"
-  title: "ArrayLists and Generic/Template Data Structures"    
+  title: "ArrayLists and Generic/Template Data Structures"
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false  
+  - rtitle: "ArrayList Objects"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html"  
+  - rtitle: "ArrayList Methods"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
+  - rtitle: "ArrayList Iteration"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
 - week: "11"
   date: "3"
+  title: "ArrayLists and Generic/Template Data Structures"    
+- week: "12"
+  date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"
   readings:
@@ -730,23 +733,26 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html"
   - rtitle: "Wrapper Classes"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"  
-- week: "12"
-  date: "0"
-  title: "Classes and Object Data Types"  
-  readings:
-  - rtitle: "Constructors"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"
   deliverables:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-codereview.md"      
+    rubricpath: "_pages/Labs/Arrays/lab-codereview.md"       
 - week: "12"
   date: "1"
   title: ""     
-- week: "12"
+- week: "13"
+  date: "0"
+  title: "Classes and Object Data Types"  
+  readings:
+  - rtitle: "Constructors"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"   
+- week: "13"
+  date: "1"
+  title: "" 
+- week: "13"
   date: "2"
-  title: "Classes and Object Data Types"
+  title: "Classes and Object Data Types" 
   readings:
   - rtitle: "Accessors"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html"
@@ -755,13 +761,7 @@ schedule:
   - rtitle: "Static Variables and Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"   
 - week: "13"
-  date: "0"
-  title: "Classes and Object Data Types"          
-- week: "13"
-  date: "1"
-  title: ""    
-- week: "13"
-  date: "2"
+  date: "3"
   title: "Searching and Sorting" 
   link: "Activities/SearchingAndSorting"   
   readings:   
@@ -775,15 +775,6 @@ schedule:
     rlink: "https://www.youtube.com/embed/WaNLJf8xzC4"
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
-- week: "13"
-  date: "3"
-  title: "Algorithms: Recursion" 
-  link: "Activities/Recursion" 
-  readings:
-  - rtitle: "Recursion Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
-  - rtitle: "Recursion Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html" 
   deliverables:
     - dtitle: "Programming Assignment: Guitar String Synthesis Due"
       dlink: "Assignments/GuitarStringSynth"      
@@ -796,15 +787,21 @@ schedule:
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
       points: 3 
-      submission_types: "noupload"   
+      submission_types: "noupload"      
 - week: "14"
   date: "0"
-  title: ""  
+  title: "Algorithms: Recursion" 
+  link: "Activities/Recursion" 
+  readings:
+  - rtitle: "Recursion Part 1"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
+  - rtitle: "Recursion Part 2"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"  
   deliverables:
     - dtitle: "Debugging Table: Second Check Handed Out"
       dlink: "Assignments/DebuggingTable"
       points: 10 
-      submission_types: "written"      
+      submission_types: "written"     
 - week: "14"
   date: "1"
   title: "" 
