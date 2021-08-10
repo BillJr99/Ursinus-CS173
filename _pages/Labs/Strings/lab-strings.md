@@ -40,7 +40,7 @@ tags:
   
 ---
 
-In this lab \[[^1]\], you will manipulate `String`s.
+In this lab, you will manipulate `String`s.
 
 ## Exporting your Project for Submission
 
