@@ -57,6 +57,9 @@ Download the provided [NetBeans project](../files/lab-unittesting/UnitTestingSam
 
 Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.  You don't have to enter the code that you see there - that's for a test project that the tutorial walks through; instead, we'll give you test case code to use below right here on this lab page.
 
+## Extra Credit (10%): New Code Samples
+Do you have a code sample that you've written that you are willing to add to this lab project?  In your README, include the function that doesn't work correctly and a description of the bug, and we might share it (anonymously) in this lab for others to explore!
+
 ## Exporting your Project for Submission
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
