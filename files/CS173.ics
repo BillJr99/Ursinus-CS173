@@ -831,7 +831,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091450
 DTSTAMP:20211102T000000Z
 DTSTART;VALUE=DATE:20211102
-SUMMARY:CS173 Intro to Computer Science: Lab: Strings Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Anagram Solver Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -851,7 +851,7 @@ DTSTAMP:20211102T000000Z
 DTSTART;VALUE=DATE:20211102
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Strings Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Strings\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
+DESCRIPTION:\nDeliverable: Lab: Anagram Solver Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Anagrams\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -912,7 +912,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091459
 DTSTAMP:20211109T000000Z
 DTSTART;VALUE=DATE:20211109
-SUMMARY:CS173 Intro to Computer Science: Lab: Strings Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Anagram Solver Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -941,7 +941,7 @@ DTSTAMP:20211109T000000Z
 DTSTART;VALUE=DATE:20211109
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Strings Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Strings\nDeliverable: Lab: Array Averages Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/ArrayAveraging\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
+DESCRIPTION:\nDeliverable: Lab: Anagram Solver Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Anagrams\nDeliverable: Lab: Array Averages Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/ArrayAveraging\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
