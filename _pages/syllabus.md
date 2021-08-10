@@ -691,7 +691,7 @@ schedule:
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
     submission_types: "noupload"  
-- week: "1"
+- week: "11"
   date: "0"
   title: "2D Arrays" 
   deliverables:
