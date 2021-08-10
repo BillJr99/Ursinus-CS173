@@ -408,7 +408,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091421
 DTSTAMP:20210921T000000Z
 DTSTART;VALUE=DATE:20210921
-SUMMARY:CS173 Intro to Computer Science: Lab: Conditionals Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Venn Diagram with Conditionals Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -428,7 +428,7 @@ DTSTAMP:20210921T000000Z
 DTSTART;VALUE=DATE:20210921
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Conditionals Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Conditionals\nDeliverable: Exercise: Conditionals https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Conditionals/Exercise
+DESCRIPTION:\nDeliverable: Lab: Venn Diagram with Conditionals Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/VennDiagram\nDeliverable: Exercise: Conditionals https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Conditionals/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -516,7 +516,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09142d
 DTSTAMP:20210929T000000Z
 DTSTART;VALUE=DATE:20210929
-SUMMARY:CS173 Intro to Computer Science: Lab: Conditionals Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Venn Diagram with Conditionals Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -527,7 +527,7 @@ DTSTAMP:20210929T000000Z
 DTSTART;VALUE=DATE:20210929
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html\nDeliverable: Lab: Conditionals Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Conditionals
+DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html\nDeliverable: Lab: Venn Diagram with Conditionals Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/VennDiagram
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
