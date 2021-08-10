@@ -337,7 +337,7 @@ schedule:
   link: "Activities/Debugging"  
 - week: "2"
   date: "3"
-  title: "Boolean Logic Expressions, DeMorgan's Law"
+  title: "Boolean Logic Expressions"
   link: "Activities/Boolean"
   readings:
   - rtitle: "Ch. 3"
@@ -365,12 +365,12 @@ schedule:
     submission_types: "noupload"  
 - week: "3"
   date: "1"
-  title: "Lab: Conditionals"
+  title: "Lab: Venn Diagram with Conditionals"
   deliverables:
-  - dtitle: "Lab: Conditionals Handed Out"    
-    dlink: "Labs/Conditionals"     
+  - dtitle: "Lab: Venn Diagram with Conditionals Handed Out"    
+    dlink: "Labs/VennDiagram"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-conditionals.md"   
+    rubricpath: "_pages/Labs/Conditionals/lab-venndiagram.md"   
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
@@ -435,10 +435,10 @@ schedule:
   date: "2"
   title: "Functions" 
   deliverables:
-  - dtitle: "Lab: Conditionals Due"    
-    dlink: "Labs/Conditionals"     
+  - dtitle: "Lab: Venn Diagram with Conditionals Due"    
+    dlink: "Labs/VennDiagram"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-conditionals.md"     
+    rubricpath: "_pages/Labs/Conditionals/lab-venndiagram.md" 
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"

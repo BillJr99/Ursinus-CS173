@@ -1,8 +1,8 @@
 ---
 layout: assignment
-permalink: /Labs/Conditionals
-title: "CS173: Intro to Computer Science - Conditionals"
-excerpt: "CS173: Intro to Computer Science - Conditionals"
+permalink: /Labs/VennDiagram
+title: "CS173: Intro to Computer Science - Venn Diagrams with Conditionals"
+excerpt: "CS173: Intro to Computer Science - Venn Diagrams with Conditionals"
 
 info:
   coursenum: CS173
@@ -37,7 +37,15 @@ tags:
   
 ---
 
-In this lab, you will use conditionals.
+In this lab, you will use conditionals to alter your program's control flow (that is, flow from one line of code to the next).  We can use `if` statements to conditionally execute code, or to make a choice between two or more pieces of code to run.
+
+## What to Do
+
+Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools_templates/D_venn3_2) of your choice.  For example, [this Venn Diagram](https://www.buzzfeed.com/tessafahey/actor-venn-diagram) sorts characters by whether they have been in the Marvel Cinematic Universe, won an academic award, and/or performed on Broadway.  Whatever you choose, make sure at least one item fits into each category.  You can draw your diagram using software like Microsoft Paint or PowerPoint, or on paper and taking a picture.  Either way, be sure to submit it with your project!
+
+Next, write a program that implements your Venn Diagram.  That is, write a series of `if/else if/else` statements, or nested `if` statements, that sets `boolean` variables representing each of the three main quadrants of your Venn Diagram, and prints to the screen where that person/place/thing fits into your Venn Diagram based on those `if` statements.  You can number the qudrants from 1 to 7, if you like, and print which quadrant results from the three `boolean` variables.
+
+Finally, write a second version of your `if` statements, this time using nested `if` statements if you used an `if/else if/else` structure previously, or vice-versa.  Keep both versions in your program to submit!
 
 ## Exporting your Project for Submission
 
