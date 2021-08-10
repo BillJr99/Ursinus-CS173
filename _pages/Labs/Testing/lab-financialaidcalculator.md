@@ -136,7 +136,7 @@ if (a > b && c > d) {
 
 ## Part 3: Unit Tests
 
-Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in Netbeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
+Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in NetBeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
 
 ### Creating Unit Tests
 

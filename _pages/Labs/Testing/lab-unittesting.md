@@ -45,9 +45,13 @@ tags:
 
 In this lab, you will practice with the unit testing framework JUnit within the NetBeans IDE.
 
-## Unit Tests \[[^1]\]
+## Background: Unit Tests \[[^1]\]
 
-Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in Netbeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
+Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in NetBeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
+
+## What to Do: Bug Hunt Challenge
+
+Download the provided [NetBeans project](../files/lab-unittesting/UnitTestingSample.zip).  It contains several functions to perform various tasks.  Read the documentation for those functions carefully to understand what they are supposed to do.  Each function has a bug in it; you may be able to find each one by reading the code, but it is often easier to develop unit tests that expose particular code failures that you can fix.  For each function, identify test cases that might help you learn when the function would fail.  Write down your planned test case in your README and describe what you are looking to test (or what failure you are looking to expose) through that test.  Execute the unit tests, identify the bug(s), fix them, and re-run the tests until they pass.
 
 ### Creating Unit Tests 
 
