@@ -29,6 +29,8 @@ info:
       progressing: The program is submitted according to the directions with a minor omission or correction needed
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution
   readings:
+    - rtitle: "Debugging Activity"
+      rlink: "../Activities/Debugging"
     - rtitle: "Debugging Video"
       rlink: "../Modules/Debugger/Module"
     - rtitle: "NetBeans Debugging Tutorial"

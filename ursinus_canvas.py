@@ -712,6 +712,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         inputdict['allowed_extensions'].append('rar')
                         inputdict['allowed_extensions'].append('7z')
                         if "submission_types" in deliverable and "written" in deliverable['submission_types'].lower():
+                            inputdict['submission_types'].append('online_text_entry')
                             inputdict['allowed_extensions'].append('pdf')
                             inputdict['allowed_extensions'].append('doc')
                             inputdict['allowed_extensions'].append('docx')
