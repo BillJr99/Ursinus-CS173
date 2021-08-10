@@ -161,13 +161,13 @@ goals:
 
 grade_breakdown:
 - category: "Programming Assignments"
-  weight: "35%"
+  weight: "30%"
 - category: "Labs"
   weight: "20%"
 - category: "Midterm Exam"
   weight: "10%"
 - category: "Pre-Lab Exercises"
-  weight: "10%"
+  weight: "15%"
 - category: "Quizzes"
   weight: "10%"  
 - category: "Debugging Table"
@@ -246,6 +246,11 @@ schedule:
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
+  deliverables:
+  - dtitle: "Exercise: Problets - Expressions - Arithmetic"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"  
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
@@ -264,6 +269,10 @@ schedule:
     dlink: "Labs/Kepler"
     points: 100
     rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"  
+  - dtitle: "Exercise: Epplets - Sequence"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"    
 - week: "1"
   date: "2"
   title: "Expressions and Variables"       
@@ -281,6 +290,11 @@ schedule:
   date: "3"
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"
+  deliverables:
+  - dtitle: "Exercise: Problets - Expressions - Relational"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"   
   readings:
   - rtitle: "Ch. 2.3, 2.5"
     rlink: false     
@@ -389,7 +403,11 @@ schedule:
   - dtitle: "Lab: Debugging Due"    
     dlink: "Labs/Debugging"     
     points: 100   
-    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"     
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"  
+  - dtitle: "Exercise: Problets - Expressions - Logical"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "3"
   date: "3"
   title: "Functions"
@@ -431,6 +449,10 @@ schedule:
     dlink: "Labs/AverageFunction" 
     points: 100
     rubricpath: "_pages/Labs/Functions/lab-functions.md"
+  - dtitle: "Exercise: Problets - Expressions - Assignment"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "4"
   date: "2"
   title: "Functions" 
@@ -468,7 +490,12 @@ schedule:
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
   - rtitle: "Strings Review"
-    rlink: "Modules/Strings/Module"        
+    rlink: "Modules/Strings/Module"  
+  deliverables:
+  - dtitle: "Exercise: Problets - Function - Function behavior"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "5"
   date: "1"
   title: "Lab: Unit Testing" 
@@ -477,6 +504,10 @@ schedule:
     dlink: "Labs/UnitTesting"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-unittesting.md" 
+  - dtitle: "Exercise: Problets - Selection - if/if-else tracing"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "5"
   date: "2"
   title: "Strings"
@@ -488,9 +519,18 @@ schedule:
     dlink: "Labs/AverageFunction"  
     points: 100  
     rubricpath: "_pages/Labs/Functions/lab-functions.md"   
+  - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"    
 - week: "5"
   date: "3"
   title: "Strings"  
+  deliverables:
+  - dtitle: "Exercise: Problets - Function - Debugging functions"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"   
 - week: "6"
   date: "0"
   title: "Iteration"
@@ -526,7 +566,12 @@ schedule:
   - rtitle: "Ch. 4"
     rlink: false  
   - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"      
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"
+  deliverables:
+  - dtitle: "Exercise: Problets - Loops - for loop tracing"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"    
 - week: "7"
   date: "2"
   title: "Iteration"   
@@ -544,14 +589,18 @@ schedule:
     dlink: "Modules/Strings/Exercise"
     points: 3
     submission_types: "noupload"
+  - dtitle: "Exercise: Problets - Loops - while loop tracing"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"    
 - week: "7"
   date: "3"
   title: "Iteration and the do loop"  
-  deliverables: 
-  - dtitle: "Exercise: Iteration"
-    dlink: "./Modules/Iteration/Exercise"    
-    points: 3  
-    submission_types: "noupload"    
+  deliverables:
+  - dtitle: "Exercise: Problets - Loops - do-while loop tracing"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
@@ -574,17 +623,26 @@ schedule:
 - week: "8"
   date: "1"
   title: "Lab: Iteration" 
-  deliverables:
+  deliverables:  
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
     dlink: "Labs/MonteCarloPi"  
     points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"         
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
+  - dtitle: "Exercise: Iteration"
+    dlink: "./Modules/Iteration/Exercise"    
+    points: 3  
+    submission_types: "noupload"     
 - week: "8"
   date: "2"
   title: "String Manipulation Workshop" 
   readings:
     - rtitle: "String Manipulation Exercises"
       rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
+  deliverables:
+  - dtitle: "Exercise: Problets - Loops - Advanced loops"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"       
 - week: "8"
   date: "3"
   title: "String Manipulation Workshop"
@@ -624,6 +682,11 @@ schedule:
 - week: "9"
   date: "2"
   title: "File I/O"
+  deliverables:
+  - dtitle: "Exercise: Epplets - Loops - for loop puzzles"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"  
 - week: "9"
   date: "3"
   title: "Arrays"
@@ -638,7 +701,11 @@ schedule:
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
-    points: 100        
+    points: 100
+  - dtitle: "Exercise: Epplets - Loops - while loop puzzles"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"         
 - week: "10"
   date: "0"
   title: "Arrays"
@@ -673,7 +740,12 @@ schedule:
     submission_types: "written"
 - week: "10"
   date: "2"
-  title: "Array Workshop"      
+  title: "Array Workshop"    
+  deliverables:
+  - dtitle: "Exercise: Problets - Array"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"   
 - week: "10"
   date: "3"  
   title: "2D Arrays"
@@ -727,6 +799,11 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
   - rtitle: "ArrayList Iteration"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
+  deliverables:
+  - dtitle: "Exercise: Epplets - Loops - do-while loop puzzles"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "11"
   date: "3"
   title: "ArrayLists and Generic/Template Data Structures"   
@@ -778,6 +855,11 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
   - rtitle: "Static Variables and Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"    
+  deliverables:
+  - dtitle: "Exercise: Problets - Classes"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "13"
   date: "3"
   title: "Searching and Sorting" 
@@ -816,10 +898,14 @@ schedule:
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"  
   deliverables:
-    - dtitle: "Debugging Table: Second Check Handed Out"
-      dlink: "Assignments/DebuggingTable"
-      points: 10 
-      submission_types: "written"     
+  - dtitle: "Debugging Table: Second Check Handed Out"
+    dlink: "Assignments/DebuggingTable"
+    points: 10 
+    submission_types: "written" 
+  - dtitle: "Exercise: Problets - Function - Recursive functions"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"       
 - week: "14"
   date: "1"
   title: "Review" 
