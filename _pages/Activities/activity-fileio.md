@@ -40,6 +40,9 @@ info:
         import java.nio.file.Files;
         import java.nio.file.Paths;
         import java.io.IOException;
+        import java.io.FileNotFoundException;
+        import java.io.File;
+        import java.util.Scanner;
         
         public class Main {  
             public static String readFileBytes(String path) {
@@ -64,11 +67,27 @@ info:
                 return result;
             }
             
+            public static void readLineByLine(String filePath) {
+                try {
+                    File input = new File(path);
+                    Scanner scan = new Scanner(input);
+                    
+                    while(scan.hasNextLine()) {
+                        String line = scan.nextLine();
+                        System.out.println(line);
+                    }
+                } catch(FileNotFoundException e) {
+                    System.err.println("Could not find the file!");
+                }            
+            }
+            
             public static void main(String[] args) {
                 String path = "test.txt";
                 String contents = readFileString(path);
                 byte[] byteContents = readFileBytes(path);
                 System.out.println(contents);
+                
+                readLineByLine(path);
             }
         }
         ]]></script>          
@@ -76,6 +95,8 @@ info:
       questions:
         - "What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to <code>readFileString</code> or <code>readFileBytes</code>?"
         - "What is the difference between <code>readFileBytes</code> and <code>readFileString</code>?"
+        - "What do you think <code>try</code> and <code>throws</code> mean?"
+        - "What do you think <code>System.err</code> does?"
         
 tags:
   - io

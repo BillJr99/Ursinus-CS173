@@ -611,12 +611,12 @@ schedule:
     rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"    
 - week: "9"
   date: "1"
-  title: "Lab: Strings"
+  title: "Lab: Anagram Solver"
   deliverables:
-  - dtitle: "Lab: Strings Handed Out"
-    dlink: "Labs/Strings"  
+  - dtitle: "Lab: Anagram Solver Handed Out"
+    dlink: "Labs/Anagrams"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-strings.md"  
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"  
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
@@ -658,10 +658,10 @@ schedule:
   date: "1"
   title: "Lab: Arrays"
   deliverables:
-  - dtitle: "Lab: Strings Due"
-    dlink: "Labs/Strings"  
+  - dtitle: "Lab: Anagram Solver Due"
+    dlink: "Labs/Anagrams"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-strings.md"    
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"     
   - dtitle: "Lab: Array Averages Handed Out"
     dlink: "Labs/ArrayAveraging"
     points: 100  

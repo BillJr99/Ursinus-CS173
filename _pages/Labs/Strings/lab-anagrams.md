@@ -1,8 +1,8 @@
 ---
 layout: assignment
-permalink: /Labs/Strings
-title: "CS173: Intro to Computer Science - Strings"
-excerpt: "CS173: Intro to Computer Science - Strings"
+permalink: /Labs/Anagrams
+title: "CS173: Intro to Computer Science - Anagram Solver"
+excerpt: "CS173: Intro to Computer Science - Anagram Solver"
 
 info:
   coursenum: CS173
@@ -33,14 +33,33 @@ info:
       preemerging: An incomplete submission is provided
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
       progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution     
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution  
+  readings:
+    - rtitle: "File I/O Activity and Examples"
+      rlink: "../Activities/FileIO"    
 
 tags:
-  - testing
+  - strings
   
 ---
 
-In this lab, you will manipulate `String`s.
+In this lab, you will manipulate `String`s by computing all the anagrams of a given word in a dictionary.  We provide a [dictionary file](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) that you can download into your project and read into a `String`.  
+
+## Part 1: Anagram Finder
+
+Two words are anagrams if they contain the same letters.  For example, `bat` and `tab` are anagrams, because they each contain one letter `a`, one letter `b`, and one letter `t`.
+
+Write a function that takes as parameters a file path and a `String` upon which to find anagrams.  [Read the dictionary file](../Activities/FileIO), one line at a time, and pass each line along with the `String` to a second function that returns `true` if the two words are anagrams, and `false` otherwise.  Print each word that is a matching anagram.
+
+You can choose your approach for determining if two words are anagrams.  For example, you can loop over each character in each word, count the number of each character, and ensure they are equal across both `String`s.  If you are looking for a challenge, you can also sort the letters in each word, and the resulting `String`s should be equal (for example, both `bat` and `tab` sort to the same `String` `abt`).
+
+## Part 2: Puzzle Solver
+
+Next, write a new function that operates similarly to the anagram finder, but allows you to also specify a character and a position.  This function should accept a `String` representing your available characters, a character, and a position.  Find all words in the dictionary that are anagrams of your `String`, but with a specific character at a given position within the `String`.  Only print those anagram matches.
+
+## A Word About the Dictionary File
+
+Did you notice that you had to read the dictionary file twice (once for each part of the lab)?  **Why is this unfortunate, and what might we do differently in the future?**  You don't have to modify the program, but speculate in your README on a better approach that would allow us to only have to read the file a single time.
 
 ## Exporting your Project for Submission
 
