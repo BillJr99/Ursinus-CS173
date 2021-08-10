@@ -1,13 +1,10 @@
 ---
 layout: activity
-permalink: /Activities/Arrays3
-title: "CS173: Intro to Computer Science - Arrays"
-excerpt: "CS173: Intro to Computer Science - Arrays"
+permalink: /Activities/2DArrays
+title: "CS173: Intro to Computer Science - 2D Arrays"
+excerpt: "CS173: Intro to Computer Science - 2D Arrays"
 
 info:
-  next: ./Arrays4
-  prev: ./Arrays2
-
   goals: 
     - To be able to create, access, and iterate a 2D array
 

@@ -533,8 +533,8 @@ schedule:
     submission_types: "written"   
 - week: "6"
   date: "0"
-  title: "Iteration"
-  link: "Activities/Iteration"
+  title: "Iteration with the for Loop"
+  link: "Activities/Iteration/For"
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
@@ -561,7 +561,7 @@ schedule:
   title: "Midterm Exam"
 - week: "6"
   date: "3"
-  title: "Iteration and the for loop"
+  title: "Iteration with the for loop"
   readings:
   - rtitle: "Ch. 4"
     rlink: false  
@@ -574,7 +574,8 @@ schedule:
     submission_types: "written"    
 - week: "7"
   date: "2"
-  title: "Iteration"   
+  title: "Iteration with the while Loop"  
+  link: "Activities/Iteration/While"  
   readings:
   - rtitle: "Loops with Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"  
@@ -595,7 +596,8 @@ schedule:
     submission_types: "written"    
 - week: "7"
   date: "3"
-  title: "Iteration and the do loop"  
+  title: "Iteration with the do loop"  
+  link: "Activities/Iteration/Do"
   deliverables:
   - dtitle: "Exercise: Problets - Loops - do-while loop tracing"
     dlink: "Modules/Problets/Exercise"  
@@ -634,10 +636,8 @@ schedule:
     submission_types: "noupload"     
 - week: "8"
   date: "2"
-  title: "Iteration and String Manipulation Workshop" 
-  readings:
-    - rtitle: "String Manipulation Exercises"
-      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
+  title: "Iteration over Strings"
+  link: "Activities/Iteration/Strings"  
   deliverables:
   - dtitle: "Exercise: Problets - Loops - Advanced loops"
     dlink: "Modules/Problets/Exercise"  
@@ -646,6 +646,9 @@ schedule:
 - week: "8"
   date: "3"
   title: "Iteration and String Manipulation Workshop"
+  readings:
+    - rtitle: "String Manipulation Exercises"
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"      
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
@@ -716,11 +719,11 @@ schedule:
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
     points: 100 
-    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"       
-  - dtitle: "Programming Assignment: ASCII Art Handed Out"
-    dlink: "Assignments/ASCIIArt" 
-    points: 100    
-    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"   
+    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"  
+  - dtitle: "Programming Assignment: Guitar String Synthesis Handed Out"
+    dlink: "Assignments/GuitarStringSynth"      
+    points: 100         
+    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"      
 - week: "10"
   date: "1"
   title: "Lab: Arrays"
@@ -749,6 +752,7 @@ schedule:
 - week: "10"
   date: "3"  
   title: "2D Arrays"
+  link: "Activities/2DArrays"
   readings:
   - rtitle: "Nested Loops"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
@@ -778,18 +782,19 @@ schedule:
   - dtitle: "Lab: Code Review Handed Out"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
-  - dtitle: "Programming Assignment: ASCII Art Due"
-    dlink: "Assignments/ASCIIArt" 
-    points: 100  
-    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"
-  - dtitle: "Programming Assignment: Guitar String Synthesis Handed Out"
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"
+  - dtitle: "Programming Assignment: Guitar String Synthesis Due"
     dlink: "Assignments/GuitarStringSynth"      
-    points: 100         
-    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"  
+    points: 100   
+    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"    
+  - dtitle: "Programming Assignment: ASCII Art Handed Out"
+    dlink: "Assignments/ASCIIArt" 
+    points: 100    
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"       
 - week: "11"
   date: "2"
-  title: "ArrayLists and Generic/Template Data Structures"
+  title: "The ArrayList and Generic/Template Data Structures"
+  link: "Activities/ArrayList"
   readings:
   - rtitle: "Ch. 6.8"
     rlink: false  
@@ -806,7 +811,7 @@ schedule:
     submission_types: "written"     
 - week: "11"
   date: "3"
-  title: "ArrayLists and Generic/Template Data Structures"   
+  title: "The ArrayList and Generic/Template Data Structures"   
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
@@ -876,10 +881,10 @@ schedule:
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
   deliverables:
-    - dtitle: "Programming Assignment: Guitar String Synthesis Due"
-      dlink: "Assignments/GuitarStringSynth"      
-      points: 100   
-      rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"
+    - dtitle: "Programming Assignment: ASCII Art Due"
+      dlink: "Assignments/ASCIIArt" 
+      points: 100  
+      rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"  
     - dtitle: "Programming Assignment: Iris Dataset Handed Out"
       dlink: "Assignments/Iris"      
       points: 100

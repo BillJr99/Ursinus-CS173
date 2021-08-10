@@ -1,12 +1,10 @@
 ---
 layout: activity
-permalink: /Activities/Iteration3
-title: "CS173: Intro to Computer Science - Iteration"
-excerpt: "CS173: Intro to Computer Science - Iteration"
+permalink: /Activities/Iteration/Strings
+title: "CS173: Intro to Computer Science - Iteration over Strings"
+excerpt: "CS173: Intro to Computer Science - Iteration over Strings"
 
 info:
-  prev: ./Iteration2
-  
   goals: 
     - To be able to apply iteration and conditionals to a <code>String</code>
 

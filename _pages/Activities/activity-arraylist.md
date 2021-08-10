@@ -1,8 +1,8 @@
 ---
 layout: activity
-permalink: /Activities/Arrays4
-title: "CS173: Intro to Computer Science - Arrays"
-excerpt: "CS173: Intro to Computer Science - Arrays"
+permalink: /Activities/ArrayList
+title: "CS173: Intro to Computer Science - The ArrayList"
+excerpt: "CS173: Intro to Computer Science - The ArrayList"
 
 info:
   prev: ./Arrays3

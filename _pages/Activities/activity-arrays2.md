@@ -5,7 +5,6 @@ title: "CS173: Intro to Computer Science - Arrays"
 excerpt: "CS173: Intro to Computer Science - Arrays"
 
 info:
-  next: ./Arrays3
   prev: ./Arrays
     
   goals: 

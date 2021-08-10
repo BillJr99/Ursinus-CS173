@@ -1,12 +1,10 @@
 ---
 layout: activity
-permalink: /Activities/Iteration
-title: "CS173: Intro to Computer Science - Iteration"
-excerpt: "CS173: Intro to Computer Science - Iteration"
+permalink: /Activities/Iteration/For
+title: "CS173: Intro to Computer Science - Iteration with the for Loop"
+excerpt: "CS173: Intro to Computer Science - Iteration with the for Loop"
 
 info:
-  next: ./Iteration2
-  
   goals: 
     - To be able to explain the uses of the <code>for</code> loop structure 
     - To be able to apply boolean expressions to iterative structures via the <code>for</code> loop

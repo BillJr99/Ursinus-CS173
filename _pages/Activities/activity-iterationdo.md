@@ -1,22 +1,13 @@
 ---
 layout: activity
-permalink: /Activities/Iteration2
-title: "CS173: Intro to Computer Science - Iteration"
-excerpt: "CS173: Intro to Computer Science - Iteration"
+permalink: /Activities/Iteration/Do
+title: "CS173: Intro to Computer Science - Iteration with the do Loop"
+excerpt: "CS173: Intro to Computer Science - Iteration with the do Loop"
 
 info:
-  next: ./Iteration3
-  prev: ./Iteration
-
   goals: 
-    - To be able to explain the uses of the <code>while</code> loop structure 
     - To be able to explain the uses of the <code>do</code> loop structure 
-    - To be able to apply boolean expressions to iterative structures via the <code>while</code> loop
     - To be able to apply boolean expressions to iterative structures via the <code>do</code> loop    
-
-  additional_reading:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html
-      title: <code>while</code> Loops
 
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html
@@ -29,27 +20,6 @@ info:
       title: Self Divisors using the Modulus, Loops, and Conditionals
       
   models:
-    - model: |
-        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        public class Main {
-            public static void main(String[] args) {
-                boolean raining = false;
-
-                while(!raining) {
-                    double randVal = Math.random();
-                    int minutes = (int) (randVal * 20);
-                
-                    System.out.println("Play outside for " + minutes + " minutes!");
-                    raining = checkIfRaining(); // made up function!
-                }
-            }
-        }
-        ]]></script>        
-      title: The <code>while</code> Loop
-      questions:
-        - Modify this code to implement a <code>checkIfRaining()</code> function that generates a random number between 1 and 10, and returns <code>true</code> if the number is greater than 7 (and return <code>false</code> otherwise).
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Scanner;
