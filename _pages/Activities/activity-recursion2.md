@@ -1,6 +1,6 @@
 ---
 layout: activity
-permalink: /Activities/Recursion
+permalink: /Activities/Recursion2
 title: "CS173: Intro to Computer Science - Recursion"
 excerpt: "CS173: Intro to Computer Science - Recursion"
 
