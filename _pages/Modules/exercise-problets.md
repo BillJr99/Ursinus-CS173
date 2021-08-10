@@ -1,6 +1,6 @@
 ---
 layout: assignment
-permalink: /Modules/Problet/Exercise
+permalink: /Modules/Problets/Exercise
 title: "CS173: Intro to Computer Science - Problets and Epplets"
 excerpt: "CS173: Intro to Computer Science - Problets and Epplets"
 
