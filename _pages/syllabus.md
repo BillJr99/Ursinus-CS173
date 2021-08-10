@@ -634,7 +634,7 @@ schedule:
     submission_types: "noupload"     
 - week: "8"
   date: "2"
-  title: "String Manipulation Workshop" 
+  title: "Iteration and String Manipulation Workshop" 
   readings:
     - rtitle: "String Manipulation Exercises"
       rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"    
@@ -645,7 +645,7 @@ schedule:
     submission_types: "written"       
 - week: "8"
   date: "3"
-  title: "String Manipulation Workshop"
+  title: "Iteration and String Manipulation Workshop"
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
