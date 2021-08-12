@@ -75,7 +75,7 @@ Write a function to generate a public and private key pair and print these to th
 
 A number N is prime if no number from 2 to N-1 divides evenly into it.  That is, <span>\\((N (mod \; k)) \ne 0\\)</span> for all <span>\\(k \in [2, N-1]\\)</span>.
 
-Once you generate those prine numbers (let's call them A and B), you can generate your public key (E, C) and private key (D, C).  Recall that the value C is shared between the public and private key, and that E and C are made available to others so that they can encrypt data to you.  Your private key (D, C) is needed to decrypt those values, so you must keep the value D a secret!
+Once you generate those prime numbers (let's call them A and B), you can generate your public key (E, C) and private key (D, C).  Recall that the value C is shared between the public and private key, and that E and C are made available to others so that they can encrypt data to you.  Your private key (D, C) is needed to decrypt those values, so you must keep the value D a secret!
 
 To generate your public key:
 
@@ -176,12 +176,7 @@ char decryptedChar = (char) decrypted;
 ## Step 3: Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
 
-<details>
-  <summary>Why is this too difficult to do in practice?  (Click to reveal)</summary>
-  
-  You would need to know M, the Totient of C; this is equivalent to factoring the large prime number C, which is very difficult to do in practice.
-  
-</details>
+**Why is this too difficult to do in practice, when the key values are much larger?**
 
 Since these are small keys, you can compute the Totient of C (<span>\\(M = \phi(C)\\)</span>) directly, or by computing <span>\\(M = (A-1)(B-1)\\)</span>.  Notice that these are essentially the same problem, since counting the values that are coprime to a number is effectively the same as searching for the two values that are not coprime - the factors A and B.    
 

@@ -24,11 +24,6 @@ info:
         - "This method works to encrypt and decrypt numbers.  How can we use this model to send text messages?"
         - "What prevents just anyone from solving the Vertex Cover Problem and decrypting your messages?"
     - model: |
-        <iframe sec="https://nrich.maths.org/2199" height="800"
-      title: The Knapsack Problem
-      questions:
-        - "Generate a public and private key using the Knapsack Problem.  Try it out with an example message!"
-    - model: |
         <iframe src="https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html" height="800">
       title: The RSA Cryptosystem
       questions:
