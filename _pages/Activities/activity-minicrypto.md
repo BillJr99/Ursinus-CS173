@@ -23,11 +23,13 @@ info:
         - "How might you decrypt this message?  What information would you need to know?  This is the secret that makes up the private map, and it is the solution to the Vertex Cover Problem."
         - "This method works to encrypt and decrypt numbers.  How can we use this model to send text messages?"
         - "What prevents just anyone from solving the Vertex Cover Problem and decrypting your messages?"
+        - "Make your own private map and corresponding public map.  Give your partner your public map, and encrypt a value on each other's maps.  Try decrypting it on your private map!"
     - model: |
         <iframe src="https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html" height="800">
       title: The RSA Cryptosystem
       questions:
-        - "Generate an RSA key and try it out with a message of your own!"      
+        - "Generate an RSA key and try it out with a message of your own by encrypting one character at a time!"  
+        - "How is iteration useful when encrypting messages with a public key?"        
           
 tags:
   - strings
@@ -36,12 +38,13 @@ tags:
   
 ---
 
-This assignment is adapted from Prof. Mongan's assignments in communications and introductory cryptography \[[^1], [^2], [^3]\], and from the CS Unplugged Public Key Encryption lesson module \[[^4]\].
+This assignment is adapted from Prof. Mongan's assignments in communications and introductory cryptography \[[^1], [^2], [^3]\], from the CS Unplugged Public Key Encryption lesson module \[[^4]\], and Dr. Jeffrey Popyack's online RSA Calculator \[[^5]\].
 
 [^1]: William M. Mongan. 2012. An integrated introduction to network protocols and cryptography to high school students (abstract only). In Proceedings of the 43rd ACM technical symposium on Computer Science Education (SIGCSE ’12). Association for Computing Machinery, New York, NY, USA, 664. DOI:[https://doi.org/10.1145/2157136.2157364](https://doi.org/10.1145/2157136.2157364)
 [^2]: William M. Mongan. 2011. Networking Applications, Protocols, and Cryptography with Java. Google CS4HS Workshop at the University of Pennsylvania, Philadelphia, PA.
 [^3]: William M. Mongan. 2012. Networking Applications, Protocols, and Cryptography with Java. Tapia Workshop at the University of Pennsylvania, Philadelphia, PA.
 [^4]: Bell, Witten, and Fellows. 1998. Computer Science Unplugged - Public Key Encryption. Available at [https://classic.csunplugged.org/public-key-encryption/](https://classic.csunplugged.org/public-key-encryption/)
+[^5]: Jeffrey L. Popyack.  RSA Calculator.  [https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html](https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html)
 
 ## Background: Sending Secrets
 If you had to pass secret messages around the room, but had to do so by passing notes to the people immediately adjacent to you, how could you go about "securing" the messages so that only your partner at the other side of the room could read your note?  You and your partner would have to agree on some encoding for the message.  Many such encodings exist:
