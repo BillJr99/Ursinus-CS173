@@ -1,6 +1,6 @@
 ---
 layout: assignment
-permalink: /Labs/TellAStory
+permalink: /Labs/TellAStory/HashMap
 title: "CS173: Intro to Computer Science - Tell a Story with HashMaps"
 excerpt: "CS173: Intro to Computer Science - Tell a Story with HashMaps"
 

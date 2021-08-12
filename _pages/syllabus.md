@@ -381,14 +381,17 @@ schedule:
   date: "1"
   title: "Lab: Venn Diagram with Conditionals"
   deliverables:
-  - dtitle: "Lab: Venn Diagram with Conditionals Handed Out"    
-    dlink: "Labs/VennDiagram"     
+  - dtitle: "Lab: Story Telling with Conditionals Handed Out"    
+    dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-venndiagram.md"   
+    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"   
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
     submission_types: "noupload"
+  readings:
+  - rtitle: "Reading User Input"
+    rlink: "https://www.w3schools.com/java/java_user_input.asp"    
 - week: "3"
   date: "2"
   title: "Conditionals"  
@@ -417,8 +420,6 @@ schedule:
     rlink: false  
   - rtitle: "Calling Functions without Parameters"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html"    
-  - rtitle: "Reading User Input"
-    rlink: "https://www.w3schools.com/java/java_user_input.asp"  
   - rtitle: "Adding Libraries to NetBeans Projects"
     rlink: "Modules/Library/Module"
   deliverables:
@@ -457,10 +458,10 @@ schedule:
   date: "2"
   title: "Functions" 
   deliverables:
-  - dtitle: "Lab: Venn Diagram with Conditionals Due"    
-    dlink: "Labs/VennDiagram"     
+  - dtitle: "Lab: Story Telling with Conditionals Due"    
+    dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-venndiagram.md" 
+    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md" 
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"

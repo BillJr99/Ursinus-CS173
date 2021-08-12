@@ -45,7 +45,28 @@ Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools
 
 Next, write a program that implements your Venn Diagram.  That is, write a series of `if/else if/else` statements, or nested `if` statements, that sets `boolean` variables representing each of the three main quadrants of your Venn Diagram, and prints to the screen where that person/place/thing fits into your Venn Diagram based on those `if` statements.  You can number the qudrants from 1 to 7, if you like, and print which quadrant results from the three `boolean` variables.
 
-Finally, write a second version of your `if` statements, this time using nested `if` statements if you used an `if/else if/else` structure previously, or vice-versa.  Keep both versions in your program to submit!
+Finally, write a second version of your `if` statements, this time using nested `if` statements if you used a "cascading" `if/else if/else` structure previously, or vice-versa. 
+In other words, if your `if` statements look like this:
+
+```java
+// this is a nested if statement
+if(something) {
+    if(somethingElse) {
+        // do something
+    }
+}
+```
+
+you should write a new version that looks like this:
+
+```java
+// this is a cascading if statement
+if(something && somethingElse) {
+   // do something
+}
+```
+
+Keep both versions in your program to submit!
 
 ## Exporting your Project for Submission
 
