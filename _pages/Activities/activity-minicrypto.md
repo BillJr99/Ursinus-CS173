@@ -25,7 +25,9 @@ info:
         - "What prevents just anyone from solving the Vertex Cover Problem and decrypting your messages?"
         - "Make your own private map and corresponding public map.  Give your partner your public map, and encrypt a value on each other's maps.  Try decrypting it on your private map!"
     - model: |
+        <div>
         <iframe src="https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html" height="800" width="100%">
+        </div>
       title: The RSA Cryptosystem
       questions:
         - "Generate an RSA key and try it out with a message of your own by encrypting one character at a time!"  
