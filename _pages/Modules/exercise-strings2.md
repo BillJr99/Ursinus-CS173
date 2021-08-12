@@ -96,3 +96,11 @@ We will simplify the rules as follows:
 
 * If a `String` starts with a vowel, simply append "yay" to the end of the `String`.
 * Otherwise, modify the string so that all the letters of the `String` up to (but not including) the first vowel are moved to the end of the `String`.  Then, append "ay" to the end of the resulting `String`.
+
+## Hints
+
+Given a `String` variable (let's say it's called `str`):
+
+* You can use the `str.substring(i)` method to return a `String` containing all characters in `str` from position `i` to the end of the `String`.  Don't forget that `String` indices are numbered starting from 0.
+* You can use the `str.substring(i, j)` method to return a `String` containing all characters in `str` from position `i` up to (but not including) position `j` of the `String`.
+* You can use the `+` operator to concatenate two `String` values (or their substrings, which are also just `String` values!).

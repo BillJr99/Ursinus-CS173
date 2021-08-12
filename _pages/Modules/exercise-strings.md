@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Strings"
 
 info:
   points: 3
-  instructions: "Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  Use this comparison function to determine if two <code>String</code>s are palendromes of each other.  Two <code>String</code>s are palnendromes if their sorted characters are equal to one another.  Loop over all characters up to the length of the string, and obtain each character using the <code>str1.charAt(i)</code> or the <code>str1.substring(i, i+1)</code> method (and <code>str2.charAt(i)</code> or the <code>str2.substring(i, i+1)</code>, for the other string, as well)."
+  instructions: "Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  Loop over all characters up to the length of the string, and obtain each character using the <code>str1.charAt(i)</code> or the <code>str1.substring(i, i+1)</code> method (and <code>str2.charAt(i)</code> or the <code>str2.substring(i, i+1)</code>, for the other string, as well)."
   goals:
     - To iterate over <code>String</code> variables.
 
