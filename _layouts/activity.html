@@ -5,7 +5,7 @@ directions: "Consider the activity models and answer the questions provided.  Fi
 
 submission: "Submit your answers to the questions using the Class Activity Questions discussion board.  You may also respond to questions or comments made by others, or ask follow-up questions there.  Answer any reflective prompt questions in the Reflective Journal section of your OneNote Classroom personal section."
 
-embed_directions: "You can try out some code examples in this embedded development environment!  To share this with someone else, first have one member of your group make a small change to the file, then click \"Open in Repl.it\".  Log into your <a href=\"https://repl.it/\">Repl.it</a> account (or create one if needed), and click the \"Share\" button at the top right.  Note that some embedded Repl.it projects have multiple source files; you can see those by clicking the file icon on the left navigation bar of the embedded code frame.  Share the link that opens up with your group members.  Remember only to do this for partner/group activities!"
+embed_directions_replit: "You can try out some code examples in this embedded development environment!  To share this with someone else, first have one member of your group make a small change to the file, then click \"Open in Repl.it\".  Log into your <a href=\"https://repl.it/\">Repl.it</a> account (or create one if needed), and click the \"Share\" button at the top right.  Note that some embedded Repl.it projects have multiple source files; you can see those by clicking the file icon on the left navigation bar of the embedded code frame.  Share the link that opens up with your group members.  Remember only to do this for partner/group activities!"
 
 ---
 
@@ -90,7 +90,9 @@ embed_directions: "You can try out some code examples in this embedded developme
         
         {% if model.embed %}
         <h3>Embedded Code Environment</h3>
-        {{ layout.embed_directions }}
+        {% if model.embed contains "repl.it" %}
+        {{ layout.embed_directions_replit }}
+        {% endif %}
         
         {{ model.embed }}
         {% endif %}
