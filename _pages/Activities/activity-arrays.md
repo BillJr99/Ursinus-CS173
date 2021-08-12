@@ -28,6 +28,8 @@ info:
         ]]></script>         
         <br>
         <img src="../images/examples/java-visualizer-array-int.png" alt="Java Visualizer Example of an Array" />
+        <br>
+        <img src="../manim/output/ArrayExample1.gif" alt="Manim Array Animation" />
       title: Creating and Accessing Arrays
       questions:
         - What is the size of the <code>grades</code> array?
