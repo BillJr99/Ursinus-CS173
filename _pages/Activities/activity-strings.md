@@ -32,19 +32,10 @@ info:
       model: |
         <img src="../manim/output/Substrings.gif" alt="Manim Strings Animation" />
         <br>      
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#concat(java.lang.String)" width="100%" height="700" style="pointer-events:none;" scrolling="no"></iframe>
-        <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#indexOf(int)" width="100%" height="600" style="pointer-events:none;" scrolling="no"></iframe>
-        <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#indexOf(int,int)" width="100%" height="800" style="pointer-events:none;" scrolling="no"></iframe>
-        <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#replace(char,char)" width="100%" height="700" style="pointer-events:none;" scrolling="no"></iframe>
-        <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#replace(java.lang.CharSequence,java.lang.CharSequence)" width="100%" height="480" style="pointer-events:none;" scrolling="no"></iframe>
-        <br>
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html#substring(int,int)" width="100%" height="640" style="pointer-events:none;"></iframe>
+        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" style="pointer-events:none;" scrolling="yes"></iframe>
       questions: 
         - What is the difference between <code>x = x.concat(y)</code> and <code>x = x + y</code> for <code>String</code> objects <code>x</code> and <code>y</code>?
+        - "Rewrite the statement <code>String z = &quot;Cheese&quot; + &quot&Hamburger&quot;.substring(3);</code> using the <code>concat</code> function."
         - What is the difference between the two <code>indexOf()</code> methods given above? How do you know which version you are calling from a program?
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
         - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
