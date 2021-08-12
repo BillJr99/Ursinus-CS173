@@ -28,10 +28,6 @@ info:
       title: The RSA Cryptosystem
       questions:
         - "Generate an RSA key and try it out with a message of your own!"      
-        
-  additional_reading:
-    - link: abc
-      title: abc
           
 tags:
   - strings
