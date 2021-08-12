@@ -89,7 +89,9 @@ embed_directions_replit: "You can try out some code examples in this embedded de
         {% endif %}
         
         {% if model.embed %}
+        {% if model.embed contains "repl.it" %}
         <h3>Embedded Code Environment</h3>
+        {% endif %}
         {% if model.embed contains "repl.it" %}
         {{ layout.embed_directions_replit }}
         {% endif %}
