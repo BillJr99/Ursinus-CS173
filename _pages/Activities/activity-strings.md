@@ -32,7 +32,7 @@ info:
       model: |
         <img src="../manim/output/Substrings.gif" alt="Manim Strings Animation" />
         <br>      
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" style="pointer-events:none;" scrolling="yes"></iframe>
+        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" scrolling="yes"></iframe>
       questions: 
         - What is the difference between <code>x = x.concat(y)</code> and <code>x = x + y</code> for <code>String</code> objects <code>x</code> and <code>y</code>?
         - "Rewrite the statement <code>String z = &quot;Cheese&quot; + &quot&Hamburger&quot;.substring(3);</code> using the <code>concat</code> function."
