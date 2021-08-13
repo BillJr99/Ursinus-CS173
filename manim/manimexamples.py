@@ -3,8 +3,125 @@
 
 from manim import *
 
+class StringIndexOf(Scene):
+    # https://www.geeksforgeeks.org/python-program-convert-string-list/
+    def str2list(self, string):
+        list1=[]
+        list1[:0]=string
+        return list1
+    
+    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5, nullterminator=False):
+        if type(lst) is str:
+            lst = self.str2list(lst)
+        
+        if nullterminator:
+            lst.append("0")    
+            
+        # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
+        indices = Tex(*[f"[{i}]" for i in range(len(lst))])
+        text = Tex(*[f"[{lst[i]}]" for i in range(len(lst))])
+        
+        text.arrange(RIGHT,buff=xbuff)
+        
+        for idx, txt in zip(indices, text):
+            idx.scale(0.5)
+            idx.next_to(txt,DOWN,buff=ybuff)
+            
+            if moveunits != 0:
+                idx.shift(moveunits * movedir)
+                txt.shift(moveunits * movedir)            
+            
+        self.play(*list(map(lambda x: Write(x,run_time=2),[text,indices])))
+        
+        return text, indices
+        
+    def construct(self): 
+        strtext = Text("x = \"Hello there!\";")
+        strtext.shift(1*DOWN)
+        self.play(FadeIn(strtext))
+        self.wait(1)
+        
+        str = "Hello there!"
+        text, indices = self.draw_array(str, 1, UP, xbuff=0.6, nullterminator=True)
+        self.wait(2)
+        
+        # indexOf code
+        text3 = Text("int pos = x.indexOf(\"there\");")
+        text3.shift(3*DOWN)
+        self.play(FadeIn(text3))
+
+        self.wait(2)
+        
+        rect = SurroundingRectangle(text[6:11], color=YELLOW, buff=0.15)
+        rect2 = SurroundingRectangle(indices[6:11], color=YELLOW, buff=0.15)
+        self.play(Create(rect), Create(rect2), runtime=2)
+        
+        self.play(Indicate(text[6], runtime=0.1), Indicate(indices[6]), runtime=0.1) 
+        
+        self.wait(1)
+        
+        self.remove(rect)
+        self.remove(rect2)
+        
+        text4 = Text("6")
+        text4.shift(3*DOWN)
+        self.play(ReplacementTransform(text3, text4))
+        
+        self.wait(2)
+        
+        # indexOf code        
+        text5 = Text("int pos = x.indexOf(\'e\');")
+        text5.shift(3*DOWN)
+        self.play(ReplacementTransform(text4, text5)) 
+
+        self.wait(2)
+        
+        self.play(Indicate(text[1], runtime=0.1), Indicate(indices[1]), runtime=0.1) 
+        
+        self.wait(1)
+        
+        text6 = Text("1")
+        text6.shift(3*DOWN)
+        self.play(ReplacementTransform(text5, text6)) 
+
+        self.wait(2)        
+
+        # indexOf code        
+        text7 = Text("int pos = x.indexOf(\'e\', 2);")
+        text7.shift(3*DOWN)
+        self.play(ReplacementTransform(text6, text7))   
+
+        self.wait(2)
+        
+        for i in range(2, 9):
+            rect3 = SurroundingRectangle(text[i], color=YELLOW, buff=0.15)
+            rect4 = SurroundingRectangle(indices[i], color=YELLOW, buff=0.15)
+            self.play(Create(rect3), Create(rect4), runtime=1)
+            self.remove(rect3)
+            self.remove(rect4)
+        
+        self.play(Indicate(text[8], runtime=0.1), Indicate(indices[8]), runtime=0.1) 
+        
+        self.wait(1)
+        
+        text8 = Text("8")
+        text8.shift(3*DOWN)
+        self.play(ReplacementTransform(text7, text8))          
+        
 class Substrings(Scene):
-    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5):
+    # https://www.geeksforgeeks.org/python-program-convert-string-list/
+    def str2list(self, string):
+        list1=[]
+        list1[:0]=string
+        return list1
+    
+    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5, nullterminator=False):
+        if type(lst) is str:
+            lst = self.str2list(lst)
+        
+        if nullterminator:
+            lst.append("0")    
+            
         # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
         indices = Tex(*[f"[{i}]" for i in range(len(lst))])
         text = Tex(*[f"[{lst[i]}]" for i in range(len(lst))])
@@ -30,7 +147,7 @@ class Substrings(Scene):
         self.wait(1)
         
         str = "Hamburger"
-        text, indices = self.draw_array(str, 1, UP)
+        text, indices = self.draw_array(str, 1, UP, nullterminator=True)
         self.wait(2)
         
         # substring code
@@ -66,7 +183,7 @@ class Substrings(Scene):
         
         # new string
         str = "Cheese"
-        text4, indices4 = self.draw_array(str, 3, UP)
+        text4, indices4 = self.draw_array(str, 3, UP, nullterminator=True)
         
         # concatenation
         text5 = Text("\"Cheese\" + x.substring(3);")
@@ -83,7 +200,7 @@ class Substrings(Scene):
             self.play(Indicate(text[i], runtime=0.1), Indicate(indices[i]), runtime=0.1)      
         self.remove(rect3)
         str = "Cheeseburger"
-        text6, indices6 = self.draw_array(str, 1, DOWN)
+        text6, indices6 = self.draw_array(str, 1, DOWN, xbuff=0.6, nullterminator=True)
   
         self.wait(2)
         

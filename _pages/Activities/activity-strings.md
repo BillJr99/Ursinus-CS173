@@ -28,19 +28,25 @@ info:
         ]]></script> 
       questions: 
         - Unlike re-assigning a primitive variable, assigning a variable to an object creates a new object.  A <code>String</code> is a class that allocates memory for and stores text. Since String text cannot be reassigned once it is allocated (and must be re-created instead), a <code>String</code> is called an <strong>immutable</strong> object.  Why can’t a <code>String</code> be re-assigned like an <code>int</code> or <code>double</code> can?
-    - title: <code>String</code> Manipulation
+    - title: <code>String</code> Manipulation with <code>substring</code>
       model: |
-        <img src="../manim/output/Substrings.gif" alt="Manim Strings Animation" />
-        <br>      
-        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" scrolling="yes"></iframe>
+        <img src="../manim/output/Substrings.gif" alt="Manim String substring Animation" />
       questions: 
         - What is the difference between <code>x = x.concat(y)</code> and <code>x = x + y</code> for <code>String</code> objects <code>x</code> and <code>y</code>?
         - "Rewrite the statement <code>String z = &quot;Cheese&quot; + &quot&Hamburger&quot;.substring(3);</code> using the <code>concat</code> function."
-        - What is the difference between the two <code>indexOf()</code> methods given above? How do you know which version you are calling from a program?
-        - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
-        - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    - title: <code>String</code> Searching with <code>indexOf</code>
+      model: |
+        <img src="../manim/output/StringIndexOf.gif" alt="Manim String indexOf Animation" />
+      questions: 
+        - What is the difference between the two <code>indexOf()</code> methods given above? How do you know which version you are calling from a program?
+    - title: "More <code>String</code> Functions"
+      model: |
+        <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" scrolling="yes"></iframe>
+      questions:
+        - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
+        - "Write a Java statement to replace &quot&Ham&quot; with &quot;Cheese&quot; in a <code>String</code> &quot;Hamburger&quot;"
     - title: "Working with <code>String</code>s"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
@@ -62,6 +68,7 @@ info:
         - Why is it necessary to write <code>x.equals(y)</code> instead of <code>x == y</code> to check if two <code>String</code> objects contain the same text?       
         - What does the print statement output for the string <code>z</code>?
         - How might you print only the "est" characters from <code>x</code> using the <code>substring</code> method?
+        - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
 
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
