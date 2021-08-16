@@ -21,7 +21,7 @@ info:
       preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
       beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
       progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
-      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide, and each function contains relevant and appropriate Javadoc documentation
     - weight: 10
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
@@ -117,6 +117,11 @@ This program should be much shorter than if you had duplicated all the code to c
 Write a function called `computeAverage` that returns a `double` and accepts the individual values as parameters, like the others.  This time, add individual `double` paramters for the weights.  You will have a total of 6 parameters: 3 grade parameters, and 3 weight parameters.  Replace your call to `computeWeightedAverage` with a call to this function, passing the appropriate weights.  If you are only using assignments and labs for your averages, you will only have four values to pass to `comptueAverage` rather than 6.  You can pass 0 for the third grade and weight parameter, which will give the last zero a weight of 0, having no effect.
 
 Finally, replace your call to `computeEqualAverage` with a call to `computeAverage`, passing the appropriate weights there as well (what should the weights be when computing an equal-weight average?  **Hint**: the three weights should be the same!).
+
+## Commenting Your Code
+It is important to comment your code so that your users (and you!) will easily see how to use the functions that you've written.  After all, part of the purpose of writing modular code like functions is that you can re-use your code later!  In practice, it is common to share code with peers and the general public as well.  The [Style Guide](../Style-Guide#documentationmethods) describes a best practice for documenting functions: there is a standard format called [Javadoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html), in which each function has a comment at the top that describes the function's behavior, its inputs, and its return value.  This is a nice place to put any assumptions you've made about your code, too - for example, that your weights should add up to 1.  
+
+You can create a Javadoc comment for a function very easily -- click on the blank line above one of your functions, type `/**`, and hit enter.  It will automatically fill in a template that you can type your details into, including a line for each parameter and the return value.  Write a Javadoc for each function you've written in this lab.
 
 ## Exporting your Project for Submission
 
