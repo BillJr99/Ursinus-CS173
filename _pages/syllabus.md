@@ -726,6 +726,7 @@ schedule:
   - dtitle: "Exercise: Arrays"
     dlink: "Modules/Arrays/Module"     
     points: 3
+    submission_types: "noupload"    
 - week: "10"
   date: "1"
   title: "Lab: Arrays"
@@ -813,14 +814,15 @@ schedule:
 - week: "11"
   date: "3"
   title: "The ArrayList and Generic/Template Data Structures"   
-  readings:
-  - rtitle: "ArrayList Review"
-    rlink: "Modules/ArrayLists/Module"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100  
-    submission_types: "written"  
+    submission_types: "written" 
+  - dtitle: "Exercise: ArrayLists"
+    dlink: "Modules/ArrayLists/Module"    
+    points: 3
+    submission_types: "noupload"    
 - week: "12"
   date: "0"
   title: "Classes and Object Data Types" 
