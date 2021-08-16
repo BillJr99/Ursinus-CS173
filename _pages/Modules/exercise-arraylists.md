@@ -36,7 +36,7 @@ files:
         
         public class PrimeArray {
             public static boolean isPrime(int val) {
-                for(int i = 0; i < Math.sqrt(val); i++) {
+                for(int i = 2; i <= Math.sqrt(val); i++) {
                     if(val % i == 0) {
                         return false;
                     }
