@@ -722,7 +722,7 @@ schedule:
     dlink: "Assignments/GuitarStringSynth"      
     points: 100         
     rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"  
-  - dtitle: "Arrays Exercise"
+  - dtitle: "Exercise: Arrays"
     dlink: "Modules/Arrays/Module"     
     points: 3
 - week: "10"
