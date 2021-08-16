@@ -161,7 +161,7 @@ goals:
 
 grade_breakdown:
 - category: "Programming Assignments"
-  weight: "30%"
+  weight: "35%"
 - category: "Labs"
   weight: "20%"
 - category: "Pre-Lab Exercises"
@@ -171,7 +171,7 @@ grade_breakdown:
 - category: "Debugging Table"
   weight: "5%"
 - category: "Final Project"
-  weight: "15%"  
+  weight: "10%"  
 
 letter_grades:
 - letter: "A+"
@@ -698,9 +698,7 @@ schedule:
   - rtitle: "Ch. 6.1"
     rlink: false 
   - rtitle: "Creating and Accessing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"  
-  - rtitle: "Array Review"
-    rlink: "Modules/Arrays/Module"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"    
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
@@ -723,7 +721,10 @@ schedule:
   - dtitle: "Programming Assignment: Guitar String Synthesis Handed Out"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100         
-    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"      
+    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"  
+  - dtitle: "Arrays Exercise"
+    dlink: "Modules/Arrays/Module"     
+    points: 3
 - week: "10"
   date: "1"
   title: "Lab: Arrays"
@@ -732,11 +733,10 @@ schedule:
     dlink: "Labs/Anagrams"  
     points: 100
     rubricpath: "_pages/Labs/Strings/lab-anagrams.md"     
-  - dtitle: "Lab: Array Averages Handed Out"
-    dlink: "Labs/ArrayAveraging"
+  - dtitle: "Lab: 2D Array Board Handed Out"
+    dlink: "Labs/GridGame"
     points: 100  
-    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"    
-    submission_types: "written"     
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
@@ -771,11 +771,11 @@ schedule:
   date: "0"
   title: "2D Arrays" 
   deliverables:
-  - dtitle: "Lab: Array Averages Due"
-    dlink: "Labs/ArrayAveraging"    
-    points: 100     
-    rubricpath: "_pages/Labs/Arrays/lab-arrays.md"             
-- week: "11"
+  - dtitle: "Lab: 2D Array Board Game Due"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md" 
+  - week: "11"
   date: "1"
   title: "Lab: Code Review"
   deliverables:
@@ -812,6 +812,9 @@ schedule:
 - week: "11"
   date: "3"
   title: "The ArrayList and Generic/Template Data Structures"   
+  readings:
+  - rtitle: "ArrayList Review"
+    rlink: "Modules/ArrayLists/Module"
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      

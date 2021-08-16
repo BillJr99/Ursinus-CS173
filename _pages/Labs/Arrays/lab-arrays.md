@@ -43,7 +43,7 @@ tags:
   
 ---
 
-In this lab, develop and use arrays to simplify your computation over collections of data, so that you do not need to know how many data elements you are working with in order to develop a generalized algorithm.  
+In this lab, you will develop and use arrays to simplify your computation over collections of data, so that you do not need to know how many data elements you are working with in order to develop a generalized algorithm.  
 
 Consider the [grading table of our course syllabus](../#grading).  It lists grading weights for each component of the course (for example, programming assignments).  To compute your course grade, you would first average all your programming assignment grades together, and all the other grade component averages.  To compute the assignment average <span>\\(\mu_{x}\\)</span>, take the sum of each of your <span>\\(n\\)</span> assignment scores <span>\\(x_{i}\\)</span>, and divide by the number of assignments, as follows:
 
