@@ -45,18 +45,18 @@ files:
                          that could never be an array index, like -1, and the smallest difference
                          should be a value so large that anything will seem smaller inside the loop. */
                 
-                /* TODO: Loop over each item in values. */
+                    /* TODO: Loop over each item in values. */
                 
-                /* TODO: for each value, calculate its difference from the key value */
+                    /* TODO: for each value, calculate its difference from the key value */
                 
-                /* TODO: If that difference is smaller than the smallest 
+                    /* TODO: If that difference is smaller than the smallest 
                          difference you've seen so far,
                          AND your value is less than or equal to key,
                          set the result to this index, and set the 
                          smallest difference you've seen to this difference value. */
-            }
-            
-            /* TODO: return the closest index that you found */
+                         
+                /* TODO: return the closest index that you found */
+            }            
         } 
         
   - filename: "Driver.java"
