@@ -63,6 +63,9 @@ Now, take turns moving pieces on the board.  Prompt each player for the row and 
 
 If the destination square belongs to the opposing player, decide which of the two pieces has the greater value.  The piece with the smaller value is discarded from the board, and the stronger piece's value becomes the sum of the two pieces.  So, if a piece with value 8 moves onto a square that belongs to a piece with value 6, the 6 piece is removed, and the remaining piece value becomes 14.  If there is a tie (for example, two pieces with value 5), do not make the move, and the player's turn ends.  The game ends when one player has no remaining pieces on the board, or when no possible moves can be made (check for each of these conditions after each turn, and print a message and quit when this occurs).  Print out which player has won the game, if there is a winner.
 
+### Printing the Board
+After every turn, print the board to the screen in a grid pattern (like the example above).  Remember that you cannot print an array directly, but rather you'll need to print each element one-by-one.  You can do this with a loop!  I suggest writing a function called `printBoard` that accepts the board and prints it to the screen.
+
 ### Extra Credit (10%): Custom Rules
 
 For extra credit, create three additional rules for your game that pertain to the array, and implement them on the grid.  For example, pieces whose value is equal to a certain value can move more than one square at a time, or can jump over occupied squares, or wins if there is a tie, *etc*.  Write down which rules you impelemented in your README.
