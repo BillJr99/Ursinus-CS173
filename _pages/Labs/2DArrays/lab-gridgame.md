@@ -29,12 +29,18 @@ info:
       progressing: The program is submitted according to the directions with a minor omission or correction needed
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution
   readings:
+    - rtitle: "Arrays Activity"
+      rlink: "../Activities/Arrays"     
     - rtitle: "2D Arrays Activity"
       rlink: "../Activities/2DArrays"          
-
+    - rtitle: "File I/O Activity"
+      rlink: "../Activities/FileIO" 
+      
 tags:
   - arrays
   - 2darrays
+  - fileio
+  - strings
   
 ---
 
@@ -65,6 +71,27 @@ If the destination square belongs to the opposing player, decide which of the tw
 
 ### Printing the Board
 After every turn, print the board to the screen in a grid pattern (like the example above).  Remember that you cannot print an array directly, but rather you'll need to print each element one-by-one.  You can do this with a loop!  I suggest writing a function called `printBoard` that accepts the board and prints it to the screen.
+
+### Reading the Board Placement from a File
+Asking the users to type in their piece values at the beginning is a lot of work!  It would be better to read this information from a file.  Create a file `gameboard.txt` that contains the game board in the format below, and prompt the user to enter the filename to read.  Then, read that file, and set up the game board array by looping over the text in the file.  
+
+```
+9 6 4 1 2 3 4 2
+5 7 6 8 4 3 8 8
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 
+7 5 1 4 4 3 5 3
+7 8 9 5 2 3 7 7
+```
+
+You have a few options for reading the file, but I suggest reading the input one-line-at-a-time, and using the `String.split()` method to break each line into an array of its individual values.  You can split a String like this:
+
+```java
+String str = "The quick brown fox";
+String[] words = str.split(" "); // words contains {"The", "quick", "brown", "fox"}
+```
 
 ### Extra Credit (10%): Custom Rules
 
