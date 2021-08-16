@@ -6,6 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Arrays"
 
 info:
   prev: ./Arrays
+  next: ./Arrays3
     
   goals: 
     - To be able to iterate over an array
