@@ -22,7 +22,6 @@ boilerplate:
     peercoaching: http://bit.ly/S21TutorCoachRequestForm
     handbook: https://www.ursinus.edu/live/files/3981-full-handbook-rev201201pdf
     writingspeaking: https://www.ursinus.edu/offices/center-for-writing-and-speaking/
-    issspecifictutoring: https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/
     
 ---
 
@@ -436,9 +435,9 @@ boilerplate:
     {{ layout.boilerplate.iss }}
     {% endif %}
     
-    {% if layout.boilerplate.links.issspecifictutoring %}
+    {% if page.info.issspecifictutoring %}
     <p>
-    In addition, the Institute for Student Success has established specific tutoring sessions for students in our class.  Please visit <a href="{{layout.boilerplate.links.issspecifictutoring}}">the tutoring site</a> for the schedule and how to attend!
+    In addition, the Institute for Student Success has established specific tutoring sessions for students in our class.  Please visit <a href="{{page.info.issspecifictutoring}}">the tutoring site</a> for the schedule and how to attend!
     </p>
     {% endif %}
     
