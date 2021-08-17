@@ -45,6 +45,6 @@ info:
 tags:
   - recursion
   - sorting
-  
+  - algorithms
 ---
 

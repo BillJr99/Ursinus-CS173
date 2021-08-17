@@ -898,9 +898,12 @@ schedule:
     submission_types: "written"     
 - week: "13"
   date: "3"
+  title: "Algorithms" 
+  link: "Activities/Algorithms"   
+- week: "14"
+  date: "0"
   title: "Searching and Sorting" 
-  link: "Activities/SearchingAndSorting"   
-  readings:   
+  readings:
   - rtitle: "Ch. 9.6.3"
     rlink: false   
   - rtitle: "Interactive Demo of Insertion Sort"
@@ -912,22 +915,14 @@ schedule:
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
   deliverables:
-    - dtitle: "Exercise: Insertion Sort"
-      dlink: "Modules/InsertionSort/Module"  
-      points: 3 
-      submission_types: "noupload"      
-- week: "14"
-  date: "0"
-  title: "Searching and Sorting"  
-  deliverables:
   - dtitle: "Debugging Table: Second Check Handed Out"
     dlink: "Assignments/DebuggingTable"
     points: 10 
     submission_types: "written" 
-  - dtitle: "Exercise: Problets - Function - Recursive functions"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"       
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3 
+    submission_types: "noupload"     
 - week: "14"
   date: "1"
   title: "Algorithms: Recursion" 
@@ -942,6 +937,10 @@ schedule:
     dlink: "Labs/DropLowest"
     points: 100
     rubricpath: "_pages/Labs/Searching/lab-droplow.md"   
+  - dtitle: "Exercise: Problets - Function - Recursive functions"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"           
 - week: "14"
   date: "2"
   title: "Review" 

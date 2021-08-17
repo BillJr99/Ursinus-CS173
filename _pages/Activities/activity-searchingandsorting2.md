@@ -86,6 +86,7 @@ info:
 tags:
   - searching
   - sorting
+  - algorithms
   
 ---
 

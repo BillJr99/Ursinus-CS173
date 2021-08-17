@@ -67,6 +67,7 @@ info:
       
 tags:
   - searching
+  - algorithms
   
 ---
 

@@ -79,6 +79,7 @@ info:
 
 tags:
   - recursion
+  - algorithms
   
 ---
 
