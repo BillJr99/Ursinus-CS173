@@ -730,16 +730,16 @@ schedule:
     submission_types: "noupload"    
 - week: "10"
   date: "1"
-  title: "Lab: Arrays"
+  title: "Lab: Code Review"
   deliverables:
   - dtitle: "Lab: Anagram Solver Due"
     dlink: "Labs/Anagrams"  
     points: 100
     rubricpath: "_pages/Labs/Strings/lab-anagrams.md"     
-  - dtitle: "Lab: 2D Array Board Game Handed Out"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
+  - dtitle: "Lab: Code Review Handed Out"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
@@ -762,15 +762,12 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"  
 - week: "10"
   date: "3"  
-  title: "Array Workshop" 
-  link: "Activities/Arrays/Workshop"    
+  title: "2D Arrays" 
   readings:
   - rtitle: "Nested Loops"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
   - rtitle: "Loop Analysis"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"
-  - rtitle: "Arrays Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"  
   deliverables:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
@@ -778,20 +775,24 @@ schedule:
     submission_types: "noupload"  
 - week: "11"
   date: "0"
-  title: "2D Arrays" 
+  title: "Array Workshop" 
+  link: "Activities/Arrays/Workshop"  
+  readings:
+  - rtitle: "Arrays Sample Free Response Question"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
   deliverables:
-  - dtitle: "Lab: 2D Array Board Game Due"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md" 
-- week: "11"
-  date: "1"
-  title: "Lab: Code Review"
-  deliverables:
-  - dtitle: "Lab: Code Review Handed Out"
+  - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
+- week: "11"
+  date: "1"
+  title: "Lab: Arrays"
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Handed Out"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
   - dtitle: "Programming Assignment: Guitar String Synthesis Due"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100   
@@ -842,10 +843,10 @@ schedule:
   - rtitle: "Wrapper Classes"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"  
   deliverables:
-  - dtitle: "Lab: Code Review Due"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
+  - dtitle: "Lab: 2D Array Board Game Due"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"   
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100     
