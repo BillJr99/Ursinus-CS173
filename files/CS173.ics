@@ -1247,7 +1247,7 @@ DTSTAMP:20211130T000000Z
 DTSTART;VALUE=DATE:20211130
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/DropTheLowest
+DESCRIPTION:\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1346,7 +1346,7 @@ DTSTAMP:20211207T000000Z
 DTSTART;VALUE=DATE:20211207
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/DropTheLowest
+DESCRIPTION:\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
