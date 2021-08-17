@@ -784,7 +784,11 @@ schedule:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
+  - dtitle: "Exercise: Iteration Revisited"
+    dlink: "Modules/Iteration/Exercise2"
+    points: 3    
+    submission_types: "noupload"
 - week: "11"
   date: "1"
   title: "Lab: Arrays"
