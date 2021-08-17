@@ -3,6 +3,77 @@
 
 from manim import *
 
+class StringReplace(Scene):
+    # https://www.geeksforgeeks.org/python-program-convert-string-list/
+    def str2list(self, string):
+        list1=[]
+        list1[:0]=string
+        return list1
+    
+    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5, nullterminator=False):
+        if type(lst) is str:
+            lst = self.str2list(lst)
+        
+        if nullterminator:
+            lst.append(r"$\emptyset$")    
+            
+        # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
+        indices = Tex(*[f"[{i}]" for i in range(len(lst))])
+        text = Tex(*[f"[{lst[i]}]" for i in range(len(lst))])
+        
+        text.arrange(RIGHT,buff=xbuff)
+        
+        for idx, txt in zip(indices, text):
+            idx.scale(0.5)
+            idx.next_to(txt,DOWN,buff=ybuff)
+            
+            if moveunits != 0:
+                idx.shift(moveunits * movedir)
+                txt.shift(moveunits * movedir)            
+            
+        self.play(*list(map(lambda x: Write(x,run_time=2),[text,indices])))
+        
+        return text, indices
+        
+    def construct(self):   
+        strtext = Text("x = \"madam\";")
+        strtext.shift(1*DOWN)
+        self.play(FadeIn(strtext))
+        self.wait(1)
+        
+        str = "madam"
+        text, indices = self.draw_array(str, 1, UP, nullterminator=True)
+        
+        self.wait(2)
+        
+        # replace code
+        text2 = Text("x.replace('m', 'r');")
+        text2.shift(3*DOWN)
+        self.play(FadeIn(text2))
+        
+        rect1 = SurroundingRectangle(mobject=text[0], color=YELLOW, buff=0.15)
+        rect2 = SurroundingRectangle(mobject=text[4], color=YELLOW, buff=0.15)
+        self.play(Create(rect1), Create(rect2), runtime=2)
+        self.play(Indicate(text[0], runtime=0.1), Indicate(indices[0]), Indicate(text[4]), Indicate(indices[4]), runtime=0.1) 
+        
+        self.wait(2)
+        
+        # redraw
+        self.remove(rect1)
+        self.remove(rect2)
+        
+        strtext2 = Text("x = \"radar\";")
+        strtext2.shift(1*DOWN)
+        self.play(ReplacementTransform(strtext, strtext2))
+  
+        self.remove(text)
+        self.remove(indices)
+        
+        str = "radar"
+        text2, indices2 = self.draw_array(str, 1, UP, nullterminator=True)
+        
+        self.wait(2)
+        
 class SubMatrixExample1(Scene):
     def construct(self):        
         squares = []
@@ -111,7 +182,7 @@ class StringIndexOf(Scene):
             lst = self.str2list(lst)
         
         if nullterminator:
-            lst.append("0")    
+            lst.append(r"$\emptyset$")
             
         # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
         indices = Tex(*[f"[{i}]" for i in range(len(lst))])
@@ -216,7 +287,7 @@ class Substrings(Scene):
             lst = self.str2list(lst)
         
         if nullterminator:
-            lst.append("0")    
+            lst.append(r"$\emptyset$")    
             
         # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
         indices = Tex(*[f"[{i}]" for i in range(len(lst))])

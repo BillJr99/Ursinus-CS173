@@ -44,6 +44,8 @@ info:
     - title: "More <code>String</code> Functions"
       model: |
         <iframe src="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" width="100%" height="700" scrolling="yes"></iframe>
+        <br>
+        <img src="../manim/output/StringReplace.gif" alt="Manim String replace Animation" />
       questions:
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
         - "Write a Java statement to replace &quot&Ham&quot; with &quot;Cheese&quot; in a <code>String</code> &quot;Hamburger&quot;"
