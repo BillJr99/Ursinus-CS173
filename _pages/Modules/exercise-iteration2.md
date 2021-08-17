@@ -48,9 +48,9 @@ files:
     code: | 
         public class Driver {
             public static void main(String[] args) {
-                int ans1 = threeXPlusOne(5);
-                int ans2 = threeXPlusOne(27);
-                int ans3 = threeXPlusOne(17);
+                int ans1 = ThreeXPlusOne.threeXPlusOne(5);
+                int ans2 = ThreeXPlusOne.threeXPlusOne(27);
+                int ans3 = ThreeXPlusOne.threeXPlusOne(17);
             }
         }    
 
@@ -64,3 +64,6 @@ files:
         
 ---
 
+## Trivia
+
+This problem is part of the [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture) which suggests that any value will eventually converge back to 1 after a finite number of iterations.  *We don't know if this is true!*
