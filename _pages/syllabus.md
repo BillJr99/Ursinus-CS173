@@ -838,7 +838,11 @@ schedule:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"      
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
+    points: 100     
+    rubricpath: "_pages/Projects/proj-final.md"
 - week: "12"
   date: "1"
   title: "Lab: Ethical Case Studies"        
@@ -847,7 +851,16 @@ schedule:
   title: "Classes and Object Data Types"  
   readings:
   - rtitle: "Constructors"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"
+  deliverables:
+    - dtitle: "Programming Assignment: ASCII Art Due"
+      dlink: "Assignments/ASCIIArt" 
+      points: 100  
+      rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"  
+    - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+      dlink: "Assignments/Iris"      
+      points: 100
+      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"  
 - week: "13"
   date: "1"
   title: "Lab: Drop the Lowest"
@@ -887,27 +900,13 @@ schedule:
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
   deliverables:
-    - dtitle: "Programming Assignment: ASCII Art Due"
-      dlink: "Assignments/ASCIIArt" 
-      points: 100  
-      rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"  
-    - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-      dlink: "Assignments/Iris"      
-      points: 100
-      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
       points: 3 
       submission_types: "noupload"      
 - week: "14"
   date: "0"
-  title: "Algorithms: Recursion" 
-  link: "Activities/Recursion" 
-  readings:
-  - rtitle: "Recursion Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
-  - rtitle: "Recursion Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"  
+  title: "Searching and Sorting"  
   deliverables:
   - dtitle: "Debugging Table: Second Check Handed Out"
     dlink: "Assignments/DebuggingTable"
@@ -919,7 +918,13 @@ schedule:
     submission_types: "written"       
 - week: "14"
   date: "1"
-  title: "Review" 
+  title: "Algorithms: Recursion" 
+  link: "Activities/Recursion"
+  readings:
+  - rtitle: "Recursion Part 1"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
+  - rtitle: "Recursion Part 2"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"   
   deliverables:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"
@@ -927,24 +932,28 @@ schedule:
     rubricpath: "_pages/Labs/Searching/lab-droplow.md"   
 - week: "14"
   date: "2"
-  title: "Presentations" 
+  title: "Review" 
   deliverables:
     - dtitle: "Exercise: Recursion"
       dlink: "Modules/Recursion/Module"
       points: 3      
       submission_types: "noupload"
+    - dtitle: "Programming Assignment: Iris Dataset Due"
+      dlink: "Assignments/Iris"
+      points: 100 
+      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"      
 - week: "14"
   date: "3"
-  title: "Presentations" 
+  title: "Review" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
-      submission_types: "written"   
-    - dtitle: "Programming Assignment: Iris Dataset Due"
-      dlink: "Assignments/Iris"
-      points: 100 
-      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"
+      submission_types: "written"             
+    - dtitle: "Final Project: Project and Presentation Due"
+      dlink: "Projects/Final"    
+      points: 100  
+      rubricpath: "_pages/Projects/proj-final.md"            
     
 university:
   semester: "Fall"
