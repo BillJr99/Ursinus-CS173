@@ -1328,7 +1328,7 @@ DTSTAMP:20211203T000000Z
 DTSTART;VALUE=DATE:20211203
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Searching
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Searching\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Search/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1355,7 +1355,7 @@ DTSTAMP:20211206T000000Z
 DTSTART;VALUE=DATE:20211206
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Methods Video https://www.youtube.com/embed/WaNLJf8xzC4\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Debugging Table: Second Check Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/InsertionSort/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Debugging Table: Second Check Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
