@@ -1056,7 +1056,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091469
 DTSTAMP:20211109T000000Z
 DTSTART;VALUE=DATE:20211109
-SUMMARY:CS173 Intro to Computer Science: Lab: 2D Array Board Game Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1076,7 +1076,7 @@ DTSTAMP:20211109T000000Z
 DTSTART;VALUE=DATE:20211109
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Anagram Solver Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Anagrams\nDeliverable: Lab: 2D Array Board Game Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/GridGame\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
+DESCRIPTION:\nDeliverable: Lab: Anagram Solver Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Anagrams\nDeliverable: Lab: Code Review Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview\nDeliverable: Debugging Table: First Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1112,14 +1112,14 @@ DTSTAMP:20211112T000000Z
 DTSTART;VALUE=DATE:20211112
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Arrays/Workshop\nReading: Nested Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html\nReading: Loop Analysis https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html\nReading: Arrays Sample Free Response Question https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/FourInARow/Exercise
+DESCRIPTION:\nReading: Nested Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html\nReading: Loop Analysis https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/FourInARow/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091470
 DTSTAMP:20211115T000000Z
 DTSTART;VALUE=DATE:20211115
-SUMMARY:CS173 Intro to Computer Science: Lab: 2D Array Board Game Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1130,14 +1130,14 @@ DTSTAMP:20211115T000000Z
 DTSTART;VALUE=DATE:20211115
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: 2D Array Board Game Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/GridGame
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Arrays/Workshop\nReading: Arrays Sample Free Response Question https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091472
 DTSTAMP:20211116T000000Z
 DTSTART;VALUE=DATE:20211116
-SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: 2D Array Board Game Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1166,7 +1166,7 @@ DTSTAMP:20211116T000000Z
 DTSTART;VALUE=DATE:20211116
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Code Review Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/ASCIIArt
+DESCRIPTION:\nDeliverable: Lab: 2D Array Board Game Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/GridGame\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/ASCIIArt
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1218,7 +1218,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09147b
 DTSTAMP:20211122T000000Z
 DTSTART;VALUE=DATE:20211122
-SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Due
+SUMMARY:CS173 Intro to Computer Science: Lab: 2D Array Board Game Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1238,7 +1238,7 @@ DTSTAMP:20211122T000000Z
 DTSTART;VALUE=DATE:20211122
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Projects/Final
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html\nDeliverable: Lab: 2D Array Board Game Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/GridGame\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
