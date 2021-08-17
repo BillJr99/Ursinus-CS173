@@ -29,9 +29,9 @@ info:
     - weight: 10
       description: Writeup and Submission
       preemerging: An incomplete submission is provided
-      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup or missing answers to written questions)
+      progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
+      proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
     - rtitle: "Iteration Activity"
       rlink: "../Activities/Iteration"
