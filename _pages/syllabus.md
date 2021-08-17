@@ -736,7 +736,7 @@ schedule:
     dlink: "Labs/Anagrams"  
     points: 100
     rubricpath: "_pages/Labs/Strings/lab-anagrams.md"     
-  - dtitle: "Lab: 2D Array Board Handed Out"
+  - dtitle: "Lab: 2D Array Board Game Handed Out"
     dlink: "Labs/GridGame"
     points: 100  
     rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
@@ -784,7 +784,7 @@ schedule:
     dlink: "Labs/GridGame"
     points: 100  
     rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md" 
-  - week: "11"
+- week: "11"
   date: "1"
   title: "Lab: Code Review"
   deliverables:
