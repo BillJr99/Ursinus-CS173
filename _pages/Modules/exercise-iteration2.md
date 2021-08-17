@@ -19,7 +19,7 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    var pos = feedbackString.split();
+    var pos = feedbackString.split("-");
   correctcheck: |
     pos[0] === "5" && pos[1] === "111" && pos[2] === "12"
       
@@ -51,6 +51,8 @@ files:
                 int ans1 = ThreeXPlusOne.threeXPlusOne(5);
                 int ans2 = ThreeXPlusOne.threeXPlusOne(27);
                 int ans3 = ThreeXPlusOne.threeXPlusOne(17);
+                
+                System.out.print(ans1 + "-" + ans2 + "-" + ans3);
             }
         }    
 
