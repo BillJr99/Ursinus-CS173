@@ -19,6 +19,10 @@ info:
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
 
+  additional_reading:
+    - link: https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
+      title: Sample String Array Free Response Question
+      
 tags:
   - strings
   - iteration

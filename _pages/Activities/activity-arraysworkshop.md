@@ -30,7 +30,13 @@ info:
         - Implement your solution!
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
-        
+
+  additional_reading:
+    - link: https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html
+      title: Sample 2D Array Free Response Question
+    - link: https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html
+      title: Sample Array Free Response Question      
+      
 tags:
   - arrays
   - iteration
