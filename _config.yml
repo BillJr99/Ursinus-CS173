@@ -11,7 +11,7 @@ title: "CS173"
 description: "Intro to Computer Science"
 
 url                      : https://BillJr99.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/Ursinus-CS173-Spring2021" # the subpath of your site, e.g. "/blog"
+baseurl                  : "/Ursinus-CS173-Fall2021" # the subpath of your site, e.g. "/blog"
     
 # Analytics  
 google_analytics         : "UA-24052857-1"
