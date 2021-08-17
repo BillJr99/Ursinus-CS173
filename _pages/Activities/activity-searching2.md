@@ -1,11 +1,11 @@
 ---
 layout: activity
-permalink: /Activities/SearchingAndSorting
-title: "CS173: Intro to Computer Science - Searching and Sorting"
-excerpt: "CS173: Intro to Computer Science - Searching and Sorting"
+permalink: /Activities/Searching2
+title: "CS173: Intro to Computer Science - Search Algorithms"
+excerpt: "CS173: Intro to Computer Science - Search Algorithms"
 
 info:
-  next: ./SearchingAndSorting2
+  prev: ./Searching
   
   goals: 
     - To be able to search a list for a desired item.
@@ -64,6 +64,10 @@ info:
         - Write Java-like pseudocode to implement a function to locate a value <code>k</code> in an array <code>A</code>.
         - How many iterations are required through the loop to find item <code>6</code>?  How about item <code>9</code>?
         - How many iterations are required through the loop to find the last item in a list of size <code>N</code>?
+
+  additional_practice:
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html
+      title: Search Algorithms
       
 tags:
   - searching

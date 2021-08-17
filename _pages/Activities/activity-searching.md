@@ -1,10 +1,12 @@
 ---
 layout: activity
-permalink: /Activities/Algorithms
+permalink: /Activities/Searching
 title: "CS173: Intro to Computer Science - Algorithms"
 excerpt: "CS173: Intro to Computer Science - Algorithms"
 
 info:
+  next: ./Searching2
+  
   goals: 
     - To explain the role of an algorithm in computing
     - To design an algorithm without the use of a computer

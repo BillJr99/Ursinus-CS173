@@ -898,11 +898,12 @@ schedule:
     submission_types: "written"     
 - week: "13"
   date: "3"
-  title: "Algorithms" 
-  link: "Activities/Algorithms"   
+  title: "Algorithms: Searching" 
+  link: "Activities/Searching"   
 - week: "14"
   date: "0"
-  title: "Searching and Sorting" 
+  title: "Algorithms: Sorting" 
+  link: "Activities/Sorting"
   readings:
   - rtitle: "Ch. 9.6.3"
     rlink: false   
