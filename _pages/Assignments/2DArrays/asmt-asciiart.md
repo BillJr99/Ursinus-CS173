@@ -100,7 +100,9 @@ If we take a block that's one one of the bricks, it's somewhere in between, so t
 
 When you do this, you should take all non-overlapping blocks in the image that you can. So, for instance, the above image is `466x466` pixels. This means that if we use a block that's 8 tall and 4 wide, we can fit 59 blocks from top to bottom and 117 blocks from left to right. For instance, the block that started at row 28 and column 32 in the above image is 35 rows down and 8 columns over.
 
-**Be careful not to run out of bounds when taking pixels in a block.** The rightmost and bottommost blocks won't actually have 8x4 pixels in them, because you'll run out of space.
+**Be careful not to run out of bounds when taking pixels in a block.** The rightmost and bottommost blocks won't actually have 8x4 pixels in them, because you'll run out of space.  Below is an example on traversing subpixels in a 2-dimensional array (the graphic!).
+
+![Manim animation of traversing subsquares in a 2D array](../manim/output/SubMatrixExample1.gif)
 
 ## Code to Write
 You should fill in `ASCIIArt.java` to print out rows of text to create ASCII art following the above procedure. You will have to come up with your own methods and way of organizing the code, but you should do the following steps at some point:

@@ -3,6 +3,102 @@
 
 from manim import *
 
+class SubMatrixExample1(Scene):
+    def construct(self):        
+        squares = []
+        matrix = []
+        colors = [ORANGE, GREEN, BLUE, PURPLE, PINK, TEAL, MAROON, GREY_BROWN, GREY]
+        size = 10
+        
+        # Draw the grid
+        for x in range(size):            
+            matrix.append([])
+            for y in range(size):
+                i = x * size + y
+                squares.append(Square(0.5))
+                squares[i].set_fill(colors[i % len(colors)], opacity=0.5)
+                matrix[x].append(squares[i])
+
+        grid = VGroup(*squares)
+        grid.arrange_in_grid(size, size, buff=0)
+        
+        grid.shift(1 * UP)
+        #grid.shift(4 * LEFT)
+        
+        self.play(FadeIn(grid))
+        
+        self.wait(1)
+        
+        # Label the axes
+        labels = []
+        for i in range(size):
+            label = Tex(str(i)).scale(0.5)
+            label.next_to(squares[i], UP)
+            labels.append(label)
+            
+        for j in range(size):
+            label = Tex(str(j)).scale(0.5)
+            label.next_to(squares[j * size], LEFT)
+            labels.append(label)
+            
+        labelgroup = VGroup(*labels)
+        self.play(FadeIn(labelgroup))
+
+        self.wait(2)
+        
+        # Subsquares
+        subsquaresize = 3
+        oldtext = None
+        i = 0
+        j = 0
+        
+        overruntext = Tex("Stop the subsquare at the edge!", color=RED)
+        overruntext.shift(3 * DOWN)
+        isoverrunvisible = False
+        
+        while j < size: # swap i, j because manim coordinates are col major
+            i = 0
+            while i < size:
+                top = i
+                left = j
+                bottom = min(i + subsquaresize - 1, size - 1)
+                right = min(j + subsquaresize - 1, size - 1)
+            
+                newtext = Tex("Subsquare from " + str(top) + "," + str(left) + " to " + str(bottom) + "," + str(right))
+                newtext.shift(2 * DOWN)
+                
+                if (bottom < size - 1 and right < size - 1) and isoverrunvisible:
+                    self.remove(overruntext)
+                    isoverrunvisible = False
+                
+                if not (oldtext is None):
+                    self.play(ReplacementTransform(oldtext, newtext))
+                else:
+                    self.play(FadeIn(newtext))
+                    
+                oldtext = newtext
+                
+                self.wait(1)
+                
+                indicates = []
+                for s in range(left, right + 1): # +1 because range is exclusive
+                    for t in range(top, bottom + 1):
+                        indicates.append(Indicate(matrix[s][t]))
+
+                if (bottom >= size - 1 or right >= size - 1) and (not isoverrunvisible):
+                    self.play(FadeIn(overruntext))
+                    isoverrunvisible = True
+                    
+                if(len(indicates) > 0):                    
+                    self.play(*indicates, runtime=2)
+                    self.wait(1)
+                
+                i = i + subsquaresize
+                
+            j = j + subsquaresize
+        
+        self.wait(2)
+
 class StringIndexOf(Scene):
     # https://www.geeksforgeeks.org/python-program-convert-string-list/
     def str2list(self, string):
