@@ -50,7 +50,8 @@ info:
         - What is the purpose of the line <code>A[j+1] = A[j]</code> inside the inner for loop?
         - Describe the execution of this algorithm in your own words.
         - Enter the code for <a href=https://www.geeksforgeeks.org/insertion-sort/>Insertion Sort</a> into the <a href=https://cscircles.cemc.uwaterloo.ca/java_visualize/#mode=edit>Java Visualizer</a> and execute it step-by-step.  
-        - How many steps are required to execute this code on an array of size <code>10</code>?  In other words, how many times is the code inside the inner loop executed?  How does this count relate to the size of the array?       
+        - How many steps are required to execute this code on an array of size <code>10</code>?  In other words, how many times is the code inside the inner loop executed?  How does this count relate to the size of the array? 
+        - Let's act it out!
         
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/ssEasyMC.html

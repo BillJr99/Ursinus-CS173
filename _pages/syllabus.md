@@ -900,19 +900,22 @@ schedule:
   date: "3"
   title: "Algorithms: Searching" 
   link: "Activities/Searching"   
+  readings:
+  - rtitle: "Searching Module"
+    rlink: "Modules/Search/Module"
 - week: "14"
   date: "0"
   title: "Algorithms: Sorting" 
   link: "Activities/Sorting"
   readings:
   - rtitle: "Ch. 9.6.3"
-    rlink: false   
+    rlink: false  
+  - rtitle: "Sorting Module"
+    rlink: "Modules/Sorting/Module"    
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
-  - rtitle: "Sorting Methods Video"
-    rlink: "https://www.youtube.com/embed/WaNLJf8xzC4"
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
   deliverables:
