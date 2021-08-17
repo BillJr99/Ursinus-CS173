@@ -11,8 +11,14 @@ info:
     - To be able to sort a list using an iterative sorting algorithms (<code>Insertion Sort</code>)
 
   additional_reading:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html 
-      title: Sorting
+    - link: ../Modules/Sorting/Modules/Sorting
+      title: Sorting Module
+    - title: "Interactive Demo of Insertion Sort"
+      link: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
+    - title: "Search Algorithms"
+      link: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
+    - title: "Sorting Algorithms"
+      link: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"       
 
   models:
     - model: |

@@ -7,6 +7,10 @@ excerpt: "CS173: Intro to Computer Science - Algorithms"
 info:
   next: ./Searching2
   
+  additional_reading:
+    - link: ../Modules/Search/Modules/Sorting
+      title: Searching Module  
+  
   goals: 
     - To explain the role of an algorithm in computing
     - To design an algorithm without the use of a computer

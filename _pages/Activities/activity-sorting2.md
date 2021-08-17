@@ -30,18 +30,6 @@ info:
       title: <code>Bubble Sort</code>
       questions: 
         - Describe the execution of <a href=https://www.geeksforgeeks.org/bubble-sort/>Bubble Sort</a> in your own words.
-        
-  additional_practice:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/ssEasyMC.html
-      title: Iterative Sort (Insertion Sort, Selection Sort) Questions
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/ssHardMC.html
-      title: Medium Difficulty Questions about Iterative Sort
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/ssMedMC.html
-      title: More Challenging Questions about Iterative Sort
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html
-      title: Search Algorithms
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html
-      title: Sorting Algorithms
       
 tags:
   - searching
