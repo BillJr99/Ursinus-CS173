@@ -108,6 +108,7 @@ info:
         - How might a computer represent a whole number using only 1 and 0 digits?  How do you use the decimal digits 0 through 9 to represent all whole numbers?
         - How might a computer represent a True/False boolean?
         - How might a computer represent the letter <code>&apos;A&apos;</code> or the word <code>&quot;Hi!&quot;</code>?
+        
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-8-practice-coding.html
       title: Mixed-Up Coding Practice

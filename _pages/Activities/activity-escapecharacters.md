@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Escape Characters"
 excerpt: "CS173: Intro to Computer Science - Escape Characters"
 
 info:
-  prev: ./Expressions
+  prev: ./Expressions2
   
   goals: 
     - To identify the use of escape characters
@@ -77,9 +77,11 @@ info:
         - Why do you think we call these &quot;escape characters?&quot;
         - What escape character do you think prints a backslash to the screen?
         - How would you print the actual characters <code>\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)? 
+        
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-2-java-intro.html	
       title: Introduction to Java
+      
   additional_practice:
     - link: https://practiceit.cs.washington.edu/problem/view/bjp5/chapter1/s10-Shaq
       title: Shaq

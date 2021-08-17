@@ -5,12 +5,13 @@ title: "CS173: Intro to Computer Science - Expressions"
 excerpt: "CS173: Intro to Computer Science - Expressions"
 
 info:
-  next: ./EscapeCharacters
+  next: ./Expressions2
   
   goals: 
     - To write statements that manipulate values of different numeric types
     - To manipulate variables in a Java program
     - To be able to apply operators appropriate to primitive data type values
+    
   models:
     - model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -160,10 +161,12 @@ info:
         - Notice the result of dividing <code>x / 2</code> if <code>x</code> is an <code>int</code>?  How about if <code>x</code> is a <code>double</code> or a <code>float</code>?
         - Suppose you had to divide two integers, but you want the result to be stored as a floating point value.  How could you ensure that this happens (there are several possibilities!)?
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html	
       title: Expressions and Assignments
+      
   additional_practice: 
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html
       title: Compound Assignment Operators
@@ -173,6 +176,7 @@ info:
       title: Variables and Assignments Practice Coding Problems
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/to
       title: Review of Variables and Assignments
+      
   reflective_prompts:
     - "What is the binary representation of the integer value <code>48</code>?"
     - "What is the decimal representation of the binary value <code>01001</code>?"
