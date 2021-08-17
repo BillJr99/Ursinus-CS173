@@ -42,6 +42,6 @@ info:
           
 tags:
   - arrays
-  - classes  
+
 ---
 
