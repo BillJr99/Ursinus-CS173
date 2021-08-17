@@ -758,8 +758,6 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
   - rtitle: "2D Arrays Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
-  - rtitle: "2D Array Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"  
 - week: "10"
   date: "3"  
   title: "2D Arrays" 
@@ -780,6 +778,8 @@ schedule:
   readings:
   - rtitle: "Arrays Sample Free Response Question"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
+  - rtitle: "2D Array Sample Free Response Question"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"      
   deliverables:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
