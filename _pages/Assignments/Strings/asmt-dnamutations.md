@@ -128,16 +128,20 @@ Using the two functions you just wrote to compute the complement and the reverse
 ### Part 3, Step 4: Find the Antisense
 Finally, determine if the antisense is located inside the chain.  So, in our example, you would search for `ATGT` in `ACATGCTATGTA`, because the sense you are seeking is `ACAT`.  You can use the `chain.indexOf()` to help you here - feel free to look it up to see how it works!
 
-## Part 4: Testing
-
-Write unit tests for each part of this assignment.  You will need more than one test case per part.  Your test cases should include boundary conditions (for example, inserting or removing to the beginning, middle, and end of a string).  Your goal is to uncover errors with your test cases.  Because of 0-indexing, and off-by-one errors, an algorithm can appear to work fine as long as you manipulate the middle of a chain, but then break when you are dealing with the beginning or end.  Even I made an error while completing this assignment that was only uncovered when I tried to execute it at the end of a chain.  These mistakes are very easy to make, and you should assume that your code contains these bugs.  Think of testing like a game: your goal is to cause your software to break (that's how we identify bugs to fix and make our software more robust!).  
-
-**Question What test cases would you write in order to try to do that?**
-
-## Extra Credit (10%): Removing a Chain
+## Part 4: Removing a Chain
 Given an NA chain string and an NA subchain, remove all instances of the subchain from the chain.  For example, `remove("ACCGCC", "CC")` would return "AG".
 
 Note that Java Strings now have a method `replaceAll` that will do this for you.  I definitely encourage you to use this.  However, you may notice that these helper methods don't always exist across many of the string operations we're exploring here.  So, there is significant value in practicing with string indexing.  For full credit on this problem, implement your own replacement algorithm to accomplish this without calling a `replace` or `replaceAll` string method.  However, it would be a good idea to write a unit test that compares your results to a call to `replaceAll`, and you should feel both free and encouraged to do so!
+
+So, to do this, you will need to read the `String` one character at a time, and determine whether the substring is equal to your subsequence.  Append the character to your result `String` if they don't match, and advance your loop counter if they do match (so that you skip those characters).  Notice that I'm not asking you to remove the characters directly from the original `String`!  Although you could do this, you will have to do some extra work to update your loop counter if you make a change to the `String`.
+
+**Question: for the sequence `ACCGCC`, replacing the subsequence `CC`, what pairs of characters do you need to compare to `CC`?  For example, you would first check `AC`, but then what are the rest, and what are their substring begin and end indices? List out each pair of characters, and their indices.  These should give you a hint about how your loop will work.**
+
+## Part 5: Testing
+
+Write unit tests for each part of this assignment.  You will need more than one test case per part.  Your test cases should include boundary conditions (for example, inserting or removing to the beginning, middle, and end of a string).  Your goal is to uncover errors with your test cases.  Because of 0-indexing, and off-by-one errors, an algorithm can appear to work fine as long as you manipulate the middle of a chain, but then break when you are dealing with the beginning or end.  Even I made an error while completing this assignment that was only uncovered when I tried to execute it at the end of a chain.  These mistakes are very easy to make, and you should assume that your code contains these bugs.  Think of testing like a game: your goal is to cause your software to break (that's how we identify bugs to fix and make our software more robust!).  
+
+**Question: What test cases would you write in order to try to do that?**
 
 ## Exporting your Project for Submission
 
