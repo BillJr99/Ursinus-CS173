@@ -853,9 +853,9 @@ schedule:
   title: "Lab: Drop the Lowest"
   deliverables:
   - dtitle: "Lab: Drop the Lowest Handed Out"
-    dlink: "Labs/DropTheLowest"
+    dlink: "Labs/DropLowest"
     points: 100
-    rubricpath: "_pages/Labs/Searching/lab-dropthelowest.md"
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"
 - week: "13"
   date: "2"
   title: "Classes and Object Data Types" 
@@ -922,9 +922,9 @@ schedule:
   title: "Review" 
   deliverables:
   - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropTheLowest"
+    dlink: "Labs/DropLowest"
     points: 100
-    rubricpath: "_pages/Labs/Searching/lab-dropthelowest.md"    
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"   
 - week: "14"
   date: "2"
   title: "Presentations" 
