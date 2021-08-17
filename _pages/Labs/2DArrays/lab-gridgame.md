@@ -93,7 +93,7 @@ String str = "The quick brown fox";
 String[] words = str.split(" "); // words contains {"The", "quick", "brown", "fox"}
 ```
 
-### Extra Credit (10%): Custom Rules
+### Extra Credit (10 Points): Custom Rules
 
 For extra credit, create three additional rules for your game that pertain to the array, and implement them on the grid.  For example, pieces whose value is equal to a certain value can move more than one square at a time, or can jump over occupied squares, or wins if there is a tie, *etc*.  Write down which rules you impelemented in your README.
 
