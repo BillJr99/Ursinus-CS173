@@ -43,7 +43,7 @@ info:
         ]]></script>        
       title: The <code>do</code> Loop with User Input
       questions: 
-        - "Why isn’t the code example from the first model written as a <code>do</code> loop?  How might this result in telling someone to \"play outside\" while it is raining?"
+        - "Using this program structure as a template, write a program to ask the user to enter a menu option between 1 and 4.  Print out one of four different messages depending on the menu option they choose, and if they do not enter a number between 1 and 4, continue prompting them until they do so."
 tags:
   - iterations
   

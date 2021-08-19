@@ -37,7 +37,9 @@ info:
   readings:
     - rtitle: "File I/O Activity and Examples"
       rlink: "../Activities/FileIO"    
-
+  questions:
+    - "What functions do you need to write to solve this problem?  Before you begin, sketch them out first on paper or in a text file, and describe which functions you would call from <code>main</code> and in what order."
+    
 tags:
   - strings
   

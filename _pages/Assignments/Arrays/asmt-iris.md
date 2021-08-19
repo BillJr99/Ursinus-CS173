@@ -40,7 +40,9 @@ info:
       rlink: "../Activities/Iteration"   
   questions:
     - "On paper, read the first four lines of the Iris CSV file where the flower is Setosa, where the flower is Virginica, and where the flower is Versicolor.  Still on paper, group the numbers into three separate lists, according to the flower species.  What is the average sepal length of the Virginica flowers?"
-      
+    - "What functions would you write to help you to solve this problem?"
+    - "What classes do you suggest to organize your data?"
+    
 tags:
   - strings
   - arrays
