@@ -35,7 +35,9 @@ info:
       rlink: "../Activities/2DArrays"          
     - rtitle: "File I/O Activity"
       rlink: "../Activities/FileIO" 
-      
+  questions:
+    - "What functions would you write to help you to solve this problem?"
+    
 tags:
   - arrays
   - 2darrays
