@@ -37,7 +37,9 @@ info:
     - rtitle: "Arrays Activity"
       rlink: "../Activities/Arrays"      
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"   
+      rlink: "../Activities/Iteration"
+    - rtitle: "File I/O"
+      rlink: "../Activities/FileIO"    
   questions:
     - "On paper, read the first four lines of the Iris CSV file where the flower is Setosa, where the flower is Virginica, and where the flower is Versicolor.  Still on paper, group the numbers into three separate lists, according to the flower species.  What is the average sepal length of the Virginica flowers?"
     - "What functions would you write to help you to solve this problem?"
@@ -86,62 +88,16 @@ Before we begin, open the CSV file in your favorite spreadsheet program.  You'll
 Notice that some points are clearly off to the left from the other two groups, while two groups are intermixed along the bottom right of the graph.  That's because the sepal width and sepal length does not perfectly separate our species of flowers into unique clusters.  If we add a third dimension to our graph by adding, say, the petal length (or even add more dimensions: arrays can have dimensions beyond what we can visualize!), we might be able to separate those points even further.  If the clusters of data are far apart, we can guess which cluster a new, unknown data point belongs to, by measuing how far it is from the center of each cluster and inferring that it belongs to the nearest center.  In this assignment, we will write a program to compute centroids of three species (virginica, versicolor, and setosa flowers) over four dimensions (sepal length, sepal width, petal length, and petal width), and compute the nearest of these three 4-D centroids to a flower whose species we do not know but whose petal and sepal length and width we can measure!
 
 ## Step 1: Reading the CSV File
-Open the CSV file for reading.  Since it is a CSV file, a `BufferedReader` is a good choice, as we can read the text line-by-line.  Using the `split` function, you can obtain an array of values for each row.  This array will contain the sepal length, sepal width, petal length, petal width, and the known classification of that particular flower.  The `split` function accepts a `String` parameter representing the delimiter character on which to split.  For a CSV, that's the comma character.
-
-Here is a code snippet that reads a CSV file, returning an `ArrayList<String>`
-
-```java
-/* Read a CSV file given its file path, and return an ArrayList of Strings, 
- * one String per line 
- */
-public static ArrayList<String> readCSV(String filePath) {
-    ArrayList<String> lines = new ArrayList<String>();
-    
-    try {
-        BufferedReader br = new BufferedReader(new FileReader(filePath));
-        String line;
-        while((line = br.readLine()) != null) {
-            // only add the line if it has non-whitespace content
-            // strip() removes leading and trailing whitespace
-            if(line.strip().length() > 0) { 
-                /* TODO: append the line to the lines ArrayList */
-            }
-        }
-    } catch(IOException e) { // if an error occurs, do this!
-        System.err.println("Error reading CSV file!");
-        
-        // System.err is like System.out but is used for errors
-        // This allows us to separate program output from 
-        // error output.
-        e.printStackTrace(System.err);
-    }
-    
-    return lines;
-}
-```
-
-Additionally, here is a function that will split a String into an array of `String`s using the comma character:
-
-```java
-/* Given a comma separated String, return an 
- *  array of its tokens.  For example:
- *  
- *  String[] letters = commaSeparate("A,B,C,D");
- *  
- *  will return letters = { "A", "B", "C", "D" }
- */
-public static String[] commaSeparate(String line) {
-    // Splitting a String is also known as tokenizing it!
-    String[] tokens = line.split(",");
-    
-    return tokens;
-}
-```
+Open the CSV file for reading.  Since it is a CSV file, a `BufferedReader` is a good choice, as we can read the text line-by-line.  Using the `split` function, you can obtain an array of values for each row.  This array will contain the sepal length, sepal width, petal length, petal width, and the known classification of that particular flower.  The `split` function accepts a `String` parameter representing the delimiter character on which to split.  For a CSV, that's the comma character.  Read the text file into an `ArrayList<String>`, in which each array element is a line from the file, and return that `ArrayList`.
 
 [Download](http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data) and save the `iris.data` file into your project directory under a `data` subdirectory, and verify that you can read the CSV file, comma separate each line of the array you get back in a loop, and print the array values to the screen as a test.  The `filePath` that you pass to `readCSV` will be `"data/iris.data"`.  **Hint: you do not have to modify the `commaSeparate` or `readCSV` functions to do this, and you should not!  Rather, call each of these functions from `main()` instead.**
 
 ## Step 2: Processing the Input and Separating Each Row of Values into Separate Arrays Based on their Species and Column
-Now, you will use the `ArrayList` that you generated by reading the CSV file, comma-separate (or "tokenize") each line in a loop into an array of tokens; in the loop (but after you tokenize each line), you will gather the sepal length, sepal width, petal length, petal width, and species from the array of tokens.  If the species is a `setosa` flower, store the petal length into an array made just for setosa flower petal lengths.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.  You will have created 12 arrays of `Double` values:
+Now, you will use the `ArrayList` that you generated by reading the CSV file, comma-separate (or "tokenize") each line in a loop into an array of tokens; in the loop (but after you tokenize each line), you will gather the sepal length, sepal width, petal length, petal width, and species from the array of tokens.  
+
+Additionally, recall that the `String.split()` function will separate a `String` into an array of individual `String` values separated by a delimiter parameter that you can provide.  Refer to the [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#split(java.lang.String)) for a refresher!
+
+If the species is a `setosa` flower, store the petal length into an array made just for setosa flower petal lengths.  Similarly, use separate arrays for the `versicolor` and `virginica` flowers as well.  By the time you are finished reading the text file, you should have an array containing all the `setosa` petal lengths, one for all the `setosa` petal widths, and so on.  You will have created 12 arrays of `Double` values:
 
 1. an array containing the sepal lengths of `Iris-setosa` flowers
 2. an array containing the sepal lengths of `Iris-versicolor` flowers

@@ -34,7 +34,7 @@ info:
       questions:
         - "What is <code>System.in</code>?"
         - "How would you use the <code>scanner</code> object to ask the user to enter their grade in the class; keep asking them to enter their grade until it is an A, B, C, D, or F."
-        - "The <code>Scanner</code> class also includes a function called `nextInt` which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range!)"
+        - "The <code>Scanner</code> class also includes a function called `nextInt` which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range)!"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.nio.file.Files;
@@ -97,6 +97,40 @@ info:
         - "What is the difference between <code>readFileBytes</code> and <code>readFileString</code>?"
         - "What do you think <code>try</code> and <code>throws</code> mean?"
         - "What do you think <code>System.err</code> does?"
+    - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        /* Read a CSV file given its file path, and return an ArrayList of Strings, 
+         * one String per line 
+         */
+        public static ArrayList<String> readTextFile(String filePath) {
+            ArrayList<String> lines = new ArrayList<String>();
+            
+            try {
+                BufferedReader br = new BufferedReader(new FileReader(filePath));
+                String line;
+                while((line = br.readLine()) != null) {
+                    // only add the line if it has non-whitespace content
+                    // strip() removes leading and trailing whitespace
+                    if(line.strip().length() > 0) { 
+                        lines.add(line);
+                    }
+                }
+            } catch(IOException e) { // if an error occurs, do this!
+                System.err.println("Error reading CSV file!");
+                
+                // System.err is like System.out but is used for errors
+                // This allows us to separate program output from 
+                // error output.
+                e.printStackTrace(System.err);
+            }
+            
+            return lines;
+        }
+        ]]></script>          
+      title: "Reading All Lines of a Text File"
+      questions:
+        - "What do you think an array is?"
+        - "Using the array, what do you think this function does that the <code>readLineByLine</code> function above does not do?"
         
 tags:
   - io
