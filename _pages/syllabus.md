@@ -930,6 +930,14 @@ schedule:
     submission_types: "noupload"     
 - week: "14"
   date: "1"
+  title: "Algorithms: Sorting" 
+  deliverables:
+  - dtitle: "Lab: Code Review Due"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"             
+- week: "14"
+  date: "2"
   title: "Algorithms: Recursion" 
   link: "Activities/Recursion"
   readings:
@@ -938,34 +946,22 @@ schedule:
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"   
   deliverables:
-  - dtitle: "Lab: Code Review Due"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
-  - dtitle: "Exercise: Problets - Function - Recursive functions"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"           
-- week: "14"
-  date: "2"
-  title: "Review" 
-  deliverables:
-    - dtitle: "Exercise: Recursion"
-      dlink: "Modules/Recursion/Module"
-      points: 3      
-      submission_types: "noupload"
     - dtitle: "Programming Assignment: Iris Dataset Due"
       dlink: "Assignments/Iris"
       points: 100 
       rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"      
 - week: "14"
   date: "3"
-  title: "Review" 
+  title: "Algorithms: Recursion" 
   deliverables:
     - dtitle: "Debugging Table: Second Check Due"
       dlink: "Assignments/DebuggingTable"
       points: 10 
       submission_types: "written"             
+    - dtitle: "Exercise: Recursion"
+      dlink: "Modules/Recursion/Module"
+      points: 3      
+      submission_types: "noupload"      
     - dtitle: "Final Project: Project and Presentation Due"
       dlink: "Projects/Final"    
       points: 100  
