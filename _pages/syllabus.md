@@ -846,6 +846,10 @@ schedule:
     dlink: "Modules/ArrayLists/Module"    
     points: 3
     submission_types: "noupload"    
+  - dtitle: "Debugging Table: Second Check Handed Out"
+    dlink: "Assignments/DebuggingTable"
+    points: 10 
+    submission_types: "written"     
 - week: "12"
   date: "0" 
   title: "Algorithms: Searching"
@@ -866,6 +870,11 @@ schedule:
   date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"
+  deliverables:
+  - dtitle: "Debugging Table: Second Check Due"
+    dlink: "Assignments/DebuggingTable"
+    points: 10 
+    submission_types: "written"    
   readings:
   - rtitle: "Ch. 8"
     rlink: false  
@@ -922,10 +931,6 @@ schedule:
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
   deliverables:
-  - dtitle: "Debugging Table: Second Check Handed Out"
-    dlink: "Assignments/DebuggingTable"
-    points: 10 
-    submission_types: "written" 
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
     points: 3 
@@ -955,11 +960,7 @@ schedule:
 - week: "14"
   date: "3"
   title: "Algorithms: Recursion" 
-  deliverables:
-    - dtitle: "Debugging Table: Second Check Due"
-      dlink: "Assignments/DebuggingTable"
-      points: 10 
-      submission_types: "written"             
+  deliverables:           
     - dtitle: "Exercise: Recursion"
       dlink: "Modules/Recursion/Module"
       points: 3      
@@ -968,7 +969,6 @@ schedule:
       dlink: "Projects/Final"    
       points: 100  
       rubricpath: "_pages/Projects/proj-final.md"            
-    
 university:
   semester: "Fall"
   academicyear: "2021-22"
