@@ -33,7 +33,7 @@ DUE_DATE_OFFSET = 1 # 1 # add 1 day to make things due the next morning per the 
 DUE_DATE_FORMAT = "%Y%m%dT%H%M%SZ"
 
 TABS_TO_HIDE = ["Outcomes", "Collaborations", "Files", "Pages", "Conferences", "BigBlueButton (Formerly Conferences)", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
-TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video", "Rubrics", "Quizzes", "Announcements" ] # which navigation pane items to force show if they are already hidden
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video", "Rubrics", "Quizzes", "Announcements", "Zoom" ] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
 
