@@ -347,7 +347,7 @@ DTSTAMP:20210913T000000Z
 DTSTART;VALUE=DATE:20210913
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/NumberSystems\nReading: ASCII Encoding Video https://www.youtube.com/embed/5aJKKgSEUnY\nReading: Floating Point Values Video https://www.youtube.com/embed/PZRI1IfStY0\nReading: Number Systems and Binary Encoding Video https://www.youtube.com/embed/ku4KOFQ-bB4\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/NumberSystems\nReading: Numerical Encodings https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Encodings/Module\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
