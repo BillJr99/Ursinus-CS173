@@ -57,7 +57,9 @@ info:
                 int[] A = { 6, 7, 10, 3, 4, 2, 1, 8, 5, 9 };
            }
         }
-        ]]></script>        
+        ]]></script> 
+        <br>
+        <img src="../manim/output/ArraySearch.gif" alt="Searching an array">
       title: Searching
       questions:
         - What steps are required to find the index of an item in the array (say, the number <code>2</code>)?

@@ -3,6 +3,189 @@
 
 from manim import *
 
+class ArraySearchLowest(Scene):
+    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5, nullterminator=False):
+        if type(lst) is str:
+            lst = self.str2list(lst)
+        
+        if nullterminator:
+            lst.append(r"$\emptyset$")    
+            
+        # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
+        indices = Tex(*[f"[{i}]" for i in range(len(lst))])
+        text = Tex(*[f"[{lst[i]}]" for i in range(len(lst))])
+        
+        text.arrange(RIGHT,buff=xbuff)
+        
+        for idx, txt in zip(indices, text):
+            idx.scale(0.5)
+            idx.next_to(txt,DOWN,buff=ybuff)
+            
+            if moveunits != 0:
+                idx.shift(moveunits * movedir)
+                txt.shift(moveunits * movedir)            
+            
+        self.play(*list(map(lambda x: Write(x,run_time=2),[text,indices])))
+        
+        return text, indices
+        
+    def construct(self):           
+        arr = [4, 9, 2, 3, 5, 7, 8, 1, 6]
+        drawn_array, indices = self.draw_array(arr, 2, UP, nullterminator=False)  
+
+        self.wait(2)
+        
+        oldtext = Tex("Assume the smallest value is the first one for now")
+        self.play(FadeIn(oldtext))
+        
+        self.wait(1)
+        
+        self.play(Indicate(drawn_array[0]), Indicate(indices[0]), runtime=1)
+        
+        self.wait(1)
+        
+        oldkeytext = Tex("double key = arr[0]; // arr[0] == " + str(arr[0]))
+        oldkeytext.shift(2 * DOWN)   
+        oldidxtext = Tex("double idx = 0;")
+        oldidxtext.shift(3 * DOWN)
+        self.play(FadeIn(oldkeytext), FadeIn(oldidxtext));        
+        
+        newtext = Tex("Iterate over the array (let's call it arr)")
+        self.play(ReplacementTransform(oldtext, newtext));
+        oldtext = newtext
+        
+        self.wait(2)
+                        
+        key = arr[0]
+        idx = 0                      
+        
+        self.wait(1)
+        
+        for i in range(len(arr)):
+            newtext = Tex("if(arr[" + str(i) + "] < key) // " + str(arr[i]) + " < " + str(key) + "?")
+            
+            self.play(ReplacementTransform(oldtext, newtext))
+                        
+            self.play(Indicate(drawn_array[i]), Indicate(indices[i]), runtime=1)
+                                
+            if arr[i] < key:
+                self.wait(2)
+                
+                key = arr[i]
+                idx = i
+                
+                newkeytext = Tex("key = arr[i]; // arr[i] == " + str(arr[i]))
+                newkeytext.shift(2 * DOWN)
+                newidxtext = Tex("idx = i; // i == " + str(i))
+                newidxtext.shift(3 * DOWN)                   
+                self.play(ReplacementTransform(oldkeytext, newkeytext), ReplacementTransform(oldidxtext, newidxtext))
+                
+                self.wait(2)
+                
+                rect1 = SurroundingRectangle(mobject=drawn_array[i], color=YELLOW, buff=0.15)
+                rect2 = SurroundingRectangle(mobject=newkeytext, color=YELLOW, buff=0.15)
+                self.play(Create(rect1), Create(rect2))
+                self.wait(2)
+                self.remove(rect1)
+                self.remove(rect2)
+                  
+                rect1 = SurroundingRectangle(mobject=indices[i], color=YELLOW, buff=0.15)
+                rect2 = SurroundingRectangle(mobject=newidxtext, color=YELLOW, buff=0.15)
+                self.play(Create(rect1), Create(rect2))
+                self.wait(2)
+                self.remove(rect1)
+                self.remove(rect2)
+            else:
+                newkeytext = oldkeytext
+                newidxtext = Tex("No, idx remains at i == " + str(idx))
+                newidxtext.shift(3 * DOWN)
+                self.play(ReplacementTransform(oldidxtext, newidxtext))
+                            
+                self.wait(1)
+            
+            oldkeytext = newkeytext
+            oldidxtext = newidxtext                
+                                
+            oldtext = newtext
+                
+        newtext = Tex("return idx; // idx == " + str(idx))
+        self.play(ReplacementTransform(oldtext, newtext))
+        self.wait(2)
+        
+        self.play(Indicate(drawn_array[idx]), Indicate(indices[idx]), runtime=2)
+        
+        self.wait(2)
+        
+class ArraySearch(Scene):
+    def draw_array(self, lst, moveunits=0, movedir=DOWN, xbuff=0.8, ybuff=0.5, nullterminator=False):
+        if type(lst) is str:
+            lst = self.str2list(lst)
+        
+        if nullterminator:
+            lst.append(r"$\emptyset$")    
+            
+        # https://stackoverflow.com/questions/62409364/is-there-a-better-approach-to-visualize-an-array
+        indices = Tex(*[f"[{i}]" for i in range(len(lst))])
+        text = Tex(*[f"[{lst[i]}]" for i in range(len(lst))])
+        
+        text.arrange(RIGHT,buff=xbuff)
+        
+        for idx, txt in zip(indices, text):
+            idx.scale(0.5)
+            idx.next_to(txt,DOWN,buff=ybuff)
+            
+            if moveunits != 0:
+                idx.shift(moveunits * movedir)
+                txt.shift(moveunits * movedir)            
+            
+        self.play(*list(map(lambda x: Write(x,run_time=2),[text,indices])))
+        
+        return text, indices
+        
+    def construct(self):           
+        arr = [4, 9, 2, 3, 5, 7, 8, 1, 6]
+        drawn_array, indices = self.draw_array(arr, 1, UP, nullterminator=False)  
+
+        self.wait(2)
+        
+        oldtext = Tex("Iterate over the array (let's call it arr)")
+        oldtext.shift(1 * DOWN)
+        oldtext2 = Tex("to find a key value (let's say it's 8!)")
+        oldtext2.shift(2 * DOWN)
+        self.play(FadeIn(oldtext), FadeIn(oldtext2));
+        
+        self.wait(2)
+        
+        self.remove(oldtext2)
+        
+        for i in range(len(arr)):
+            newtext = Tex("if(arr[" + str(i) + "] == key) // key is 8")
+            newtext.shift(1 * DOWN)
+            
+            self.play(ReplacementTransform(oldtext, newtext))
+                        
+            self.play(Indicate(drawn_array[i]), Indicate(indices[i]), runtime=1)
+            
+            if arr[i] == 8:
+                rect1 = SurroundingRectangle(mobject=drawn_array[i], color=YELLOW, buff=0.15)
+                rect2 = SurroundingRectangle(mobject=indices[i], color=YELLOW, buff=0.15)
+                
+                self.play(Create(rect1), Create(rect2), runtime=2)
+                
+                oldtext = newtext
+                
+                newtext = Tex("return i; // found it at index i == 6!")
+                newtext.shift(1 * DOWN)
+                self.play(ReplacementTransform(oldtext, newtext))
+                
+                self.wait(2)
+                
+                break
+                
+            oldtext = newtext
+                
+        self.wait(2)
+        
 class StringReplace(Scene):
     # https://www.geeksforgeeks.org/python-program-convert-string-list/
     def str2list(self, string):
@@ -54,7 +237,7 @@ class StringReplace(Scene):
         rect1 = SurroundingRectangle(mobject=text[0], color=YELLOW, buff=0.15)
         rect2 = SurroundingRectangle(mobject=text[4], color=YELLOW, buff=0.15)
         self.play(Create(rect1), Create(rect2), runtime=2)
-        self.play(Indicate(text[0], runtime=0.1), Indicate(indices[0]), Indicate(text[4]), Indicate(indices[4]), runtime=0.1) 
+        self.play(Indicate(text[0]), Indicate(indices[0]), Indicate(text[4]), Indicate(indices[4]), runtime=0.1) 
         
         self.wait(2)
         

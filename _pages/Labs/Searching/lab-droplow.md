@@ -29,8 +29,8 @@ info:
       progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
-    - rtitle: "Arrays Activity"
-      rlink: "../Activities/Arrays"  
+    - rtitle: "ArrayList Activity"
+      rlink: "../Activities/ArrayList"  
     - rtitle: "Iteration Activity"
       rlink: "../Activities/Iteration" 
   questions:
@@ -45,7 +45,19 @@ tags:
 In this lab, you will write and test functions to drop the lowest score in an `ArrayList<Double>` of test scores, and then return the average of the remaining items.
 
 ### Step 1: Searching the Array for the Smallest Item
-First, linearly search the array to find the index of the smallest item.  Remove the lowest item from the array, and print it.  You can print an `ArrayList` by calling `.toString()` on the `ArrayList` variable, and printing that.  
+First, linearly search the array to find the index of the smallest item.  Remove the lowest item from the array, and print it.  You can print an `ArrayList` by calling `.toString()` on the `ArrayList` variable, and printing that.  [Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine to remove an item given its index.
+
+#### Finding the Item 
+To find an item in an array, you can iterate over the array and use a conditional to check its value.
+
+![Searching an array](../manim/output/ArraySearch.gif)
+
+#### Finding the Smallest Item
+Searching for the smallest item in an array is similar to searching an array, except that you don't have a specific key that you're looking for.  Instead, keep track of the smallest key value you've seen in the array so far, and update it if the current array item is smaller.  Choose an initial value for `key` that is so large that even the first item will seem smaller.
+
+![Searching an array](../manim/output/ArraySearchLowest.gif)
+
+Once you have found the smallest item, return its index to `main`, and remove the item from the `ArrayList` using that index.  **Question: why must your return statement be at the very end of this search function, and not anywhere else?**
 
 ### Step 2: Counting the Number of Iterations
 In addition, count the number of times your loop iterates to find the smallest item.  You can use an `int` counter that you increment each time you execute the loop.  Following the loop, print out the count of the number of times you execute inside a loop.

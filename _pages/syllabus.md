@@ -686,21 +686,21 @@ schedule:
     submission_types: "written"
 - week: "9"
   date: "2"
-  title: "File I/O"
+  title: "Arrays"
+  link: "Activities/Arrays"  
   deliverables:
   - dtitle: "Exercise: Epplets - Loops - for loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
-- week: "9"
-  date: "3"
-  title: "Arrays"
-  link: "Activities/Arrays"
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
   - rtitle: "Creating and Accessing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"    
+- week: "9"
+  date: "3"
+  title: "Arrays"    
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
@@ -709,12 +709,22 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"         
-- week: "10"
-  date: "0"
-  title: "Arrays"
   readings:
   - rtitle: "Traversing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"   
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"     
+- week: "10"
+  date: "0"
+  title: "The ArrayList and Generic/Template Data Structures"
+  link: "Activities/ArrayList"
+  readings:
+  - rtitle: "Ch. 6.8"
+    rlink: false  
+  - rtitle: "ArrayList Objects"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html"  
+  - rtitle: "ArrayList Methods"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
+  - rtitle: "ArrayList Iteration"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
@@ -730,24 +740,23 @@ schedule:
     submission_types: "noupload"    
 - week: "10"
   date: "1"
-  title: "Lab: Code Review"
+  title: "Lab: Drop the Lowest"
   deliverables:
   - dtitle: "Lab: Anagram Solver Due"
     dlink: "Labs/Anagrams"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"     
-  - dtitle: "Lab: Code Review Handed Out"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"    
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"        
+  - dtitle: "Lab: Drop the Lowest Handed Out"
+    dlink: "Labs/DropLowest"
+    points: 100
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
     submission_types: "written"
 - week: "10"
   date: "2"
-  title: "2D Arrays"
-  link: "Activities/2DArrays"
+  title: "The ArrayList and Generic/Template Data Structures"
   deliverables:
   - dtitle: "Exercise: Problets - Array"
     dlink: "Modules/Problets/Exercise"  
@@ -760,7 +769,8 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
 - week: "10"
   date: "3"  
-  title: "2D Arrays" 
+  title: "2D Arrays"
+  link: "Activities/2DArrays"  
   readings:
   - rtitle: "Nested Loops"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
@@ -773,18 +783,8 @@ schedule:
     submission_types: "noupload"  
 - week: "11"
   date: "0"
-  title: "Array Workshop" 
-  link: "Activities/Arrays/Workshop"  
-  readings:
-  - rtitle: "Arrays Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
-  - rtitle: "2D Array Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"      
+  title: "2D Arrays" 
   deliverables:
-  - dtitle: "Lab: Code Review Due"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
   - dtitle: "Exercise: Iteration Revisited"
     dlink: "Modules/Iteration/Exercise2"
     points: 3    
@@ -807,17 +807,13 @@ schedule:
     rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"       
 - week: "11"
   date: "2"
-  title: "The ArrayList and Generic/Template Data Structures"
-  link: "Activities/ArrayList"
+  title: "Arrays Workshop"
+  link: "Activities/Arrays/Workshop"  
   readings:
-  - rtitle: "Ch. 6.8"
-    rlink: false  
-  - rtitle: "ArrayList Objects"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html"  
-  - rtitle: "ArrayList Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
-  - rtitle: "ArrayList Iteration"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
+  - rtitle: "Arrays Sample Free Response Question"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
+  - rtitle: "2D Array Sample Free Response Question"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"       
   deliverables:
   - dtitle: "Exercise: Epplets - Loops - do-while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
@@ -825,7 +821,7 @@ schedule:
     submission_types: "written"     
 - week: "11"
   date: "3"
-  title: "The ArrayList and Generic/Template Data Structures"   
+  title: ""   
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
@@ -875,12 +871,16 @@ schedule:
       rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"  
 - week: "13"
   date: "1"
-  title: "Lab: Drop the Lowest"
+  title: "Lab: Code Review"
   deliverables:
-  - dtitle: "Lab: Drop the Lowest Handed Out"
+  - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"
     points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"  
+  - dtitle: "Lab: Code Review Handed Out"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
 - week: "13"
   date: "2"
   title: "Classes and Object Data Types" 
@@ -937,10 +937,10 @@ schedule:
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"   
   deliverables:
-  - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropLowest"
-    points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"   
+  - dtitle: "Lab: Code Review Due"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
   - dtitle: "Exercise: Problets - Function - Recursive functions"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
