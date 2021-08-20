@@ -741,6 +741,9 @@ schedule:
 - week: "10"
   date: "1"
   title: "Lab: Drop the Lowest"
+  readings:
+  - rtitle: "Ch. 6.3"
+    rlink: false
   deliverables:
   - dtitle: "Lab: Anagram Solver Due"
     dlink: "Labs/Anagrams"  
@@ -762,20 +765,17 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  readings:
-  - rtitle: "2D Arrays Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
-  - rtitle: "2D Arrays Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
 - week: "10"
   date: "3"  
   title: "2D Arrays"
   link: "Activities/2DArrays"  
   readings:
-  - rtitle: "Nested Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
-  - rtitle: "Loop Analysis"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"  
+  - rtitle: "Ch. 6.7"
+    rlink: false
+  - rtitle: "2D Arrays Part 1"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
+  - rtitle: "2D Arrays Part 2"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
   deliverables:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
@@ -792,7 +792,12 @@ schedule:
   - dtitle: "Lab: Drop the Lowest Due"
     dlink: "Labs/DropLowest"
     points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"     
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
+  readings:
+  - rtitle: "Nested Loops"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
+  - rtitle: "Loop Analysis"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"    
 - week: "11"
   date: "1"
   title: "Lab: Arrays"
@@ -828,6 +833,8 @@ schedule:
   title: "Algorithms: Searching" 
   link: "Activities/Searching"   
   readings:
+  - rtitle: "Ch. 6.3.3, 6.3.5, and 6.3.10"
+    rlink: false
   - rtitle: "Searching Module"
     rlink: "Modules/Search/Module"  
   deliverables:
