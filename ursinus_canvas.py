@@ -820,6 +820,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         inputdict['unlock_at'] = parseDateTimeCanvas(datetime.strptime(opendate + DUE_TIME, DUE_DATE_FORMAT))
                         inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
                         inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
+                        inputdict['show_correct_answers'] = True
+                        inputdict['show_correct_answers_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) # show quiz results after the deadline
                         
                         # Get all the assignment groups, and find the one for quizzes, so that we can move this quiz assignment to that assignment group.
                         groups = course.get_assignment_groups()
