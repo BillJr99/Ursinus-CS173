@@ -302,7 +302,7 @@ DTSTAMP:20210908T000000Z
 DTSTART;VALUE=DATE:20210908
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nReading: Variables and Assignment Expressions Video https://www.youtube.com/embed/vhV97hyV0fc\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/IDE/Module
+DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nReading: Variables and Assignment Expressions https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Variables/Module\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/IDE/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
