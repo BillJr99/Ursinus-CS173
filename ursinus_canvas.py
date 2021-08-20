@@ -816,6 +816,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         duedate = getDateString(adddays(duedate, DUE_DATE_OFFSET)) # offset the due date as needed for the due time which is in UTC
                         
                         inputdict = {}
+                        opendate = adddays(duedate, -2) # unlock the quiz 2 days before
+                        inputdict['unlock_at'] = parseDateTimeCanvas(datetime.strptime(opendate + DUE_TIME, DUE_DATE_FORMAT))
                         inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
                         inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                         
