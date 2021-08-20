@@ -491,7 +491,11 @@ schedule:
   - dtitle: "Exercise: Problets - Function - Function behavior"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "written" 
+  - dtitle: "Lab: Averaging Functions Due"    
+    dlink: "Labs/AverageFunction"  
+    points: 100  
+    rubricpath: "_pages/Labs/Functions/lab-functions.md"       
 - week: "5"
   date: "1"
   title: "Lab: Unit Testing" 
@@ -511,10 +515,6 @@ schedule:
   - rtitle: "String Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html"
   deliverables:
-  - dtitle: "Lab: Averaging Functions Due"    
-    dlink: "Labs/AverageFunction"  
-    points: 100  
-    rubricpath: "_pages/Labs/Functions/lab-functions.md"   
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -556,6 +556,11 @@ schedule:
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
   link: "Activities/MiniCrypto"
+  deliverables:
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
+    submission_types: "noupload"  
 - week: "6"
   date: "3"
   title: "Iteration with the for loop"
@@ -583,10 +588,6 @@ schedule:
   - rtitle: "while Loops"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html"  
   deliverables:
-  - dtitle: "Exercise: Strings"
-    dlink: "Modules/Strings/Exercise"
-    points: 3
-    submission_types: "noupload"
   - dtitle: "Exercise: Problets - Loops - while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -925,12 +926,7 @@ schedule:
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
   - rtitle: "Sorting Algorithms"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"  
-  deliverables:
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3 
-    submission_types: "noupload"     
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"     
 - week: "14"
   date: "1"
   title: "Algorithms: Sorting" 
@@ -938,7 +934,11 @@ schedule:
   - dtitle: "Lab: Code Review Due"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"             
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"
+  - dtitle: "Exercise: Insertion Sort"
+    dlink: "Modules/InsertionSort/Module"  
+    points: 3 
+    submission_types: "noupload"    
 - week: "14"
   date: "2"
   title: "Algorithms: Recursion" 
