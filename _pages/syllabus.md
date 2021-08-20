@@ -908,7 +908,7 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"    
 - week: "14"
   date: "0"
-  title: "Algorithms: Sorting" 
+  title: "Algorithms: Sorting"
   link: "Activities/Sorting"
   readings:
   - rtitle: "Ch. 9.6.3"
