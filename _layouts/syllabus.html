@@ -611,7 +611,8 @@ boilerplate:
     <th><span><strong>Date</strong></span></th>
     <th><span><strong>Title</strong></span></th>
     <th><span><strong>Readings</strong></span></th>
-    <th><span><strong>Deliverables</strong></span></th>
+    <th><span><strong>Deliverables Handed Out</strong></span></th>
+    <th><span><strong>Deliverables Due</strong></span></th>
     </tr>
     </thead>
 
@@ -663,17 +664,16 @@ boilerplate:
     {% endif %}
     </td>
 
+    <!-- Handed Out -->
     <td align="left">
     {% if item.deliverables %}
     <ul>
     {% endif %}
     {% for deliverable in item.deliverables %}
-    <li>
     {% if deliverable.dtitle contains 'Handed Out' %}
+    <li>
     <span>
-    {% else %}
-    <span style="font-weight: bold">
-    {% endif %}
+    
     {% if deliverable.dlink %}
     <a href="{{deliverable.dlink}}">
     {% endif %}
@@ -683,12 +683,41 @@ boilerplate:
     {% endif %}
     </span>
     </li>
+    {% endif %}
     {% endfor %}
 
     {% if item.deliverables %}
     </ul>
     {% endif %}
     </td>
+    
+    <!-- Due -->
+    <td align="left">
+    {% if item.deliverables %}
+    <ul>
+    {% endif %}
+    {% for deliverable in item.deliverables %}
+    {% if deliverable.dtitle contains 'Handed Out' %}
+    {% else %}
+    <li>
+    <span style="font-weight: bold">
+    
+    {% if deliverable.dlink %}
+    <a href="{{deliverable.dlink}}">
+    {% endif %}
+    {{deliverable.dtitle}}
+    {% if deliverable.dlink %}
+    </a>
+    {% endif %}
+    </span>
+    </li>
+    {% endif %}
+    {% endfor %}
+
+    {% if item.deliverables %}
+    </ul>
+    {% endif %}
+    </td>    
 
     </tr>
     {% endfor %}
