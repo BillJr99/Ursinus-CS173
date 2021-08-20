@@ -606,13 +606,22 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091437
 DTSTAMP:20211004T000000Z
 DTSTART;VALUE=DATE:20211004
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091438
+DTSTAMP:20211004T000000Z
+DTSTART;VALUE=DATE:20211004
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091439
 DTSTAMP:20211005T000000Z
 DTSTART;VALUE=DATE:20211005
 SUMMARY:CS173 Intro to Computer Science: Lab: Unit Testing Handed Out
@@ -621,7 +630,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091439
+UID:00000000-0000-0000-0000-0192cc09143a
 DTSTAMP:20211005T000000Z
 DTSTART;VALUE=DATE:20211005
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Selection - if/if-else tracing
@@ -630,21 +639,12 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143a
+UID:00000000-0000-0000-0000-0192cc09143b
 DTSTAMP:20211005T000000Z
 DTSTART;VALUE=DATE:20211005
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:\nDeliverable: Lab: Unit Testing Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/UnitTesting\nDeliverable: Exercise: Problets - Selection - if/if-else tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143b
-DTSTAMP:20211006T000000Z
-DTSTART;VALUE=DATE:20211006
-SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
-LOCATION:
-DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -662,7 +662,7 @@ DTSTAMP:20211006T000000Z
 DTSTART;VALUE=DATE:20211006
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -741,13 +741,22 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091446
 DTSTAMP:20211013T000000Z
 DTSTART;VALUE=DATE:20211013
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/MiniCrypto
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091447
+DTSTAMP:20211013T000000Z
+DTSTART;VALUE=DATE:20211013
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/MiniCrypto\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091448
 DTSTAMP:20211015T000000Z
 DTSTART;VALUE=DATE:20211015
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - for loop tracing
@@ -756,21 +765,12 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091448
+UID:00000000-0000-0000-0000-0192cc091449
 DTSTAMP:20211015T000000Z
 DTSTART;VALUE=DATE:20211015
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091449
-DTSTAMP:20211020T000000Z
-DTSTART;VALUE=DATE:20211020
-SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
-LOCATION:
-DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -788,7 +788,7 @@ DTSTAMP:20211020T000000Z
 DTSTART;VALUE=DATE:20211020
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/While\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Exercise\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/While\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1344,25 +1344,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091489
 DTSTAMP:20211206T000000Z
 DTSTART;VALUE=DATE:20211206
-SUMMARY:CS173 Intro to Computer Science: Exercise: Insertion Sort
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09148a
-DTSTAMP:20211206T000000Z
-DTSTART;VALUE=DATE:20211206
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+DTSTAMP:20211207T000000Z
+DTSTART;VALUE=DATE:20211207
+SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Due
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/InsertionSort/Module
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09148b
 DTSTAMP:20211207T000000Z
 DTSTART;VALUE=DATE:20211207
-SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Due
+SUMMARY:CS173 Intro to Computer Science: Exercise: Insertion Sort
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1373,7 +1373,7 @@ DTSTAMP:20211207T000000Z
 DTSTART;VALUE=DATE:20211207
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview
+DESCRIPTION:\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/CodeReview\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
