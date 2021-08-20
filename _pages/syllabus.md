@@ -278,8 +278,8 @@ schedule:
   readings:
   - rtitle: "Compound Assignment Operators"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
-  - rtitle: "Variables and Assignment Expressions Video"
-    rlink: "https://www.youtube.com/embed/vhV97hyV0fc"    
+  - rtitle: "Variables and Assignment Expressions"
+    rlink: "Modules/Variables/Module"    
   deliverables:  
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
