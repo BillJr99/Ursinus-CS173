@@ -789,6 +789,10 @@ schedule:
     dlink: "Modules/Iteration/Exercise2"
     points: 3    
     submission_types: "noupload"
+  - dtitle: "Lab: Drop the Lowest Due"
+    dlink: "Labs/DropLowest"
+    points: 100
+    rubricpath: "_pages/Labs/Searching/lab-droplow.md"     
 - week: "11"
   date: "1"
   title: "Lab: Arrays"
@@ -821,7 +825,11 @@ schedule:
     submission_types: "written"     
 - week: "11"
   date: "3"
-  title: ""   
+  title: "Algorithms: Searching" 
+  link: "Activities/Searching"   
+  readings:
+  - rtitle: "Searching Module"
+    rlink: "Modules/Search/Module"  
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
@@ -832,6 +840,22 @@ schedule:
     points: 3
     submission_types: "noupload"    
 - week: "12"
+  date: "0" 
+  title: "Algorithms: Searching"
+  deliverables:
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
+    points: 100     
+    rubricpath: "_pages/Projects/proj-final.md"
+- week: "12"
+  date: "1"
+  title: "Lab: Ethical Case Studies"  
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Due"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md" 
+- week: "13"
   date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"
@@ -841,21 +865,17 @@ schedule:
   - rtitle: "Anatomy of a Java Class"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html"
   - rtitle: "Wrapper Classes"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"  
-  deliverables:
-  - dtitle: "Lab: 2D Array Board Game Due"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"   
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"    
-    points: 100     
-    rubricpath: "_pages/Projects/proj-final.md"
-- week: "12"
-  date: "1"
-  title: "Lab: Ethical Case Studies"        
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"   
 - week: "13"
-  date: "0"
+  date: "1"
+  title: "Lab: Code Review"
+  deliverables: 
+  - dtitle: "Lab: Code Review Handed Out"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"     
+- week: "13"
+  date: "2"
   title: "Classes and Object Data Types"  
   readings:
   - rtitle: "Constructors"
@@ -868,21 +888,9 @@ schedule:
     - dtitle: "Programming Assignment: Iris Dataset Handed Out"
       dlink: "Assignments/Iris"      
       points: 100
-      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"  
+      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"    
 - week: "13"
-  date: "1"
-  title: "Lab: Code Review"
-  deliverables:
-  - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropLowest"
-    points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"  
-  - dtitle: "Lab: Code Review Handed Out"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
-- week: "13"
-  date: "2"
+  date: "3"
   title: "Classes and Object Data Types" 
   readings:
   - rtitle: "Accessors"
@@ -896,13 +904,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"     
-- week: "13"
-  date: "3"
-  title: "Algorithms: Searching" 
-  link: "Activities/Searching"   
-  readings:
-  - rtitle: "Searching Module"
-    rlink: "Modules/Search/Module"
 - week: "14"
   date: "0"
   title: "Algorithms: Sorting" 
