@@ -906,11 +906,6 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
   - rtitle: "Static Variables and Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"    
-  deliverables:
-  - dtitle: "Exercise: Problets - Classes"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"     
 - week: "14"
   date: "0"
   title: "Algorithms: Sorting" 
