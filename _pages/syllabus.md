@@ -310,7 +310,7 @@ schedule:
     rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
   - dtitle: "Quiz: Variables and Data Types"
     dlink: false
-    points: 35
+    points: 40
 - week: "2"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -405,7 +405,10 @@ schedule:
   - dtitle: "Exercise: Problets - Expressions - Logical"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "written" 
+  - dtitle: "Quiz: Conditionals"
+    dlink: false
+    points: 35    
 - week: "3"
   date: "3"
   title: "Functions"
@@ -456,7 +459,7 @@ schedule:
   - dtitle: "Lab: Story Telling with Conditionals Due"    
     dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md" 
+    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"    
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
@@ -507,7 +510,10 @@ schedule:
   - dtitle: "Exercise: Problets - Selection - if/if-else tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "written"
+  - dtitle: "Quiz: Functions and Testing"
+    dlink: false
+    points: 35 
 - week: "5"
   date: "2"
   title: "Strings"
@@ -526,7 +532,10 @@ schedule:
   - dtitle: "Exercise: Problets - Function - Debugging functions"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"   
+    submission_types: "written"  
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 35    
 - week: "6"
   date: "0"
   title: "Iteration with the for Loop"
@@ -657,6 +666,9 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10        
     submission_types: "written"
+  - dtitle: "Quiz: Iteration"
+    dlink: false
+    points: 35    
 - week: "9"
   date: "0"
   title: "File I/O"
@@ -824,7 +836,10 @@ schedule:
   - dtitle: "Exercise: Epplets - Loops - do-while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "written" 
+  - dtitle: "Quiz: Arrays"
+    dlink: false
+    points: 35    
 - week: "11"
   date: "3"
   title: "Algorithms: Searching" 
@@ -949,10 +964,13 @@ schedule:
   - rtitle: "Recursion Part 2"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"   
   deliverables:
-    - dtitle: "Programming Assignment: Iris Dataset Due"
-      dlink: "Assignments/Iris"
-      points: 100 
-      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"      
+  - dtitle: "Programming Assignment: Iris Dataset Due"
+    dlink: "Assignments/Iris"
+    points: 100 
+    rubricpath: "_pages/Assignments/Arrays/asmt-iris.md" 
+  - dtitle: "Quiz: Classes and Algorithms"
+    dlink: false
+    points: 35      
 - week: "14"
   date: "3"
   title: "Algorithms: Recursion" 
