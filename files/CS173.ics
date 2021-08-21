@@ -743,7 +743,7 @@ DTSTAMP:20211011T000000Z
 DTSTART;VALUE=DATE:20211011
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/For\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Drawing Faces Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/Faces\nDeliverable: Lab: Unit Testing Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/UnitTesting
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/For\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Drawing Faces Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/Faces\nDeliverable: Lab: Unit Testing Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/UnitTesting
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -797,7 +797,7 @@ DTSTAMP:20211015T000000Z
 DTSTART;VALUE=DATE:20211015
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
