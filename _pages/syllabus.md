@@ -542,6 +542,11 @@ schedule:
   date: "0"
   title: "Iteration with the for Loop"
   link: "Activities/Iteration/For"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
+  - rtitle: "for Loops"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
@@ -575,11 +580,6 @@ schedule:
 - week: "6"
   date: "3"
   title: "Iteration with the for loop"
-  readings:
-  - rtitle: "Ch. 4"
-    rlink: false  
-  - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"
   deliverables:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
