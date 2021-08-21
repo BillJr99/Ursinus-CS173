@@ -408,7 +408,7 @@ schedule:
     submission_types: "written" 
   - dtitle: "Quiz: Conditionals"
     dlink: false
-    points: 35    
+    points: 40
 - week: "3"
   date: "3"
   title: "Functions"
@@ -486,6 +486,8 @@ schedule:
   title: "Strings"
   link: "Activities/Strings"  
   readings:
+  - rtitle: "Ch. 2.5"
+    rlink: false
   - rtitle: "Strings"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
   - rtitle: "Strings Review"
@@ -513,7 +515,7 @@ schedule:
     submission_types: "written"
   - dtitle: "Quiz: Functions and Testing"
     dlink: false
-    points: 35 
+    points: 40 
 - week: "5"
   date: "2"
   title: "Strings"
@@ -535,7 +537,7 @@ schedule:
     submission_types: "written"  
   - dtitle: "Quiz: Strings"
     dlink: false
-    points: 35    
+    points: 40    
 - week: "6"
   date: "0"
   title: "Iteration with the for Loop"
@@ -668,7 +670,7 @@ schedule:
     submission_types: "written"
   - dtitle: "Quiz: Iteration"
     dlink: false
-    points: 35    
+    points: 40
 - week: "9"
   date: "0"
   title: "File I/O"
@@ -839,7 +841,7 @@ schedule:
     submission_types: "written" 
   - dtitle: "Quiz: Arrays"
     dlink: false
-    points: 35    
+    points: 40    
 - week: "11"
   date: "3"
   title: "Algorithms: Searching" 
@@ -970,7 +972,7 @@ schedule:
     rubricpath: "_pages/Assignments/Arrays/asmt-iris.md" 
   - dtitle: "Quiz: Classes and Algorithms"
     dlink: false
-    points: 35      
+    points: 40      
 - week: "14"
   date: "3"
   title: "Algorithms: Recursion" 
