@@ -626,7 +626,7 @@ DTSTAMP:20211004T000000Z
 DTSTART;VALUE=DATE:20211004
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Ch. 2.5\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
