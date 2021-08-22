@@ -984,7 +984,8 @@ schedule:
     - dtitle: "Final Project: Project and Presentation Due"
       dlink: "Projects/Final"    
       points: 100  
-      rubricpath: "_pages/Projects/proj-final.md"            
+      rubricpath: "_pages/Projects/proj-final.md"  
+      
 university:
   semester: "Fall"
   academicyear: "2021-22"
