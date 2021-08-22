@@ -6,8 +6,8 @@ excerpt: "CS173: Intro to Computer Science - Warmup"
 
 info:
   coursenum: CS173
-  officehourspoll: "https://www.when2meet.com/?10565178-nUVcc"
-  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021"
+  officehourspoll: "https://www.when2meet.com/?12591726-SZOGu"
+  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202021"
   class_notebook_name: "OneNote"
   chatname: "Microsoft Teams"
   submission: "We will complete this assignment using Teams, so there is no need to write up any documentation (as we will in future programming assignments) nor is it necessary to submit anything to Canvas.  It is fine to just follow the directions in each part and send me messages as appropriate!"
