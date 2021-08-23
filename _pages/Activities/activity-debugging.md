@@ -7,6 +7,7 @@ excerpt: "CS173: Intro to Computer Science - Debugging"
 info:
   goals: 
     - To use the NetBeans Debugger to step through and identify bugs in code
+    
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
@@ -52,6 +53,7 @@ info:
         - "Set a breakpoint to stop the program at line 26."
         - "After running the program to line 26, step through the program one line of code at a time until you reach the end.  What variables change their values at each step, and to what values?"
         - "Write a program that uses a math formula incorrectly.  Exchange it with a partner, and use the debugger to try to find it.  As you step through the program, ask yourself what the next value should be, and then step once to check that you're right, until you find the mistake."
+        
   readings:
     - rtitle: "Debugging Video"
       rlink: "../Modules/Debugger/Module"
