@@ -64,6 +64,8 @@ Next, expand `Source Packages -> hw0` and double click on `GoodCode.java`. Once 
 
 Once you click run, the code will run, and it will print a "magic number" inside of a terminal at the botton of the Netbeans window. **Please send me a new message letting me know the value of the magic number (5 pts)**. If you are having any trouble, please post to {{ page.info.chatname }}.
 
+## Class Resources
+
 ### Class Notebook
 
 We will use an electronic shared notebook throughout the class.  You'll be able to take notes there, see the whiteboard notes that I create, and respond to some reflective journal prompts throughout the course.  We'll use [{{page.info.class_notebook_name}}]({{ page.info.class_notebook }}), which you can access through this link.
