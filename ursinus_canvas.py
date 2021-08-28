@@ -695,7 +695,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 description = dtitle.strip() 
 
                 # Create an Assignment Shell
-                if not (' handed out' in description.lower()):
+                if (not (' handed out' in description.lower()) and not ('quiz:' in description.lower())):
                     description = rchop(description, " Due")
                     
                     duedate = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
