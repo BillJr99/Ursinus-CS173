@@ -36,7 +36,7 @@ files:
              Compute the right root of of the quadratic equation
              f(x) = ax^2 + bx + c
              """
-             return 0 # This is a dummy value
+             return 0 # This is a default value
 
   - filename: "Test Code Block"
     ismain: true
