@@ -814,7 +814,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['published'] = True
                     add_module_item(module, inputdict)
                 elif ('quiz:' in description.lower()):
-                    input("Import the QTI for this quiz and press enter to continue: " + description)
+                    input("Import the QTI for this quiz under Settings - Import Course Content on Canvas and press enter to continue: " + description)
                     quiz_name = lchop(description, "Quiz: ")
                     quiz = find_quiz_by_title(course, quiz_name)
                     if not (quiz is None):
@@ -827,6 +827,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
                         inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                         inputdict['show_correct_answers'] = True
+                        inputdict['published'] = True
                         inputdict['show_correct_answers_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) # show quiz results after the deadline
                         
                         # Get all the assignment groups, and find the one for quizzes, so that we can move this quiz assignment to that assignment group.
