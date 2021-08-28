@@ -181,7 +181,15 @@ def delete_all_modules(course):
         t = threading.Thread(target=dodelete, args=(module,))
         child_threads.append(t)
         t.start()   
-            
+
+def delete_all_quizzes(course):
+    quizzes = course.get_quizzes()
+        
+    for quiz in quizzes:
+        t = threading.Thread(target=dodelete, args=(quiz,))
+        child_threads.append(t)
+        t.start()         
+        
 def delete_all_assignment_groups(course):
     if skipassignments:
         return
@@ -232,6 +240,7 @@ def delete_old_data(course, canvas, coursecontext):
     t4 = threading.Thread(target=delete_all_assignment_groups, args=(course,))
     t5 = threading.Thread(target=delete_all_discussion_topics, args=(course,))
     t6 = threading.Thread(target=delete_all_rubrics, args=(course,))
+    t7 = threading.Thread(target=delete_all_quizzes, args=(course,))
     
     child_threads.append(t1)
     child_threads.append(t2)
@@ -239,6 +248,7 @@ def delete_old_data(course, canvas, coursecontext):
     child_threads.append(t4)
     child_threads.append(t5)
     child_threads.append(t6)
+    child_threads.append(t7)
     
     t1.start()
     t2.start()
@@ -246,6 +256,7 @@ def delete_old_data(course, canvas, coursecontext):
     t4.start()
     t5.start()
     t6.start()
+    t7.start()
     
     # Avoid a race condition in which newly added items are deleted when gathered by these threads
     for t in child_threads:
@@ -348,8 +359,8 @@ def getDayNum(dayidx, M, T, W, R, F, S, U):
 def getTimeString(t):   
     return t.strftime('%H%M%S')    
     
-def parseDate(dt):
-    return datetime.strptime(dt, '%Y/%m/%d')
+def parseDate(dt, fmt='%Y/%m/%d'):
+    return datetime.strptime(dt, fmt)
     
 def parseTime(t):
     return datetime.strptime(t, '%I:%M %p')
@@ -383,10 +394,10 @@ def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U, tostring=True
 # Assumes the quiz has already been added to the shell with a name that matches the parameter
 def find_quiz_by_title(course, quiz_name):
     quizzes = course.get_quizzes()
-    
+        
     for quiz in quizzes:
-        if quiz['title'] == quiz_name:
-            print("Found quiz: " + quiz['title'] + " while searching for: " + quiz_name)
+        if quiz.title == quiz_name:
+            print("Found quiz: " + quiz.title + " while searching for: " + quiz_name)
         
             return quiz
             
@@ -402,7 +413,8 @@ def create_assignment(course, inputdict):
     return asmt
     
 def edit_quiz(quiz, inputdict):
-    newquiz = quiz.edit(**inputdict)
+    newquiz = quiz.edit(quiz=inputdict)
+
     return newquiz
     
 # Create a Rubric
@@ -498,6 +510,18 @@ def add_assignments_to_groups(course, postdict):
             groupid = group.id
             
             assignment.edit(assignment={'assignment_group_id': groupid, 'position': pos})
+    
+    # Add quizzes to the Quiz group    
+    if not (quizgroup is None):
+        quizzes = course.get_quizzes()
+        
+        for quiz in quizzes:
+            inputdict = {}
+            
+            groupid = quizgroup.id
+            inputdict['assignment_group_id'] = groupid
+
+            quiz = edit_quiz(quiz, inputdict)            
             
     # Enable assignment group weighted grading
     course.update(course={'apply_assignment_group_weights': True})
@@ -819,10 +843,13 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     quiz = find_quiz_by_title(course, quiz_name)
                     if not (quiz is None):
                         duedate = getCourseDate(startdate, weekidx, dayidx, isM, isT, isW, isR, isF, isS, isU, tostring=False)
-                        duedate = getDateString(adddays(duedate, DUE_DATE_OFFSET)) # offset the due date as needed for the due time which is in UTC
+                        duedate = adddays(duedate, DUE_DATE_OFFSET) # offset the due date as needed for the due time which is in UTC
+                        opendate = adddays(duedate, -2) # unlock the quiz 2 days before
+                        duedate = getDateString(duedate)
+                        opendate = getDateString(opendate)
                         
                         inputdict = {}
-                        opendate = adddays(duedate, -2) # unlock the quiz 2 days before
+                        inputdict['quiz_type'] = "assignment"
                         inputdict['unlock_at'] = parseDateTimeCanvas(datetime.strptime(opendate + DUE_TIME, DUE_DATE_FORMAT))
                         inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
                         inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
@@ -830,15 +857,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         inputdict['published'] = True
                         inputdict['show_correct_answers_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) # show quiz results after the deadline
                         
-                        # Get all the assignment groups, and find the one for quizzes, so that we can move this quiz assignment to that assignment group.
-                        groups = course.get_assignment_groups()
-                        group = get_assignment_group_containing_label(groups, 'Quiz') 
-                        
-                        if not (group is None):
-                            groupid = group.id
-                            inputdict['assignment_group_id'] = groupid
-                        
-                        edit_quiz(quiz, inputdict)
+                        quiz = edit_quiz(quiz, inputdict) # we'll move the quiz if needed into the right assignment group with other assignments, once the groups are created 
                     else:
                         print("Warning: quiz " + quiz_name + " not found.")
                 else:
