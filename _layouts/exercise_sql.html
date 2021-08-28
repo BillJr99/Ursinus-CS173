@@ -249,11 +249,26 @@ mynetid: wmongan
               // Create the database
               const db = new SQL.Database();
 
-              lines = code.split('\n');
-              // Prepare each statement
-              for(var i = 0; i < lines.length; i++) {
-                if(!(lines[i].trim().startsWith("--")) && lines[i].trim().length >= 1) { // ignore comments and blank lines
-                    const res = db.exec(lines[i]);
+              // each statement is semicolon delimited
+              stmts = code.split(';');
+              
+              // prepare each potentially multiline statement
+              for(var i = 0; i < stmts.length; i++) {
+                lines = stmts[i].split('\n');
+                
+                stmt = '';
+                for(var j = 0; j < lines.length; j++) {
+                    if(!(lines[j].trim().startsWith("--")) && lines[j].trim().length >= 1) { // ignore comments and blank lines
+                        stmt += lines[j] + ' '; // replace newlines with a space
+                    }
+                }
+                
+                // replace the semicolon at the end
+                stmt += ';';
+                
+                if(!(stmt.trim().startsWith("--")) && stmt.trim().length >= 1) {
+                    console.log("Executing: " + stmt);
+                    const res = db.exec(stmt);
                     const resStr = JSON.stringify(res);
                     feedbackString += resStr + '\n';
                 }
