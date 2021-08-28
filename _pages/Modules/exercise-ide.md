@@ -12,7 +12,7 @@ info:
     - To become familiar with the basic structure of a Java program
     - To write a Java statement
     
-canvasasmtid: "107081"   
+canvasasmtid: "125542"   
 canvaspoints: 3
   
 processor:  

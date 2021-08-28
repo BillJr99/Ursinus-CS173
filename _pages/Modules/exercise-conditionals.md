@@ -10,7 +10,7 @@ info:
   goals:
     - To use compound conditionals 
   
-canvasasmtid: "107088"  
+canvasasmtid: "125549"  
 canvaspoints: 3
   
 processor:  

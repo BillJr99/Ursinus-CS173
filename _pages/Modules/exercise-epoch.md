@@ -10,7 +10,7 @@ info:
   goals:
     - To perform arithmetic using the Java programming language
   
-canvasasmtid: "107089"  
+canvasasmtid: "125558"  
 canvaspoints: 3
   
 processor:  
