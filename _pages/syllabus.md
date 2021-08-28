@@ -115,7 +115,7 @@ instructors:
     location: "Pfahler Hall 101L"  
   - day: "T"
     starttime: "11:00 AM"
-    endtime: "2:00 AM"
+    endtime: "2:00 PM"
     location: "Pfahler Hall 101L"        
   - day: "W"
     starttime: "12:00 PM"
