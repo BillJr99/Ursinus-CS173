@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - Iteration Revisited"
 
 info:
   points: 3
-  instructions: "Modify the Driver.java file to solve the 3x+1 problem using a loop and conditional."
+  instructions: "Modify the ThreeXPlusOne.java file to solve the 3x+1 problem using a loop and conditional."
   goals:
     - To use iteration to compute a discrete value
     - To use conditionals to make choices during each loop iteration
