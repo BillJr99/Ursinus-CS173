@@ -19,9 +19,9 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    var pos = feedbackString.split("-");
+    var pos = feedbackString;
   correctcheck: |
-    pos[0] === "5" && pos[1] === "111" && pos[2] === "12"
+    pos.trim() === "5-111-12"
       
 files:
   - filename: "ThreeXPlusOne.java"
