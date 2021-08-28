@@ -363,8 +363,8 @@ def adddays(dt, n):
 def addweeks(dt, n):
     return dt + timedelta(days=7*n)
     
-def getDateString(dt):
-    return dt.strftime('%Y%m%d')    
+def getDateString(dt, fmt='%Y%m%d'):
+    return dt.strftime(fmt)    
     
 def getCourseDate(startdate, weeknum, dayidx, M, T, W, R, F, S, U, tostring=True):
     dt = parseDate(startdate)
@@ -524,7 +524,11 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     coursenum = postdict['info']['course_number']
     coursename = postdict['info']['course_title']
     startdate = postdict['info']['course_start_date']
-    enddate = postdict['info']['course_end_date']    
+    enddate = postdict['info']['course_end_date']   
+
+    # offset the course end date by the same amount as assignments so that assignments can be due just past midnight if the grace period allows it; preserve the date string format so we can manipulate it consistently later
+    enddate = getDateString(adddays(parseDate(enddate), DUE_DATE_OFFSET), fmt='%Y/%m/%d')
+    
     isM = postdict['info']['class_meets_days']['isM']
     isT = postdict['info']['class_meets_days']['isT']
     isW = postdict['info']['class_meets_days']['isW']
@@ -724,6 +728,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
                     inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                     inputdict['position'] = asmtidx
+                    
+                    printlog("Adding Assignment: " + description + " due at: " + str(duedate))
                             
                     assignment = create_assignment(course, inputdict)
                     asmtidx = asmtidx + 1
