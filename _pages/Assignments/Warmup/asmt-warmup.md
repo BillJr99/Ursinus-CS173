@@ -34,13 +34,14 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 3.  What are you majoring in / interested in majoring in?
 4.  What do you think you might want to do after Ursinus?
 5.  Have you had any experience with computer science / programming? (It's okay if you haven't!)
-6.  What are you most excited about in this course?
-7.  What are you the most worried about in this course?
-8.  A fun fact about yourself
-9.  Anything else you think I should know?
-10.  Please attach **a headshot** picture to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
-11. Please post a short introduction and a hello to the class on the Canvas Introductions discussion forum.  There is also a Water Cooler discussion group that you can use for social discussions as well!
-12.  Finally, we will be sharing work with each other through electronic means.  To protect your privacy, you are welcome to use a pseudonym on your work in lieu of your name.  Let me know if you'd like to use a pseudonym on your assignments, and what name you'll use.
+7.  What are you most excited about in this course?
+8.  What are you the most worried about in this course?
+9.  A fun fact about yourself
+10.  Anything else you think I should know?
+11.  Please attach **a headshot** picture to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
+12. Please post a short introduction and a hello to the class on the Canvas Introductions discussion forum.  There is also a Water Cooler discussion group that you can use for social discussions as well!
+13.  We will be sharing work with each other through electronic means.  To protect your privacy, you are welcome to use a pseudonym on your work in lieu of your name.  Let me know if you'd like to use a pseudonym on your assignments, and what name you'll use.
+14.  Are you thinking about majoring or minoring in Computer Science, Math, or Statistics?  No pressure here - if the department hosts events for students, we'd be happy to share those opportunities with you if you are interested!
 
 ## Web Poll for Office Hours
 
