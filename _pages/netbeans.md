@@ -20,7 +20,7 @@ Please visit these links to install the Java Development Kit (JDK) and NetBeans.
     * About halfway down the page are the download files.  You can choose the one that matches your operating system.  Most likely, it's the one that says "Windows x64 Installer" on Windows, or the one for MacOS if you are using a Mac.
     * You can find your download by opening a run dialog (Windows Key + R on Windows), typing "Downloads" in the box that appears, and hitting enter.  Double-clicking on the program you downloaded (the filename can be found on the webpage above) will start the process for you.
 * [NetBeans](https://netbeans.apache.org/download/index.html)
-    * If you are prompted on the download page, you can click "Download" under the "Apache NetBeans" heading (there might be a version number of even the letters "LTS" - meaning "Long Term Support" version; these are fine)
+    * If you are prompted on the download page, you can click "Download" under the "Apache NetBeans" heading.  The most recent version is generally fine.
     * It's OK if the version number is higher than the ones in the screenshots in this article, the windows and menus should be the same!
 
 Here are a few notes to help you:
