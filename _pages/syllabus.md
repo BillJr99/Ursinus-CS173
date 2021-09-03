@@ -124,7 +124,22 @@ instructors:
   - day: "F"
     starttime: "12:00 PM"
     endtime: "2:00 PM"
-    location: "Pfahler Hall 101L"    
+    location: "Pfahler Hall 101L" 
+- name: "Institute for Student Success"
+  title: "Drop-In Session to Ask Questions and Work with Classmates"
+  officehours:    
+  - day: "M"
+    starttime: "10:00 AM"
+    endtime: "11:00 AM"
+    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">PFA 102</a>" 
+  - day: "T"
+    starttime: "7:00 PM"
+    endtime: "8:00 PM"
+    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">PFA 102</a>" 
+  - day: "R"
+    starttime: "7:00 PM"
+    endtime: "8:00 PM"
+    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">PFA 102</a>"      
     
 textbooks:
 - title: "Java for Everyone: Late Objects"
