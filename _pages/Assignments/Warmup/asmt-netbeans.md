@@ -110,7 +110,7 @@ Let's declare a **variable** called `radius` to represent the radius of the circ
 Write the following code in your project, right below the print statement we wrote earlier.
 
 ```java
-double radius  = 10.5;
+double radius = 10.5;
 ```
 
 A variable declaration generally consists of three things.  The first is the type of value we plan to store in the variable.  Numeric values that can have decimal places are called `double` values, so we'll use the word `double` here.  The second item is the name of the variable: `radius` (this can be just about anything we want, but it's a good idea to use a descriptive name!).  Finally, we use the equals sign to set this variable to a value.  Here, I'll use the value `10.5`, but you can put any number here that you'd like.  Later, you'll see how to obtain this value from the user via the keyboard or even a file on your disk!
