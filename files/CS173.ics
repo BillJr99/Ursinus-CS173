@@ -246,22 +246,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09140f
 DTSTAMP:20210906T000000Z
 DTSTART;VALUE=DATE:20210906
-SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Expressions - Arithmetic
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091410
-DTSTAMP:20210906T000000Z
-DTSTART;VALUE=DATE:20210906
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html\nDeliverable: Exercise: Problets - Expressions - Arithmetic https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091411
 DTSTAMP:20210907T000000Z
 DTSTART;VALUE=DATE:20210907
 SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Handed Out
@@ -270,25 +261,25 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091412
+UID:00000000-0000-0000-0000-0192cc091411
 DTSTAMP:20210907T000000Z
 DTSTART;VALUE=DATE:20210907
-SUMMARY:CS173 Intro to Computer Science: Exercise: Epplets - Sequence
+SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Expressions - Arithmetic
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091413
+UID:00000000-0000-0000-0000-0192cc091412
 DTSTAMP:20210907T000000Z
 DTSTART;VALUE=DATE:20210907
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler\nDeliverable: Exercise: Epplets - Sequence https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler\nDeliverable: Exercise: Problets - Expressions - Arithmetic https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091414
+UID:00000000-0000-0000-0000-0192cc091413
 DTSTAMP:20210908T000000Z
 DTSTART;VALUE=DATE:20210908
 SUMMARY:CS173 Intro to Computer Science: Exercise: The NetBeans IDE Software Environment
@@ -297,7 +288,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091415
+UID:00000000-0000-0000-0000-0192cc091414
 DTSTAMP:20210908T000000Z
 DTSTART;VALUE=DATE:20210908
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -306,7 +297,7 @@ DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091416
+UID:00000000-0000-0000-0000-0192cc091415
 DTSTAMP:20210910T000000Z
 DTSTART;VALUE=DATE:20210910
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Intro to NetBeans Due
@@ -315,7 +306,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091417
+UID:00000000-0000-0000-0000-0192cc091416
 DTSTAMP:20210910T000000Z
 DTSTART;VALUE=DATE:20210910
 SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
@@ -324,7 +315,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091418
+UID:00000000-0000-0000-0000-0192cc091417
 DTSTAMP:20210910T000000Z
 DTSTART;VALUE=DATE:20210910
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -333,10 +324,19 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Discret
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091419
+UID:00000000-0000-0000-0000-0192cc091418
 DTSTAMP:20210913T000000Z
 DTSTART;VALUE=DATE:20210913
 SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091419
+DTSTAMP:20210913T000000Z
+DTSTART;VALUE=DATE:20210913
+SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Expressions - Relational
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -347,7 +347,7 @@ DTSTAMP:20210913T000000Z
 DTSTART;VALUE=DATE:20210913
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/NumberSystems\nReading: Numerical Encodings https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Encodings/Module\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/NumberSystems\nReading: Numerical Encodings https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Encodings/Module\nDeliverable: Lab: Kepler's Third Law Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/Kepler\nDeliverable: Exercise: Problets - Expressions - Relational https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
