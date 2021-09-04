@@ -330,10 +330,6 @@ schedule:
     dlink: "Labs/Kepler"    
     points: 100  
     rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md" 
-  - dtitle: "Exercise: Problets - Expressions - Relational"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"       
   readings:
   - rtitle: "Numerical Encodings"
     rlink: "Modules/Encodings/Module"    
