@@ -260,11 +260,6 @@ schedule:
   date: "0"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
-  deliverables:
-  - dtitle: "Exercise: Problets - Expressions - Arithmetic"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"  
   readings:
   - rtitle: "Ch. 1, 2.1, 2.2"
     rlink: false  
@@ -282,11 +277,11 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
     points: 100
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"  
-  - dtitle: "Exercise: Epplets - Sequence"
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md" 
+  - dtitle: "Exercise: Problets - Expressions - Arithmetic"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"    
+    submission_types: "written"        
 - week: "1"
   date: "2"
   title: "Expressions and Variables"       
@@ -295,7 +290,7 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
   - rtitle: "Variables and Assignment Expressions"
     rlink: "Modules/Variables/Module"    
-  deliverables:  
+  deliverables:    
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
     points: 3     
@@ -305,7 +300,7 @@ schedule:
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"
   deliverables:
-  - dtitle: "Exercise: Problets - Expressions - Relational"
+  - dtitle: "Exercise: Epplets - Sequence"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"   
@@ -334,7 +329,11 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
     points: 100  
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"    
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md" 
+  - dtitle: "Exercise: Problets - Expressions - Relational"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"       
   readings:
   - rtitle: "Numerical Encodings"
     rlink: "Modules/Encodings/Module"    
