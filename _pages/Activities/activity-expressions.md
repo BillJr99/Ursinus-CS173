@@ -156,6 +156,7 @@ info:
         </div>    
       title: Manipulating Values with Operators
       questions:
+        - "What is the result of dividing 6 by 4?  How about dividing 6 by 4.0?  How and why do these differ?"
         - "How are the values of <code>idiv</code> (the result of the integer division operation) and <code>fdiv</code> (the result of the floating point division operation) different and why?"
         - What would happen if you attempt to divide by 0?  Feel free to try this in the code window below!
         - Notice the result of dividing <code>x / 2</code> if <code>x</code> is an <code>int</code>?  How about if <code>x</code> is a <code>double</code> or a <code>float</code>?
