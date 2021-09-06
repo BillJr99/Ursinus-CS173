@@ -14,9 +14,9 @@ info:
 
 In this exercise, you will use [Problets](http://problets.org/user/f21/) to practice each programming concept we learn in class.  
 
-To use Problets, click and download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option to download the file.  Double click on it to run it.  You will be prompted for your name and email address.  Click on the appropriate exercise to complete the practice.  
+To use Problets, right click and choose "Save As" to download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option (or "Download Anyway") to download the file.  Double click on it to run it.  You will be prompted for your name and email address.  Click on the appropriate exercise to complete the practice.  
 
-If you get an error when running the file that says it cannot find `javaws`, you can install this program from [openwebstart.com](https://openwebstart.com/), and then run the file above.
+If you get an error when running the file that says it cannot find `javaws`, you can install this program from [openwebstart.com](https://openwebstart.com/), and then run the file above.  On Mac operating systems, you can right click on the `ursinus.jnlp` file on your computer and choose "Open With" to select "Open Web Start" which should bypass the security block that prevents the program from running when you double click on it normally.
 
 Problets and Epplets are self-paced exercises that generate problems for you to solve.  It will guide you if you make a mistake, and generate more problems for you to solve until you become proficient.  If a particular topic is easy for you, the system will only generate a few problems for that lesson (and that's OK!).  
 
