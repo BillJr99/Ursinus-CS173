@@ -40,6 +40,7 @@ child_threads = []
 skipdiscussions = False
 skipassignments = False
 skipofficehours = True
+skiplecturecalendar = True
 
 def canvas_http_request(endpoint, inputdict=None, method="GET"):
     header = {"Authorization": "Bearer %s" % API_KEY}
@@ -626,21 +627,23 @@ def process_markdown(fname, canvas, course, courseid, homepage):
 
             location = meeting['place']
             summary = coursenum + " " + coursename + " Section " + section + " Class Meeting"
+
+            # Write lecture schedule events
+            if not skiplecturecalendar:
+                inputdict = {}
+                inputdict['context_code'] = coursecontext
+                inputdict['title'] = summary.strip()
+                inputdict['description'] = summary.strip()
+                inputdict['location_name'] = location.strip()
+                inputdict['start_at'] = dtstart
+                inputdict['end_at'] = dtend            
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
+                inputdict['all_day'] = False
+                inputdict['duplicate'] = {}
+                inputdict['duplicate']['frequency'] = "weekly"
+                inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
             
-            inputdict = {}
-            inputdict['context_code'] = coursecontext
-            inputdict['title'] = summary.strip()
-            inputdict['description'] = summary.strip()
-            inputdict['location_name'] = location.strip()
-            inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend            
-            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-            inputdict['all_day'] = False
-            inputdict['duplicate'] = {}
-            inputdict['duplicate']['frequency'] = "weekly"
-            inputdict['duplicate']['count'] = countWeeks(parseDate(startdate), parseDate(enddate))
-            
-            create_calendar_event(canvas, inputdict)
+                create_calendar_event(canvas, inputdict)
 
     printlog("Writing Assignments...")
     scheduleitems = 0
@@ -958,17 +961,18 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             location = postdict['info']['midtermexam'][i]['mroom']
             
             # Write the exam:
-            inputdict = {}
-            inputdict['context_code'] = coursecontext
-            inputdict['title'] = dtitle.strip()
-            inputdict['description'] = dtitle.strip()
-            inputdict['location_name'] = location.strip()
-            inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend 
-            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-            inputdict['all_day'] = False
-            
-            create_calendar_event(canvas, inputdict)  
+            if not skiplecturecalendar:
+                inputdict = {}
+                inputdict['context_code'] = coursecontext
+                inputdict['title'] = dtitle.strip()
+                inputdict['description'] = dtitle.strip()
+                inputdict['location_name'] = location.strip()
+                inputdict['start_at'] = dtstart
+                inputdict['end_at'] = dtend 
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
+                inputdict['all_day'] = False
+                
+                create_calendar_event(canvas, inputdict)  
 
         if not (postdict['info']['finalexam'][i]['fdate'] == "TBD"):
             startd = getDateString(parseDate(postdict['info']['finalexam'][i]['fdate']))
@@ -983,17 +987,18 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             location = postdict['info']['finalexam'][i]['froom']
             
             # Write the exam:
-            inputdict = {}
-            inputdict['context_code'] = coursecontext
-            inputdict['title'] = dtitle.strip()
-            inputdict['description'] = dtitle.strip()
-            inputdict['location_name'] = location.strip()
-            inputdict['start_at'] = dtstart
-            inputdict['end_at'] = dtend 
-            inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
-            inputdict['all_day'] = False
-            
-            create_calendar_event(canvas, inputdict)    
+            if not skiplecturecalendar:
+                inputdict = {}
+                inputdict['context_code'] = coursecontext
+                inputdict['title'] = dtitle.strip()
+                inputdict['description'] = dtitle.strip()
+                inputdict['location_name'] = location.strip()
+                inputdict['start_at'] = dtstart
+                inputdict['end_at'] = dtend 
+                inputdict['time_zone_edited'] = CANVAS_TIME_ZONE 
+                inputdict['all_day'] = False
+                
+                create_calendar_event(canvas, inputdict)    
     
     printlog("Creating Assignment Groups...")
     

@@ -12,11 +12,21 @@ info:
     
 ---
 
-In this exercise, you will use [Problets](http://problets.org/user/f21/) to practice each programming concept we learn in class.  
+In this exercise, you will use [Problets](http://problets.org/user/f21/) to practice each programming concept we learn in class. 
 
-To use Problets, right click and choose "Save As" to download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option (or "Download Anyway") to download the file.  Double click on it to run it.  You will be prompted for your name and email address.  Click on the appropriate exercise to complete the practice.  
+## Installing Open Web Start
 
-If you get an error when running the file that says it cannot find `javaws`, you can install this program from [openwebstart.com](https://openwebstart.com/), and then run the file above.  On Mac operating systems, you can right click on the `ursinus.jnlp` file on your computer and choose "Open With" to select "Open Web Start" which should bypass the security block that prevents the program from running when you double click on it normally.
+You can install this program from [openwebstart.com](https://openwebstart.com/), by clicking "Downloads" and selecting the appropriate installer for your operating system.  Double click the program to install it once it downloads.  This only needs to be done the first time you use Problets!
+
+## Run Problets and Epplets
+
+To use Problets, right click and choose "Save As" to download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option (or "Download Anyway") to download the file.  
+
+Right click on the `ursinus.jnlp` file in your `Downloads` directory, and choose `Open With`.  Select "OpenWebStart" from the list of applications (if it is a folder, click on it, and select "OpenWebStart" inside of that).  Check the box that says "Always" to run this by default.  This way, you can simply double click on the `ursinus.jnlp` file next time.
+
+Once this is set to the default, you can double click on `ursinus.jnlp` in the future to run it.  You will be prompted for your name and email address.  Click on the appropriate exercise to complete the practice.  
+
+## About Problets and Epplets
 
 Problets and Epplets are self-paced exercises that generate problems for you to solve.  It will guide you if you make a mistake, and generate more problems for you to solve until you become proficient.  If a particular topic is easy for you, the system will only generate a few problems for that lesson (and that's OK!).  
 
