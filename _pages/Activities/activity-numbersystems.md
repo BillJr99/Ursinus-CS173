@@ -16,6 +16,7 @@ info:
         - What is the decimal representation for the character <code>'A'</code>?  How about the newline character <code>\n</code>?
         - What is the decimal representation for the character <code>'B'</code>?  How about the character <code>'b'</code>?  What is the difference between them?  
         - What is the difference between each corresponding capital and lowercase letter?
+        - What is your name in ASCII decimal representation?  What is this in binary?
         - Write out the representation for the character <code>'B'</code> in binary, and also the character <code>'b'</code>.  How does their binary differ?
         - How do you think a <code>boolean isLowerCase(char x)</code> function might work?
     - model: |
