@@ -84,8 +84,8 @@ Astronomical Units (AU) is a unit of measure approximately defined as the distan
 
 ```java
 final double metersPerAU = 1.49597870700e11;
-double mercuryAU = 0.38710;
-mercuryAU = mercuryAU * metersPerAU; // no need to write double here, since we've already declared mercuryAU as a double above!
+double mercuryA = 0.38710;
+mercuryA = mercuryA * metersPerAU; // no need to write double here, since we've already declared mercuryA as a double above!
 ```
 
 ## Some Arithmetic Expression Examples for Reference
