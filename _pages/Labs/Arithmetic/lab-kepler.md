@@ -55,7 +55,7 @@ The formula relating the orbital period `T` of a planet to its mass `m` and semi
 There are constants used in this formula, with values (given below) that you can plug into your program.  To use them, you can declare a constant variable as follows:
 
 ```java
-final double VARIABLE_NAME = 123.456
+final double VARIABLE_NAME = 123.456;
 ```
 
 (note the use of the `final` keyword, which means that the assigned value cannot be changed, and the capital letters for the variable name, which quickly indicates to a programmer that the value is indeed a constant).
@@ -85,7 +85,7 @@ Astronomical Units (AU) is a unit of measure approximately defined as the distan
 ```java
 final double metersPerAU = 1.49597870700e11;
 double mercuryAU = 0.38710;
-double mercuryMeters = mercuryAU * metersPerAU;
+mercuryAU = mercuryAU * metersPerAU;
 ```
 
 ## Some Arithmetic Expression Examples for Reference
@@ -95,6 +95,7 @@ Here is a coding example (unrelated to the lab, but for reference), to compute t
 int x = 6;
 int y = 12;
 double average = 0.5 * (x + y);
+
 ```
 
 To take the square root of a number `x`, you can use the `Math.sqrt(x)` function, and to raise a number `x` to a power `p`, you can use the `Math.pow(x, p)` function.  The constant <span>\\(\pi\\)</span> is provided to you as `Math.PI`.  `Math.sqrt(x)` and `Math.pow(x, p)` accept and return values of type `double`, and, similarly, `Math.PI` is a `double`.  For example, the code snippet below computes the area of a circle with radius `6` (note, this code will not appear in your lab directly; it's just an example!):
@@ -103,6 +104,7 @@ To take the square root of a number `x`, you can use the `Math.sqrt(x)` function
 double r = 6.0;
 double rSquared = Math.pow(r, 2);
 double area = Math.PI * rSquared;
+double squareRootOfArea = Math.sqrt(area);
 ```
 
 ## Converting the Orbital Period from Seconds to Days
