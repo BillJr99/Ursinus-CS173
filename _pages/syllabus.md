@@ -318,9 +318,6 @@ schedule:
     dlink: "Assignments/NetBeans"
     points: 50 
     rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
-  - dtitle: "Quiz: Variables and Data Types"
-    dlink: false
-    points: 40
 - week: "2"
   date: "0"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -330,6 +327,9 @@ schedule:
     dlink: "Labs/Kepler"    
     points: 100  
     rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md" 
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 40
   readings:
   - rtitle: "Numerical Encodings"
     rlink: "Modules/Encodings/Module"    
