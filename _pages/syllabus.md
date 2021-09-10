@@ -298,12 +298,7 @@ schedule:
 - week: "1"
   date: "3"
   title: "Ranges and Quantization of Data Types" 
-  link: "Activities/DiscreteRanges"
-  deliverables:
-  - dtitle: "Exercise: Epplets - Sequence"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written"   
+  link: "Activities/DiscreteRanges"  
   readings:
   - rtitle: "Ch. 2.3, 2.5"
     rlink: false     
@@ -326,10 +321,11 @@ schedule:
   - dtitle: "Lab: Kepler's Third Law Due"    
     dlink: "Labs/Kepler"    
     points: 100  
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md" 
-  - dtitle: "Quiz: Variables and Data Types"
-    dlink: false
-    points: 40
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"
+  - dtitle: "Exercise: Epplets - Sequence"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
   readings:
   - rtitle: "Numerical Encodings"
     rlink: "Modules/Encodings/Module"    
@@ -367,7 +363,10 @@ schedule:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "./Modules/Expressions/Exercise2"    
     points: 3   
-    submission_types: "noupload"    
+    submission_types: "noupload"   
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 40    
 - week: "3"
   date: "0"   
   title: "Conditionals"   
