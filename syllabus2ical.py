@@ -306,56 +306,57 @@ for item in postdict['schedule']:
 for instructor in postdict['instructors']:
     instructorname = instructor['name']
     
-    for officehour in instructor['officehours']:        
-        dtstart = getDateString(parseDate(startdate))
-        dtstart = dtstart + "T"
-        dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) # leave in local time, timezone info given above assuming Eastern Time
+    if 'officehours' in instructor:
+        for officehour in instructor['officehours']:        
+            dtstart = getDateString(parseDate(startdate))
+            dtstart = dtstart + "T"
+            dtstart = dtstart + getTimeString(parseTime(officehour['starttime'])) # leave in local time, timezone info given above assuming Eastern Time
 
-        dtend = getDateString(parseDate(startdate)) # assume no event overlaps a day boundary, ends on start date
-        dtend = dtend + "T"
-        dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time, timezone info given above assuming Eastern Time
+            dtend = getDateString(parseDate(startdate)) # assume no event overlaps a day boundary, ends on start date
+            dtend = dtend + "T"
+            dtend = dtend + getTimeString(parseTime(officehour['endtime'])) # leave in local time, timezone info given above assuming Eastern Time
 
-        dtuntil = getDateString(parseDate(enddate)) # for recurrence rule
-        dtuntil = dtuntil + "T"
-        dtuntil = dtuntil + "235959"
-        dtuntil = dtuntil + "Z" 
+            dtuntil = getDateString(parseDate(enddate)) # for recurrence rule
+            dtuntil = dtuntil + "T"
+            dtuntil = dtuntil + "235959"
+            dtuntil = dtuntil + "Z" 
 
-        location = officehour['location']
-        
-        repeatday = geticalday(officehour['day'])
-        
-        rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
-        
-        # Write Holiday Exceptions
-        if postdict['university']['semester'] == "Fall":
-            hdatekey = 'fallholidays'
-        elif postdict['university']['semester'] == "Spring":
-            hdatekey = 'springholidays'
-        else:
-            hdatekey = None
+            location = officehour['location']
             
-        if not (hdatekey is None):      
-            for holiday in postdict['university'][hdatekey]:        
-                dtholiday = getDateString(parseDate(holiday['date']))       
-                rrule = rrule + "\r\nEXDATE:" + dtholiday
+            repeatday = geticalday(officehour['day'])
+            
+            rrule = "RRULE:FREQ=WEEKLY;BYDAY=" + repeatday + ";INTERVAL=1;UNTIL=" + dtuntil
+            
+            # Write Holiday Exceptions
+            if postdict['university']['semester'] == "Fall":
+                hdatekey = 'fallholidays'
+            elif postdict['university']['semester'] == "Spring":
+                hdatekey = 'springholidays'
+            else:
+                hdatekey = None
                 
-        # Write Key Date Exceptions
-        if postdict['university']['semester'] == "Fall":
-            kdatekey = 'fall'
-        elif postdict['university']['semester'] == "Spring":
-            kdatekey = 'spring'
-        else:
-            kdatekey = None
-            
-        if not (kdatekey is None):
-            for keydate in postdict['university'][kdatekey]:
-                dtkeydate = getDateString(parseDate(keydate['kdate']))
-                keydescription = keydate['kname']    
+            if not (hdatekey is None):      
+                for holiday in postdict['university'][hdatekey]:        
+                    dtholiday = getDateString(parseDate(holiday['date']))       
+                    rrule = rrule + "\r\nEXDATE:" + dtholiday
+                    
+            # Write Key Date Exceptions
+            if postdict['university']['semester'] == "Fall":
+                kdatekey = 'fall'
+            elif postdict['university']['semester'] == "Spring":
+                kdatekey = 'spring'
+            else:
+                kdatekey = None
+                
+            if not (kdatekey is None):
+                for keydate in postdict['university'][kdatekey]:
+                    dtkeydate = getDateString(parseDate(keydate['kdate']))
+                    keydescription = keydate['kname']    
 
-                if keydescription.lower().startswith("designated"):
-                    rrule = rrule + "\r\nEXDATE:" + dtkeydate                
+                    if keydescription.lower().startswith("designated"):
+                        rrule = rrule + "\r\nEXDATE:" + dtkeydate                
 
-        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+            outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 # Write Exam Dates 
 for i in range(len(postdict['info']['class_meets_locations'])):
