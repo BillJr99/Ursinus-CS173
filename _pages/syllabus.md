@@ -125,6 +125,8 @@ instructors:
     starttime: "12:00 PM"
     endtime: "2:00 PM"
     location: "Pfahler Hall 101L" 
+- name: "Seraiah Kutai"
+  title: "Lab Teaching Assistant"    
 - name: "Institute for Student Success"
   title: "Drop-In Session to Ask Questions and Work with Classmates"
   officehours:    
@@ -140,7 +142,7 @@ instructors:
     starttime: "7:00 PM"
     endtime: "8:00 PM"
     location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Pfahler Hall 102</a>"      
-    
+  
 textbooks:
 - title: "Java for Everyone: Late Objects"
   authors: "Cay Horstmann"
