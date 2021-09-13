@@ -85,7 +85,7 @@ info:
       title: Data Types are Discrete
       questions:
         - Why can’t a computer store data with an infinite number of possible values?
-        - A boolean can hold only two values, because its single bit is either a <code>1</code> or a <code>0</code>.  To what do these values correspond?
+        - A <code>boolean</code> can hold only two values, because its single bit is either a <code>1</code> or a <code>0</code>.  To what do these values correspond?
         - The <code>float</code> data type is a smaller version of the <code>double</code>; how many bits do you think a <code>float</code> uses?
         - Similarly, there is a larger version of the <code>int</code> data type called the <code>long</code>.  How many bits do you think this type uses, and how many values can it contain?
         - Which of the data types above has a variable rather than fixed length?  With this in mind, what do you think is the purpose of storing the extra <code>0</code> at the end of values of that type?  
@@ -166,7 +166,7 @@ info:
         </div>    
       title: Data Types Have Ranges Because They Are Discrete
       questions:
-        - The largest value a boolean can store is <code>1</code>, even though it is a single bit value that can hold two discrete values.  This is because a bit is needed to store the value <code>0</code>.  So a boolean’s largest value is not <span>\(2^{1}\)</span>, but actually <span>\(2^{1} - 1\)</span>.  What is the largest int value that a computer can store?
+        - The largest value a <code>boolean</code> can store is <code>1</code>, even though it is a single bit value that can hold two discrete values.  This is because a bit is needed to store the value <code>0</code>.  So a <code>boolean</code>’s largest value is not <span>\(2^{1}\)</span>, but actually <span>\(2^{1} - 1\)</span>.  What is the largest int value that a computer can store?
         - Why can the int data type store more negative values than positive values?
         - Suppose you required more precision than the 15 significant digits offered by the double type.  What would happen to the range if a double could provide more precision, and why?     
     - model: |
