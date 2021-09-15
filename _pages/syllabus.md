@@ -352,6 +352,10 @@ schedule:
   date: "2"
   title: "Debugging"
   link: "Activities/Debugging"  
+  deliverables:
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 40    
 - week: "2"
   date: "3"
   title: "Boolean Logic Expressions"
@@ -366,9 +370,6 @@ schedule:
     dlink: "./Modules/Expressions/Exercise2"    
     points: 3   
     submission_types: "noupload"   
-  - dtitle: "Quiz: Variables and Data Types"
-    dlink: false
-    points: 40    
 - week: "3"
   date: "0"   
   title: "Conditionals"   
