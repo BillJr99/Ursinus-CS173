@@ -372,25 +372,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09141d
 DTSTAMP:20210915T000000Z
 DTSTART;VALUE=DATE:20210915
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Debugging
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09141e
-DTSTAMP:20210917T000000Z
-DTSTART;VALUE=DATE:20210917
-SUMMARY:CS173 Intro to Computer Science: Exercise: Expressions Revisited
+DTSTAMP:20210915T000000Z
+DTSTART;VALUE=DATE:20210915
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Debugging\nDeliverable: Quiz: Variables and Data Types
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09141f
 DTSTAMP:20210917T000000Z
 DTSTART;VALUE=DATE:20210917
-SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
+SUMMARY:CS173 Intro to Computer Science: Exercise: Expressions Revisited
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -401,7 +401,7 @@ DTSTAMP:20210917T000000Z
 DTSTART;VALUE=DATE:20210917
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Boolean\nReading: Ch. 3\nReading: Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Fall2021/./Modules/Expressions/Exercise2\nDeliverable: Quiz: Variables and Data Types
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Boolean\nReading: Ch. 3\nReading: Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Fall2021/./Modules/Expressions/Exercise2
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
