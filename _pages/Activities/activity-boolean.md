@@ -81,7 +81,7 @@ info:
             </div>
         </div>          
         </div>
-      title: Writing and Invoking Functions to Re-Use Code Logic
+      title: Representing Truth as a Variable to Make Decisions in Programs
       questions:
         - What is the result of <code>(a || b) && (c || d)</code> if <code>a = true</code>, <code>b = true</code>, <code>c = false</code>, <code>d = false</code>?
         - If <code>a</code> is true in the example above, is it necessary to evaluate <code>b</code> at all?
