@@ -418,9 +418,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  - dtitle: "Quiz: Conditionals"
-    dlink: false
-    points: 40
 - week: "3"
   date: "3"
   title: "Functions"
@@ -472,6 +469,9 @@ schedule:
     dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
     rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"    
+  - dtitle: "Quiz: Conditionals"
+    dlink: false
+    points: 40    
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
