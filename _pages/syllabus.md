@@ -525,9 +525,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"
-  - dtitle: "Quiz: Functions and Testing"
-    dlink: false
-    points: 40 
 - week: "5"
   date: "2"
   title: "Strings"
@@ -538,7 +535,10 @@ schedule:
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"    
+    submission_types: "written" 
+  - dtitle: "Quiz: Functions and Testing"
+    dlink: false
+    points: 40         
 - week: "5"
   date: "3"
   title: "Strings"  
@@ -547,9 +547,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
-  - dtitle: "Quiz: Strings"
-    dlink: false
-    points: 40    
 - week: "6"
   date: "0"
   title: "Iteration with the for Loop"
@@ -589,6 +586,9 @@ schedule:
     dlink: "Modules/Strings/Exercise"
     points: 3
     submission_types: "noupload"  
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 40        
 - week: "6"
   date: "3"
   title: "Iteration with the for loop"
