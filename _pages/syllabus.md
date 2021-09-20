@@ -386,7 +386,7 @@ schedule:
     submission_types: "noupload"  
 - week: "3"
   date: "1"
-  title: "Lab: Venn Diagram with Conditionals"
+  title: "Lab: Story Telling with Conditionals"
   deliverables:
   - dtitle: "Lab: Story Telling with Conditionals Handed Out"    
     dlink: "Labs/TellAStory/Conditionals"     
