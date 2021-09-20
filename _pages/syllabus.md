@@ -124,9 +124,7 @@ instructors:
   - day: "F"
     starttime: "12:00 PM"
     endtime: "2:00 PM"
-    location: "Pfahler Hall 101L" 
-- name: "Seraiah Kutai"
-  title: "Lab Teaching Assistant"    
+    location: "Pfahler Hall 101L"  
 - name: "Institute for Student Success"
   title: "Drop-In Session to Ask Questions and Work with Classmates"
   officehours:    
