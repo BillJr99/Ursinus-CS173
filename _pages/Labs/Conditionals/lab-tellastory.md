@@ -31,7 +31,7 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
     - rtitle: "Conditionals Activity"
-      rlink: "../Activities/Conditionals"
+      rlink: "../../Activities/Conditionals"
     
 tags:
   - arrays
