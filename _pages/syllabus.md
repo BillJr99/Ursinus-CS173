@@ -125,6 +125,10 @@ instructors:
     starttime: "12:00 PM"
     endtime: "2:00 PM"
     location: "Pfahler Hall 101L"  
+- name: Matthew Quigley
+  title: "Lab TA for the 9AM Section"
+- name: Giannina Flamiano
+  title: "Lab TA for the 10AM Section"
 - name: "Institute for Student Success"
   title: "Drop-In Session to Ask Questions and Work with Classmates"
   officehours:    
