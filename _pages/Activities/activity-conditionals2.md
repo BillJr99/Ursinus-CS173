@@ -58,6 +58,7 @@ info:
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
       questions:
         - Which code structure (<code>canRunForPresident</code> or <code>canRunForPresident2</code>) do you prefer and why?
+        - "Can you switch the order of the <code>if</code> statements in either example?  Why or why not?"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {           
@@ -73,6 +74,7 @@ info:
       title: "Compound <code>if</code> conditionals"
       questions: 
         - What text should go into the <code>println</code> statement to indicate whether the person can vote (at least age 18) but also is too young to run for president (at least age 35)?
+        - "Can you switch the order of the checks inside the <code>if</code> statement?  Why or why not?"
         - "Consider the letter grade breakdown table on our <a href=\"../#grading\">course syllabus</a>.  Write a series of compound <code>if</code> statements that determines if your grade is an A+, an A, or an A-."
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>         
