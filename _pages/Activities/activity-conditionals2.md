@@ -57,7 +57,7 @@ info:
         </div>
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
       questions:
-        - Which code structure (<code>canRunForPresident</code> or <code>canRunForPresident2</code>) do you prefer and why?
+        - Which code structure above do you prefer and why?
         - "Can you switch the order of the <code>if</code> statements in either example?  Why or why not?"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
