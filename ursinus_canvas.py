@@ -283,6 +283,32 @@ def add_discussion_topic(course, inputdict):
         
     course.create_discussion_topic(**inputdict)
     
+# https://canvas.instructure.com/doc/api/all_resources.html#method.content_migrations.create
+# https://canvasapi.readthedocs.io/en/stable/course-ref.html#canvasapi.course.Course.create_content_migration
+def create_quiz_content_migration(course, quiz_path, sleep_time=5):
+    quiz_file_name = quiz_path.rsplit('/',1)[-1]
+    
+    inputdict = {}
+    
+    inputdict['migration_type'] = 'qti_converter'
+    inputdict['pre_attachment'] = {}
+    inputdict['pre_attachment']['name'] = quiz_file_name
+    inputdict['settings'] = {}
+    inputdict['settings']['overwrite_quizzes'] = True
+    
+    migration = course.create_content_migration('qti_converter', **inputdict)
+    
+    # wait for module creation
+    time.sleep(sleep_time)
+    
+    # now actually upload the file to the url given by the response to the module creation
+    upload_url = migration['attachment']['url']
+    upload_file = open(quiz_path, 'rb')
+    requests.post(upload_url, files={'file': upload_file})
+    
+    # wait for upload 
+    time.sleep(sleep_time)
+    
 def add_grading_standard(course, inputdict):
     course.add_grading_standards(inputdict)
     
@@ -699,7 +725,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         # Create a Module Entry for Class Notes Link
         if 'link' in item:
             inputdict = {}
-            inputdict['title'] = title
+            inputdict['title'] = "Activity: " + title
             inputdict['type'] = "ExternalUrl"
             inputdict['external_url'] = makelink(addslash(homepage), stripnobool(link))
             inputdict['new_tab'] = True
@@ -731,8 +757,10 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict = {}
                     inputdict['name'] = description
                     inputdict['submission_types'] = []
-                    if "submission_types" in deliverable and "noupload" in deliverable['submission_types'].lower():
+                    if "submission_types" in deliverable and "onpaper" in deliverable['submission_types'].lower():
                         inputdict['submission_types'].append('on_paper')
+                    elif "submission_types" in deliverable and "noupload" in deliverable['submission_types'].lower():
+                        inputdict['submission_types'].append('online_text_entry')                    
                     else:
                         inputdict['submission_types'].append('online_upload')
                         inputdict['allowed_extensions'] = []
@@ -841,7 +869,14 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['published'] = True
                     add_module_item(module, inputdict)
                 elif ('quiz:' in description.lower()):
-                    input("Import the QTI for this quiz under Settings - Import Course Content on Canvas and press enter to continue: " + description)
+                    if 'qtizippath' in deliverable:
+                        # upload the quiz automatically
+                        quiz_path = deliverable['qtizippath']
+                        
+                        create_quiz_content_migration(course, quiz_path)
+                    else:
+                        # prompt the user to upload the quiz
+                        input("Import the QTI for this quiz under Settings - Import Course Content on Canvas and press enter to continue: " + description)
                     quiz_name = lchop(description, "Quiz: ")
                     quiz = find_quiz_by_title(course, quiz_name)
                     if not (quiz is None):

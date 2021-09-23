@@ -235,7 +235,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
     points: 15
-    submission_types: "noupload"
+    submission_types: "onpaper"
 - week: "0"
   date: "1"
   title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
@@ -255,7 +255,7 @@ schedule:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
     points: 15
-    submission_types: "noupload"
+    submission_types: "onpaper"
   - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
     dlink: "Assignments/NetBeans"
     points: 50
