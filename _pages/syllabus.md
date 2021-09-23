@@ -357,7 +357,8 @@ schedule:
   deliverables:
   - dtitle: "Quiz: Variables and Data Types"
     dlink: false
-    points: 40    
+    points: 40   
+    qtizippath: "_pages/Quizzes/qti_datatypes.zip"    
 - week: "2"
   date: "3"
   title: "Boolean Logic Expressions"
@@ -474,6 +475,7 @@ schedule:
   - dtitle: "Quiz: Conditionals"
     dlink: false
     points: 40    
+    qtizippath: "_pages/Quizzes/qti_conditionals.zip"
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
@@ -540,7 +542,8 @@ schedule:
     submission_types: "written" 
   - dtitle: "Quiz: Functions and Testing"
     dlink: false
-    points: 40         
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"    
 - week: "5"
   date: "3"
   title: "Strings"  
@@ -590,7 +593,8 @@ schedule:
     submission_types: "noupload"  
   - dtitle: "Quiz: Strings"
     dlink: false
-    points: 40        
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_strings.zip"    
 - week: "6"
   date: "3"
   title: "Iteration with the for loop"
@@ -685,6 +689,7 @@ schedule:
   - dtitle: "Quiz: Iteration"
     dlink: false
     points: 40
+    qtizippath: "_pages/Quizzes/qti_iteration.zip"
 - week: "9"
   date: "0"
   title: "File I/O"
@@ -856,6 +861,7 @@ schedule:
   - dtitle: "Quiz: Arrays"
     dlink: false
     points: 40    
+    qtizippath: "_pages/Quizzes/qti_arrays.zip"
 - week: "11"
   date: "3"
   title: "Algorithms: Searching" 
@@ -986,7 +992,8 @@ schedule:
     rubricpath: "_pages/Assignments/Arrays/asmt-iris.md" 
   - dtitle: "Quiz: Classes and Algorithms"
     dlink: false
-    points: 40      
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"    
 - week: "14"
   date: "3"
   title: "Algorithms: Recursion" 
