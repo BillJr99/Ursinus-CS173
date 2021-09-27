@@ -472,10 +472,6 @@ schedule:
     dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
     rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"    
-  - dtitle: "Quiz: Conditionals"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_conditionals.zip"
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
@@ -489,14 +485,10 @@ schedule:
   - rtitle: "Unit Testing Review"
     rlink: "Modules/Testing/Module"
   deliverables:
-  - dtitle: "Programming Assignment: MIDI Audio Due"
-    dlink: "Assignments/MIDI"    
-    points: 100
-    rubricpath: "_pages/Assignments/Functions/asmt-midi.md"
-  - dtitle: "Programming Assignment: Drawing Faces Handed Out"
-    dlink: "Assignments/Faces"
-    points: 100
-    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"   
+  - dtitle: "Quiz: Conditionals"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_conditionals.zip"
 - week: "5"
   date: "0"
   title: "Strings"
@@ -516,7 +508,15 @@ schedule:
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
     points: 100  
-    rubricpath: "_pages/Labs/Functions/lab-functions.md"       
+    rubricpath: "_pages/Labs/Functions/lab-functions.md"
+  - dtitle: "Programming Assignment: MIDI Audio Due"
+    dlink: "Assignments/MIDI"    
+    points: 100
+    rubricpath: "_pages/Assignments/Functions/asmt-midi.md"
+  - dtitle: "Programming Assignment: Drawing Faces Handed Out"
+    dlink: "Assignments/Faces"
+    points: 100
+    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"   
 - week: "5"
   date: "1"
   title: "Lab: Unit Testing" 
