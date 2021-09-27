@@ -561,49 +561,31 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091432
 DTSTAMP:20210929T000000Z
 DTSTART;VALUE=DATE:20210929
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html\nDeliverable: Lab: Story Telling with Conditionals Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/TellAStory/Conditionals
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091433
+DTSTAMP:20211001T000000Z
+DTSTART;VALUE=DATE:20211001
 SUMMARY:CS173 Intro to Computer Science: Quiz: Conditionals
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091433
-DTSTAMP:20210929T000000Z
-DTSTART;VALUE=DATE:20210929
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html\nDeliverable: Lab: Story Telling with Conditionals Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/TellAStory/Conditionals\nDeliverable: Quiz: Conditionals
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091434
 DTSTAMP:20211001T000000Z
 DTSTART;VALUE=DATE:20211001
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Testing\nReading: Testing with the NetBeans IDE https://www.billmongan.com/Ursinus-CS173-Fall2021/NetBeans/JUnit\nReading: Unit Testing Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Testing/Module\nDeliverable: Quiz: Conditionals
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091435
-DTSTAMP:20211001T000000Z
-DTSTART;VALUE=DATE:20211001
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Drawing Faces Handed Out
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091436
-DTSTAMP:20211001T000000Z
-DTSTART;VALUE=DATE:20211001
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Testing\nReading: Testing with the NetBeans IDE https://www.billmongan.com/Ursinus-CS173-Fall2021/NetBeans/JUnit\nReading: Unit Testing Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Testing/Module\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/MIDI\nDeliverable: Programming Assignment: Drawing Faces Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/Faces
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091437
 DTSTAMP:20211004T000000Z
 DTSTART;VALUE=DATE:20211004
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Function - Function behavior
@@ -612,10 +594,28 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091438
+UID:00000000-0000-0000-0000-0192cc091436
 DTSTAMP:20211004T000000Z
 DTSTART;VALUE=DATE:20211004
 SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091437
+DTSTAMP:20211004T000000Z
+DTSTART;VALUE=DATE:20211004
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091438
+DTSTAMP:20211004T000000Z
+DTSTART;VALUE=DATE:20211004
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Drawing Faces Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -626,7 +626,7 @@ DTSTAMP:20211004T000000Z
 DTSTART;VALUE=DATE:20211004
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Ch. 2.5\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Strings\nReading: Ch. 2.5\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Labs/AverageFunction\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/MIDI\nDeliverable: Programming Assignment: Drawing Faces Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/Faces
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
