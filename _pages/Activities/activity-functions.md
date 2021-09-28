@@ -47,6 +47,7 @@ info:
         - Try running the sample program above in repl.it. 
         - Modify the program to write an additional function circleDiameter() that computes the diameter (<span>\(2 \times \pi \times r\)</span>) given the radius of the circle.  Call that function from main() and print the value.
         - Modify the program to write and call <code>triangleArea()</code> from <code>main()</code> and then print the area of a triangle whose dimensions you choose.
+        - "What do you think is the function defintion for <code>Math.pow</code>, <code>Math.sqrt</code>, and <code>System.out.println</code>?" 
         - The Math class includes several useful math functions that you can call.  For example, <code>Math.pow(a, b)</code> will return the <code>double</code> value computed by <code>a</code> raised to the power of <code>b</code> (both <code>double</code> values).  Re-write <code>circleArea()</code> so that it computes the <code>radius</code> raised to the power of <code>2</code>, rather than multiplying it by itself.
         - The Math class also provides constants, so that you do not need to hard-code approximate values like we did with <code>3.14</code> for the value <span>\(\pi\)</span>.  Modify the program to use the constant <code>Math.PI</code> instead of <code>3.14</code>.
       embed: |
