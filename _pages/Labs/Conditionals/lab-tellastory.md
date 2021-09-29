@@ -147,7 +147,8 @@ System.out.println("What is your name?");
 // and whatever they type will go into the name variable when they hit <enter>!
 String name = input.nextLine();
 
-boolean isBill = true;
+// Assume isBill is false, and then we can set it to true conditionally (if name is "Bill").
+boolean isBill = false;
 if(name.equals("Bill")) {
     isBill = true;
 }
