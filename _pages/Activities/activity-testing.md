@@ -28,6 +28,7 @@ info:
         - What's wrong with this code? (there is more than one answer!)
         - "How many calls would you make to <code>triangleArea</code> before you decide that it is &quot;passing?&quot;  What parameter inputs would you supply to those calls?"
         - "Visit <a href=\"../NetBeans/JUnit\">this guide</a> and design a unit test for <code>triangleArea</code>.  You can just write the code in your notes: there is no need to compile or execute it now (we will do this in lab instead!)."
+        - "Recall that floating point types cannot always be compared directly for equality, due to rounding and precision limitations.  Change this program to use <code>double</code> data types, and re-generate unit tests for it.  Where do you think a floating point tolerance can be added with the <code>assertEquals</code> function?"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {            
