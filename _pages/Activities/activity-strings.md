@@ -33,7 +33,7 @@ info:
         <img src="../manim/output/Substrings.gif" alt="Manim String substring Animation" />
       questions: 
         - What is the difference between <code>x = x.concat(y)</code> and <code>x = x + y</code> for <code>String</code> objects <code>x</code> and <code>y</code>?
-        - "Rewrite the statement <code>String z = &quot;Cheese&quot; + &quot&Hamburger&quot;.substring(3);</code> using the <code>concat</code> function."
+        - "Rewrite the statement <code>String z = &quot;Cheese&quot; + &quot;Hamburger&quot;.substring(3);</code> using the <code>concat</code> function."
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
     - title: <code>String</code> Searching with <code>indexOf</code>
