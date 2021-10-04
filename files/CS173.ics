@@ -669,25 +669,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09143e
 DTSTAMP:20211006T000000Z
 DTSTART;VALUE=DATE:20211006
-SUMMARY:CS173 Intro to Computer Science: Quiz: Functions and Testing
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09143f
-DTSTAMP:20211006T000000Z
-DTSTART;VALUE=DATE:20211006
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+DTSTAMP:20211008T000000Z
+DTSTART;VALUE=DATE:20211008
+SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Function - Debugging functions
 LOCATION:
-DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Quiz: Functions and Testing
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091440
 DTSTAMP:20211008T000000Z
 DTSTART;VALUE=DATE:20211008
-SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Function - Debugging functions
+SUMMARY:CS173 Intro to Computer Science: Quiz: Functions and Testing
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -698,7 +698,7 @@ DTSTAMP:20211008T000000Z
 DTSTART;VALUE=DATE:20211008
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Problets - Function - Debugging functions https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:\nDeliverable: Exercise: Problets - Function - Debugging functions https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Quiz: Functions and Testing
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
