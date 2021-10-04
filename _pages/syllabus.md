@@ -539,11 +539,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
-  - dtitle: "Quiz: Functions and Testing"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"    
+    submission_types: "written"  
 - week: "5"
   date: "3"
   title: "Strings"  
@@ -552,6 +548,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
+  - dtitle: "Quiz: Functions and Testing"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"   
 - week: "6"
   date: "0"
   title: "Iteration with the for Loop"
