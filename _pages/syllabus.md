@@ -590,11 +590,7 @@ schedule:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
-    submission_types: "noupload"  
-  - dtitle: "Quiz: Strings"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip"    
+    submission_types: "noupload"     
 - week: "6"
   date: "3"
   title: "Iteration with the for loop"
@@ -602,7 +598,11 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"    
+    submission_types: "written" 
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_strings.zip" 
 - week: "7"
   date: "2"
   title: "Iteration with the while Loop"  
