@@ -57,6 +57,35 @@ Download the provided [NetBeans project](../files/lab-unittesting/UnitTestingSam
 
 Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.  You don't have to enter the code that you see there - that's for a test project that the tutorial walks through; instead, we'll give you test case code to use below right here on this lab page.
 
+#### String Equality Test
+
+When writing your `String` equality test cases, you will find that the unit tests provide default code that includes your parameters and expected return value, like this:
+
+```java
+String a = "";
+String b = "";
+boolean expResult = false;
+```
+
+This is because the function you are testing takes two `String` variables as parameters (`a` and `b`), and returns a `boolean`.  You can modify these to be two `String` values of your own, and the expected answer.  For example:
+
+```java
+String a = new String("Ursinus");
+String b = new String("Ursinus");
+boolean expResult = true;
+```
+
+This test should pass, but it will fail the first time you run it, because the function we are testing contains a bug.  Note that, for `String` parameters, I suggest creating a `new String` like in the example above.  Do not use:
+
+```java
+// don't do this!
+String a = "Ursinus";
+String b = "Ursinus";
+boolean expResult = true;
+```
+
+... as this will merge the `String` variables `a` and `b` into a single location in memory (so the `==` operator will seem to pass these tests).
+
 ## Extra Credit (10%): New Code Samples
 Do you have a code sample that you've written that you are willing to add to this lab project?  In your README, include the function that doesn't work correctly and a description of the bug, and we might share it (anonymously) in this lab for others to explore!
 
