@@ -86,6 +86,10 @@ boolean expResult = true;
 
 ... as this will merge the `String` variables `a` and `b` into a single location in memory (so the `==` operator will seem to pass these tests).
 
+#### Hint: Testing Floating Point Return Values
+
+If you are testing a function that returns a floating point value, you might not be able to check that value exactly due to rounding errors.  We don't want to fail our test because of that, since the returned value would be essentially correct.  The `assertEquals` function has an extra third parameter when the return value is a floating point.  That value is the tolerance.  You can put a number in there like `0.01` which will check that the returned value is "equal to" your test value, but within that tolerance.  This will help you avoid failing tests due to rounding errors.  In practice, very small values for the tolerance are fine, since these rounding errors are very small.
+
 ## Extra Credit (10%): New Code Samples
 Do you have a code sample that you've written that you are willing to add to this lab project?  In your README, include the function that doesn't work correctly and a description of the bug, and we might share it (anonymously) in this lab for others to explore!
 
