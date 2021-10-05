@@ -15,6 +15,25 @@ info:
     - To implement complex conditional statements using boolean expression operators
   models:
     - model: |
+        <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
+        public class Driver {
+            public static double getTotalPrice(double price, double tax, boolean taxable) {
+                // This code does not work!
+                
+                if(taxable) {
+                  double result = price + price * tax;
+                } else {
+                  double result = price;
+                }
+
+                return result;
+            }
+        }
+        ]]></script>     
+      title: Declaring Variables within a Conditional
+      questions:
+        - "What is wrong with the program above?  How can you fix it?"
+    - model: |
         <img src="../images/venn3.png" alt="Empty 3-way Venn Diagram">
       title: "Putting It All Together: Implementing a Venn Diagram"
       questions:
