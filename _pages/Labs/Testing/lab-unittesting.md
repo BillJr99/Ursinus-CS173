@@ -57,6 +57,8 @@ Download the provided [NetBeans project](../files/lab-unittesting/UnitTestingSam
 
 Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUnit).  Follow it first to create a unit test class with functions to test your program.  You don't have to enter the code that you see there - that's for a test project that the tutorial walks through; instead, we'll give you test case code to use below right here on this lab page.
 
+When you create your unit test, you can remove the `fail` line so that the test doesn't automatically fail.  If your test fails and says "the test case is a prototype," you may have forgotten to do this!
+
 #### String Equality Test
 
 When writing your `String` equality test cases, you will find that the unit tests provide default code that includes your parameters and expected return value, like this:
