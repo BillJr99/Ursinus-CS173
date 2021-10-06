@@ -48,7 +48,7 @@ info:
         <img src="../manim/output/StringReplace.gif" alt="Manim String replace Animation" />
       questions:
         - What is the difference between the two <code>replace()</code> methods given above?  How do you know which version you are calling from a program?
-        - "Write a Java statement to replace &quot&Ham&quot; with &quot;Cheese&quot; in a <code>String</code> &quot;Hamburger&quot;"
+        - "Write a Java statement to replace &quot;Ham&quot; with &quot;Cheese&quot; in a <code>String</code> &quot;Hamburger&quot;"
     - title: "Working with <code>String</code>s"
       model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
