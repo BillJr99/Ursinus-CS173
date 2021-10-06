@@ -71,6 +71,7 @@ info:
         - What does the print statement output for the string <code>z</code>?
         - How might you print only the "est" characters from <code>x</code> using the <code>substring</code> method?
         - You can compare two strings using <code>str1.equals(str2)</code>.  Why do you think <code>str1 == str2</code> won't work?
+        - "Java includes a <code>equalsIgnoreCase</code> function.  How do you think this works, using other functions that the <code>String</code> class provides?"
 
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
