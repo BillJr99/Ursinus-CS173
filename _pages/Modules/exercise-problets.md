@@ -20,7 +20,7 @@ You can install this program from [openwebstart.com](https://openwebstart.com/),
 
 ## Run Problets and Epplets
 
-To use Problets, right click and choose "Save As" to download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option (or "Download Anyway") to download the file.  
+To use Problets, right click and choose "Save As" (or "Save Link As" on some computers) to download [this application](http://problets.org/user/f21/ursinus.jnlp).  If you receive a warning from your browser, you can select the "Keep" option (or "Download Anyway") to download the file.  
 
 Right click on the `ursinus.jnlp` file in your `Downloads` directory, and choose `Open With`.  Select "OpenWebStart" from the list of applications (if it is a folder, click on it, and select "OpenWebStart" inside of that).  Check the box that says "Always" to run this by default.  This way, you can simply double click on the `ursinus.jnlp` file next time.
 
