@@ -144,6 +144,7 @@ The color wheel below from Wikipedia shows some example color mixtures.  These v
 You can set the color of your face using integers for red, green, and blue, as follows:
 
 ```java
+// Don't forget to add the import if you get an error here!  You can click on the light bulb in NetBeans and select the Import option
 Color color = new Color(red, green, blue);
 StdDraw.setPenColor(color); 
 ```
