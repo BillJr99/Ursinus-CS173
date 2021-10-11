@@ -16,7 +16,7 @@ info:
         <br>
         <img src="../images/activity-minicrypto/publicmap-message.png" alt="Public Map from the CS Unplugged Cryptography Activity with Values Assigned">
         <br>
-        <img src="../images/activity-minicrypto/publicmap-message.png" alt="Public Map from the CS Unplugged Cryptography Activity with Encrypted Values">
+        <img src="../images/activity-minicrypto/publicmap-encrypt.png" alt="Public Map from the CS Unplugged Cryptography Activity with Encrypted Values">
       title: "An Unplugged Activity"
       questions:
         - "Try sending a message to a classmate using the Vertex Cover Problem."
@@ -40,7 +40,7 @@ tags:
   
 ---
 
-This assignment is adapted from Prof. Mongan's assignments in communications and introductory cryptography \[[^1], [^2], [^3]\], from the CS Unplugged Public Key Encryption lesson module \[[^4]\], and Dr. Jeffrey Popyack's online RSA Calculator \[[^5]\].
+This activity is adapted from Prof. Mongan's assignments in communications and introductory cryptography \[[^1], [^2], [^3]\], from the CS Unplugged Public Key Encryption lesson module \[[^4]\], and Dr. Jeffrey Popyack's online RSA Calculator \[[^5]\].
 
 [^1]: William M. Mongan. 2012. An integrated introduction to network protocols and cryptography to high school students (abstract only). In Proceedings of the 43rd ACM technical symposium on Computer Science Education (SIGCSE ’12). Association for Computing Machinery, New York, NY, USA, 664. DOI:[https://doi.org/10.1145/2157136.2157364](https://doi.org/10.1145/2157136.2157364)
 [^2]: William M. Mongan. 2011. Networking Applications, Protocols, and Cryptography with Java. Google CS4HS Workshop at the University of Pennsylvania, Philadelphia, PA.
