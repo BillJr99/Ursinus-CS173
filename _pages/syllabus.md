@@ -554,13 +554,11 @@ schedule:
     qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"   
 - week: "6"
   date: "0"
-  title: "Iteration with the for Loop"
-  link: "Activities/Iteration/For"
+  title: "Iteration"  
+  link: "Activities/Iteration/While"  
   readings:
-  - rtitle: "Ch. 4"
-    rlink: false  
-  - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
+  - rtitle: "Loops with Strings"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"    
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
@@ -593,7 +591,13 @@ schedule:
     submission_types: "noupload"     
 - week: "6"
   date: "3"
-  title: "Iteration with the for loop"
+  title: "Iteration with the for Loop"
+  link: "Activities/Iteration/For"
+  readings:
+  - rtitle: "Ch. 4"
+    rlink: false  
+  - rtitle: "for Loops"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
   deliverables:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
@@ -605,11 +609,6 @@ schedule:
     qtizippath: "_pages/Quizzes/qti_strings.zip" 
 - week: "7"
   date: "2"
-  title: "Iteration with the while Loop"  
-  link: "Activities/Iteration/While"  
-  readings:
-  - rtitle: "Loops with Strings"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"  
   title: "Iteration, Randomness, and the while loop"  
   readings:
   - rtitle: "Ch. 6.3-6.6"
