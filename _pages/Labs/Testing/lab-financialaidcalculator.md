@@ -83,7 +83,7 @@ Create a new NetBeans project as usual.  In `main()`, complete an input prompt a
 Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
-// do this again using nextInt() for numKids
+// do this again using nextInt() for numKids, which will be an int variable
 ```
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
@@ -120,6 +120,8 @@ if (a > b) {
     else {
         // Inner block 2
     }
+} else {
+    // Inner block 3
 }
 ```
 
@@ -128,6 +130,10 @@ In this example, we don't even check `c > d` unless `a > b` passes. Just for con
 ```java
 if (a > b && c > d) {
     // Inner block 1
+} else if(a > b) {
+   // Inner block 2
+} else {
+   // Inner block 3
 }
 ```
 
