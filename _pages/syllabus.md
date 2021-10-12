@@ -609,7 +609,8 @@ schedule:
     qtizippath: "_pages/Quizzes/qti_strings.zip" 
 - week: "7"
   date: "2"
-  title: "Iteration, Randomness, and the while loop"  
+  title: "Iteration, Randomness, and the while loop" 
+  link: "Activities/Iteration/While" 
   readings:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false   
