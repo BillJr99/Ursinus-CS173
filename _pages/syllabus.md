@@ -583,12 +583,7 @@ schedule:
 - week: "6"
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
-  link: "Activities/MiniCrypto"
-  deliverables:
-  - dtitle: "Exercise: Strings"
-    dlink: "Modules/Strings/Exercise"
-    points: 3
-    submission_types: "noupload"     
+  link: "Activities/MiniCrypto"    
 - week: "6"
   date: "3"
   title: "Iteration with the for Loop"
@@ -648,7 +643,11 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
     points: 100    
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"                
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"   
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
+    submission_types: "noupload" 
 - week: "8"
   date: "1"
   title: "Lab: Iteration" 
