@@ -777,25 +777,25 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09144a
 DTSTAMP:20211015T000000Z
 DTSTART;VALUE=DATE:20211015
-SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/For\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09144b
-DTSTAMP:20211015T000000Z
-DTSTART;VALUE=DATE:20211015
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+DTSTAMP:20211020T000000Z
+DTSTART;VALUE=DATE:20211020
+SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - while loop tracing
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/For\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Quiz: Strings
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09144c
 DTSTAMP:20211020T000000Z
 DTSTART;VALUE=DATE:20211020
-SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - while loop tracing
+SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -806,7 +806,7 @@ DTSTAMP:20211020T000000Z
 DTSTART;VALUE=DATE:20211020
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/While\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/While\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Quiz: Strings
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
