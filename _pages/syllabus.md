@@ -603,10 +603,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  - dtitle: "Quiz: Strings"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip" 
 - week: "7"
   date: "2"
   title: "Iteration, Randomness, and the while loop"  
@@ -619,7 +615,11 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"    
+    submission_types: "written" 
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_strings.zip"     
 - week: "7"
   date: "3"
   title: "Iteration with the do loop"  
