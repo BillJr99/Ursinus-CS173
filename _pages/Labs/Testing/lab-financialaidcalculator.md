@@ -72,12 +72,9 @@ A non-governmental organization got a large donation to help families in need, b
 
 **Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!
 
-## Part 0: Getting Started
-Create a new NetBeans project as usual.  Right click on your package name under the project Source Packages, and click `New` and then `New Class`.  Call the class `Main` and click OK to get started.
-
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
-In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.  Here is a [guide](https://www.w3schools.com/java/java_user_input.asp) on reading user input - consider the `nextDouble()` function which will read a number from the user keyboard and return a `double` variable for you to use, and the `nextInt()` function which returns an `int`.  For example:
+Create a new NetBeans project as usual.  In `main()`, complete an input prompt asking the user to input an integer representing the number of kids who need assistance (this is by far the quicker part).  You will pass these values to your `computeAssitance` function, and print the resulting financial assistance returned by `computeAssistance`.  Here is a [guide](https://www.w3schools.com/java/java_user_input.asp) on reading user input - consider the `nextDouble()` function which will read a number from the user keyboard and return a `double` variable for you to use, and the `nextInt()` function which returns an `int`.  For example:
 
 ```java
 // don't forget to import java.util.Scanner; at the top (under the package line!)
@@ -86,7 +83,7 @@ In `main()`, complete an input prompt asking the user to input an integer repres
 Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
-// do this again using nextInt() for numKids
+// do this again using nextInt() for numKids, which will be an int variable
 ```
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
@@ -123,6 +120,8 @@ if (a > b) {
     else {
         // Inner block 2
     }
+} else {
+    // Inner block 3
 }
 ```
 
@@ -131,6 +130,10 @@ In this example, we don't even check `c > d` unless `a > b` passes. Just for con
 ```java
 if (a > b && c > d) {
     // Inner block 1
+} else if(a > b) {
+   // Inner block 2
+} else {
+   // Inner block 3
 }
 ```
 

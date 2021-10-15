@@ -583,12 +583,7 @@ schedule:
 - week: "6"
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
-  link: "Activities/MiniCrypto"
-  deliverables:
-  - dtitle: "Exercise: Strings"
-    dlink: "Modules/Strings/Exercise"
-    points: 3
-    submission_types: "noupload"     
+  link: "Activities/MiniCrypto"    
 - week: "6"
   date: "3"
   title: "Iteration with the for Loop"
@@ -605,7 +600,8 @@ schedule:
     submission_types: "written" 
 - week: "7"
   date: "2"
-  title: "Iteration, Randomness, and the while loop"  
+  title: "Iteration, Randomness, and the while loop" 
+  link: "Activities/Iteration/While" 
   readings:
   - rtitle: "Ch. 6.3-6.6"
     rlink: false   
@@ -647,7 +643,11 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
     points: 100    
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"                
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"   
+  - dtitle: "Exercise: Strings"
+    dlink: "Modules/Strings/Exercise"
+    points: 3
+    submission_types: "noupload" 
 - week: "8"
   date: "1"
   title: "Lab: Iteration" 
