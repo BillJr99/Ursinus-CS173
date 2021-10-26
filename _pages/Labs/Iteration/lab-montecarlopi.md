@@ -30,7 +30,7 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"
+      rlink: "../Activities/Iteration/For"
       
 tags:
   - iteration

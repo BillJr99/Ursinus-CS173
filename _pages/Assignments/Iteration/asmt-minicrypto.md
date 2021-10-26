@@ -35,8 +35,12 @@ info:
       rlink: "../Activities/MiniCrypto"
     - rtitle: "Strings Activity"
       rlink: "../Activities/Strings"
-    - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"      
+    - rtitle: "Iteration Activity: For Loops"
+      rlink: "../Activities/Iteration/For"      
+    - rtitle: "Iteration Activity: While Loops"
+      rlink: "../Activities/Iteration/While"      
+    - rtitle: "Iteration Activity: Do Loops"
+      rlink: "../Activities/Iteration/Do"      
       
 tags:
   - strings
