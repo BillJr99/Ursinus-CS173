@@ -45,6 +45,7 @@ files:
             
                 // TODO: Loop over each character and check that str1.charAt(i) equals str2.charAt(i).  
                 // ... If not, return false
+                // ... Hint: stop your loop at the smaller of the two string lengths (use Math.min() for this)!
                 
                 return true;
             }
