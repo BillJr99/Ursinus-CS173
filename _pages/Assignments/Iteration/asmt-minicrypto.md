@@ -102,40 +102,20 @@ long C = A*B;
 RSAMath rsa = new RSAMath();
 long M = (A-1)*(B-1); // equal to rsa.totient(C), but much easier to compute! 
 long E = rsa.coprime(M);
-```
+```  
 
-### Encrypt Data Using a Public Key
+## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
+Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a `String` parameter, and for each character in the `String`, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
+
+### Encrypting a Message to Your Partner Using Their E and C Key Values
+
 Given a public key (E and C) as parameters, write a function to encrypt a given value, and return the encrypted value.  Print this value to the screen.
 
 Here is an example:
 
 ![Encryption Example]({{ site.baseurl }}/images/asmt-minicrypto/encrypt.png)
 
-The `RSAMath.endecrypt(X, E, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.  
-
-### Decrypt Data Using a Private Key
-Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.  
-
-The procedure is similar to that used to encrypt a value.  The `RSAMath.endecrypt(X, D, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.  
-
-Here is an example:
-
-![Decryption Example]({{ site.baseurl }}/images/asmt-minicrypto/decrypt.png)
-
-<details>
-  <summary>What do you notice about the encryption and decryption functions you just wrote?  (Click to reveal)</summary>
-  
-  They're exactly the same!  They only differ in the input parameters (what values are used for the keys).  This is because the mathematics results in the computation of the modular inverse of the value.  The same function can be used on two different problems!
-  
-</details>
-
-### Test the Public/Private Key Pair by Encrypting and Decrypting Using Your Own Public and Private Key
-Write test cases that encrypt values using your public key, and decrypt them using your private key, and assert that the final decrypted value matches your original input.  Also try encrypting with your private key and decrypting with your public key, to ensure that the keys are proper inverses of one another.
-
-## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
-Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a `String` parameter, and for each character in the `String`, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
-
-### Encrypting a Message to Your Partner Using Their E and C Key Values
+The `RSAMath.endecrypt(X, E, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.
 
 Your loop to obtain each character from the String will look something like this:
 
@@ -155,6 +135,21 @@ Each encrypted value X will be the ASCII value of each character in a String.  Y
 
 ### Decrypting a Message from Your Partner Using Your D and C Key Values
 
+Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.  
+
+The procedure is similar to that used to encrypt a value.  The `RSAMath.endecrypt(X, D, C)` function will help you to do this, by encrypting the value X using the encryption key E and C.  
+
+Here is an example:
+
+![Decryption Example]({{ site.baseurl }}/images/asmt-minicrypto/decrypt.png)
+
+<details>
+  <summary>What do you notice about the encryption and decryption functions you just wrote?  (Click to reveal)</summary>
+  
+  They're exactly the same!  They only differ in the input parameters (what values are used for the keys).  This is because the mathematics results in the computation of the modular inverse of the value.  The same function can be used on two different problems!
+  
+</details>
+
 Given a set of integers that are values encrypted by your partner using your public key, write a program that decrypts each of those values (using a loop!) and decrypt to the original secret message.  Decide on a way to determine when you are finished so that you exit the loop nicely.  Write down how you decided to do this!  **For example, you can read each encrypted `long` value from the user keyboard using the `Scanner`, and enter a negative number to indicate that you have finished reading.  Continue reading and decrypting characters in a loop `while` the input is not negative!**
 
 The procedure to do this is similar to that used to encrypt each character, except that the value to be decrypted is the encrypted value of the ASCII value used before, and the key is the private key (D, C) associated with the public key that was used to encrypt it.  You can cast the ASCII value you obtain as a `long` back to a char, and either print it or concatenate it with a `String`.  
@@ -172,6 +167,9 @@ You can convert the `long` back to a `char` for printing as follows:
 ```java
 char decryptedChar = (char) decrypted;
 ```
+
+### Test the Public/Private Key Pair by Encrypting and Decrypting Using Your Own Public and Private Key
+Write test cases that encrypt values using your public key, and decrypt them using your private key, and assert that the final decrypted value matches your original input.  Also try encrypting with your private key and decrypting with your public key, to ensure that the keys are proper inverses of one another.
 
 ## Step 3: Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
