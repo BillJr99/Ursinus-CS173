@@ -939,22 +939,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09145c
 DTSTAMP:20211029T000000Z
 DTSTART;VALUE=DATE:20211029
-SUMMARY:CS173 Intro to Computer Science: Quiz: Iteration
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/Strings/Workshop\nReading: String Manipulation Sample Free Response Question https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html\nDeliverable: Exercise: Strings Revisited https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Exercise2\nDeliverable: Debugging Table: First Check Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09145d
-DTSTAMP:20211029T000000Z
-DTSTART;VALUE=DATE:20211029
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Iteration/Strings/Workshop\nReading: String Manipulation Sample Free Response Question https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html\nDeliverable: Exercise: Strings Revisited https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Strings/Exercise2\nDeliverable: Debugging Table: First Check Handed Out https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable\nDeliverable: Quiz: Iteration
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145e
 DTSTAMP:20211101T000000Z
 DTSTART;VALUE=DATE:20211101
 SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
@@ -963,7 +954,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145f
+UID:00000000-0000-0000-0000-0192cc09145e
 DTSTAMP:20211101T000000Z
 DTSTART;VALUE=DATE:20211101
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -972,7 +963,7 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/FileIO\
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091460
+UID:00000000-0000-0000-0000-0192cc09145f
 DTSTAMP:20211102T000000Z
 DTSTART;VALUE=DATE:20211102
 SUMMARY:CS173 Intro to Computer Science: Lab: Anagram Solver Handed Out
@@ -981,7 +972,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091461
+UID:00000000-0000-0000-0000-0192cc091460
 DTSTAMP:20211102T000000Z
 DTSTART;VALUE=DATE:20211102
 SUMMARY:CS173 Intro to Computer Science: Debugging Table: First Check Due
@@ -990,7 +981,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091462
+UID:00000000-0000-0000-0000-0192cc091461
 DTSTAMP:20211102T000000Z
 DTSTART;VALUE=DATE:20211102
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -999,10 +990,19 @@ DESCRIPTION:\nDeliverable: Lab: Anagram Solver Handed Out https://www.billmongan
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091463
+UID:00000000-0000-0000-0000-0192cc091462
 DTSTAMP:20211103T000000Z
 DTSTART;VALUE=DATE:20211103
 SUMMARY:CS173 Intro to Computer Science: Exercise: Epplets - Loops - for loop puzzles
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091463
+DTSTAMP:20211103T000000Z
+DTSTART;VALUE=DATE:20211103
+SUMMARY:CS173 Intro to Computer Science: Quiz: Iteration
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1013,7 +1013,7 @@ DTSTAMP:20211103T000000Z
 DTSTART;VALUE=DATE:20211103
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Arrays\nReading: Ch. 6.1\nReading: Creating and Accessing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html\nDeliverable: Exercise: Epplets - Loops - for loop puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Arrays\nReading: Ch. 6.1\nReading: Creating and Accessing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html\nDeliverable: Exercise: Epplets - Loops - for loop puzzles https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Problets/Exercise\nDeliverable: Quiz: Iteration
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
