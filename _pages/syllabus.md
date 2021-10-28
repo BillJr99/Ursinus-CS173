@@ -685,10 +685,6 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10        
     submission_types: "written"
-  - dtitle: "Quiz: Iteration"
-    dlink: false
-    points: 40
-    qtizippath: "_pages/Quizzes/qti_iteration.zip"
 - week: "9"
   date: "0"
   title: "File I/O"
@@ -722,6 +718,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
+  - dtitle: "Quiz: Iteration"
+    dlink: false
+    points: 40
+    qtizippath: "_pages/Quizzes/qti_iteration.zip"    
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
