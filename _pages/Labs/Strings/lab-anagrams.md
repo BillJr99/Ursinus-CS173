@@ -69,10 +69,6 @@ When you save the dictionary file to your computer, you can go to NetBeans and c
 
 `File f = new File("words_alpha.txt");`
 
-### A Word About the Dictionary File
-
-Did you notice that you had to read the dictionary file twice (once for each part of the lab)?  **Why is this unfortunate, and what might we do differently in the future?**  You don't have to modify the program, but speculate in your README on a better approach that would allow us to only have to read the file a single time.
-
 ## Exporting your Project for Submission
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
