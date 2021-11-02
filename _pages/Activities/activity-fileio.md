@@ -34,7 +34,7 @@ info:
       questions:
         - "What is <code>System.in</code>?"
         - "How would you use the <code>scanner</code> object to ask the user to enter their grade in the class; keep asking them to enter their grade until it is an A, B, C, D, or F."
-        - "The <code>Scanner</code> class also includes a function called `nextInt` which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range)!"
+        - "The <code>Scanner</code> class also includes a function called <code>nextInt</code> which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range)!"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.nio.file.Files;
@@ -69,7 +69,7 @@ info:
             
             public static void readLineByLine(String filePath) {
                 try {
-                    File input = new File(path);
+                    File input = new File(filePath);
                     Scanner scan = new Scanner(input);
                     
                     while(scan.hasNextLine()) {
