@@ -59,7 +59,13 @@ You can choose your approach for determining if two words are anagrams.  For exa
 
 Next, write a new function that operates similarly to the anagram finder, but allows you to also specify a character and a position.  This function should accept a `String` representing your available characters, a character, and a position.  Find all words in the dictionary that are anagrams of your `String`, but with a specific character at a given position within the `String`.  Only print those anagram matches.
 
-## A Word About the Dictionary File
+### Adding a File to your Project
+
+When you save the dictionary file to your computer, you can go to NetBeans and choose the `File -> Open File` menu.  Choose the dictionary file.  If you then go to the `File -> Save As` menu, you can navigate to and double click on your project directory (this directory might be in your user home directory under a directory called `NetBeansProjects`).  After double clicking on your project directory, save your file under your project directory.  You can then open your file using the code below, and [read the file](../Activities/FileIO) as you normally would.
+
+`File f = new File("words_alpha.txt");`
+
+### A Word About the Dictionary File
 
 Did you notice that you had to read the dictionary file twice (once for each part of the lab)?  **Why is this unfortunate, and what might we do differently in the future?**  You don't have to modify the program, but speculate in your README on a better approach that would allow us to only have to read the file a single time.
 
