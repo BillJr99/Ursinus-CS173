@@ -705,10 +705,6 @@ schedule:
     dlink: "Labs/Anagrams"  
     points: 100
     rubricpath: "_pages/Labs/Strings/lab-anagrams.md"  
-  - dtitle: "Debugging Table: First Check Due"
-    dlink: "Assignments/DebuggingTable"
-    points: 10    
-    submission_types: "written"
 - week: "9"
   date: "2"
   title: "Arrays"
