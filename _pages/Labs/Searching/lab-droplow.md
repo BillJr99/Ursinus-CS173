@@ -44,8 +44,17 @@ tags:
 
 In this lab, you will write and test functions to drop the lowest score in an `ArrayList<Double>` of test scores, and then return the average of the remaining items.
 
+### Step 0: Creating an Array of Random Values
+Since you'll be searching arrays for small items, it would be useful to have a function to generate an array of random values.  Write a function `generateRandomArray` that accepts an `int N` representing the desired size of the array.  You can create an `ArrayList` of `Double` values like this:
+
+```java
+ArrayList<Double> arr = new ArrayList<Double>(); // note the use of a capital D in the word Double
+```
+
+[Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine how to add and remove items from the `ArrayList`.  In this function, write a loop to generate `N` random numbers and add them to your `ArrayList`.  Return the `ArrayList` you just created, and now you can generate random values from your `main` function!
+
 ### Step 1: Searching the Array for the Smallest Item
-First, linearly search the array to find the index of the smallest item.  Remove the lowest item from the array, and print it.  You can print an `ArrayList` by calling `.toString()` on the `ArrayList` variable, and printing that.  [Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine to remove an item given its index.
+First, linearly search the array to find the index of the smallest item.  Remove the lowest item from the array, and print it.  You can print an `ArrayList` by calling `.toString()` on the `ArrayList` variable, and printing that.  
 
 #### Finding the Item 
 To find an item in an array, you can iterate over the array and use a conditional to check its value.
@@ -58,6 +67,8 @@ Searching for the smallest item in an array is similar to searching an array, ex
 ![Searching an array](../manim/output/ArraySearchLowest.gif)
 
 Once you have found the smallest item, return its index to `main`, and remove the item from the `ArrayList` using that index.  **Question: why must your return statement be at the very end of this search function, and not anywhere else?**
+
+**Hint:** You'll need initial values for the variables representing the smallest value and the position of the smallest value in the array.  One idea is to set these to the first position and value of the array, which would assume that the first value is the "one to beat."  
 
 ### Step 2: Counting the Number of Iterations
 In addition, count the number of times your loop iterates to find the smallest item.  You can use an `int` counter that you increment each time you execute the loop.  Following the loop, print out the count of the number of times you execute inside a loop.
