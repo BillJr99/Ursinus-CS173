@@ -58,7 +58,7 @@ arr.get(i) // this is equivalent to arr[i] for a traditional array
 arr.add(x) // appends the value x - you'll use this one in your generateRandomArray function!
 arr.remove(i) // remove the item at index i
 arr.toString() // this lets you print the array values in a System.out.println statement!
-arr.size() // this returns the number of elements in the array
+arr.size() // this returns the number of elements in the array, which is equivalent to arr.length for a traditional array
 ```
 
 Return the `ArrayList` you just created, and now you can generate random values from your `main` function!
