@@ -57,6 +57,7 @@ ArrayList<Double> arr = new ArrayList<Double>(); // note the use of a capital D 
 arr.get(i) // this is equivalent ot arr[i] for a traditional array
 arr.add(x) // appends the value x 
 arr.remove(i) // remove the item at index i
+arr.toString() // this lets you print the array values in a System.out.println statement!
 ```
 
 Return the `ArrayList` you just created, and now you can generate random values from your `main` function!
@@ -76,7 +77,7 @@ Searching for the smallest item in an array is similar to searching an array, ex
 
 Once you have found the smallest item, return its index to `main`, and remove the item from the `ArrayList` using that index.  **Question: why must your return statement be at the very end of this search function, and not anywhere else?**
 
-**Hint:** You'll need initial values for the variables representing the smallest value and the position of the smallest value in the array.  One idea is to set these to the first position and value of the array, which would assume that the first value is the "one to beat."  
+**Hint:** You'll need initial values for the variables representing the smallest value and the position of the smallest value in the array.  One idea is to set these to the first position and value of the array, which would assume that the first value is the "one to beat."  **Which index (and value) correspond to the first element of the `ArrayList`?**
 
 ### Step 2: Counting the Number of Iterations
 In addition, count the number of times your loop iterates to find the smallest item.  You can use an `int` counter that you increment each time you execute the loop.  Following the loop, print out the count of the number of times you execute inside a loop.
