@@ -54,8 +54,8 @@ ArrayList<Double> arr = new ArrayList<Double>(); // note the use of a capital D 
 [Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine how to add and remove items from the `ArrayList`.  In this function, write a loop to generate `N` random numbers and add them to your `ArrayList`.  For example, you can use your `ArrayList` as follows:
 
 ```java
-arr.get(i) // this is equivalent ot arr[i] for a traditional array
-arr.add(x) // appends the value x 
+arr.get(i) // this is equivalent to arr[i] for a traditional array
+arr.add(x) // appends the value x - you'll use this one in your generateRandomArray function!
 arr.remove(i) // remove the item at index i
 arr.toString() // this lets you print the array values in a System.out.println statement!
 ```
