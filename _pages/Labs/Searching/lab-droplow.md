@@ -51,7 +51,15 @@ Since you'll be searching arrays for small items, it would be useful to have a f
 ArrayList<Double> arr = new ArrayList<Double>(); // note the use of a capital D in the word Double
 ```
 
-[Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine how to add and remove items from the `ArrayList`.  In this function, write a loop to generate `N` random numbers and add them to your `ArrayList`.  Return the `ArrayList` you just created, and now you can generate random values from your `main` function!
+[Review](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) the other `ArrayList` functions to determine how to add and remove items from the `ArrayList`.  In this function, write a loop to generate `N` random numbers and add them to your `ArrayList`.  For example, you can use your `ArrayList` as follows:
+
+```java
+arr.get(i) // this is equivalent ot arr[i] for a traditional array
+arr.add(x) // appends the value x 
+arr.remove(i) // remove the item at index i
+```
+
+Return the `ArrayList` you just created, and now you can generate random values from your `main` function!
 
 ### Step 1: Searching the Array for the Smallest Item
 First, linearly search the array to find the index of the smallest item.  Remove the lowest item from the array, and print it.  You can print an `ArrayList` by calling `.toString()` on the `ArrayList` variable, and printing that.  
