@@ -8,7 +8,7 @@ from mailjet_rest import Client # pip install mailjet_rest
 from email.mime.text import MIMEText
 import smtplib
 
-HEADER = 'Early Warning: https://campusweb.ursinus.edu/intranet/apps/AcademicWarning/default.aspx\nExam grades\nGrading\nMidterm checkin\nAttendance Reports: https://ursinus-edu.zoom.us/account/my/report?from=11/01/2020&to=11/30/2020'
+HEADER = 'Early Warning: https://campusweb.ursinus.edu/intranet/apps/AcademicWarning/default.aspx\nExam grades\nGrading\nMidterm checkin'
 
 # https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
 def rchop(s, suffix):
