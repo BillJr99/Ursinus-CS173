@@ -4,9 +4,7 @@ permalink: /Activities/ArrayList
 title: "CS173: Intro to Computer Science - The ArrayList"
 excerpt: "CS173: Intro to Computer Science - The ArrayList"
 
-info:
-  prev: ./Arrays3
-  
+info: 
   goals: 
     - To be able to create, access, and iterate an <code>ArrayList</code>
     - To be able to explain that an <code>ArrayList</code> is a dynamic array that allows for expansion at runtime
