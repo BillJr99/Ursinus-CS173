@@ -303,6 +303,7 @@ function doReplayGet() {
                 {% endif %}
                 
                 // sleep to animate re-drawing from the beginning
+                console.log("Dispatching message " + msg + " for time " + delayTime);
                 setTimeout(function() { 
                     // call drawrect method
                     drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor); 
