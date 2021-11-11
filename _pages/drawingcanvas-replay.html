@@ -472,6 +472,8 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
 }
 
 function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
+    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor);
+    
     ctx.fillStyle = rectcolor;
     
     // Fill in that rectangle
