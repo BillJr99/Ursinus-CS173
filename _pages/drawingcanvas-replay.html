@@ -248,8 +248,6 @@ function gridListeners() {
 }
 
 {% if page.replaylink %}
-var replayReady = true;
-
 function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
     
@@ -283,9 +281,7 @@ function doReplayGet() {
             console.log("Replay Message Retrieved");
             console.log(data);
             
-            for(let i = 0; i < data.length; i++) {
-                while(!replayReady) {}
-                
+            for(let i = 0; i < data.length; i++) {                
                 row = data[i];
                 
                 id = row[0];
@@ -300,15 +296,17 @@ function doReplayGet() {
                 var rectheight = msgparts[3];
                 var rectcolor = msgparts[4];
                 
-                // call drawrect method
-                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
-
-                {% if page.replaysleepms %}
-                replayReady = false;
+                {% if page.replaysleepms %}                
+                var delayTime = {{ page.replaysleepms }} * i;
+                {% else %}
+                var delayTime = 0;
+                {% endif %}
                 
                 // sleep to animate re-drawing from the beginning
-                setTimeout(function() { replayReady = true; }, {{ page.replaysleepms }}); 
-                {% endif %}
+                setTimeout(function() { 
+                    // call drawrect method
+                    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor); 
+                 }, delayTime); 
             }
         }
     };
