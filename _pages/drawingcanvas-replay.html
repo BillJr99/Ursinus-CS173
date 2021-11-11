@@ -281,7 +281,11 @@ function doReplayGet() {
             console.log("Replay Message Retrieved");
             console.log(data);
             
+            var replayReady = true;
+            
             for(let i = 0; i < data.length; i++) {
+                while(!replayReady) {}
+                
                 row = data[i];
                 
                 id = row[0];
@@ -300,8 +304,10 @@ function doReplayGet() {
                 drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
 
                 {% if page.replaysleepms %}
+                replayReady = false;
+                
                 // sleep to animate re-drawing from the beginning
-                setTimeout(function() { }, {{ page.replaysleepms }}); 
+                setTimeout(function() { replayReady = true; }, {{ page.replaysleepms }}); 
                 {% endif %}
             }
         }
