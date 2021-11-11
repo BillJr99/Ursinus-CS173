@@ -299,8 +299,10 @@ function doReplayGet() {
                 // call drawrect method
                 drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
 
+                {% if page.replaysleepms %}
                 // sleep to animate re-drawing from the beginning
-                setTimeout(function() { }, {{ page.replaysleepms }});                
+                setTimeout(function() { }, {{ page.replaysleepms }}); 
+                {% endif %}
             }
         }
     };
