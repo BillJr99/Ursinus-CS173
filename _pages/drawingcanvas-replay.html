@@ -268,6 +268,38 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     xhr.send("data=" + message);
 }
 
+function doReplayDispatch(data, i) {
+    if(i < data.length) {
+        row = data[i];
+        
+        id = row[0];
+        timestamp = row[1];
+        msg = row[2];
+        
+        var msgparts = msg.split(',');
+        
+        var leftx = msgparts[0];
+        var topy = msgparts[1];
+        var rectwidth = msgparts[2];
+        var rectheight = msgparts[3];
+        var rectcolor = msgparts[4];
+        
+        {% if page.replaysleepms %}                
+        var delayTime = {{ page.replaysleepms }};
+        {% else %}
+        var delayTime = 0;
+        {% endif %}
+        
+        // sleep to animate re-drawing from the beginning
+        drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor); 
+        
+        setTimeout(function() { 
+            // call drawrect method
+            doReplayDispatch(data, i+1);
+         }, delayTime); 
+    }
+}
+
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "{{ page.replaylink }}/retrieve", true);
@@ -281,34 +313,7 @@ function doReplayGet() {
             console.log("Replay Message Retrieved");
             console.log(data);
             
-            for(let i = 0; i < data.length; i++) {                
-                row = data[i];
-                
-                id = row[0];
-                timestamp = row[1];
-                msg = row[2];
-                
-                var msgparts = msg.split(',');
-                
-                var leftx = msgparts[0];
-                var topy = msgparts[1];
-                var rectwidth = msgparts[2];
-                var rectheight = msgparts[3];
-                var rectcolor = msgparts[4];
-                
-                {% if page.replaysleepms %}                
-                var delayTime = {{ page.replaysleepms }} * i;
-                {% else %}
-                var delayTime = 0;
-                {% endif %}
-                
-                // sleep to animate re-drawing from the beginning
-                console.log("Dispatching message " + msg + " for time " + delayTime);
-                setTimeout(function() { 
-                    // call drawrect method
-                    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor); 
-                 }, delayTime); 
-            }
+            doReplayDispatch(data, 0);
         }
     };
     
@@ -473,7 +478,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
 
 function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
     console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor);
-    
+
     ctx.fillStyle = rectcolor;
     
     // Fill in that rectangle
