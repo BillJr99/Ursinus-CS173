@@ -248,6 +248,8 @@ function gridListeners() {
 }
 
 {% if page.replaylink %}
+var replayReady = true;
+
 function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
     
@@ -280,8 +282,6 @@ function doReplayGet() {
 
             console.log("Replay Message Retrieved");
             console.log(data);
-            
-            var replayReady = true;
             
             for(let i = 0; i < data.length; i++) {
                 while(!replayReady) {}
