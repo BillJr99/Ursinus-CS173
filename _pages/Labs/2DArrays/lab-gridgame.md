@@ -107,7 +107,7 @@ for(int i = 0; i < values.length; i++) {
 }
 ```
 
-Refer to the [File I/O Activity](../Activities/FileIO) for details on reading a file using a `Scanner`.
+Refer to the [File I/O Activity](../Activities/FileIO) for details on reading a file using a `Scanner`.  You'll end up with a nested loop here: a `while` loop to read your file (one line at a time), and one loop to iterate over each of the values you obtained by calling `line.split()`.  The inner loop is a for loop, so you'll have a counter variable, and that will be helpful when setting your board array (for example, `board[x][y] = numericValue;`).  **Which of these indices (x or y) corresponds to your inner loop counter?**  The outer loop is a `while` loop, so you don't have a counter for that other index variable, but you can make your own, and increment it each time through the `while` loop.
 
 #### Adding a File to Your Project
 If you'd like to create a file, say, `board.txt`, and add it to your project, you can click on the `Files` tab above your project in NetBeans, then right click on your project folder, choose `New`, and `Other`.  In the window that appears, select `Other` and `Empty File` to create a blank text file.  When you click Next, it will ask you for a file name, where you can specify `board.txt` or a name of your choice!
