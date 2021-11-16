@@ -37,9 +37,6 @@ info:
         - "The <code>Scanner</code> class also includes a function called <code>nextInt</code> which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range)!"
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
-        import java.nio.file.Files;
-        import java.nio.file.Paths;
-        import java.io.IOException;
         import java.io.FileNotFoundException;
         import java.io.File;
         import java.util.Scanner;
