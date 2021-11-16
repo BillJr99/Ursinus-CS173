@@ -36,7 +36,7 @@ info:
     - rtitle: "File I/O Activity"
       rlink: "../Activities/FileIO" 
   questions:
-    - "What functions would you write to help you to solve this problem?"
+    - "What additional functions would you write to help you to solve this problem?"
     
 tags:
   - arrays
