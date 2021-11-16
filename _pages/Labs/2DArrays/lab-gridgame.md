@@ -98,7 +98,7 @@ String[] words = str.split(" "); // words contains {"The", "quick", "brown", "fo
 If your values are numeric (like they are in this lab!), you can convert each value to an `int` as follows:
 
 ```java
-String str = "9 6 4 1 2 3 4 2"; // you will read this from your Scanner!
+String str = "9 6 4 1 2 3 4 2"; // you will read this from your Scanner via a while loop!
 String[] values = str.split(" ");
 for(int i = 0; i < values.length; i++) {
   String value = values[i];
