@@ -116,6 +116,14 @@ If you'd like to create a file, say, `board.txt`, and add it to your project, yo
 
 For extra credit, create three additional rules for your game that pertain to the array, and implement them on the grid.  For example, pieces whose value is equal to a certain value can move more than one square at a time, or can jump over occupied squares, or wins if there is a tie, *etc*.  Write down which rules you impelemented in your README.
 
+## Helpful Hints: Listing Your Helper Functions
+
+Think about what functions will help you to complete this lab.  For example, you might have functions like these (and more!):
+
+* `readBoard`: a function that takes in a filename (`String`), opens the file, reads it, and creates the board.  It returns an `int[][]` 2 dimensional array of `int`.
+* `printBoard`: a function that takes in the board (`int[][]`) and prints it to the screen using a [nested loop](../Activities/2DArrays).
+* `move`: a function that takes in the board, the `x` and `y` coordinate to be moved, and the direction to move, and returns the board with the updates made to move the piece.
+
 ## Exporting your Project for Submission
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
