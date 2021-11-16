@@ -58,14 +58,19 @@ info:
             public static void main(String[] args) {
                 String path = "test.txt";
                 
-                readLineByLine(path);
+                try {
+                  readLineByLine(path);
+                } catch(FileNotFoundException e) {
+                  System.err.println("File not found!");
+                  e.printStackTrace();
+                }
             }
         }
         ]]></script>          
       title: User Input
       questions:
-        - "What do you think <code>throws</code> means?"
-        - "What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to your function?"
+        - "What do you think <code>try</code> and <code>throws</code> mean?"
+        - "What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to your function?  Try it and find out!"
         - "What do you think <code>System.err</code> does?"
         
 tags:
