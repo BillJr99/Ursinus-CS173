@@ -95,6 +95,23 @@ String str = "The quick brown fox";
 String[] words = str.split(" "); // words contains {"The", "quick", "brown", "fox"}
 ```
 
+If your values are numeric (like they are in this lab!), you can convert each value to an `int` as follows:
+
+```java
+String str = "9 6 4 1 2 3 4 2"; // you will read this from your Scanner!
+String[] values = str.split(" ");
+for(int i = 0; i < values.length; i++) {
+  String value = values[i];
+  int numericValue = Integer.parseInt(value);
+  // you can set your array element to this value here
+}
+```
+
+Refer to the [File I/O Activity](../Activities/FileIO) for details on reading a file using a `Scanner`.
+
+#### Adding a File to Your Project
+If you'd like to create a file, say, `board.txt`, and add it to your project, you can click on the `Files` tab above your project in NetBeans, then right click on your project folder, choose `New`, and `Other`.  In the window that appears, select `Other` and `Empty File` to create a blank text file.  When you click Next, it will ask you for a file name, where you can specify `board.txt` or a name of your choice!
+
 ### Extra Credit (10 Points): Custom Rules
 
 For extra credit, create three additional rules for your game that pertain to the array, and implement them on the grid.  For example, pieces whose value is equal to a certain value can move more than one square at a time, or can jump over occupied squares, or wins if there is a tie, *etc*.  Write down which rules you impelemented in your README.
