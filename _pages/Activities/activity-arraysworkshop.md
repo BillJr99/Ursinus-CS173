@@ -18,7 +18,7 @@ info:
         - First sketch out a solution on paper, and implement it on paper with pseudocode.
         - Implement your solution!
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/NumberCubeTemplate?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
         
     - title: "Sample 2D Array Free Response Question"
       model: |
