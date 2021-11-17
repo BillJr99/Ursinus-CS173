@@ -47,9 +47,11 @@ tags:
 
 In this assignment [\[[^1]\], \[[^2]\]], you will practice with arrays and loops in a fun application that involves digital audio.
 
-[Download the skeleton code](../files/asmt-guitarstringsynth/GuitarStringSynth-master.zip) for this assignment. You will be editing `src/guitarstring/GuitarString.java`.
+[Download the skeleton code](../files/asmt-guitarstringsynth/GuitarStringSynth-master.zip) for this assignment.  In NetBeans, you can use the `File` menu, and select `Import Project` -> `From ZIP File` to select this file and open it.
 
-We will be using the `StdAudio` library from the Princeton [algs4cs](https://algs4.cs.princeton.edu/home/) repository. [View the documentation for this library here](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdAudio.html).
+You will be editing `src/guitarstring/GuitarString.java`.
+
+We will be using the `StdAudio` library from the Princeton [algs4cs](https://algs4.cs.princeton.edu/home/) repository. [View the documentation for this library here](https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/StdAudio.html).  These files are already imported into the project directly for you.
 
 ## Background: Digital Audio / Musical Notes
 Sound is the result of pressure waves traveling through the air. Just as our ears pick up these pressure variations and send a signal to our brain, digital microphones/ADCs are designed to turn these variations into an array of pressure samples over time (in the discussion below, we often refer to "sample" and "array index" interchangeably). Digital audio is often sampled at 44100 samples per second, which we refer to as the **sample rate** (`FS`). This means that if we want to represent 2 seconds of audio, for instance, we need an array with 88200 samples (good thing we're using arrays and don't have to define 88200 individual variables!). The reason for this is that we need a sampling frequency that's at least twice the highest frequency we want to represent. Since the highest frequency humans can hear is around 20,000hz, 44100hz is adequate. (Another fun fact about this number is it is <span>\\(2^{2} 3^{2} 5^{2} 7^{2}\\)</span>.
