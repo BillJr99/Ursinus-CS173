@@ -64,7 +64,7 @@ info:
             }
         }
         ]]></script>          
-      title: User Input
+      title: File Input
       questions:
         - "What do you think <code>try</code> and <code>throws</code> mean?"
         - "What happens if a file path that doesn't exist (or that you don't have permission to open) is passed to your function?  Try it and find out!"
