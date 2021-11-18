@@ -69,7 +69,7 @@ numrows: 10
 subcols: 5
 subrows: 3
 
-canvaswidth: 500
+canvaswidth: 5000
 canvasheight: 600
 
 colorpickerwidth: 64
@@ -427,7 +427,7 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
             label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); 
             
             // duplicate the letter i.e. AA if there are more than 26 lettered columns
-            var repeats = Math.floor(y / xlabels.length);
+            var repeats = Math.floor(xi / xlabels.length);
             for(var z = 0; z < repeats; z++) {
                 label = xlabels.charAt(xi % xlabels.length) + label;
             }
