@@ -36,7 +36,7 @@ info:
     - rtitle: "File I/O Activity"
       rlink: "../Activities/FileIO" 
   questions:
-    - "What functions would you write to help you to solve this problem?"
+    - "What additional functions would you write to help you to solve this problem?"
     
 tags:
   - arrays
@@ -95,9 +95,34 @@ String str = "The quick brown fox";
 String[] words = str.split(" "); // words contains {"The", "quick", "brown", "fox"}
 ```
 
+If your values are numeric (like they are in this lab!), you can convert each value to an `int` as follows:
+
+```java
+String str = "9 6 4 1 2 3 4 2"; // you will read this from your Scanner via a while loop!
+String[] values = str.split(" ");
+for(int i = 0; i < values.length; i++) {
+  String value = values[i];
+  int numericValue = Integer.parseInt(value);
+  // you can set your array element to this value here
+}
+```
+
+Refer to the [File I/O Activity](../Activities/FileIO) for details on reading a file using a `Scanner`.  You'll end up with a nested loop here: a `while` loop to read your file (one line at a time), and one loop to iterate over each of the values you obtained by calling `line.split()`.  The inner loop is a for loop, so you'll have a counter variable, and that will be helpful when setting your board array (for example, `board[x][y] = numericValue;`).  **Which of these indices (x or y) corresponds to your inner loop counter?**  The outer loop is a `while` loop, so you don't have a counter for that other index variable, but you can make your own, and increment it each time through the `while` loop.
+
+#### Adding a File to Your Project
+If you'd like to create a file, say, `board.txt`, and add it to your project, you can click on the `Files` tab above your project in NetBeans, then right click on your project folder, choose `New`, and `Other`.  In the window that appears, select `Other` and `Empty File` to create a blank text file.  When you click Next, it will ask you for a file name, where you can specify `board.txt` or a name of your choice!
+
 ### Extra Credit (10 Points): Custom Rules
 
 For extra credit, create three additional rules for your game that pertain to the array, and implement them on the grid.  For example, pieces whose value is equal to a certain value can move more than one square at a time, or can jump over occupied squares, or wins if there is a tie, *etc*.  Write down which rules you impelemented in your README.
+
+## Helpful Hints: Listing Your Helper Functions
+
+Think about what functions will help you to complete this lab.  For example, you might have functions like these (and more!):
+
+* `readBoard`: a function that takes in a filename (`String`), opens the file, reads it, and creates the board.  It returns an `int[][]` 2 dimensional array of `int`.
+* `printBoard`: a function that takes in the board (`int[][]`) and prints it to the screen using a [nested loop](../Activities/2DArrays).
+* `move`: a function that takes in the board, the `x` and `y` coordinate to be moved, and the direction to move, and returns the board with the updates made to move the piece.
 
 ## Exporting your Project for Submission
 
