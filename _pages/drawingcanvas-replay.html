@@ -456,6 +456,13 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     var xi = 0;
     for(var x = 0; x < bwidth; x += rwidth) {
         label = xlabels.charAt(xi % xlabels.length);
+        
+        // duplicate the letter i.e. AA if there are more than 26 lettered columns
+        var repeats = Math.floor(xi / xlabels.length);
+        for(var z = 0; z < repeats; z++) {
+            label = xlabels.charAt(xi % xlabels.length) + label;
+        }
+            
         xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
         
         //console.log(x + " (" + xi + "): " + label + " (" + rwidth + ", " + bwidth + ")");
