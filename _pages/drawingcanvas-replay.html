@@ -64,7 +64,7 @@ canvascolors:
   - color: '#86b8e6'
     show: true
   
-numcols: 5
+numcols: 35
 numrows: 10
 subcols: 5
 subrows: 3
@@ -425,6 +425,13 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
         
         for(var y = 0; y < bheight; y += rheight) {
             label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); 
+            
+            // duplicate the letter i.e. AA if there are more than 26 lettered columns
+            var repeats = Math.floor(y / xlabels.length);
+            for(var z = 0; z < repeats; z++) {
+                label = xlabels.charAt(xi % xlabels.length) + label;
+            }
+            
             ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0));
             
             yi = yi + 1;
