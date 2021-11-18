@@ -72,6 +72,9 @@ subrows: 3
 canvaswidth: 500
 canvasheight: 600
 
+colorpickerwidth: 64
+colorpickerheight: 64
+
 dogrid: true
 dofreedraw: false
 
@@ -146,7 +149,7 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 {% for i in (0..page.canvascolors.size) %}
 {% if i < page.canvascolors.size %}
 {% if page.canvascolors[i].show %}
-<canvas id="canvascolor{{ i }}" width="64" height="100" style="border:1px solid #000000;"></canvas>
+<canvas id="canvascolor{{ i }}" width="{{ page.colorpickerwidth }}" height="{{ page.colorpickerheight }}" style="border:1px solid #000000;"></canvas>
 {% endif %}
 {% endif %}
 {% endfor %}
