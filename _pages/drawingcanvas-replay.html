@@ -130,9 +130,6 @@ links:
 
 <!-- Set color palette and dimensions above according to mail merge post it posterizer colors and drawing grid, if using post-its; create and give out mail merge document -->
 
-Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
-<br><br>
-
 <canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:150 }}" height="50" style="border:0px solid #ffffff;"></canvas>
 <br>
 <div id="canvascontainer">
@@ -165,6 +162,10 @@ Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <a href="{{page.links[i].link}}">{{page.links[i].title}}</a><br>
 {% endif %}
 {% endfor %}
+<br><br>
+
+<!-- Color chooser is set by the color picker -->
+Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
 <br><br>
 
 <script type="text/javascript">
