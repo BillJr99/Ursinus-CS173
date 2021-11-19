@@ -144,18 +144,18 @@ instructionstext: Click on the instructions link below, and notice the page numb
 {% endif %}
 {% endfor %}
 
-{% if page.instructionstext %}
 <br><br>
+
+{% if page.instructionstext %}
 <strong>What to Do:</strong><br>
 {{ page.instructionstext }}
-<br><br>
 {% endif %}
 
 {% if page.instructionslink %}
-<br><br>
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
-<br><br>
 {% endif %}
+
+<br><br>
 
 {% if page.links %}
 {% for i in (0..page.links.size) %}
