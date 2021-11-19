@@ -148,18 +148,22 @@ instructionsvideo: "https://www.youtube.com/embed/7Xt_923C5S4"
 <br>
 
 {% if page.instructionstext %}
+<br>
 <strong>What to Do:</strong><br>
 {{ page.instructionstext }}
 <br>
 {% endif %}
 
 {% if page.instructionslink %}
+<br>
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
 <br>
 {% endif %}
 
 {% if page.instructionsvideo %}
+<br>
 <iframe width="{% if page.info.videowidth %}{{page.info.videowidth}}{% else %}560{% endif %}" height="{% if page.info.videoheight %}{{page.info.videoheight}}{% else %}315{% endif %}" src="{{ page.instructionsvideo }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
 {% endif %}
 
 <br>
