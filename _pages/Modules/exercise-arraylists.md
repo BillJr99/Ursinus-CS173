@@ -8,7 +8,7 @@ prev: "./Module2"
 
 info:
   points: 3
-  instructions: "Modify the Driver.java file to ."
+  instructions: "Modify the Driver.java file to create an <code>ArrayList</code> containing all prime numbers between 0 and <code>n</code>."
   goals:
     - "To create and manipulate an <code>ArrayList</code>"
     - "To iterate over an <code>ArrayList</code>"
