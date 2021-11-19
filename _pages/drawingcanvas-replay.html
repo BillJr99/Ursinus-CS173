@@ -144,18 +144,20 @@ instructionstext: Click on the instructions link below, and notice the page numb
 {% endif %}
 {% endfor %}
 
-<br><br>
+<br>
 
 {% if page.instructionstext %}
 <strong>What to Do:</strong><br>
 {{ page.instructionstext }}
+<br>
 {% endif %}
 
 {% if page.instructionslink %}
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
+<br>
 {% endif %}
 
-<br><br>
+<br>
 
 {% if page.links %}
 {% for i in (0..page.links.size) %}
@@ -165,9 +167,11 @@ instructionstext: Click on the instructions link below, and notice the page numb
 {% endfor %}
 {% endif %}
 
-<br><br>
+<br>
+
 <!-- Color chooser is set by the color picker -->
 Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
+
 <br><br>
 
 <script type="text/javascript">
