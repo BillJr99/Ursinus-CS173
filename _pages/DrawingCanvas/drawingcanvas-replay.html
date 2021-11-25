@@ -44,8 +44,9 @@ instructionslink: "./Instructions"
 instructionstext: Click on the instructions link below, and select a page number to fill in (for example, A-1).  The numbers in the grid at the top right of the page indicate the colors that you'll place on that grid square above.  So, A-1 would be at the top left of the picture.  You can select the right color using its number by clicking on it (the color palette is just above this text!), and then click on the right squares within your grid at the top to color them in.  As you and others fill in the squares together, you'll &quot;render&quot; an image on the screen!  We'll remember which squares are filled in, so check back later to see a time lapse of the finished product!
 
 instructionsvideo: "https://www.youtube.com/embed/7Xt_923C5S4"
-instructionsvideowidth: 896
-instructionsvideoheight: 504
+
+instructionswidth: 896
+instructionsheight: 504
 
 ---
 
@@ -114,7 +115,7 @@ instructionsvideoheight: 504
 
 {% if page.instructionstext %}
 <br>
-<div id="instructionstext" style="max-width:640px;">
+<div id="instructionstext" style="max-width:{{ page.instructionswidth | default: 560}}px;">
 <strong>What to Do:</strong><br>
 {{ page.instructionstext }}
 </div>
@@ -123,7 +124,7 @@ instructionsvideoheight: 504
 
 {% if page.instructionslink %}
 <br>
-<div id="instructionslink" style="max-width:640px;">
+<div id="instructionslink" style="max-width:{{ page.instructionswidth | default: 560}}px;">
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
 </div>
 <br>
@@ -131,7 +132,7 @@ instructionsvideoheight: 504
 
 {% if page.instructionsvideo %}
 <br>
-<iframe width="{% if page.instructionsvideowidth %}{{page.instructionsvideowidth}}{% else %}560{% endif %}" height="{% if page.instructionsvideoheight %}{{page.instructionsvideoheight}}{% else %}315{% endif %}" src="{{ page.instructionsvideo }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="{{ page.instructionswidth | default: 560}}" height="{{ page.instructionsheight | default: 315}}" src="{{ page.instructionsvideo }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 {% endif %}
 
