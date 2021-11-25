@@ -49,7 +49,7 @@ tags:
 
 In this project, you will propose a topic of your choosing and a group of at least 2 and up to 3 total members.  The project must be approved by the instructor before it may commence, but the topic is entirely up to you.  Multidisciplinary projects with a broader impact are encouraged, and you are welcome to collaborate with a stakeholder outside the department for inspiration on potential projects (this person is not to contribute code, only disciplinary context).
 
-In addition to the class in which you will write your `main()` function, your project should include and utilize at least one additional class with at least one constructor and at least one non-static method inside.
+In addition to the class in which you will write your `main()` function, your project should include and utilize at least one additional class with at least one constructor and at least one non-static method inside.  Your project will take input from a text file to initialize at least some of your variables.
 
 You may use git or another version control system to coordinate between your team.  **Each student shall contribute by checking in meaningful contributions to the project on the version control system.  If a version control system is not used, code sections should be commented with the initials or recognized pseudonym of the student.**
 
