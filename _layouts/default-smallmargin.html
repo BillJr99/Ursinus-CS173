@@ -10,7 +10,12 @@
   </head>
 
   <body>
-
+    <style>
+    .outersmallmargin {
+      margin:100px;
+    }    
+    </style>
+    
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
@@ -31,8 +36,10 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      {{ content }}
+    <div id="main_content_wrap" class="outersmallmargin">
+      <section id="main_content" class="inner">
+        {{ content }}
+      </section>
     </div>
 
     <!-- FOOTER  -->
