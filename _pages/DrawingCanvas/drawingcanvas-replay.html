@@ -114,14 +114,18 @@ instructionsvideoheight: 504
 
 {% if page.instructionstext %}
 <br>
+<div id="instructionstext" style="max-width:640px;">
 <strong>What to Do:</strong><br>
 {{ page.instructionstext }}
+</div>
 <br>
 {% endif %}
 
 {% if page.instructionslink %}
 <br>
+<div id="instructionslink" style="max-width:640px;">
 <a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
+</div>
 <br>
 {% endif %}
 
