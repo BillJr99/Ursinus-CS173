@@ -1,0 +1,195 @@
+---
+layout: default
+permalink: /DrawingCanvas/Replay/Instructions
+title: "Pixel Pandemonium Instructions"
+excerpt: "Pixel Pandemonium Instructions"
+
+instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_v0_composite.js"
+---
+
+<style>
+	.mono {
+		font-family:'Lucida Sans Typewriter', 'Courier New', 'monospace'; 
+		font-size: 18px; 
+		font-weight:bolder;		
+	}
+</style>
+<script language="javascript" type="text/javascript" src="{{ page.instructionsjs }}"></script>
+<script language="javascript" type="text/javascript">
+
+function showPixelMap(page)
+	{
+		var tbl = document.getElementById("pixelChart") ;
+		var topRow = '<table width="50%" border="1" cellspacing="0" cellpadding="10">' ;
+		var interior = "" ;
+		count = -1 ;
+		for(var i=0; i<3; i++)
+		{
+			var row = "<tr>" ;
+
+			for(var j=0; j<5; j++)
+			{
+				count++ ;
+				row += "<td class='mono' align=center" ;
+				row += ">" + 
+					(page=="" ? "&nbsp;" : page.uncompressed[count])
+				+ "</td>" ;
+			}
+			row += "</tr>" ;
+			interior += row ;
+		}
+		var lastPart = '</table>' ;
+		tbl.innerHTML = topRow + interior + lastPart ;
+	}
+
+function lookupPage(pages,row,col)
+{
+  // Examine each element in the interludes array, and return 
+  // the index of the first element i for which 
+  // pages[i].row == rwo and pages[i].col == col . 
+  // If item not found, return -1 ;
+
+    var i=0;
+    while( i<pages.length && 
+		  !(pages[i].row==row && pages[i].col==col) )
+    {
+		i++ ;
+    }
+    if( i==pages.length )
+        i = -1 ;
+
+    return i ;
+}
+
+
+function getPageData(pages)
+{
+	document.getElementById("pageInstructions").display = "table-cell" ;
+	
+	var col = document.getElementById("pageCol").value ; // "A" ;
+	var row = document.getElementById("pageRow").value ; // "3"  ;
+	
+	row = row.toUpperCase() ;
+	
+	var pageNum = lookupPage(pages,row,col) ;
+	if( pageNum < 0 )
+	{
+		alert("Nonexistent page, " + row + "-" + col ) ;
+		return ;
+	}
+	
+	page = pages[pageNum] ;
+	
+	document.getElementById("thePage").innerHTML = col + "-" + row ;
+	
+	uncompressed = "" ;
+	extraSpace = 5 ; // put an extra space after every 5 elements
+	for(var i=0; i<page.uncompressed.length; i++)
+	{
+		uncompressed += page.uncompressed[i] + " " ;
+		if( i%extraSpace == extraSpace-1 )
+			uncompressed += "&nbsp;" ;
+	}
+	document.getElementById("data").innerHTML = uncompressed ;
+	
+	compressed = "" ;
+	extraSpace = 2 ; // put an extra space after every 2 elements
+	for(var i=0; i<page.compressed.length; i++)
+	{
+		compressed += page.compressed[i] + " " ;
+		if( i%extraSpace == extraSpace-1 )
+			compressed += "&nbsp;" ;
+	}
+		
+	document.getElementById("compressed").innerHTML = compressed ;
+	
+	showPixelMap(page) ;
+
+}
+</script>
+	
+</head>
+
+<body>
+<p><span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span>  – an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
+<strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong></p>
+<hr>
+<p>Please assist us by preparing one page of an image, by building it one  pixel at a time.  
+	</p>
+<p>
+  <script language="javascript" type="text/javascript">
+	document.write("The image has " + numCols + " columns, from <b>A-" + 
+				   pages[numCols*numRows-1].col + 
+				   "</b>, and rows numbered from <b>1-" + numRows + "</b>")
+</script>
+</p>
+<p>
+	Select a page column and row from the drop-down menus
+	below, then click "Select Page" to get 
+	instructions for filling in the designated page.
+<br />
+	<select id="pageCol"></select>
+	<select id="pageRow"></select>
+	<input type="button" id="getPage" value="Select Page" onClick="getPageData(pages);" />
+</p>
+<script language="javascript" type="text/javascript">
+var select = document.getElementById("pageCol");
+var ch = "A".charCodeAt(0) - 1;
+for(var i=0; i<numCols; i++) 
+{
+    ch++ ;
+	var el = document.createElement("option");
+    el.textContent = String.fromCharCode(ch) ;
+    el.value = String.fromCharCode(ch) ;
+    select.appendChild(el);
+}
+select = document.getElementById("pageRow");
+for(var i=1; i<=numRows; i++) 
+{
+    var el = document.createElement("option");
+    el.textContent = i ;
+    el.value = i ;
+    select.appendChild(el) ;
+}
+</script>
+
+	
+<!--<div id="pageInstructions" style="display:none;">
+--><div id="pageInstructions" style="display:table-cell;">
+<p>
+The code provided below (&ldquo;Your Data&rdquo;) represents the 15 pixels on a grid with 3 rows and five columns, as shown below.  </p>
+
+<table border="1" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="672" valign="middle">
+		<div><strong>Your Data</strong>:   
+		  <span id="data" class="mono"></span> 
+		</div>
+	</td>
+    <td id="pixelChart" width="48" valign="middle"><p>&nbsp;</p></td>
+  </tr>
+</table>
+
+<script language="javascript" type="text/javascript">
+	showPixelMap("") ;  // draw empty table
+</script>
+
+<p>Each number represents a particular color for the pixel in that position.<br>
+  1.  Find the colors you need by viewing the color code chart.<br>
+  2.  For each pixel, click the color you need, then the position it belongs in.</p>
+<p>3.  <u>A Quick Lesson in Data Compression</u>:  Here is what your data looks like in Compressed format (each pair of numbers represents a <em>count</em> followed by a <em>color</em>, so &ldquo;3 2&rdquo; for instance, means &ldquo;3 copies of color #2&rdquo;: </p>
+<indent>
+  <div id="compressed" class="mono" style="margin-left: 20px;"> 
+	</div>
+</indent><p>&nbsp;</p>
+
+	
+<p>This is Page:
+		<span style="width:30px; text-align:center; border:solid black 1px;">
+		&nbsp;&nbsp;&nbsp;
+			<span id="thePage" class="mono">&nbsp;&nbsp;&nbsp;</span>
+		&nbsp;&nbsp;&nbsp;
+		</span>
+		&nbsp;
+	of the composite image.</p>
+</div>
