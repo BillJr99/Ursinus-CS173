@@ -1,3 +1,8 @@
+---
+paddingwidth: 25px
+minwidth: 1400
+---
+
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
@@ -9,15 +14,15 @@
 {% seo %}
   </head>
 
-  <body style="overflow: scroll; min-width: 200vw; "> <!-- added style -->
+  <body style="overflow: scroll; min-width: {{ layout.minwidth }}; "> <!-- added style -->
     <style> <!-- added outer and inner styles -->
     .outersmallmargin {
-      padding-left:25px;
-      padding-right:25px;
+      padding-left:{{ layout.paddingwidth }};
+      padding-right:{{ layout.paddingwidth }};
     }    
     .innersmallmargin {
-      padding-left:25px;
-      padding-right:25px;
+      padding-left:{{ layout.paddingwidth }};
+      padding-right:{{ layout.paddingwidth }};
     }     
     </style>
     
