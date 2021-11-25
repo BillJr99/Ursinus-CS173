@@ -103,6 +103,7 @@ instructionsheight: 504
 
 <br><br>
 
+<div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
 {% for i in (0..page.canvascolors.size) %}
 {% if i < page.canvascolors.size %}
 {% if page.canvascolors[i].show %}
@@ -110,6 +111,7 @@ instructionsheight: 504
 {% endif %}
 {% endif %}
 {% endfor %}
+</div>
 
 <br>
 
