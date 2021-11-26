@@ -496,7 +496,7 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
     var origrectheight = rectheight;
     
     // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.
-    if(xsquare && ysquare) {
+    if(typeof xsquare !== 'undefined' && typeof ysquare !== 'undefined') {
         leftx =  xsquare * (gridwidth / subcols);
         topy =  ysquare * (gridheight / subrows);
         rectwidth = (gridwidth / subcols);
