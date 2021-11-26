@@ -497,10 +497,10 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
     
     // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.
     if(typeof xsquare !== 'undefined' && typeof ysquare !== 'undefined') {
-        leftx =  xsquare * (gridwidth / subcols);
-        topy =  ysquare * (gridheight / subrows);
-        rectwidth = (gridwidth / subcols);
-        rectheight = (gridheight / subrows);
+        leftx =  xsquare * (1.0 * gridwidth / subcols);
+        topy =  ysquare * (1.0 * gridheight / subrows);
+        rectwidth = (1.0 * gridwidth / subcols);
+        rectheight = (1.0 * gridheight / subrows);
     }
     
     console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare + "; originally: " + origleftx + ", " + origtopy + ", " + origrectwidth + ", " + origrectheight);    
@@ -521,8 +521,8 @@ function fillgrid(e) {
     // What grid rectangle are we in?
     var xsquare = Math.floor(x * 1.0 / (gridwidth / subcols));
     var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
-    var leftx =  xsquare * (gridwidth / subcols);
-    var topy =  ysquare * (gridheight / subrows);
+    var leftx =  xsquare * (1.0 * gridwidth / subcols);
+    var topy =  ysquare * (1.0 * gridheight / subrows);
     
     drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value, xsquare, ysquare);
     
