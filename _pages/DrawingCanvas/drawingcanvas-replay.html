@@ -239,8 +239,8 @@ function gridListeners() {
 }
 
 {% if page.replaylink %}
-function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
-    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
+function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "{{ page.replaylink }}/insert", true);
@@ -274,6 +274,8 @@ function doReplayDispatch(data, i) {
         var rectwidth = msgparts[2];
         var rectheight = msgparts[3];
         var rectcolor = msgparts[4];
+        var xsquare = msgparts[5];
+        var ysquare = msgparts[6];
         
         {% if page.replaysleepms %}                
         var delayTime = {{ page.replaysleepms }};
@@ -282,7 +284,7 @@ function doReplayDispatch(data, i) {
         {% endif %}
         
         // sleep to animate re-drawing from the beginning
-        drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor); 
+        drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare); 
         
         setTimeout(function() { 
             // call drawrect method
@@ -328,14 +330,16 @@ function doFayeSubscribe() {
     var rectwidth = msgparts[2];
     var rectheight = msgparts[3];
     var rectcolor = msgparts[4];
+    var xsquare = msgparts[5];
+    var ysquare = msgparts[6];
     
     // call drawrect method
-    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
+    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
   });    
 }
 
-function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
-    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
+function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
     fayeclient.publish('/messages', {
       text: message
@@ -481,10 +485,14 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
     }       
 }
 
-function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
-    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor);
+function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare) {
+    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare);
 
     ctx.fillStyle = rectcolor;
+    
+    // Where is this grud square?
+    var leftx =  xsquare * (gridwidth / subcols);
+    var topy =  ysquare * (gridheight / subrows);    
     
     // Fill in that rectangle
     ctx.fillRect(leftx,topy,rectwidth,rectheight);
@@ -500,10 +508,12 @@ function fillgrid(e) {
     var y = e.offsetY || e.layerY - canvas.offsetTop;
     
     // What grid rectangle are we in?
-    var leftx = Math.floor(x * 1.0 / (gridwidth / subcols)) * (gridwidth / subcols);
-    var topy = Math.floor(y * 1.0 / (gridheight / subrows)) * (gridheight / subrows);
+    var xsquare = Math.floor(x * 1.0 / (gridwidth / subcols));
+    var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
+    var leftx =  xsquare * (gridwidth / subcols);
+    var topy =  ysquare * (gridheight / subrows);
     
-    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value);
+    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value, xsquare, ysquare);
     
     {% if page.fayelink %}
     // Send message to faye
@@ -512,7 +522,7 @@ function fillgrid(e) {
     
     {% if page.replaylink %}
     // Send to database
-    doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value);
+    doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
     {% endif %}
 }
 // ***** END OPTION: GRID SUPPORT *****
