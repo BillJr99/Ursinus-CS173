@@ -490,9 +490,11 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
 
     ctx.fillStyle = rectcolor;
     
-    // Where is this grud square?
-    var leftx =  xsquare * (gridwidth / subcols);
-    var topy =  ysquare * (gridheight / subrows);    
+    // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.
+    if(xsquare && ysquare) {
+        leftx =  xsquare * (gridwidth / subcols);
+        topy =  ysquare * (gridheight / subrows);    
+    }
     
     // Fill in that rectangle
     ctx.fillRect(leftx,topy,rectwidth,rectheight);
