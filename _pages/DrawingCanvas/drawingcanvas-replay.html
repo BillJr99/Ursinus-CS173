@@ -488,9 +488,12 @@ function makeGrid(bwidth, bheight, rwidth, rheight) {
 }
 
 function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare) {
-    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare);
-
     ctx.fillStyle = rectcolor;
+    
+    var origleftx = leftx;
+    var origtopy = topy;
+    var origrectwidth = rectwidth;
+    var origrectheight = rectheight;
     
     // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.
     if(xsquare && ysquare) {
@@ -499,6 +502,8 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
         rectwidth = (gridwidth / subcols);
         rectheight = (gridheight / subrows);
     }
+    
+    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare + "; originally: " + origleftx + ", " + origtopy + ", " + origrectwidth + ", " + origrectheight);    
     
     // Fill in that rectangle
     ctx.fillRect(leftx + {{ page.rectangleepsilon | default: 0}},topy + {{ page.rectangleepsilon | default: 0}},rectwidth - {{ page.rectangleepsilon | default: 0}},rectheight - {{ page.rectangleepsilon | default: 0}});
@@ -523,7 +528,7 @@ function fillgrid(e) {
     
     {% if page.fayelink %}
     // Send message to faye
-    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value);
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
     {% endif %}
     
     {% if page.replaylink %}
