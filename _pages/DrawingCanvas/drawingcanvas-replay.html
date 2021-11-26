@@ -495,13 +495,16 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
     var origrectwidth = rectwidth;
     var origrectheight = rectheight;
     
-    // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.
-    if(typeof xsquare !== 'undefined' && typeof ysquare !== 'undefined') {
-        leftx =  xsquare * (1.0 * gridwidth / subcols);
-        topy =  ysquare * (1.0 * gridheight / subrows);
-        rectwidth = (1.0 * gridwidth / subcols);
-        rectheight = (1.0 * gridheight / subrows);
+    // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.  Otherwise, calculate it from the coordinates given.
+    if(typeof xsquare == 'undefined' && typeof ysquare == 'undefined') {
+        xsquare = Math.floor(1.0 * leftx / rectwidth);
+        ysquare = Math.floor(1.0 * topy / rectheight);
     }
+    
+    leftx =  xsquare * (1.0 * gridwidth / subcols);
+    topy =  ysquare * (1.0 * gridheight / subrows);
+    rectwidth = (1.0 * gridwidth / subcols);
+    rectheight = (1.0 * gridheight / subrows);    
     
     console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare + "; originally: " + origleftx + ", " + origtopy + ", " + origrectwidth + ", " + origrectheight);    
     
