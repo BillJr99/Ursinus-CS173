@@ -128,8 +128,8 @@ function getPageData(pages)
 	below, then click "Select Page" to get 
 	instructions for filling in the designated page.
 <br />
-	<select id="pageCol"></select>
-	<select id="pageRow"></select>
+	<select id="pageCol" onChange="showPixelMap('');"></select>
+	<select id="pageRow" onChange="showPixelMap('');"></select>
 	<input type="button" id="getPage" value="Select Page" onClick="getPageData(pages);" />
 </p>
 <script language="javascript" type="text/javascript">
