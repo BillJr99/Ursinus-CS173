@@ -14,15 +14,15 @@ minwidth: 1400px
 {% seo %}
   </head>
 
-  <body style="overflow: scroll; min-width: {{ layout.minwidth | default: 200vw}}; "> <!-- added style -->
+  <body style="overflow: scroll; min-width: {{ layout.minwidth | default: "200vw"}}; "> <!-- added style -->
     <style> <!-- added outer and inner styles -->
     .outersmallmargin {
-      padding-left:{{ layout.paddingwidth | default: 25px }};
-      padding-right:{{ layout.paddingwidth | default: 25px}};
+      padding-left:{{ layout.paddingwidth | default: "25px" }};
+      padding-right:{{ layout.paddingwidth | default: "25px" }};
     }    
     .innersmallmargin {
-      padding-left:{{ layout.paddingwidth | default: 25px}};
-      padding-right:{{ layout.paddingwidth | default: 25px}};
+      padding-left:{{ layout.paddingwidth | default: "25px" }};
+      padding-right:{{ layout.paddingwidth | default: "25px" }};
     }     
     </style>
     
