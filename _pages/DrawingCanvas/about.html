@@ -1,0 +1,36 @@
+---
+layout: default
+permalink: /DrawingCanvas/Replay/About
+title: "About Pixel Pandemonium"
+excerpt: "About Pixel Pandemonium"
+
+instructionsvideo: "https://www.youtube.com/embed/7Xt_923C5S4"
+
+instructionswidth: 896
+instructionsheight: 504
+---
+
+<link HREF="/assets/css/drawingcanvas.css" REL="stylesheet" TYPE="text/css" /></head>
+
+<body>
+
+
+{% if page.instructionsvideo %}
+<br>
+<iframe width="{{ page.instructionswidth | default: 560}}" height="{{ page.instructionsheight | default: 315}}" src="{{ page.instructionsvideo }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+{% endif %}
+
+
+<br>
+
+
+
+<div CLASS="headerlabel">
+To add a page to the image, click the “Fill In a Page” link at the top</div>
+<br />
+<div CLASS="headerlabel">
+	To view the image being constructed, click the “See the Full Image” link at the top.
+</div>
+</body>
+</html>
