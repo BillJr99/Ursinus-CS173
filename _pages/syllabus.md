@@ -898,12 +898,7 @@ schedule:
 - week: "13"
   date: "0"
   title: "Classes and Object Data Types" 
-  link: "Activities/Classes"
-  deliverables:
-  - dtitle: "Debugging Table: Second Check Due"
-    dlink: "Assignments/DebuggingTable"
-    points: 10 
-    submission_types: "written"    
+  link: "Activities/Classes"    
   readings:
   - rtitle: "Ch. 8"
     rlink: false  
@@ -948,6 +943,11 @@ schedule:
   date: "0"
   title: "Algorithms: Sorting"
   link: "Activities/Sorting"
+  deliverables:
+  - dtitle: "Debugging Table: Second Check Due"
+    dlink: "Assignments/DebuggingTable"
+    points: 10 
+    submission_types: "written"
   readings:
   - rtitle: "Ch. 9.6.3"
     rlink: false  
