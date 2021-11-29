@@ -1308,22 +1308,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091485
 DTSTAMP:20211129T000000Z
 DTSTART;VALUE=DATE:20211129
-SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091486
-DTSTAMP:20211129T000000Z
-DTSTART;VALUE=DATE:20211129
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html\nDeliverable: Debugging Table: Second Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091487
 DTSTAMP:20211130T000000Z
 DTSTART;VALUE=DATE:20211130
 SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Handed Out
@@ -1332,7 +1323,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091488
+UID:00000000-0000-0000-0000-0192cc091487
 DTSTAMP:20211130T000000Z
 DTSTART;VALUE=DATE:20211130
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1341,7 +1332,7 @@ DESCRIPTION:\nDeliverable: Lab: Code Review Handed Out https://www.billmongan.co
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091489
+UID:00000000-0000-0000-0000-0192cc091488
 DTSTAMP:20211201T000000Z
 DTSTART;VALUE=DATE:20211201
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: ASCII Art Due
@@ -1350,7 +1341,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09148a
+UID:00000000-0000-0000-0000-0192cc091489
 DTSTAMP:20211201T000000Z
 DTSTART;VALUE=DATE:20211201
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Iris Dataset Handed Out
@@ -1359,7 +1350,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09148b
+UID:00000000-0000-0000-0000-0192cc09148a
 DTSTAMP:20211201T000000Z
 DTSTART;VALUE=DATE:20211201
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1368,7 +1359,7 @@ DESCRIPTION:\nReading: Constructors https://csawesome.runestone.academy/runeston
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09148c
+UID:00000000-0000-0000-0000-0192cc09148b
 DTSTAMP:20211203T000000Z
 DTSTART;VALUE=DATE:20211203
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -1377,12 +1368,21 @@ DESCRIPTION:\nReading: Accessors https://csawesome.runestone.academy/runestone/b
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09148c
+DTSTAMP:20211206T000000Z
+DTSTART;VALUE=DATE:20211206
+SUMMARY:CS173 Intro to Computer Science: Debugging Table: Second Check Due
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09148d
 DTSTAMP:20211206T000000Z
 DTSTART;VALUE=DATE:20211206
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Fall2021/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Fall2021/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Debugging Table: Second Check Due https://www.billmongan.com/Ursinus-CS173-Fall2021/Assignments/DebuggingTable
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
