@@ -55,7 +55,9 @@ Some specific items you might seek to highlight include:
 
 When you are finished writing your reports, exchange each with the appropriate partner.  Each partner should take turns sharing their screen and allowing the other partners to discuss the code and their reports as a group together.
 
-Remove the work you received from your partners when finished.
+Remove the work you received from your partners when finished.  Any work shared with you by a partner for this lab should not be used, shared, or viewed in any way other than for purposes of this code review lab activity.
+
+**You will submit your revised NetBeans project and a README that includes the names of your partners and the feedback you received from each of them.**
 
 ## A Word about Code Reviews
 
@@ -63,4 +65,4 @@ Sharing your code with others in a [code review](https://en.wikipedia.org/wiki/C
 
 ## Exporting your Project for Submission
 
-When you're done, write a README for the project you modified that describes the revisions you made from the reports you received.  Also include the reports you wrote for your partners, and the reports that you received from them.  Be sure to save all your files before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for the project you modified that describes the revisions you made from the reports you received.  Also include the reports you wrote for your partners, and the reports that you received from them.  Be sure to save all your files before exporting your revised NetBeans project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
