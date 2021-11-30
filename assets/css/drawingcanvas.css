@@ -133,3 +133,19 @@ pre {
 table tr td {
 	font-family: inherit;
 }
+
+a:link {
+  color: #001a19;
+}
+
+a:visited {
+  color: #001a19;
+}
+
+a:hover {
+  color: #007975;
+}
+
+a:active {
+  color: #007975;
+}
