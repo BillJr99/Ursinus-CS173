@@ -66,3 +66,13 @@ Sharing your code with others in a [code review](https://en.wikipedia.org/wiki/C
 ## Exporting your Project for Submission
 
 When you're done, write a README for the project you modified that describes the revisions you made from the reports you received.  Also include the reports you wrote for your partners, and the reports that you received from them.  Be sure to save all your files before exporting your revised NetBeans project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+
+### What To Submit
+
+In summary, your submission should include:
+
+1. The names of your partners
+2. The comments you sent to each of your partners
+3. The comments you received from each partner
+4. The revisions you made to your project
+5. Your revised project
