@@ -488,16 +488,22 @@ function fillgrid(e) {
     var xsquare = Math.floor(x * 1.0 / (gridwidth / subcols));
     var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
     
+    var pagexsquare = xsquare;
+    var pageysquare = ysquare;
+    
     // Offset the xsquare and ysquare by the row and col
     var coloffset = parseInt(document.getElementById("pageCol").selectedIndex);
-    var rowoffset = parseInt(document.getElementById("pageRow").value);
+    var rowoffset = parseInt(document.getElementById("pageRow").value) - 1;
     xsquare = xsquare + Math.floor((coloffset * subcols));
     ysquare = ysquare + Math.floor((rowoffset * subrows));
     
     var leftx =  xsquare * (1.0 * gridwidth / subcols);
     var topy =  ysquare * (1.0 * gridheight / subrows);
     
-    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value, xsquare, ysquare);
+    var pageleftx =  pagexsquare * (1.0 * gridwidth / subcols);
+    var pagetopy =  pageysquare * (1.0 * gridheight / subrows);
+    
+    drawGridSquare(pageleftx, pagetopy, gridwidth / subcols, gridheight / subrows, colorpicker.value, pagexsquare, pageysquare);
     
     {% if page.fayelink %}
     // Send message to faye
