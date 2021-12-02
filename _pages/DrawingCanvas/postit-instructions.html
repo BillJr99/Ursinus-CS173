@@ -5,6 +5,38 @@ title: "Pixel Pandemonium Instructions"
 excerpt: "Pixel Pandemonium Instructions"
 
 instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_v0_composite.js"
+
+canvascolors:
+  - color: '#ffffff'
+    show: true
+  - color: '#f59534'
+    show: true
+  - color: '#e03a7b'
+    show: true
+  - color: '#cfd143'
+    show: true
+  - color: '#c6d4c7'
+    show: true
+  - color: '#c1de4b'
+    show: true
+  - color: '#358b8c'
+    show: true
+  - color: '#2482c0'
+    show: true    
+    
+numcols: 1
+numrows: 1
+subcols: 5
+subrows: 3
+
+canvaswidth: 800
+canvasheight: 600
+
+colorpickerwidth: 64
+colorpickerheight: 64
+
+fayelink: "https://FayePubSub.jpopyack.repl.co"
+replaylink: "https://ReplayDataStore.jpopyack.repl.co"
 ---
 
 <style>
@@ -13,6 +45,20 @@ instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_
 		font-size: 18px; 
 		font-weight:bolder;		
 	}
+    
+    #canvascontainer {
+     width: {{ page.canvaswidth | plus:100 }}px;
+     height: {{ page.canvasheight | plus:10 }}px;
+    }    
+    
+    #maincanvascontainer { 
+     float: left;
+     width: {{ page.canvaswidth }}px;
+     height: {{ page.canvasheight }}px;
+     margin: 0;
+     padding: 0;
+     display: inline-block;
+    }    
 </style>
 <script language="javascript" type="text/javascript" src="{{ page.instructionsjs }}"></script>
 <script language="javascript" type="text/javascript">
@@ -179,6 +225,299 @@ The code provided below (&ldquo;Your Data&rdquo;) represents the 15 pixels on a 
   <div id="compressed" class="mono" style="margin-left: 20px;"> 
 	</div>
 </indent><p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+<!-- BEGIN CANVAS -->
+<!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
+
+<!-- Set color palette and dimensions above according to mail merge post it posterizer colors and drawing grid, if using post-its; create and give out mail merge document -->
+
+<br>
+<div id="canvascontainer">
+<div id="maincanvascontainer">
+<canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
+</div>
+</div>
+
+<br><br>
+
+<div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
+{% if page.canvascolors[i].show %}
+<canvas id="canvascolor{{ i }}" width="{{ page.colorpickerwidth }}" height="{{ page.colorpickerheight }}" style="border:1px solid #000000;"></canvas>
+{% endif %}
+{% endif %}
+{% endfor %}
+</div>
+
+<br>
+
+
+
+<script type="text/javascript">
+var canvas = document.getElementById('drawCanvas');
+var ctx = canvas.getContext('2d');
+var colorpicker = document.getElementById('colorpicker');
+
+ctx.lineWidth = '3';
+
+// palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
+var palettes = [
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
+{% if page.canvascolors[i].show %}
+"{{ page.canvascolors[i].color }}", 
+{% endif %}
+{% endif %}
+{% endfor %}
+];
+
+function colorpaletteclicked(e) {
+    var id = e.target.id;
+    
+    id = id.replace("canvascolor", "");
+    
+    id = parseInt(id);
+    
+    chosencolor = palettes[id];
+    
+    colorpicker.value = chosencolor;
+    
+    //console.log(id);
+    //console.log(chosencolor);
+}
+
+function makeColorPalette(colorcanvas, fillcolor, label) {
+    var colorctx = colorcanvas.getContext('2d');
+    
+    // Color it in with the predefined palette
+    colorctx.fillStyle = fillcolor;
+    colorctx.fillRect(0, 0, colorcanvas.width, colorcanvas.height);
+    
+    // Label the color with a number
+    colorctx.font = "18px Arial";
+    if(fillcolor == '#000000') {
+        colorctx.fillStyle = "white";    
+        colorctx.strokeStyle = "white";         
+    } else {
+        colorctx.fillStyle = "black";    
+        colorctx.strokeStyle = "black"; 
+    }
+    colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
+}
+
+function makeColorPalettes() {
+    for(var i = 0; i < palettes.length; i++) {
+        var colorcanvas = document.getElementById('canvascolor' + i);
+        makeColorPalette(colorcanvas, palettes[i], i);
+        
+        // Add a listener here that, when clicked, sets the main color picker color value
+        colorcanvas.addEventListener('mousedown', colorpaletteclicked, false);        
+    }
+}
+
+makeColorPalettes();
+
+// canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
+var numcols = {{ page.numcols }};
+var numrows = {{ page.numrows }};
+var gridwidth = {{ page.canvaswidth }} / numcols;
+var gridheight = {{ page.canvasheight }} / numrows;
+
+// subcols and subrows provide subsquares within each grid element for the individual fill-ins
+var subcols = {{ page.subcols }};
+var subrows = {{ page.subrows }};
+
+function gridListeners() {
+    canvas.addEventListener('mousedown', fillgrid, false);
+}
+
+{% if page.replaylink %}
+function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "{{ page.replaylink }}/insert", true);
+    
+    xhr.onreadystatechange = function () {
+        if (this.readyState != 4) return;
+
+        if (this.status == 200) {
+            var data = JSON.parse(this.responseText);
+
+            console.log("Replay Message Sent");
+        }
+    };
+    
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhr.send("data=" + message);
+}
+{% endif %}
+
+{% if page.fayelink %}
+// Pub-sub
+var fayeclient = new Faye.Client('{{ page.fayelink }}');
+
+function doFayeSubscribe() {
+  fayeclient.subscribe('/messages', function(message) {
+    // Ignore incoming messages
+    console.log("Message: " + message.text);
+  });    
+}
+
+function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
+    
+    fayeclient.publish('/messages', {
+      text: message
+    });     
+}
+{% endif %}
+
+// call this to initialize the grid; comment to disable
+makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
+
+// call this to add click listener to fill in rectangle; comment to disable
+gridListeners();
+
+{% if page.fayelink %}
+// call this to set up pub-sub; comment to disable
+doFayeSubscribe();
+{% endif %}
+
+// https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
+// bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
+function makeGrid(bwidth, bheight, rwidth, rheight) {
+    ctx.strokeStyle = "black";
+    
+    var xlines = -1;
+    
+    for (var x = 0; x <= bwidth + 1; x += rwidth / subcols) {
+        xlines = xlines + 1;
+        
+        if(xlines == subcols) {
+            xlines = 0;
+        }
+        
+        if(xlines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+        
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, bheight);
+        ctx.stroke();
+    }
+
+    var ylines = -1;
+    
+    for (var y = 0; y <= bheight + 1; y += rheight / subrows) {
+        ylines = ylines + 1;
+        
+        if(ylines == subrows) {
+            ylines = 0;
+        }
+    
+        if(ylines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+                
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(bwidth, y);
+        ctx.stroke();
+    }
+}
+
+function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare) {
+    ctx.fillStyle = rectcolor;
+    
+    var origleftx = leftx;
+    var origtopy = topy;
+    var origrectwidth = rectwidth;
+    var origrectheight = rectheight;
+    
+    // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.  Otherwise, calculate it from the coordinates given.
+    if(typeof xsquare == 'undefined' && typeof ysquare == 'undefined') {
+        xsquare = Math.floor(1.0 * leftx / rectwidth);
+        ysquare = Math.floor(1.0 * topy / rectheight);
+    }
+    
+    leftx =  xsquare * (1.0 * gridwidth / subcols);
+    topy =  ysquare * (1.0 * gridheight / subrows);
+    rectwidth = (1.0 * gridwidth / subcols);
+    rectheight = (1.0 * gridheight / subrows);    
+    
+    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare + "; originally: " + origleftx + ", " + origtopy + ", " + origrectwidth + ", " + origrectheight);    
+    
+    // Fill in that rectangle
+    ctx.fillRect(leftx + {{ page.rectangleepsilon | default: 0}},topy + {{ page.rectangleepsilon | default: 0}},rectwidth - {{ page.rectangleepsilon | default: 0}},rectheight - {{ page.rectangleepsilon | default: 0}});
+}
+
+function fillgrid(e) {
+    if(e.button != 0) { // left click only
+        return;
+    }
+    
+    // cross-browser canvas coordinates
+    var x = e.offsetX || e.layerX - canvas.offsetLeft;
+    var y = e.offsetY || e.layerY - canvas.offsetTop;
+    
+    // What grid rectangle are we in?
+    var xsquare = Math.floor(x * 1.0 / (gridwidth / subcols));
+    var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
+    
+    // Offset the xsquare and ysquare by the row and col
+    xsquare = xsquare + Math.floor((col * (gridwidth / subcols)));
+    ysquare = ysquare + Math.floor((row * (gridheight / subrows)));
+    
+    var leftx =  xsquare * (1.0 * gridwidth / subcols);
+    var topy =  ysquare * (1.0 * gridheight / subrows);
+    
+    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value, xsquare, ysquare);
+    
+    {% if page.fayelink %}
+    // Send message to faye
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
+    {% endif %}
+    
+    {% if page.replaylink %}
+    // Send to database
+    doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
+    {% endif %}
+}
+</script>
+
+<!-- END CANVAS -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 <p>This is Page:
