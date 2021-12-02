@@ -76,11 +76,13 @@ rectangleepsilon: 2
 
 function showPixelMap(page)
 	{
-        // clear the text boxes
-        document.getElementById("thePage").innerHTML = "";
-        document.getElementById("data").innerHTML = "";
-        document.getElementById("compressed").innerHTML = "";
-
+        if(page === '') {
+            // clear the text boxes
+            document.getElementById("thePage").innerHTML = "";
+            document.getElementById("data").innerHTML = "";
+            document.getElementById("compressed").innerHTML = "";
+        }
+        
 		var tbl = document.getElementById("pixelChart") ;
 		var topRow = '<table width="50%" border="1" cellspacing="0" cellpadding="10">' ;
 		var interior = "" ;
