@@ -182,8 +182,8 @@ function getPageData(pages)
 	below, then click "Select Page" to get 
 	instructions for filling in the designated page.
 <br />
-	<select id="pageCol" onChange="showPixelMap('');"></select>
-	<select id="pageRow" onChange="showPixelMap('');"></select>
+	<select id="pageCol" onChange="showPixelMap(''); makeGrid(canvas.width, canvas.height, gridwidth, gridheight);"></select>
+	<select id="pageRow" onChange="showPixelMap(''); makeGrid(canvas.width, canvas.height, gridwidth, gridheight);"></select>
 	<input type="button" id="getPage" value="Select Page" onClick="getPageData(pages);" />
 </p>
 <script language="javascript" type="text/javascript">
@@ -408,6 +408,9 @@ doFayeSubscribe();
 // https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
 // bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
 function makeGrid(bwidth, bheight, rwidth, rheight) {
+    // clear the original canvas
+    ctx.clearRect(0, 0, gridwidth, gridheight);
+
     ctx.strokeStyle = "black";
     
     var xlines = -1;
