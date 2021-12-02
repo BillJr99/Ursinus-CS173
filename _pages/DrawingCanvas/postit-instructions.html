@@ -489,11 +489,10 @@ function fillgrid(e) {
     var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
     
     // Offset the xsquare and ysquare by the row and col
-    var coloffset = document.getElementById("pageCol").value;
-    coloffset = parseInt(coloffset.charCodeAt(0)) - 65;
+    var coloffset = parseInt(document.getElementById("pageCol").selectedIndex);
     var rowoffset = parseInt(document.getElementById("pageRow").value);
-    xsquare = xsquare + Math.floor((coloffset * (gridwidth / subcols)));
-    ysquare = ysquare + Math.floor((rowoffset * (gridheight / subrows)));
+    xsquare = xsquare + Math.floor((coloffset * subcols));
+    ysquare = ysquare + Math.floor((rowoffset * subrows));
     
     var leftx =  xsquare * (1.0 * gridwidth / subcols);
     var topy =  ysquare * (1.0 * gridheight / subrows);
