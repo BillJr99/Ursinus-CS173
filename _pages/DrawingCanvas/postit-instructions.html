@@ -60,6 +60,14 @@ replaylink: "https://ReplayDataStore.jpopyack.repl.co"
      display: inline-block;
     }    
 </style>
+
+{% if page.fayelink %}
+<!-- Run corresponding repl.it -->
+<script type="text/javascript" 
+        src="{{ page.fayelink }}/faye/client.js">
+        </script>
+{% endif %}
+
 <script language="javascript" type="text/javascript" src="{{ page.instructionsjs }}"></script>
 <script language="javascript" type="text/javascript">
 
