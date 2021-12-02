@@ -489,8 +489,9 @@ function fillgrid(e) {
     var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
     
     // Offset the xsquare and ysquare by the row and col
-    var coloffset = int(document.getElementById("pageCol").value);
-    var rowoffset = int(document.getElementById("pageRow").value);
+    var coloffset = document.getElementById("pageCol").value;
+    coloffset = parseInt(coloffset.charCodeAt(0)) - 65;
+    var rowoffset = parseInt(document.getElementById("pageRow").value);
     xsquare = xsquare + Math.floor((coloffset * (gridwidth / subcols)));
     ysquare = ysquare + Math.floor((rowoffset * (gridheight / subrows)));
     
