@@ -250,6 +250,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
     xhr.send("data=" + message);
 }
+{% endif %}
 
 function doReplayDispatch(data, i) {
     if(i < data.length) {
@@ -284,7 +285,6 @@ function doReplayDispatch(data, i) {
          }, delayTime); 
     }
 }
-{% endif %}
 
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
