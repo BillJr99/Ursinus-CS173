@@ -45,6 +45,8 @@ instructionsheight: 504
 
 rectangleepsilon: 1
 
+clickable: true
+
 ---
 
 <style>
@@ -149,6 +151,7 @@ var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
+{% if page.clickable %}
 // palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
 var palettes = [
 {% for i in (0..page.canvascolors.size) %}
@@ -205,6 +208,7 @@ function makeColorPalettes() {
 }
 
 makeColorPalettes();
+{% endif %}
 
 {% if page.dogrid %}
 // ***** OPTION: GRID SUPPORT *****
@@ -221,6 +225,7 @@ var gridheight = {{ page.canvasheight }} / numrows;
 var subcols = {{ page.subcols }};
 var subrows = {{ page.subrows }};
 
+{% if page.clickable %}
 function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
 }
@@ -279,6 +284,7 @@ function doReplayDispatch(data, i) {
          }, delayTime); 
     }
 }
+{% endif %}
 
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
@@ -325,6 +331,7 @@ function doFayeSubscribe() {
   });    
 }
 
+{% if page.clickable %}
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
@@ -333,12 +340,15 @@ function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorv
     });     
 }
 {% endif %}
+{% endif %}
 
 // call this to initialize the grid; comment to disable
 makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
 
+{% if page.clickable %}
 // call this to add click listener to fill in rectangle; comment to disable
 gridListeners();
+{% endif %}
 
 {% if page.fayelink %}
 // call this to set up pub-sub; comment to disable
@@ -497,6 +507,7 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
     ctx.fillRect(leftx + {{ page.rectangleepsilon | default: 0}},topy + {{ page.rectangleepsilon | default: 0}},rectwidth - {{ page.rectangleepsilon | default: 0}},rectheight - {{ page.rectangleepsilon | default: 0}});
 }
 
+{% if page.clickable %}
 function fillgrid(e) {
     if(e.button != 0) { // left click only
         return;
@@ -524,6 +535,7 @@ function fillgrid(e) {
     doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
     {% endif %}
 }
+{% endif %}
 // ***** END OPTION: GRID SUPPORT *****
 {% endif %}
 
@@ -535,6 +547,7 @@ var isActive = false;
 // array to collect coordinates for free drawing
 var plots = [];
 
+{% if page.clickable %}
 function freeDrawListeners() {
     canvas.addEventListener('mousedown', startDraw, false);
     canvas.addEventListener('mousemove', draw, false);
@@ -589,6 +602,7 @@ function endDraw(e) {
   // empty the array
   plots = [];
 }
+{% endif %}
 // ***** END OPTION: FREE DRAW SUPPORT *****
 {% endif %}
 </script>
