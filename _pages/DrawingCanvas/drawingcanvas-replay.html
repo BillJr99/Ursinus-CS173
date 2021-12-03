@@ -98,6 +98,7 @@ clickable: false
 
 <br><br>
 
+{% if page.clickable %}
 <div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
 {% for i in (0..page.canvascolors.size) %}
 {% if i < page.canvascolors.size %}
@@ -109,6 +110,7 @@ clickable: false
 </div>
 
 <br>
+{% endif %}
 
 {% if page.instructionstext %}
 <br>
