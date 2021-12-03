@@ -231,8 +231,10 @@ var subrows = {{ page.subrows }};
 function gridListeners() {
     canvas.addEventListener('mousedown', fillgrid, false);
 }
+{% endif %}
 
 {% if page.replaylink %}
+{% if page.clickable %}
 function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
