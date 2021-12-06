@@ -40,6 +40,8 @@ replaylink: "https://ReplayDataStore.jpopyack.repl.co"
 
 rectangleepsilon: 2
 
+surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
+
 ---
 
 <style>
@@ -246,6 +248,12 @@ The code provided below (&ldquo;Your Data&rdquo;) represents the {{ page.subrows
   <div id="compressed" class="mono" style="margin-left: 20px;"> 
 	</div>
 </indent><p>&nbsp;</p>
+
+{% if page.surveylink %}
+<p>
+Please take a <a href="{{ page.surveylink }}">short survey</a> about this activity to help us in the development of this activity!
+</p>
+{% endif %}
 
 <p>This is Page:
 		<span style="width:30px; text-align:center; border:solid black 1px;">
