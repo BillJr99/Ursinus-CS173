@@ -153,11 +153,13 @@ finishedvideos:
 <br><br>
 
 {% if page.finishedvideos %}
+<div style="margin-left: 80px;">
 <h2>See Your Finished Images Here!</h2>
 {% for finishedvideo in page.finishedvideos %}
 <iframe width="{{finishedvideo.width}}" height="{{finishedvideo.height}}" src="{{finishedvideo.link}}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br><br>
 {% endfor %}
+</div>
 {% endif %}
 
 <script type="text/javascript">
