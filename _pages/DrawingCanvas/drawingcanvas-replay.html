@@ -47,10 +47,10 @@ rectangleepsilon: 1
 
 clickable: false
 
-finishedvideos:
-  - link: "https://www.youtube.com/embed/iyVo0tj_Ftg"
-    width: 896
-    height: 504
+finishedvideo: 
+  - link: "./Reveal"
+    text: "If you participated prior to December 9, 2021, click to see your finished videos here!"
+
 ---
 
 <style>
@@ -150,17 +150,13 @@ finishedvideos:
 <input type="color" id="colorpicker" name="colorpicker" value="#ff0000" style="visibility: hidden">
 {% endif %}
 
-<br><br>
-
 {% if page.finishedvideos %}
-<div style="margin-left: 80px;">
-<h2>See Your Finished Images Here!</h2>
-{% for finishedvideo in page.finishedvideos %}
-<iframe width="{{finishedvideo.width}}" height="{{finishedvideo.height}}" src="{{finishedvideo.link}}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br><br>
-{% endfor %}
-</div>
+<a href="{{page.finishedvideo.link}}">{{page.finishedvideo.text}}</a>
 {% endif %}
+
+
+<br><br>
 
 <script type="text/javascript">
 var canvas = document.getElementById('drawCanvas');
