@@ -133,6 +133,13 @@ finishedvideo:
 <br>
 {% endif %}
 
+{% if page.finishedvideo %}
+<center>
+<a href="{{page.finishedvideo.link}}">{{page.finishedvideo.text}}</a>
+</center>
+<br>
+{% endif %}
+
 <br>
 
 {% if page.links %}
@@ -148,13 +155,6 @@ finishedvideo:
 {% if page.clickable %}
 <!-- Color chooser is set by the color picker -->
 <input type="color" id="colorpicker" name="colorpicker" value="#ff0000" style="visibility: hidden">
-{% endif %}
-
-{% if page.finishedvideo %}
-<br><br>
-<center>
-<a href="{{page.finishedvideo.link}}">{{page.finishedvideo.text}}</a>
-</center>
 {% endif %}
 
 
