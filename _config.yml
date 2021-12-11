@@ -1,6 +1,6 @@
 plugins:
   - jekyll-relative-links
-  - jekyll-target-blank
+#  - jekyll-target-blank
   
 relative_links:
   enabled: true
