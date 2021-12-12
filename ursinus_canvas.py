@@ -702,6 +702,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
         
         # Add course resources to first day entry
         if scheduleitems == 0:
+            if 'course_homepage' in postdict['info']:
+                inputdict = {}
+                inputdict['title'] = "Course Homepage"
+                inputdict['type'] = "ExternalUrl"
+                inputdict['external_url'] = postdict['info']['course_homepage']
+                inputdict['new_tab'] = True
+                inputdict['published'] = True
+                add_module_item(module, inputdict) 
+                
             if 'class_notebook' in postdict['info']:
                 inputdict = {}
                 inputdict['title'] = "Access the Class Notebook"
@@ -716,6 +725,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                 inputdict['title'] = "Access the Class Group Chat"
                 inputdict['type'] = "ExternalUrl"
                 inputdict['external_url'] = postdict['info']['chatlink']
+                inputdict['new_tab'] = True
+                inputdict['published'] = True
+                add_module_item(module, inputdict) 
+
+            if 'issspecifictutoring' in postdict['info']:
+                inputdict = {}
+                inputdict['title'] = "ISS Group Tutoring and Individual Tutoring Sign-Up"
+                inputdict['type'] = "ExternalUrl"
+                inputdict['external_url'] = postdict['info']['issspecifictutoring']
                 inputdict['new_tab'] = True
                 inputdict['published'] = True
                 add_module_item(module, inputdict)                
