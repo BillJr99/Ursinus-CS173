@@ -506,6 +506,10 @@ boilerplate:
     <li><script language="JavaScript">document.write(getFullDay("{{officehour.day}}"));</script>s from {{officehour.starttime}} to {{officehour.endtime}} in {{officehour.location}}</li>
     {% endfor %}
     {% if item.officehours %}</ul>{% endif %}
+    {% if item.officehourssignup %}
+    <br>
+    <a href="{{item.officehourssignup}}">Sign up for a one-on-one appointment during my office hours!</a>
+    {% endif %}
     </td>
     </tr>
 
