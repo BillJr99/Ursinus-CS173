@@ -270,13 +270,22 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09140f
 DTSTAMP:20220126T000000Z
 DTSTART;VALUE=DATE:20220126
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
+SUMMARY:CS173 Intro to Computer Science: Exercise: The NetBeans IDE Software Environment
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091410
+DTSTAMP:20220126T000000Z
+DTSTART;VALUE=DATE:20220126
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
+LOCATION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091411
 DTSTAMP:20220128T000000Z
 DTSTART;VALUE=DATE:20220128
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -285,25 +294,25 @@ DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091411
+UID:00000000-0000-0000-0000-0192cc091412
 DTSTAMP:20220131T000000Z
 DTSTART;VALUE=DATE:20220131
-SUMMARY:CS173 Intro to Computer Science: Exercise: The NetBeans IDE Software Environment
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Intro to NetBeans Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091412
+UID:00000000-0000-0000-0000-0192cc091413
 DTSTAMP:20220131T000000Z
 DTSTART;VALUE=DATE:20220131
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module
+DESCRIPTION:\nDeliverable: Programming Assignment: Intro to NetBeans Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091413
+UID:00000000-0000-0000-0000-0192cc091414
 DTSTAMP:20220201T000000Z
 DTSTART;VALUE=DATE:20220201
 SUMMARY:CS173 Intro to Computer Science: Lab: Kepler's Third Law Handed Out
@@ -312,7 +321,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091414
+UID:00000000-0000-0000-0000-0192cc091415
 DTSTAMP:20220201T000000Z
 DTSTART;VALUE=DATE:20220201
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Expressions - Arithmetic
@@ -321,7 +330,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091415
+UID:00000000-0000-0000-0000-0192cc091416
 DTSTAMP:20220201T000000Z
 DTSTART;VALUE=DATE:20220201
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -330,21 +339,12 @@ DESCRIPTION:\nReading: Using the Math Class https://csawesome.runestone.academy/
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091416
-DTSTAMP:20220202T000000Z
-DTSTART;VALUE=DATE:20220202
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Intro to NetBeans Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091417
 DTSTAMP:20220202T000000Z
 DTSTART;VALUE=DATE:20220202
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html\nDeliverable: Programming Assignment: Intro to NetBeans Due https://www.billmongan.com/Ursinus-CS173-Spring2021/Assignments/NetBeans
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2021/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
