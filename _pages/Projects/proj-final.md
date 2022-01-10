@@ -10,37 +10,27 @@ info:
   goals:
     - To demonstrate the fundamental concepts of programming in a unified project
     - To work effectively as a member of a small group using collaborative tools for software development
-  rubric:
-    - weight: 40
-      description: Algorithm Implementation
-      preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
-      beginning: The algorithm fails on the test inputs due to one or more minor issues
-      progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but includes only a single class, or would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
-      proficient: A reasonable algorithm with multiple classes is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
-    - weight: 20
-      description: Test Cases
-      preemerging: Testing was performed outside of the unit test framework, or not performed at all
-      beginning: Trivial test cases are provided in a unit test framework
-      progressing: Test cases that cover some, but not all, boundary cases and branches of the program are provided
-      proficient: Test cases that cover all boundary cases and branches of the program are provided
-    - weight: 20
-      description: Code Quality and Documentation
-      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
-      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
-      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
-      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
-    - weight: 10
-      description: Presentation and Participation
-      preemerging: No presentation was provided, the presentation could not be viewed, or the presentation was not on the subject of the final project; one or more students did not participate in the project and the matter was not addressed by the team to the instructor
-      beginning: A presentation was provided that summarizes the project, but does not provide a demo or discuss broader impacts; each student participated in a meangful way
-      progressing: A presentation was provided that summarizes the project, provides a demo, and discusses broader impacts; all students participated in either the project or the presentation
-      proficient: A presentation was provided that that summarizes the project, provides a demo, discusses broader impacts, and highlights challenges overcome and methodologies for developing the system as a group; all students participated in both the project and the presentation
-    - weight: 10
-      description: Writeup and Submission
-      preemerging: An incomplete submission is provided
-      beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup)
-      progressing: The program is submitted according to the directions with a minor omission or correction needed
-      proficient: The program is submitted according to the directions, including a readme writeup describing the solution
+  contract:
+    a: 
+    - "Each item required for a grade of B is included"
+    - "The project contains at least one class with a constructor, accessor/mutator functions, and private variables"
+    - "The group consists of at least 2 and no more than 3 members"
+    - "The projet submitted was substantially consistent with the project proposed to and approved by the Professor"
+    b:
+    - "Each item required for a grade of C is included"
+    - "The project includes appropriate unit tests, including multiple tests for each function as required to demonstrate functionality with boundary case inputs"
+    - "An appropriate README writeup is included"
+    - "A project proposal was submitted and approved by the Professor"
+    - "Code is appropriately documented including javadoc documentation for each function"
+    c:
+    - "Each item required for a grade of D is included"
+    - "Each member of the group has a speaking role during the presentation"
+    - "The project includes a loop and a conditional"
+    - "The project uses functions to break up complex functionality, such that the main function is relatively small in size and scope"
+    - "Code is properly indented and spaced"
+    - "Variable and function names are meaningful and consistently written in terms of character case"
+    d:
+    - "Each member of the group makes meaningful contributions to the implementation of the project, demonstrated through version control commits or comments in the code"
 
 tags:
   - project

@@ -24,7 +24,7 @@ info:
       proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
     - weight: 70
       description: Writeup and Submission
-      preemerging: An incomplete submission is provided
+      preemerging: An incomplete submission is provided, or the README file submitted is blank
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup or missing answers to written questions)
       progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
@@ -67,7 +67,7 @@ You can submit this project as usual, by adding your README and exporting the pr
 
 ## Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](http://www.billmongan.com/Ursinus-CS173-Spring2021/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
 
 ## Trivia
 

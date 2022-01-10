@@ -25,7 +25,7 @@ info:
       proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
     - weight: 10
       description: Writeup and Submission
-      preemerging: An incomplete submission is provided
+      preemerging: An incomplete submission is provided, or the README file submitted is blank
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup or missing answers to written questions)
       progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions

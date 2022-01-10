@@ -81,7 +81,7 @@ info:
       fstarttime: "TBD"
       fendtime: "TBD"
       froom: "TBD"        
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 4% per day if submitted before 10:59 PM Eastern Time on the day submitted.  Each student will receive a total of 10 days for the semester with which to waive these grade reductions; for example, one assignment may be submitted 10 days late, or two assignments may be submitted 5 days late, with no grade reduction.  Sould an exemption to this policy be requested and granted, a 5% per day reduction will be applied.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 4% per day if submitted before 10:59 PM Eastern Time on the day submitted.  Each student will receive a total of 10 &quot;slack days&quot; for the semester with which to waive these grade reductions; for example, one assignment may be submitted 10 days late, or two assignments may be submitted 5 days late, with no grade reduction.  Sould an exemption to this policy be requested and granted, a 5% per day reduction will be applied.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam.  Students with accommodations will receive additional &quot;slack days&quot; as specified within the accommodations letter." 
   late_penalty_per_period: 4
   late_penalty_period: "day"
   miscpolicies:
@@ -171,11 +171,9 @@ grade_breakdown:
 - category: "Labs"
   weight: "25%"
 - category: "Pre-Lab Exercises"
-  weight: "15%"
+  weight: "20%"
 - category: "Quizzes"
   weight: "10%"  
-- category: "Debugging Table"
-  weight: "5%"
 - category: "Final Project"
   weight: "10%"  
 
@@ -480,6 +478,10 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_conditionals.zip"
+  - dtitle: "Exercise: Problets - Function - Function behavior"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"     
 - week: "6"
   date: "0"
   title: "Strings"
@@ -492,10 +494,6 @@ schedule:
   - rtitle: "Strings Review"
     rlink: "Modules/Strings/Module"  
   deliverables:
-  - dtitle: "Exercise: Problets - Function - Function behavior"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written" 
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
     points: 100  
@@ -684,10 +682,6 @@ schedule:
     dlink: "Modules/Strings/Exercise2"
     points: 3 
     submission_types: "noupload"    
-  - dtitle: "Debugging Table: First Check Handed Out"
-    dlink: "Assignments/DebuggingTable"
-    points: 10        
-    submission_types: "written"
 - week: "10"
   date: "3"
   title: "File I/O"
@@ -789,10 +783,6 @@ schedule:
     dlink: "Labs/DropLowest"
     points: 100
     rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
-  - dtitle: "Debugging Table: First Check Due"
-    dlink: "Assignments/DebuggingTable"
-    points: 10    
-    submission_types: "written"     
 - week: "12"
   date: "2"  
   title: "2D Arrays"
@@ -844,14 +834,6 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_arrays.zip"
-- week: "13"
-  date: "1"
-  title: "Lab: 2D Arrays"
-  deliverables:
-  - dtitle: "Lab: 2D Array Board Game Handed Out"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
   - dtitle: "Programming Assignment: Guitar String Synthesis Due"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100   
@@ -859,7 +841,15 @@ schedule:
   - dtitle: "Programming Assignment: ASCII Art Handed Out"
     dlink: "Assignments/ASCIIArt" 
     points: 100    
-    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"    
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"     
+- week: "13"
+  date: "1"
+  title: "Lab: 2D Arrays"
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Handed Out"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"        
 - week: "13"
   date: "2"
   title: "Algorithms: Searching" 
@@ -874,10 +864,6 @@ schedule:
     dlink: "Modules/ArrayLists/Module"    
     points: 3
     submission_types: "noupload"    
-  - dtitle: "Debugging Table: Second Check Handed Out"
-    dlink: "Assignments/DebuggingTable"
-    points: 10 
-    submission_types: "written"     
 - week: "13"
   date: "3" 
   title: "Algorithms: Searching"
@@ -894,6 +880,11 @@ schedule:
   date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"    
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Due"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"  
   readings:
   - rtitle: "Ch. 8"
     rlink: false  
@@ -904,11 +895,15 @@ schedule:
 - week: "14"
   date: "1"
   title: "Lab: Ethical Case Studies"  
-  deliverables:
-  - dtitle: "Lab: 2D Array Board Game Due"
-    dlink: "Labs/GridGame"
+  deliverables: 
+  - dtitle: "Programming Assignment: ASCII Art Due"
+    dlink: "Assignments/ASCIIArt" 
     points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"  
+  - dtitle: "Programming Assignment: Iris Dataset Handed Out"
+    dlink: "Assignments/Iris"      
+    points: 100
+    rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"     
 - week: "14"
   date: "2"
   title: "Classes and Object Data Types"  
@@ -922,23 +917,14 @@ schedule:
   - rtitle: "Static Variables and Methods"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"       
   deliverables:
-    - dtitle: "Programming Assignment: ASCII Art Due"
-      dlink: "Assignments/ASCIIArt" 
-      points: 100  
-      rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"  
-    - dtitle: "Programming Assignment: Iris Dataset Handed Out"
-      dlink: "Assignments/Iris"      
-      points: 100
-      rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"    
+    - dtitle: "Exercise: Insertion Sort"
+      dlink: "Modules/InsertionSort/Module"  
+      points: 3 
+      submission_types: "noupload"      
 - week: "14"
   date: "3"
   title: "Algorithms: Sorting"
   link: "Activities/Sorting"
-  deliverables:
-  - dtitle: "Debugging Table: Second Check Due"
-    dlink: "Assignments/DebuggingTable"
-    points: 10 
-    submission_types: "written"
   readings:
   - rtitle: "Ch. 9.6.3"
     rlink: false  
@@ -954,10 +940,10 @@ schedule:
   date: "0"
   title: "Algorithms: Sorting" 
   deliverables:
-  - dtitle: "Exercise: Insertion Sort"
-    dlink: "Modules/InsertionSort/Module"  
-    points: 3 
-    submission_types: "noupload"  
+  - dtitle: "Exercise: Recursion"
+    dlink: "Modules/Recursion/Module"
+    points: 3      
+    submission_types: "noupload"     
 - week: "15"
   date: "1"
   title: "Algorithms: Recursion" 
@@ -975,11 +961,7 @@ schedule:
   - dtitle: "Quiz: Classes and Algorithms"
     dlink: false
     points: 40    
-    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"             
-  - dtitle: "Exercise: Recursion"
-    dlink: "Modules/Recursion/Module"
-    points: 3      
-    submission_types: "noupload"      
+    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"                  
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"    
     points: 100  
@@ -1081,7 +1063,7 @@ It is often the case that some students have had a good amount of programming ex
 
 Computer programming can often be frustrating, since not only do computers have very little tolerance for mistakes in their language (so-called "syntax errors") that will cause a program to not even run, but even if you manage to get a program to run, it still may not behave as you were intending it to. Computers will do exactly what you tell them to do in code, so you will have to figure out where you told the computer something different from what you intended. This process is called [debugging](https://en.wikipedia.org/wiki/Debugging), and it is time consuming and difficult even for very experienced programmers. So do not be hard on yourself if your programs don't work the first time around (they rarely do, even if you've been programming for decades!). But be sure you leave yourself adequate time to work on the assignments, because the amount of time it takes to resolve issues can be unpredictable.
 
-As part of embracing the process of debugging, we will be creating a ["debugging table"](#debugging) throughout the course, in which students catalog particular error messages that arise for different types of mistakes.
+<!--As part of embracing the process of debugging, we will be creating a ["debugging table"](#debugging) throughout the course, in which students catalog particular error messages that arise for different types of mistakes.-->
 
 Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!
 
@@ -1096,9 +1078,11 @@ Every week, we will have a lab session where students get a chance to practice c
 ### Assignments
 The bulk of the grade in the course will be earned by completing labs and individual programming assignments. Be sure to start them early! Note that [collaboration and sharing rules](#collaboration) differ slightly for labs and assignments.
 
+<!--
 <a name="debugging"></a>
 ### Debugging Table \[[^1]\]
 As part of embracing bugs in the class, students will keep a running tab of syntax errors that they get and what they mean. You may edit these tables in whatever word processor is most comfortable to you. On average, students should add at least one syntax error for each lab. We will check in right before spring break to make sure students have around 10 syntax errors recorded at that time, and we expect at least double that by the end of the course. At the end of the course, students will submit their full table as 5% of their grade.
+-->
 
 ## Classroom Participation
 

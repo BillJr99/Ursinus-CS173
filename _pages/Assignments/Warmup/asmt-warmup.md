@@ -15,8 +15,8 @@ info:
     ziplink: "../files/asmt-warmup/HW0-master.zip"
     zipfilename: "HW0-master.zip"
     zipdirname: "HW0-master"
-  vpn: false
-  points: 15
+  vpn: true
+  points: 20
   
 tags:
   - introduction
@@ -76,10 +76,12 @@ We will use an electronic shared notebook throughout the class.  You'll be able 
 
 You can access the Ursinus network remotely by using a Virtual Private Network (VPN).  This is a protocol and software package that connect your computer to the Ursinus network using your login and password, allowing you to access computers and resources (like library resources) that would normally require you to be physically located on the campus network.  Please follow [these](https://www.ursinus.edu/offices/information-technology/technology-support/hardware-and-software-help/remote-connections-and-vpn/) instructions to connect to the VPN.  When submitting class exercises, you will connect to the VPN so that we can authenticate and determine which student is completing which exercise.
 
-**If you are planning to access course materials while off-campus, for example, if you are a commuting student, please install the VPN software per the instructiosn above on your computer.  I will request that you be given access to the VPN in the beginning of the semester, so you may not have access immediately on the first day.  If you find that you are unable to connect to the VPN the first time you need it for an assignment or exercise, contact techsupport@ursinus.edu and request to be given access to the VPN at that time.**
+**If you are planning to access course materials while off-campus, for example, if you are a commuting student, please install the VPN software per the instructiosn above on your computer.  I will request that you be given access to the VPN in the beginning of the semester, so you may not have access immediately on the first day.  If you find that you are unable to connect to the VPN the first time you need it for an assignment or exercise, contact me and I will reach out to Tech Support to get you access.**
+
+If you are not a commuter student, please skip this step!
 {% endif %}
 
-## Syllabus (5pts)
+## Syllabus (10pts)
 
 Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on {{ page.info.chatname }} with the answers to the following questions**
 
@@ -90,3 +92,7 @@ Please take a moment to familiarize yourself with [the course syllabus]({{ site.
 <!--4.  What happens if you show up after the lecture has already started?-->
 4.  Where is the help room located?
 <!--5.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
+5.  When and where are my office hours?
+6.  What is the link to sign up for one-on-one tutoring with the Institute for Student Success?
+7.  What is the grade reduction per day for late work?
+8.  How many slack days do you have to use throughout the semester for extensions?

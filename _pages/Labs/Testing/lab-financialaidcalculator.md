@@ -24,15 +24,27 @@ info:
       beginning: Trivial test cases are provided in a unit test framework
       progressing: Test cases that cover some, but not all, boundary cases and branches of the program are provided
       proficient: Test cases that cover all boundary cases and branches of the program are provided
-    - weight: 30
-      description: Code Quality and Documentation
-      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice, and/or the code departs significantly from the style guide
-      beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
-      progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
-      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
+    - weight: 10
+      description: Code Indentation and Spacing
+      preemerging: Code indentation and spacing are generally inappropriate or inconsistent
+      beginning: Code indentation or spacing are generally appropriate but inconsistent in a few isolated instances
+      progressing: Code indentation or spacing are appropriate or consistent, with minor adjustments needed
+      proficient: Code indentation and spacing are appropriate and consistent
+    - weight: 10
+      description: Code Quality
+      preemerging: Prior code quality feedback and style guide standards are not reflected in the submitted code to a great extent
+      beginning: Code quality conforms to several standards in the course Style Guide, and progress is demonstrated in improving code quality from prior feedback
+      progressing: Code quality conforms to the standards in the course Style Guide to a great extent, with a few identified areas of improvement
+      proficient: Code quality substantially conforms to the standards in the course Style Guide
+    - weight: 10
+      description: Code Documentation
+      preemerging: Code commenting and structure are absent, or code structure departs significantly from best practice
+      beginning: Code commenting and structure is limited in ways that reduce the readability of the program; specifically, javadoc style comments are present for some functions
+      progressing: Code documentation is present that re-states the explicit code definitions
+      proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program; specifically, javadoc style comments are present for all functions
     - weight: 10
       description: Writeup and Submission
-      preemerging: An incomplete submission is provided
+      preemerging: An incomplete submission is provided, or the README file submitted is blank
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup or missing answers to written questions)
       progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
@@ -176,8 +188,16 @@ The reference solution has 6 test cases, including the first two that are provid
 
 Print the money with commas in appropriate spots. For example, print $12,000 instead of $12000. You can assume that the amount of aid is less than a million dollars, so that you will need at most one comma.  You may find [this guide](https://www.cs.colostate.edu/~cs160/.Summer16/resources/Java_printf_method_quick_reference.pdf) helpful, using a function called `System.out.printf`.
 
-## Exporting your Project for Submission
+## Finishing Touches and Writeup 
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+Don't forget to test your program with several different inputs to help verify that things work the way you expect!  Think in terms of trying to break your program; if it's really hard to "trick" your program into getting the wrong answer, you've probably done a good job making your code robust.  
+
+Also, check the [Style Guide](../Style-Guide) to make sure that you've written high quality code; make sure your code is "readable," well indented, uses good variable names, and includes good comments throughout the program.
+
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  **In your README, answer any bolded questions presented on this page.**  In addition, write a few paragraphs describing what you did, how you did it, and how to use your program.  If your program requires the user to type something in, describe that here.  If you wrote functions to help solve your problem, what are they, and what do they do?  Imagine that you are giving your program to another student in the class, and you want to explain to them how to use it.  What would you tell them?  Imagine also that another student had given you the functions that you wrote for your program: what would you have wished that you knew about how to call those functions?
+
+### Exporting your Project for Submission
+
+Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  **Be sure to save your README file before exporting the project, so that your work is included in the submission!**
 
 [^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie) and [Prof. Ann Marie Schilling](https://www.ursinus.edu/live/profiles/133-ann-marie-v-schilling)
