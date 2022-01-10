@@ -401,6 +401,21 @@ boilerplate:
     {% endif %}
     
     
+
+    <h3>Peer Coaching</h3>
+    The <a href="{{layout.boilerplate.links.iss}}" target="_blank">Institute for Student Success</a> offers <a href="{{layout.boilerplate.links.peercoaching}}" target="_blank">Peer Coaching</a> that you can sign up for anytime. 
+
+    {% if layout.boilerplate.iss %}
+    {{ layout.boilerplate.iss }}
+    {% endif %}
+    
+    {% if page.info.issspecifictutoring %}
+    <h3>Tutoring</h3>
+    The <a href="{{layout.boilerplate.links.iss}}" target="_blank">Institute for Student Success</a> has established specific tutoring sessions for students in our class.  Please visit <a href="{{page.info.issspecifictutoring}}" target="_blank">the tutoring site</a> for the schedule and how to attend!
+    {% endif %}
+    
+    
+    
     {% if layout.boilerplate.religious %}
     <h3>Religious and Spiritual Life Observance Policy</h3>
     
@@ -427,19 +442,6 @@ boilerplate:
     {% endif %}
 
 
-    
-    <h3>Peer Coaching</h3>
-    The <a href="{{layout.boilerplate.links.iss}}" target="_blank">Institute for Student Success</a> offers <a href="{{layout.boilerplate.links.peercoaching}}" target="_blank">Peer Coaching</a> that you can sign up for anytime. 
-
-    {% if layout.boilerplate.iss %}
-    {{ layout.boilerplate.iss }}
-    {% endif %}
-    
-    {% if page.info.issspecifictutoring %}
-    <p>
-    In addition, the Institute for Student Success has established specific tutoring sessions for students in our class.  Please visit <a href="{{page.info.issspecifictutoring}}" target="_blank">the tutoring site</a> for the schedule and how to attend!
-    </p>
-    {% endif %}
     
     
     
@@ -508,7 +510,7 @@ boilerplate:
     {% if item.officehours %}</ul>{% endif %}
     {% if item.officehourssignup %}
     <br>
-    <a href="{{item.officehourssignup}}">Sign up for a one-on-one appointment during my office hours!</a>
+    <a href="{{item.officehourssignup}}" target="_blank">Sign up for a one-on-one appointment during my office hours!</a>
     {% endif %}
     </td>
     </tr>
@@ -875,7 +877,7 @@ boilerplate:
     </div> 
  
     <a name="environment"></a> 
-    <h3>Classroom Environment and Inclusivity Standards</h3>    
+    <h3>Classroom Environment and Inclusivity Standards</h3>       
     My goal is to foster a environment in which students across all axes of diversity feel welcome and valued, both by me and by their peers. Axes of diversity include, but are not limited to, age, background, beliefs, race, ethnicity, gender/gender identity/gender expression (please feel free to tell me in person or over e-mail which pronouns I should use), national origin, religious affiliation, and sexual orientation. Discrimination of any form will not be tolerated.
     
     Furthermore, I want all students to feel comfortable expressing their opinions or confusion at any point in the course, as long as they do so respectfully. As I will stress over and over, being confused is an important part of the process of learning computer science. Therefore, I will not tolerate any form of put-downs by one student towards another about their confusion or progress in the class. Learning computer science and struggling to grow is not <a href="https://i0.wp.com/katielmartin.com/wp-content/uploads/2019/02/1_9HzbByi2Uzit8474Rp4ZPg-1.jpg?w=550&ssl=1">always comfortable</a>, but I want it to feel safe.  Much of this material is probably new to everyone, and those with some prior experience likely recall a time when it was new to them, too.  Remember that <strong>this is not a competition</strong>: helping others to grow is itself a richly rewarding professional development opportunity.  
@@ -998,10 +1000,10 @@ boilerplate:
     In the event that the College closes due to inclement weather or other circumstances, our in-person class sessions, drop-in / office hours, labs, or other meetings will not be held.  I will contact you regarding our plan with regard to rescheduling the class or the material, any assignments that are outstanding, and how we can move forward with the material (for example, any readings or remote discussions that we can apply).  If necessary, I may schedule online virtual sessions in lieu of class sessions, and will contact you with information about how to participate in those.  I will communicate this plan to the department so that it can be posted on my office door if it is feasible to do so.  This policy and procedure will also apply in the event that the College remains open but travel conditions are hazardous or not otherwise conducive to holding class as normal.  Should another exigent circumstance arise (for example, illness), I will follow this policy and procedure as well.
     
     
-    {% if layout.boilerplate.miscpolicies %}
+    {% if page.info.miscpolicies %}
     <h3>Miscellaneous Policies</h3>
     <ul>
-    {% for policy in layout.boilerplate.miscpolicies %}
+    {% for policy in page.info.miscpolicies %}
     <li><strong>{{policy.title}}:</strong> {{policy.body}}</li>
     {% endfor %}
     </ul>

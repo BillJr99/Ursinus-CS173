@@ -84,6 +84,11 @@ info:
   flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 4% per day if submitted before 10:59 PM Eastern Time on the day submitted.  Each student will receive a total of 10 days for the semester with which to waive these grade reductions; for example, one assignment may be submitted 10 days late, or two assignments may be submitted 5 days late, with no grade reduction.  Sould an exemption to this policy be requested and granted, a 5% per day reduction will be applied.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
   late_penalty_per_period: 4
   late_penalty_period: "day"
+  miscpolicies:
+    - title: "Attendance Policy"
+      body: "It is anticipated that all classes in Spring 2022 will take place in-person. Remote teaching will only be allowed in extenuating and short-term circumstances. Students who are unable to attend class due to quarantine, isolation, or Covid-like symptoms in advance of test results should contact their instructors to make up work they have missed. Ursinus students are expected to attend class regularly and may receive penalties, including failing grades, for excessive non-health related absences. The Office of Academic Affairs, the Office of Student Affairs, and the Wellness Center do not provide excused absences from class.  Students experiencing significant health problems or other issues that may prevent them from performing adequately in their academic work and/or attending class for a number of days should notify the Institute for Student Success (Stephanie Stefanik, sstefanik@ursinus.edu; 610-409-3472), which can assist students with faculty notifications. Students who wish to discuss reasonable accommodations can contact Dr. Dee Singley (dsingley@ursinus.edu)."
+    - title: "Masking Guidelines"
+      body: "Students are expected to follow any college policy requiring mask wearing on campus, in addition to following any guidance faculty provide for their individual classes. Masks should be available in every academic building, if needed."
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
@@ -305,10 +310,6 @@ schedule:
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"    
   deliverables:
-  - dtitle: "Lab: Kepler's Third Law Due"    
-    dlink: "Labs/Kepler"    
-    points: 100  
-    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"
   - dtitle: "Exercise: Epplets - Sequence"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -318,7 +319,12 @@ schedule:
     rlink: "Modules/Encodings/Module"  
 - week: "3"
   date: "0"
-  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+  title: "Number Systems and Encodings: RGB Color and ASCII Text" 
+  deliverables:
+  - dtitle: "Lab: Kepler's Third Law Due"    
+    dlink: "Labs/Kepler"    
+    points: 100  
+    rubricpath: "_pages/Labs/Arithmetic/lab-kepler.md"  
 - week: "3"
   date: "1"
   title: "Lab: Debugging"  
@@ -373,6 +379,10 @@ schedule:
     dlink: "./Modules/Boolean/Exercise"
     points: 3
     submission_types: "noupload"  
+  - dtitle: "Lab: Debugging Due"    
+    dlink: "Labs/Debugging"     
+    points: 100   
+    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"      
 - week: "4"
   date: "1"
   title: "Lab: Story Telling with Conditionals"
@@ -399,10 +409,6 @@ schedule:
   - rtitle: "DeMorgan's Laws"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-6-DeMorgan.html"
   deliverables:
-  - dtitle: "Lab: Debugging Due"    
-    dlink: "Labs/Debugging"     
-    points: 100   
-    rubricpath: "_pages/Labs/Debugging/lab-debugging.md"  
   - dtitle: "Exercise: Problets - Expressions - Logical"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -438,6 +444,10 @@ schedule:
     dlink: "Modules/Functions/Module"  
     points: 3   
     submission_types: "noupload"
+  - dtitle: "Lab: Story Telling with Conditionals Due"    
+    dlink: "Labs/TellAStory/Conditionals"     
+    points: 100   
+    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"     
 - week: "5"
   date: "1"
   title: "Lab: Functions"    
@@ -452,12 +462,7 @@ schedule:
     submission_types: "written"     
 - week: "5"
   date: "2"
-  title: "Functions" 
-  deliverables:
-  - dtitle: "Lab: Story Telling with Conditionals Due"    
-    dlink: "Labs/TellAStory/Conditionals"     
-    points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"    
+  title: "Functions"    
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
@@ -602,6 +607,10 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_strings.zip"   
+  - dtitle: "Lab: Financial Aid Calculator Due"
+    dlink: "Labs/FinancialAidCalculator"  
+    points: 100   
+    rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"    
 - week: "9"
   date: "1"
   title: "Lab: Iteration" 
@@ -622,11 +631,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - do-while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
-  - dtitle: "Lab: Financial Aid Calculator Due"
-    dlink: "Labs/FinancialAidCalculator"  
-    points: 100   
-    rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"       
+    submission_types: "written"            
 - week: "9"
   date: "3"
   title: "Coding Style and the Code Review"
@@ -655,6 +660,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"  
+    points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"      
 - week: "10"
   date: "1"    
   title: "Lab: Code Review"
@@ -685,12 +694,7 @@ schedule:
   link: "Activities/FileIO"  
   readings:
   - rtitle: "Ch. 7"
-    rlink: false  
-  deliverables:
-  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
-    dlink: "Labs/MonteCarloPi"  
-    points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"    
+    rlink: false    
 - week: "11"
   date: "0"
   title: "Arrays"
@@ -721,14 +725,14 @@ schedule:
   - dtitle: "Lab: Anagram Solver Handed Out"
     dlink: "Labs/Anagrams"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"      
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"
+  - dtitle: "Lab: Ethical Case Studies Handed Out"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100    
 - week: "11"
   date: "2"
   title: "Arrays"    
   deliverables:
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100
   - dtitle: "Exercise: Epplets - Loops - while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -770,6 +774,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"
+  - dtitle: "Lab: Anagram Solver Due"
+    dlink: "Labs/Anagrams"  
+    points: 100
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"            
 - week: "12"
   date: "1"
   title: "Lab: Drop the Lowest"
@@ -777,10 +785,6 @@ schedule:
   - rtitle: "Ch. 6.3"
     rlink: false
   deliverables:
-  - dtitle: "Lab: Anagram Solver Due"
-    dlink: "Labs/Anagrams"  
-    points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"        
   - dtitle: "Lab: Drop the Lowest Handed Out"
     dlink: "Labs/DropLowest"
     points: 100
@@ -866,10 +870,6 @@ schedule:
   - rtitle: "Searching Module"
     rlink: "Modules/Search/Module"  
   deliverables:
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100  
-    submission_types: "written" 
   - dtitle: "Exercise: ArrayLists"
     dlink: "Modules/ArrayLists/Module"    
     points: 3
@@ -886,6 +886,10 @@ schedule:
     dlink: "Projects/Final"    
     points: 100     
     rubricpath: "_pages/Projects/proj-final.md"
+  - dtitle: "Lab: Ethical Case Studies Due"
+    dlink: "Labs/EthicalConsiderations"      
+    points: 100  
+    submission_types: "written"     
 - week: "14"
   date: "0"
   title: "Classes and Object Data Types" 
