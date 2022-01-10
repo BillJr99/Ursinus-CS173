@@ -43,6 +43,8 @@ tags:
 
 In this lab, you will practice using the debugger to identify and fix a bug in a piece of code.  
 
+## Part 1: Using the Debugger
+
 ### Step 1: Download the Sample Project
 Begin by downloading and opening [this NetBeans project](../files/lab-debugging/DebugSample.zip).  Once you open the project, it may be necessary to close and re-open NetBeans to refresh the project files.
 
@@ -65,9 +67,13 @@ If you would like to re-run the debugger from the beginning, you can stop the cu
 
 You can submit this project as usual, by adding your README and exporting the project to a ZIP file for submission.
 
+## Part 2: Debugging to Find a Bug
+
+Now, open [this NetBeans project](../files/lab-debugging/DebugSample2.zip), and use the debugger to find and fix the error in the program!
+
 ## Submission
 
-When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.
+When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  You can submit multiple zip files, so feel free to export all your projects.
 
 ## Trivia
 

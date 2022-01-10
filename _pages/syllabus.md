@@ -846,10 +846,10 @@ schedule:
   date: "1"
   title: "Lab: 2D Arrays"
   deliverables:
-  - dtitle: "Lab: 2D Array Board Game Handed Out"
-    dlink: "Labs/GridGame"
+  - dtitle: "Lab: 2D Treasure Hunt Handed Out"
+    dlink: "Labs/TreasureHunt"
     points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"        
+    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"        
 - week: "13"
   date: "2"
   title: "Algorithms: Searching" 
@@ -881,10 +881,10 @@ schedule:
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"    
   deliverables:
-  - dtitle: "Lab: 2D Array Board Game Due"
-    dlink: "Labs/GridGame"
+  - dtitle: "Lab: 2D Treasure Hunt Due"
+    dlink: "Labs/TreasureHunt"
     points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"  
+    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"  
   readings:
   - rtitle: "Ch. 8"
     rlink: false  
@@ -935,7 +935,12 @@ schedule:
   - rtitle: "Search Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
   - rtitle: "Sorting Algorithms"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"     
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html" 
+  deliverables:
+  - dtitle: "Final Project: Project Proposal Due"
+    dlink: "Projects/Final"    
+    points: 10     
+    rubricpath: "_pages/Projects/proj-final.md"  
 - week: "15"
   date: "0"
   title: "Algorithms: Sorting" 
@@ -1065,7 +1070,7 @@ Computer programming can often be frustrating, since not only do computers have 
 
 <!--As part of embracing the process of debugging, we will be creating a ["debugging table"](#debugging) throughout the course, in which students catalog particular error messages that arise for different types of mistakes.-->
 
-Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!
+Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!  When you track down a bug, read each line of code one-line-at-a-time, and ask yourself what that line of code does.  Write down the variable values on paper, or better yet, use a step debugger to keep track as you work through your code.  If you have a runtime error that causes your program to quit, look at the error text, called a Stack Trace, which will tell you what line of code caused your program to fail.
 
 ## Homework
 

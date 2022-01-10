@@ -10,12 +10,18 @@ info:
   goals:
     - To search an array using iterative approaches
   rubric:
-    - weight: 60
+    - weight: 40
       description: Algorithm Implementation
       preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
       beginning: The algorithm fails on the test inputs due to one or more minor issues
       progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
       proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+    - weight: 20
+      description: Test Cases
+      preemerging: Testing was performed outside of the unit test framework, or not performed at all
+      beginning: Trivial test cases are provided in a unit test framework
+      progressing: Test cases that cover some, but not all, boundary cases and branches of the program are provided
+      proficient: Test cases that cover all boundary cases and branches of the program are provided      
     - weight: 10
       description: Code Indentation and Spacing
       preemerging: Code indentation and spacing are generally inappropriate or inconsistent
@@ -101,6 +107,9 @@ Put all of the above code into a function, and you will call that function from 
 Within `main()`, call this function several times, each with a different sized array.  You will plot the number of steps that were needed against the size of the array.  You can use a loop with a random number generator to generate scores.  I suggest creating a function that generates and returns an `ArrayList<Double>`, in which you pass the desired size of the array as a function parameter.  The function then uses a random number generator to fill the array and return it.  Then, you can call this from `main()` within a loop, so that you try it multiple times without having to copy and paste your code!
 
 To plot your results, you can copy or type the iteration counts you receive into Microsoft Excel and generate a line graph.  Your first column will be the size of the array that you used, and your second column will be the number of iterations that were required to find the smallest element in that array.  Thus, your x-axis will be the size of the array, and your y-axis will be the number of iterations.  What do you notice about the shape and direction of this graph?
+
+### Step 4: Unit Tests
+Write unit tests to verify that your program works!
 
 ## Finishing Touches and Writeup 
 

@@ -163,8 +163,7 @@ Define a function `playMainPart()` that contains the code to play the `C4 C4 G4 
 
 This function should accept one parameter of type `MIDIPlayer`, and when you call it from main, pass the `player` variable to it.  This way, your function will have access to the `player` variable!
 
-## Part 4: Make Up Your Own Song
-Every answer is correct - be creative and play some notes.  Explore the Notes class and the Instruments class for a few examples that you can play.  Let me know if you come up with something fun that you'd be willing to share - we can take a few minutes in class sometime for a few "code demonstrations."
+## Part 4: Creating Your Own Function to Generate Note Values
 
 The `Notes` and `Instruments` classes provide a number of sample notes and instruments that you can play, but you may need one that is not provided there.  These notes and instruments (for example, `NOTE_C4` and `GUITAR`) are just variable names that correspond to `int` variables, so you can provide your own numeric values here if you'd like to specify other notes or instruments!  For example:
 
@@ -175,7 +174,30 @@ player.playNote(101, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY); // F7 note
 
 You will find a complete list of [notes](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies) (the numeric value is the first column, and the note is the fourth column), and [instruments](http://math.hws.edu/eck/cs124/f17/lab8/lab8-files/midi/SimpleSynth.java) (see the `instrumentNames` variable halfway through the code listing), in case you would like to customize.  Note, however, that this is completely optional: it is perfectly OK to use only the notes and instruments I've provided in the library.  I provide these references only for your entertainment in case you would like to get creative here!
 
-## Part 5 (Optional): Just for Fun...
+Write your own function called `generateNote` that accepts a `double` parameter for the frequency (for example 880.0), and returns the MIDI note number (in this example, `81`) from the first column of [this list of notes](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies).  Call this function from `main` and store the result in a variable.  
+
+The formula you will implement in your `generateNote` function to convert a frequency `f` to a MIDI note number `n` is as follows:
+
+<span>\\(n = 12 log2(\frac{f}{440.0}) + 69\\)</span>
+
+Java's `Math.log()` function uses base 10 instead of base 2, so you can do a simple conversion so that you can use the `Math.log()` function in your implementation:
+
+<span>\\(n = 12 \frac{log(\frac{f}{440.0})}{log(2)} + 69\\)</span>
+
+Then, pass that variable to the first parameter of `playNote` like this:
+
+```java
+player.setInstrument(25); // steel acoustic guitar
+int note = generateNote(880.0); // you'll write this function!
+player.playNote(note, Notes.NOTE_QUARTER, Notes.DEFAULT_INTENSITY); // F7 note
+```
+
+## Part 5: Make Up Your Own Song
+Every answer is correct - be creative and play some notes.  Explore the Notes class and the Instruments class for a few examples that you can play.  Let me know if you come up with something fun that you'd be willing to share - we can take a few minutes in class sometime for a few "code demonstrations."
+
+If you'd like to use your custom notes, you can look up the MIDI note numbers under the first column in [this list of notes](https://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies), and pass those to the `playNote` function, or call `generateNote` to obtain them given a frequency, if you are musically inclined!
+
+## Part 6 (Optional): Just for Fun...
 
 When we explore arrays and loops, we will see how we can represent a song like this using a single variable (an "array") that represents the entire collection of notes, and this can be played using a single call to the function to play all the notes.  "Loops" can iterate over these collections, one by one, and automatically play each note, so that you don't have to copy your code like you did here.
 

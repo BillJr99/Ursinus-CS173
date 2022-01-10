@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Arrays of Strings"
 excerpt: "CS173: Intro to Computer Science - Arrays of Strings"
 
 info:
-  prev: ../Arrays2
+  prev: ../Arrays3
     
   goals: 
     - To be able to print an array
