@@ -11,13 +11,12 @@ info:
   - section: "B"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Fall2021/"
-  teamshelproom: https://teams.microsoft.com/l/channel/19%3a6ddddb88493946fa956387e9543a3b06%40thread.tacv2/Mongan%2520Drop-In%2520Office%2520Hours?groupId=b16dcd6b-3522-4564-8306-9051a92c68ba&tenantId=921f1c03-8689-4e60-a722-f5ea581e00fe
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202021
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2021/"
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021
   ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop running Windows, Mac OS, or most variants of Linux, that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
-  course_start_date: "2021/08/30"
-  course_end_date: "2021/12/10"
+  course_start_date: "2022/01/17"
+  course_end_date: "2022/05/05"
   course_description: "Introduction to the field of computer science. Topics include: methods for computational problem solving, algorithm development techniques, processes for development of new technologies, and programming projects of increasing complexity in a high-level language with emphasis on good programming style. The course also includes exposure to advanced topics in computer science such as graphics, human-computer interaction, and software engineering. Recommended for students in mathematics; business and economics; and the natural sciences. No prior computer programming experience is assumed. Offered every semester. Three hours of lecture and one hour of laboratory per week."
   welcome_message: "Welcome to CS173!  In this course, we will explore together the ways in which computing positively affects our lives and helps us to understand and to interact with the world around us.  We will learn to automate powerful functionality through the use of programming fundamentals.  We will connect these fundamentals to underlying theory of Mathematics and Computer Science, and learn to apply that theory for good."
   issspecifictutoring: https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/
@@ -32,38 +31,38 @@ info:
   class_meets_locations:
   - section:
     - day: "M"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "IDC 116"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "Pfahler 012"
     - day: "T"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "Pfahler 001"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "Pfahler 012"
     - day: "W"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "IDC 116"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "Pfahler 012"
     - day: "F"
-      starttime: "9:00 AM"
-      endtime: "9:50 AM"
-      place: "IDC 116"
+      starttime: "10:00 AM"
+      endtime: "10:50 AM"
+      place: "Pfahler 012"
   - section:
     - day: "M"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "IDC 116"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler 012"
     - day: "T"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "Pfahler 001"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler 012"
     - day: "W"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "IDC 116"
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler 012"
     - day: "F"
-      starttime: "10:00 AM"
-      endtime: "10:50 AM"
-      place: "IDC 116"     
+      starttime: "11:00 AM"
+      endtime: "11:50 AM"
+      place: "Pfahler 012"     
   midtermexam: 
     - mdate: "TBD"
       mstarttime: "TBD"
@@ -74,16 +73,16 @@ info:
       mendtime: "TBD"
       mroom: "TBD"       
   finalexam: 
-    - fdate: "2021/12/15"
-      fstarttime: "1:00 PM"
-      fendtime: "4:00 PM"
-      froom: "IDC 116"
-    - fdate: "2021/12/14"
-      fstarttime: "1:00 PM"
-      fendtime: "4:00 PM"
-      froom: "IDC 116"      
-  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 5% per day if submitted before 10:59 PM Eastern Time on the day submitted.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
-  late_penalty_per_period: 5
+    - fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
+      froom: "TBD"  
+    - fdate: "TBD"
+      fstarttime: "TBD"
+      fendtime: "TBD"
+      froom: "TBD"        
+  flexible_submission_policy: "In the absence of <a href=\"#accommodations\">accommodations</a> arranged in advance with the instructor or college, all assignments are due at 10:59PM Eastern Time on the date(s) stated on the schedule.  Assignments will be accepted without prior permission following this time with a points deduction of 4% per day if submitted before 10:59 PM Eastern Time on the day submitted.  Each student will receive a total of 10 days for the semester with which to waive these grade reductions; for example, one assignment may be submitted 10 days late, or two assignments may be submitted 5 days late, with no grade reduction.  Sould an exemption to this policy be requested and granted, a 5% per day reduction will be applied.  This policy does not apply to extra credit opportunities: extra credit will not be awarded for assignments submitted under the flexible submission policy.  Late work cannot be accepted after the final class meeting, nor during final exams week, nor after the exam." 
+  late_penalty_per_period: 4
   late_penalty_period: "day"
   banner: |
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
@@ -115,7 +114,7 @@ instructors:
     endtime: "2:00 PM"
     location: "Pfahler Hall 101L"  
   - day: "T"
-    starttime: "11:00 AM"
+    starttime: "12:00 PM"
     endtime: "2:00 PM"
     location: "Pfahler Hall 101L"        
   - day: "W"
@@ -125,26 +124,7 @@ instructors:
   - day: "F"
     starttime: "12:00 PM"
     endtime: "2:00 PM"
-    location: "Pfahler Hall 101L"  
-- name: Matthew Quigley
-  title: "Lab TA for the 9AM Section"
-- name: Giannina Flamiano
-  title: "Lab TA for the 10AM Section"
-- name: "Institute for Student Success"
-  title: "Drop-In Session to Ask Questions and Work with Classmates"
-  officehours:    
-  - day: "M"
-    starttime: "10:00 AM"
-    endtime: "11:00 AM"
-    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Pfahler Hall 102</a>" 
-  - day: "T"
-    starttime: "7:00 PM"
-    endtime: "8:00 PM"
-    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Pfahler Hall 102</a>" 
-  - day: "R"
-    starttime: "7:00 PM"
-    endtime: "8:00 PM"
-    location: "<a href=\"https://www.ursinus.edu/offices/institute-for-student-success/tutoring-services/computer-science-group-tutoring/\">Pfahler Hall 102</a>"      
+    location: "Pfahler Hall 101L"       
   
 textbooks:
 - title: "Java for Everyone: Late Objects"
@@ -224,7 +204,7 @@ letter_grades:
 
 schedule:
 - week: "0"
-  date: "0"
+  date: "2"
   title: "Course Overview: What is Computer Science?"
   link: "../Ursinus-CS173-Overview"
   readings:
@@ -238,15 +218,14 @@ schedule:
     points: 15
     submission_types: "onpaper"
 - week: "0"
-  date: "1"
-  title: "Course Overview Continued: The Development Environment and Post-It Pandemonium"   
-  link: "./DrawingCanvas"
-- week: "0"
-  date: "2"
+  date: "3"
+  title: "Course Overview Continued"   
+- week: "1"
+  date: "0"
   title: "A Brief History of Computer Science"  
   link: "../Ursinus-CS173-CSHistory"  
-- week: "0"
-  date: "3"
+- week: "1"
+  date: "1"
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
   readings:
@@ -262,7 +241,7 @@ schedule:
     points: 50
     rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
 - week: "1"
-  date: "0"
+  date: "2"
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
   readings:
@@ -273,6 +252,22 @@ schedule:
   - rtitle: "Expressions and Assignment Statements"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"
 - week: "1"
+  date: "3"
+  title: "Expressions and Variables"       
+  readings:
+  - rtitle: "Compound Assignment Operators"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
+  - rtitle: "Variables and Assignment Expressions"
+    rlink: "Modules/Variables/Module"  
+- week: "2"
+  date: "0" 
+  title: "Expressions and Variables"      
+  deliverables:    
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3     
+    submission_types: "noupload"  
+- week: "2"
   date: "1"
   title: "Lab: Kepler's Third Law"
   readings: 
@@ -287,21 +282,8 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"        
-- week: "1"
+- week: "2"
   date: "2"
-  title: "Expressions and Variables"       
-  readings:
-  - rtitle: "Compound Assignment Operators"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
-  - rtitle: "Variables and Assignment Expressions"
-    rlink: "Modules/Variables/Module"    
-  deliverables:    
-  - dtitle: "Exercise: The NetBeans IDE Software Environment"
-    dlink: "Modules/IDE/Module"    
-    points: 3     
-    submission_types: "noupload"
-- week: "1"
-  date: "3"
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"  
   readings:
@@ -319,7 +301,7 @@ schedule:
     points: 50 
     rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
 - week: "2"
-  date: "0"
+  date: "3"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
   link: "Activities/NumberSystems"    
   deliverables:
@@ -333,8 +315,11 @@ schedule:
     submission_types: "written"     
   readings:
   - rtitle: "Numerical Encodings"
-    rlink: "Modules/Encodings/Module"    
-- week: "2"
+    rlink: "Modules/Encodings/Module"  
+- week: "3"
+  date: "0"
+  title: "Number Systems and Encodings: RGB Color and ASCII Text"      
+- week: "3"
   date: "1"
   title: "Lab: Debugging"  
   readings:
@@ -351,7 +336,7 @@ schedule:
     dlink: "Modules/Expressions/Module"  
     points: 3  
     submission_types: "noupload" 
-- week: "2"
+- week: "3"
   date: "2"
   title: "Debugging"
   link: "Activities/Debugging"  
@@ -360,7 +345,7 @@ schedule:
     dlink: false
     points: 40   
     qtizippath: "_pages/Quizzes/qti_datatypes.zip"    
-- week: "2"
+- week: "3"
   date: "3"
   title: "Boolean Logic Expressions"
   link: "Activities/Boolean"
@@ -374,7 +359,7 @@ schedule:
     dlink: "./Modules/Expressions/Exercise2"    
     points: 3   
     submission_types: "noupload"   
-- week: "3"
+- week: "4"
   date: "0"   
   title: "Conditionals"   
   link: "Activities/Conditionals"
@@ -388,7 +373,7 @@ schedule:
     dlink: "./Modules/Boolean/Exercise"
     points: 3
     submission_types: "noupload"  
-- week: "3"
+- week: "4"
   date: "1"
   title: "Lab: Story Telling with Conditionals"
   deliverables:
@@ -403,7 +388,7 @@ schedule:
   readings:
   - rtitle: "Reading User Input"
     rlink: "https://www.w3schools.com/java/java_user_input.asp"    
-- week: "3"
+- week: "4"
   date: "2"
   title: "Conditionals"  
   readings:
@@ -422,7 +407,7 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-- week: "3"
+- week: "4"
   date: "3"
   title: "Functions"
   link: "Activities/Functions"
@@ -442,7 +427,7 @@ schedule:
     dlink: "Modules/EpochTime/Exercise"
     points: 3     
     submission_types: "noupload"    
-- week: "4"
+- week: "5"
   date: "0"
   title: "Functions"
   readings:
@@ -453,7 +438,7 @@ schedule:
     dlink: "Modules/Functions/Module"  
     points: 3   
     submission_types: "noupload"
-- week: "4"
+- week: "5"
   date: "1"
   title: "Lab: Functions"    
   deliverables:  
@@ -465,7 +450,7 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"     
-- week: "4"
+- week: "5"
   date: "2"
   title: "Functions" 
   deliverables:
@@ -476,7 +461,7 @@ schedule:
   readings:
   - rtitle: "Calling Functions that Return Values"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
-- week: "4"
+- week: "5"
   date: "3"
   title: "Testing" 
   link: "Activities/Testing"    
@@ -490,7 +475,7 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_conditionals.zip"
-- week: "5"
+- week: "6"
   date: "0"
   title: "Strings"
   link: "Activities/Strings"  
@@ -518,7 +503,7 @@ schedule:
     dlink: "Assignments/Faces"
     points: 100
     rubricpath: "_pages/Assignments/Functions/asmt-faces.md"   
-- week: "5"
+- week: "6"
   date: "1"
   title: "Lab: Unit Testing" 
   deliverables:
@@ -530,7 +515,7 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"
-- week: "5"
+- week: "6"
   date: "2"
   title: "Strings"
   readings:
@@ -541,7 +526,7 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
-- week: "5"
+- week: "6"
   date: "3"
   title: "Strings"  
   deliverables:
@@ -553,7 +538,7 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"   
-- week: "6"
+- week: "8"
   date: "0"
   title: "Iteration"  
   link: "Activities/Iteration/While"  
@@ -573,7 +558,7 @@ schedule:
     dlink: "Labs/UnitTesting"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-unittesting.md"      
-- week: "6"
+- week: "8"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
   deliverables:
@@ -581,11 +566,11 @@ schedule:
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"   
-- week: "6"
+- week: "8"
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
   link: "Activities/MiniCrypto"    
-- week: "6"
+- week: "8"
   date: "3"
   title: "Iteration with the for Loop"
   link: "Activities/Iteration/For"
@@ -599,8 +584,8 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-- week: "7"
-  date: "2"
+- week: "9"
+  date: "0"
   title: "Iteration, Randomness, and the while loop" 
   link: "Activities/Iteration/While" 
   readings:
@@ -616,9 +601,21 @@ schedule:
   - dtitle: "Quiz: Strings"
     dlink: false
     points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip"     
-- week: "7"
-  date: "3"
+    qtizippath: "_pages/Quizzes/qti_strings.zip"   
+- week: "9"
+  date: "1"
+  title: "Lab: Iteration" 
+  deliverables:  
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
+    dlink: "Labs/MonteCarloPi"  
+    points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
+  - dtitle: "Exercise: Iteration"
+    dlink: "./Modules/Iteration/Exercise"    
+    points: 3  
+    submission_types: "noupload"     
+- week: "9"
+  date: "2"
   title: "Iteration with the do loop"  
   link: "Activities/Iteration/Do"
   deliverables:
@@ -630,8 +627,8 @@ schedule:
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"       
-- week: "8"
-  date: "0"
+- week: "9"
+  date: "3"
   title: "Coding Style and the Code Review"
   readings:
   - rtitle: "Style Guide"
@@ -648,30 +645,26 @@ schedule:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
-    submission_types: "noupload" 
-- week: "8"
-  date: "1"
-  title: "Lab: Iteration" 
-  deliverables:  
-  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Handed Out"
-    dlink: "Labs/MonteCarloPi"  
-    points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
-  - dtitle: "Exercise: Iteration"
-    dlink: "./Modules/Iteration/Exercise"    
-    points: 3  
     submission_types: "noupload"     
-- week: "8"
-  date: "2"
+- week: "10"
+  date: "0"
   title: "Iteration over Strings"
   link: "Activities/Iteration/Strings"  
   deliverables:
   - dtitle: "Exercise: Problets - Loops - Advanced loops"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"       
-- week: "8"
-  date: "3"
+    submission_types: "written" 
+- week: "10"
+  date: "1"    
+  title: "Lab: Code Review"
+  deliverables: 
+  - dtitle: "Lab: Code Review Handed Out"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"      
+- week: "10"
+  date: "2"
   title: "Iteration and String Manipulation Workshop"
   link: "Activities/Iteration/Strings/Workshop"
   readings:
@@ -686,8 +679,8 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10        
     submission_types: "written"
-- week: "9"
-  date: "0"
+- week: "10"
+  date: "3"
   title: "File I/O"
   link: "Activities/FileIO"  
   readings:
@@ -698,16 +691,8 @@ schedule:
     dlink: "Labs/MonteCarloPi"  
     points: 100
     rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"    
-- week: "9"
-  date: "1"
-  title: "Lab: Anagram Solver"
-  deliverables:
-  - dtitle: "Lab: Anagram Solver Handed Out"
-    dlink: "Labs/Anagrams"  
-    points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"  
-- week: "9"
-  date: "2"
+- week: "11"
+  date: "0"
   title: "Arrays"
   link: "Activities/Arrays"  
   deliverables:
@@ -719,13 +704,26 @@ schedule:
     dlink: false
     points: 40
     qtizippath: "_pages/Quizzes/qti_iteration.zip"    
+  deliverables:
+  - dtitle: "Lab: Code Review Due"
+    dlink: "Labs/CodeReview"    
+    points: 100     
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"  
   readings:  
   - rtitle: "Ch. 6.1"
     rlink: false 
   - rtitle: "Creating and Accessing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"    
-- week: "9"
-  date: "3"
+- week: "11"
+  date: "1"
+  title: "Lab: Anagram Solver"
+  deliverables:
+  - dtitle: "Lab: Anagram Solver Handed Out"
+    dlink: "Labs/Anagrams"  
+    points: 100
+    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"      
+- week: "11"
+  date: "2"
   title: "Arrays"    
   deliverables:
   - dtitle: "Lab: Ethical Case Studies Handed Out"
@@ -738,8 +736,8 @@ schedule:
   readings:
   - rtitle: "Traversing Arrays"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"     
-- week: "10"
-  date: "0"
+- week: "11"
+  date: "3"
   title: "The ArrayList and Generic/Template Data Structures"
   link: "Activities/ArrayList"
   readings:
@@ -764,7 +762,15 @@ schedule:
     dlink: "Modules/Arrays/Module"     
     points: 3
     submission_types: "noupload"    
-- week: "10"
+- week: "12"
+  date: "0"
+  title: "The ArrayList and Generic/Template Data Structures"
+  deliverables:
+  - dtitle: "Exercise: Problets - Array"
+    dlink: "Modules/Problets/Exercise"  
+    points: 3   
+    submission_types: "written"
+- week: "12"
   date: "1"
   title: "Lab: Drop the Lowest"
   readings:
@@ -782,17 +788,9 @@ schedule:
   - dtitle: "Debugging Table: First Check Due"
     dlink: "Assignments/DebuggingTable"
     points: 10    
-    submission_types: "written"
-- week: "10"
-  date: "2"
-  title: "The ArrayList and Generic/Template Data Structures"
-  deliverables:
-  - dtitle: "Exercise: Problets - Array"
-    dlink: "Modules/Problets/Exercise"  
-    points: 3   
-    submission_types: "written" 
-- week: "10"
-  date: "3"  
+    submission_types: "written"     
+- week: "12"
+  date: "2"  
   title: "2D Arrays"
   link: "Activities/2DArrays"  
   readings:
@@ -806,9 +804,9 @@ schedule:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
-    submission_types: "noupload"  
-- week: "11"
-  date: "0"
+    submission_types: "noupload"   
+- week: "12"
+  date: "3"
   title: "2D Arrays" 
   deliverables:
   - dtitle: "Exercise: Iteration Revisited"
@@ -823,25 +821,9 @@ schedule:
   - rtitle: "Nested Loops"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
   - rtitle: "Loop Analysis"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"    
-- week: "11"
-  date: "1"
-  title: "Lab: Arrays"
-  deliverables:
-  - dtitle: "Lab: 2D Array Board Game Handed Out"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
-  - dtitle: "Programming Assignment: Guitar String Synthesis Due"
-    dlink: "Assignments/GuitarStringSynth"      
-    points: 100   
-    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"    
-  - dtitle: "Programming Assignment: ASCII Art Handed Out"
-    dlink: "Assignments/ASCIIArt" 
-    points: 100    
-    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"       
-- week: "11"
-  date: "2"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"           
+- week: "13"
+  date: "0"
   title: "Arrays Workshop"
   link: "Activities/Arrays/Workshop"  
   readings:
@@ -858,8 +840,24 @@ schedule:
     dlink: false
     points: 40    
     qtizippath: "_pages/Quizzes/qti_arrays.zip"
-- week: "11"
-  date: "3"
+- week: "13"
+  date: "1"
+  title: "Lab: 2D Arrays"
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Handed Out"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
+  - dtitle: "Programming Assignment: Guitar String Synthesis Due"
+    dlink: "Assignments/GuitarStringSynth"      
+    points: 100   
+    rubricpath: "_pages/Assignments/Arrays/asmt-guitarstringsynth.md"    
+  - dtitle: "Programming Assignment: ASCII Art Handed Out"
+    dlink: "Assignments/ASCIIArt" 
+    points: 100    
+    rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"    
+- week: "13"
+  date: "2"
   title: "Algorithms: Searching" 
   link: "Activities/Searching"   
   readings:
@@ -880,23 +878,15 @@ schedule:
     dlink: "Assignments/DebuggingTable"
     points: 10 
     submission_types: "written"     
-- week: "12"
-  date: "0" 
+- week: "13"
+  date: "3" 
   title: "Algorithms: Searching"
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100     
     rubricpath: "_pages/Projects/proj-final.md"
-- week: "12"
-  date: "1"
-  title: "Lab: Ethical Case Studies"  
-  deliverables:
-  - dtitle: "Lab: 2D Array Board Game Due"
-    dlink: "Labs/GridGame"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md" 
-- week: "13"
+- week: "14"
   date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"    
@@ -907,20 +897,26 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html"
   - rtitle: "Wrapper Classes"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"   
-- week: "13"
+- week: "14"
   date: "1"
-  title: "Lab: Code Review"
-  deliverables: 
-  - dtitle: "Lab: Code Review Handed Out"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"     
-- week: "13"
+  title: "Lab: Ethical Case Studies"  
+  deliverables:
+  - dtitle: "Lab: 2D Array Board Game Due"
+    dlink: "Labs/GridGame"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-gridgame.md"     
+- week: "14"
   date: "2"
   title: "Classes and Object Data Types"  
   readings:
   - rtitle: "Constructors"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"
+  - rtitle: "Accessors"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html"
+  - rtitle: "Mutators"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
+  - rtitle: "Static Variables and Methods"
+    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"       
   deliverables:
     - dtitle: "Programming Assignment: ASCII Art Due"
       dlink: "Assignments/ASCIIArt" 
@@ -930,18 +926,8 @@ schedule:
       dlink: "Assignments/Iris"      
       points: 100
       rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"    
-- week: "13"
-  date: "3"
-  title: "Classes and Object Data Types" 
-  readings:
-  - rtitle: "Accessors"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html"
-  - rtitle: "Mutators"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
-  - rtitle: "Static Variables and Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"    
 - week: "14"
-  date: "0"
+  date: "3"
   title: "Algorithms: Sorting"
   link: "Activities/Sorting"
   deliverables:
@@ -960,20 +946,16 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
   - rtitle: "Sorting Algorithms"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"     
-- week: "14"
-  date: "1"
+- week: "15"
+  date: "0"
   title: "Algorithms: Sorting" 
   deliverables:
-  - dtitle: "Lab: Code Review Due"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"
   - dtitle: "Exercise: Insertion Sort"
     dlink: "Modules/InsertionSort/Module"  
     points: 3 
-    submission_types: "noupload"    
-- week: "14"
-  date: "2"
+    submission_types: "noupload"  
+- week: "15"
+  date: "1"
   title: "Algorithms: Recursion" 
   link: "Activities/Recursion"
   readings:
@@ -989,22 +971,18 @@ schedule:
   - dtitle: "Quiz: Classes and Algorithms"
     dlink: false
     points: 40    
-    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"    
-- week: "14"
-  date: "3"
-  title: "Algorithms: Recursion" 
-  deliverables:           
-    - dtitle: "Exercise: Recursion"
-      dlink: "Modules/Recursion/Module"
-      points: 3      
-      submission_types: "noupload"      
-    - dtitle: "Final Project: Project and Presentation Due"
-      dlink: "Projects/Final"    
-      points: 100  
-      rubricpath: "_pages/Projects/proj-final.md"  
+    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"             
+  - dtitle: "Exercise: Recursion"
+    dlink: "Modules/Recursion/Module"
+    points: 3      
+    submission_types: "noupload"      
+  - dtitle: "Final Project: Project and Presentation Due"
+    dlink: "Projects/Final"    
+    points: 100  
+    rubricpath: "_pages/Projects/proj-final.md"  
       
 university:
-  semester: "Fall"
+  semester: "Spring"
   academicyear: "2021-22"
   fall:
   - kname: "Add Deadline"
@@ -1065,6 +1043,7 @@ university:
   - date: "2021/11/28"
   springholidays:
   - date: "2022/01/17"  
+  - date: "2022/01/18"
   - date: "2022/03/5"  
   - date: "2022/03/6"  
   - date: "2022/03/7"  
