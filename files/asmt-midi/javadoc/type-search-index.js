@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.MIDI","l":"Instruments"},{"p":"com.MIDI","l":"MIDIPlayer"},{"p":"com.MIDI","l":"Notes"}]

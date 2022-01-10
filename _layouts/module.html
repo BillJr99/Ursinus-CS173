@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/processing.min.js"></script>
+<style>
+.image_off, #home:hover .image_on{
+   display:none
+}
+.image_on, #home:hover .image_off{
+   display:block
+}
+#editor {
+    position: relative;
+    width: 700px;
+    height: 250px;
+}
+#mainEditor {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+#feedbackText {
+    position: relative;
+    width: 700px;
+    height: 100px;
+}
+
+</style>
+
+<script src="{{site.baseurl}}/assets/js/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{site.baseurl}}/assets/js/modules-common.js" type="text/javascript" charset="utf-8"></script>
+        
+<div id="main" role="main"> 
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>
+        Developed by <a href="https://www.ursinus.edu/live/profiles/4502-christopher-tralie">Professor Tralie</a> and <a href="https://www.ursinus.edu/live/profiles/5313-william-mongan">Professor Mongan</a>.
+        
+        {% if page.info.prev or page.info.next %}
+        <p>
+        {% if page.info.prev %}
+        <button onclick="window.location.href = '{{ page.info.prev }} ';"> &lt--- Previous</button>
+        {% endif %}
+        {% if page.info.next %}
+        <button onclick="window.location.href = '{{ page.info.next }}';">Next ---&gt</button>
+        {% endif %}
+        </p>
+        <HR>
+        {% endif %}
+        
+        {% if page.info.video %}
+        <p>
+        Please watch the video below{% if page.info.next %}, and when you're finished, click the "NEXT" button to proceed{% endif %}.  
+        <br>
+        Note that some videos may show "Resource Unavailable" as the thumbnail - this is just the preview, and the video should play normally upon clicking the "Play" button.
+        </p>
+        <iframe width="{% if page.info.videowidth %}{{page.info.videowidth}}{% else %}560{% endif %}" height="{% if page.info.videoheight %}{{page.info.videoheight}}{% else %}315{% endif %}" src="{{ page.info.video }}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+
+    
+    {{ content }}
+  </div>
+</div>
+
+<!-- Scripts -->
+			<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+			<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+			<script src="{{site.baseurl}}/assets/js/util.js"></script>
+			<script src="{{site.baseurl}}/assets/js/main.js"></script>
+<!-- End Scripts -->  

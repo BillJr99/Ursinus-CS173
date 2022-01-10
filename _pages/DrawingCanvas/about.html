@@ -1,0 +1,82 @@
+---
+layout: default-blank
+permalink: /DrawingCanvas/Replay/About
+title: "About Pixel Pandemonium"
+excerpt: "About Pixel Pandemonium"
+
+teachervideo: "https://cdnapisec.kaltura.com/p/1513041/sp/151304100/embedIframeJs/uiconf_id/43882971/partner_id/1513041?iframeembed=true&playerId=kaltura_player&entry_id=1_1auznbwp&flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_svov520q"
+studentvideo: "https://www.youtube.com/embed/7Xt_923C5S4"
+
+videowidth: 896
+videoheight: 504
+
+moreinfolink: "https://www.cs.drexel.edu/~jpopyack/Post-It/index.html"
+moreinfotitle: "Post-It Pandemonium"
+
+---
+
+<script language="javascript" type="text/javascript">
+	var NumRefs=0 ;
+	function ShowURLinTarget(text,ref,target) 
+	{
+	  document.write("<a HREF=" + ref + " TARGET=" + target + ">" + text + "</a>") ;
+	   if(document.links.length-1 > NumRefs) 
+		NumRefs = document.links.length - 1 ;
+	  var theRef = document.links[NumRefs++].href ;
+	  var linkColor = document.linkColor ;
+	  document.write(" (" + theRef.fontsize(-1).fontcolor(linkColor).fixed() + ")") ;
+	}
+</script>
+
+<link HREF="{{site.baseurl}}/assets/css/drawingcanvas.css" REL="stylesheet" TYPE="text/css" /></head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.pixel {
+	font-family: 'Press Start 2P', cursive;
+//	font-family: 'VT323', monospace;
+}
+</style>
+
+<h1><span class="pixel">Welcome to Pixel Pandemonium!</span></h1>
+<hr>
+
+<p>Pixel Pandemonium is an all-online version of
+  
+  Post-It Pandemonium, a hands-on, &quot;unplugged&quot; CS activity in which students learn how GIF images are represented on a computer and construct a large version of a GIF image, using Post-It's for pixels. You can read more about Post-It Pandemonium by following this link:
+  <script language="javascript" type="text/javascript">
+		ShowURLinTarget("{{page.moreinfotitle}}","{{page.moreinfolink}}","_pm");
+	</script>. We have adapted this activity for an online audience, making it definitely a plugged-in unplugged activity.</p>
+<p>There are directions below for teachers preparing to lead a class through this activity, and for students preparing to participate in the activity. But remember, students: when in doubt, <em>pay attention to your teacher! </em>Enjoy, <em>-- JL Popyack, WM Mongan</em></p>
+
+<table border="0" cellspacing="4" cellpadding="0">
+    <tr valign="top">
+      <td valign="top" style="padding-right: 30px; vertical-align: top;"><h3><strong>Directions:</strong>
+        </h3>
+        <ul style="margin-left: -5px;">
+          <li>
+    	    <a onclick="document.getElementById('directions').src='{{page.teachervideo}}'" style="text-decoration: underline;
+">for Teachers: </a>
+		  </li>
+          <li>
+		    <a onclick="document.getElementById('directions').src='{{page.studentvideo}}'" style="text-decoration: underline;
+">for Students:</a>
+		  </li>
+      </ul> 
+	</td>
+
+      <td valign="top" bgcolor="lightgray" style="vertical-align: top;">
+		  <iframe id="directions" width="{{page.videowidth}}" height="{{page.videoheight}}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</td>    
+  </tr>
+</table>
+
+<br>
+
+<div CLASS="headerlabel">
+To add a page to the image, click the “Fill In a Page” link at the top</div>
+<br />
+<div CLASS="headerlabel">
+To view the image being constructed, click the “See the Full Image” link at the top.
+</div>

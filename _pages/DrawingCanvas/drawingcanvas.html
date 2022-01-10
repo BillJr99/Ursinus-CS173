@@ -1,0 +1,492 @@
+---
+layout: default
+permalink: /DrawingCanvas
+title: "Drawing Canvas"
+excerpt: "Drawing Canvas"
+    
+canvascolors:
+  - color: '#00c5cb'
+    show: true
+  - color: '#fcb334'
+    show: true
+  - color: '#98012e'
+    show: true
+  - color: '#000000'
+    show: true    
+  - color: '#eb00ff'
+    show: false
+  - color: '#7d7300'
+    show: false
+  - color: '#55a2a9'
+    show: false
+  - color: '#ffa200'
+    show: false
+  - color: '#cccccc'
+    show: false
+  - color: '#ffea00'
+    show: false
+  - color: '#0042ff'
+    show: false
+  - color: '#e22b7c'
+    show: false
+  - color: '#f89318'
+    show: false
+  - color: '#d0d222'
+    show: false
+  - color: '#2e8c8e'
+    show: false
+  - color: '#1c80c4'
+    show: false
+  - color: '#d3ddd8'
+    show: false
+  - color: '#000000'
+    show: false
+  - color: '#ffffff'
+    show: false
+  - color: '#f39a4f'
+    show: false
+  - color: '#eb6092'
+    show: false
+  - color: '#4ab6d9'
+    show: false
+  - color: '#abcc51'
+    show: false
+  - color: '#f9c847'
+    show: false
+  - color: '#75be6f'
+    show: false
+  - color: '#b6d051'
+    show: false
+  - color: '#bcddc7'
+    show: false
+  - color: '#a7cbeb'
+    show: false
+  - color: '#86b8e6'
+    show: false
+  
+numcols: 5
+numrows: 10
+subcols: 5
+subrows: 3
+
+canvaswidth: 800
+canvasheight: 600
+
+dogrid: true
+dofreedraw: false
+
+fayelink: "https://FayePubSub.billjr99.repl.co"
+
+instructionslink: "./files/drawingcanvas-ucbear2/Merged.pdf"
+
+links:
+  - title: "Visualizing Video at the Speed of Light"
+    link: "https://www.youtube.com/watch?v=EtsXgODHMWk"
+  - title: "A Camera that Can See Around Corners"
+    link: "https://www.youtube.com/watch?v=Ir7wCAQINqw"
+  - title: "How a TV Works in Slow Motion (warning: flashing lights)"
+    link: "https://www.youtube.com/watch?v=3BJU2drrtCM"
+    
+---
+
+<style>
+#canvascontainer {
+ width: {{ page.canvaswidth | plus:100 }}px;
+ height: {{ page.canvasheight | plus:10 }}px;
+}
+
+#yheadercanvascontainer {   
+ float: left;
+ width: 50px;
+ height: {{ page.canvasheight }}px;
+ margin: 0;
+ padding: 0;
+ display: inline-block;
+}
+
+#maincanvascontainer { 
+ float: left;
+ width: {{ page.canvaswidth }}px;
+ height: {{ page.canvasheight }}px;
+ margin: 0;
+ padding: 0;
+ display: inline-block;
+}
+</style>
+
+{% if page.fayelink %}
+<!-- Run corresponding repl.it -->
+<script type="text/javascript" 
+        src="{{ page.fayelink }}/faye/client.js">
+        </script>
+{% endif %}
+        
+<!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
+
+<!-- Set color palette and dimensions above according to mail merge post it posterizer colors and drawing grid, if using post-its; create and give out mail merge document -->
+
+Color: <input type="color" id="colorpicker" name="colorpicker" value="#ff0000">
+<br><br>
+
+<canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:150 }}" height="50" style="border:0px solid #ffffff;"></canvas>
+<br>
+<div id="canvascontainer">
+<div id="yheadercanvascontainer">
+<canvas id="yheadercanvas" width="50" height="{{ page.canvasheight }}" style="border:0px solid #ffffff;"></canvas>
+</div>
+<div id="maincanvascontainer">
+<canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
+</div>
+</div>
+
+<br><br>
+
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
+{% if page.canvascolors[i].show %}
+<canvas id="canvascolor{{ i }}" width="64" height="100" style="border:1px solid #000000;"></canvas>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% if page.instructionslink %}
+<br><br>
+<a href="{{ page.instructionslink }}" target="_blank">Click here for the Instructions</a>
+<br><br>
+{% endif %}
+
+{% for i in (0..page.links.size) %}
+{% if i < page.links.size %}
+<a href="{{page.links[i].link}}">{{page.links[i].title}}</a><br>
+{% endif %}
+{% endfor %}
+<br><br>
+
+<script type="text/javascript">
+var canvas = document.getElementById('drawCanvas');
+var ctx = canvas.getContext('2d');
+var colorpicker = document.getElementById('colorpicker');
+
+ctx.lineWidth = '3';
+
+// palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
+var palettes = [
+{% for i in (0..page.canvascolors.size) %}
+{% if i < page.canvascolors.size %}
+{% if page.canvascolors[i].show %}
+"{{ page.canvascolors[i].color }}", 
+{% endif %}
+{% endif %}
+{% endfor %}
+];
+
+function colorpaletteclicked(e) {
+    var id = e.target.id;
+    
+    id = id.replace("canvascolor", "");
+    
+    id = parseInt(id);
+    
+    chosencolor = palettes[id];
+    
+    colorpicker.value = chosencolor;
+    
+    //console.log(id);
+    //console.log(chosencolor);
+}
+
+function makeColorPalette(colorcanvas, fillcolor, label) {
+    var colorctx = colorcanvas.getContext('2d');
+    
+    // Color it in with the predefined palette
+    colorctx.fillStyle = fillcolor;
+    colorctx.fillRect(0, 0, colorcanvas.width, colorcanvas.height);
+    
+    // Label the color with a number
+    colorctx.font = "18px Arial";
+    if(fillcolor == '#000000') {
+        colorctx.fillStyle = "white";    
+        colorctx.strokeStyle = "white";         
+    } else {
+        colorctx.fillStyle = "black";    
+        colorctx.strokeStyle = "black"; 
+    }
+    colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
+}
+
+function makeColorPalettes() {
+    for(var i = 0; i < palettes.length; i++) {
+        var colorcanvas = document.getElementById('canvascolor' + i);
+        makeColorPalette(colorcanvas, palettes[i], i);
+        
+        // Add a listener here that, when clicked, sets the main color picker color value
+        colorcanvas.addEventListener('mousedown', colorpaletteclicked, false);        
+    }
+}
+
+makeColorPalettes();
+
+{% if page.dogrid %}
+// ***** OPTION: GRID SUPPORT *****
+// for labeling the grid
+var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
+var numcols = {{ page.numcols }};
+var numrows = {{ page.numrows }};
+var gridwidth = {{ page.canvaswidth }} / numcols;
+var gridheight = {{ page.canvasheight }} / numrows;
+
+// subcols and subrows provide subsquares within each grid element for the individual fill-ins
+var subcols = {{ page.subcols }};
+var subrows = {{ page.subrows }};
+
+function gridListeners() {
+    canvas.addEventListener('mousedown', fillgrid, false);
+}
+
+{% if page.fayelink %}
+// Pub-sub
+var fayeclient = new Faye.Client('{{ page.fayelink }}');
+
+function doFayeSubscribe() {
+  fayeclient.subscribe('/messages', function(message) {
+    //console.log("Message: " + message.text);
+    
+    var msg = message.text;
+    var msgparts = msg.split(',');
+    
+    var leftx = msgparts[0];
+    var topy = msgparts[1];
+    var rectwidth = msgparts[2];
+    var rectheight = msgparts[3];
+    var rectcolor = msgparts[4];
+    
+    // call drawrect method
+    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor);
+  });    
+}
+
+function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
+    
+    fayeclient.publish('/messages', {
+      text: message
+    });     
+}
+{% endif %}
+
+// call this to initialize the grid; comment to disable
+makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
+
+// call this to add click listener to fill in rectangle; comment to disable
+gridListeners();
+
+{% if page.fayelink %}
+// call this to set up pub-sub; comment to disable
+doFayeSubscribe();
+{% endif %}
+
+// https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
+// bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
+function makeGrid(bwidth, bheight, rwidth, rheight) {
+    ctx.strokeStyle = "black";
+    
+    var xlines = -1;
+    
+    for (var x = 0; x <= bwidth + 1; x += rwidth / subcols) {
+        xlines = xlines + 1;
+        
+        if(xlines == subcols) {
+            xlines = 0;
+        }
+        
+        if(xlines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+        
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, bheight);
+        ctx.stroke();
+    }
+
+    var ylines = -1;
+    
+    for (var y = 0; y <= bheight + 1; y += rheight / subrows) {
+        ylines = ylines + 1;
+        
+        if(ylines == subrows) {
+            ylines = 0;
+        }
+    
+        if(ylines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+                
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(bwidth, y);
+        ctx.stroke();
+    }
+    
+    ctx.font = "18px Arial";
+    ctx.strokeStyle = "red";
+    ctx.fillStyle = "red";
+    ctx.lineWidth = '3';
+    
+    var xi = 0;
+    var yi = 0;
+    for(var x = 0; x < bwidth; x += rwidth) {
+        yi = 0;
+        
+        for(var y = 0; y < bheight; y += rheight) {
+            label = xlabels.charAt(xi % xlabels.length) + (yi + 1).toString(); 
+            ctx.fillText(label, x + (rwidth / 2.0) - (rwidth / 10.0), y + (rheight / 2.0));
+            
+            yi = yi + 1;
+        }
+        
+        xi = xi + 1;
+    }
+    
+    ctx.strokeStyle = "black";
+    ctx.fillStyle = "black";    
+    ctx.lineWidth = '3';
+    
+    // Fill in the x header labels
+    var xheadercanvas = document.getElementById('xheadercanvas');
+    var xheaderctx = xheadercanvas.getContext('2d');
+    
+    xheaderctx.font = "18px Arial";
+    xheaderctx.strokeStyle = "red";
+    xheaderctx.fillStyle = "red";
+    xheaderctx.lineWidth = '3';
+    
+    var xi = 0;
+    for(var x = 0; x < bwidth; x += rwidth) {
+        label = xlabels.charAt(xi % xlabels.length);
+        xheaderctx.fillText(label, x + (rwidth / 2.0) + 50, 25);
+        
+        //console.log(x + " (" + xi + "): " + label + " (" + rwidth + ", " + bwidth + ")");
+        
+        xi = xi + 1;
+    }   
+
+    // Fill in the y header labels
+    var yheadercanvas = document.getElementById('yheadercanvas');
+    var yheaderctx = yheadercanvas.getContext('2d');
+    
+    yheaderctx.font = "18px Arial";
+    yheaderctx.strokeStyle = "red";
+    yheaderctx.fillStyle = "red";
+    yheaderctx.lineWidth = '3';
+    
+    var yi = 0;
+    for(var y = 0; y < bheight; y += rheight) {
+        label = (yi + 1).toString(); 
+        yheaderctx.fillText(label, 25, y + (rheight / 2.0));
+        
+        yi = yi + 1;
+    }       
+}
+
+function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor) {
+    ctx.fillStyle = rectcolor;
+    
+    // Fill in that rectangle
+    ctx.fillRect(leftx,topy,rectwidth,rectheight);
+}
+
+function fillgrid(e) {
+    if(e.button != 0) { // left click only
+        return;
+    }
+    
+    // cross-browser canvas coordinates
+    var x = e.offsetX || e.layerX - canvas.offsetLeft;
+    var y = e.offsetY || e.layerY - canvas.offsetTop;
+    
+    // What grid rectangle are we in?
+    var leftx = Math.floor(x * 1.0 / (gridwidth / subcols)) * (gridwidth / subcols);
+    var topy = Math.floor(y * 1.0 / (gridheight / subrows)) * (gridheight / subrows);
+    
+    drawGridSquare(leftx, topy, gridwidth / subcols, gridheight / subrows, colorpicker.value);
+    
+    {% if page.fayelink %}
+    // Send message to faye
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value);
+    {% endif %}
+}
+// ***** END OPTION: GRID SUPPORT *****
+{% endif %}
+
+{% if page.dofreedraw %}
+// ***** OPTION: FREE DRAW SUPPORT *****
+// create a flag for free drawing (if pen is on or off)
+var isActive = false;
+
+// array to collect coordinates for free drawing
+var plots = [];
+
+function freeDrawListeners() {
+    canvas.addEventListener('mousedown', startDraw, false);
+    canvas.addEventListener('mousemove', draw, false);
+    canvas.addEventListener('mouseup', endDraw, false);
+}
+
+// call this to add free draw listeners to attach the pen to the mouse; comment to disable
+freeDrawListeners();
+
+function drawOnCanvas() {
+  //console.log(plots[0].x);
+  //console.log(plots[0].y);
+  
+  color = colorpicker.value;
+  
+  //console.log(color);
+  
+  ctx.strokeStyle = color;
+  
+  ctx.beginPath();
+  ctx.moveTo(plots[0].x, plots[0].y);
+
+  for(var i=1; i<plots.length; i++) {
+    ctx.lineTo(plots[i].x, plots[i].y);
+  }
+  ctx.stroke();
+}
+
+function draw(e) {
+  if(!isActive) return;
+
+  // cross-browser canvas coordinates
+  var x = e.offsetX || e.layerX - canvas.offsetLeft;
+  var y = e.offsetY || e.layerY - canvas.offsetTop;
+
+  plots.push({x: x, y: y});
+  
+  drawOnCanvas();
+}
+
+function startDraw(e) {
+  if(e.button != 0) { // left click only
+      return;
+  }
+    
+  isActive = true;
+}
+
+function endDraw(e) {
+  isActive = false;
+
+  // empty the array
+  plots = [];
+}
+// ***** END OPTION: FREE DRAW SUPPORT *****
+{% endif %}
+</script>

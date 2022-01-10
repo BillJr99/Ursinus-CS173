@@ -1,0 +1,36 @@
+name: Update ical
+
+on:
+  push:
+    paths:
+      - "_pages/syllabus.md"
+      - "files/*.ics"
+  pull_request:
+    paths:
+      - "_pages/syllabus.md"
+      - "files/*.ics"
+
+jobs:
+  update_ical:
+    name: Update ical
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install uuid
+        run: pip install --upgrade uuid
+      - name: Install frontmatter
+        run: pip install --upgrade python-frontmatter        
+      - name: Install dateutil
+        run: pip install --upgrade python-dateutil         
+      - name: Build updated research output file
+        run: python syllabus2ical.py
+      - name: Commit new ical file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "files/*.ics"
+          commit_message: "Update ical from syllabus"

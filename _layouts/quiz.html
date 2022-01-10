@@ -1,0 +1,119 @@
+---
+layout: default
+
+directions: Please answer the questions provided.
+
+submission: Submit your answers via the form on this page.
+
+googlerecaptchakey: 6Le01roZAAAAABgEjsfg7AJ0rtq3J172O7FXTS8s
+
+formprocessor: "https://mathcs.ursinus.edu:8083/"
+enctype: "application/x-www-form-urlencoded"
+facultyemail: "wmongan@ursinus.edu"
+
+formprocessordirections: "<strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>"
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/skel.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/util.js"></script>
+<script src="{{site.baseurl}}/assets/js/main.js"></script>
+<!--Syntax highlighting in Javascript!-->
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shCore.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushJScript.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushCpp.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushMatlabSimple.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!--Syntax highlighting in Javascript!-->
+<!--reCAPTCHA-->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<!--reCAPTCHA-->
+
+ <script>
+   function enableSubmit() {
+    document.getElementById("submitbutton").disabled = false;
+   }
+ </script>
+ 
+<div id="main" role="main">
+  <div class="archive">
+    <h1 class="page__title">{{ page.title }}</h1>   
+    
+    <h2>Directions</h2>
+    {{ layout.directions }}
+    
+    <h2>{{ page.info.quizname }}{% if page.info.points %} ({{ page.info.points }} Points){% endif %}</h2>
+    
+    <form id="quizform" action="{{layout.formprocessor | strip}}" method="post" {% if layout.enctype %}enctype="{{ layout.enctype | strip}}"{% endif %}>
+    
+    <!-- Include page.title for reference -->
+    <input type="hidden" name="title" value="{{ page.title }}">
+
+    <!-- Magic Word: formprocessor only sends if this is present -->
+    <input type="hidden" name="magic" value="ursinus">
+    
+    <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
+            <div style="width: 100%; display: table-row; background-color: black; color: white;">
+                <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                    <strong>Question</strong>
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%; background-color: black; color: white;">
+                    <strong>Response</strong>
+                </div>
+            </div>
+            
+            {% for question in page.info.questions %}
+            <input type="hidden" name="{{ question.label }}-q" value="{{ question.text | strip }}">
+            
+            {% if question.visible == true %}
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                {{ question.text }}
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" name="{{ question.label | strip }}" style="width: 100%;" />
+                </div>
+            </div> 
+            {% endif %}
+            
+            {% endfor %}            
+            
+            <!-- facultyemail and studentnetid fields are required to send mail on the form processor -->
+            <input type="hidden" name="facultyemail" value="{{ layout.facultyemail | strip }}">
+            <input type="hidden" name="studentemail-q" value="What is your e-mail address?">
+            
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                What is your e-mail address?
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" name="studentemail" style="width: 100%;" />
+                </div>
+            </div> 
+
+            <div style="width: 100%; display: table-row;">
+                <div style="display: table-cell; padding:5px; width:50%;">
+                What is your netid?
+                </div>
+                <div style="display: table-cell; padding:5px; width:50%;">
+                <input type="text" id="studentnetid" name="studentnetid" style="width: 100%;" />          
+                </div>
+            </div> 
+    </div>    
+    
+    <div class="g-recaptcha brochure__form__captcha" data-sitekey="{{ layout.googlerecaptchakey | strip }}" data-callback="enableSubmit"></div>
+    
+    <br>
+    {{ layout.formprocessordirections }}<br><br>
+    <input type="submit" value="Submit" id="submitbutton" disabled="disabled">
+
+    </form>
+    
+    {{ content }} 
+  </div>
+</div>
+

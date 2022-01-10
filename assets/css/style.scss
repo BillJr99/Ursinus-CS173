@@ -1,0 +1,17 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.inner {
+  max-width: 75%; overflow: auto
+}
+
+a:link {
+  color: blue;
+}
+
+.footnotes::before {
+  display: block;
+  content: "Footnotes:";
+}

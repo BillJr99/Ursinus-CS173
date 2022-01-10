@@ -1,0 +1,151 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Abel:400,700");
+@import url("https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700");
+@import url("https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700");
+@import url("https://fonts.googleapis.com/css?family=Bellefair:400,700");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
+pre {
+	font-family: "Inconsolata", "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.headerlabel {
+/*	border: 2px solid #B45B01; /*  Fall  */
+	border: 2px solid #095070; /*  Winter  */
+	margin: 2px;
+	padding-left: 8px;
+    padding-top: 6px ;
+    padding-bottom: 6px ;
+/*	font-family: "Roboto", Arial, Helvetica, sans-serif; */
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-weight: bolder; // bold;
+	color: #EBEDEC; /*  Winter  */
+/*	color: #FFFFCC; /*  Fall  */
+/*	background-image:  url("../images/PragueWall_red rotated.png");
+*//*	background-image:  url("../images/Paris_sky.jpg");  */
+	background-color: #015F84;  /* lightslategray */
+	font-size: 16px;
+	text-transform: none;
+	display: table-cell;
+	height: 20px;
+/*	width: 100vw;  */
+	width: 800px;
+	vertical-align: middle;
+	border-radius: 15px;	
+}
+
+.prologue {
+	font-family: "Abel", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	color: #FFFFFF;
+	background: #444444;
+	display: table;
+}
+
+.topLevelBody {
+/*	background-image: url("../images/snow-big1.5_220.jpg");  */
+/*	background-image: url("../images/OregonSand_lightened.jpg");    */
+/*	background-image: url("../images/PragueWall_block.png");
+*//*	background-image: url("../images/Franklins_Table_wall_lighter.jpg");  */
+	font-family: "Abel", Arial, Helvetica, sans-serif; 
+/*	font-family: "Old Standard TT", serif;*/
+	color: #006;
+}
+
+/* . Fall colors . */
+/*
+.headtable { background-color: #000066; border-color: #C0C0C0; color:#FFFF66 }
+.darkcolor { background-color: #B45B01 }
+.mediumcolor { background-color: #EECC99 }
+.lightcolor { background-color: #FFFFCC}
+*/
+/* . Winter colors . */
+
+.headtable { background-color: #000066; border-color: #C0C0C0; color:#FFFF66 }
+.darkcolor { background-color: #C0C0C0; }
+.mediumcolor { background-color: #A2C0DF; }
+.lightcolor { background-color: #DCE4F1; }
+
+.darkcolor { background-color: #015F84 }
+
+.code {
+	font-family: "Inconsolata", "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: inherit;
+}
+.comment {
+	color: #00F;
+}
+.altComment {
+	color: #008000;
+}
+.alertComment {
+	color: #800000;
+	font-size: 14px;
+}
+
+.lecturenote {
+/*	font-family:"Times New Roman", Times, serif;*/
+	font-family:"Playfair Display", "Times New Roman", Times, serif;  
+/*	font-family:"Cormorant Garamond", "Times New Roman", Times, serif;
+*/	font-size: 24px;
+	
+    padding: 12px;
+ }
+
+.lecturenoteNav {
+/*	font-family:"Times New Roman", Times, serif;
+	font-family:"Frank Ruhl Libre", "Times New Roman", Times, serif;
+*/	font-family: "Abel", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	width: 200px;  /* replaces contentsWidth from LectureConfig.js */
+}
+
+.letterbox {
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+
+#repeatingBinary {
+	color: #F00;
+	text-decoration: overline;
+	font-weight: bold;
+}
+
+table tr td {
+	font-family: inherit;
+}
+
+a:link {
+  color: #001a19;
+}
+
+a:visited {
+  color: #001a19;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+a:active {
+  color: #ffffff;
+}
