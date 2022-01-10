@@ -254,6 +254,11 @@ schedule:
     rlink: "https://www.tutorialspoint.com/java/java_quick_guide.htm"
   - rtitle: "Expressions and Assignment Statements"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"
+  deliverables:
+  - dtitle: "Exercise: The NetBeans IDE Software Environment"
+    dlink: "Modules/IDE/Module"    
+    points: 3     
+    submission_types: "noupload"      
 - week: "1"
   date: "3"
   title: "Expressions and Variables"       
@@ -266,10 +271,10 @@ schedule:
   date: "0" 
   title: "Expressions and Variables"      
   deliverables:    
-  - dtitle: "Exercise: The NetBeans IDE Software Environment"
-    dlink: "Modules/IDE/Module"    
-    points: 3     
-    submission_types: "noupload"  
+  - dtitle: "Programming Assignment: Intro to NetBeans Due"
+    dlink: "Assignments/NetBeans"
+    points: 50 
+    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"    
 - week: "2"
   date: "1"
   title: "Lab: Kepler's Third Law"
@@ -298,11 +303,6 @@ schedule:
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
   - rtitle: "Casting and Ranges"
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"  
-  deliverables:
-  - dtitle: "Programming Assignment: Intro to NetBeans Due"
-    dlink: "Assignments/NetBeans"
-    points: 50 
-    rubricpath: "_pages/Assignments/Warmup/asmt-netbeans.md"
 - week: "2"
   date: "3"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
