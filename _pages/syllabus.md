@@ -11,8 +11,8 @@ info:
   - section: "B"
   course_title: "Intro to Computer Science"
   credit_hours: "4 Semester Hours"
-  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2021/"
-  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202021
+  course_homepage: "https://www.billmongan.com/Ursinus-CS173-Spring2022/"
+  class_notebook: https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202022
   ical: files/CS173.ics
   course_prerequisites: "No prior programming experience is assumed! People from all backgrounds with all levels of experience are welcome. As long as you have a laptop running Windows, Mac OS, or most variants of Linux, that was manufactured within the past 10 years, you will be able to do all of the assignments and participate in class."
   course_start_date: "2022/01/17"
