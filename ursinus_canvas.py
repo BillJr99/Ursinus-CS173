@@ -614,7 +614,15 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     
     inputdict = {}
     inputdict['title'] = "Class Activity Questions"
-    inputdict['message'] = "This space will be used to answer class activity questions."
+    inputdict['message'] = "This space will be used to answer class activity questions posed during the course."
+    inputdict['discussion_type'] = "threaded"
+    inputdict['pinned'] = True
+    inputdict['published'] = True
+    add_discussion_topic(course, inputdict)    
+    
+    inputdict = {}
+    inputdict['title'] = "Readings Discussion and Questions"
+    inputdict['message'] = "This is a space to pose questions and engage in thoughtful discussion about the course readings."
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
@@ -626,7 +634,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     inputdict['discussion_type'] = "threaded"
     inputdict['pinned'] = True
     inputdict['published'] = True
-    add_discussion_topic(course, inputdict)
+    add_discussion_topic(course, inputdict)    
     
     printlog("Writing Lecture Schedule...")
     
@@ -788,8 +796,6 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         inputdict['allowed_extensions'].append('gz')
                         inputdict['allowed_extensions'].append('rar')
                         inputdict['allowed_extensions'].append('7z')
-                        inputdict['allowed_extensions'].append('xlsx')
-                        inputdict['allowed_extensions'].append('xls')
                         if "submission_types" in deliverable and "written" in deliverable['submission_types'].lower():
                             inputdict['submission_types'].append('online_text_entry')
                             inputdict['allowed_extensions'].append('pdf')
