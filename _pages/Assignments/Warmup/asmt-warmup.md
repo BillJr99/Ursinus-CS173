@@ -6,8 +6,8 @@ excerpt: "CS173: Intro to Computer Science - Warmup"
 
 info:
   coursenum: CS173
-  officehourspoll: "https://doodle.com/poll/asqc86anp5k8mm86?utm_source=poll&utm_medium=link"
-  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Fall%202021"
+  officehourspoll: "https://doodle.com/poll/kff5n5g5ca5tc6qm?utm_source=poll&utm_medium=link"
+  class_notebook: "https://ursinuscollege365-my.sharepoint.com/personal/wmongan_ursinus_edu/Documents/Class%20Notebooks/CS173%20Spring%202022"
   class_notebook_name: "OneNote"
   chatname: "Microsoft Teams"
   submission: "We will complete this assignment using Teams, so there is no need to write up any documentation (as we will in future programming assignments) nor is it necessary to submit anything to Canvas.  It is fine to just follow the directions in each part and send me messages as appropriate!"
@@ -47,7 +47,7 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 
 You will not be graded on this, but I want to setup my office hours so that everyone can make at least one of them. Please [click here]({{ page.info.officehourspoll }}) and select every block in which you can attend at least 30 minutes in your schedule. You may use a pseudonym or post anonymously if you wish.
 
-## Software Environment (5 pts)
+## Software Environment (5 Pts)
 
 Please follow [the directions on the software page](../NetBeans) to install Netbeans and the CheckStyle plugin on your computer (alternatively, as stated on the software page, you may use Eclipse or IntelliJ). Once you have Netbeans installed, [click here]({{ page.info.testproject.ziplink }}) to download some code that we will use to test it. Save it somewhere on your computer that you know where to find it (the easiest way to do this in most browsers is to right click on the link and select "save as"). It is recommended that you make a folder that you use to place all of your {{ page.info.coursenum }} work in one place. As an example, I will create such a folder on my desktop named `{{ page.info.coursenum }}`, and I will copy the file I just downloaded into it. Next, you will want to _extract_ the contents of the file you just downloaded into the folder. For example, on Windows, I would right click on `{{ page.info.testproject.zipfilename }}` and click extract, and put the following into this dialog that pops up:
 
@@ -81,7 +81,7 @@ You can access the Ursinus network remotely by using a Virtual Private Network (
 If you are not a commuter student, please skip this step!
 {% endif %}
 
-## Syllabus (10pts)
+## Syllabus (10 Pts)
 
 Please take a moment to familiarize yourself with [the course syllabus]({{ site.baseurl }}). Then, **please send me a third and final message on {{ page.info.chatname }} with the answers to the following questions**
 

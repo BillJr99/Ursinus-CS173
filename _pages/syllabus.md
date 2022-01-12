@@ -218,7 +218,7 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Warmup Handed Out"    
     dlink: "Assignments/Warmup"
-    points: 15
+    points: 20
     submission_types: "onpaper"
 - week: "0"
   date: "3"
@@ -237,7 +237,7 @@ schedule:
   deliverables:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
-    points: 15
+    points: 20
     submission_types: "onpaper"
   - dtitle: "Programming Assignment: Intro to NetBeans Handed Out"
     dlink: "Assignments/NetBeans"
