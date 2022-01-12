@@ -15,7 +15,7 @@ info:
     - "Each item required for a grade of B is included"
     - "The project contains at least one class with a constructor, accessor/mutator functions, and private variables"
     - "The group consists of at least 2 and no more than 3 members"
-    - "The projet submitted was substantially consistent with the project proposed to and approved by the Professor"
+    - "The project submitted was substantially consistent with the project proposed to and approved by the Professor"
     b:
     - "Each item required for a grade of C is included"
     - "The project includes appropriate unit tests, including multiple tests for each function as required to demonstrate functionality with boundary case inputs"
