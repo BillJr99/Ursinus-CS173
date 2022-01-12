@@ -871,7 +871,6 @@ schedule:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
     points: 100     
-    rubricpath: "_pages/Projects/proj-final.md"
   - dtitle: "Lab: Ethical Case Studies Due"
     dlink: "Labs/EthicalConsiderations"      
     points: 100  
@@ -940,7 +939,6 @@ schedule:
   - dtitle: "Final Project: Project Proposal Due"
     dlink: "Projects/Final"    
     points: 10     
-    rubricpath: "_pages/Projects/proj-final.md"  
 - week: "15"
   date: "0"
   title: "Algorithms: Sorting" 
@@ -970,7 +968,6 @@ schedule:
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"    
     points: 100  
-    rubricpath: "_pages/Projects/proj-final.md"  
       
 university:
   semester: "Spring"
