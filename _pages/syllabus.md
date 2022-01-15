@@ -453,7 +453,7 @@ schedule:
   - dtitle: "Lab: Averaging Functions Handed Out"    
     dlink: "Labs/AverageFunction" 
     points: 100
-    rubricpath: "_pages/Labs/Functions/lab-functions.md"
+    rubricpath: "_pages/Labs/Functions/lab-averagingfunctions.md"
   - dtitle: "Exercise: Problets - Expressions - Assignment"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -497,7 +497,7 @@ schedule:
   - dtitle: "Lab: Averaging Functions Due"    
     dlink: "Labs/AverageFunction"  
     points: 100  
-    rubricpath: "_pages/Labs/Functions/lab-functions.md"
+    rubricpath: "_pages/Labs/Functions/lab-averagingfunctions.md"
   - dtitle: "Programming Assignment: MIDI Audio Due"
     dlink: "Assignments/MIDI"    
     points: 100

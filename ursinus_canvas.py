@@ -13,6 +13,8 @@ import threading
 import time
 import random
 from urllib import request, parse
+import requests
+import json
 
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
@@ -32,8 +34,8 @@ DUE_TIME = "T035959Z" # this time is no earlier than 10:59PM Eastern Time during
 DUE_DATE_OFFSET = 1 # 1 # add 1 day to make things due the next morning per the due time above if GMT is after midnight
 DUE_DATE_FORMAT = "%Y%m%dT%H%M%SZ"
 
-TABS_TO_HIDE = ["Outcomes", "Collaborations", "Files", "Pages", "Conferences", "BigBlueButton (Formerly Conferences)", "Chat", "New Analytics"] # which navigation pane items to hide if they are visible
-TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Panopto Video", "Rubrics", "Quizzes", "Announcements", "Zoom" ] # which navigation pane items to force show if they are already hidden
+TABS_TO_HIDE = ["Outcomes", "Collaborations", "Files", "Pages", "Conferences", "BigBlueButton", "Chat", "New Analytics", "Panopto Video", "Zoom"] # which navigation pane items to hide if they are visible
+TABS_TO_SHOW = ["Assignments", "Discussions", "Grades", "People", "Syllabus", "Modules", "Grizzly Gateway", "SPTQ", "Attendance", "Rubrics", "Quizzes", "Announcements" ] # which navigation pane items to force show if they are already hidden
 
 child_threads = []
 
@@ -296,17 +298,32 @@ def create_quiz_content_migration(course, quiz_path, sleep_time=5):
     inputdict['settings'] = {}
     inputdict['settings']['overwrite_quizzes'] = True
     
-    migration = course.create_content_migration('qti_converter', **inputdict)
-    
-    # wait for module creation
-    time.sleep(sleep_time)
+    migration = course.create_content_migration(**inputdict)
     
     # now actually upload the file to the url given by the response to the module creation
-    upload_url = migration['attachment']['url']
+    upload_url = migration.pre_attachment['upload_url']
     upload_file = open(quiz_path, 'rb')
-    requests.post(upload_url, files={'file': upload_file})
+    requests.post(upload_url, files={'file': upload_file}) # zip of qti
     
     # wait for upload 
+    uploaddone = False
+    while not uploaddone:
+        progress = migration.get_progress()
+        progress_url = progress.url
+        print("Waiting for upload of " + quiz_path + " to complete, check progress at: " + progress_url)
+        header = {"Authorization": "Bearer %s" % API_KEY}
+        resp = requests.get(progress_url, headers=header)
+        body = resp.text
+        bodyjson = json.loads(body)
+        status = bodyjson['workflow_state'] 
+        completion = bodyjson['completion']
+        if status != 'queued':
+            uploaddone = True
+        else:    
+            print("Upload progress of " + quiz_path + str(completion) + ", waiting...")
+            time.sleep(sleep_time)
+            
+    # Wait for creation to finish even after progress shows done
     time.sleep(sleep_time)
     
 def add_grading_standard(course, inputdict):
@@ -514,7 +531,9 @@ def add_assignments_to_groups(course, postdict):
         elif 'Programming Assignment:' in name:
             group = get_assignment_group_containing_label(groups, 'Programming Assignment')
         elif 'Written Assignment:' in name:
-            group = get_assignment_group_containing_label(groups, 'Written Assignment')            
+            group = get_assignment_group_containing_label(groups, 'Written Assignment')
+        elif 'Homework Assignment:' in name:
+            group = get_assignment_group_containing_label(groups, 'Homework Assignment')            
         elif 'Project:' in name:
             group = get_assignment_group_containing_label(groups, 'Project')
         elif 'Exercise:' in name:
@@ -522,13 +541,18 @@ def add_assignments_to_groups(course, postdict):
         elif 'Participation:' in name:
             group = get_assignment_group_containing_label(groups, 'Participation') 
         elif 'Quiz:' in name or asmtgroup == quizgroup:
-            group = quizgroup
+            group = quizgroup            
         else:
             if 'grade_breakdown' in postdict:
                 for breakdown in postdict['grade_breakdown']:        
                     category = breakdown['category']
                     
-                    if category in name:
+                    # remove last s if plural
+                    categorylookup = category
+                    if category[-1] == 's':
+                        categorylookup = category[:-1]
+                        
+                    if categorylookup in name:
                         group = get_assignment_group_containing_label(groups, category)
                         break
                         
@@ -561,7 +585,10 @@ def create_calendar_event(canvas, inputdict):
         print("Calendar Event Creation: Resource Does Not Exist")
 
 def create_late_policy(course, inputdict):
-    course.create_late_policy(**inputdict)
+    try:
+        course.create_late_policy(**inputdict)
+    except: # if the late policy already exists, edit it
+        course.edit_late_policy(**inputdict)
     
 def process_markdown(fname, canvas, course, courseid, homepage):
     f = open(fname, 'r')
@@ -899,10 +926,13 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         # upload the quiz automatically
                         quiz_path = deliverable['qtizippath']
                         
+                        print("Uploading Quiz: " + quiz_path)
+                        
                         create_quiz_content_migration(course, quiz_path)
                     else:
                         # prompt the user to upload the quiz
                         input("Import the QTI for this quiz under Settings - Import Course Content on Canvas and press enter to continue: " + description)
+                        
                     quiz_name = lchop(description, "Quiz: ")
                     quiz = find_quiz_by_title(course, quiz_name)
                     if not (quiz is None):
@@ -1064,7 +1094,7 @@ def process_markdown(fname, canvas, course, courseid, homepage):
     printlog("Creating Assignment Groups...")
     
     # Write Out Assignment Groups   
-    if 'grade_breakdown' in postdict:
+    if 'grade_breakdown' in postdict:        
         for breakdown in postdict['grade_breakdown']:
             inputdict = {} 
             
@@ -1076,9 +1106,9 @@ def process_markdown(fname, canvas, course, courseid, homepage):
             
         add_assignments_to_groups(course, postdict)
         
-        # Delete the default Assignments and Imported Assignments gradebook groups
+        # Delete the default Assignments and Imported Assignments gradebook groups; don't use these on syllabi
         delete_assignment_group_by_name(course, "Assignments")        
-        delete_assignment_group_by_name(course, "Imported Assignments") 
+        delete_assignment_group_by_name(course, "Imported Assignments")         
 
 def get_courseid(canvas, user):
     courses = user.get_courses()
