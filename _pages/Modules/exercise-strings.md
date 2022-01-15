@@ -10,7 +10,7 @@ info:
   goals:
     - To iterate over <code>String</code> variables.
 
-canvasasmtid: "125570"    
+canvasasmtid: "137447"
 canvaspoints: 3
     
 processor:  
