@@ -112,9 +112,16 @@ def find_canvas_assignment(exerciselink, syllabusfile):
                         linkparts = link.split('/')
                         exerciselinkparts = exerciselink.split('/')
                         match = True
-                        for i in range(min(len(linkparts)-1, len(exerciselinkparts)-1)):
-                            if linkparts[i] != exerciselinkparts[i]:
-                                match = False
+                        if linkparts[-1].lower() == "module":
+                            linkparts[-1] = "Exercise"
+                        if exerciselinkparts[-1].lower() == "module":
+                            exerciselinkparts[-1] = "Exercise"
+                        if len(linkparts) != len(exerciselinkparts):
+                            match = False
+                        else:
+                            for i in range(min(len(linkparts), len(exerciselinkparts))):
+                                if linkparts[i] != exerciselinkparts[i]:
+                                    match = False
                 
                 if match == True:
                     print("Matched " + link + " and " + exerciselink)

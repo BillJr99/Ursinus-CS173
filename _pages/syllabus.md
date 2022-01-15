@@ -330,7 +330,7 @@ schedule:
   - rtitle: "Debugging with NetBeans"
     rlink: "NetBeans/Debugging"
   - rtitle: "Using the NetBeans Debugger"
-    rlink: "./Modules/Debugger/Module"
+    rlink: "Modules/Debugger/Module"
   deliverables:  
   - dtitle: "Lab: Debugging Handed Out"    
     dlink: "Labs/Debugging"
@@ -360,7 +360,7 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html"
   deliverables:
   - dtitle: "Exercise: Expressions Revisited"
-    dlink: "./Modules/Expressions/Exercise2"    
+    dlink: "Modules/Expressions/Exercise2"    
     points: 3   
     submission_types: "noupload"   
 - week: "4"
@@ -374,7 +374,7 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html"    
   deliverables:   
   - dtitle: "Exercise: Boolean Expressions"
-    dlink: "./Modules/Boolean/Exercise"
+    dlink: "Modules/Boolean/Exercise"
     points: 3
     submission_types: "noupload"  
   - dtitle: "Lab: Debugging Due"    
@@ -618,7 +618,7 @@ schedule:
     points: 100
     rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"   
   - dtitle: "Exercise: Iteration"
-    dlink: "./Modules/Iteration/Exercise"    
+    dlink: "Modules/Iteration/Exercise"    
     points: 3  
     submission_types: "noupload"     
 - week: "9"

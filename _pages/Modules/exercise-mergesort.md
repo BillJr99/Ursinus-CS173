@@ -12,7 +12,7 @@ info:
     - To implement the merge sort algorithm
     - To swap two variables in memory
     
-canvasasmtid: "107114"    
+canvasasmtid: ""    
 canvaspoints: 3
     
 processor:  
