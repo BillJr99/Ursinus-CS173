@@ -57,6 +57,10 @@ files:
         
 ---
 
+## Visual Debugging with Trace
+
+It is often helpful to step through your program one line at a time to see which variables are being updated at each step of your algorithm.  You can load this problem in [Trace](https://www.learnwithtrace.com/problems/0ef85be/code), and can share your work with me in that environment using [these instructions](https://usebirch.notion.site/How-to-Share-a-Replay-in-Trace-77ecc722883b4a0a906aa3da69573c9a).
+
 ## Background
 There was a lot of scare and hype leading up to the year 2000 because of the so-called ["Y2K Bug"](https://www.nationalgeographic.org/encyclopedia/Y2K-bug/). Early computers had severely limited storage space, so programmers used only 2 digits to store the year, and it was assumed that the full year would be 19XX, where XX where the two digits. But as the year 2000 approached, people realized that most software with this assumption would suddenly assume it was the year 1900, which is a particularly big problem, for example, in banking software that computes interest rates.
 
