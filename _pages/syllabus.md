@@ -1069,6 +1069,16 @@ Computer programming can often be frustrating, since not only do computers have 
 
 Inevitably, you will fall into this trap. So don't beat yourself up too much when you do...but do listen to the advice!  When you track down a bug, read each line of code one-line-at-a-time, and ask yourself what that line of code does.  Write down the variable values on paper, or better yet, use a step debugger to keep track as you work through your code.  If you have a runtime error that causes your program to quit, look at the error text, called a Stack Trace, which will tell you what line of code caused your program to fail.
 
+#### Tips for Getting Help
+
+When you've been working on a problem for a while and you've tried everything you know how to do (for example, using the step debugger, and looking at the line of code reported by the error's line number to understand what it might be telling you), it's a good idea to get help from the TA or the instructor.  When you do this, bring a few things with you to make our session more productive!  For example, please have ready:
+
+* The error itself
+* What line of your code caused the error
+* What you tried so far (the debugger, for example), and what you observed
+* What inputs you used on the program to trigger the error
+* What you exepcted to happen, and how your observed result differs
+
 ## Homework
 
 ### Pre-Lab Exercises
