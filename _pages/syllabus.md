@@ -714,12 +714,12 @@ schedule:
     rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"    
 - week: "11"
   date: "1"
-  title: "Lab: Anagram Solver"
+  title: "Lab: Words with Classmates"
   deliverables:
-  - dtitle: "Lab: Anagram Solver Handed Out"
-    dlink: "Labs/Anagrams"  
+  - dtitle: "Lab: Words with Classmates Handed Out"
+    dlink: "Labs/Words"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"
+    rubricpath: "_pages/Labs/Strings/lab-words.md"
   - dtitle: "Lab: Ethical Case Studies Handed Out"
     dlink: "Labs/EthicalConsiderations"      
     points: 100    
@@ -768,10 +768,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"
-  - dtitle: "Lab: Anagram Solver Due"
-    dlink: "Labs/Anagrams"  
+  - dtitle: "Lab: Words with Classmates Due"
+    dlink: "Labs/Words"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-anagrams.md"            
+    rubricpath: "_pages/Labs/Strings/lab-words.md"            
 - week: "12"
   date: "1"
   title: "Lab: Drop the Lowest"
