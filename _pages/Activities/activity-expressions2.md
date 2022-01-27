@@ -11,7 +11,9 @@ info:
   goals: 
     - To manipulate variables on paper
     - To explain that a variable holds a value at discrete points in time, and that updates to a variable replace the previous value
-    
+
+  warmup: "What Java expressions would compute the number of years until you graduate?  What variables would you create?  How would you change this to compute and print the number of weeks until you graduate?"
+  
   models:
     - model: |
         As a group of 3, choose a whole number and pass it to the person to your left.  If the number is even, divide the number by 2, cross it out, and write that number down.  If it is odd, replace it with <code>3x + 1</code>.  Continue until the number is equal to 1.  

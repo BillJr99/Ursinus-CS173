@@ -12,6 +12,8 @@ info:
     - To manipulate variables in a Java program
     - To be able to apply operators appropriate to primitive data type values
     
+  warmup: "How would you write a line of Java code to declare a variable containing your age as a value?  What data type would this be?  How might you print this value to the screen?"
+    
   models:
     - model: |
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">

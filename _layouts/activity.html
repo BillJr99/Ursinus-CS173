@@ -1,9 +1,9 @@
 ---
 layout: default
 
-directions: "Consider the activity models and answer the questions provided.  First reflect on these questions on your own briefly, before discussing and comparing your thoughts with your group.  Appoint one member of your group to discuss your findings with the class, and the rest of the group should help that member prepare their response.  Answer each question individually from the activity on the Class Activity Questions discussion board.  After class, think about the questions in the reflective prompt and respond to those individually in your notebook.  Report out on areas of disagreement or items for which you and your group identified alternative approaches.  Write down and report out questions you encountered along the way for group discussion."
+directions: "Consider the activity models and answer the questions provided.  First reflect on these questions on your own briefly, before discussing and comparing your thoughts with your group.  Appoint one member of your group to discuss your findings with the class, and the rest of the group should help that member prepare their response.  Answer each question individually from the activity, and compare with your group to prepare for our whole-class discussion.  After class, think about the questions in the reflective prompt and respond to those individually in your notebook.  Report out on areas of disagreement or items for which you and your group identified alternative approaches.  Write down and report out questions you encountered along the way for group discussion."
 
-submission: "Submit your answers to the questions using the Class Activity Questions discussion board.  You may also respond to questions or comments made by others, or ask follow-up questions there.  Answer any reflective prompt questions in the Reflective Journal section of your OneNote Classroom personal section."
+submission: "I encourage you to submit your answers to the questions (and ask your own questions!) using the Class Activity Questions discussion board.  You may also respond to questions or comments made by others, or ask follow-up questions there.  Answer any reflective prompt questions in the Reflective Journal section of your OneNote Classroom personal section.  You can find the link to the class notebook on the syllabus."
 
 embed_directions_replit: "You can try out some code examples in this embedded development environment!  To share this with someone else, first have one member of your group make a small change to the file, then click \"Open in Repl.it\".  Log into your <a href=\"https://repl.it/\">Repl.it</a> account (or create one if needed), and click the \"Share\" button at the top right.  Note that some embedded Repl.it projects have multiple source files; you can see those by clicking the file icon on the left navigation bar of the embedded code frame.  Share the link that opens up with your group members.  Remember only to do this for partner/group activities!"
 
@@ -61,6 +61,11 @@ embed_directions_replit: "You can try out some code examples in this embedded de
     {% endfor %}
     </ul>
     {% endif %} 
+    
+    {% if page.info.warmup %}
+    <h1>Warmup</h1>
+    {{page.info.warmup}}
+    {% endif %}
     
     <h1>The Activity</h1>
     
