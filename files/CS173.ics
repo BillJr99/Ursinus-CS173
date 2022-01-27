@@ -1035,7 +1035,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091464
 DTSTAMP:20220405T000000Z
 DTSTART;VALUE=DATE:20220405
-SUMMARY:CS173 Intro to Computer Science: Lab: Anagram Solver Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Words with Classmates Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1055,7 +1055,7 @@ DTSTAMP:20220405T000000Z
 DTSTART;VALUE=DATE:20220405
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Anagram Solver Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Anagrams\nDeliverable: Lab: Ethical Case Studies Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/EthicalConsiderations
+DESCRIPTION:\nDeliverable: Lab: Words with Classmates Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Words\nDeliverable: Lab: Ethical Case Studies Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/EthicalConsiderations
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1125,7 +1125,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09146e
 DTSTAMP:20220411T000000Z
 DTSTART;VALUE=DATE:20220411
-SUMMARY:CS173 Intro to Computer Science: Lab: Anagram Solver Due
+SUMMARY:CS173 Intro to Computer Science: Lab: Words with Classmates Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -1136,7 +1136,7 @@ DTSTAMP:20220411T000000Z
 DTSTART;VALUE=DATE:20220411
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Problets - Array https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Lab: Anagram Solver Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Anagrams
+DESCRIPTION:\nDeliverable: Exercise: Problets - Array https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Lab: Words with Classmates Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Words
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
