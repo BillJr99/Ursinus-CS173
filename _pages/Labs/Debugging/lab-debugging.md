@@ -71,6 +71,10 @@ You can submit this project as usual, by adding your README and exporting the pr
 
 Now, open [this NetBeans project](../files/lab-debugging/DebugSample2.zip), and use the debugger to find and fix the error in the program!
 
+## Part 3: Bug Hunt
+
+On the class activities discussion board, post at least two bugs that you've found in your own code.  Let us know whether it was a syntax error (a typo that prevented your program from running) or a logic error (a program that ran but did something you didn't expect).  Let us know the error message you received, what the problem was, and how you fixed it.  Each student that is the first to discover and report a unique bug will receive 3 points of extra credit on this lab, and up to 15 extra points total!
+
 ## Submission
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  You can submit multiple zip files, so feel free to export all your projects.
