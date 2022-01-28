@@ -12,7 +12,7 @@ info:
     - To manipulate variables on paper
     - To explain that a variable holds a value at discrete points in time, and that updates to a variable replace the previous value
 
-  warmup: "What Java expressions would compute the number of years until you graduate?  What variables would you create?  How would you change this to compute and print the number of weeks until you graduate?"
+  warmup: "What Java expressions would compute the number of years until you graduate?  What variables would you create?  How would you change this to compute and print the number of weeks until you graduate?<br>For a more advanced challenge, compute the Euclidean Distance between two Cartesian points <code>(x1, y1)</code> and <code>(x2, y2)</code>."
   
   models:
     - model: |
