@@ -26,6 +26,12 @@ Right click on the `ursinus.jnlp` file in your `Downloads` directory, and choose
 
 Once this is set to the default, you can double click on `ursinus.jnlp` in the future to run it.  You will be prompted for your name and email address.  Click on the appropriate exercise to complete the practice.  
 
+### Mac Permissions Settings
+
+If your program doesn't open due to a permissions error, you click on your Settings icon in the system tray, and click "Settings and Privacy," and the "General" tab.  You'll find an "Open Anyway" button on that page that you can click to run the program the first time.  This [article](https://support.apple.com/en-us/HT202491) provides more information about that settings pane.
+
+Additionally, you can click Settings again, go to "Java" in the control panel, and the "Security" tab.  Click "Add" to add a site to your exception list, and enter `http://problets.org` in the box that appears.  You can click "OK" or "Continue" to any confirmation dialogs that appear.  See this [article](https://java.com/en/download/help/mac_controlpanel.html) for details.
+
 ## About Problets and Epplets
 
 Problets and Epplets are self-paced exercises that generate problems for you to solve.  It will guide you if you make a mistake, and generate more problems for you to solve until you become proficient.  If a particular topic is easy for you, the system will only generate a few problems for that lesson (and that's OK!).  
