@@ -147,7 +147,11 @@ textbooks:
   link: https://greenteapress.com/wp/think-java/
   isrequired: false   
   freelyavailable: https://greenteapress.com/wp/think-java/
-
+- title: "Runestone CS Awesome"
+  link: https://runestone.academy/ns/books/published/csawesome/index.html
+  isrequired: false
+  freelyavailable: https://runestone.academy/ns/books/published/csawesome/index.html
+  
 objectives:
 - objective: "Identify the appropriate control structures (if statements, for/do/while loops) to use to solve different problems"
 - objective: "To choose efficient solutions over brute force solutions" 
@@ -232,8 +236,8 @@ schedule:
   title: "Data Types and Variables" 
   link: "Activities/DataTypes"
   readings:
-  - rtitle: "Variables and Data Types"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html"
+  - rtitle: "Runestone Ch. 1.3 - Variables and Data Types"
+    rlink: false
   deliverables:
   - dtitle: "Programming Assignment: Warmup Due"    
     dlink: "Assignments/Warmup"  
@@ -248,12 +252,12 @@ schedule:
   title: "Programming Statements, Expressions, and Operators"
   link: "Activities/Expressions"
   readings:
-  - rtitle: "Ch. 1, 2.1, 2.2"
+  - rtitle: "Horstmann Ch. 1, 2.1, 2.2"
     rlink: false  
   - rtitle: "Beginner's Java Reference Manual"
     rlink: "https://www.tutorialspoint.com/java/java_quick_guide.htm"
-  - rtitle: "Expressions and Assignment Statements"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html"
+  - rtitle: "Runestone Ch. 1.4 - Expressions and Assignment Statements"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
@@ -263,8 +267,8 @@ schedule:
   date: "3"
   title: "Expressions and Variables"       
   readings:
-  - rtitle: "Compound Assignment Operators"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html" 
+  - rtitle: "Runestone Ch. 1.5 - Compound Assignment Operators"
+    rlink: false
   - rtitle: "Variables and Assignment Expressions"
     rlink: "Modules/Variables/Module"  
 - week: "2"
@@ -295,14 +299,14 @@ schedule:
   title: "Ranges and Quantization of Data Types" 
   link: "Activities/DiscreteRanges"  
   readings:
-  - rtitle: "Ch. 2.3, 2.5"
+  - rtitle: "Horstmann Ch. 2.3, 2.5"
     rlink: false     
   - rtitle: "What caused Ghandi's insatiable bloodlust in Civilization"
     rlink: "https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/"
   - rtitle: "Pac-Man Map 256 Glitch"
     rlink: "https://pacman.fandom.com/wiki/Map_256_Glitch"  
-  - rtitle: "Casting and Ranges"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html"  
+  - rtitle: "Runestone Ch. 1.6 - Casting and Ranges"
+    rlink: false
 - week: "2"
   date: "3"
   title: "Number Systems and Encodings: RGB Color and ASCII Text"      
@@ -354,10 +358,10 @@ schedule:
   title: "Boolean Logic Expressions"
   link: "Activities/Boolean"
   readings:
-  - rtitle: "Ch. 3"
+  - rtitle: "Horstmann Ch. 3"
     rlink: false  
-  - rtitle: "Boolean Expressions"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html"
+  - rtitle: "Runestone Ch. 3.1 - Boolean Expressions"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "Modules/Expressions/Exercise2"    
@@ -368,10 +372,10 @@ schedule:
   title: "Conditionals"   
   link: "Activities/Conditionals"
   readings:
-  - rtitle: "if Statements and Control Flow"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-2-ifs.html"
-  - rtitle: "Compound Boolean Expressions"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html"    
+  - rtitle: "Runestone Ch. 3.2 - if Statements and Control Flow"
+    rlink: false
+  - rtitle: "Runestone Ch. 3.5 - Compound Boolean Expressions"
+    rlink: false
   deliverables:   
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "Modules/Boolean/Exercise"
@@ -400,12 +404,10 @@ schedule:
   date: "2"
   title: "Conditionals"  
   readings:
-  - rtitle: "if-else Statements"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-3-if-else.html"  
-  - rtitle: "else if Statements"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-4-else-ifs.html"
-  - rtitle: "DeMorgan's Laws"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-6-DeMorgan.html"
+  - rtitle: "Runestone Ch. 3.3 and 3.4 - if-else Statements and else-if statements"
+    rlink: false
+  - rtitle: "Runestone Ch. 3.6 - DeMorgan's Laws"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Problets - Expressions - Logical"
     dlink: "Modules/Problets/Exercise"  
@@ -416,10 +418,10 @@ schedule:
   title: "Functions"
   link: "Activities/Functions"
   readings:
-  - rtitle: "Ch. 5 (except 5.9)"
+  - rtitle: "Horstmann Ch. 5 (except 5.9)"
     rlink: false  
-  - rtitle: "Calling Functions without Parameters"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html"    
+  - rtitle: "Runestone Ch. 2.3 - Calling Functions without Parameters"
+    rlink: false
   - rtitle: "Adding Libraries to NetBeans Projects"
     rlink: "Modules/Library/Module"
   deliverables:
@@ -435,8 +437,8 @@ schedule:
   date: "0"
   title: "Functions"
   readings:
-  - rtitle: "Calling Functions with Parameters"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html"
+  - rtitle: "Runestone Ch. 2.4 - Calling Functions with Parameters"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Module"  
@@ -462,8 +464,8 @@ schedule:
   date: "2"
   title: "Functions"    
   readings:
-  - rtitle: "Calling Functions that Return Values"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html"
+  - rtitle: "Runestone Ch. 2.5 - Calling Functions that Return Values"
+    rlink: false
 - week: "5"
   date: "3"
   title: "Testing" 
@@ -487,10 +489,10 @@ schedule:
   title: "Strings"
   link: "Activities/Strings"  
   readings:
-  - rtitle: "Ch. 2.5"
+  - rtitle: "Horstmann Ch. 2.5"
     rlink: false
-  - rtitle: "Strings"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html"  
+  - rtitle: "Runestone Ch. 2.6 - Strings"
+    rlink: false
   - rtitle: "Strings Review"
     rlink: "Modules/Strings/Module"  
   deliverables:
@@ -522,8 +524,8 @@ schedule:
   date: "2"
   title: "Strings"
   readings:
-  - rtitle: "String Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html"
+  - rtitle: "Runestone Ch. 2.7 - String Methods"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
@@ -546,8 +548,8 @@ schedule:
   title: "Iteration"  
   link: "Activities/Iteration/While"  
   readings:
-  - rtitle: "Loops with Strings"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html"    
+  - rtitle: "Runestone Ch. 4.3 - Loops with Strings"
+    rlink: false
   deliverables:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
@@ -578,10 +580,10 @@ schedule:
   title: "Iteration with the for Loop"
   link: "Activities/Iteration/For"
   readings:
-  - rtitle: "Ch. 4"
+  - rtitle: "Horstmann Ch. 4"
     rlink: false  
-  - rtitle: "for Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html"  
+  - rtitle: "Horstmann Ch. 4.2 - for Loops"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
@@ -592,10 +594,10 @@ schedule:
   title: "Iteration, Randomness, and the while loop" 
   link: "Activities/Iteration/While" 
   readings:
-  - rtitle: "Ch. 6.3-6.6"
+  - rtitle: "Horstmann Ch. 6.3-6.6"
     rlink: false   
-  - rtitle: "while Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html"  
+  - rtitle: "Runestone Ch. 4.1 - while Loops"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Problets - Loops - while loop tracing"
     dlink: "Modules/Problets/Exercise"  
@@ -687,7 +689,7 @@ schedule:
   title: "File I/O"
   link: "Activities/FileIO"  
   readings:
-  - rtitle: "Ch. 7"
+  - rtitle: "Horstmann Ch. 7"
     rlink: false    
 - week: "11"
   date: "0"
@@ -708,10 +710,10 @@ schedule:
     points: 100     
     rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"  
   readings:  
-  - rtitle: "Ch. 6.1"
+  - rtitle: "Horstmann Ch. 6.1"
     rlink: false 
-  - rtitle: "Creating and Accessing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html"    
+  - rtitle: "Runestone Ch. 6.1 - Creating and Accessing Arrays"
+    rlink: false
 - week: "11"
   date: "1"
   title: "Lab: Words with Classmates"
@@ -732,21 +734,17 @@ schedule:
     points: 3   
     submission_types: "written"         
   readings:
-  - rtitle: "Traversing Arrays"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html"     
+  - rtitle: "Runestone Ch. 6.2 - Traversing Arrays"
+    rlink: false
 - week: "11"
   date: "3"
   title: "The ArrayList and Generic/Template Data Structures"
   link: "Activities/ArrayList"
   readings:
-  - rtitle: "Ch. 6.8"
+  - rtitle: "Horstmann Ch. 6.8"
     rlink: false  
-  - rtitle: "ArrayList Objects"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html"  
-  - rtitle: "ArrayList Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html"
-  - rtitle: "ArrayList Iteration"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html"    
+  - rtitle: "Runestone Ch. 7.1 through 7.2 - ArrayList Objects, Iteration, and Loops"
+    rlink: false
   deliverables: 
   - dtitle: "Programming Assignment: DNA Mutations Due"
     dlink: "Assignments/DNAMutations" 
@@ -776,7 +774,7 @@ schedule:
   date: "1"
   title: "Lab: Drop the Lowest"
   readings:
-  - rtitle: "Ch. 6.3"
+  - rtitle: "Horstmann Ch. 6.3"
     rlink: false
   deliverables:
   - dtitle: "Lab: Drop the Lowest Handed Out"
@@ -788,12 +786,10 @@ schedule:
   title: "2D Arrays"
   link: "Activities/2DArrays"  
   readings:
-  - rtitle: "Ch. 6.7"
+  - rtitle: "Horstmann Ch. 6.7"
     rlink: false
-  - rtitle: "2D Arrays Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html"
-  - rtitle: "2D Arrays Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html"
+  - rtitle: "Runestone Ch. 8.1 - 2D Arrays"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
@@ -812,19 +808,12 @@ schedule:
     points: 100
     rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
   readings:
-  - rtitle: "Nested Loops"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html"
-  - rtitle: "Loop Analysis"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html"           
+  - rtitle: "Runestone Ch. 4.4 through 4.5 - Nested Loops and Loop Analysis"
+    rlink: false
 - week: "13"
   date: "0"
   title: "Arrays Workshop"
-  link: "Activities/Arrays/Workshop"  
-  readings:
-  - rtitle: "Arrays Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html"    
-  - rtitle: "2D Array Sample Free Response Question"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html"       
+  link: "Activities/Arrays/Workshop"        
   deliverables:
   - dtitle: "Exercise: Epplets - Loops - do-while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
@@ -855,7 +844,7 @@ schedule:
   title: "Algorithms: Searching" 
   link: "Activities/Searching"   
   readings:
-  - rtitle: "Ch. 6.3.3, 6.3.5, and 6.3.10"
+  - rtitle: "Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10"
     rlink: false
   - rtitle: "Searching Module"
     rlink: "Modules/Search/Module"  
@@ -885,12 +874,12 @@ schedule:
     points: 100  
     rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"  
   readings:
-  - rtitle: "Ch. 8"
+  - rtitle: "Horstmann Ch. 8"
     rlink: false  
-  - rtitle: "Anatomy of a Java Class"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html"
-  - rtitle: "Wrapper Classes"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html"   
+  - rtitle: "Runestone Ch. 5.1 - Anatomy of a Java Class"
+    rlink: false
+  - rtitle: "Runestone Ch. 2.8 - Wrapper Classes"
+    rlink: false
 - week: "14"
   date: "1"
   title: "Lab: Ethical Case Studies"  
@@ -907,14 +896,8 @@ schedule:
   date: "2"
   title: "Classes and Object Data Types"  
   readings:
-  - rtitle: "Constructors"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html"
-  - rtitle: "Accessors"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html"
-  - rtitle: "Mutators"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html"
-  - rtitle: "Static Variables and Methods"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html"       
+  - rtitle: "Runestone Ch. 5.2, 5.4, 5.5, and 5.7 - Constructors, Accessors, Mutators, and Static Methods and Variables"
+    rlink: false
   deliverables:
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
@@ -925,16 +908,14 @@ schedule:
   title: "Algorithms: Sorting"
   link: "Activities/Sorting"
   readings:
-  - rtitle: "Ch. 9.6.3"
+  - rtitle: "Horstmann Ch. 9.6.3"
     rlink: false  
   - rtitle: "Sorting Module"
     rlink: "Modules/Sorting/Module"    
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
-  - rtitle: "Search Algorithms"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
-  - rtitle: "Sorting Algorithms"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html" 
+  - rtitle: "Runestone Ch. 7.5 and 7.6 - Search Algorithms and Sorting Algorithms"
+    rlink: false
   deliverables:
   - dtitle: "Final Project: Project Proposal Due"
     dlink: "Projects/Final"    
@@ -952,10 +933,8 @@ schedule:
   title: "Algorithms: Recursion" 
   link: "Activities/Recursion"
   readings:
-  - rtitle: "Recursion Part 1"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html"
-  - rtitle: "Recursion Part 2"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html"   
+  - rtitle: "Runestone Ch. 10.1 - Recursion"
+    rlink: false
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
