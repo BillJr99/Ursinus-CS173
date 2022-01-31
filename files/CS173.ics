@@ -263,7 +263,7 @@ DTSTAMP:20220125T000000Z
 DTSTART;VALUE=DATE:20220125
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/DataTypes\nReading: Variables and Data Types https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-3-variables.html\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Warmup\nDeliverable: Programming Assignment: Intro to NetBeans Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/NetBeans
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/DataTypes\nReading: Runestone Ch. 1.3 - Variables and Data Types\nDeliverable: Programming Assignment: Warmup Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Warmup\nDeliverable: Programming Assignment: Intro to NetBeans Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/NetBeans
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -281,7 +281,7 @@ DTSTAMP:20220126T000000Z
 DTSTART;VALUE=DATE:20220126
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Expressions\nReading: Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Expressions and Assignment Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/IDE/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Expressions\nReading: Horstmann Ch. 1, 2.1, 2.2\nReading: Beginner's Java Reference Manual https://www.tutorialspoint.com/java/java_quick_guide.htm\nReading: Runestone Ch. 1.4 - Expressions and Assignment Statements\nDeliverable: Exercise: The NetBeans IDE Software Environment https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/IDE/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -290,7 +290,7 @@ DTSTAMP:20220128T000000Z
 DTSTART;VALUE=DATE:20220128
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Compound Assignment Operators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-5-shortcutoperators.html\nReading: Variables and Assignment Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Variables/Module
+DESCRIPTION:\nReading: Runestone Ch. 1.5 - Compound Assignment Operators\nReading: Variables and Assignment Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Variables/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -344,7 +344,7 @@ DTSTAMP:20220202T000000Z
 DTSTART;VALUE=DATE:20220202
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/DiscreteRanges\nReading: Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Casting and Ranges https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-6-casting.html
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/DiscreteRanges\nReading: Horstmann Ch. 2.3, 2.5\nReading: What caused Ghandi's insatiable bloodlust in Civilization https://web.archive.org/web/20190614234826/http://www.geek.com/games/why-gandhi-is-always-a-warmongering-jerk-in-civilization-1608515/\nReading: Pac-Man Map 256 Glitch https://pacman.fandom.com/wiki/Map_256_Glitch\nReading: Runestone Ch. 1.6 - Casting and Ranges
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -443,7 +443,7 @@ DTSTAMP:20220211T000000Z
 DTSTART;VALUE=DATE:20220211
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Boolean\nReading: Ch. 3\nReading: Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Expressions/Exercise2
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Boolean\nReading: Horstmann Ch. 3\nReading: Runestone Ch. 3.1 - Boolean Expressions\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Expressions/Exercise2
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -470,7 +470,7 @@ DTSTAMP:20220214T000000Z
 DTSTART;VALUE=DATE:20220214
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: if Statements and Control Flow https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-2-ifs.html\nReading: Compound Boolean Expressions https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-5-compound-ifs.html\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: Runestone Ch. 3.2 - if Statements and Control Flow\nReading: Runestone Ch. 3.5 - Compound Boolean Expressions\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -515,7 +515,7 @@ DTSTAMP:20220216T000000Z
 DTSTART;VALUE=DATE:20220216
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: if-else Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-3-if-else.html\nReading: else if Statements https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-4-else-ifs.html\nReading: DeMorgan's Laws https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-6-DeMorgan.html\nDeliverable: Exercise: Problets - Expressions - Logical https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 3.3 and 3.4 - if-else Statements and else-if statements\nReading: Runestone Ch. 3.6 - DeMorgan's Laws\nDeliverable: Exercise: Problets - Expressions - Logical https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -542,7 +542,7 @@ DTSTAMP:20220218T000000Z
 DTSTART;VALUE=DATE:20220218
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Functions\nReading: Ch. 5 (except 5.9)\nReading: Calling Functions without Parameters https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-3-methods-no-params.html\nReading: Adding Libraries to NetBeans Projects https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Library/Module\nDeliverable: Programming Assignment: MIDI Audio Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MIDI\nDeliverable: Exercise: Epoch Time Overflow https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/EpochTime/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Functions\nReading: Horstmann Ch. 5 (except 5.9)\nReading: Runestone Ch. 2.3 - Calling Functions without Parameters\nReading: Adding Libraries to NetBeans Projects https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Library/Module\nDeliverable: Programming Assignment: MIDI Audio Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MIDI\nDeliverable: Exercise: Epoch Time Overflow https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/EpochTime/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -569,7 +569,7 @@ DTSTAMP:20220221T000000Z
 DTSTART;VALUE=DATE:20220221
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Calling Functions with Parameters https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\nDeliverable: Exercise: Writing and Calling Functions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Functions/Module\nDeliverable: Lab: Story Telling with Conditionals Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/TellAStory/Conditionals
+DESCRIPTION:\nReading: Runestone Ch. 2.4 - Calling Functions with Parameters\nDeliverable: Exercise: Writing and Calling Functions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Functions/Module\nDeliverable: Lab: Story Telling with Conditionals Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/TellAStory/Conditionals
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -605,7 +605,7 @@ DTSTAMP:20220223T000000Z
 DTSTART;VALUE=DATE:20220223
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Calling Functions that Return Values https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-5-methods-return.html
+DESCRIPTION:\nReading: Runestone Ch. 2.5 - Calling Functions that Return Values
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -668,7 +668,7 @@ DTSTAMP:20220228T000000Z
 DTSTART;VALUE=DATE:20220228
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Strings\nReading: Ch. 2.5\nReading: Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.html\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Module\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/AverageFunction\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MIDI\nDeliverable: Programming Assignment: Drawing Faces Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Faces
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Strings\nReading: Horstmann Ch. 2.5\nReading: Runestone Ch. 2.6 - Strings\nReading: Strings Review https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Module\nDeliverable: Lab: Averaging Functions Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/AverageFunction\nDeliverable: Programming Assignment: MIDI Audio Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MIDI\nDeliverable: Programming Assignment: Drawing Faces Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Faces
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -713,7 +713,7 @@ DTSTAMP:20220302T000000Z
 DTSTART;VALUE=DATE:20220302
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: String Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 2.7 - String Methods\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -776,7 +776,7 @@ DTSTAMP:20220314T000000Z
 DTSTART;VALUE=DATE:20220314
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Loops with Strings https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Drawing Faces Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Faces\nDeliverable: Lab: Unit Testing Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/UnitTesting
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Runestone Ch. 4.3 - Loops with Strings\nDeliverable: Programming Assignment: Mini Crypto Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Programming Assignment: Drawing Faces Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Faces\nDeliverable: Lab: Unit Testing Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/UnitTesting
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -821,7 +821,7 @@ DTSTAMP:20220318T000000Z
 DTSTART;VALUE=DATE:20220318
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/For\nReading: Ch. 4\nReading: for Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/For\nReading: Horstmann Ch. 4\nReading: Horstmann Ch. 4.2 - for Loops\nDeliverable: Exercise: Problets - Loops - for loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -857,7 +857,7 @@ DTSTAMP:20220321T000000Z
 DTSTART;VALUE=DATE:20220321
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Ch. 6.3-6.6\nReading: while Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Strings\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/FinancialAidCalculator
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Horstmann Ch. 6.3-6.6\nReading: Runestone Ch. 4.1 - while Loops\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Strings\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/FinancialAidCalculator
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1010,7 +1010,7 @@ DTSTAMP:20220401T000000Z
 DTSTART;VALUE=DATE:20220401
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/FileIO\nReading: Ch. 7
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/FileIO\nReading: Horstmann Ch. 7
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1028,7 +1028,7 @@ DTSTAMP:20220404T000000Z
 DTSTART;VALUE=DATE:20220404
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Arrays\nReading: Ch. 6.1\nReading: Creating and Accessing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/CodeReview
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Arrays\nReading: Horstmann Ch. 6.1\nReading: Runestone Ch. 6.1 - Creating and Accessing Arrays\nDeliverable: Lab: Code Review Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/CodeReview
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1073,7 +1073,7 @@ DTSTAMP:20220406T000000Z
 DTSTART;VALUE=DATE:20220406
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Traversing Arrays https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html\nDeliverable: Exercise: Epplets - Loops - while loop puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 6.2 - Traversing Arrays\nDeliverable: Exercise: Epplets - Loops - while loop puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1109,7 +1109,7 @@ DTSTAMP:20220408T000000Z
 DTSTART;VALUE=DATE:20220408
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/ArrayList\nReading: Ch. 6.8\nReading: ArrayList Objects https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-1-arraylist-basics.html\nReading: ArrayList Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-2-arraylist-methods.html\nReading: ArrayList Iteration https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-3-arraylist-loops.html\nDeliverable: Programming Assignment: DNA Mutations Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations\nDeliverable: Programming Assignment: Guitar String Synthesis Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/GuitarStringSynth\nDeliverable: Exercise: Arrays https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Arrays/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/ArrayList\nReading: Horstmann Ch. 6.8\nReading: Runestone Ch. 7.1 through 7.2 - ArrayList Objects, Iteration, and Loops\nDeliverable: Programming Assignment: DNA Mutations Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations\nDeliverable: Programming Assignment: Guitar String Synthesis Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/GuitarStringSynth\nDeliverable: Exercise: Arrays https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Arrays/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1154,7 +1154,7 @@ DTSTAMP:20220412T000000Z
 DTSTART;VALUE=DATE:20220412
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Ch. 6.3\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/DropLowest
+DESCRIPTION:\nReading: Horstmann Ch. 6.3\nDeliverable: Lab: Drop the Lowest Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1172,7 +1172,7 @@ DTSTAMP:20220413T000000Z
 DTSTART;VALUE=DATE:20220413
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/2DArrays\nReading: Ch. 6.7\nReading: 2D Arrays Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day1.html\nReading: 2D Arrays Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/topic-8-1-2D-arrays-Day2.html\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/2DArrays\nReading: Horstmann Ch. 6.7\nReading: Runestone Ch. 8.1 - 2D Arrays\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1199,7 +1199,7 @@ DTSTAMP:20220415T000000Z
 DTSTART;VALUE=DATE:20220415
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Nested Loops https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-4-nested-loops.html\nReading: Loop Analysis https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-5-loop-analysis.html\nDeliverable: Exercise: Iteration Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Iteration/Exercise2\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/DropLowest
+DESCRIPTION:\nReading: Runestone Ch. 4.4 through 4.5 - Nested Loops and Loop Analysis\nDeliverable: Exercise: Iteration Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Iteration/Exercise2\nDeliverable: Lab: Drop the Lowest Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/DropLowest
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1244,7 +1244,7 @@ DTSTAMP:20220418T000000Z
 DTSTART;VALUE=DATE:20220418
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Arrays/Workshop\nReading: Arrays Sample Free Response Question https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit8-2DArray/routeCipherA.html\nReading: 2D Array Sample Free Response Question https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/numberCubeB.html\nDeliverable: Exercise: Epplets - Loops - do-while loop puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Arrays\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/ASCIIArt
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Arrays/Workshop\nDeliverable: Exercise: Epplets - Loops - do-while loop puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Arrays\nDeliverable: Programming Assignment: Guitar String Synthesis Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/GuitarStringSynth\nDeliverable: Programming Assignment: ASCII Art Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/ASCIIArt
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1280,7 +1280,7 @@ DTSTAMP:20220420T000000Z
 DTSTART;VALUE=DATE:20220420
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module\nDeliverable: Exercise: ArrayLists https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/ArrayLists/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module\nDeliverable: Exercise: ArrayLists https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/ArrayLists/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1325,7 +1325,7 @@ DTSTAMP:20220425T000000Z
 DTSTART;VALUE=DATE:20220425
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Classes\nReading: Ch. 8\nReading: Anatomy of a Java Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html\nReading: Wrapper Classes https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-8-IntegerDouble.html\nDeliverable: Lab: 2D Treasure Hunt Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/TreasureHunt
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Classes\nReading: Horstmann Ch. 8\nReading: Runestone Ch. 5.1 - Anatomy of a Java Class\nReading: Runestone Ch. 2.8 - Wrapper Classes\nDeliverable: Lab: 2D Treasure Hunt Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/TreasureHunt
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1370,7 +1370,7 @@ DTSTAMP:20220427T000000Z
 DTSTART;VALUE=DATE:20220427
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Constructors https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-2-writing-constructors.html\nReading: Accessors https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html\nReading: Mutators https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-5-mutator-methods.html\nReading: Static Variables and Methods https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit5-Writing-Classes/topic-5-7-static-vars-methods.html\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/InsertionSort/Module
+DESCRIPTION:\nReading: Runestone Ch. 5.2, 5.4, 5.5, and 5.7 - Constructors, Accessors, Mutators, and Static Methods and Variables\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1388,7 +1388,7 @@ DTSTAMP:20220429T000000Z
 DTSTART;VALUE=DATE:20220429
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Sorting\nReading: Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Search Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html\nReading: Sorting Algorithms https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html\nDeliverable: Final Project: Project Proposal Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Sorting\nReading: Horstmann Ch. 9.6.3\nReading: Sorting Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Sorting/Module\nReading: Interactive Demo of Insertion Sort https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/\nReading: Runestone Ch. 7.5 and 7.6 - Search Algorithms and Sorting Algorithms\nDeliverable: Final Project: Project Proposal Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1442,7 +1442,7 @@ DTSTAMP:20220503T000000Z
 DTSTART;VALUE=DATE:20220503
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Recursion\nReading: Recursion Part 1 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day1.html\nReading: Recursion Part 2 https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit10-Recursion/topic-10-1-recursion-day2.html\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Iris\nDeliverable: Quiz: Classes and Algorithms\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Recursion\nReading: Runestone Ch. 10.1 - Recursion\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Iris\nDeliverable: Quiz: Classes and Algorithms\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
