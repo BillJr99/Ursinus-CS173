@@ -16,9 +16,9 @@ info:
     - title: "Interactive Demo of Insertion Sort"
       link: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
     - title: "Search Algorithms"
-      link: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
+      link: "https://runestone.academy/ns/books/published/csawesome/Unit7-ArrayList/topic-7-5-searching.html"  
     - title: "Sorting Algorithms"
-      link: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"       
+      link: "https://runestone.academy/ns/books/published/csawesome/Unit7-ArrayList/topic-7-6-sorting.html"       
 
   models:
     - model: |

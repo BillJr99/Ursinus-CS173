@@ -10,9 +10,9 @@ info:
   models:
     - title: "Sample Free Response Question"
       model: |
-        <iframe src="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html" width="100%" height="700" scrolling="yes"></iframe>
+        <iframe src="https://runestone.academy/ns/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html" width="100%" height="700" scrolling="yes"></iframe>
         <br>
-        <a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html">Sample Free Response Question</a>
+        <a href="https://runestone.academy/ns/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html">Sample Free Response Question</a>
       questions:
         - First sketch out a solution on paper, and implement it on paper with pseudocode.
         - Implement your solution!
@@ -20,7 +20,7 @@ info:
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
 
   additional_reading:
-    - link: https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
+    - link: https://runestone.academy/ns/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
       title: Sample String Array Free Response Question
       
 tags:
