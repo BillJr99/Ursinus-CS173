@@ -283,8 +283,8 @@ schedule:
   date: "1"
   title: "Lab: Kepler's Third Law"
   readings: 
-  - rtitle: "Using the Math Class"
-    rlink: "https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html"  
+  - rtitle: "Runestone Ch. 2.9 - Using the Math Class"
+    rlink: false
   deliverables:
   - dtitle: "Lab: Kepler's Third Law Handed Out"    
     dlink: "Labs/Kepler"
