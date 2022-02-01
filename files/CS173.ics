@@ -335,7 +335,7 @@ DTSTAMP:20220201T000000Z
 DTSTART;VALUE=DATE:20220201
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Using the Math Class https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Kepler\nDeliverable: Exercise: Problets - Expressions - Arithmetic https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 2.9 - Using the Math Class\nDeliverable: Lab: Kepler's Third Law Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Kepler\nDeliverable: Exercise: Problets - Expressions - Arithmetic https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
