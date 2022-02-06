@@ -100,9 +100,11 @@ embed_directions_video: "You can play the following video right here from your b
         {% if model.embed contains "repl.it" or model.embed contains "replit" %}
         <h3>Embedded Code Environment</h3>
         {{ layout.embed_directions_replit }}
+        <br>
         {% elsif model.embed contains "youtube" %}
-        <h3>Embedded Video Environment</h3>
+        <h3>Embedded Video</h3>
         {{ layout.embed_directions_video }}        
+        <br>
         {% endif %}
         
         {{ model.embed }}
