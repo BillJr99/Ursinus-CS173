@@ -15,7 +15,7 @@ info:
   
   models:
     - model: |   
-        <img src="http://www.asciitable.com/index/asciifull.gif" alt="ASCII Table">
+        <img src="https://cs.smu.ca/~porter/csc/ref/asciifull.gif" alt="ASCII Table">
       title: ASCII Table
       questions:
         - What is the decimal representation for the character <code>'A'</code>?  How about the newline character <code>\n</code>?
