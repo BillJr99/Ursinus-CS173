@@ -7,6 +7,8 @@ submission: "I encourage you to submit your answers to the questions (and ask yo
 
 embed_directions_replit: "You can try out some code examples in this embedded development environment!  To share this with someone else, first have one member of your group make a small change to the file, then click \"Open in Repl.it\".  Log into your <a href=\"https://repl.it/\">Repl.it</a> account (or create one if needed), and click the \"Share\" button at the top right.  Note that some embedded Repl.it projects have multiple source files; you can see those by clicking the file icon on the left navigation bar of the embedded code frame.  Share the link that opens up with your group members.  Remember only to do this for partner/group activities!"
 
+embed_directions_video: "You can play the following video right here from your browser!"
+
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -95,11 +97,12 @@ embed_directions_replit: "You can try out some code examples in this embedded de
         {% endif %}
         
         {% if model.embed %}
-        {% if model.embed contains "repl.it" %}
+        {% if model.embed contains "repl.it" or model.embed contains "replit" %}
         <h3>Embedded Code Environment</h3>
-        {% endif %}
-        {% if model.embed contains "repl.it" %}
         {{ layout.embed_directions_replit }}
+        {% elsif model.embed contains "youtube" %}
+        <h3>Embedded Video Environment</h3>
+        {{ layout.embed_directions_video }}        
         {% endif %}
         
         {{ model.embed }}

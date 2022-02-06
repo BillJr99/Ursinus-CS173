@@ -5,7 +5,6 @@ title: "CS173: Intro to Computer Science - Expressions"
 excerpt: "CS173: Intro to Computer Science - Expressions"
 
 info:
-  next: ./EscapeCharacters
   prev: ./Expressions
   
   goals: 
