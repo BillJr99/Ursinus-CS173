@@ -94,3 +94,9 @@ When you're done, write a README for your project, and save all your files, befo
 ### Exporting your Project for Submission
 
 Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  **Be sure to save your README file before exporting the project, so that your work is included in the submission!**
+
+## For Fun: Choosing the Most Informative Wordle Guess
+
+Here is an interesting video from 3Blue1Brown describing the process by which one might select a Wordle guess that optimizes your chances of winning.  He talks about some background in Information Theory, which is a mechanism by which we can quantify how much information we get -- in other words, by how much we narrow down the possible answers given a guess.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/v68zYyaEmEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
