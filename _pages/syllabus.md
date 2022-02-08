@@ -347,12 +347,7 @@ schedule:
 - week: "3"
   date: "2"
   title: "Debugging"
-  link: "Activities/Debugging"  
-  deliverables:
-  - dtitle: "Quiz: Variables and Data Types"
-    dlink: false
-    points: 40   
-    qtizippath: "_pages/Quizzes/qti_datatypes.zip"    
+  link: "Activities/Debugging"    
 - week: "3"
   date: "3"
   title: "Boolean Logic Expressions"
@@ -377,6 +372,10 @@ schedule:
   - rtitle: "Runestone Ch. 3.5 - Compound Boolean Expressions"
     rlink: false
   deliverables:   
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 40   
+    qtizippath: "_pages/Quizzes/qti_datatypes.zip"  
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "Modules/Boolean/Exercise"
     points: 3
