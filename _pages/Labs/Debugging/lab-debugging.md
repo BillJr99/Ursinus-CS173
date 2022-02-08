@@ -81,4 +81,8 @@ When you're done, write a README for your project, and save all your files, befo
 
 ## Trivia
 
+The first computer "bug" is attributed to Grace Hopper, when an actual bug was found in the circuitry of a system, causing the program being executed to fail!  Here's a picture from their engineering journal.
+
+<a title="Courtesy of the Naval Surface Warfare Center, Dahlgren, VA., 1988., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:First_Computer_Bug,_1945.jpg"><img width="512" alt="First Computer Bug, 1945" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/First_Computer_Bug%2C_1945.jpg"></a>
+
 Did you know that the most copied StackOverflow code snippet (as of 2018) [contained a bug that was only fixed 9 years later](https://www.zdnet.com/article/the-most-copied-stackoverflow-java-code-snippet-contains-a-bug/)?
