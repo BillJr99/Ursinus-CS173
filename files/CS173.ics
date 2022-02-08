@@ -414,22 +414,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09141f
 DTSTAMP:20220209T000000Z
 DTSTART;VALUE=DATE:20220209
-SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Debugging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091420
-DTSTAMP:20220209T000000Z
-DTSTART;VALUE=DATE:20220209
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Debugging\nDeliverable: Quiz: Variables and Data Types
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091421
 DTSTAMP:20220211T000000Z
 DTSTART;VALUE=DATE:20220211
 SUMMARY:CS173 Intro to Computer Science: Exercise: Expressions Revisited
@@ -438,12 +429,21 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091422
+UID:00000000-0000-0000-0000-0192cc091421
 DTSTAMP:20220211T000000Z
 DTSTART;VALUE=DATE:20220211
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Boolean\nReading: Horstmann Ch. 3\nReading: Runestone Ch. 3.1 - Boolean Expressions\nDeliverable: Exercise: Expressions Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Expressions/Exercise2
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091422
+DTSTAMP:20220214T000000Z
+DTSTART;VALUE=DATE:20220214
+SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -470,7 +470,7 @@ DTSTAMP:20220214T000000Z
 DTSTART;VALUE=DATE:20220214
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: Runestone Ch. 3.2 - if Statements and Control Flow\nReading: Runestone Ch. 3.5 - Compound Boolean Expressions\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: Runestone Ch. 3.2 - if Statements and Control Flow\nReading: Runestone Ch. 3.5 - Compound Boolean Expressions\nDeliverable: Quiz: Variables and Data Types\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
