@@ -59,7 +59,7 @@ embed_directions_video: "You can play the following video right here from your b
     Feel free to visit these resources for supplemental background reading material.
     <ul>
     {% for entry in page.info.additional_reading %}
-    <li><a href="{{entry.link}}">{{entry.title}}</a></li>
+    <li>{% if entry.link %}<a href="{{entry.link}}">{% endif %}{{entry.title}}{% if entry.link %}</a>{% endif %}</li>
     {% endfor %}
     </ul>
     {% endif %} 
