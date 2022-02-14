@@ -115,8 +115,8 @@ instructors:
   officehourssignup: "https://app.cal.com/billmongan/10min"
   officehours:
   - day: "M"
-    starttime: "1:30 PM"
-    endtime: "2:00 PM"
+    starttime: "12:00 PM"
+    endtime: "12:30 PM"
     location: "Pfahler Hall 101L"  
   - day: "T"
     starttime: "12:00 PM"
