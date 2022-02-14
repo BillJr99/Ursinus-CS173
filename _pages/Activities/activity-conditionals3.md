@@ -13,6 +13,9 @@ info:
     - To design boolean expressions for conditionals
     - To combine the <code>if</code> and <code>else</code> blocks to form conditionals that utilize the <code>else if</code> construct
     - To implement complex conditional statements using boolean expression operators
+    
+  warmup: "How might you improve this <code>if</code> statement: <code>if(grade == 89.5) { ... }</code>?  How would you fix this one: <code>if(grade > 79.5 && < 90) { ... }</code>"  
+  
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
