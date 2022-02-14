@@ -372,10 +372,6 @@ schedule:
   - rtitle: "Runestone Ch. 3.5 - Compound Boolean Expressions"
     rlink: false
   deliverables:   
-  - dtitle: "Quiz: Variables and Data Types"
-    dlink: false
-    points: 40   
-    qtizippath: "_pages/Quizzes/qti_datatypes.zip"  
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "Modules/Boolean/Exercise"
     points: 3
@@ -412,6 +408,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
+  - dtitle: "Quiz: Variables and Data Types"
+    dlink: false
+    points: 40   
+    qtizippath: "_pages/Quizzes/qti_datatypes.zip"  
 - week: "4"
   date: "3"
   title: "Functions"
