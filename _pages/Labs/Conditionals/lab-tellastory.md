@@ -163,7 +163,7 @@ if(name.equals("Bill")) {
 }
 ```
 
-### Making an Interesting Story
+### What to Do: Make an Interesting Story
 
 You can add some depth to your story by setting a variable or two depending on the user's responses to your questions.  You can use those variables in `if` statements later, which will make it seem as though your story "remembered" the user's responses!
 
