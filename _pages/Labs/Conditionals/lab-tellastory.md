@@ -190,7 +190,7 @@ if(name.equals("Bill")) {
 // later on...
 
 if(isBill) {
-    System.out.println("Earlier, you said your name is Bill!");
+    System.out.println("Earlier, you said your name is Bill!  It\'s nice to meet you.");
 }
 ```
 
