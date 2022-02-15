@@ -180,15 +180,16 @@ System.out.println("What is your name?");
 String name = input.nextLine();
 
 // Assume isBill is false, and then we can set it to true conditionally (if name is "Bill").
-boolean isBill = false;
+boolean isBill = false; // declare this in main, outside of your if statements
 if(name.equals("Bill")) {
-    isBill = true;
+    isBill = true; // you can change the value within your if statements
 }
 
 // later on...
 
 if(isBill) {
-    System.out.println("Earlier, you said your name is Bill!  It\'s nice to meet you.");
+    // do you remember what the \' does in the printed String below?
+    System.out.println("Earlier, you said your name is Bill!  It\'s nice to meet you."); 
 }
 ```
 
