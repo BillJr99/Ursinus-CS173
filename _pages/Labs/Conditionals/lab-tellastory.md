@@ -80,7 +80,7 @@ if(something && somethingElse) {
 }
 ```
 
-#### `else/if` Statements
+### Hint: `else/if` Statements
 
 You can create your own "waterfall" of `else/if` statements using a shortcut notatation for the nested and cascading `if` statements above.  For example:
 
