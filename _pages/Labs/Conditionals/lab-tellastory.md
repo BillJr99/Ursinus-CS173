@@ -100,6 +100,10 @@ if(temperature > 90) {
 }
 ```
 
+### Hint: Automatically Formatting Your Code
+
+Using NetBeans, you can automatically format your code by going to the `Source` menu and choosing `Format`.  This will automatically align your curly braces and indent your code appropriately.  Please feel free to use this early and often as you write your code!
+
 ## Part 2: Using Conditionals to Tell a Story
 
 Using `if` and `if/else` statements, write a program to tell an interactive story.  You can ask the user questions and have them enter their answer.  Depending on what they say, you can print one message or another in response to them.  You can be creative here!  Whatever you decide, your story should have **at least three opportunities** to enter a response (this could be a choice to walk from one room to another in your story, or to pick up an object, or to talk with someone, or take some action, *etc*).  At least once, your story should make a decision based on what the user just entered, and something else that has happened along the way.  In other words, you should have at least one compound `if` statement (using an `&&` or an `||`, a nested `if` statement, or a cascading `if` statement in your story.
