@@ -171,8 +171,8 @@ You can add some depth to your story by setting a variable or two depending on t
 // add this to the top of your program, under the line that starts with the word "package"
 // import java.util.Scanner;
 
-// and you can do this in main():
-Scanner input = new Scanner(System.in);
+// and you can do all of the following inside your main() function, as usual:
+Scanner input = new Scanner(System.in); // this is only needed once!
 
 System.out.println("What is your name?");
 // this next line will pause to allow the user to type in something in the console window
