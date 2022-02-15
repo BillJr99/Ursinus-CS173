@@ -106,7 +106,7 @@ Using NetBeans, you can automatically format your code by going to the `Source` 
 
 Using `if` and `if/else` statements, write a program to tell an interactive story.  You can ask the user questions and have them enter their answer.  Depending on what they say, you can print one message or another in response to them.  You can be creative here!  Whatever you decide, your story should have **at least three opportunities** to enter a response (this could be a choice to walk from one room to another in your story, or to pick up an object, or to talk with someone, or take some action, *etc*).  At least once, your story should make a decision based on what the user just entered, and something else that has happened along the way.  In other words, you should have at least one compound `if` statement (using an `&&` or an `||`, a nested `if` statement, or a cascading `if` statement in your story.
 
-### Reading User Input
+### Hint: Reading User Input
 
 Did you know that you can read values from the console window into variables?  You can read in all kinds of data types (numbers, text, and so on), which we'll explore later.  For now, here's how you can read in a `String` that the user can type in:
 
@@ -125,7 +125,7 @@ String name = input.nextLine();
 System.out.println("Your name is: " + name);
 ```
 
-### Checking String Equality
+### Hint: Checking String Equality
 To check if two `String`s are equal, you can do this:
 
 ```java
