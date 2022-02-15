@@ -80,8 +80,6 @@ if(something && somethingElse) {
 }
 ```
 
-Keep both versions in your program to submit!
-
 ### Hint: `if` and `else/if` Statements
 
 You can create your own "waterfall" of `else/if` statements using a shortcut notatation for the nested and cascading `if` statements above.  For example:
