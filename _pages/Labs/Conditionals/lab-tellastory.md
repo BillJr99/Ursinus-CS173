@@ -55,7 +55,7 @@ In this lab, you will use conditionals to alter your program's control flow (tha
 
 ## Part 1: Implementing a Venn Diagram
 
-Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools_templates/D_venn3_2) of your choice.  For example, [this Venn Diagram](https://www.buzzfeed.com/tessafahey/actor-venn-diagram) sorts characters by whether they have been in the Marvel Cinematic Universe, won an academic award, and/or performed on Broadway.  Whatever you choose, make sure at least one item fits into each category.  You can draw your diagram using software like Microsoft Paint or PowerPoint, or on paper and taking a picture.  Either way, be sure to submit it with your project!
+Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools_templates/D_venn3_2) of your choice.  For example, [this Venn Diagram](https://www.buzzfeed.com/tessafahey/actor-venn-diagram) sorts characters by whether they have been in the Marvel Cinematic Universe, won an academy award, and/or performed on Broadway.  Whatever you choose, make sure at least one item fits into each category.  You can draw your diagram using software like Microsoft Paint or PowerPoint, or on paper and taking a picture.  Either way, be sure to submit it with your project!
 
 Next, write a program that implements your Venn Diagram.  That is, write a series of `if/else if/else` statements, or nested `if` statements, that sets `boolean` variables representing each of the three main quadrants of your Venn Diagram, and prints to the screen where that person/place/thing fits into your Venn Diagram based on those `if` statements.  You can number the qudrants from 1 to 7, if you like, and print which quadrant results from the three `boolean` variables.
 
@@ -81,6 +81,24 @@ if(something && somethingElse) {
 ```
 
 Keep both versions in your program to submit!
+
+### Hint: `if` and `else/if` Statements
+
+You can create your own "waterfall" of `else/if` statements using a shortcut notatation for the nested and cascading `if` statements above.  For example:
+
+```java
+double temperature = 50;
+
+if(temperature > 90) {
+  System.out.println("It's going to be hot out!");
+} else if(temperature > 50) {
+  System.out.println("It's going to be comfortable.");
+} else if(temperature > 32) {
+  System.out.println("It's above freezing!");
+} else {
+  System.out.println("It's freezing out!");
+}
+```
 
 ## Part 2: Using Conditionals to Tell a Story
 
