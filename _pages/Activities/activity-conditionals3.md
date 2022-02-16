@@ -39,6 +39,7 @@ info:
       title: Declaring Variables within a Conditional
       questions:
         - "What is wrong with the program above?  How can you fix it?"
+        - "What would you say is the &quot;scope&quot; of the <code>total</code> variable?  In other words, in what code block is the variable defined for use?"
     - model: |
         <img src="../images/venn3.png" alt="Empty 3-way Venn Diagram">
       title: "Putting It All Together: Implementing a Venn Diagram"
