@@ -14,22 +14,25 @@ info:
     - To combine the <code>if</code> and <code>else</code> blocks to form conditionals that utilize the <code>else if</code> construct
     - To implement complex conditional statements using boolean expression operators
     
-  warmup: "How might you improve this <code>if</code> statement: <code>if(grade == 89.5) { ... }</code>?  How would you fix this one: <code>if(grade > 79.5 && < 90) { ... }</code>"  
+  warmup: "How might you improve this <code>if</code> statement: <code>if(grade == 89.5) { ... }</code>?<br>How would you fix this one: <code>if(grade > 79.5 && < 90) { ... }</code>"  
   
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Driver {
-            public static double getTotalPrice(double price, double tax, boolean taxable) {
+            public static void main(String[] args) {
+                boolean taxable = true;
+                double tax = 0.06; // 6% tax rate
+                double price = 9.99;
+
                 // This code does not work!
-                
                 if(taxable) {
-                  double result = price + price * tax;
+                  double total = price + price * tax;
                 } else {
-                  double result = price;
+                  double total = price;
                 }
 
-                return result;
+                System.out.println("The total is: " + total);
             }
         }
         ]]></script>     
