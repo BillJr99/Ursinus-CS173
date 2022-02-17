@@ -40,7 +40,9 @@ files:
                    System.out.println("A-");
                    
                    You can assume that the grade variable contains the
-                   number grade you're checking.
+                   number grade you're checking.  DO NOT create your own grade 
+                   variable this time, as I'll automatically provide a few
+                   to test your code from below.
                 */
             }
         }
