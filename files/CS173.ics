@@ -441,7 +441,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091422
 DTSTAMP:20220214T000000Z
 DTSTART;VALUE=DATE:20220214
-SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
+SUMMARY:CS173 Intro to Computer Science: Exercise: Boolean Expressions
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -450,7 +450,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091423
 DTSTAMP:20220214T000000Z
 DTSTART;VALUE=DATE:20220214
-SUMMARY:CS173 Intro to Computer Science: Exercise: Boolean Expressions
+SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -459,22 +459,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091424
 DTSTAMP:20220214T000000Z
 DTSTART;VALUE=DATE:20220214
-SUMMARY:CS173 Intro to Computer Science: Lab: Debugging Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: Runestone Ch. 3.2 - if Statements and Control Flow\nReading: Runestone Ch. 3.5 - Compound Boolean Expressions\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091425
-DTSTAMP:20220214T000000Z
-DTSTART;VALUE=DATE:20220214
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Conditionals\nReading: Runestone Ch. 3.2 - if Statements and Control Flow\nReading: Runestone Ch. 3.5 - Compound Boolean Expressions\nDeliverable: Quiz: Variables and Data Types\nDeliverable: Exercise: Boolean Expressions https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Boolean/Exercise\nDeliverable: Lab: Debugging Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/Debugging
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091426
 DTSTAMP:20220215T000000Z
 DTSTART;VALUE=DATE:20220215
 SUMMARY:CS173 Intro to Computer Science: Lab: Story Telling with Conditionals Handed Out
@@ -483,7 +474,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091427
+UID:00000000-0000-0000-0000-0192cc091426
 DTSTAMP:20220215T000000Z
 DTSTART;VALUE=DATE:20220215
 SUMMARY:CS173 Intro to Computer Science: Exercise: Conditionals
@@ -492,7 +483,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091428
+UID:00000000-0000-0000-0000-0192cc091427
 DTSTAMP:20220215T000000Z
 DTSTART;VALUE=DATE:20220215
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -501,10 +492,19 @@ DESCRIPTION:\nReading: Reading User Input https://www.w3schools.com/java/java_us
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091429
+UID:00000000-0000-0000-0000-0192cc091428
 DTSTAMP:20220216T000000Z
 DTSTART;VALUE=DATE:20220216
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Expressions - Logical
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091429
+DTSTAMP:20220216T000000Z
+DTSTART;VALUE=DATE:20220216
+SUMMARY:CS173 Intro to Computer Science: Quiz: Variables and Data Types
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -515,7 +515,7 @@ DTSTAMP:20220216T000000Z
 DTSTART;VALUE=DATE:20220216
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Runestone Ch. 3.3 and 3.4 - if-else Statements and else-if statements\nReading: Runestone Ch. 3.6 - DeMorgan's Laws\nDeliverable: Exercise: Problets - Expressions - Logical https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 3.3 and 3.4 - if-else Statements and else-if statements\nReading: Runestone Ch. 3.6 - DeMorgan's Laws\nDeliverable: Exercise: Problets - Expressions - Logical https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Variables and Data Types
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1447,9 +1447,9 @@ PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091492
-DTSTAMP:20220117T133000
-DTSTART;TZID=US-Eastern:20220117T133000
-DTEND;TZID=US-Eastern:20220117T140000
+DTSTAMP:20220117T120000
+DTSTART;TZID=US-Eastern:20220117T120000
+DTEND;TZID=US-Eastern:20220117T123000
 RRULE:FREQ=WEEKLY;BYDAY=MO;INTERVAL=1;UNTIL=20220505T235959Z
 EXDATE:20220117
 EXDATE:20220118

@@ -55,12 +55,12 @@ In this lab, you will use conditionals to alter your program's control flow (tha
 
 ## Part 1: Implementing a Venn Diagram
 
-Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools_templates/D_venn3_2) of your choice.  For example, [this Venn Diagram](https://www.buzzfeed.com/tessafahey/actor-venn-diagram) sorts characters by whether they have been in the Marvel Cinematic Universe, won an academic award, and/or performed on Broadway.  Whatever you choose, make sure at least one item fits into each category.  You can draw your diagram using software like Microsoft Paint or PowerPoint, or on paper and taking a picture.  Either way, be sure to submit it with your project!
+Begin by drawing a [three-way Venn Diagram](https://www.educationworld.com/tools_templates/D_venn3_2) of your choice.  For example, [this Venn Diagram](https://www.buzzfeed.com/tessafahey/actor-venn-diagram) sorts characters by whether they have been in the Marvel Cinematic Universe, won an academy award, and/or performed on Broadway.  Whatever you choose, make sure at least one item fits into each category.  You can draw your diagram using software like Microsoft Paint or PowerPoint, or on paper and taking a picture.  Either way, be sure to submit it with your project!
 
 Next, write a program that implements your Venn Diagram.  That is, write a series of `if/else if/else` statements, or nested `if` statements, that sets `boolean` variables representing each of the three main quadrants of your Venn Diagram, and prints to the screen where that person/place/thing fits into your Venn Diagram based on those `if` statements.  You can number the qudrants from 1 to 7, if you like, and print which quadrant results from the three `boolean` variables.
 
-Finally, write a second version of your `if` statements, this time using nested `if` statements if you used a "cascading" `if/else if/else` structure previously, or vice-versa. 
-In other words, if your `if` statements look like this:
+### Hint: Nested versus Cascading `if` Staetments
+If your `if` statements look like this:
 
 ```java
 // this is a nested if statement
@@ -71,7 +71,7 @@ if(something) {
 }
 ```
 
-you should write a new version that looks like this:
+you could also write it like this:
 
 ```java
 // this is a cascading if statement
@@ -80,13 +80,33 @@ if(something && somethingElse) {
 }
 ```
 
-Keep both versions in your program to submit!
+### Hint: `else/if` Statements
+
+You can create your own "waterfall" of `else/if` statements using a shortcut notatation for the nested and cascading `if` statements above.  For example:
+
+```java
+double temperature = 50;
+
+if(temperature > 90) {
+  System.out.println("It's going to be hot out!");
+} else if(temperature > 50) {
+  System.out.println("It's going to be comfortable.");
+} else if(temperature > 32) {
+  System.out.println("It's above freezing!");
+} else {
+  System.out.println("It's freezing out!");
+}
+```
+
+### Hint: Automatically Formatting Your Code
+
+Using NetBeans, you can automatically format your code by going to the `Source` menu and choosing `Format`.  This will automatically align your curly braces and indent your code appropriately.  Please feel free to use this early and often as you write your code!
 
 ## Part 2: Using Conditionals to Tell a Story
 
 Using `if` and `if/else` statements, write a program to tell an interactive story.  You can ask the user questions and have them enter their answer.  Depending on what they say, you can print one message or another in response to them.  You can be creative here!  Whatever you decide, your story should have **at least three opportunities** to enter a response (this could be a choice to walk from one room to another in your story, or to pick up an object, or to talk with someone, or take some action, *etc*).  At least once, your story should make a decision based on what the user just entered, and something else that has happened along the way.  In other words, you should have at least one compound `if` statement (using an `&&` or an `||`, a nested `if` statement, or a cascading `if` statement in your story.
 
-### Reading User Input
+### Hint: Reading User Input
 
 Did you know that you can read values from the console window into variables?  You can read in all kinds of data types (numbers, text, and so on), which we'll explore later.  For now, here's how you can read in a `String` that the user can type in:
 
@@ -105,7 +125,7 @@ String name = input.nextLine();
 System.out.println("Your name is: " + name);
 ```
 
-### Checking String Equality
+### Hint: Checking String Equality
 To check if two `String`s are equal, you can do this:
 
 ```java
@@ -143,7 +163,7 @@ if(name.equals("Bill")) {
 }
 ```
 
-### Making an Interesting Story
+### What to Do: Make an Interesting Story
 
 You can add some depth to your story by setting a variable or two depending on the user's responses to your questions.  You can use those variables in `if` statements later, which will make it seem as though your story "remembered" the user's responses!
 
@@ -151,8 +171,8 @@ You can add some depth to your story by setting a variable or two depending on t
 // add this to the top of your program, under the line that starts with the word "package"
 // import java.util.Scanner;
 
-// and you can do this in main():
-Scanner input = new Scanner(System.in);
+// and you can do all of the following inside your main() function, as usual:
+Scanner input = new Scanner(System.in); // this is only needed once!
 
 System.out.println("What is your name?");
 // this next line will pause to allow the user to type in something in the console window
@@ -160,15 +180,16 @@ System.out.println("What is your name?");
 String name = input.nextLine();
 
 // Assume isBill is false, and then we can set it to true conditionally (if name is "Bill").
-boolean isBill = false;
+boolean isBill = false; // declare this in main, outside of your if statements
 if(name.equals("Bill")) {
-    isBill = true;
+    isBill = true; // you can change the value within your if statements
 }
 
 // later on...
 
 if(isBill) {
-    System.out.println("Earlier, you said your name is Bill!");
+    // do you remember what the \' does in the printed String below?
+    System.out.println("Earlier, you said your name is Bill!  It\'s nice to meet you."); 
 }
 ```
 
