@@ -39,6 +39,9 @@ files:
                    For example, if the grade is 92, you should:
                    System.out.println("A-");
                    
+                   Use the syllabus to determine the correct letter 
+                   grades for each grade range!
+                   
                    You can assume that the grade variable contains the
                    number grade you're checking.  DO NOT create your own grade 
                    variable this time, as I'll automatically provide a few
