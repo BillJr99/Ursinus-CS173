@@ -43,7 +43,9 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
     - rtitle: "Functions Activity"
-      rlink: "../Activities/Functions"     
+      rlink: "../Activities/Functions"    
+    - rtitle: "Importing Libraries into Your NetBeans Project"
+      rlink: "../Modules/Library/Module"
       
 tags:
   - functions
