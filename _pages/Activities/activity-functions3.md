@@ -8,6 +8,8 @@ info:
   next: ./Random
   prev: ./Functions2
   
+  warmup: "First, write an if statement to tell if room temperature is between 70 and 74 degrees (you can print out a message saying whether or not it is in this range).  Then, migrate this to a function that accepts the temperature as a parameter, and call this function at least twice from <code>main()</code>.  Next, add a second parameter to this function to represent the humidity, and display a separate message indicating whether it is within a range of 30 and 50 percent.  Finally, modify your function to return a <code>boolean</code> if both conditions are met."
+  
   goals: 
     - To use functions with return values
     - To write javadoc comments for functions
