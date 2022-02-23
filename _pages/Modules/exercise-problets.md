@@ -30,6 +30,8 @@ Once this is set to the default, you can double click on `ursinus.jnlp` in the f
 
 If your program doesn't open due to a permissions error, you click on your Settings icon (called "System Preferences") in the system tray, and click "Settings and Privacy," and the "General" tab.  You'll find an "Open Anyway" button on that page that you can click to run the program the first time.  This [article](https://support.apple.com/en-us/HT202491) provides more information about that settings pane.
 
+### Additional Security Settings
+
 Additionally, you can click Settings again, go to "Java" in the control panel, and the "Security" tab.  Click "Add" to add a site to your exception list, and enter `http://problets.org` in the box that appears.  You can click "OK" or "Continue" to any confirmation dialogs that appear.  See this [article](https://java.com/en/download/help/mac_controlpanel.html) for details.
 
 If you don't see a "Java" option under your System Preferences, you can install a different version of Java, called the [Java Runtime Environment](https://www.java.com/en/download/manual.jsp) which should allow you to change this setting.  Choose, download, and install the right one for your operating sytem (likely the Mac).  If you see Java in your System Preferences above, there's no need to do this, and you're all set!
