@@ -8,6 +8,7 @@ info:
   goals: 
     - To be able to design test cases for unit testing a program
     - To design code modules for unit testing
+  warmup: "We know that a signed 32-bit value, in seconds, will overflow in 68 years.  How long would a 64-bit value last before overflowing?"
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
