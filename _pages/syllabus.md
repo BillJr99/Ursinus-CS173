@@ -475,10 +475,6 @@ schedule:
   - rtitle: "Unit Testing Review"
     rlink: "Modules/Testing/Module"
   deliverables:
-  - dtitle: "Quiz: Conditionals"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_conditionals.zip"
   - dtitle: "Exercise: Problets - Function - Function behavior"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
@@ -526,6 +522,10 @@ schedule:
   - rtitle: "Runestone Ch. 2.7 - String Methods"
     rlink: false
   deliverables:
+  - dtitle: "Quiz: Conditionals"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_conditionals.zip"  
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
