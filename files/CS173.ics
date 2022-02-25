@@ -612,7 +612,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091435
 DTSTAMP:20220225T000000Z
 DTSTART;VALUE=DATE:20220225
-SUMMARY:CS173 Intro to Computer Science: Quiz: Conditionals
+SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Function - Function behavior
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -621,22 +621,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091436
 DTSTAMP:20220225T000000Z
 DTSTART;VALUE=DATE:20220225
-SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Function - Function behavior
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Testing\nReading: Testing with the NetBeans IDE https://www.billmongan.com/Ursinus-CS173-Spring2022/NetBeans/JUnit\nReading: Unit Testing Review https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Testing/Module\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091437
-DTSTAMP:20220225T000000Z
-DTSTART;VALUE=DATE:20220225
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Testing\nReading: Testing with the NetBeans IDE https://www.billmongan.com/Ursinus-CS173-Spring2022/NetBeans/JUnit\nReading: Unit Testing Review https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Testing/Module\nDeliverable: Quiz: Conditionals\nDeliverable: Exercise: Problets - Function - Function behavior https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091438
 DTSTAMP:20220228T000000Z
 DTSTART;VALUE=DATE:20220228
 SUMMARY:CS173 Intro to Computer Science: Lab: Averaging Functions Due
@@ -645,7 +636,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091439
+UID:00000000-0000-0000-0000-0192cc091438
 DTSTAMP:20220228T000000Z
 DTSTART;VALUE=DATE:20220228
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: MIDI Audio Due
@@ -654,7 +645,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143a
+UID:00000000-0000-0000-0000-0192cc091439
 DTSTAMP:20220228T000000Z
 DTSTART;VALUE=DATE:20220228
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Drawing Faces Handed Out
@@ -663,7 +654,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143b
+UID:00000000-0000-0000-0000-0192cc09143a
 DTSTAMP:20220228T000000Z
 DTSTART;VALUE=DATE:20220228
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -672,7 +663,7 @@ DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Strin
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143c
+UID:00000000-0000-0000-0000-0192cc09143b
 DTSTAMP:20220301T000000Z
 DTSTART;VALUE=DATE:20220301
 SUMMARY:CS173 Intro to Computer Science: Lab: Unit Testing Handed Out
@@ -681,7 +672,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143d
+UID:00000000-0000-0000-0000-0192cc09143c
 DTSTAMP:20220301T000000Z
 DTSTART;VALUE=DATE:20220301
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Selection - if/if-else tracing
@@ -690,12 +681,21 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09143e
+UID:00000000-0000-0000-0000-0192cc09143d
 DTSTAMP:20220301T000000Z
 DTSTART;VALUE=DATE:20220301
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
 DESCRIPTION:\nDeliverable: Lab: Unit Testing Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/UnitTesting\nDeliverable: Exercise: Problets - Selection - if/if-else tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09143e
+DTSTAMP:20220302T000000Z
+DTSTART;VALUE=DATE:20220302
+SUMMARY:CS173 Intro to Computer Science: Quiz: Conditionals
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -713,7 +713,7 @@ DTSTAMP:20220302T000000Z
 DTSTART;VALUE=DATE:20220302
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Runestone Ch. 2.7 - String Methods\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:\nReading: Runestone Ch. 2.7 - String Methods\nDeliverable: Quiz: Conditionals\nDeliverable: Exercise: Epplets - Selection - if/if-else puzzles https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
