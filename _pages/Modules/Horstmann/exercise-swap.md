@@ -40,5 +40,3 @@ exercisecode: |
     vars.b = yield sim.ask(vars.temp)
         
 ---
-
-This page is adapted from Prof. Cay Horstmann's [Codecheck Parsons Puzzles](https://horstmann.com/codecheck/authoring.html#pseudocode-parsons-puzzles).
