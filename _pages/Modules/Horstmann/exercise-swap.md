@@ -5,6 +5,7 @@ title: "CS173: Intro to Computer Science - Horstmann Parsons Puzzle: Swap"
 excerpt: "CS173: Intro to Computer Science - Horstmann Parsons Puzzle: Swap"
 
 info:
+  points: 0
   instructions: "Fill in the prompts to trace the algorithm and swap two <code>integer</code> variables."
   goals:
     - To manipulate variables by correctly swapping their values
