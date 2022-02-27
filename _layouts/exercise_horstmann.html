@@ -49,9 +49,7 @@ layout: default-horstmann
         {% if page.info.instructions %}
         {{ page.info.instructions }}
         {% endif %}
-        
-        <div id="correctArea"></div>
-        
+                
         {% if page.exercisecode %}
         <div class='codecheck_tracer'>
           <script type='module'>//<![CDATA[
@@ -59,8 +57,7 @@ layout: default-horstmann
             addExercise(function*(sim, state) {
 
                 {{ page.exercisecode }}
-
-                correctArea.innerHTML = "<h3><font color = #00AA00>" + new String(state.correct) + "</font></h3>";
+                
             })
             // ]]>
           </script>
