@@ -58,9 +58,9 @@ layout: default-horstmann
             import { addExercise, Code, Frame } from 'https://horstmann.com/codecheck/script/codecheck_tracer.js'
             addExercise(function*(sim, state) {
 
-            {{ page.exercisecode }}
+                {{ page.exercisecode }}
 
-            correctArea.innerHTML = "<h3><font color = #00AA00>" + state.correct.toString() + "</font></h3>";
+                correctArea.innerHTML = "<h3><font color = #00AA00>" + new String(state.correct) + "</font></h3>";
             })
             // ]]>
           </script>
