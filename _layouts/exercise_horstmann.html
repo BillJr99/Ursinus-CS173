@@ -50,6 +50,8 @@ layout: default-horstmann
         {{ page.info.instructions }}
         {% endif %}
         
+        <div id="correctArea"></div>
+        
         {% if page.exercisecode %}
         <div class='codecheck_tracer'>
           <script type='module'>//<![CDATA[
@@ -58,6 +60,7 @@ layout: default-horstmann
 
             {{ page.exercisecode }}
 
+            correctArea.innerHTML = "<h3><font color = #00AA00>" + state.correct.toString() + "</font></h3>";
             })
             // ]]>
           </script>
