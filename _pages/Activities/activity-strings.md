@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Strings"
 excerpt: "CS173: Intro to Computer Science - Strings"
 
 info:
-  warmup: "Trace <a href=\"../../Modules/Horstmann/Swap/Exercise\" target=\"_blank\">this algorithm</a> to swap two <code>integer</code> variables."
+  warmup: "Trace <a href=\"../Modules/Horstmann/Swap/Exercise\" target=\"_blank\">this algorithm</a> to swap two <code>integer</code> variables."
   goals: 
     - To be able to explain that a <code>String</code> is a class that stores text and provides functionality that manipulates that text.
     - To be able to explain that a <code>String</code> is immutable, and that new memory is allocated for a <code>String</code> when it is modified.
