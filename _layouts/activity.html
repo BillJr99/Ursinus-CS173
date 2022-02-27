@@ -105,6 +105,8 @@ embed_directions_video: "You can play the following video right here from your b
         <h3>Embedded Video</h3>
         {{ layout.embed_directions_video }}        
         <br>
+        {% else %}
+        <h3>Embedded Activity Frame</h3>
         {% endif %}
         
         {{ model.embed }}
