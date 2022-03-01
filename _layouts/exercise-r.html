@@ -243,7 +243,7 @@ mynetid: wmongan
                 document.getElementsByClassName("snip-input")[0].innerHTML = code;
                 document.getElementsByClassName("snip-run")[0].click();
                 var feedbackString = document.getElementsByClassName("snip-output")[0].innerText;
-                document.getElementById("feedbackText").innerText = pos;
+                document.getElementById("feedbackText").innerText = feedbackString;
                 
                 {{ page.processor.feedbackprocess | strip }}
                 if ({{ page.processor.correctcheck | strip}}) {
@@ -311,7 +311,7 @@ mynetid: wmongan
             <div class='ui icon warning message snip-spinner hidden' data-tag='snrub'>
               <i class='notched circle loading icon'></i>
               <div class='content'>
-                <div class='header snip-status' data-tag='snrub'>Nothing</div>
+                <div class='header snip-status' data-tag='snrub'><!--Nothing--></div>
               </div>
             </div>
 
