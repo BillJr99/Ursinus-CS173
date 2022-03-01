@@ -242,7 +242,7 @@ mynetid: wmongan
                 
                 document.getElementsByClassName("snip-input")[0].innerHTML = code;
                 document.getElementsByClassName("snip-run")[0].click();
-                let pos = document.getElementsByClassName("snip-output")[0].innerText;
+                var feedbackString = document.getElementsByClassName("snip-output")[0].innerText;
                 document.getElementById("feedbackText").innerText = pos;
                 
                 {{ page.processor.feedbackprocess | strip }}
