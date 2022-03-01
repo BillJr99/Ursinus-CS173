@@ -71,6 +71,35 @@ Here is a guide on [creating unit tests in NetBeans using JUnit](../NetBeans/JUn
 
 When you create your unit test, you can remove the `fail` line so that the test doesn't automatically fail.  If your test fails and says "the test case is a prototype," you may have forgotten to do this!
 
+Here is an example of two unit tests with the `fail` line removed, for your reference:
+
+```java
+    @Test
+    public void testStringEquals() {
+        System.out.println("stringEquals");
+        String a = new String("Ursinus");
+        String b = new String("Not Ursinus");
+        boolean expResult = false; // this is the answer that we expect the function to return!
+        boolean result = UnitTestingSample.stringEquals(a, b);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype."); // remove the fail line!
+    }
+    
+    @Test
+    public void testFizzBuzz() {
+        System.out.println("fizzBuzz");
+        int n = 7;
+        String expResult = "7"; // if the number is not divisbile by 3, 5, or 15, it returns the number we provided as a String
+        String result = UnitTestingSample.fizzBuzz(n);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype."); // remove the fail line!
+    }
+```
+
+You can also delete the unit test for the `main()` function, if you like (you can delete the `testMain()` function and the `@Test@ marker above it).
+
 #### String Equality Test
 
 When writing your `String` equality test cases, you will find that the unit tests provide default code that includes your parameters and expected return value, like this:
