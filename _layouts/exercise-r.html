@@ -241,8 +241,8 @@ mynetid: wmongan
                 let code = editorText + mainEditor.getValue();
                 
                 var rframe = document.getElementById('rframe');
-                rframe.contentWindow.document.getElementsByClassName("snip-input")[0].innerHTML = code;
-                rframe.contentWindow.document.getElementsByClassName("snip-run")[0].click();
+                //rframe.contentWindow.document.getElementsByClassName("snip-input")[0].innerHTML = code;
+                //rframe.contentWindow.document.getElementsByClassName("snip-run")[0].click();
                 var feedbackString = rframe.contentWindow.document.getElementsByClassName("snip-output")[0].innerText;
                 document.getElementById("feedbackText").innerText = feedbackString;
                 
