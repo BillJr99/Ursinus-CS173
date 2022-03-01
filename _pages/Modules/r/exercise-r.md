@@ -24,18 +24,11 @@ processor:
  
 files:
   - filename: "R.java"
-    name: r
-    ismain: false
+    name: main
+    ismain: true
     isreadonly: false
     isvisible: true
     code: | 
         print("Hello, world!")
-
-  - filename: "Body of main() function"
-    ismain: true
-    name: main
-    isreadonly: true
-    isvisible: false
-    code: ""
         
 ---
