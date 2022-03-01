@@ -1,5 +1,5 @@
 ---
-layout: exercise
+layout: exercise-r
 permalink: /Modules/RTutorial/Exercise
 title: "CS173: Intro to Computer Science - R"
 excerpt: "CS173: Intro to Computer Science - R"
