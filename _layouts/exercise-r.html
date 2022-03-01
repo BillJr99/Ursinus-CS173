@@ -286,44 +286,7 @@ mynetid: wmongan
         </script>        
 
         <!-- Begin rdrr template -->
-        <div class='ui fluid grid container'>
-          <div class='sixteen wide column'>
-            <div class='ui form'>
-              <div class='field'>
-                <textarea class="fullwidth mousetrap snip-input" id="snip" rows='10' cols='80' style='font-size: 13px; font-family: Menlo,Monaco,Consolas,"Courier New",monospace !important' data-tag='snrub'># You can run any R code...
-                </textarea>
-              </div>
-
-              <div class='ui stackable two column grid'>
-                <div class='column'>
-                  <button class='ui huge green fluid button snip-run' data-tag='snrub' type="button" id="run">Run</button>
-                </div>
-
-                <div class='column'>
-                  <p>You should assume that any scripts or data that you put into this service are public. <a href='https://rdrr.io/snippets/embed/snippets/privacy' target='_blank' rel='noopener'>Privacy policy.</a></p>
-                  <p><b>Computation provided by <a href='https://rdrr.io'>rdrr.io</a>: hosting documentation for all R packages.</b></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class='sixteen wide column'>
-            <div class='ui icon warning message snip-spinner hidden' data-tag='snrub'>
-              <i class='notched circle loading icon'></i>
-              <div class='content'>
-                <div class='header snip-status' data-tag='snrub'><!--Nothing--></div>
-              </div>
-            </div>
-
-            <pre class='highlight hidden snip-output' data-tag='snrub'></pre>
-            <div class='snip-images hidden' data-tag='snrub'></div>
-          </div>
-        </div>
-
-        <script type="text/javascript" src="https://rdrr.io/static/CACHE/js/b0b4001f5e80.js"></script>
-
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oswald:400,300,700">
+        <iframe width='100%' height='240' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
         <!-- end rdrr template -->
         
     {{ content }} 
