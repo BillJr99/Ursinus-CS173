@@ -81,6 +81,8 @@ info:
       title: Strings
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html
       title: String Methods
+    - link: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html
+      title: "String Javadoc Documentation Page"
 
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-12-practice-coding.html
