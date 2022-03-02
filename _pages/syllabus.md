@@ -553,15 +553,7 @@ schedule:
   - dtitle: "Programming Assignment: Mini Crypto Handed Out"
     dlink: "Assignments/MiniCrypto"      
     points: 100  
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"   
-  - dtitle: "Programming Assignment: Drawing Faces Due"
-    dlink: "Assignments/Faces"
-    points: 100  
-    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"    
-  - dtitle: "Lab: Unit Testing Due"
-    dlink: "Labs/UnitTesting"  
-    points: 100   
-    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"      
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"      
 - week: "8"
   date: "1"
   title: "Lab: Financial Aid Calculator" 
@@ -570,6 +562,14 @@ schedule:
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
     rubricpath: "_pages/Labs/Testing/lab-financialaidcalculator.md"   
+  - dtitle: "Programming Assignment: Drawing Faces Due"
+    dlink: "Assignments/Faces"
+    points: 100  
+    rubricpath: "_pages/Assignments/Functions/asmt-faces.md"    
+  - dtitle: "Lab: Unit Testing Due"
+    dlink: "Labs/UnitTesting"  
+    points: 100   
+    rubricpath: "_pages/Labs/Testing/lab-unittesting.md"   
 - week: "8"
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
