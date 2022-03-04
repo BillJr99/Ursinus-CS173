@@ -75,6 +75,10 @@ info:
         - "Java includes a <code>equalsIgnoreCase</code> function.  How do you think this works, using other functions that the <code>String</code> class provides?"
         - "Write a function that accepts two <code>String</code> parameters and returns true if the third character of each <code>String</code> is the same.  Be careful to check the length of each <code>String</code> first!"
         - "Using <code>String</code> methods, create a variable containing the word &quot;Book&quot; and the word &quot;keeper&quot;, and create the word &quot;Bookkeeper&quot; and &quot;Beekeeper&quot;.  There are multiple ways to do this!" 
+        - "Read a String from the console, check that it is exactly a 5-letter word, and if so, convert it to upper-case.  Replace all the vowels with asterisks
+Print the result!"
+        - "Read a String from the console containing only the letters A, C, G, and/or T, and convert it to uppercase.  Replace the A's to T's, and all the T's to A's.  Replace the G's with C's and all the C's to G's."
+        - "Challenge: there is a String function called matches that will check if a text pattern exists inside the String.    It returns a boolean (true if the pattern is found, false if not).  Use the matches function to see if any letter besides A, C, G, or T is in the String.  Here are some hints: <code>.*</code> means to search for any character (the <code>.</code> represents this) any number of times (the <code>*</code>).  You can check for a particular character using brackets like this: <code>[ACGT]</code> will match one character that is equal to A, C, G, or T.  Try searching for any number of characters, followed by a character in the alphabet other than A, C, G, or T, followed by any number of characters."
 
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
