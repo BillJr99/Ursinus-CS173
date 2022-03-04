@@ -603,10 +603,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  - dtitle: "Quiz: Strings"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip"   
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
@@ -631,7 +627,11 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - do-while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"            
+    submission_types: "written"
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_strings.zip"   
 - week: "9"
   date: "3"
   title: "Coding Style and the Code Review"
