@@ -538,10 +538,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"  
-  - dtitle: "Quiz: Functions and Testing"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"   
 - week: "8"
   date: "0"
   title: "Iteration"  
@@ -573,7 +569,12 @@ schedule:
 - week: "8"
   date: "2"
   title: "Applications of Iteration: Introduction to Cryptography"
-  link: "Activities/MiniCrypto"    
+  link: "Activities/MiniCrypto" 
+  deliverables:
+  - dtitle: "Quiz: Functions and Testing"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_functionsandtesting.zip"  
 - week: "8"
   date: "3"
   title: "Iteration with the for Loop"
@@ -587,7 +588,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
+    submission_types: "written"  
 - week: "9"
   date: "0"
   title: "Iteration, Randomness, and the while loop" 
