@@ -837,7 +837,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09144e
 DTSTAMP:20220321T000000Z
 DTSTART;VALUE=DATE:20220321
-SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
+SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -846,22 +846,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09144f
 DTSTAMP:20220321T000000Z
 DTSTART;VALUE=DATE:20220321
-SUMMARY:CS173 Intro to Computer Science: Lab: Financial Aid Calculator Due
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Horstmann Ch. 6.3-6.6\nReading: Runestone Ch. 4.1 - while Loops\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/FinancialAidCalculator
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091450
-DTSTAMP:20220321T000000Z
-DTSTART;VALUE=DATE:20220321
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/While\nReading: Horstmann Ch. 6.3-6.6\nReading: Runestone Ch. 4.1 - while Loops\nDeliverable: Exercise: Problets - Loops - while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Strings\nDeliverable: Lab: Financial Aid Calculator Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/FinancialAidCalculator
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091451
 DTSTAMP:20220322T000000Z
 DTSTART;VALUE=DATE:20220322
 SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Handed Out
@@ -870,7 +861,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091452
+UID:00000000-0000-0000-0000-0192cc091451
 DTSTAMP:20220322T000000Z
 DTSTART;VALUE=DATE:20220322
 SUMMARY:CS173 Intro to Computer Science: Exercise: Iteration
@@ -879,7 +870,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091453
+UID:00000000-0000-0000-0000-0192cc091452
 DTSTAMP:20220322T000000Z
 DTSTART;VALUE=DATE:20220322
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
@@ -888,10 +879,19 @@ DESCRIPTION:\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Handed 
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091454
+UID:00000000-0000-0000-0000-0192cc091453
 DTSTAMP:20220323T000000Z
 DTSTART;VALUE=DATE:20220323
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - do-while loop tracing
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc091454
+DTSTAMP:20220323T000000Z
+DTSTART;VALUE=DATE:20220323
+SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -902,7 +902,7 @@ DTSTAMP:20220323T000000Z
 DTSTART;VALUE=DATE:20220323
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Do\nDeliverable: Exercise: Problets - Loops - do-while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Do\nDeliverable: Exercise: Problets - Loops - do-while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Strings
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
