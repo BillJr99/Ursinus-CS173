@@ -13,6 +13,8 @@ info:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-1-while-loops.html
       title: <code>while</code> Loops
       
+  warmup: "How might you count the number of spaces in a <code>String</code>?"
+  
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
