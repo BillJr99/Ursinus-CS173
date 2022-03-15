@@ -211,7 +211,7 @@ As a summary, here is what to do.  You might want to write separate programs (pr
 * When someone shares a message with you, use your own private key (`D` and `C`) to decrypt them to characters, one by one, and print them to the screen.  What message did you get?  Note that this `C` is different than the one you used to encrypt something to your classmate in the prior step: you used their `C` value instead!  Here, you are using your own value of `C`.
 * Take someone's public key (`E` and `C`) and compute `M` and `D` from it.  Did it match their private key?  Why is this hard to do with actual public keys on the internet?
 
-## Extra Credit (15 Points Each)
+## Extra Credit (10 Points Each)
 
 ### Extra Credit Part 1: Implement the RSAMath functions
 
