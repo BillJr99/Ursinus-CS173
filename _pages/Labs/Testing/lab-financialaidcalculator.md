@@ -106,7 +106,7 @@ double income = myScanner.nextDouble();
 
 Create a method `double computeAssistance(double income, int numKids)`.  This function will go inside your class, along with your `main()` function.  Fill in the method that computes the proper amount of assistance, following the rules above.
 
-Do not print anything in this function!  I suggest calculating the value of `assistanceAmount` in each `if` statement, and then you can use one single `return` statement at the bottom of the function to return that value.  See this example for the general layout.
+Do not print anything in this function!  I suggest calculating the value of `assistanceAmount` in each `if` statement, and then you can use one single `return` statement at the bottom of the function to return that value.  See this example for the general layout.  You can print the result in your `main` function instead, and that way, you only have to write one print statement for the whole program.
 
 ```java
 /** Compute the amount of financial assistance given to a family, 
