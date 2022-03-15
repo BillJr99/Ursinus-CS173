@@ -164,7 +164,7 @@ Each encrypted value X will be the ASCII value of each character in a String.  Y
 
 `long asciiX = (long) x; // where c is a char`
 
-### Decrypting a Message from Your Partner Using Your D and C Key Values
+## Step 3: Receiving and Decrypting a Message from Your Partner Using Your D and C Key Values
 
 Similarly, accept a private key (D and C) as parameters, write another function to decrypt a given value, and return that decrypted value.  Print it to the screen as well.  
 
@@ -202,7 +202,22 @@ char decryptedChar = (char) decrypted;
 ### Test the Public/Private Key Pair by Encrypting and Decrypting Using Your Own Public and Private Key
 Write test cases that encrypt values using your public key, and decrypt them using your private key, and assert that the final decrypted value matches your original input.  Also try encrypting with your private key and decrypting with your public key, to ensure that the keys are proper inverses of one another.
 
-## Step 3: Breaking Someone's Private Key Using Only Their Public Key
+## Summary
+
+As a summary, here is what to do.  You might want to write separate programs (projects) for each of these, and export and submit each of them.  It's up to you!
+
+* Generate a key to share with the class.  Share your `E` and `C` public key with the class, but keep your `D` private key value a secret that you will use later!
+* Use someone else's public key (`E` and `C`) to encrypt a secret message to them, one character at a time.  You can loop over the characters of a `String` to do this.  Share your encrypted numeric values with that person.
+* When someone shares a message with you, use your own private key (`D` and `C`) to decrypt them to characters, one by one, and print them to the screen.  What message did you get?  Note that this `C` is different than the one you used to encrypt something to your classmate in the prior step: you used their `C` value instead!  Here, you are using your own value of `C`.
+* Take someone's public key (`E` and `C`) and compute `M` and `D` from it.  Did it match their private key?  Why is this hard to do with actual public keys on the internet?
+
+## Extra Credit (15 Points Each)
+
+### Extra Credit Part 1: Implement the RSAMath functions
+
+Create your own versions of each of the functions in the RSAMath library given to you, and use those instead in your programs!
+
+### Extra Credit Part 2: Breaking Someone's Private Key Using Only Their Public Key
 Going back through the RSA algorithm, how did you compute your private key from your public key?  Since they are modular inverses of one another, you could compute the modular inverse of your partner's public key (E and C) to obtain their private key D.  
 
 **Why is this too difficult to do in practice, when the key values are much larger?**
@@ -214,21 +229,6 @@ Write and test a program to accept a public key.  To do this, compute your partn
 Here is an example:
 
 ![Key Cracker]({{ site.baseurl }}/images/asmt-minicrypto/keycrack.png)
-
-## Summary
-
-As a summary, here is what to do.  You might want to write separate programs (projects) for each of these, and export and submit each of them.  It's up to you!
-
-* Generate a key to share with the class.  Share your `E` and `C` public key with the class, but keep your `D` private key value a secret that you will use later!
-* Use someone else's public key (`E` and `C`) to encrypt a secret message to them, one character at a time.  You can loop over the characters of a `String` to do this.  Share your encrypted numeric values with that person.
-* When someone shares a message with you, use your own private key (`D` and `C`) to decrypt them to characters, one by one, and print them to the screen.  What message did you get?  Note that this `C` is different than the one you used to encrypt something to your classmate in the prior step: you used their `C` value instead!  Here, you are using your own value of `C`.
-* Take someone's public key (`E` and `C`) and compute `M` and `D` from it.  Did it match their private key?  Why is this hard to do with actual public keys on the internet?
-
-## Extra Credit (15 Points)
-
-### Implement the RSAMath functions
-
-Create your own versions of each of the functions in the RSAMath library given to you, and use those instead in your programs!
 
 ## Finishing Touches and Writeup 
 
