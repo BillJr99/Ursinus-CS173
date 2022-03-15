@@ -137,6 +137,21 @@ Your loop to obtain each character from the String will look something like this
 
 ```java
 String msg = "This is a secret message!";
+int i = 0;
+while(i < msg.length()) {
+    // get each character from the string - the first one will be the letter T, followed by h, and so on...
+    char x = msg.charAt(i); 
+    
+    // TODO: encrypt this character and print the encrypted value to the screen
+    
+    i = i + 1;
+}
+```
+
+If you'd like a shortcut, you can also write the above code using a `for` loop!  Notice how it combines the initial value of `i`, the stopping value `i < msg.length()`, and the increment instruction `i = i + 1`:
+
+```java
+String msg = "This is a secret message!";
 for(int i = 0; i < msg.length(); i++) {
     // get each character from the string - the first one will be the letter T, followed by h, and so on...
     char x = msg.charAt(i); 
