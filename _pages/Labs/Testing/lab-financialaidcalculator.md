@@ -91,7 +91,8 @@ Create a new NetBeans project as usual.  In `main()`, complete an input prompt a
 ```java
 // don't forget to import java.util.Scanner; at the top (under the package line!)
 
-// the code below goes in your main() function
+// all the code below goes in your main() function
+
 Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
