@@ -96,11 +96,15 @@ Scanner myScanner = new Scanner(System.in);
 System.out.println("Enter Annual Income:");
 double income = myScanner.nextDouble();
 // do this again using nextInt() for numKids, which will be an int variable
+
+// then, call your computeAssistance function, get the result, and print it!
 ```
 
 ## Part 2: Financial Assistance Calculator (85% of the Implementation Grade)
 
 Create a method `double computeAssistance(double income, int numKids)`.  This function will go inside your class, along with your `main()` function.  Fill in the method that computes the proper amount of assistance, following the rules above.
+
+Do not print anything in this function!  I suggest calculating the value of `assistanceAmount` in each `if` statement, and then you can use one single `return` statement at the bottom of the function to return that value.  See this example for the general layout.
 
 ```java
 /** Compute the amount of financial assistance given to a family, 
