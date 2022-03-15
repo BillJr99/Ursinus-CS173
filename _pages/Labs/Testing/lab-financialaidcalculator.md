@@ -103,7 +103,7 @@ double income = myScanner.nextDouble();
 Create a method `double computeAssistance(double income, int numKids)`.  This function will go inside your class, along with your `main()` function.  Fill in the method that computes the proper amount of assistance, following the rules above.
 
 ```java
-/* Compute the amount of financial assistance given to a family, 
+/** Compute the amount of financial assistance given to a family, 
  * given their income and number of children.
  * @param income The annual family income
  * @param numKids The number of children in the family
