@@ -82,7 +82,7 @@ A non-governmental organization got a large donation to help families in need, b
     * If the household has no children, then no aid is provided.
 * If the annual household income is less than $20,000, then provide $2,100 per child.
 
-**Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!
+**Hint**: remember that numeric values in Java do not include the commas; these are only there for your reading convenience!  Also, make sure you don't return a negative value for aid if someone mistakenly reports a negative number of children (how can you check for this, and what should you calculate as the aid amount instead?)!
 
 ## Part 1: Soliciting User Input (15% of the Implementation Grade)
 
