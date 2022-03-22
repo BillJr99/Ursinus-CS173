@@ -121,7 +121,7 @@ long E = rsa.coprime(M);
 ```  
 
 ## Step 2: Communicating Secret Messages to a Partner Using Only Their Public Key
-Now, write a program to accept your partner's public key, and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a `String` parameter, and for each character in the `String`, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
+Now, write a program to input your partner's public key (you can use a `Scanner` to enter this from the keyboard), and your private key.  You can exchange keys via email, on Teams, or on the board.  Accept a `String` parameter, and for each character in the `String`, obtain its ASCII value and encrypt it with your partner's public key.  Send those encrypted values to your partner.
 
 ### Encrypting a Message to Your Partner Using Their E and C Key Values
 
