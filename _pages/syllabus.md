@@ -628,10 +628,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written"
-  - dtitle: "Quiz: Strings"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip"   
 - week: "9"
   date: "3"
   title: "Coding Style and the Code Review"
@@ -642,11 +638,7 @@ schedule:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
     points: 100    
-    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"       
-  - dtitle: "Programming Assignment: Mini Crypto Due"
-    dlink: "Assignments/MiniCrypto"      
-    points: 100    
-    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"   
+    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"         
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
@@ -660,10 +652,14 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
-    dlink: "Labs/MonteCarloPi"  
-    points: 100
-    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"      
+  - dtitle: "Programming Assignment: Mini Crypto Due"
+    dlink: "Assignments/MiniCrypto"      
+    points: 100    
+    rubricpath: "_pages/Assignments/Iteration/asmt-minicrypto.md"     
+  - dtitle: "Quiz: Strings"
+    dlink: false
+    points: 40    
+    qtizippath: "_pages/Quizzes/qti_strings.zip"       
 - week: "10"
   date: "1"    
   title: "Lab: Code Review"
@@ -671,7 +667,11 @@ schedule:
   - dtitle: "Lab: Code Review Handed Out"
     dlink: "Labs/CodeReview"    
     points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"      
+    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
+  - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
+    dlink: "Labs/MonteCarloPi"  
+    points: 100
+    rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"     
 - week: "10"
   date: "2"
   title: "Iteration and String Manipulation Workshop"
