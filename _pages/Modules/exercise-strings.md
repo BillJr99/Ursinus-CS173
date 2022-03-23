@@ -81,8 +81,8 @@ files:
                 String t = "science";
                 checkEqual(s, t);    
 
-                String s = "bat";
-                String t = "bar";
+                String u = "bat";
+                String v = "bar";
                 checkEqual(u, v);                 
             }
         }
