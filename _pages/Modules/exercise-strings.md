@@ -22,7 +22,7 @@ processor:
     let ans2 = feedbackString.split("\n")[1].toLowerCase();
     let ans3 = feedbackString.split("\n")[2].toLowerCase();
     let ans4 = feedbackString.split("\n")[3].toLowerCase();
-    let ans4 = feedbackString.split("\n")[4].toLowerCase();
+    let ans5 = feedbackString.split("\n")[4].toLowerCase();
   correctcheck: |
     ans1 === "true" && ans2 === "false" && ans3 === "false" && ans4 === "false" && ans5 === "false"
  
@@ -34,11 +34,13 @@ files:
     isvisible: true
     code: |
         public class CompareStrings {
-            // Compare the strings str1 and str2, character by character, 
-            // and return true if they are equal and the same size.
-            // param str1 The first string to compare
-            // param str2 The second string to compare
-            // return true if the strings are equal, false if not      
+            /**
+             * Compare the strings str1 and str2, character by character, 
+             * and return true if they are equal and the same size.
+             * @param str1 The first string to compare
+             * @param str2 The second string to compare
+             * @return true if the strings are equal, false if not      
+             */
             public static boolean compare(String str1, String str2) {
                 // TODO: If str1.length() is not equal to str2.length(), return false
             
