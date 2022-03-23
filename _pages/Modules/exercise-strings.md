@@ -8,7 +8,7 @@ info:
   points: 3
   instructions: "Write a function that checks if two <code>String</code>s are equal, by checking them character by character.  Loop over all characters up to the length of the string, and obtain each character using the <code>str1.charAt(i)</code> or the <code>str1.substring(i, i+1)</code> method (and <code>str2.charAt(i)</code> or the <code>str2.substring(i, i+1)</code>, for the other string, as well)."
   goals:
-    - To iterate over <code>String</code> variables.
+    - "To iterate over <code>String</code> variables."
 
 canvasasmtid: "137447"
 canvaspoints: 3
