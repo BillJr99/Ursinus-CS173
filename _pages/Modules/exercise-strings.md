@@ -34,13 +34,11 @@ files:
     isvisible: true
     code: |
         public class CompareStrings {
-            /*
-             Compare the strings str1 and str2, character by character, 
-             and return true if they are equal and the same size.
-             param str1 The first string to compare
-             param str2 The second string to compare
-             return true if the strings are equal, false if not
-            */        
+            // Compare the strings str1 and str2, character by character, 
+            // and return true if they are equal and the same size.
+            // param str1 The first string to compare
+            // param str2 The second string to compare
+            // return true if the strings are equal, false if not      
             public static boolean compare(String str1, String str2) {
                 // TODO: If str1.length() is not equal to str2.length(), return false
             
