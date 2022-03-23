@@ -24,7 +24,7 @@ processor:
     let ans4 = feedbackString.split("\n")[3].toLowerCase();
     let ans4 = feedbackString.split("\n")[4].toLowerCase();
   correctcheck: |
-    ans1 === 'true' && ans2 === 'false' && ans3 === 'false' && ans4 === 'false' && ans5 === 'false'
+    ans1 === "true" && ans2 === "false" && ans3 === "false" && ans4 === "false" && ans5 === "false"
  
 files:    
   - filename: "CompareStrings.java"
