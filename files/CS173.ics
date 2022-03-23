@@ -891,22 +891,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091454
 DTSTAMP:20220323T000000Z
 DTSTART;VALUE=DATE:20220323
-SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Do\nDeliverable: Exercise: Problets - Loops - do-while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091455
-DTSTAMP:20220323T000000Z
-DTSTART;VALUE=DATE:20220323
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Do\nDeliverable: Exercise: Problets - Loops - do-while loop tracing https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Quiz: Strings
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091456
 DTSTAMP:20220325T000000Z
 DTSTART;VALUE=DATE:20220325
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
@@ -915,16 +906,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091457
-DTSTAMP:20220325T000000Z
-DTSTART;VALUE=DATE:20220325
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
-LOCATION:
-DESCRIPTION:
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091458
+UID:00000000-0000-0000-0000-0192cc091456
 DTSTAMP:20220325T000000Z
 DTSTART;VALUE=DATE:20220325
 SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
@@ -933,16 +915,16 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091459
+UID:00000000-0000-0000-0000-0192cc091457
 DTSTAMP:20220325T000000Z
 DTSTART;VALUE=DATE:20220325
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2022/Style-Guide\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise
+DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2022/Style-Guide\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145a
+UID:00000000-0000-0000-0000-0192cc091458
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - Advanced loops
@@ -951,28 +933,46 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145b
+UID:00000000-0000-0000-0000-0192cc091459
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
-SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145c
+UID:00000000-0000-0000-0000-0192cc09145a
+DTSTAMP:20220328T000000Z
+DTSTART;VALUE=DATE:20220328
+SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09145b
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings\nDeliverable: Exercise: Problets - Loops - Advanced loops https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/MonteCarloPi
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings\nDeliverable: Exercise: Problets - Loops - Advanced loops https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Quiz: Strings
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09145c
+DTSTAMP:20220329T000000Z
+DTSTART;VALUE=DATE:20220329
+SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Handed Out
+LOCATION:
+DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc09145d
 DTSTAMP:20220329T000000Z
 DTSTART;VALUE=DATE:20220329
-SUMMARY:CS173 Intro to Computer Science: Lab: Code Review Handed Out
+SUMMARY:CS173 Intro to Computer Science: Lab: Computing Pi with Monte Carlo Simulation Due
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -983,7 +983,7 @@ DTSTAMP:20220329T000000Z
 DTSTART;VALUE=DATE:20220329
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Lab: Code Review Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/CodeReview
+DESCRIPTION:\nDeliverable: Lab: Code Review Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/CodeReview\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/MonteCarloPi
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
