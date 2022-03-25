@@ -23,8 +23,9 @@ processor:
     let ans3 = feedbackString.split("\n")[2].toLowerCase();
     let ans4 = feedbackString.split("\n")[3].toLowerCase();
     let ans5 = feedbackString.split("\n")[4].toLowerCase();
+    let ans6 = feedbackString.split("\n")[5].toLowerCase();
   correctcheck: |
-    ans1 === "true" && ans2 === "false" && ans3 === "false" && ans4 === "false" && ans5 === "false"
+    ans1 === "true" && ans2 === "false" && ans3 === "false" && ans4 === "false" && ans5 === "false" && ans6 === "false"
  
 files:    
   - filename: "CompareStrings.java"
@@ -83,7 +84,11 @@ files:
 
                 String u = "bat";
                 String v = "bar";
-                checkEqual(u, v);                 
+                checkEqual(u, v);  
+                
+                String e = "book";
+                String f = "bookkeeper";
+                checkEqual(e, f); 
             }
         }
 
