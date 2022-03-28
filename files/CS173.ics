@@ -975,7 +975,7 @@ DTSTAMP:20220329T000000Z
 DTSTART;VALUE=DATE:20220329
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/MonteCarloPi
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings/Workshop\nReading: String Manipulation Sample Free Response Question https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html\nDeliverable: Lab: Computing Pi with Monte Carlo Simulation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Labs/MonteCarloPi
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -993,7 +993,7 @@ DTSTAMP:20220330T000000Z
 DTSTART;VALUE=DATE:20220330
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings/Workshop\nReading: String Manipulation Sample Free Response Question https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html\nDeliverable: Exercise: Strings Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise2
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Iteration/Strings\nDeliverable: Exercise: Strings Revisited https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise2
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
