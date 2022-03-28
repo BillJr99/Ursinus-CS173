@@ -186,7 +186,7 @@ isF = postdict['info']['class_meets_days']['isF']
 isS = postdict['info']['class_meets_days']['isS']
 isU = postdict['info']['class_meets_days']['isU']
 
-outf.write("BEGIN:VCALENDAR\r\nVERSION:2.0\r\n")
+outf.write("BEGIN:VCALENDAR\r\nPRODID:Syllabus2Ical\r\nVERSION:2.0\r\n")
 
 # DST Timezone Information for Recurring Times under current time zone rules
 outf.write("BEGIN:VTIMEZONE\r\nTZID:US-Eastern\r\nLAST-MODIFIED:20070101T000000Z\r\nTZURL:http://zones.stds_r_us.net/tz/US-Eastern\r\nBEGIN:STANDARD\r\nDTSTART:19671029T020000\r\nRRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11\r\nTZOFFSETFROM:-0400\r\nTZOFFSETTO:-0500\r\nTZNAME:EST\r\nEND:STANDARD\r\nBEGIN:DAYLIGHT\r\nDTSTART:19870405T020000\r\nRRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3\r\nTZOFFSETFROM:-0500\r\nTZOFFSETTO:-0400\r\nTZNAME:EDT\r\nEND:DAYLIGHT\r\nEND:VTIMEZONE\r\n")
@@ -243,7 +243,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
                 if keydescription.lower().startswith("designated"):
                     rrule = rrule + "\r\nEXDATE:" + dtkeydate
 
-        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP;TZID=US-Eastern:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Section " + section + " Class Meeting\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 for item in postdict['schedule']:   
     weekidx = item['week']
@@ -356,7 +356,7 @@ for instructor in postdict['instructors']:
                     if keydescription.lower().startswith("designated"):
                         rrule = rrule + "\r\nEXDATE:" + dtkeydate                
 
-            outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
+            outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP;TZID=US-Eastern:" + dtstart + "\r\nDTSTART;TZID=US-Eastern:" + dtstart + "\r\nDTEND;TZID=US-Eastern:" + dtend + "\r\n" + rrule + "\r\nSUMMARY:" + coursenum + " " + coursename + " Office Hours with " + instructorname + "\r\nLOCATION:" + location + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")
 
 # Write Exam Dates 
 for i in range(len(postdict['info']['class_meets_locations'])):
@@ -375,7 +375,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
         location = postdict['info']['midtermexam'][i]['mroom']
         
         # Write the exam:
-        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP;TZID=US-Eastern:" + startd + "\r\nDTSTART;TZID=US-Eastern:" + startd + "\r\nDTEND;TZID=US-Eastern:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n") 
 
     if not (postdict['info']['finalexam'][i]['fdate'] == "TBD"):
         startd = getDateString(parseDate(postdict['info']['finalexam'][i]['fdate']))
@@ -390,7 +390,7 @@ for i in range(len(postdict['info']['class_meets_locations'])):
         location = postdict['info']['finalexam'][i]['froom']
         
         # Write the exam:
-        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP:" + startd + "\r\nDTSTART;VALUE=DATE:" + startd + "\r\nDTEND;VALUE=DATE:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
+        outf.write("BEGIN:VEVENT\r\nUID:" + stripnobool(genuid()) + "\r\nDTSTAMP;TZID=US-Eastern:" + startd + "\r\nDTSTART;TZID=US-Eastern:" + startd + "\r\nDTEND;TZID=US-Eastern:" + endd + "\r\nSUMMARY:" + coursenum + " " + coursename + ": " + stripnobool(dtitle) + "\r\nLOCATION:" + stripnobool(location) + "\r\nDESCRIPTION:\r\nPRIORITY:3\r\nEND:VEVENT\r\n")     
 
 # Write University Dates
 if postdict['university']['semester'] == "Fall":
