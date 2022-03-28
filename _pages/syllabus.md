@@ -630,10 +630,7 @@ schedule:
     submission_types: "written"
 - week: "9"
   date: "3"
-  title: "Coding Style and the Code Review"
-  readings:
-  - rtitle: "Style Guide"
-    rlink: "Style-Guide"      
+  title: "Iteration"   
   deliverables:
   - dtitle: "Programming Assignment: DNA Mutations Handed Out"
     dlink: "Assignments/DNAMutations"  
@@ -645,8 +642,10 @@ schedule:
     submission_types: "noupload"     
 - week: "10"
   date: "0"
-  title: "Iteration over Strings"
-  link: "Activities/Iteration/Strings"  
+  title: "Coding Style and the Code Review"
+  readings:
+  - rtitle: "Style Guide"
+    rlink: "Style-Guide"      
   deliverables:
   - dtitle: "Exercise: Problets - Loops - Advanced loops"
     dlink: "Modules/Problets/Exercise"  
@@ -662,12 +661,9 @@ schedule:
     qtizippath: "_pages/Quizzes/qti_strings.zip"       
 - week: "10"
   date: "1"    
-  title: "Lab: Code Review"
+  title: "Iteration over Strings"
+  link: "Activities/Iteration/Strings"  
   deliverables: 
-  - dtitle: "Lab: Code Review Handed Out"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"   
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"  
     points: 100
@@ -703,12 +699,7 @@ schedule:
   - dtitle: "Quiz: Iteration"
     dlink: false
     points: 40
-    qtizippath: "_pages/Quizzes/qti_iteration.zip"    
-  deliverables:
-  - dtitle: "Lab: Code Review Due"
-    dlink: "Labs/CodeReview"    
-    points: 100     
-    rubricpath: "_pages/Labs/CodeStyle/lab-codereview.md"  
+    qtizippath: "_pages/Quizzes/qti_iteration.zip"     
   readings:  
   - rtitle: "Horstmann Ch. 6.1"
     rlink: false 
