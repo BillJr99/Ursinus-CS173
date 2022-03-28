@@ -661,8 +661,11 @@ schedule:
     rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md" 
 - week: "10"
   date: "1"    
-  title: "Iteration over Strings"
-  link: "Activities/Iteration/Strings"  
+  title: "Iteration and String Manipulation Workshop"
+  link: "Activities/Iteration/Strings/Workshop"
+  readings:
+    - rtitle: "String Manipulation Sample Free Response Question"
+      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"      
   deliverables: 
   - dtitle: "Lab: Computing Pi with Monte Carlo Simulation Due"
     dlink: "Labs/MonteCarloPi"  
@@ -670,11 +673,8 @@ schedule:
     rubricpath: "_pages/Labs/Iteration/lab-montecarlopi.md"     
 - week: "10"
   date: "2"
-  title: "Iteration and String Manipulation Workshop"
-  link: "Activities/Iteration/Strings/Workshop"
-  readings:
-    - rtitle: "String Manipulation Sample Free Response Question"
-      rlink: "https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html"      
+  title: "Iteration over Strings"
+  link: "Activities/Iteration/Strings"    
   deliverables:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
