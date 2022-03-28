@@ -631,11 +631,7 @@ schedule:
 - week: "9"
   date: "3"
   title: "Iteration"   
-  deliverables:
-  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
-    dlink: "Assignments/DNAMutations"  
-    points: 100    
-    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md"         
+  deliverables:        
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
@@ -658,7 +654,11 @@ schedule:
   - dtitle: "Quiz: Strings"
     dlink: false
     points: 40    
-    qtizippath: "_pages/Quizzes/qti_strings.zip"       
+    qtizippath: "_pages/Quizzes/qti_strings.zip"   
+  - dtitle: "Programming Assignment: DNA Mutations Handed Out"
+    dlink: "Assignments/DNAMutations"  
+    points: 100    
+    rubricpath: "_pages/Assignments/Strings/asmt-dnamutations.md" 
 - week: "10"
   date: "1"    
   title: "Iteration over Strings"
