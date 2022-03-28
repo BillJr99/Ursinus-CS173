@@ -900,7 +900,7 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091455
 DTSTAMP:20220325T000000Z
 DTSTART;VALUE=DATE:20220325
-SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
+SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -909,22 +909,13 @@ BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091456
 DTSTAMP:20220325T000000Z
 DTSTART;VALUE=DATE:20220325
-SUMMARY:CS173 Intro to Computer Science: Exercise: Strings
+SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:
+DESCRIPTION:\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
 UID:00000000-0000-0000-0000-0192cc091457
-DTSTAMP:20220325T000000Z
-DTSTART;VALUE=DATE:20220325
-SUMMARY:CS173 Intro to Computer Science: Class Meeting
-LOCATION:
-DESCRIPTION:\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations\nDeliverable: Exercise: Strings https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Strings/Exercise
-PRIORITY:3
-END:VEVENT
-BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091458
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Exercise: Problets - Loops - Advanced loops
@@ -933,7 +924,7 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc091459
+UID:00000000-0000-0000-0000-0192cc091458
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Programming Assignment: Mini Crypto Due
@@ -942,10 +933,19 @@ DESCRIPTION:
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
-UID:00000000-0000-0000-0000-0192cc09145a
+UID:00000000-0000-0000-0000-0192cc091459
 DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Quiz: Strings
+LOCATION:
+DESCRIPTION:
+PRIORITY:3
+END:VEVENT
+BEGIN:VEVENT
+UID:00000000-0000-0000-0000-0192cc09145a
+DTSTAMP:20220328T000000Z
+DTSTART;VALUE=DATE:20220328
+SUMMARY:CS173 Intro to Computer Science: Programming Assignment: DNA Mutations Handed Out
 LOCATION:
 DESCRIPTION:
 PRIORITY:3
@@ -956,7 +956,7 @@ DTSTAMP:20220328T000000Z
 DTSTART;VALUE=DATE:20220328
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2022/Style-Guide\nDeliverable: Exercise: Problets - Loops - Advanced loops https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Quiz: Strings
+DESCRIPTION:\nReading: Style Guide https://www.billmongan.com/Ursinus-CS173-Spring2022/Style-Guide\nDeliverable: Exercise: Problets - Loops - Advanced loops https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Problets/Exercise\nDeliverable: Programming Assignment: Mini Crypto Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/MiniCrypto\nDeliverable: Quiz: Strings\nDeliverable: Programming Assignment: DNA Mutations Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/DNAMutations
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
