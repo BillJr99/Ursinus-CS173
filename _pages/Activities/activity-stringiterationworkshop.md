@@ -22,6 +22,8 @@ info:
   additional_reading:
     - link: https://runestone.academy/ns/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
       title: Sample String Array Free Response Question
+    - link: https://www.learnwithtrace.com/problems/c327d9e/code
+      title: Trace Coding Environment for DNA Manipulation Practice Problem
       
 tags:
   - strings
