@@ -11,6 +11,8 @@ info:
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html 
       title: <code>String</code> Loops 
+    - link: https://towardsdatascience.com/hamilton-a-text-analysis-of-the-federalist-papers-e64cb1764fbf
+      title: Performing Text Analysis on the Federalist Papers
      
   additional_practice:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/FRQstringScrambleA.html
