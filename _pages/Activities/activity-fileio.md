@@ -24,7 +24,7 @@ info:
             public static void main(String[] args) {
                 Scanner scanner = new Scanner(System.in);
                 
-                String name = getText("Enter your name:");
+                String name = getText("Enter your name:", scanner);
                 
                 System.out.println("Your name is: " + name);
             }
