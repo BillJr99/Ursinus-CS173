@@ -76,9 +76,14 @@ When you save the dictionary file to your computer, you can go to NetBeans and c
 ### Step 2: Comparing a User-Entered Guess to the Secret Word
 Print out five asterisk ("\*") characters to the screen to represent that the word has not yet been solved.  Give the player an opportunity to type in a 5-letter word as their guess.  For each letter in your guess, if the corresponding letter in the secret word is the correct letter and in the correct position in the secret word, print that correct letter to the screen in upper-case.  If the letter is in the secret word but not in the correct position as given in the guess, print this letter in lower-case.  If the letter is not in the secret word at all, print an asterisk.
 
-Thus, if the secret word is `SAUCE`, and the user guesses `SIREN`, you would print `S**e*`, because the `S` in `SIREN` is in the correct position in the secret word `SAUCE`, but there is no `I`, `R`, or `N` in `SAUCE`, so asterisks would be printed in those positions, and the lower-case `e` gets printed in its position in the word `SIREN`, but in lower-case to indicate that it belongs somewhere else in the secret word.
+Thus, if the secret word is `SAUCE`, and the user guesses `SIREN`, you would print `S**e*`, because the `S` in `SIREN` is in the correct position in the secret word `SAUCE`, but there is no `I`, `R`, or `N` in `SAUCE`, so asterisks would be printed in those positions, and the lower-case `e` gets printed in its position in the word `SIREN`, but in lower-case to indicate that it belongs somewhere else in the secret word.  
 
-Allow the user to guess up to 5 times, and let the user know if they've won the game by guessing all the letters (if they win prior to making 5 guesses, you can exit the loop and the program early!).  However, it is a good idea to make the number of guesses (and even the number of letters in the word) customizable in case you change your mind later.  Make sure that your parameter values (for example, 5 guesses, 5 letter words, and the probability of selecting a word from the dictionary file) are all variables or function parameters so that they can be customized easily.
+Return `true` if the user has won the game by guessing all 5 letters in the correct position, and `false` otherwise.
+
+### Step 3: Implementing the Program to Call these Functions
+In `main`, allow the user to guess up to 5 times, and let the user know if they've won the game by guessing all the letters (if they win prior to making 5 guesses, you can exit the loop and the program early!).  
+
+It is a good idea to make the number of guesses (and even the number of letters in the word) customizable in case you change your mind later.  Make sure that your parameter values (for example, 5 guesses, 5 letter words, and the probability of selecting a word from the dictionary file) are all variables or function parameters so that they can be customized easily.
 
 ## Part 2: Unit Tests
 
