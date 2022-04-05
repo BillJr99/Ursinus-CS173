@@ -712,10 +712,7 @@ schedule:
   - dtitle: "Lab: Words with Classmates Handed Out"
     dlink: "Labs/Words"  
     points: 100
-    rubricpath: "_pages/Labs/Strings/lab-words.md"
-  - dtitle: "Lab: Ethical Case Studies Handed Out"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100    
+    rubricpath: "_pages/Labs/Strings/lab-words.md"   
 - week: "11"
   date: "2"
   title: "Arrays"    
@@ -756,22 +753,13 @@ schedule:
   - dtitle: "Exercise: Problets - Array"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"
-  - dtitle: "Lab: Words with Classmates Due"
-    dlink: "Labs/Words"  
-    points: 100
-    rubricpath: "_pages/Labs/Strings/lab-words.md"            
+    submission_types: "written"           
 - week: "12"
   date: "1"
-  title: "Lab: Drop the Lowest"
+  title: "Lab: Words with Classmates Continued"
   readings:
   - rtitle: "Horstmann Ch. 6.3"
-    rlink: false
-  deliverables:
-  - dtitle: "Lab: Drop the Lowest Handed Out"
-    dlink: "Labs/DropLowest"
-    points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
+    rlink: false    
 - week: "12"
   date: "2"  
   title: "2D Arrays"
@@ -793,11 +781,7 @@ schedule:
   - dtitle: "Exercise: Iteration Revisited"
     dlink: "Modules/Iteration/Exercise2"
     points: 3    
-    submission_types: "noupload"
-  - dtitle: "Lab: Drop the Lowest Due"
-    dlink: "Labs/DropLowest"
-    points: 100
-    rubricpath: "_pages/Labs/Searching/lab-droplow.md"    
+    submission_types: "noupload"  
   readings:
   - rtitle: "Runestone Ch. 4.4 through 4.5 - Nested Loops and Loop Analysis"
     rlink: false
@@ -826,6 +810,10 @@ schedule:
   date: "1"
   title: "Lab: 2D Arrays"
   deliverables:
+  - dtitle: "Lab: Words with Classmates Due"
+    dlink: "Labs/Words"  
+    points: 100
+    rubricpath: "_pages/Labs/Strings/lab-words.md" 
   - dtitle: "Lab: 2D Treasure Hunt Handed Out"
     dlink: "Labs/TreasureHunt"
     points: 100  
@@ -850,20 +838,11 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
-    points: 100     
-  - dtitle: "Lab: Ethical Case Studies Due"
-    dlink: "Labs/EthicalConsiderations"      
-    points: 100  
-    submission_types: "written"     
+    points: 100        
 - week: "14"
   date: "0"
   title: "Classes and Object Data Types" 
   link: "Activities/Classes"    
-  deliverables:
-  - dtitle: "Lab: 2D Treasure Hunt Due"
-    dlink: "Labs/TreasureHunt"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"  
   readings:
   - rtitle: "Horstmann Ch. 8"
     rlink: false  
@@ -873,7 +852,7 @@ schedule:
     rlink: false
 - week: "14"
   date: "1"
-  title: "Lab: Ethical Case Studies"  
+  title: "Lab: Treasure Hunt Continued"  
   deliverables: 
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
@@ -918,7 +897,11 @@ schedule:
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
     points: 3      
-    submission_types: "noupload"     
+    submission_types: "noupload"  
+  - dtitle: "Lab: 2D Treasure Hunt Due"
+    dlink: "Labs/TreasureHunt"
+    points: 100  
+    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"  
 - week: "15"
   date: "1"
   title: "Algorithms: Recursion" 
