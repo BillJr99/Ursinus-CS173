@@ -78,7 +78,7 @@ Print out five asterisk ("\*") characters to the screen to represent that the wo
 
 Thus, if the secret word is `SAUCE`, and the user guesses `SIREN`, you would print `S**e*`, because the `S` in `SIREN` is in the correct position in the secret word `SAUCE`, but there is no `I`, `R`, or `N` in `SAUCE`, so asterisks would be printed in those positions, and the lower-case `e` gets printed in its position in the word `SIREN`, but in lower-case to indicate that it belongs somewhere else in the secret word.
 
-Allow the user to guess up to 5 times.  
+Allow the user to guess up to 5 times.  However, it is a good idea to make the number of guesses (and even the number of letters in the word) customizable in case you change your mind later.  Make sure that your parameter values (for example, 5 guesses, 5 letter words, and the probability of selecting a word from the dictionary file) are all variables or function parameters so that they can be customized easily.
 
 ## Part 2: Unit Tests
 
