@@ -48,9 +48,12 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions 
   readings:
     - rtitle: "File I/O Activity and Examples"
-      rlink: "../Activities/FileIO"    
+      rlink: "../Activities/FileIO"   
+    - rtitle: "String Javadoc Reference"
+      rlink: "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
   questions:
     - "What functions do you need to write to solve this problem?  Before you begin, sketch them out first on paper or in a text file, and describe which functions you would call from <code>main</code> and in what order."
+    - "What <code>String</code> functions can you use to help you solve this problem more easily?"
     
 tags:
   - strings
@@ -61,19 +64,17 @@ In this lab, you will manipulate `String`s by playing a game we will call "Words
 
 ## Part 1: The Program
 
-We provide a [dictionary file](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) that you can download into your project and read into a series of `String` variables, one line at a time.  [Read the dictionary file](../Activities/FileIO), one line at a time, and, for each word, if it is exactly 5 letters in length, use a random number generator to flip a coin and randomly select it with some probability.  If you get to the end of the file and haven't returned a word yet, return the last 5 letter word that you found.  Let's call this word your *secret word*.  You may wish to convert this `String` to an upper-case `String` to facilitate our comparisons later.
+### Step 1: Choosing a Secret 5-Letter Word from a Dictionary
+We provide a [dictionary file](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) that you can download into your project and read into a series of `String` variables, one line at a time.  [Read the dictionary file](../Activities/FileIO), one line at a time, and, for each word, if it is exactly 5 letters in length, use a random number generator to flip a coin and randomly select it with some probability.  If you get to the end of the file and haven't returned a word yet, return any 5 letter word that you found.  Let's call this word your *secret word*.  You may wish to convert this `String` to an upper-case `String` to facilitate our comparisons later.
 
+### Step 2: Comparing a User-Entered Guess to the Secret Word
 Print out five asterisk ("\*") characters to the screen to represent that the word has not yet been solved.  Give the player an opportunity to type in a 5-letter word as their guess.  For each letter in your guess, if the corresponding letter in the secret word is the correct letter and in the correct position in the secret word, print that correct letter to the screen in upper-case.  If the letter is in the secret word but not in the correct position as given in the guess, print this letter in lower-case.  If the letter is not in the secret word at all, print an asterisk.
 
 Thus, if the secret word is `SAUCE`, and the user guesses `SIREN`, you would print `S**e*`, because the `S` in `SIREN` is in the correct position in the secret word `SAUCE`, but there is no `I`, `R`, or `N` in `SAUCE`, so asterisks would be printed in those positions, and the lower-case `e` gets printed in its position in the word `SIREN`, but in lower-case to indicate that it belongs somewhere else in the secret word.
 
 Allow the user to guess up to 5 times.  
 
-## Part 2: Customizing the Rules
-
-Change the input variables to make your own rules to the game.  For example, perhaps you can use 6 letter words, or 6 letter guesses.  The best way to do this is to make sure that your parameter values (for example, 5 guesses, 5 letter words, and the probability of selecting a word from the dictionary file) are all variables or function parameters so that they can be customized easily.
-
-## Part 3: Unit Tests
+## Part 2: Unit Tests
 
 Add appropriate unit tests for all non-main functions that you write, and ensure that they pass!
 
