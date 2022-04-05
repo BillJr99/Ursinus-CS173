@@ -67,6 +67,12 @@ In this lab, you will manipulate `String`s by playing a game we will call "Words
 ### Step 1: Choosing a Secret 5-Letter Word from a Dictionary
 We provide a [dictionary file](https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt) that you can download into your project and read into a series of `String` variables, one line at a time.  [Read the dictionary file](../Activities/FileIO), one line at a time, and, for each word, if it is exactly 5 letters in length, use a random number generator to flip a coin and randomly select it with some probability.  If you get to the end of the file and haven't returned a word yet, return any 5 letter word that you found.  Let's call this word your *secret word*.  You may wish to convert this `String` to an upper-case `String` to facilitate our comparisons later.
 
+#### Adding a File to your Project
+
+When you save the dictionary file to your computer, you can go to NetBeans and choose the `File -> Open File` menu.  Choose the dictionary file.  If you then go to the `File -> Save As` menu, you can navigate to and double click on your project directory (this directory might be in your user home directory under a directory called `NetBeansProjects`).  After double clicking on your project directory, save your file under your project directory.  You can then open your file using the code below, and [read the file](../Activities/FileIO) as you normally would.
+
+`File f = new File("words_alpha.txt");`
+
 ### Step 2: Comparing a User-Entered Guess to the Secret Word
 Print out five asterisk ("\*") characters to the screen to represent that the word has not yet been solved.  Give the player an opportunity to type in a 5-letter word as their guess.  For each letter in your guess, if the corresponding letter in the secret word is the correct letter and in the correct position in the secret word, print that correct letter to the screen in upper-case.  If the letter is in the secret word but not in the correct position as given in the guess, print this letter in lower-case.  If the letter is not in the secret word at all, print an asterisk.
 
@@ -77,12 +83,6 @@ Allow the user to guess up to 5 times.
 ## Part 2: Unit Tests
 
 Add appropriate unit tests for all non-main functions that you write, and ensure that they pass!
-
-### Adding a File to your Project
-
-When you save the dictionary file to your computer, you can go to NetBeans and choose the `File -> Open File` menu.  Choose the dictionary file.  If you then go to the `File -> Save As` menu, you can navigate to and double click on your project directory (this directory might be in your user home directory under a directory called `NetBeansProjects`).  After double clicking on your project directory, save your file under your project directory.  You can then open your file using the code below, and [read the file](../Activities/FileIO) as you normally would.
-
-`File f = new File("words_alpha.txt");`
 
 ## Finishing Touches and Writeup 
 
