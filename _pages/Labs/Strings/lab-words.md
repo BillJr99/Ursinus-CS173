@@ -80,6 +80,9 @@ Thus, if the secret word is `SAUCE`, and the user guesses `SIREN`, you would pri
 
 Return `true` if the user has won the game by guessing all 5 letters in the correct position, and `false` otherwise.
 
+#### Hints about the Approach
+Consider writing a function `checkGuess` that accepts a `String` parameter representing your guess, and a `String` parameter representing the secret word.  For each character, if they match, you can append that uppercase character to your result `String`.  If they don't match, check if `secret.contains(guess.substring(i, i+1))`, which will tell you if the current guess letter exists within the secret word.  Since you have already checked whether they match in the current position, you now know that the character is osmewhere in the secret word, but not in the correct position!  Output a lowercase character here.  Otherwise, you can putput an asterisk to indicate that the current guess letter isn't in the secret word.
+
 ### Step 3: Implementing the Program to Call these Functions
 In `main`, allow the user to guess up to 5 times, and let the user know if they've won the game by guessing all the letters (if they win prior to making 5 guesses, you can exit the loop and the program early!).  
 
