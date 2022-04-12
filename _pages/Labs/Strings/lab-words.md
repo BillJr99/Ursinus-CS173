@@ -92,6 +92,10 @@ It is a good idea to make the number of guesses (and even the number of letters 
 
 Add appropriate unit tests for all non-main functions that you write, and ensure that they pass!
 
+## Extra Credit (10%): Color Coding the Output
+
+Feel free to look up how to print in color - correct positions in green, incorrect positions in yellow, and missing letters in any color you'd like!
+
 ## Finishing Touches and Writeup 
 
 Don't forget to test your program with several different inputs to help verify that things work the way you expect!  Think in terms of trying to break your program; if it's really hard to "trick" your program into getting the wrong answer, you've probably done a good job making your code robust.  
