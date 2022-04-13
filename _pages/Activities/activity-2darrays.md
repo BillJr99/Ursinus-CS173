@@ -8,6 +8,8 @@ info:
   goals: 
     - To be able to create, access, and iterate a 2D array
 
+  warmup: "What does the <code>ArrayList.add()</code> function return?  How does this differ from most <code>String</code> operations, and why?"
+  
   models:
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
