@@ -768,20 +768,10 @@ schedule:
   - rtitle: "Horstmann Ch. 6.7"
     rlink: false
   - rtitle: "Runestone Ch. 8.1 - 2D Arrays"
-    rlink: false
-  deliverables:
-  - dtitle: "Exercise: Four-in-a-Row"
-    dlink: "Modules/FourInARow/Exercise"  
-    points: 3
-    submission_types: "noupload"   
+    rlink: false 
 - week: "12"
   date: "3"
-  title: "2D Arrays" 
-  deliverables:
-  - dtitle: "Exercise: Iteration Revisited"
-    dlink: "Modules/Iteration/Exercise2"
-    points: 3    
-    submission_types: "noupload"  
+  title: "2D Arrays"  
   readings:
   - rtitle: "Runestone Ch. 4.4 through 4.5 - Nested Loops and Loop Analysis"
     rlink: false
@@ -814,6 +804,10 @@ schedule:
     dlink: "Labs/Words"  
     points: 100
     rubricpath: "_pages/Labs/Strings/lab-words.md" 
+  - dtitle: "Exercise: Iteration Revisited"
+    dlink: "Modules/Iteration/Exercise2"
+    points: 3    
+    submission_types: "noupload" 
   - dtitle: "Lab: 2D Treasure Hunt Handed Out"
     dlink: "Labs/TreasureHunt"
     points: 100  
@@ -838,7 +832,11 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
-    points: 100        
+    points: 100    
+  - dtitle: "Exercise: Four-in-a-Row"
+    dlink: "Modules/FourInARow/Exercise"  
+    points: 3
+    submission_types: "noupload"  
 - week: "14"
   date: "0"
   title: "Classes and Object Data Types" 
