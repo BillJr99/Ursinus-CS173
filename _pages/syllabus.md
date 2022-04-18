@@ -784,10 +784,6 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "written" 
-  - dtitle: "Quiz: Arrays"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_arrays.zip"
   - dtitle: "Programming Assignment: Guitar String Synthesis Due"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100   
@@ -903,11 +899,7 @@ schedule:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
     points: 100 
-    rubricpath: "_pages/Assignments/Arrays/asmt-iris.md" 
-  - dtitle: "Quiz: Classes and Algorithms"
-    dlink: false
-    points: 40    
-    qtizippath: "_pages/Quizzes/qti_classesandalgorithms.zip"                  
+    rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"                
   - dtitle: "Final Project: Project and Presentation Due"
     dlink: "Projects/Final"    
     points: 100  
