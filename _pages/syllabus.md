@@ -810,13 +810,7 @@ schedule:
     submission_types: "noupload"        
 - week: "13"
   date: "2"
-  title: "Algorithms: Searching" 
-  link: "Activities/Searching"   
-  readings:
-  - rtitle: "Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10"
-    rlink: false
-  - rtitle: "Searching Module"
-    rlink: "Modules/Search/Module"  
+  title: "Arrays Workshop"  
   deliverables:
   - dtitle: "Exercise: ArrayLists"
     dlink: "Modules/ArrayLists/Module"    
@@ -825,6 +819,12 @@ schedule:
 - week: "13"
   date: "3" 
   title: "Algorithms: Searching"
+  link: "Activities/Searching"   
+  readings:
+  - rtitle: "Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10"
+    rlink: false
+  - rtitle: "Searching Module"
+    rlink: "Modules/Search/Module" 
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
