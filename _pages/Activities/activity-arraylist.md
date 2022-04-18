@@ -49,6 +49,8 @@ info:
         - What would be the effect of creating an <code>ArrayList</code> that stored another <code>ArrayList</code>?
         - What is the size of the <code>ArrayList</code> prior to calling <code>remove()</code>?  What is the size after the call?
         - Suppose a friend needed to remove every other element from an <code>ArrayList</code> (say, the ones with an even numbered index).  Looping for <code>i = 0</code> to <code>arr.size()</code>, they remove each element if <code>(i % 2 == 0)</code> but the wrong elements seem to be removed.  What happened, and what can we do instead?
+        - "Rewrite this line of code as an enhanced <code>for</code> loop: <code>for(int i = 0; i < arr.size(); i++) {</code>"
+        - "How might you create an <code>ArrayList</code> of integers or floating point values?"
         
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-3-arrays-with-foreach.html 
