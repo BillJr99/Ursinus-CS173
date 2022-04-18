@@ -1236,7 +1236,7 @@ DTSTAMP:20220420T000000Z
 DTSTART;VALUE=DATE:20220420
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module\nDeliverable: Exercise: ArrayLists https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/ArrayLists/Module
+DESCRIPTION:\nDeliverable: Exercise: ArrayLists https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/ArrayLists/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1263,7 +1263,7 @@ DTSTAMP:20220422T000000Z
 DTSTART;VALUE=DATE:20220422
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
