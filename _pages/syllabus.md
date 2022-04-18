@@ -798,7 +798,7 @@ schedule:
     rubricpath: "_pages/Assignments/2DArrays/asmt-asciiart.md"     
 - week: "13"
   date: "1"
-  title: "Lab: 2D Arrays"
+  title: "Workshop: ASCII Art Assignment"
   deliverables:
   - dtitle: "Lab: Words with Classmates Due"
     dlink: "Labs/Words"  
@@ -807,11 +807,7 @@ schedule:
   - dtitle: "Exercise: Iteration Revisited"
     dlink: "Modules/Iteration/Exercise2"
     points: 3    
-    submission_types: "noupload" 
-  - dtitle: "Lab: 2D Treasure Hunt Handed Out"
-    dlink: "Labs/TreasureHunt"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"        
+    submission_types: "noupload"        
 - week: "13"
   date: "2"
   title: "Algorithms: Searching" 
@@ -850,7 +846,7 @@ schedule:
     rlink: false
 - week: "14"
   date: "1"
-  title: "Lab: Treasure Hunt Continued"  
+  title: "Workshop: Iris Dataset Assignment"  
   deliverables: 
   - dtitle: "Programming Assignment: ASCII Art Due"
     dlink: "Assignments/ASCIIArt" 
@@ -896,10 +892,6 @@ schedule:
     dlink: "Modules/Recursion/Module"
     points: 3      
     submission_types: "noupload"  
-  - dtitle: "Lab: 2D Treasure Hunt Due"
-    dlink: "Labs/TreasureHunt"
-    points: 100  
-    rubricpath: "_pages/Labs/2DArrays/lab-treasurehunt.md"  
 - week: "15"
   date: "1"
   title: "Algorithms: Recursion" 
