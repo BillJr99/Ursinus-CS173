@@ -24,9 +24,9 @@ processor:
     ans[0] === "1" && ans[1] === "2"
   incorrectchecks:
     - incorrectcheck: |
-        ans[0] === "2" && ans[1] === "0"
+      ans[0] === "2" && ans[1] === "0"
       feedback: "Try again: You might want to use the absolute value of the difference, and only update the index and value if it is less than or equal to the target key!"
-     - incorrectcheck: |
+    - incorrectcheck: |
       ans[0] === "5" && ans[1] === "2"
       feedback: "Try again: You might want to use the absolute value of the difference!"
       
