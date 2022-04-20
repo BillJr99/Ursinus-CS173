@@ -814,13 +814,7 @@ schedule:
     submission_types: "noupload"    
 - week: "13"
   date: "3" 
-  title: "Algorithms: Searching"
-  link: "Activities/Searching"   
-  readings:
-  - rtitle: "Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10"
-    rlink: false
-  - rtitle: "Searching Module"
-    rlink: "Modules/Search/Module" 
+  title: "Arrays Workshop"  
   deliverables:
   - dtitle: "Final Project: Project and Presentation Handed Out"
     dlink: "Projects/Final"    
@@ -831,15 +825,13 @@ schedule:
     submission_types: "noupload"  
 - week: "14"
   date: "0"
-  title: "Classes and Object Data Types" 
-  link: "Activities/Classes"    
+  title: "Algorithms: Searching"
+  link: "Activities/Searching"   
   readings:
-  - rtitle: "Horstmann Ch. 8"
-    rlink: false  
-  - rtitle: "Runestone Ch. 5.1 - Anatomy of a Java Class"
+  - rtitle: "Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10"
     rlink: false
-  - rtitle: "Runestone Ch. 2.8 - Wrapper Classes"
-    rlink: false
+  - rtitle: "Searching Module"
+    rlink: "Modules/Search/Module" 
 - week: "14"
   date: "1"
   title: "Workshop: Iris Dataset Assignment"  
@@ -854,8 +846,15 @@ schedule:
     rubricpath: "_pages/Assignments/Arrays/asmt-iris.md"     
 - week: "14"
   date: "2"
-  title: "Classes and Object Data Types"  
+  title: "Classes and Object Data Types" 
+  link: "Activities/Classes"    
   readings:
+  - rtitle: "Horstmann Ch. 8"
+    rlink: false  
+  - rtitle: "Runestone Ch. 5.1 - Anatomy of a Java Class"
+    rlink: false
+  - rtitle: "Runestone Ch. 2.8 - Wrapper Classes"
+    rlink: false
   - rtitle: "Runestone Ch. 5.2, 5.4, 5.5, and 5.7 - Constructors, Accessors, Mutators, and Static Methods and Variables"
     rlink: false
   deliverables:
