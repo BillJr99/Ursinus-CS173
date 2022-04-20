@@ -1254,7 +1254,7 @@ DTSTAMP:20220422T000000Z
 DTSTART;VALUE=DATE:20220422
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
+DESCRIPTION:\nDeliverable: Final Project: Project and Presentation Handed Out https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final\nDeliverable: Exercise: Four-in-a-Row https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/FourInARow/Exercise
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1263,7 +1263,7 @@ DTSTAMP:20220425T000000Z
 DTSTART;VALUE=DATE:20220425
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Classes\nReading: Horstmann Ch. 8\nReading: Runestone Ch. 5.1 - Anatomy of a Java Class\nReading: Runestone Ch. 2.8 - Wrapper Classes
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Searching\nReading: Horstmann Ch. 6.3.3, 6.3.5, and 6.3.10\nReading: Searching Module https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Search/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1308,7 +1308,7 @@ DTSTAMP:20220427T000000Z
 DTSTART;VALUE=DATE:20220427
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nReading: Runestone Ch. 5.2, 5.4, 5.5, and 5.7 - Constructors, Accessors, Mutators, and Static Methods and Variables\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/InsertionSort/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Classes\nReading: Horstmann Ch. 8\nReading: Runestone Ch. 5.1 - Anatomy of a Java Class\nReading: Runestone Ch. 2.8 - Wrapper Classes\nReading: Runestone Ch. 5.2, 5.4, 5.5, and 5.7 - Constructors, Accessors, Mutators, and Static Methods and Variables\nDeliverable: Exercise: Insertion Sort https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/InsertionSort/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
