@@ -252,34 +252,32 @@ body {
      */
     function postCode(vpnwarn, halfcredit, submitcode) {
         <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
-        {% if layout.formprocessor and layout.formprocessor != false %}        
-        var xhttp = new XMLHttpRequest();
-        xhttp.onerror = function(e){
-            if (vpnwarn) {
-                alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+        {% if layout.formprocessor and layout.formprocessor != false %}   
+        fetch('{{ layout.formprocessor | strip }}', {
+            method: 'POST',
+            headers: {
+                "Content-type": "{{ layout.enctype | strip }}"
             }
-        };
-
-        xhttp.open("POST", "{{ layout.formprocessor | strip }}", true)
-        xhttp.setRequestHeader("Content-type", "{{ layout.enctype | strip }}");
-        
-        var formdata = new FormData();
-        formdata.append("facultyemail", "{{ layout.facultyemail | strip }}"); // required
-        formdata.append("magic", "ursinus"); // required
-        formdata.append("title", "{{ page.title | strip }}"); // required
-        formdata.append("studentnetid", document.getElementById("studentnetid").value); //required
-        formdata.append("code", submitcode);
-        {% if page.canvasasmtid %}
-        formdata.append("canvasasmtid", "{{page.canvasasmtid}}");
-        {% endif %}
-        {% if page.canvaspoints %}
-        formdata.append("canvaspoints", "{{page.canvaspoints}}");
-        {% endif %}
-        if (halfcredit) {
-            formdata.append("canvashalfcredit", true);
-        }
-        
-        xhttp.send(urlencodeFormData(formdata));                    
+            body: new URLSearchParams({
+                'facultyemail': '{{ layout.facultyemail | strip }}', // required
+                'magic': 'ursinus', // required
+                'title': '{{ page.title | strip }}', // required
+                'studentnetid': document.getElementById("studentnetid").value, //required
+                'code': submitcode{% if page.canvasasmtid %},
+                'canvasasmtid': "{{page.canvasasmtid}}"
+                {% endif %}{% if page.canvaspoints %},
+                'canvaspoints': "{{page.canvaspoints}}"
+                {% endif %},
+                'canvashalfcredit': halfcredit
+            }).then(response => response.json()).then(data => {
+                console.log('Success:', data);
+            }).catch(error => {
+                console.log(error);
+                if (vpnwarn) {
+                    alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+                }                
+            });
+        });
         {% endif %}
     }
     
