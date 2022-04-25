@@ -2,7 +2,6 @@
 layout: default
 
 formprocessor: "https://mathcs.ursinus.edu:8085/"
-enctype: "application/x-www-form-urlencoded"
 facultyemail: "wmongan@ursinus.edu"
 
 formprocessordirections: "Clicking Run below will check your work and, if it passes, will submit your work automatically. <strong>You must be connected to the VPN for submission to be successful!  You will receive a copy of your code via e-mail, so you'll know that it was submitted if you receive that e-mail!</strong>  VPN access requires Multi-Factor Authentication, which sends you a code when you log into the network.  Instructions on configuring these for your account can be found <a href=\"https://www.ursinus.edu/offices/information-technology/technology-support/hardware-and-software-help/remote-connections-and-vpn/\">here</a>."
@@ -272,15 +271,10 @@ body {
         
         fetch('{{ layout.formprocessor | strip }}', {
             method: 'POST',
-            headers: {
-                "Content-type": "{{ layout.enctype | strip }}"
-            },
-            body: new URLSearchParams(postbody)
+            body: new URLSearchParams(postbody) // URL encoding
         }).then((response) => {
             if(response.ok) {
-                var respjson = response.json();
-                console.log("Success: " + respjson);
-                return respjson;
+                return response;
             } else {
                 if (vpnwarn) {
                     alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
