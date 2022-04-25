@@ -269,22 +269,20 @@ body {
             postbody['canvashalfcredit'] = true;
         }
         
-        try {
-            fetch('{{ layout.formprocessor | strip }}', {
-                method: 'POST',
-                body: new URLSearchParams(postbody) // URL encoding
-            }).then((response) => {
-                if(response.ok) {
-                    return response;
-                } else {
-                    throw new Error("Failed to fetch.");
-                }
-            });
-        } catch(err) {
+        fetch('{{ layout.formprocessor | strip }}', {
+            method: 'POST',
+            body: new URLSearchParams(postbody) // URL encoding
+        }).then((response) => {
+            if(response.ok) {
+                return response;
+            } else {
+                throw new Error("Failed to fetch.");
+            }
+        }).catch(function(error) {
             if (vpnwarn) {
                 alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
-            }         
-        }
+            }                     
+        });
         {% endif %}
     }
     
