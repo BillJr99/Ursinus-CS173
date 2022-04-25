@@ -167,7 +167,7 @@ body {
         <div id="correctArea"></div>
         
         <p>
-        <strong>Enter your Ursinus netid before clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit).</strong> 
+        <strong>Enter your Ursinus netid, and run your code in the console at the bottom of the page <strong>before</strong> clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit).</strong> 
         </p>
         
         <table>
@@ -190,7 +190,7 @@ body {
         
         <button type = "button" onclick = "if(document.getElementById('studentnetid').value.length > 0) checkCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your netid first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
 
-        <canvas id="pscanvas" height="20px"></canvas>
+        <br><br>
         
         <!-- webR Terminal Area -->
         <div class="main dispbox">
@@ -284,7 +284,9 @@ body {
     }
     
     function checkCode() {
-        try {            
+        try {        
+            // get code and output from the terminal, and separate them.
+            // code starts with ">", and output starts with "["
             let feedbackString = ''; 
             let code = ''; 
             
@@ -293,8 +295,9 @@ body {
             for(var i = 0; i < outputlines.length; i++) {
                 if(outputlines[i].startsWith("> ")) { // the prompt
                     code += outputlines[i] + "\n";
-                } else {
-                    feedbackString += outputlines[i] + "\n";
+                } else if(outputlines[i].startsWith("[")) {
+                    outputline = outputlines[i].substring(outputlines[i].indexOf(" ")+1); // strip off the output line number heading
+                    feedbackString += outputline + "\n";
                 }
             }
             
