@@ -278,8 +278,9 @@ body {
             body: new URLSearchParams(postbody)
         }).then((response) => {
             if(response.ok) {
-                console.log("Success: " + response.json());
-                return response.json();
+                var respjson = response.json();
+                console.log("Success: " + respjson);
+                return respjson;
             } else {
                 if (vpnwarn) {
                     alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
