@@ -6,7 +6,7 @@ excerpt: "CS173: Intro to Computer Science - R"
 
 info:
   points: 0
-  instructions: "Modify the R.java file to print Hello World to yourself."
+  instructions: "Modify the R.java file to print Hello World to yourself, without any punctuation or additional output."
   goals:
     - To write a program using the R programming language
   
@@ -30,6 +30,7 @@ files:
     isvisible: true
     code: | 
         print("Hello, world!")
+        print(rnorm(100))
         
 ---
 
