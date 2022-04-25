@@ -1,6 +1,6 @@
 ---
 layout: exercise-r
-permalink: /Modules/RTutorial/Exercise
+permalink: /Modules/R/TutorialExercise
 title: "CS173: Intro to Computer Science - R"
 excerpt: "CS173: Intro to Computer Science - R"
 
@@ -32,3 +32,5 @@ files:
         print("Hello, world!")
         
 ---
+
+<!-- Note: R Module Permalinks must be /Modules/R/ so that resources load -->
