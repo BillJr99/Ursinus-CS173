@@ -1,6 +1,6 @@
 ---
 layout: exercise-r
-permalink: /Modules/R/TutorialExercise
+permalink: /assets/js/R/TutorialExercise
 title: "CS173: Intro to Computer Science - R"
 excerpt: "CS173: Intro to Computer Science - R"
 
@@ -33,12 +33,4 @@ files:
         
 ---
 
-<!-- Note: R Module Permalinks must be /Modules/R/ so that resources load
-     with the following _config.yml directive:
-
-        defaults:
-          - scope:
-              path: '_pages/Modules/R/'
-            values:
-              permalink: /Modules/R/
--->
+<!-- was /Modules/R/TutorialExercise -->
