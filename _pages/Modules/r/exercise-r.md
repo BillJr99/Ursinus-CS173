@@ -18,9 +18,9 @@ processor:
   incorrectfeedback: "Try again"
   submitformlink: false
   feedbackprocess: | 
-    var pos = feedbackString;
+    var pos = feedbackString.trim();
   correctcheck: |
-    pos.trim().includes("Hello World")
+    pos.includes("Hello World")
         
 ---
 

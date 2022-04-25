@@ -38,7 +38,7 @@ files:
     isreadonly: false
     isvisible: true
     code: | 
-        #include &ltstdio.h&gt
+        #include <stdio.h>
 
         // TODO: Fill in your printDivisibleBy6() method here
 

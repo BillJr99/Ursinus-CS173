@@ -221,6 +221,8 @@ mynetid: wmongan
                 submitcode += "\n\n";
             }
             submitcode += mainEditor.getValue() + "\n\n";
+            //submitcode = submitcode.replace("&lt;", "<");
+            //submitcode = submitcode.replace("&gt;", ">");
             
             var xhttp = new XMLHttpRequest();
             xhttp.onerror = function(e){
