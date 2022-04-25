@@ -167,7 +167,7 @@ body {
         <div id="correctArea"></div>
         
         <p>
-        <strong>Enter your Ursinus netid, and run your code in the console at the bottom of the page <strong>before</strong> clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit).</strong> 
+        <strong>Enter your Ursinus netid, and run your code in the console at the bottom of the page <u>before</u> clicking run.  This is <u>not</u> your ID number or your email.  For example, my netid is <code>{{layout.mynetid}}</code> (non Ursinus students can simply enter their name to get this to run, but they won't get an e-mail record or any form of credit).</strong> 
         </p>
         
         <table>
@@ -274,16 +274,15 @@ body {
             method: 'POST',
             headers: {
                 "Content-type": "{{ layout.enctype | strip }}"
-            }
+            },
             body: new URLSearchParams(postbody)
-            .then(response => response.json()).then(data => {
-                console.log('Success:', data);
-            }).catch(error => {
-                console.log(error);
-                if (vpnwarn) {
-                    alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
-                }                
-            });
+        }).then(response => response.json()).then(data => {
+            console.log('Success:', data);
+        }).catch(error => {
+            console.log(error);
+            if (vpnwarn) {
+                alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+            }                
         });
         {% endif %}
     }
