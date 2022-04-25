@@ -276,15 +276,15 @@ body {
                 "Content-type": "{{ layout.enctype | strip }}"
             },
             body: new URLSearchParams(postbody)
-        }).then(response => response.json()).then(data => {
-            console.log('Success:', data);
-        }).catch(error => {
-            error.text().then( errorMessage => {
-                console.log(errorMessage);
+        }).then((response) => {
+            if(response.ok) {
+                console.log("Success: " + response.json());
+                return response.json();
+            } else {
                 if (vpnwarn) {
                     alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
                 } 
-            })
+            }
         });
         {% endif %}
     }
