@@ -224,6 +224,8 @@ mynetid: wmongan
             submitcode = submitcode.replace("&lt", "<");
             submitcode = submitcode.replace("&gt", ">");
             
+            console.log(submitcode);
+            
             var xhttp = new XMLHttpRequest();
             xhttp.onerror = function(e){
                 if (vpnwarn) {
