@@ -33,4 +33,12 @@ files:
         
 ---
 
-<!-- Note: R Module Permalinks must be /Modules/R/ so that resources load -->
+<!-- Note: R Module Permalinks must be /Modules/R/ so that resources load
+     with the following _config.yml directive:
+
+        defaults:
+          - scope:
+              path: '_pages/Modules/R/'
+            values:
+              permalink: /Modules/R/
+-->

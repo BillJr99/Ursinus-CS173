@@ -23,3 +23,8 @@ include:
   - _pages
   - files
 
+defaults:
+  - scope:
+      path: '_pages/Modules/R/'
+    values:
+      permalink: /Modules/R/
