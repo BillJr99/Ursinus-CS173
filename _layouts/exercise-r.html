@@ -333,7 +333,7 @@ body {
         }
         catch(err) {
             correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
-            console.log("Error: " + err.message);
+            console.log("Error: " + err.message + "\n\n" + err.stack);
         }
 
         {% if page.canvashalftries %}
