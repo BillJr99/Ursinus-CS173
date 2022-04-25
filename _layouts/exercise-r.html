@@ -190,6 +190,8 @@ body {
         
         <button type = "button" onclick = "if(document.getElementById('studentnetid').value.length > 0) checkCode(); else correctArea.innerHTML = '<h3><font color = #AA0000>Please enter your netid first!</font></h3>';" id="runbutton" disabled>▶ Run</button>
 
+        <canvas id="pscanvas" height="20px"></canvas>
+        
         <!-- webR Terminal Area -->
         <div class="main dispbox">
             <div id='term' class="box"></div>
@@ -296,6 +298,10 @@ body {
                 }
             }
             
+            console.log("Code:\n\n" + code);
+            console.log("\n\n");
+            console.log("Output Feedback String:\n\n" + feedbackString);
+            
             numAttempts++;
             
             document.getElementById("feedbackText").innerText = "";            
@@ -327,7 +333,7 @@ body {
         }
         catch(err) {
             correctArea.innerHTML = "<h3><font color = red>{{ page.processor.incorrectfeedback | strip }}</font></h3>";
-            feedback.setValue("Error: " + err.message);
+            console.log("Error: " + err.message);
         }
 
         {% if page.canvashalftries %}
