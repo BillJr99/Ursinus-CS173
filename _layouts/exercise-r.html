@@ -253,23 +253,30 @@ body {
     function postCode(vpnwarn, halfcredit, submitcode) {
         <!-- Setting a layout.formprocessor will send a POST request to a form processor -->
         {% if layout.formprocessor and layout.formprocessor != false %}   
+        var postbody = {
+                'facultyemail': '{{ layout.facultyemail | strip }}', // required
+                'magic': 'ursinus', // required
+                'title': '{{ page.title | strip }}', // required
+                'studentnetid': document.getElementById("studentnetid").value, //required
+                'code': submitcode
+        }; 
+        {% if page.canvasasmtid %}
+        postbody['canvasasmtid'] = "{{page.canvasasmtid}}";
+        {% endif %}
+        {% if page.canvaspoints %},
+        postbody['canvaspoints'] = "{{page.canvaspoints}}";
+        {% endif %}        
+        if(halfcredit) {
+            postbody['canvashalfcredit'] = true;
+        }
+        
         fetch('{{ layout.formprocessor | strip }}', {
             method: 'POST',
             headers: {
                 "Content-type": "{{ layout.enctype | strip }}"
             }
-            body: new URLSearchParams({
-                'facultyemail': '{{ layout.facultyemail | strip }}', // required
-                'magic': 'ursinus', // required
-                'title': '{{ page.title | strip }}', // required
-                'studentnetid': document.getElementById("studentnetid").value, //required
-                'code': submitcode{% if page.canvasasmtid %},
-                'canvasasmtid': "{{page.canvasasmtid}}"
-                {% endif %}{% if page.canvaspoints %},
-                'canvaspoints': "{{page.canvaspoints}}"
-                {% endif %},
-                'canvashalfcredit': halfcredit
-            }).then(response => response.json()).then(data => {
+            body: new URLSearchParams(postbody)
+            .then(response => response.json()).then(data => {
                 console.log('Success:', data);
             }).catch(error => {
                 console.log(error);
