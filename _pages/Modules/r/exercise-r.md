@@ -20,7 +20,7 @@ processor:
   feedbackprocess: | 
     var pos = feedbackString;
   correctcheck: |
-    pos.trim() === "\"Hello World\""
+    pos.trim().contains("Hello World")
         
 ---
 

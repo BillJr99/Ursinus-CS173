@@ -302,12 +302,9 @@ body {
             }
             
             console.log("Code:\n\n" + code);
-            console.log("\n\n");
             console.log("Output Feedback String:\n\n" + feedbackString);
             
             numAttempts++;
-            
-            document.getElementById("feedbackText").innerText = "";            
             
             {{ page.processor.feedbackprocess | strip }}
             
