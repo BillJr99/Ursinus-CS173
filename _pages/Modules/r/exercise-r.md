@@ -33,4 +33,4 @@ files:
         
 ---
 
-<!-- was /Modules/R/TutorialExercise -->
+<!-- was /Modules/R/TutorialExercise; permalink has to be /assets/js/R/ to allow loading of associated assets from the current directory -->

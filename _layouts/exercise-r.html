@@ -600,6 +600,7 @@ body {
     var webRPromise = loadWebR({
         Rargs: [],
         WEBR_URL: "{{site.baseurl}}/assets/js/R/",
+        PKG_URL: "https://github.com/georgestagg/webr-ports/tree/main/dist", //"https://www.mas.ncl.ac.uk/~ngs54/webR-testing/packages/",
         runtimeInitializedCB: function(){
             FSTree.init();
             term.clear();
