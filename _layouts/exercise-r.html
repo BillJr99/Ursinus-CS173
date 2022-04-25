@@ -269,18 +269,22 @@ body {
             postbody['canvashalfcredit'] = true;
         }
         
-        fetch('{{ layout.formprocessor | strip }}', {
-            method: 'POST',
-            body: new URLSearchParams(postbody) // URL encoding
-        }).then((response) => {
-            if(response.ok) {
-                return response;
-            } else {
-                if (vpnwarn) {
-                    alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
-                } 
-            }
-        });
+        try {
+            fetch('{{ layout.formprocessor | strip }}', {
+                method: 'POST',
+                body: new URLSearchParams(postbody) // URL encoding
+            }).then((response) => {
+                if(response.ok) {
+                    return response;
+                } else {
+                    throw new Error("Failed to fetch.");
+                }
+            });
+        } catch(err) {
+            if (vpnwarn) {
+                alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
+            }         
+        }
         {% endif %}
     }
     
