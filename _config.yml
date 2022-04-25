@@ -25,6 +25,6 @@ include:
 
 defaults:
   - scope:
-      path: '_pages/Modules/R/'
+      path: '_pages/Modules/R'
     values:
       permalink: /Modules/R/
