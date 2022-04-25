@@ -21,16 +21,6 @@ processor:
     var pos = feedbackString;
   correctcheck: |
     pos.trim() === "Hello World"
- 
-files:
-  - filename: "R.java"
-    name: main
-    ismain: true
-    isreadonly: false
-    isvisible: true
-    code: | 
-        print("Hello, world!")
-        print(rnorm(100))
         
 ---
 
