@@ -279,7 +279,7 @@ body {
         }).then(response => response.json()).then(data => {
             console.log('Success:', data);
         }).catch(error => {
-            err.text().then( errorMessage => {
+            error.text().then( errorMessage => {
                 console.log(errorMessage);
                 if (vpnwarn) {
                     alert("Unable to submit.  Are you connected to the VPN?  Please try to submit again!");
