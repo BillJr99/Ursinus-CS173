@@ -498,7 +498,7 @@ body {
         };
     })(window.XMLHttpRequest);
 </script>
-<script type="text/javascript" src="{{site.baseurl}}/assets/js/webR.js"></script>
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/R/webR.js"></script>
 <script>
     var FSTree = {
         jstree: null,
@@ -599,7 +599,7 @@ body {
     };
     var webRPromise = loadWebR({
         Rargs: [],
-        WEBR_URL: "{{site.baseurl}}/Modules/R/",
+        WEBR_URL: "{{site.baseurl}}/assets/js/R/",
         runtimeInitializedCB: function(){
             FSTree.init();
             term.clear();
