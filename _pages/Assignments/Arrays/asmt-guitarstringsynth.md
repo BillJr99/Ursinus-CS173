@@ -299,9 +299,10 @@ public static double[] getPluckedSound(int note, double duration, double decay)
 
 The steps are as follows:
 1. Given a note, find its period `T` to the nearest integer by using your method that computes the period. **You've made a function do to this already, so you should call that function!**
-2. Create an array with enough samples to hold `duration` seconds audio.  How many elements does this array need?  It depends on the duration and the number of samples per second (also known as the sample rate or frequency): **you have both of these!**
+2. Create an array with enough samples to hold `duration` seconds audio.  How many elements does this array need?  It depends on the duration and the number of samples per second (also known as the sample rate or frequency): **you have both of these!  The sample rate is the `FS` variable.  Don't forget to cast this value to an `int` so you can create your array size: if you create an array, the size you provide it must be an integer.**
 3. Fill in the first `T` samples with random noise **using your noise method**.
 4. Process all of the rest of the samples one by one in order, starting at index `T`. Each value should be the average of the two adjacent samples `T` indices back multiplied by a factor of `decay`. For example, if you're at index 150 and your period is 100, you should average samples at indices 50 and 51. This simulates a traveling wave over a string of length `T` that decays and dampens "low frequencies" first, and is referred to as a "digital waveguide."
+5. Watch out for integer division!  If you don't hear a sound when you run, it could be that one of your divisions is rounding down to 0 due to integer division.
 
 For example, if your code works properly, then the following call to your method will play a guitar string at a concert A:
 
