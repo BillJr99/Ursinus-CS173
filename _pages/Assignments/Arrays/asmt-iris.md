@@ -11,7 +11,7 @@ info:
     - To use File I/O to read and process a text file dataset
     - To use arrays to process records of data 
     - To apply mathematical concepts in an algorithm
-    - To tokenize string data using the split() function
+    - "To tokenize string data using the <code>split()</code> function"
   rubric:
     - weight: 60
       description: Algorithm Implementation
