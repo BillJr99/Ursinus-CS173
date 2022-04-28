@@ -878,7 +878,8 @@ schedule:
   deliverables:
   - dtitle: "Final Project: Project Proposal Due"
     dlink: "Projects/Final"    
-    points: 10     
+    points: 10   
+    submission_types: "written"  
 - week: "15"
   date: "0"
   title: "Algorithms: Sorting" 
