@@ -1344,7 +1344,7 @@ DTSTAMP:20220502T000000Z
 DTSTART;VALUE=DATE:20220502
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Recursion/Module
+DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Recursion\nReading: Runestone Ch. 10.1 - Recursion\nDeliverable: Exercise: Recursion https://www.billmongan.com/Ursinus-CS173-Spring2022/Modules/Recursion/Module
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
@@ -1371,7 +1371,7 @@ DTSTAMP:20220503T000000Z
 DTSTART;VALUE=DATE:20220503
 SUMMARY:CS173 Intro to Computer Science: Class Meeting
 LOCATION:
-DESCRIPTION:https://www.billmongan.com/Ursinus-CS173-Spring2022/Activities/Recursion\nReading: Runestone Ch. 10.1 - Recursion\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Iris\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
+DESCRIPTION:\nDeliverable: Programming Assignment: Iris Dataset Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Assignments/Iris\nDeliverable: Final Project: Project and Presentation Due https://www.billmongan.com/Ursinus-CS173-Spring2022/Projects/Final
 PRIORITY:3
 END:VEVENT
 BEGIN:VEVENT
