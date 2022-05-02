@@ -882,7 +882,11 @@ schedule:
     submission_types: "written"  
 - week: "15"
   date: "0"
-  title: "Algorithms: Sorting" 
+  title: "Algorithms: Recursion" 
+  link: "Activities/Recursion"
+  readings:
+  - rtitle: "Runestone Ch. 10.1 - Recursion"
+    rlink: false
   deliverables:
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
@@ -890,11 +894,7 @@ schedule:
     submission_types: "noupload"  
 - week: "15"
   date: "1"
-  title: "Algorithms: Recursion" 
-  link: "Activities/Recursion"
-  readings:
-  - rtitle: "Runestone Ch. 10.1 - Recursion"
-    rlink: false
+  title: "Final Project Group Workshop"
   deliverables:
   - dtitle: "Programming Assignment: Iris Dataset Due"
     dlink: "Assignments/Iris"
