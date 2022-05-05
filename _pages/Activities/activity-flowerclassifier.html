@@ -150,7 +150,7 @@ function updatePlot() {
         b: 0,
         t: 0
       },
-      autosize: true,
+      height: 800,
       scene: {
           xaxis : {
             title : "Petal Length",
@@ -196,7 +196,8 @@ function setup() {
         const sepalLength = parseFloat(document.getElementById('sepalLength').value)
 
         var species = closestSpecies(petalLength, petalWidth, sepalLength);
-        
+
+        const speciesselect = document.getElementById('species')
         var guess = speciesselect.options[speciesselect.selectedIndex].text
         
         if(guess.trim().toLowerCase() === species.trim().toLowerCase()) {
