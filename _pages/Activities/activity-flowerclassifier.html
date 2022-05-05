@@ -150,7 +150,7 @@ function updatePlot() {
         b: 0,
         t: 0
       },
-      height: 800,
+      autosize: true,
       scene: {
           xaxis : {
             title : "Petal Length",
@@ -197,7 +197,7 @@ function setup() {
 
         var species = closestSpecies(petalLength, petalWidth, sepalLength);
         
-        var guess = document.getElementById('guess').value
+        var guess = speciesselect.options[speciesselect.selectedIndex].text
         
         if(guess.trim().toLowerCase() === species.trim().toLowerCase()) {
             alert("You got it right!  It was " + species);
@@ -221,10 +221,7 @@ function setup() {
     </select>
     <br>
     <button id='addbutton' type='button'>Add</button>
-    
-    <hr>
-    Guess the Species: <input id='guess' width=100>
-    <button id='classifybutton' type='button'>Classify</button>
+    <button id='classifybutton' type='button'>Guess</button>
     
     <hr>
     
