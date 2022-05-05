@@ -150,15 +150,18 @@ function updatePlot() {
         b: 0,
         t: 0
       },
-      xaxis : {
-        title : "Petal Length",
-      },
-      yaxis : {
-        title : "Petal Width"
-      },
-      zaxis : {
-        title : "Sepal Length"
-      }};     
+      scene: {
+          xaxis : {
+            title : "Petal Length",
+          },
+          yaxis : {
+            title : "Petal Width"
+          },
+          zaxis : {
+            title : "Sepal Length"
+          }
+      }
+    };     
     Plotly.newPlot('plot1', data, layout);
 }
 
