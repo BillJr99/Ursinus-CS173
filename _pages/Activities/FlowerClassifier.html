@@ -1,0 +1,231 @@
+<html>
+<head>
+	<script src="plotly-2.11.1.min.js"></script>
+</head>
+<script>
+var flowers = {}
+flowers['Virginica'] = {}
+flowers['Versicolor'] = {}
+flowers['Setosa'] = {}
+flowers['Virginica']['petalLength'] = []
+flowers['Virginica']['petalWidth'] = []
+flowers['Virginica']['sepalLength'] = []
+flowers['Versicolor']['petalLength'] = []
+flowers['Versicolor']['petalWidth'] = []
+flowers['Versicolor']['sepalLength'] = []
+flowers['Setosa']['petalLength'] = []
+flowers['Setosa']['petalWidth'] = []
+flowers['Setosa']['sepalLength'] = []
+
+function average(arr) {
+    var sum = 0.0;
+    
+    //alert(arr.length)
+    
+    for(var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    
+    if(arr.length > 0) {
+        return sum / arr.length;
+    } else {
+        return 0;
+    }
+}
+
+function distance(x1, x2, x3, arr1, arr2, arr3) {
+    var mu1 = average(arr1)
+    var mu2 = average(arr2)
+    var mu3 = average(arr3)
+    
+    //alert(mu1)
+    //alert(mu2)
+    //alert(mu3)
+
+    var delta1 = x1 - mu1;
+    var delta2 = x2 - mu2;
+    var delta3 = x3 - mu3;
+    
+    delta1 = delta1 * delta1;
+    delta2 = delta2 * delta2;
+    delta3 = delta3 * delta3;
+    
+    var sum = delta1 + delta2 + delta3;
+    
+    //alert(sum)
+    
+    return Math.sqrt(sum);
+}
+
+function closestSpecies(pl, pw, sl) {
+    var versicolorPL = flowers['Versicolor']['petalLength']
+    var versicolorPW = flowers['Versicolor']['petalWidth']
+    var versicolorSL = flowers['Versicolor']['sepalLength']
+    var setosaPL = flowers['Setosa']['petalLength']
+    var setosaPW = flowers['Setosa']['petalWidth']
+    var setosaSL = flowers['Setosa']['sepalLength'] 
+    var virginicaPL = flowers['Virginica']['petalLength']
+    var virginicaPW = flowers['Virginica']['petalWidth']
+    var virginicaSL = flowers['Virginica']['sepalLength']   
+    
+    versicolorDistance = distance(pl, pw, sl, versicolorPL, versicolorPW, versicolorSL)
+    virginicaDistance = distance(pl, pw, sl, virginicaPL, virginicaPW, virginicaSL)
+    setosaDistance = distance(pl, pw, sl, setosaPL, setosaPW, setosaSL)
+    
+    //alert(versicolorDistance)
+    //alert(virginicaDistance)
+    //alert(setosaDistance)
+    
+    if(versicolorDistance < virginicaDistance && versicolorDistance < setosaDistance) {
+        return "Versicolor";
+    } else if(setosaDistance < virginicaDistance && setosaDistance < versicolorDistance) {
+        return "Setosa";
+    } else {
+        return "Virginica";
+    }
+}
+
+function updatePlot() {
+    var virginicas = {
+      x : flowers['Virginica']['petalLength'],
+      y: flowers['Virginica']['petalWidth'],
+      z : flowers['Virginica']['sepalLength'],
+      mode: 'markers',
+      marker: {
+        size: 12,
+        line: {
+          color: 'rgba(217, 217, 217, 0.14)',
+          width: 0.5
+        },
+        opacity: 0.8
+      },
+      name: "Virginicas",
+      type: 'scatter3d'
+    };
+
+    var setosas = {
+      x : flowers['Setosa']['petalLength'],
+      y: flowers['Setosa']['petalWidth'],
+      z : flowers['Setosa']['sepalLength'],
+      mode: 'markers',
+      marker: {
+        size: 11,
+        line: {
+          color: 'rgba(217, 217, 217, 0.14)',
+          width: 0.5
+        },
+        opacity: 0.8
+      },
+      name: "Setosas",
+      type: 'scatter3d'
+    };
+
+    var versicolors = {
+      x : flowers['Versicolor']['petalLength'],
+      y: flowers['Versicolor']['petalWidth'],
+      z : flowers['Versicolor']['sepalLength'],
+      mode: 'markers',
+      marker: {
+        size: 8,
+        line: {
+          color: 'rgba(217, 217, 217, 0.14)',
+          width: 0.5
+        },
+         mode : 'markers',
+        opacity: 0.8
+      },
+      name: "Versicolors",
+      type: 'scatter3d'
+    };
+
+    var data = [virginicas, setosas, versicolors];
+    var layout = {
+        margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0
+      },
+      xaxis : {
+        title : "Petal Length",
+      },
+      yaxis : {
+        title : "Petal Width"
+      },
+      zaxis : {
+        title : "Sepal Length"
+      }};     
+    Plotly.newPlot('plot1', data, layout);
+}
+
+function setup() {
+    const addbutton = document.getElementById('addbutton');
+
+    addbutton.addEventListener('click', function (e) {
+        const speciesselect = document.getElementById('species')
+        species = speciesselect.options[speciesselect.selectedIndex].text
+    
+        console.log('Adding Flower: ' + species);
+                
+        const petalLength = document.getElementById('petalLength')        
+        const petalWidth = document.getElementById('petalWidth')        
+        const sepalLength = document.getElementById('sepalLength')        
+                
+        flowers[species]['petalLength'].push(parseFloat(petalLength.value))
+        flowers[species]['petalWidth'].push(parseFloat(petalWidth.value))
+        flowers[species]['sepalLength'].push(parseFloat(sepalLength.value))
+                
+        console.log(flowers);
+        
+        updatePlot();
+    });
+    
+    const classifybutton = document.getElementById('classifybutton');
+
+    classifybutton.addEventListener('click', function (e) {
+        const petalLength = parseFloat(document.getElementById('petalLength').value)
+        const petalWidth = parseFloat(document.getElementById('petalWidth').value)      
+        const sepalLength = parseFloat(document.getElementById('sepalLength').value)
+
+        var species = closestSpecies(petalLength, petalWidth, sepalLength);
+        
+        var guess = document.getElementById('guess').value
+        
+        if(guess.trim().toLowerCase() === species.trim().toLowerCase()) {
+            alert("You got it right!  It was " + species);
+        } else {
+            alert("It was: " + species);
+        }
+    });    
+    
+    console.log("Loaded");
+}
+</script>
+
+<body onload="setup()">
+    Petal Length: <input id='petalLength' width=100><br>
+    Petal Width: <input id='petalWidth' width=100><br>
+    Sepal Length: <input id='sepalLength' width=100><br>
+    <select id="species">
+      <option value="Setosa">Setosa</option>
+      <option value="Virginica">Virginica</option>
+      <option value="Versicolor">Versicolor</option>
+    </select>
+    <br>
+    <button id='addbutton' type='button'>Add</button>
+    
+    <hr>
+    Guess the Species: <input id='guess' width=100>
+    <button id='classifybutton' type='button'>Classify</button>
+    
+    <hr>
+    
+    <table border=1 height=800 width="100%">
+    <tr>
+    <td>
+    <div id='plot1' height=800></div>
+    </td>
+    </tr>
+    </table>
+</body>
+</html>
