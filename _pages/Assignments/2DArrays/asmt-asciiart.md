@@ -98,11 +98,11 @@ prints out `B 0.08205`. This indicates that a `B` is a darker character, with a 
 ### Finding the Smallest Item in an Array
 To find any particular item in an array, you can iterate over the array and use a conditional to check its value.
 
-![Searching an array](../manim/output/ArraySearch.gif)
+![Searching an array](../files/manim/output/ArraySearch.gif)
 
 Searching for the smallest item in an array is similar to searching an array, except that you don't have a specific key that you're looking for.  Instead, keep track of the smallest key value you've seen in the array so far, and update it if the current array item is smaller.  Choose an initial value for `key` that is so large that even the first item will seem smaller.
 
-![Searching an array](../manim/output/ArraySearchLowest.gif)
+![Searching an array](../files/manim/output/ArraySearchLowest.gif)
 
 ## Part 2: Rectangular Averaging
 At this point, we could simply print out a row of text for each row in the grayscale image, and print out the character at the index of `GRAYSCALE_VALUES` with the closest grayscale value. However, not only would this print out way too many characters, but the characters are only printed out half as wide as they are tall, so this would end up printing out an image that's stretched out by a factor of 2 vertically (the "aspect ratio" would be wrong). To address both of these problems, we can output a single character per block of pixels. In particular, we can average all of the grayscale values in a rectangular block that's twice as tall as it is wide, and print out a single character for this block. To see an example, let's consider taking a block that's 8 pixels tall and 4 pixels wide in different parts of an image of an Ursinus flag.
@@ -123,7 +123,7 @@ When you do this, you should take all non-overlapping blocks in the image that y
 
 **Be careful not to run out of bounds when taking pixels in a block.** The rightmost and bottommost blocks won't actually have 8x4 pixels in them, because you'll run out of space.  Below is an example on traversing subpixels in a 2-dimensional array (the graphic!).
 
-![Manim animation of traversing subsquares in a 2D array](../manim/output/SubMatrixExample1.gif)
+![Manim animation of traversing subsquares in a 2D array](../files/manim/output/SubMatrixExample1.gif)
 
 ## Code to Write
 You should fill in `ASCIIArt.java` to print out rows of text to create ASCII art following the above procedure. You will have to come up with your own methods and way of organizing the code, but you should do the following steps at some point:

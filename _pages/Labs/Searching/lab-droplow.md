@@ -87,12 +87,12 @@ First, linearly search the array to find the index of the smallest item.  Remove
 #### Finding the Item 
 To find an item in an array, you can iterate over the array and use a conditional to check its value.
 
-![Searching an array](../manim/output/ArraySearch.gif)
+![Searching an array](../files/manim/output/ArraySearch.gif)
 
 #### Finding the Smallest Item
 Searching for the smallest item in an array is similar to searching an array, except that you don't have a specific key that you're looking for.  Instead, keep track of the smallest key value you've seen in the array so far, and update it if the current array item is smaller.  Choose an initial value for `key` that is so large that even the first item will seem smaller.
 
-![Searching an array](../manim/output/ArraySearchLowest.gif)
+![Searching an array](../files/manim/output/ArraySearchLowest.gif)
 
 Once you have found the smallest item, return its index to `main`, and remove the item from the `ArrayList` using that index.  **Question: why must your return statement be at the very end of this search function, and not anywhere else?**
 

@@ -33,7 +33,7 @@ info:
         <br>
         <img src="../images/examples/java-visualizer-2darrayidentity.png" alt="Java Visualizer Example of a 2D Array" />
         <br>
-        <img src="../manim/output/MatrixExample1.gif" alt="Manim 2D Matrix Animation" />
+        <img src="../files/manim/output/MatrixExample1.gif" alt="Manim 2D Matrix Animation" />
       title: 2D Arrays and Traversals
       embed: |
         <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  

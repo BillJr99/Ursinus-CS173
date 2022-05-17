@@ -7,3 +7,6 @@
 [submodule "_pages/Exercises"]
 	path = _pages/Exercises
 	url = https://github.com/BillJr99/Ursinus-Exercises.git
+[submodule "code"]
+	path = code
+	url = https://github.com/BillJr99/Ursinus-Boilerplate-Code.git
