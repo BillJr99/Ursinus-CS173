@@ -740,7 +740,10 @@ schedule:
   - dtitle: "Exercise: Epplets - Loops - while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "noupload"         
+    submission_types: "noupload"    
+  - dtitle: "Final Project: Project and Presentation Handed Out"
+    dlink: "Projects/Final"    
+    points: 100     
   readings:
   - rtitle: "Runestone Ch. 6.2 - Traversing Arrays"
     rlink: false
@@ -835,14 +838,15 @@ schedule:
   - dtitle: "Exercise: ArrayLists"
     dlink: "Modules/ArrayLists/Module"    
     points: 3
-    submission_types: "onpaper"    
+    submission_types: "onpaper"   
+  - dtitle: "Final Project: Project Proposal Due"
+    dlink: "Projects/Final"    
+    points: 10   
+    submission_types: "written"     
 - week: "13"
   date: "3" 
   title: "Arrays Workshop"  
-  deliverables:
-  - dtitle: "Final Project: Project and Presentation Handed Out"
-    dlink: "Projects/Final"    
-    points: 100    
+  deliverables:   
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
@@ -903,12 +907,7 @@ schedule:
   - rtitle: "Interactive Demo of Insertion Sort"
     rlink: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    
   - rtitle: "Runestone Ch. 7.5 and 7.6 - Search Algorithms and Sorting Algorithms"
-    rlink: false
-  deliverables:
-  - dtitle: "Final Project: Project Proposal Due"
-    dlink: "Projects/Final"    
-    points: 10   
-    submission_types: "written"  
+    rlink: false 
 - week: "15"
   date: "0"
   title: "Algorithms: Recursion" 

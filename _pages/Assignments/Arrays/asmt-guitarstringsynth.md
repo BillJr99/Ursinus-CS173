@@ -251,7 +251,8 @@ It is also possible for the halfstep to be negative, in which case the formula y
 Your first task is to implement this equation in the `getPeriod(int halfStep)` method in `GuitarString.java`. You should round the period you return to the nearest integer.
 
 #### Hints
-* Be sure you're using the correct types here, and cast if you have to! In particular, `h/12` should be a decimal number.
+* Use halfStep for the variable h in the formula
+* Be sure you're using the correct types here, and cast if you have to! In particular, `halfStep/12` should be a decimal number.  If `halfStep` and `12` are both integers, you'll hear the same sound over and over because the frequency keeps rounding to the same value!
 * Use the `Math.pow()` function to raise a number to a power.
 * Use the `Math.round()` function to round to the nearest integer.
 
@@ -299,7 +300,7 @@ public static double[] getPluckedSound(int note, double duration, double decay)
 
 The steps are as follows:
 1. Given a note, find its period `T` to the nearest integer by using your method that computes the period. **You've made a function do to this already, so you should call that function!**
-2. Create an array with enough samples to hold `duration` seconds audio.  How many elements does this array need?  It depends on the duration and the number of samples per second (also known as the sample rate or frequency): **you have both of these!  The sample rate is the `FS` variable.  Don't forget to cast this value to an `int` so you can create your array size: if you create an array, the size you provide it must be an integer.**
+2. Create an array with enough samples to hold `duration` seconds audio.  How many elements does this array need?  It depends on the duration and the number of samples per second (also known as the sample rate or frequency): **you have both of these!  The sample rate is the `FS` variable.  Don't forget to cast this value to an `int` after you calculate the total number of samples, so that you can create your array size: if you create an array, the size you provide it must be an integer.**
 3. Fill in the first `T` samples with random noise **using your noise method**.
 4. Process all of the rest of the samples one by one in order, starting at index `T`. Each value should be the average of the two adjacent samples `T` indices back multiplied by a factor of `decay`. For example, if you're at index 150 and your period is 100, you should average samples at indices 50 and 51. This simulates a traveling wave over a string of length `T` that decays and dampens "low frequencies" first, and is referred to as a "digital waveguide."
 5. Watch out for integer division!  If you don't hear a sound when you run, it could be that one of your divisions is rounding down to 0 due to integer division.
@@ -331,6 +332,9 @@ By default, the `main` function in `GuitarString.java` plays the first 24 halfst
     Your browser does not support the audio element.
 </audio> 
 </p>
+
+#### Hints
+* Do you only hear a very short sound, or no sound at all?  Check the length of your `samples` array - if you rounded the time to an integer, you might round from a small number like 0.5 seconds down to 0, and after multiplying by the sampling rate FS, you end up with 0!  Do the multiplication first, and then round down.
 
 ### Extra Credit (25 Points)
 As extra credit, you should fill in the method `playFile`, which loads in and plays a bunch of notes in sequence from a text file. The text file contains a bunch of lines with comma separated values for `halfstep,duration,decay`. For example, the "Happy Birthday" song contains the following sequence of 25 notes:

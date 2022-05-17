@@ -171,8 +171,31 @@ Modify your `drawHappyFace` function to accept three additional `int` parameters
 
 You can visit [this page](https://www.rapidtables.com/web/color/RGB_Color.html) to identify red, green, and blue values for your favorite colors.  
 
-## Extra Credit (20%): Animations
-The StdDraw library supports animations!  This uses a technique called "iteration" which, over and over again, draws on the screen, clears the screen, and then re-draws the screen slightly differently.  Using [this article](https://introcs.cs.princeton.edu/java/stdlib/javadoc/StdDraw.html), search for the code segment that discusses animating graphics "moving in a circle" and try it out in your function!  Inside the loop, you'll call `StdDraw.clear()`, perform all of your drawing instructions, then call `StdDraw.show()` followed by `StdDraw.pause(20)` (or some small number of milliseconds).
+## Extra Credit (10%): Drawing a Face Anywhere by Clicking the Mouse
+You can click the mouse in the StdDraw window and obtain the x and y position of the mouse as variables.  This would allow you to pass those values to your `drawHappyFace` function and draw a face whenever you want, wherever you want!  This involves a technique called "iteration" which causes your code to run over and over to check for whether the mouse has been clicked.
+
+```java
+    public static void main(String[] args) {
+        StdDraw.clear(); // clear the screen
+        StdDraw.enableDoubleBuffering();
+
+        while (true) {
+            if (StdDraw.isMousePressed()) {
+                // get mouse location
+                double x = StdDraw.mouseX();
+                double y = StdDraw.mouseY();
+            
+                // TODO: call your drawHappyFace function here using the x and y coordinates above!
+                // You can choose your own radius and colors
+                
+                StdDraw.show();
+            }
+        }
+    }
+```
+
+### Extra Credit (Additional 10%): Animations
+The StdDraw library supports animations!  This also uses "iteration" which, over and over again, draws on the screen, clears the screen, and then re-draws the screen slightly differently.  Using [this article](https://introcs.cs.princeton.edu/java/stdlib/javadoc/StdDraw.html), search for the code segment that discusses animating graphics "moving in a circle" and try it out in your function!  Inside the loop, you'll call `StdDraw.clear()`, perform all of your drawing instructions, then call `StdDraw.show()` followed by `StdDraw.pause(20)` (or some small number of milliseconds).
 
 ## Finishing Touches and Writeup 
 
