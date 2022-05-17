@@ -1,3 +1,6 @@
 [submodule "_layouts"]
 	path = _layouts
 	url = https://github.com/BillJr99/Ursinus-Boilerplate-Layouts.git
+[submodule "assets"]
+	path = assets
+	url = https://github.com/BillJr99/Ursinus-Boilerplate-Assets.git
