@@ -11,12 +11,18 @@ info:
     - To write a function that accepts parameters and draws a figure on the screen according to those parameters
     - To explore the composition of colors in the RGB color system
   rubric:
-    - weight: 60
+    - weight: 40
       description: Algorithm Implementation
       preemerging: The algorithm fails on the test inputs due to major issues, or the program fails to compile and/or run
       beginning: The algorithm fails on the test inputs due to one or more minor issues
       progressing: The algorithm is implemented to solve the problem correctly according to given test inputs, but would fail if executed in a general case due to a minor issue or omission in the algorithm design or implementation
       proficient: A reasonable algorithm is implemented to solve the problem which correctly solves the problem according to the given test inputs, and would be reasonably expected to solve the problem in the general case
+    - weight: 40
+      description: Program Correctness
+      preemerging: The program draws shapes that generally resemble a face, but not in a programmable way
+      beginning: The program draws faces that appear entirely on the screen but with hardcoded or fixed-variable features like size and screen position
+      progressing: The program draws faces that appear entirely on the screen with sizes that are customizable by function parameters
+      proficient: The program draws faces that appear entirely on the screen with sizes that are customizable by function parameters, and the features of the face appear inside the circle of the face
     - weight: 10
       description: Code Indentation and Spacing
       preemerging: Code indentation and spacing are generally inappropriate or inconsistent
@@ -125,7 +131,7 @@ Instead of hard-coding the `x`, `y`, and `radius` values for your face, calculat
 As an example, suppose you wish to draw a "left eye" that is halfway between the left edge of the face circle, and the center of the circle.  The x-coordinate of the center of the eye would be equal to the center of the face circle minus half the radius of the face circle.  The radius of the eye might be, for example, some fraction of the radius of the face circle (perhaps 10%).  You can compute variables for the x, y, and radius of the circles and arcs based upon the x, y, and radius of the face circle itself.  This is a trial-and-error process, and there is no specific correct answer: play with the values and see where the elements are drawn.  Sketching this on paper and labeling the x and y points is a helpful idea.
 
 ### Calling the Function Multiple Times to Draw Several Figures  
-From your `main` function, call your `drawHappyFace` function at least 3 times, with different parameters, to draw at least 3 faces on different parts of the screen.  The faces should not overlap on the screen, and the elements within each face should appear inside the face circle.
+From your `main` function, call your `drawHappyFace` function at least 3 times, with different parameters, to draw at least 3 faces on different parts of the screen.  The faces should not overlap on the screen, and the elements within each face should appear inside the face circle.  Make sure the faces appear inside the window, and the features of the face appear inside the circle of the face!
 
 ## Part 2: Changing the Color
 
@@ -164,6 +170,9 @@ StdDraw.setPenColor(color);
 Modify your `drawHappyFace` function to accept three additional `int` parameters for red, green, and blue, and set the color in the beginning of your function so that the face draws in the color you specify (each color is a mixture of red, green, and blue, with values ranging from 0 to 255).  Modify your `main` function to provide red, green, and blue values of your choosing to each of your calls to `drawHappyFace`: use different colors each time!
 
 You can visit [this page](https://www.rapidtables.com/web/color/RGB_Color.html) to identify red, green, and blue values for your favorite colors.  
+
+## Extra Credit (20%): Animations
+The StdDraw library supports animations!  This uses a technique called "iteration" which, over and over again, draws on the screen, clears the screen, and then re-draws the screen slightly differently.  Using [this article](https://introcs.cs.princeton.edu/java/stdlib/javadoc/StdDraw.html), search for the code segment that discusses animating graphics "moving in a circle" and try it out in your function!  Inside the loop, you'll call `StdDraw.clear()`, perform all of your drawing instructions, then call `StdDraw.show()` followed by `StdDraw.pause(20)` (or some small number of milliseconds).
 
 ## Finishing Touches and Writeup 
 

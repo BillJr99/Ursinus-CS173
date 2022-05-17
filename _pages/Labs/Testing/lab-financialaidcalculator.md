@@ -157,7 +157,9 @@ if (a > b && c > d) {
 
 ## Part 3: Unit Tests
 
-Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in NetBeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there.  
+Coming up with proper test cases is an important part of software engineering that, when done properly, saves everyone a huge headache. Good software testing frameworks allow the programmer to write a whole battery of tests that get applied every time the code is changed so that they don't have to manually input all of the tests every time.  In NetBeans, we have access to one such test framework known as JUnit, which runs a battery of tests completely separately from the main function.  You can create a test suite [in NetBeans](https://netbeans.org/kb/docs/java/junit-intro.html#Exercise_30) and write your tests there. 
+
+**Before you begin, list the tests you'll need to write, and incldue this list in your README.  Specifically, which unit tests are needed to test all rules, including boundary cases and potential error values like a negative number of children or income?**
 
 ### Creating Unit Tests
 
@@ -189,6 +191,9 @@ To get full credit for this part of the assignment, **you must create enough uni
 If there is a `testMain` test, you can remove that.  It is only necessary to test the `computeAssistance` function, since `main` just obtains user input and then passes them to the `computeAssistance` function.  So these tests automatically run your function for you without asking for input!
 
 The reference solution has 6 test cases, including the first two that are provided. The easiest way to create a new test case is to simply copy and paste the code for a test case that's already there (starting with `@Test` and continuing through the end curly brace `}` ) and to rename it and update the test values. **It is recommended that you do this as you are going along.** This will really help you when debugging, and it's a lot easier than inputting values into the console over and over again.
+
+### Fixing Bugs with Unit Testing and the Debugger
+Introduce an error into your program on purpose (like a mistake in the assistance amount formula).  Re-run your unit tests and see that at least one fails!  To fix it, set a breakpoint in your assistance function, and debug the proejct.  Type in your own values and step through to see where the bug occurs.  Fix it again, re-run your unit tests (and ensure they pass!), and describe what you did in your README.
 
 ## Extra Credit (10%)
 
