@@ -40,8 +40,9 @@ I gave a couple of fun facts about myself in the class, but I want to get to kno
 10.  Anything else you think I should know?
 11.  Please attach **a headshot** picture to your message. I will use this to help get to know your name, but we will also use this in class to arrange groups.
 12. Please post a short introduction and a hello to the class on the Canvas Introductions discussion forum.  There is also a Water Cooler discussion group that you can use for social discussions as well!
-13.  We will be sharing work with each other through electronic means.  To protect your privacy, you are welcome to use a pseudonym on your work in lieu of your name.  Let me know if you'd like to use a pseudonym on your assignments, and what name you'll use.
-14.  Are you thinking about majoring or minoring in Computer Science, Math, or Statistics?  No pressure here - if the department hosts events for students, we'd be happy to share those opportunities with you if you are interested!
+13. Please post a reply to at least one person's introduction that does not yet have a response.  If everyone has at least one reply, feel free to reply to anyone!
+14.  We will be sharing work with each other through electronic means.  To protect your privacy, you are welcome to use a pseudonym on your work in lieu of your name.  Let me know if you'd like to use a pseudonym on your assignments, and what name you'll use.
+15.  Are you thinking about majoring or minoring in Computer Science, Math, or Statistics?  No pressure here - if the department hosts events for students, we'd be happy to share those opportunities with you if you are interested!
 
 ## Web Poll for Office Hours
 
