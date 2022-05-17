@@ -26,6 +26,7 @@ During each self-assessment, you should evaluate and provide a grade on your per
 * The extent to which you engaged deeply with the readings and class discussions
 * Your role in contributing to your classmates’ learning, including asking questions and active listening
 * What this class has led you to question, realize, and/or understand
+* Obtaining support when it is helpful (not just when it is needed!); this includes visiting office hours, engaging with the professor in and out of class, and visiting the tutoring center and/or teaching assistants
 
 The grade you assign should be based on your ability to speak to the considerations above and in your pre-assessment.  The grade you assign will be the grade recorded for these activities unless there is a significant disparity between the assessment and your observed classroom performance.  To do this honestly, and not overly harshly, consider your evaluation from a third-person perspective: how might you evaluate yourself if you observed your activities and behaviors from another's perspective?  Have you contributed to the class in ways that has enhanced someone else's learning experience?  Have you engaged with others in ways that has enhanced your own learning experience?
 

@@ -177,7 +177,9 @@ grade_breakdown:
 - category: "Pre-Lab Exercises"
   weight: "20%"
 - category: "Quizzes"
-  weight: "10%"  
+  weight: "5%"  
+- category: "Engagement"
+  weight: "5%"
 - category: "Final Project"
   weight: "10%"  
 
@@ -271,6 +273,11 @@ schedule:
     rlink: false
   - rtitle: "Variables and Assignment Expressions"
     rlink: "Modules/Variables/Module"  
+  deliverables:
+  - dtitle: "Participation: Participation Pre Assessment Handed Out"
+    dlink: "./Assignments/Participation/PreAssessment"
+    points: 10
+    submission_types: "written"  
 - week: "2"
   date: "0" 
   title: "Expressions and Variables"      
@@ -347,7 +354,12 @@ schedule:
 - week: "3"
   date: "2"
   title: "Debugging"
-  link: "Activities/Debugging"    
+  link: "Activities/Debugging"  
+  deliverables:
+  - dtitle: "Participation: Participation Pre Assessment Due"
+    dlink: "./Assignments/Participation/PreAssessment"
+    points: 10
+    submission_types: "written"    
 - week: "3"
   date: "3"
   title: "Boolean Logic Expressions"
@@ -446,7 +458,11 @@ schedule:
   - dtitle: "Lab: Story Telling with Conditionals Due"    
     dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
-    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md"     
+    rubricpath: "_pages/Labs/Conditionals/lab-tellastory.md" 
+  - dtitle: "Participation: Participation Self Assessment First Check Handed Out"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10
+    submission_types: "written"
 - week: "5"
   date: "1"
   title: "Lab: Functions"    
@@ -538,6 +554,10 @@ schedule:
     dlink: "Modules/Problets/Exercise"  
     points: 3   
     submission_types: "noupload"  
+  - dtitle: "Participation: Participation Self Assessment First Check Due"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10
+    submission_types: "written"    
 - week: "8"
   date: "0"
   title: "Iteration"  
@@ -753,7 +773,11 @@ schedule:
   - dtitle: "Exercise: Problets - Array"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "noupload"           
+    submission_types: "noupload"  
+  - dtitle: "Participation: Participation Self Assessment Second Check Handed Out"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10
+    submission_types: "written"    
 - week: "12"
   date: "1"
   title: "Lab: Words with Classmates Continued"
@@ -832,6 +856,11 @@ schedule:
     rlink: false
   - rtitle: "Searching Module"
     rlink: "Modules/Search/Module" 
+  deliverables:
+  - dtitle: "Participation: Participation Self Assessment Second Check Due"
+    dlink: "./Assignments/Participation/SelfAssessment"
+    points: 10
+    submission_types: "written"  
 - week: "14"
   date: "1"
   title: "Workshop: Iris Dataset Assignment"  
