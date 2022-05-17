@@ -17,3 +17,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "*"
+          commit_message: "Update submodules from parent"          
