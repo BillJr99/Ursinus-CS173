@@ -4,3 +4,6 @@
 [submodule "assets"]
 	path = assets
 	url = https://github.com/BillJr99/Ursinus-Boilerplate-Assets.git
+[submodule "_pages/Exercises"]
+	path = _pages/Exercises
+	url = https://github.com/BillJr99/Ursinus-Exercises.git
