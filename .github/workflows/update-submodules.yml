@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Set safe directory for permissions
+        run: git config --global --add safe.directory /github/workspace
       - name: Checkout submodules
         uses: jwsi/submodule-checkout@v1        
       - name: Commit changes
