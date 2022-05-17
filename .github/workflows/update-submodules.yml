@@ -20,10 +20,3 @@ jobs:
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
-
-      - name: Commit & push changes
-        run: |
-          git config --global user.name "William Mongan"
-          git config --global user.email "billmongan@gmail.com"
-          git commit -am "Update submodules"
-          git push
