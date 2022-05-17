@@ -262,7 +262,7 @@ schedule:
   - dtitle: "Exercise: The NetBeans IDE Software Environment"
     dlink: "Modules/IDE/Module"    
     points: 3     
-    submission_types: "noupload"      
+    submission_types: "onpaper"      
 - week: "1"
   date: "3"
   title: "Expressions and Variables"       
@@ -293,7 +293,7 @@ schedule:
   - dtitle: "Exercise: Problets - Expressions - Arithmetic"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"        
+    submission_types: "noupload"        
 - week: "2"
   date: "2"
   title: "Ranges and Quantization of Data Types" 
@@ -315,7 +315,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Sequence"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "noupload"     
   readings:
   - rtitle: "Numerical Encodings"
     rlink: "Modules/Encodings/Module"  
@@ -343,7 +343,7 @@ schedule:
   - dtitle: "Exercise: Introduction to Primitive Data Types and Expressions"
     dlink: "Modules/Expressions/Module"  
     points: 3  
-    submission_types: "noupload" 
+    submission_types: "onpaper" 
 - week: "3"
   date: "2"
   title: "Debugging"
@@ -361,7 +361,7 @@ schedule:
   - dtitle: "Exercise: Expressions Revisited"
     dlink: "Modules/Expressions/Exercise2"    
     points: 3   
-    submission_types: "noupload"   
+    submission_types: "onpaper"   
 - week: "4"
   date: "0"   
   title: "Conditionals"   
@@ -375,7 +375,7 @@ schedule:
   - dtitle: "Exercise: Boolean Expressions"
     dlink: "Modules/Boolean/Exercise"
     points: 3
-    submission_types: "noupload"  
+    submission_types: "onpaper"  
   - dtitle: "Lab: Debugging Due"    
     dlink: "Labs/Debugging"     
     points: 100   
@@ -391,7 +391,7 @@ schedule:
   - dtitle: "Exercise: Conditionals"
     dlink: "Modules/Conditionals/Exercise"  
     points: 3   
-    submission_types: "noupload"
+    submission_types: "onpaper"
   readings:
   - rtitle: "Reading User Input"
     rlink: "https://www.w3schools.com/java/java_user_input.asp"    
@@ -407,7 +407,7 @@ schedule:
   - dtitle: "Exercise: Problets - Expressions - Logical"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
+    submission_types: "noupload" 
   - dtitle: "Quiz: Variables and Data Types"
     dlink: false
     points: 40   
@@ -431,7 +431,7 @@ schedule:
   - dtitle: "Exercise: Epoch Time Overflow"
     dlink: "Modules/EpochTime/Exercise"
     points: 3     
-    submission_types: "noupload"    
+    submission_types: "onpaper"    
 - week: "5"
   date: "0"
   title: "Functions"
@@ -442,7 +442,7 @@ schedule:
   - dtitle: "Exercise: Writing and Calling Functions"
     dlink: "Modules/Functions/Module"  
     points: 3   
-    submission_types: "noupload"
+    submission_types: "onpaper"
   - dtitle: "Lab: Story Telling with Conditionals Due"    
     dlink: "Labs/TellAStory/Conditionals"     
     points: 100   
@@ -458,7 +458,7 @@ schedule:
   - dtitle: "Exercise: Problets - Expressions - Assignment"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "noupload"     
 - week: "5"
   date: "2"
   title: "Functions"    
@@ -478,7 +478,7 @@ schedule:
   - dtitle: "Exercise: Problets - Function - Function behavior"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"     
+    submission_types: "noupload"     
 - week: "6"
   date: "0"
   title: "Strings"
@@ -514,7 +514,7 @@ schedule:
   - dtitle: "Exercise: Problets - Selection - if/if-else tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"
+    submission_types: "noupload"
 - week: "6"
   date: "2"
   title: "Strings"
@@ -529,7 +529,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Selection - if/if-else puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"  
+    submission_types: "noupload"  
 - week: "6"
   date: "3"
   title: "Strings"  
@@ -537,7 +537,7 @@ schedule:
   - dtitle: "Exercise: Problets - Function - Debugging functions"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"  
+    submission_types: "noupload"  
 - week: "8"
   date: "0"
   title: "Iteration"  
@@ -588,7 +588,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - for loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"  
+    submission_types: "noupload"  
 - week: "9"
   date: "0"
   title: "Iteration, Randomness, and the while loop" 
@@ -602,7 +602,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
+    submission_types: "noupload" 
   - dtitle: "Lab: Financial Aid Calculator Due"
     dlink: "Labs/FinancialAidCalculator"  
     points: 100   
@@ -618,7 +618,7 @@ schedule:
   - dtitle: "Exercise: Iteration"
     dlink: "Modules/Iteration/Exercise"    
     points: 3  
-    submission_types: "noupload"     
+    submission_types: "onpaper"     
 - week: "9"
   date: "2"
   title: "Iteration with the do loop"  
@@ -627,7 +627,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - do-while loop tracing"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"
+    submission_types: "noupload"
 - week: "9"
   date: "3"
   title: "Iteration"   
@@ -635,7 +635,7 @@ schedule:
   - dtitle: "Exercise: Strings"
     dlink: "Modules/Strings/Exercise"
     points: 3
-    submission_types: "noupload"     
+    submission_types: "onpaper"     
 - week: "10"
   date: "0"
   title: "Coding Style and the Code Review"
@@ -646,7 +646,7 @@ schedule:
   - dtitle: "Exercise: Problets - Loops - Advanced loops"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
+    submission_types: "noupload" 
   - dtitle: "Programming Assignment: Mini Crypto Due"
     dlink: "Assignments/MiniCrypto"      
     points: 100    
@@ -679,7 +679,7 @@ schedule:
   - dtitle: "Exercise: Strings Revisited"
     dlink: "Modules/Strings/Exercise2"
     points: 3 
-    submission_types: "noupload"    
+    submission_types: "onpaper"    
 - week: "10"
   date: "3"
   title: "File I/O"
@@ -695,7 +695,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Loops - for loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"  
+    submission_types: "noupload"  
   - dtitle: "Quiz: Iteration"
     dlink: false
     points: 40
@@ -720,7 +720,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Loops - while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"         
+    submission_types: "noupload"         
   readings:
   - rtitle: "Runestone Ch. 6.2 - Traversing Arrays"
     rlink: false
@@ -745,7 +745,7 @@ schedule:
   - dtitle: "Exercise: Arrays"
     dlink: "Modules/Arrays/Module"     
     points: 3
-    submission_types: "noupload"    
+    submission_types: "onpaper"    
 - week: "12"
   date: "0"
   title: "The ArrayList and Generic/Template Data Structures"
@@ -753,7 +753,7 @@ schedule:
   - dtitle: "Exercise: Problets - Array"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written"           
+    submission_types: "noupload"           
 - week: "12"
   date: "1"
   title: "Lab: Words with Classmates Continued"
@@ -783,7 +783,7 @@ schedule:
   - dtitle: "Exercise: Epplets - Loops - do-while loop puzzles"
     dlink: "Modules/Problets/Exercise"  
     points: 3   
-    submission_types: "written" 
+    submission_types: "noupload" 
   - dtitle: "Programming Assignment: Guitar String Synthesis Due"
     dlink: "Assignments/GuitarStringSynth"      
     points: 100   
@@ -803,7 +803,7 @@ schedule:
   - dtitle: "Exercise: Iteration Revisited"
     dlink: "Modules/Iteration/Exercise2"
     points: 3    
-    submission_types: "noupload"        
+    submission_types: "onpaper"        
 - week: "13"
   date: "2"
   title: "Arrays Workshop"  
@@ -811,7 +811,7 @@ schedule:
   - dtitle: "Exercise: ArrayLists"
     dlink: "Modules/ArrayLists/Module"    
     points: 3
-    submission_types: "noupload"    
+    submission_types: "onpaper"    
 - week: "13"
   date: "3" 
   title: "Arrays Workshop"  
@@ -822,7 +822,7 @@ schedule:
   - dtitle: "Exercise: Four-in-a-Row"
     dlink: "Modules/FourInARow/Exercise"  
     points: 3
-    submission_types: "noupload"  
+    submission_types: "onpaper"  
 - week: "14"
   date: "0"
   title: "Algorithms: Searching"
@@ -861,7 +861,7 @@ schedule:
     - dtitle: "Exercise: Insertion Sort"
       dlink: "Modules/InsertionSort/Module"  
       points: 3 
-      submission_types: "noupload"      
+      submission_types: "onpaper"      
 - week: "14"
   date: "3"
   title: "Algorithms: Sorting"
@@ -891,7 +891,7 @@ schedule:
   - dtitle: "Exercise: Recursion"
     dlink: "Modules/Recursion/Module"
     points: 3      
-    submission_types: "noupload"  
+    submission_types: "onpaper"  
 - week: "15"
   date: "1"
   title: "Final Project Group Workshop"
