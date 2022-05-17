@@ -15,6 +15,7 @@ import random
 from urllib import request, parse
 import requests
 import json
+import pytz
 
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/course.py
 # https://github.com/ucfopen/canvasapi/blob/develop/canvasapi/canvas.py
@@ -30,8 +31,10 @@ API_URL = "https://ursinus.instructure.com/"
 # Obtain User ID from API_URL + /api/v1/users/self
 
 CANVAS_TIME_ZONE = "America/New_York"
-DUE_TIME = "T035959Z" # this time is no earlier than 10:59PM Eastern Time during EST or EDT
-DUE_DATE_OFFSET = 1 # 1 # add 1 day to make things due the next morning per the due time above if GMT is after midnight
+LOCALTIME = pytz.timezone(CANVAS_TIME_ZONE)
+DUE_TIME_DST = "T035959Z" 
+DUE_TIME_ST = "T045959Z" 
+DUE_DATE_OFFSET = 1 # add 1 day to make things due the next morning per the due time above if GMT is after midnight
 DUE_DATE_FORMAT = "%Y%m%dT%H%M%SZ"
 
 TABS_TO_HIDE = ["Outcomes", "Collaborations", "Files", "Pages", "Conferences", "BigBlueButton", "Chat", "New Analytics", "Panopto Video", "Zoom"] # which navigation pane items to hide if they are visible
@@ -44,6 +47,24 @@ skipassignments = False
 skipofficehours = True
 skiplecturecalendar = True
 
+def get_local_time(dt):
+    # Convert string dates to datetime
+    if(isinstance(dt, str)):
+        if 'T' in dt and 'Z' in dt:
+            dt = parseDate(dt, DUE_DATE_FORMAT)
+        elif not ('/' in dt):
+            dt = parseDate(dt, '%Y%m%d')
+        else:
+            dt = parseDate(dt)
+        
+    localized_dt = LOCALTIME.localize(dt)
+    isDST = bool(localized_dt.dst())
+    
+    if isDST:
+        return DUE_TIME_DST
+    else:
+        return DUE_TIME_ST
+    
 def canvas_http_request(endpoint, inputdict=None, method="GET"):
     header = {"Authorization": "Bearer %s" % API_KEY}
 
@@ -833,8 +854,8 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                     inputdict['published'] = True
                     inputdict['points_possible'] = points
                     inputdict['description'] = description + " (<a href=\"" + makelink(addslash(homepage), stripnobool(dlink)) + "\">" + makelink(addslash(homepage), stripnobool(dlink)) + "</a>)"
-                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
-                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
+                    inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + get_local_time(duedate), DUE_DATE_FORMAT)) 
+                    inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + get_local_time(enddate), DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                     inputdict['position'] = asmtidx
                     
                     printlog("Adding Assignment: " + description + " due at: " + str(duedate))
@@ -944,12 +965,12 @@ def process_markdown(fname, canvas, course, courseid, homepage):
                         
                         inputdict = {}
                         inputdict['quiz_type'] = "assignment"
-                        inputdict['unlock_at'] = parseDateTimeCanvas(datetime.strptime(opendate + DUE_TIME, DUE_DATE_FORMAT))
-                        inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) 
-                        inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + DUE_TIME, DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
+                        inputdict['unlock_at'] = parseDateTimeCanvas(datetime.strptime(opendate + get_local_time(opendate), DUE_DATE_FORMAT))
+                        inputdict['due_at'] = parseDateTimeCanvas(datetime.strptime(duedate + get_local_time(duedate), DUE_DATE_FORMAT)) 
+                        inputdict['lock_at'] = parseDateTimeCanvas(datetime.strptime(enddate.replace('/', '') + get_local_time(enddate), DUE_DATE_FORMAT)) # lock out assignments on the last day of the class
                         inputdict['show_correct_answers'] = True
                         inputdict['published'] = True
-                        inputdict['show_correct_answers_at'] = parseDateTimeCanvas(datetime.strptime(duedate + DUE_TIME, DUE_DATE_FORMAT)) # show quiz results after the deadline
+                        inputdict['show_correct_answers_at'] = parseDateTimeCanvas(datetime.strptime(duedate + get_local_time(duedate), DUE_DATE_FORMAT)) # show quiz results after the deadline
                         
                         quiz = edit_quiz(quiz, inputdict) # we'll move the quiz if needed into the right assignment group with other assignments, once the groups are created 
                     else:
@@ -1129,7 +1150,7 @@ def usage():
     print("\t[-a | --apikey]\tAPI Key (get from API_URL + /profile/settings)")
     print("\t[-u | --userid]\tUser ID Number (get from API_URL + /api/v1/users/self)")
     print("\t[-t | --timezone]\tTime Zone (i.e. America/New_York)")
-    print("\t[-e | --duetime]\t Latest Due Time in UTC for Your Time Zone (i.e., T045959Z for Eastern Time)")
+    print("\t[-e | --duetime]\t Due Times in UTC for Your Time Zone for standard time and daylight time (i.e., T045959Z|T035959Z for Eastern Time)")
     print("\t[-d | --discussions]\tDo not delete or re-create discussion topics and entries")
     print("\t[-s | --assignments]\tDo not delete or re-create assignments (but still re-arrange existing ones in modules view)")
     print("\t[-o | --noofficehours]\tDo not delete or re-create office hours")
@@ -1168,7 +1189,9 @@ for o, a in opts:
     elif o in ("-t", "--timezone"):
         CANVAS_TIME_ZONE = a
     elif o in ("-e", "--duetime"):
-        DUE_TIME = a
+        atimes = a.split("|")
+        DUE_TIME_ST = atimes[0]
+        DUE_TIME_DST = atimes[1]
     elif o in ("-d", "--discussions"):
         skipdiscussions = True
     elif o in ("-s", "--assignments"):
