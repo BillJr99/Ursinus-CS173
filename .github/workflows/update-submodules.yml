@@ -16,7 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Checkout submodules
-        uses: Lori-Systems/submodule-checkout@v2        
+        run: |
+          git submodule update --init --recursive
+          git submodule update --remote --merge          
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
