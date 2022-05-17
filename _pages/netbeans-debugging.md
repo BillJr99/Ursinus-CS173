@@ -43,6 +43,7 @@ import static org.junit.Assert.*;
 ## Using the Debugger
 Now that we have a failed test case, let's create a `Breakpoint` that will cause our program to pause its execution at a certain point, and allow us to inspect our variables and the state of the program.  This allows us to confirm at various parts of the program that things are executing the way we expect.  Thus, we can use a `Breakpoint` to narrow down where in the code our program is failing.
 
+<!--
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-breakpoint.png)
 
 We'll create a `Method` breakpoint, which pauses the program when a method is called, so we can execute the code in the method one line at a time.  We could choose `main` as the method, in which case the program would pause for us as soon as it starts.  Here, we'll break at the `doubleIt` method.  The `Breakpoint Type` box at the top right of this window allows you to select other types of breakpoints, including `Field` (a type of variable that we'll explore later when we learn about Classes), and `Line`, which allows us to enter a line number from the program.  
@@ -50,8 +51,8 @@ We'll create a `Method` breakpoint, which pauses the program when a method is ca
 We'll just create this one breakpoint, but you can repeat this menu to create several of these, as you wish.
 
 ![]({{ site.baseurl }}/images/netbeans/debugging/debug-breakpointoptions.png)
-
-The red triangle where the line number used to be indicates that a breakpoint has been placed here.
+-->
+To create a breakpoint, click on the line number in the margin of your code in NetBeans.  The red triangle where the line number used to be indicates that a breakpoint has been placed here.  You can create as many of these as you like, but it's a good idea to start with one, perhaps at the beginning of a function or block of code that you're not sure about.
 
 To run the program with the debugger on (that is, to run the program but pause at the breakpoint we just created), click the `Debug Project` menu item under the `Debug` menu.  There is also a toolbar button that looks like the menu icon for `Debug` next to the `Run` button.
 

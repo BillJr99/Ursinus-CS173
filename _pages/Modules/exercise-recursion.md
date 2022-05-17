@@ -21,8 +21,12 @@ processor:
   feedbackprocess: | 
     let i1 = feedbackString.indexOf("olleh");
     let i2 = feedbackString.indexOf("desserts");
+  incorrectchecks:
+    - incorrectcheck: |
+        editorText.contains("for") || editorText.contains("while")
+      feedback: "Try again: don't forget to use recursion instead of any loops!  Your solution should not include a while or for loop."    
   correctcheck: |
-    i1 > -1 && i2 > -1 && i2 > i1
+    i1 > -1 && i2 > -1 && i2 > i1 && !editorText.contains("for") && !editorText.contains("while")
  
 files:
   - filename: "Recursion.java"

@@ -109,6 +109,8 @@ Now, write a function `computeWeightedAverage` that also returns a `double`, and
 <br><span>\(weight1 \times grade1 + weight2 \times grade2\)</span><br>
 </div>
 
+Your weights should add up to 100%, and it would be good to verify this.  If the sum of your weights is smaller than 0.99 or greater than 1.01, return -1 for the average.
+
 ### Putting it all Together: Calling these Functions to Compute a Course Final Grade
 Finally, write the body of your `main()` function to call the equal average function twice (once for assignments and once for labs), and then to pass those results as parameters to a call to the weight average function.  Specifically, you can call the `computeEqualAverage` function to obtain your assignment average and to obtain your lab average, and then call `computeWeightedAverage` to weight them.  For example, once your two functions (`computeEqualAverage` and `computeWeightedAverage`) are written, you could call them as follows:
 

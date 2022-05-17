@@ -22,7 +22,13 @@ info:
       beginning: Code commenting and structure is limited in ways that reduce the readability of the program, and/or there are minor departures from the style guide
       progressing: Code documentation is present that re-states the explicit code definitions, and/or code is written that mostly adheres to the style guide
       proficient: Code is documented at non-trivial points in a manner that enhances the readability of the program, and code is written according to the style guide
-    - weight: 70
+    - weight: 20
+      description: Discussion Board Posts
+      preemerging: A reasonable attempt was made to identify one or more bugs on the discussion board, but the comments were not substantially on-topic
+      beginning: At least one unique discussion board topics are posted about the bugs identified in your code
+      progressing: At least two discussion board topics are posted about the bugs identified in your code, but they are substantially similar
+      proficient: At least two unique discussion board topics are posted about the bugs identified in your code
+    - weight: 50
       description: Writeup and Submission
       preemerging: An incomplete submission is provided, or the README file submitted is blank
       beginning: The program is submitted, but not according to the directions in one or more ways (for example, because it is lacking a readme writeup or missing answers to written questions)
