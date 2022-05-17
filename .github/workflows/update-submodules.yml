@@ -15,7 +15,6 @@ jobs:
     steps:
       - name: Allow checkout
         run: git config --global --add safe.directory /github/workspace
-        shell: bash
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Checkout submodules
