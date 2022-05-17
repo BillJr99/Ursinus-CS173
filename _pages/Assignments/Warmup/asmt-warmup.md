@@ -90,10 +90,11 @@ Please take a moment to familiarize yourself with [the course syllabus]({{ site.
 2.  True/False: If you choose to work with a buddy, you are allowed to look at your buddy's code and show them your code for regular assignments.
 3.  True/False: You may look at a classmate's code during a regular assignment.
 4.  True/False: Although I can work with my buddy on labs, we cannot email or copy each other's code directly, and our submissions should be substantially unique.
-<!--4.  What happens if you show up after the lecture has already started?-->
-4.  Where is the help room located?
-<!--5.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
-5.  When and where are my office hours?
-6.  What is the link to sign up for one-on-one tutoring with the Institute for Student Success?
-7.  What is the grade reduction per day for late work?
-8.  How many slack days do you have to use throughout the semester for extensions?
+5.  True/False: I can request an incomplete if I am failing the class in order to submit assignments from earlier in the semester.
+6.  Where is the help room located?
+7.  When and where are my office hours?
+8.  What is the link to sign up for one-on-one tutoring with the Institute for Student Success?
+9.  What is the grade reduction per day for late work?
+10.  How many slack days do you have to use throughout the semester for extensions?
+<!--11.  What happens if you show up after the lecture has already started?-->
+<!--12.  Extra credit (+2) Send me a selfie of yourself inside of the help room.-->
