@@ -28,7 +28,7 @@ jobs:
       - name: Install dateutil
         run: pip install --upgrade python-dateutil         
       - name: Build updated research output file
-        run: python syllabus2ical.py
+        run: curl -k https://raw.githubusercontent.com/BillJr99/Ursinus-Boilerplate-Code/main/course/syllabus2ical.py | python
       - name: Commit new ical file
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
