@@ -15,7 +15,7 @@ url                      : https://BillJr99.github.io # the base hostname & prot
 baseurl                  : "/Ursinus-CS173-Spring2022" # the subpath of your site, e.g. "/blog"
     
 # Analytics  
-google_analytics         : "UA-24052857-1"
+google_analytics         : "G-0CXXV6F2JP"
     
 # Reading Files
 include:
