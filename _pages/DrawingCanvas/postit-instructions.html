@@ -518,7 +518,7 @@ function doFayeSubscribe() {
     var ysquare = msgparts[6];
 
     // verify the square is within bounds
-    if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols) {
+    if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols && typeof rectcolor !== "undefined" && rectcolor !== "undefined" && rectcolor.length > 0) {
         isPageFilledIn[ysquare][xsquare] = msg;
     }
   });    
