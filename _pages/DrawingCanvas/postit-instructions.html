@@ -416,10 +416,10 @@ var isPageFilledIn = [];
 
 function doReplayDispatch(data) {   
     // Set initially to empty, and use doReplayDispatch to mark "filled in pages" as the corresponding message text
-    for(var i = 0; i < numRows; i++) {
+    for(var i = 0; i < numRows * subrows; i++) {
         isPageFilledIn[i] = [];
         
-        for(var j = 0; j < numCols; j++) {
+        for(var j = 0; j < numCols * subcols; j++) {
             isPageFilledIn[i][j] = '';
         }
     }
