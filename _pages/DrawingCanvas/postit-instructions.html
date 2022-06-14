@@ -180,7 +180,7 @@ function getPageData(pages)
     var endi = (pagerow + 1) * subrows;
     var endj = (pagecol + 1) * subcols;
     
-    console.log("Checking page data for major row: " + pagerow + " and major col: " + pagecol + "subrow " + starti + ", subcol " + startj + " to row " + endi + ", " + endj);
+    console.log("Checking page data for raw row: " + row + ", raw col " + col + "; major row: " + pagerow + " and major col: " + pagecol + " subrow " + starti + ", subcol " + startj + " to row " + endi + ", col " + endj);
     
     for(var i = starti; i < endi; i++) {
         for(var j = startj; j < endj; j++) {
