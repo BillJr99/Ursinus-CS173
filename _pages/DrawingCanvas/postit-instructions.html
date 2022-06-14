@@ -200,8 +200,8 @@ function getPageData(pages)
                 var ysquare = msgparts[6];
                 
                 // convert to this page grid coordinates
-                leftx =  leftx % subcols;
-                topy =  topy % subrows;                 
+                xsquare = xsquare - starti;
+                ysquare = ysquare - startj;                 
             
                 drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
             }
