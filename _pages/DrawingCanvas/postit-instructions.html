@@ -127,7 +127,6 @@ function lookupPage(pages,row,col)
     return i ;
 }
 
-
 function getPageData(pages)
 {
 	document.getElementById("pageInstructions").display = "table-cell" ;
@@ -200,8 +199,8 @@ function getPageData(pages)
                 var ysquare = msgparts[6];
                 
                 // convert to this page grid coordinates
-                xsquare = xsquare - starti;
-                ysquare = ysquare - startj;                 
+                xsquare = xsquare - startj;
+                ysquare = ysquare - starti;                 
             
                 drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
             }
