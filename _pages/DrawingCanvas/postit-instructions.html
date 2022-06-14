@@ -412,9 +412,10 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     xhr.send("data=" + message);
 }
 
-// Set initially to false, and use doReplayDispatch to mark "filled in pages" as true
 var isPageFilledIn = [];
-function initFilledInPageMatrix() {
+
+function doReplayDispatch(data) {   
+    // Set initially to false, and use doReplayDispatch to mark "filled in pages" as true
     for(var i = 0; i < numRows; i++) {
         isPageFilledIn[i] = [];
         
@@ -422,10 +423,7 @@ function initFilledInPageMatrix() {
             isPageFilledIn[i][j] = '';
         }
     }
-}
-initFilledInPageMatrix();
 
-function doReplayDispatch(data) {    
     for(var i = 0; i < data.length; i++) {
         row = data[i];
         
