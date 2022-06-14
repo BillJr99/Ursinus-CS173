@@ -426,7 +426,7 @@ function initFilledInPageMatrix() {
 initFilledInPageMatrix();
 
 function doReplayDispatch(data) {    
-    if(i < data.length) {
+    for(var i = 0; i < data.length; i++) {
         row = data[i];
         
         id = row[0];
