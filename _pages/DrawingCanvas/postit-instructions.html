@@ -112,7 +112,7 @@ function lookupPage(pages,row,col)
 {
   // Examine each element in the interludes array, and return 
   // the index of the first element i for which 
-  // pages[i].row == rwo and pages[i].col == col . 
+  // pages[i].row == row and pages[i].col == col . 
   // If item not found, return -1 ;
 
     var i=0;
@@ -171,6 +171,24 @@ function getPageData(pages)
 	
 	showPixelMap(page) ;
 
+    // Is the page already filled in?  If so, draw what's there now
+    var i = row - 1;
+    var j = col - "A".charCodeAt(0);
+    var pagedata = isPageFilledIn[i][j];
+    if(pagedata.length > 0) {
+        var msgparts = pagedata.split(',');
+        
+        var leftx = msgparts[0];
+        var topy = msgparts[1];
+        var rectwidth = msgparts[2];
+        var rectheight = msgparts[3];
+        var rectcolor = msgparts[4];
+        var xsquare = msgparts[5];
+        var ysquare = msgparts[6];
+    
+        drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare)
+    }
+    
 }
 </script>
 	
@@ -393,6 +411,61 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
     xhr.send("data=" + message);
 }
+
+// Set initially to false, and use doReplayDispatch to mark "filled in pages" as true
+var isPageFilledIn = [];
+function initFilledInPageMatrix() {
+    for(var i = 0; i < numRows; i++) {
+        isPageFilledIn[i] = [];
+        
+        for(var j = 0; j < numCols; j++) {
+            isPageFilledIn[i][j] = '';
+        }
+    }
+}
+initFilledInPageMatrix();
+
+function doReplayDispatch(data) {    
+    if(i < data.length) {
+        row = data[i];
+        
+        id = row[0];
+        timestamp = row[1];
+        msg = row[2];
+        
+        var msgparts = msg.split(',');
+        
+        var leftx = msgparts[0];
+        var topy = msgparts[1];
+        var rectwidth = msgparts[2];
+        var rectheight = msgparts[3];
+        var rectcolor = msgparts[4];
+        var xsquare = msgparts[5];
+        var ysquare = msgparts[6];
+        
+        isPageFilledIn[ysquare][xsquare] = row;
+    }
+}
+
+function doReplayGet() {    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "{{ page.replaylink }}/retrieve", true);
+    
+    xhr.onreadystatechange = function () {
+        if (this.readyState != 4) return;
+
+        if (this.status == 200) {
+            var data = JSON.parse(this.responseText);
+
+            console.log("Replay Message Retrieved");
+            console.log(data);
+            
+            doReplayDispatch(data);
+        }
+    };
+    
+    xhr.send();   
+}
 {% endif %}
 
 {% if page.fayelink %}
@@ -401,8 +474,21 @@ var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
 function doFayeSubscribe() {
   fayeclient.subscribe('/messages', function(message) {
-    // Ignore incoming messages
+    // Don't draw incoming messages
     console.log("Message: " + message.text);
+    
+    var msg = message.text;
+    var msgparts = msg.split(',');
+    
+    var leftx = msgparts[0];
+    var topy = msgparts[1];
+    var rectwidth = msgparts[2];
+    var rectheight = msgparts[3];
+    var rectcolor = msgparts[4];
+    var xsquare = msgparts[5];
+    var ysquare = msgparts[6];
+
+    isPageFilledIn[ysquare][xsquare] = msg;
   });    
 }
 
