@@ -174,7 +174,7 @@ function getPageData(pages)
     // Is the page already filled in?  If so, draw what's there now
     // by filling in all of the subsquares within that selected square
     var pagerow = row - 1;
-    var pagecol = col - "A".charCodeAt(0);    
+    var pagecol = col.charCodeAt(0) - "A".charCodeAt(0);    
     var starti = pagerow * subrows;
     var startj = pagecol * subcols;
     var endi = (pagerow + 1) * subrows;
