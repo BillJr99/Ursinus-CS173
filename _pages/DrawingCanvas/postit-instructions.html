@@ -198,6 +198,10 @@ function getPageData(pages)
                 var rectcolor = msgparts[4];
                 var xsquare = msgparts[5];
                 var ysquare = msgparts[6];
+                
+                // convert to this page grid coordinates
+                leftx =  leftx % subcols;
+                topy =  topy % subrows;                 
             
                 drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
             }
@@ -393,6 +397,7 @@ function makeColorPalettes() {
 makeColorPalettes();
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
+// note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
 var numcols = {{ page.numcols }};
 var numrows = {{ page.numrows }};
 var gridwidth = {{ page.canvaswidth }} / numcols;
@@ -441,6 +446,7 @@ function doReplayDispatch(data) {
     
     console.log("Initial Empty Page Filled In Matrix up to main image row " + numRows + " and main image col " + numCols + ": " + isPageFilledIn);
 
+    // fills in in chronological order, so overwritten pages will be overwritten in this history matrix
     for(var i = 0; i < data.length; i++) {
         row = data[i];
         
@@ -462,6 +468,7 @@ function doReplayDispatch(data) {
         
         // verify the square is within bounds
         if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols) {
+            console.log("Message number " + i + ": " + msg);
             isPageFilledIn[ysquare][xsquare] = msg;
         }
     }

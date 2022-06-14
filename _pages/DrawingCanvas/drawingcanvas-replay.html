@@ -232,6 +232,7 @@ makeColorPalettes();
 var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
+// note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
 var numcols = {{ page.numcols }};
 var numrows = {{ page.numrows }};
 var gridwidth = {{ page.canvaswidth }} / numcols;
