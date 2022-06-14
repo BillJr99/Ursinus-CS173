@@ -183,6 +183,9 @@ function getPageData(pages)
     for(var i = starti; i < endi; i++) {
         for(var j = startj; j < endj; j++) {
             var pagedata = isPageFilledIn[i][j];
+            
+            console.log("Page data for row " + i + ", col " + j + ": " + pagedata);
+            
             if(pagedata.length > 0) {
                 var msgparts = pagedata.split(',');
                 
@@ -194,7 +197,7 @@ function getPageData(pages)
                 var xsquare = msgparts[5];
                 var ysquare = msgparts[6];
             
-                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare)
+                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
             }
         }
     }
@@ -434,7 +437,7 @@ function doReplayDispatch(data) {
         }
     }
     
-    console.log("Initial Empty Page Filled In Matrix up to row " + numRows + " and col " + numCols + ": " + isPageFilledIn);
+    console.log("Initial Empty Page Filled In Matrix up to main image row " + numRows + " and main image col " + numCols + ": " + isPageFilledIn);
 
     for(var i = 0; i < data.length; i++) {
         row = data[i];
@@ -460,6 +463,8 @@ function doReplayDispatch(data) {
             isPageFilledIn[ysquare][xsquare] = msg;
         }
     }
+    
+    console.log("Final filled in page matrix: " + isPageFilledIn);
 }
 
 function doReplayGet() {    
