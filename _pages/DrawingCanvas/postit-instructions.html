@@ -172,21 +172,31 @@ function getPageData(pages)
 	showPixelMap(page) ;
 
     // Is the page already filled in?  If so, draw what's there now
-    var i = row - 1;
-    var j = col - "A".charCodeAt(0);
-    var pagedata = isPageFilledIn[i][j];
-    if(pagedata.length > 0) {
-        var msgparts = pagedata.split(',');
-        
-        var leftx = msgparts[0];
-        var topy = msgparts[1];
-        var rectwidth = msgparts[2];
-        var rectheight = msgparts[3];
-        var rectcolor = msgparts[4];
-        var xsquare = msgparts[5];
-        var ysquare = msgparts[6];
+    // by filling in all of the subsquares within that selected square
+    var pagerow = row - 1;
+    var pagecol = col - "A".charCodeAt(0);
+    var starti = pagerow * subrows;
+    var startj = pagecol * subcols;
+    var endi = (pagerow + 1) * subrows;
+    var endj = (pagecol + 1) * subcols;
     
-        drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare)
+    for(var i = starti; i < endi; i++) {
+        for(var j = startj; j < endj; j++) {
+            var pagedata = isPageFilledIn[i][j];
+            if(pagedata.length > 0) {
+                var msgparts = pagedata.split(',');
+                
+                var leftx = msgparts[0];
+                var topy = msgparts[1];
+                var rectwidth = msgparts[2];
+                var rectheight = msgparts[3];
+                var rectcolor = msgparts[4];
+                var xsquare = msgparts[5];
+                var ysquare = msgparts[6];
+            
+                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare)
+            }
+        }
     }
     
 }
