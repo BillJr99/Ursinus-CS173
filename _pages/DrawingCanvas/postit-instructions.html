@@ -415,7 +415,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 var isPageFilledIn = [];
 
 function doReplayDispatch(data) {   
-    // Set initially to false, and use doReplayDispatch to mark "filled in pages" as true
+    // Set initially to empty, and use doReplayDispatch to mark "filled in pages" as the corresponding message text
     for(var i = 0; i < numRows; i++) {
         isPageFilledIn[i] = [];
         
@@ -423,6 +423,8 @@ function doReplayDispatch(data) {
             isPageFilledIn[i][j] = '';
         }
     }
+    
+    console.log("Page Filled In Matrix: " + isPageFilledIn);
 
     for(var i = 0; i < data.length; i++) {
         row = data[i];
@@ -440,6 +442,8 @@ function doReplayDispatch(data) {
         var rectcolor = msgparts[4];
         var xsquare = msgparts[5];
         var ysquare = msgparts[6];
+        
+        console.log("Setting filled in matrix at: " + xsquare + ", " + ysquare);
         
         isPageFilledIn[ysquare][xsquare] = row;
     }
