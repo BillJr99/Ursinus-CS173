@@ -455,7 +455,10 @@ function doReplayDispatch(data) {
         
         console.log("Message number " + i + ": Setting filled in matrix at: " + xsquare + ", " + ysquare);
         
-        isPageFilledIn[ysquare][xsquare] = row;
+        // verify the square is within bounds
+        if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols) {
+            isPageFilledIn[ysquare][xsquare] = msg;
+        }
     }
 }
 
@@ -501,7 +504,10 @@ function doFayeSubscribe() {
     var xsquare = msgparts[5];
     var ysquare = msgparts[6];
 
-    isPageFilledIn[ysquare][xsquare] = msg;
+    // verify the square is within bounds
+    if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols) {
+        isPageFilledIn[ysquare][xsquare] = msg;
+    }
   });    
 }
 
