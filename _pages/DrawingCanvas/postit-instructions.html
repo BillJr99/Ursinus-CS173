@@ -127,6 +127,8 @@ function lookupPage(pages,row,col)
     return i ;
 }
 
+var gotPageData = false;
+
 function getPageData(pages)
 {
 	document.getElementById("pageInstructions").display = "table-cell" ;
@@ -207,6 +209,7 @@ function getPageData(pages)
         }
     }
     
+    gotPageData = true;
 }
 </script>
 	
@@ -623,6 +626,11 @@ function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, 
 
 function fillgrid(e) {
     if(e.button != 0) { // left click only
+        return;
+    }
+    
+    if(!gotPageData) {
+        console.log("Waiting for Select Page button press");
         return;
     }
     
