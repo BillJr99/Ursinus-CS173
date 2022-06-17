@@ -23,4 +23,6 @@ replaylink: "https://ReplayDataStore.jpopyack.repl.co"
 6. Set survey link if desired in postit-instructions.html
 surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
 
-(Original standalone version in drawingcanvas.html)
+NOTES:
+* Original standalone version in drawingcanvas.html
+* numcols must be less than or equal to 26, because the column to index calculation assumes that the column heading is a single character
