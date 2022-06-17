@@ -6,23 +6,7 @@ excerpt: "Pixel Pandemonium Instructions"
 
 instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_v0_composite.js"
 
-canvascolors:
-  - color: '#ffffff'
-    show: true
-  - color: '#f59534'
-    show: true
-  - color: '#e03a7b'
-    show: true
-  - color: '#f5deb3'
-    show: true
-  - color: '#87cefa'
-    show: true
-  - color: '#c1de4b'
-    show: true
-  - color: '#358b8c'
-    show: true
-  - color: '#708090'
-    show: true      
+canvascolors: 10     
     
 numcols: 1
 numrows: 1
@@ -321,11 +305,9 @@ Click on a color below, and then click on each of the rectangles below to fill i
 <br><br>
 
 <div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
-{% for i in (0..page.canvascolors.size) %}
-{% if i < page.canvascolors.size %}
-{% if page.canvascolors[i].show %}
+{% for i in (0..page.canvascolors) %}
+{% if i < page.canvascolors %}
 <canvas id="canvascolor{{ i }}" width="{{ page.colorpickerwidth }}" height="{{ page.colorpickerheight }}" style="border:1px solid #000000;"></canvas>
-{% endif %}
 {% endif %}
 {% endfor %}
 </div>
@@ -341,16 +323,16 @@ var colorpicker = document.getElementById('colorpicker');
 
 ctx.lineWidth = '3';
 
+// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
 // palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
-var palettes = [
-{% for i in (0..page.canvascolors.size) %}
-{% if i < page.canvascolors.size %}
-{% if page.canvascolors[i].show %}
-"{{ page.canvascolors[i].color }}", 
-{% endif %}
-{% endif %}
-{% endfor %}
-];
+var palettes = [];
+for(var i = 0; i < {{ page.canvascolors }}; i++) {
+    palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it js
+}
 
 function colorpaletteclicked(e) {
     var id = e.target.id;
