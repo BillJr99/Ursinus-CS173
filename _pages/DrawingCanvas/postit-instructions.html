@@ -331,7 +331,7 @@ function rgbToHex(r, g, b) {
 // palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
 var palettes = [];
 for(var i = 0; i < {{ page.canvascolors }} && i < palette.length; i++) {
-    palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it js
+    palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it instructionsjs
 }
 
 function colorpaletteclicked(e) {
