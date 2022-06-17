@@ -1,0 +1,26 @@
+1. Install post-it image files to /files/drawingcanvas-X/*
+
+2. Set js location and size variables in drawingcanvas.html and postit-instructions.html
+canvascolors is the size of the palettes variable in the js file
+canvaswidth and canvasheight in the full image is generally numcols * subcols * 12, (same for rows) in drawingcanvas-replay.html, and * 100 in postit-instructions.html
+
+3. Add any finished videos links in reveal.html:
+finishedvideos:
+  - link: "https://www.youtube.com/embed/iyVo0tj_Ftg"
+    width: 896
+    height: 504
+... and, if so, a link to the reveal page in drawingcanvas-replay.html:
+finishedvideo: 
+  link: "./Reveal"
+  text: "If you participated prior to December 13, 2021, click to see your finished videos here!"
+  
+4. Set faye link and replay link to replits in drawingcanvas-replay.html and postit-instructions.html; ensure they are running and the database in replay is removed
+fayelink: "https://FayePubSub.jpopyack.repl.co"
+replaylink: "https://ReplayDataStore.jpopyack.repl.co"
+ 
+5. Set clickable to false, dogrid to true, dofreedraw to false in drawingcanvas-replay.html
+
+6. Set survey link if desired in postit-instructions.html
+surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
+
+(Original standalone version in drawingcanvas.html)
