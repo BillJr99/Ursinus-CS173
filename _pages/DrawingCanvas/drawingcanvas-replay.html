@@ -4,26 +4,8 @@ permalink: /DrawingCanvas/Replay/DrawingCanvas
 title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
     
-canvascolors:
-  - color: '#ffffff'
-    show: true
-  - color: '#f59534'
-    show: true
-  - color: '#e03a7b'
-    show: true
-  - color: '#f5deb3'
-    show: true
-  - color: '#87cefa'
-    show: true
-  - color: '#c1de4b'
-    show: true
-  - color: '#358b8c'
-    show: true
-  - color: '#708090'
-    show: true    
+canvascolors: 10  
     
-numcols: 20
-numrows: 12
 subcols: 5
 subrows: 3
 
@@ -32,6 +14,8 @@ canvasheight: 432
 
 colorpickerwidth: 64
 colorpickerheight: 64
+
+instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_v0_composite.js"
 
 dogrid: true
 dofreedraw: false
@@ -84,6 +68,8 @@ finishedvideo:
         src="{{ page.fayelink }}/faye/client.js">
         </script>
 {% endif %}
+
+<script language="javascript" type="text/javascript" src="{{ page.instructionsjs }}"></script>
         
 <!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
 
@@ -104,11 +90,9 @@ finishedvideo:
 
 {% if page.clickable %}
 <div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
-{% for i in (0..page.canvascolors.size) %}
-{% if i < page.canvascolors.size %}
-{% if page.canvascolors[i].show %}
+{% for i in (0..page.canvascolors) %}
+{% if i < page.canvascolors %}
 <canvas id="canvascolor{{ i }}" width="{{ page.colorpickerwidth }}" height="{{ page.colorpickerheight }}" style="border:1px solid #000000;"></canvas>
-{% endif %}
 {% endif %}
 {% endfor %}
 </div>
@@ -168,17 +152,16 @@ var colorpicker = document.getElementById('colorpicker');
 ctx.lineWidth = '3';
 
 {% if page.clickable %}
-// palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
-var palettes = [
-{% for i in (0..page.canvascolors.size) %}
-{% if i < page.canvascolors.size %}
-{% if page.canvascolors[i].show %}
-"{{ page.canvascolors[i].color }}", 
-{% endif %}
-{% endif %}
-{% endfor %}
-];
+// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
 
+// palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
+var palettes = [];
+for(var i = 0; i < {{ page.canvascolors }} && i < palette.length; i++) {
+    palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it js
+}
 function colorpaletteclicked(e) {
     var id = e.target.id;
     
@@ -233,8 +216,8 @@ var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
 // note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
-var numcols = {{ page.numcols }};
-var numrows = {{ page.numrows }};
+var numcols = numCols; // read from instructionsjs
+var numrows = numRows; // read from instructionsjs
 var gridwidth = {{ page.canvaswidth }} / numcols;
 var gridheight = {{ page.canvasheight }} / numrows;
 
