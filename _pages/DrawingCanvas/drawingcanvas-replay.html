@@ -5,18 +5,19 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
     
 canvascolors: 10  
+
+numrows: 12
+numcols: 20
     
 subcols: 5
 subrows: 3
 
 blocksize: 12
-numrows: 12
-numcols: 20
 
 totalcols: {{ page.numcols | times: page.subcols }}
 totalrows: {{ page.numrows | times: page.subrows }}
-canvaswidth: {{ totalcols | times: page.blocksize }}
-canvasheight: {{ totalrows | times: page.blocksize }}
+canvaswidth: {{ page.totalcols | times: page.blocksize }}
+canvasheight: {{ page.totalrows | times: page.blocksize }}
 
 colorpickerwidth: 64
 colorpickerheight: 64
