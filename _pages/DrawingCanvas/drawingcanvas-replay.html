@@ -5,19 +5,15 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
     
 canvascolors: 10  
-
+    
 numrows: 12
 numcols: 20
-    
+
 subcols: 5
 subrows: 3
 
-blocksize: 12
-
-totalcols: {{ page.numcols | times: page.subcols }}
-totalrows: {{ page.numrows | times: page.subrows }}
-canvaswidth: {{ page.totalcols | times: page.blocksize }}
-canvasheight: {{ page.totalrows | times: page.blocksize }}
+canvaswidth: 1200
+canvasheight: 432
 
 colorpickerwidth: 64
 colorpickerheight: 64
@@ -223,8 +219,8 @@ var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
 // note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
-var numcols = numCols; // read from instructionsjs
-var numrows = numRows; // read from instructionsjs
+var numcols = {{ page.numcols }}; 
+var numrows = {{ page.numrows }}; 
 var gridwidth = {{ page.canvaswidth }} / numcols;
 var gridheight = {{ page.canvasheight }} / numrows;
 
