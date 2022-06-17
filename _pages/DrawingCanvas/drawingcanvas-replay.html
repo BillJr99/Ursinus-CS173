@@ -9,10 +9,8 @@ canvascolors: 10
 subcols: 5
 subrows: 3
 
-numrows: 12
-numcols: 20
-blockwidth: 60
-blockheight: 36
+canvaswidth: 1200
+canvasheight: 432
 
 colorpickerwidth: 64
 colorpickerheight: 64
@@ -39,19 +37,16 @@ finishedvideo:
 
 ---
 
-{% assign canvaswidth = {{ page.numrows | times: page.blockheight }} %}
-{% assign canvasheight = {{ page.numcols | times: page.blockwidth }} %}
-
 <style>
 #canvascontainer {
- width: {{ canvaswidth | plus:100 }}px;
- height: {{ canvasheight | plus:10 }}px;
+ width: {{ page.canvaswidth | plus:100 }}px;
+ height: {{ page.canvasheight | plus:10 }}px;
 }
 
 #yheadercanvascontainer {   
  float: left;
  width: 50px;
- height: {{ canvasheight }}px;
+ height: {{ page.canvasheight }}px;
  margin: 0;
  padding: 0;
  display: inline-block;
@@ -59,8 +54,8 @@ finishedvideo:
 
 #maincanvascontainer { 
  float: left;
- width: {{ canvaswidth }}px;
- height: {{ canvasheight }}px;
+ width: {{ page.canvaswidth }}px;
+ height: {{ page.canvasheight }}px;
  margin: 0;
  padding: 0;
  display: inline-block;
@@ -80,14 +75,14 @@ finishedvideo:
 
 <!-- Set color palette and dimensions above according to mail merge post it posterizer colors and drawing grid, if using post-its; create and give out mail merge document -->
 
-<canvas id="xheadercanvas" width="{{ canvaswidth | plus:150 }}" height="50" style="border:0px solid #ffffff;"></canvas>
+<canvas id="xheadercanvas" width="{{ page.canvaswidth | plus:150 }}" height="50" style="border:0px solid #ffffff;"></canvas>
 <br>
 <div id="canvascontainer">
 <div id="yheadercanvascontainer">
-<canvas id="yheadercanvas" width="50" height="{{ canvasheight }}" style="border:0px solid #ffffff;"></canvas>
+<canvas id="yheadercanvas" width="50" height="{{ page.canvasheight }}" style="border:0px solid #ffffff;"></canvas>
 </div>
 <div id="maincanvascontainer">
-<canvas id="drawCanvas" width="{{ canvaswidth }}" height="{{ canvasheight }}" style="border:1px solid #000000;"></canvas>
+<canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
 </div>
 </div>
 
@@ -167,7 +162,6 @@ var palettes = [];
 for(var i = 0; i < {{ page.canvascolors }} && i < palette.length; i++) {
     palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it instructionsjs
 }
-
 function colorpaletteclicked(e) {
     var id = e.target.id;
     
@@ -222,10 +216,10 @@ var xlabels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
 // note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
-var numcols = {{ page.numcols }}; 
-var numrows = {{ page.numrows }}; 
-var gridwidth = {{ canvaswidth }} / numcols;
-var gridheight = {{ canvasheight }} / numrows;
+var numcols = numCols; // read from instructionsjs
+var numrows = numRows; // read from instructionsjs
+var gridwidth = {{ page.canvaswidth }} / numcols;
+var gridheight = {{ page.canvasheight }} / numrows;
 
 // subcols and subrows provide subsquares within each grid element for the individual fill-ins
 var subcols = {{ page.subcols }};
