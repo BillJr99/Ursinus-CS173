@@ -4,21 +4,21 @@ permalink: /DrawingCanvas/Replay/DrawingCanvas
 title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
     
-canvascolors: 10  
+canvascolors: 14  
     
 numrows: 12
-numcols: 20
+numcols: 26
 
 subcols: 5
 subrows: 3
 
-canvaswidth: 1200
+canvaswidth: 1560
 canvasheight: 432
 
 colorpickerwidth: 64
 colorpickerheight: 64
 
-instructionsjs: "../../files/drawingcanvas-cs4philly2021/Post-It_CS4Philly_2021_v0_composite.js"
+instructionsjs: "../../files/drawingcanvas-cs4allpa2022/Post-It_CSforALLinPA_RWB_bk_v6x_composite.js"
 
 dogrid: true
 dofreedraw: false
@@ -37,6 +37,8 @@ clickable: false
 finishedvideo: 
   link: "./Reveal"
   text: "Click to see your finished videos here!"
+
+citation: "Image created by Dr. Jane E. Huggins, Associate Research Scientist at the University of Michigan, Ann Arbor"
 
 ---
 
@@ -123,6 +125,13 @@ finishedvideo:
 {% if page.finishedvideo %}
 <center>
 <a href="{{page.finishedvideo.link}}">{{page.finishedvideo.text}}</a>
+</center>
+<br>
+{% endif %}
+
+{% if page.citation %}
+<center>
+{{ page.citation }}
 </center>
 <br>
 {% endif %}

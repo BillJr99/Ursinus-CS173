@@ -20,9 +20,13 @@ replaylink: "https://ReplayDataStore.jpopyack.repl.co"
  
 5. Set clickable to false, dogrid to true, dofreedraw to false in drawingcanvas-replay.html
 
-6. Set survey link if desired in postit-instructions.html
+6. Set citation in drawingcanvas-replay.html
+citation: "Image credit..."
+
+7. Set survey link if desired in postit-instructions.html
 surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
 
 NOTES:
 * Original standalone version in drawingcanvas.html
 * numcols must be less than or equal to 26, because the column to index calculation assumes that the column heading is a single character
+* Posterizer Program in CS173 Resources/postits under Ursinus
