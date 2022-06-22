@@ -27,7 +27,7 @@ citation: "Image credit..."
 surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
 
 NOTES:
-* Original standalone version in drawingcanvas.html
+* Original standalone version in drawingcanvas-standalone.html
 * numcols must be less than or equal to 26, because the column to index calculation assumes that the column heading is a single character
 * Posterizer Program in CS173 Resources/postits under Ursinus
 * The page width (in _layouts) must be at least the width of the image being displayed plus approximately 200px
