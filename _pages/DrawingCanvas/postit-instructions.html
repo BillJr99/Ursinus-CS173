@@ -72,11 +72,11 @@ function showPixelMap(page)
 		var topRow = '<table width="50%" border="1" cellspacing="0" cellpadding="10">' ;
 		var interior = "" ;
 		count = -1 ;
-		for(var i=0; i<3; i++)
+		for(var i=0; i<{{page.subrows}}; i++)
 		{
 			var row = "<tr>" ;
 
-			for(var j=0; j<5; j++)
+			for(var j=0; j<{{page.subcols}}; j++)
 			{
 				count++ ;
 				row += "<td class='mono' align=center" ;
@@ -133,7 +133,7 @@ function getPageData(pages)
 	document.getElementById("thePage").innerHTML = col + "-" + row ;
 	
 	uncompressed = "" ;
-	extraSpace = 5 ; // put an extra space after every 5 elements
+	extraSpace = {{page.subcols}} ; // put an extra space after every 5 elements
 	for(var i=0; i<page.uncompressed.length; i++)
 	{
 		uncompressed += page.uncompressed[i] + " " ;
