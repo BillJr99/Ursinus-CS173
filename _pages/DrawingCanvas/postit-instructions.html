@@ -432,6 +432,9 @@ function setPagesThatRemain() {
 			var pagedata = isPageFilledIn[i][j];
 			if(pagedata.length <= 0) {
 				result = result + String.fromCharCode(ch) + i.toString() + " ";	
+				console.log(String.fromCharCode(ch) + i.toString() + " not filled in");
+			} else {
+				console.log(String.fromCharCode(ch) + i.toString() + " filled in");
 			}
 		}
 	}
