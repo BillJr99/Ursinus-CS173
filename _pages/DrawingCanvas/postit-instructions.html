@@ -172,7 +172,7 @@ function getPageData(pages)
             
                 console.log("Page data for row " + i + ", col " + j + ": " + pagedata);
             
-                if(pagedata.length > 0) {
+                if(pagedata.trim().length > 0) {
                     var msgparts = pagedata.split(',');
                 
                     var leftx = msgparts[0];
@@ -432,7 +432,7 @@ function setPagesThatRemain() {
 		ch++;
 		for(var i = 0; i < numRows; i++) {
 			var pagedata = isPageFilledIn[i][j];
-			if(pagedata.length <= 0) {
+			if(pagedata.trim().length <= 0) {
 				result = result + String.fromCharCode(ch) + i.toString() + " ";	
 				rowresult = rowresult + String.fromCharCode(ch) + i.toString() + " ";	
 				console.log(String.fromCharCode(ch) + i.toString() + " not filled in");
