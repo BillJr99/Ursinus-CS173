@@ -241,7 +241,7 @@ for(var i=1; i<=numRows; i++)
 </script>
 	
 <p>
-	Here are some squares that remain: <div id="remainingPages"></div>
+	<div id="remainingPages"></div>
 </p>
 
 	
@@ -438,7 +438,9 @@ function setPagesThatRemain() {
 			}
 		}
 	}
-	document.getElementById("remainingPages").innerHTML = result;
+	if(result.length > 0) {
+		document.getElementById("remainingPages").innerHTML = "Here are some squares that remain: " + result;
+	}
 }
 
 function doReplayDispatch(data) {   
