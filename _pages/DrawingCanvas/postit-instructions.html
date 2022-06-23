@@ -541,6 +541,8 @@ function doFayeSubscribe() {
     if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols && typeof rectcolor !== "undefined" && rectcolor !== "undefined" && rectcolor.length > 0) {
         isPageFilledIn[ysquare][xsquare] = msg;
     }
+	  
+    doReplayGet(); // refresh the list of pages that remain to be filled in and the squares that appear when a page is selected
   });    
 }
 
