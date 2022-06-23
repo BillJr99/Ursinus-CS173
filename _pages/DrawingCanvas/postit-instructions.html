@@ -425,7 +425,6 @@ var isPageFilledIn = [];
  
 function setPagesThatRemain() {
 	var result = "";
-	var rowresult = "";
 	var ch = "A".charCodeAt(0) - 1;
 	for(var j = 0; j < numCols; j++) { // numCols/numRows is defined in the image javascript, and is not the same as the local numrows/numcols variables here
 		rowresult = "";
@@ -440,16 +439,11 @@ function setPagesThatRemain() {
 			}
 			
 			if(pagedata.trim().length <= 0) {
-				result = result + String.fromCharCode(ch) + i.toString() + " ";	
-				rowresult = rowresult + String.fromCharCode(ch) + i.toString() + " ";	
-				console.log(String.fromCharCode(ch) + i.toString() + " not filled in");
+				result = result + String.fromCharCode(ch) + (i+1).toString() + " ";	
+				console.log(String.fromCharCode(ch) + (i+1).toString() + " not filled in");
 			} else {
-				console.log(String.fromCharCode(ch) + i.toString() + " filled in with (" + pagedata + ")");
+				console.log(String.fromCharCode(ch) + (i+1).toString() + " filled in with (" + pagedata + ")");
 			}
-		}
-		
-		if(rowresult.length > 0) {
-			result = result + "<br>";	
 		}
 	}
 	if(result.length > 0) {
