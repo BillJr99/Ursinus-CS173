@@ -431,7 +431,14 @@ function setPagesThatRemain() {
 		rowresult = "";
 		ch++;
 		for(var i = 0; i < numRows; i++) {
-			var pagedata = isPageFilledIn[i][j];
+			
+			var pagedata = "";
+			for(var k = j * subcols; k < (j+1) * subcols; k++) {
+				for(var l = i * subrows; l < (i+1) * subrows; l++) {
+					pagedata = pagedata + isPageFilledIn[l][k];
+				}
+			}
+			
 			if(pagedata.trim().length <= 0) {
 				result = result + String.fromCharCode(ch) + i.toString() + " ";	
 				rowresult = rowresult + String.fromCharCode(ch) + i.toString() + " ";	
