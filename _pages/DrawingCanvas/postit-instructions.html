@@ -239,6 +239,22 @@ for(var i=1; i<=numRows; i++)
     select.appendChild(el) ;
 }
 </script>
+	
+<p>
+	Here are some squares that remain: 
+	<script language="javascript" type="text/javascript">
+		var ch = "A".charCodeAt(0) - 1;
+		for(var j = 0; i < numCols; j++) { // numCols/numRows is defined in the image javascript, and is not the same as the local numrows/numcols variables here
+			ch++;
+			for(var i = 0; i < numRows; i++) {
+				var pagedata = isPageFilledIn[i][j];
+				if(pagedata.length <= 0) {
+					document.write(String.fromCharCode(ch) + i.toString() + " ");	
+				}
+			}
+		}
+	</script>
+</p>
 
 	
 <table border="0" cellspacing="4" cellpadding="0">
