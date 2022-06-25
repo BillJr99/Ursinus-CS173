@@ -153,6 +153,35 @@ citation: "We are indebted to Dr. Jane E. Huggins, Associate Research Scientist 
 <input type="color" id="colorpicker" name="colorpicker" value="#ff0000" style="visibility: hidden">
 {% endif %}
 
+<!-- video -->
+<br>
+<script src="https://raw.githubusercontent.com/antimatter15/whammy/master/whammy.js">
+<script type="text/javascript>
+    // https://riptutorial.com/html5-canvas/example/19522/capture-canvas-and-save-as-webm-video
+    name = "CanvasCapture"; // Placed into the Mux and Write Application Name fields of the WebM header
+    quality = 0.7; // good quality 1 Best < 0.7 ok to poor
+    fps = 30; // I have tried all sorts of frame rates and all seem to work
+              // Do some test to workout what your machine can handle as there
+              // is a lot of variation between machines.
+    var canvas = document.getELementById("drawCanvas");    
+              
+    var video = new Groover.Video(fps,quality,name)
+    function capture(){
+        if(video.timecode < 5000){ // 5 seconds
+             setTimeout(capture,video.frameDelay);             
+        }else{
+             var videoElement = document.createElement("video");
+             videoElement.src = URL.createObjectURL(video.toBlob());
+             document.body.appendChild(videoElement);
+             video = undefined; // DeReference as it is memory hungry.
+             return;
+        }
+        // first frame sets the video size
+        video.addFrame(canvas); // Add current canvas frame
+    }
+    capture(); // start capture
+    </script>
+<!-- end video -->
 
 <br><br>
 
