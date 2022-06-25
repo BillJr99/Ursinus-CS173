@@ -155,7 +155,7 @@ citation: "We are indebted to Dr. Jane E. Huggins, Associate Research Scientist 
 
 <!-- video -->
 <br>
-<div id="videoDiv">Video here</div>
+<div id="videoDiv">Video here<br><a id="videoDownload" download="video.webm">Download WebM</a></div>
 <script src="https://raw.githubusercontent.com/antimatter15/whammy/master/whammy.js"></script>
 <script type="text/javascript">
     // https://riptutorial.com/html5-canvas/example/19522/capture-canvas-and-save-as-webm-video
@@ -441,10 +441,11 @@ citation: "We are indebted to Dr. Jane E. Huggins, Associate Research Scientist 
              setTimeout(capture,video.frameDelay);             
         }else{
              var videoElement = document.createElement("video");
-             videoDiv.innerHTML = video.toBlob();
-             
-             videoElement.src = URL.createObjectURL(video.toBlob());
+             document.getElementById('videoDownload').href = url;
+             var videoURL = URL.createObjectURL(video.toBlob());
+             videoElement.src = videoURL;
              document.body.appendChild(videoElement);
+             videoElement.appendChild(videoElement);
              video = undefined; // DeReference as it is memory hungry.
              return;
         }
