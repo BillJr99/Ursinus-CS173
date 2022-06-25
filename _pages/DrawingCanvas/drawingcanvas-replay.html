@@ -441,7 +441,7 @@ citation: "We are indebted to Dr. Jane E. Huggins, Associate Research Scientist 
              setTimeout(capture,video.frameDelay);             
         }else{
              var videoElement = document.createElement("video");
-             videoDiv.appendChild(videoElement);
+             videoDiv.innerHTML = video.toBlob();
              
              videoElement.src = URL.createObjectURL(video.toBlob());
              document.body.appendChild(videoElement);
