@@ -26,6 +26,8 @@ citation: "Image credit..."
 7. Set survey link if desired in postit-instructions.html
 surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
 
+8. In drawingcanvas-replay and instructions pages, set replaylinksuffix to a unique image name (i.e., image2); set URL to a unique URL (/2/Replay, /3/Replay, etc.) in all pages
+
 NOTES:
 * Original standalone version in drawingcanvas-standalone.html
 * numcols must be less than or equal to 26, because the column to index calculation assumes that the column heading is a single character

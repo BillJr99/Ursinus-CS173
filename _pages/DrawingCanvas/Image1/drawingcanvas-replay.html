@@ -25,6 +25,8 @@ dofreedraw: false
 
 fayelink: "https://FayePubSub.jpopyack.repl.co"
 replaylink: "https://ReplayDataStore.jpopyack.repl.co"
+replaylinksuffix: "?name=image1"
+
 replaysleepms: 5
 
 instructionswidth: 896
@@ -248,7 +250,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "{{ page.replaylink }}/insert", true);
+    xhr.open("POST", "{{ page.replaylink }}/insert{% if page.replaylinksuffix %}{{page.replaylinksuffix}}{% endif %}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;
@@ -301,7 +303,7 @@ function doReplayDispatch(data, i) {
 
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "{{ page.replaylink }}/retrieve", true);
+    xhr.open("GET", "{{ page.replaylink }}/retrieve{% if page.replaylinksuffix %}{{page.replaylinksuffix}}{% endif %}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;

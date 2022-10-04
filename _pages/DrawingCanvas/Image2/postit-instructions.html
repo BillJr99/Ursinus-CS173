@@ -1,6 +1,6 @@
 ---
 layout: default-blank
-permalink: /DrawingCanvas/Replay/Instructions
+permalink: /DrawingCanvas/2/Replay/Instructions
 title: "Pixel Pandemonium Instructions"
 excerpt: "Pixel Pandemonium Instructions"
 
@@ -22,6 +22,7 @@ colorpickerheight: 64
 
 fayelink: "https://FayePubSub.jpopyack.repl.co"
 replaylink: "https://ReplayDataStore.jpopyack.repl.co"
+replaylinksuffix: "?name=image2"
 
 rectangleepsilon: 2
 
@@ -405,7 +406,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "{{ page.replaylink }}/insert", true);
+    xhr.open("POST", "{{ page.replaylink }}/insert{{ page.replaylinksuffix }}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;
@@ -499,7 +500,7 @@ function doReplayDispatch(data) {
 
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "{{ page.replaylink }}/retrieve", true);
+    xhr.open("GET", "{{ page.replaylink }}/retrieve{% if page.replaylinksuffix %}{{page.replaylinksuffix}}{% endif %}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;
