@@ -26,7 +26,7 @@ citation: "Image credit..."
 7. Set survey link if desired in postit-instructions.html
 surveylink: "https://forms.gle/MwwEtBHWLHqxDpzm6"
 
-8. In drawingcanvas-replay and instructions pages, set replaylinksuffix to a unique image name (i.e., image2); set URL to a unique URL (/2/Replay, /3/Replay, etc.) in all pages.  Be sure relative links i.e. to javascript instructionsjs are valid.
+8. In drawingcanvas-replay and instructions pages, set linksuffix to a unique image name (i.e., image2); set URL to a unique URL (/2/Replay, /3/Replay, etc.) in all pages.  Be sure relative links i.e. to javascript instructionsjs are valid.
 
 NOTES:
 * Original standalone version in drawingcanvas-standalone.html

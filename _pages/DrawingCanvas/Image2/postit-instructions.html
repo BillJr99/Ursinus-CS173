@@ -22,7 +22,7 @@ colorpickerheight: 64
 
 fayelink: "https://FayePubSub.jpopyack.repl.co"
 replaylink: "https://ReplayDataStore.jpopyack.repl.co"
-replaylinksuffix: "?name=image2"
+linksuffix: "image2"
 
 rectangleepsilon: 2
 
@@ -406,7 +406,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "{{ page.replaylink }}/insert{{ page.replaylinksuffix }}", true);
+    xhr.open("POST", "{{ page.replaylink }}/insert?name={{ page.linksuffix }}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;
@@ -500,7 +500,7 @@ function doReplayDispatch(data) {
 
 function doReplayGet() {    
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "{{ page.replaylink }}/retrieve{% if page.replaylinksuffix %}{{page.replaylinksuffix}}{% endif %}", true);
+    xhr.open("GET", "{{ page.replaylink }}/retrieve{% if page.linksuffix %}?name={{page.linksuffix}}{% endif %}", true);
     
     xhr.onreadystatechange = function () {
         if (this.readyState != 4) return;
@@ -525,7 +525,7 @@ doReplayGet();
 var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
 function doFayeSubscribe() {
-  fayeclient.subscribe('/messages', function(message) {
+  fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
     // Don't draw incoming messages
     console.log("Message: " + message.text);
     
@@ -553,7 +553,7 @@ function doFayeSubscribe() {
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
-    fayeclient.publish('/messages', {
+    fayeclient.publish('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
       text: message
     });     
 }
