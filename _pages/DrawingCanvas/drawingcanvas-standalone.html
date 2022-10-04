@@ -250,7 +250,7 @@ function gridListeners() {
 var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
 function doFayeSubscribe() {
-  fayeclient.subscribe('/messages', function(message) {
+  fayeclient.subscribe('/messages/standalone', function(message) {
     //console.log("Message: " + message.text);
     
     var msg = message.text;
@@ -270,7 +270,7 @@ function doFayeSubscribe() {
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue;
     
-    fayeclient.publish('/messages', {
+    fayeclient.publish('/messages/standalone', {
       text: message
     });     
 }
