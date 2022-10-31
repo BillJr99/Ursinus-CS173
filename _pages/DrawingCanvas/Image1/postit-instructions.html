@@ -423,7 +423,57 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 }
 
 var isPageFilledIn = [];
- 
+
+// A1 A2 A3 A4 A5 A6 A7 A8 to A1-A8, B1-B8, ...
+function condenseList(str, numCols, numRows) {
+    const strlist = text.trim().split(" ");
+    
+    var currentRunStartLetter = '';
+    var currentRunStartNumber = 0;
+    var expectedNumber = 0;
+    var expectedLetter = '';
+    var number = 0;
+    var letter = '';
+    
+    var result = '';
+    
+    for(var i = 0; i < strlist.length; i++) {
+        if(currentRunStartLetter.length() == 0 || currentRunStartNumber == 0) {
+            currentRunStartLetter = strlist[i].charAt(0);
+            currentRunStartNumber = parseInt(strlist[i].substring(1));
+            letter = currentRunStartLetter;
+            number = currentRunStartNumber;
+            expectedLetter = currentRunStartLetter;
+            expectedNumber = currentRunStartNumber;            
+        } else {
+            letter = strlist[i].charAt(0);
+            number = parseInt(strlist[i].substring(1));                    
+        }
+        
+        if(expectedLetter != letter) {
+            result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " letter + (number-1).toString();
+            currentRunStartLetter = strlist[i].charAt(0);
+            currentRunStartNumber = parseInt(strlist[i].substring(1));            
+        } else if(currentRunStartNumber != number) {
+            result += currentRunStartLetter + currentRunStartNumber.toString() + " - " letter + (number-1).toString();
+            currentRunStartLetter = strlist[i].charAt(0);
+            currentRunStartNumber = parseInt(strlist[i].substring(1)); 
+            letter = currentRunStartLetter;
+            number = currentRunStartNumber;
+            expectedLetter = currentRunStartLetter;
+            expectedNumber = currentRunStartNumber;              
+        }
+        
+        expectedNumber++;
+        if(number > numCols) {
+            expectedNumber = 1;
+            expectedLetter = expectedLetter + 1;
+        }
+    }
+    
+    return result;
+}
+
 function setPagesThatRemain() {
 	var result = "";
 	var ch = "A".charCodeAt(0) - 1;
@@ -448,7 +498,7 @@ function setPagesThatRemain() {
 		}
 	}
 	if(result.length > 0) {
-		document.getElementById("remainingPages").innerHTML = "Here are some pages that remain to be filled in: " + result;
+		document.getElementById("remainingPages").innerHTML = "Here are some pages that remain to be filled in: " + condenseList(result, numCols, numRows);
 	} else {
 		document.getElementById("remainingPages").innerHTML = "";
 	}
