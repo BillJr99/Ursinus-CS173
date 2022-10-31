@@ -458,11 +458,11 @@ function condenseList(str, numCols, numRows) {
             }
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1));            
-        } else if(currentRunStartNumber != number) {
+        } else if(expectedNumber != number) {
             if(currentRunStartLetter == letter && currentRunStartNumber == (number - 1)) {
-                result += currentRunStartLetter + currentRunStartNumber.toString();
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString();
             } else {
-                result += currentRunStartLetter + currentRunStartNumber.toString() + " - " + letter + (number-1).toString();
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + letter + (number-1).toString();
             }        
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1)); 
