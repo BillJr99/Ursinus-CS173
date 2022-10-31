@@ -438,7 +438,7 @@ function condenseList(str, numCols, numRows) {
     var result = '';
     
     for(var i = 0; i < strlist.length; i++) {
-        if(currentRunStartLetter.length() == 0 || currentRunStartNumber == 0) {
+        if(currentRunStartLetter.length == 0 || currentRunStartNumber == 0) {
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1));
             letter = currentRunStartLetter;
