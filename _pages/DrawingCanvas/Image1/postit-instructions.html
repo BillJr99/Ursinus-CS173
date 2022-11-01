@@ -485,6 +485,12 @@ function condenseList(str, numCols, numRows) {
         }
     }
     
+    // remove the extra comma at the end
+    if(result.trim().charAt(result.trim().length - 1) == ',') {
+        result = result.trim();
+        result = result.substring(0, result.length);
+    }
+    
     return result;
 }
 
