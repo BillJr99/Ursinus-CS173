@@ -480,7 +480,7 @@ function condenseList(str, numCols, numRows) {
         priorNumber = number;
         
         expectedNumber++;
-        if(number > numCols) {
+        if(expectedNumber > numCols) {
             // will be reset at the top of the loop
             expectedNumber = 0;
             expectedLetter = '';
