@@ -454,15 +454,7 @@ function condenseList(str, numCols, numRows) {
             number = parseInt(strlist[i].substring(1));                    
         }
         
-        if(expectedLetter != letter) {
-            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
-                result += ", " + currentRunStartLetter + currentRunStartNumber.toString();
-            } else {
-                result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
-            }
-            currentRunStartLetter = strlist[i].charAt(0);
-            currentRunStartNumber = parseInt(strlist[i].substring(1));            
-        } else if(expectedNumber != number) {
+        if(expectedNumber != number) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += " " + currentRunStartLetter + currentRunStartNumber.toString();
             } else {
@@ -481,6 +473,12 @@ function condenseList(str, numCols, numRows) {
         
         expectedNumber++;
         if(expectedNumber >= numCols) {
+            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
+                result += ", " + currentRunStartLetter + currentRunStartNumber.toString();
+            } else {
+                result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
+            }
+            
             // will be reset at the top of the loop
             currentRunStartLetter = '';
             currentRunStartNumber = 0;
