@@ -485,10 +485,19 @@ function condenseList(str, numCols, numRows) {
         }
     }
     
+    // Output the last column
+    if(currentRunStartLetter.length > 0 || currentRunStartNumber > 0) {
+        if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
+            result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
+        } else {
+            result += currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
+        }    
+    }
+    
     // remove the extra comma at the end
     if(result.trim().charAt(result.trim().length - 1) == ',') {
         result = result.trim();
-        result = result.substring(0, result.length);
+        result = result.substring(0, result.length - 1);
     }
     
     return result;
