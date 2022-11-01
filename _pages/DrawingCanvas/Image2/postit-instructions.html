@@ -456,9 +456,9 @@ function condenseList(str, numCols, numRows) {
         
         if(expectedNumber != number) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
-                result += " " + currentRunStartLetter + currentRunStartNumber.toString();
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + ", ";
             } else {
-                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
             }        
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1)); 
@@ -474,9 +474,9 @@ function condenseList(str, numCols, numRows) {
         expectedNumber++;
         if(expectedNumber >= numCols) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
-                result += ", " + currentRunStartLetter + currentRunStartNumber.toString();
+                result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
             } else {
-                result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
+                result += currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
             }
             
             // will be reset at the top of the loop
@@ -494,8 +494,7 @@ function setPagesThatRemain() {
 	for(var j = 0; j < numCols; j++) { // numCols/numRows is defined in the image javascript, and is not the same as the local numrows/numcols variables here
 		rowresult = "";
 		ch++;
-		for(var i = 0; i < numRows; i++) {
-			
+		for(var i = 0; i < numRows; i++) {		
 			var pagedata = "";
 			for(var k = j * subcols; k < (j+1) * subcols; k++) {
 				for(var l = i * subrows; l < (i+1) * subrows; l++) {
