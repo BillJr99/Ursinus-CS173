@@ -432,6 +432,8 @@ function condenseList(str, numCols, numRows) {
     var currentRunStartNumber = 0;
     var expectedNumber = 0;
     var expectedLetter = '';
+    var priorNumber = 0;
+    var priorLetter = '';
     var number = 0;
     var letter = '';
     
@@ -444,25 +446,27 @@ function condenseList(str, numCols, numRows) {
             letter = currentRunStartLetter;
             number = currentRunStartNumber;
             expectedLetter = currentRunStartLetter;
-            expectedNumber = currentRunStartNumber;            
+            expectedNumber = currentRunStartNumber;
+            priorLetter = letter;
+            priorNumber = number;
         } else {
             letter = strlist[i].charAt(0);
             number = parseInt(strlist[i].substring(1));                    
         }
         
         if(expectedLetter != letter) {
-            if(currentRunStartLetter == letter && currentRunStartNumber == (number - 1)) {
+            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += ", " + currentRunStartLetter + currentRunStartNumber.toString();
             } else {
-                result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + letter + (number-1).toString();
+                result += ", " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
             }
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1));            
         } else if(expectedNumber != number) {
-            if(currentRunStartLetter == letter && currentRunStartNumber == (number - 1)) {
+            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += " " + currentRunStartLetter + currentRunStartNumber.toString();
             } else {
-                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + letter + (number-1).toString();
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString();
             }        
             currentRunStartLetter = strlist[i].charAt(0);
             currentRunStartNumber = parseInt(strlist[i].substring(1)); 
@@ -471,6 +475,9 @@ function condenseList(str, numCols, numRows) {
             expectedLetter = currentRunStartLetter;
             expectedNumber = currentRunStartNumber;              
         }
+        
+        priorLetter = letter;
+        priorNumber = number;
         
         expectedNumber++;
         if(number > numCols) {
