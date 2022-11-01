@@ -602,6 +602,8 @@ doReplayGet();
 // Pub-sub
 var fayeclient = new Faye.Client('{{ page.fayelink }}');
 
+fayeclient.setHeader("Access-Control-Allow-Origin", "*");
+
 function doFayeSubscribe() {
   fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
     // Don't draw incoming messages
