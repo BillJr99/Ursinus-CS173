@@ -28,6 +28,10 @@ rectangleepsilon: 2
 
 ---
 
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
 <style>
 	.mono {
 		font-family:'Lucida Sans Typewriter', 'Courier New', 'monospace'; 
@@ -472,7 +476,7 @@ function condenseList(str, numCols, numRows) {
         priorNumber = number;
         
         expectedNumber++;
-        if(expectedNumber >= numCols) {
+        if(expectedNumber > numRows) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
             } else {
