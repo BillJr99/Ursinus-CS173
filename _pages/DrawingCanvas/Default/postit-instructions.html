@@ -458,6 +458,8 @@ function condenseList(str, numCols, numRows) {
             number = parseInt(strlist[i].substring(1));                    
         }
         
+        console.log("Pages to be filled in: expecting " + expectedLetter + expectedNumber + " and current " +  letter + number);
+        
         if(expectedNumber != number) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += " " + currentRunStartLetter + currentRunStartNumber.toString() + ", ";
