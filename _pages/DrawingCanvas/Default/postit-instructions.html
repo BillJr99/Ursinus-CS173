@@ -478,7 +478,7 @@ function condenseList(str, numCols, numRows) {
         priorNumber = number;
         
         expectedNumber++;
-        if(expectedNumber >= numCols) {
+        if(expectedNumber >= numRows) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
                 result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
             } else {
