@@ -68,9 +68,15 @@ function showPixelMap(page)
 	{
         if(page === '') {
             // clear the text boxes
-            document.getElementById("thePage").innerHTML = "";
-            document.getElementById("data").innerHTML = "";
-            document.getElementById("compressed").innerHTML = "";
+            if(document.getElementById("thePage") != null) {
+                document.getElementById("thePage").innerHTML = "";
+            }
+            if(document.getElementById("data") != null) {
+                document.getElementById("data").innerHTML = "";
+            }
+            if(document.getElementById("compressed") != null) {
+                document.getElementById("compressed").innerHTML = "";
+            }
         }
         
 		var tbl = document.getElementById("pixelChart") ;
@@ -158,46 +164,46 @@ function getPageData(pages)
 		
 	document.getElementById("compressed").innerHTML = compressed ;
 	
-	showPixelMap(page) ;
+	showPixelMap(page);
+    
+    gotPageData = true;
 
-        // Is the page already filled in?  If so, draw what's there now
-        // by filling in all of the subsquares within that selected square
-        var pagerow = row - 1;
-        var pagecol = col.charCodeAt(0) - "A".charCodeAt(0);    
-        var starti = pagerow * subrows;
-        var startj = pagecol * subcols;
-        var endi = (pagerow + 1) * subrows;
-        var endj = (pagecol + 1) * subcols;
-    
-        console.log("Checking page data for raw row: " + row + ", raw col " + col + "; major row: " + pagerow + " and major col: " + pagecol + " subrow " + starti + ", subcol " + startj + " to row " + endi + ", col " + endj);
-    
-        for(var i = starti; i < endi; i++) {
-            for(var j = startj; j < endj; j++) {
-                var pagedata = isPageFilledIn[i][j];
+    // Is the page already filled in?  If so, draw what's there now
+    // by filling in all of the subsquares within that selected square
+    var pagerow = row - 1;
+    var pagecol = col.charCodeAt(0) - "A".charCodeAt(0);    
+    var starti = pagerow * subrows;
+    var startj = pagecol * subcols;
+    var endi = (pagerow + 1) * subrows;
+    var endj = (pagecol + 1) * subcols;
+
+    console.log("Checking page data for raw row: " + row + ", raw col " + col + "; major row: " + pagerow + " and major col: " + pagecol + " subrow " + starti + ", subcol " + startj + " to row " + endi + ", col " + endj);
+
+    for(var i = starti; i < endi; i++) {
+        for(var j = startj; j < endj; j++) {
+            var pagedata = isPageFilledIn[i][j];
+        
+            console.log("Page data for row " + i + ", col " + j + ": " + pagedata);
+        
+            if(pagedata.trim().length > 0) {
+                var msgparts = pagedata.split(',');
             
-                console.log("Page data for row " + i + ", col " + j + ": " + pagedata);
+                var leftx = msgparts[0];
+                var topy = msgparts[1];
+                var rectwidth = msgparts[2];
+                var rectheight = msgparts[3];
+                var rectcolor = msgparts[4];
+                var xsquare = msgparts[5];
+                var ysquare = msgparts[6];
             
-                if(pagedata.trim().length > 0) {
-                    var msgparts = pagedata.split(',');
-                
-                    var leftx = msgparts[0];
-                    var topy = msgparts[1];
-                    var rectwidth = msgparts[2];
-                    var rectheight = msgparts[3];
-                    var rectcolor = msgparts[4];
-                    var xsquare = msgparts[5];
-                    var ysquare = msgparts[6];
-                
-                    // convert to this page grid coordinates
-                    xsquare = xsquare - startj;
-                    ysquare = ysquare - starti;                 
-            
-                    drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
-                }
+                // convert to this page grid coordinates
+                xsquare = xsquare - startj;
+                ysquare = ysquare - starti;                 
+        
+                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
             }
         }
-    
-        gotPageData = true;
+    }
 }
 </script>
 	
