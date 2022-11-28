@@ -1,0 +1,86 @@
+---
+layout: default-blankwide
+permalink: /DrawingCanvas/Eagles/Replay
+title: "Pixel Pandemonium"
+excerpt: "Pixel Pandemonium"
+---
+
+<script LANGUAGE="javascript" TYPE="text/javascript">
+function menuEntry(title,filename)
+{
+	document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + title + '</a></li>');
+}
+</script>
+
+<style>
+body {
+/*	font-family: "Times New Roman", "serif";*/
+/*	font-family: "Old Standard TT", sans-serif;*/
+	font-family: "Frank Ruhl Libre", sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4F80B0; /* Winter */
+/*    background-color: #B45B01; /* Fall . */
+/*    background-color: #006;  */
+    //#; 
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: #EBEDEC; //#FFC; //#FF6;
+    text-align: center;
+    padding: 14px 16px;
+	font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+li a:hover {
+ /*   background-color: #99CC99; /* Fall */
+    background-color: #99CC99; /* Winter */
+/*    #2DA389; 8/
+}
+</style>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
+<link HREF="{{site.baseurl}}/assets/css/drawingcanvas.css" REL="stylesheet" TYPE="text/css" />
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+<table width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="4">
+  <tr> 
+<!--    <td COLSPAN="9" BACKGROUND="images/PragueWall-rotated.png"> --> 
+   <td COLSPAN="9" class="topLevelBody"> 
+      <div ALIGN="center">
+		  <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
+		  <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
+      </div>
+    </td>
+  </tr>
+</table>
+<ul>
+
+<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+	menuEntry("About Pixel Pandemonium","./Replay/About")
+	menuEntry("Fill In a Page","./Replay/Instructions")
+	menuEntry("View Full Image","./Replay/DrawingCanvas")
+</script>
+
+</ul>
+
+<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+	document.write('<iframe id="fileContents" src="./Replay/About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
+</script> 

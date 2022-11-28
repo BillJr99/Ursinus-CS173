@@ -1,0 +1,26 @@
+---
+layout: default-blank
+permalink: /DrawingCanvas/RobotSpringboard/Replay/Reveal
+title: "Pixel Pandemonium - Finished Images"
+excerpt: "Pixel Pandemonium - Finished Images"
+
+---
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<div style="margin-left: 80px;">
+{% if page.finishedvideos %}
+<h2>See Your Finished Images Here!</h2>
+{% for finishedvideo in page.finishedvideos %}
+{% if finishedvideo.header %}
+<h3>{{finishedvideo.header}}</h3>
+{% endif %}
+<iframe width="{{finishedvideo.width}}" height="{{finishedvideo.height}}" src="{{finishedvideo.link}}" frameborder="0" scrolling="No" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><br>
+{% endfor %}
+{% else %}
+<h2>Check Back Later to See Your Finished Videos!</h2>
+{% endif %}
+</div>

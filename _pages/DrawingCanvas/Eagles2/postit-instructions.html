@@ -1,0 +1,794 @@
+---
+layout: default-blank
+permalink: /DrawingCanvas/Eagles2/Replay/Instructions
+title: "Pixel Pandemonium Instructions"
+excerpt: "Pixel Pandemonium Instructions"
+
+instructionsjs: "../../../files/drawingcanvas-eagles2/Post-It_Eagles_Logo2_composite.js"
+
+canvascolors: 7     
+    
+numcols: 1
+numrows: 1
+
+subcols: 5
+subrows: 3
+
+canvaswidth: 500
+canvasheight: 300
+
+colorpickerwidth: 64
+colorpickerheight: 64
+
+fayelink: "https://FayePubSub.jpopyack.repl.co"
+replaylink: "https://ReplayDataStore.jpopyack.repl.co"
+linksuffix: "eagles2"
+
+rectangleepsilon: 2
+
+---
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<style>
+	.mono {
+		font-family:'Lucida Sans Typewriter', 'Courier New', 'monospace'; 
+		font-size: 18px; 
+		font-weight:bolder;		
+	}
+    
+    #canvascontainer {
+     width: {{ page.canvaswidth | plus:100 }}px;
+     height: {{ page.canvasheight | plus:10 }}px;
+    }    
+    
+    #maincanvascontainer { 
+     float: left;
+     width: {{ page.canvaswidth }}px;
+     height: {{ page.canvasheight }}px;
+     margin: 0;
+     padding: 0;
+     display: inline-block;
+    }    
+</style>
+
+{% if page.fayelink %}
+<!-- Run corresponding repl.it -->
+<script type="text/javascript" 
+        src="{{ page.fayelink }}/faye/client.js">
+        </script>
+{% endif %}
+
+<script language="javascript" type="text/javascript" src="{{ page.instructionsjs }}?t={{ site.time | date_to_xmlschema }}"></script>
+<script language="javascript" type="text/javascript">
+function showPixelMap(page)
+	{
+        if(page === '') {
+            // clear the text boxes
+            if(document.getElementById("thePage") != null) {
+                document.getElementById("thePage").innerHTML = "";
+            }
+            if(document.getElementById("data") != null) {
+                document.getElementById("data").innerHTML = "";
+            }
+            if(document.getElementById("compressed") != null) {
+                document.getElementById("compressed").innerHTML = "";
+            }
+        }
+        
+		var tbl = document.getElementById("pixelChart") ;
+		var topRow = '<table width="50%" border="1" cellspacing="0" cellpadding="10">' ;
+		var interior = "" ;
+		count = -1 ;
+		for(var i=0; i<{{page.subrows}}; i++)
+		{
+			var row = "<tr>" ;
+
+			for(var j=0; j<{{page.subcols}}; j++)
+			{
+				count++ ;
+				row += "<td class='mono' align=center" ;
+				row += ">" + 
+					(page=="" ? "&nbsp;" : page.uncompressed[count])
+				+ "</td>" ;
+			}
+			row += "</tr>" ;
+			interior += row ;
+		}
+		var lastPart = '</table>' ;
+		tbl.innerHTML = topRow + interior + lastPart ;
+	}
+
+function lookupPage(pages,row,col)
+{
+  // Examine each element in the interludes array, and return 
+  // the index of the first element i for which 
+  // pages[i].row == row and pages[i].col == col . 
+  // If item not found, return -1 ;
+
+    var i=0;
+    while( i<pages.length && 
+		  !(pages[i].row==row && pages[i].col==col) )
+    {
+		i++ ;
+    }
+    if( i==pages.length )
+        i = -1 ;
+
+    return i ;
+}
+
+var gotPageData = false;
+
+function getPageData(pages)
+{
+	document.getElementById("pageInstructions").display = "table-cell" ;
+	
+	var col = document.getElementById("pageCol").value ; // "A" ;
+	var row = document.getElementById("pageRow").value ; // "3"  ;
+	
+	row = row.toUpperCase() ;
+	
+	var pageNum = lookupPage(pages,row,col) ;
+	if( pageNum < 0 )
+	{
+		alert("Nonexistent page, " + row + "-" + col ) ;
+		return ;
+	}
+	
+	page = pages[pageNum] ;
+	
+	document.getElementById("thePage").innerHTML = col + "-" + row ;
+	
+	uncompressed = "" ;
+	extraSpace = {{page.subcols}} ; // put an extra space after every 5 elements
+	for(var i=0; i<page.uncompressed.length; i++)
+	{
+		uncompressed += page.uncompressed[i] + " " ;
+		if( i%extraSpace == extraSpace-1 )
+			uncompressed += "&nbsp;" ;
+	}
+	document.getElementById("data").innerHTML = uncompressed ;
+	
+	compressed = "" ;
+	extraSpace = 2 ; // put an extra space after every 2 elements
+	for(var i=0; i<page.compressed.length; i++)
+	{
+		compressed += page.compressed[i] + " " ;
+		if( i%extraSpace == extraSpace-1 )
+			compressed += "&nbsp;" ;
+	}
+		
+	document.getElementById("compressed").innerHTML = compressed ;
+	
+	showPixelMap(page);
+    
+    gotPageData = true;
+
+    // Is the page already filled in?  If so, draw what's there now
+    // by filling in all of the subsquares within that selected square
+    var pagerow = row - 1;
+    var pagecol = col.charCodeAt(0) - "A".charCodeAt(0);    
+    var starti = pagerow * subrows;
+    var startj = pagecol * subcols;
+    var endi = (pagerow + 1) * subrows;
+    var endj = (pagecol + 1) * subcols;
+
+    console.log("Checking page data for raw row: " + row + ", raw col " + col + "; major row: " + pagerow + " and major col: " + pagecol + " subrow " + starti + ", subcol " + startj + " to row " + endi + ", col " + endj);
+
+    for(var i = starti; i < endi; i++) {
+        for(var j = startj; j < endj; j++) {
+            var pagedata = isPageFilledIn[i][j];
+        
+            console.log("Page data for row " + i + ", col " + j + ": " + pagedata);
+        
+            if(pagedata.trim().length > 0) {
+                var msgparts = pagedata.split(',');
+            
+                var leftx = msgparts[0];
+                var topy = msgparts[1];
+                var rectwidth = msgparts[2];
+                var rectheight = msgparts[3];
+                var rectcolor = msgparts[4];
+                var xsquare = msgparts[5];
+                var ysquare = msgparts[6];
+            
+                // convert to this page grid coordinates
+                xsquare = xsquare - startj;
+                ysquare = ysquare - starti;                 
+        
+                drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare);
+            }
+        }
+    }
+}
+</script>
+	
+</head>
+
+<body>
+<p>Please assist us by preparing one page of an image, by building it one  pixel at a time.  
+	</p>
+<p>
+  <script language="javascript" type="text/javascript">
+	document.write("The image has " + numCols + " columns, from <b>A-" + 
+				   pages[numCols*numRows-1].col + 
+				   "</b>, and rows numbered from <b>1-" + numRows + "</b>")
+</script>
+</p>
+<p>
+	Select a page column and row from the drop-down menus
+	below, then click "Select Page" to get 
+	instructions for filling in the designated page.  
+	If the right side is already filled in, someone has completed that page already; 
+	feel free to select another!
+<br />
+	<select id="pageCol" onChange="showPixelMap(''); makeGrid(canvas.width, canvas.height, gridwidth, gridheight);"></select>
+	<select id="pageRow" onChange="showPixelMap(''); makeGrid(canvas.width, canvas.height, gridwidth, gridheight);"></select>
+	<input type="button" id="getPage" value="Select Page" onClick="getPageData(pages);" />
+</p>
+<script language="javascript" type="text/javascript">
+var select = document.getElementById("pageCol");
+var ch = "A".charCodeAt(0) - 1;
+for(var i=0; i<numCols; i++) 
+{
+    ch++ ;
+	var el = document.createElement("option");
+    el.textContent = String.fromCharCode(ch) ;
+    el.value = String.fromCharCode(ch) ;
+    select.appendChild(el);
+}
+select = document.getElementById("pageRow");
+for(var i=1; i<=numRows; i++) 
+{
+    var el = document.createElement("option");
+    el.textContent = i ;
+    el.value = i ;
+    select.appendChild(el) ;
+}
+</script>
+	
+<p>
+	<div id="remainingPages"></div>
+</p>
+
+	
+<table border="0" cellspacing="4" cellpadding="0">
+<tr>
+<td width="{{ page.canvaswidth | plus:150 }}">    
+<!--<div id="pageInstructions" style="display:none;">
+--><div id="pageInstructions" style="display:table-cell;">
+<p>
+The code provided below (&ldquo;Your Data&rdquo;) represents the {{ page.subrows | times:page.subcols }} pixels on a grid with {{page.subrows}} rows and {{page.subcols}} columns, as shown below.  </p>
+
+<table border="1" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="672" valign="middle">
+		<div><strong>Your Data</strong>:   
+		  <span id="data" class="mono"></span> 
+		</div>
+	</td>
+    <td id="pixelChart" width="48" valign="middle"><p>&nbsp;</p></td>
+  </tr>
+</table>
+
+<script language="javascript" type="text/javascript">
+	showPixelMap("") ;  // draw empty table
+</script>
+
+<p>Each number represents a particular color for the pixel in that position.<br>
+  1.  Find the colors you need by viewing the color code chart.<br>
+  2.  For each pixel, click the color you need, then the position it belongs in.</p>
+<p>3.  <u>A Quick Lesson in Data Compression</u>:  Here is what your data looks like in Compressed format (each pair of numbers represents a <em>count</em> followed by a <em>color</em>, so &ldquo;3 2&rdquo; for instance, means &ldquo;3 copies of color #2&rdquo;: </p>
+<indent>
+  <div id="compressed" class="mono" style="margin-left: 20px;"> 
+	</div>
+</indent><p>&nbsp;</p>
+
+{% if page.surveylink %}
+<p>
+Please take a <a href="{{ page.surveylink }}">short survey</a> about this activity to help us in the development of this activity!
+</p>
+{% endif %}
+
+<p>This is Page:
+		<span style="width:30px; text-align:center; border:solid black 1px;">
+		&nbsp;&nbsp;&nbsp;
+			<span id="thePage">&nbsp;&nbsp;&nbsp;</span>
+		&nbsp;&nbsp;&nbsp;
+		</span>
+		&nbsp;
+	of the composite image.</p>
+</td>
+<td>
+<!-- BEGIN CANVAS -->
+Click on a color below, and then click on each of the rectangles below to fill it in with that color according to the code on the left!
+
+<!-- https://medium.com/@joehanson/multi-user-javascript-virtual-whiteboard-28e4b24ef3e2 -->
+
+<!-- Set color palette and dimensions above according to mail merge post it posterizer colors and drawing grid, if using post-its; create and give out mail merge document -->
+
+<br>
+<div id="canvascontainer">
+<div id="maincanvascontainer">
+<canvas id="drawCanvas" width="{{ page.canvaswidth }}" height="{{ page.canvasheight }}" style="border:1px solid #000000;"></canvas>
+</div>
+</div>
+
+<br><br>
+
+<div id="colorpicker" style="max-width:{{ page.instructionswidth | default: 560}}px;">
+{% for i in (0..page.canvascolors) %}
+{% if i < page.canvascolors %}
+<canvas id="canvascolor{{ i }}" width="{{ page.colorpickerwidth }}" height="{{ page.colorpickerheight }}" style="border:1px solid #000000;"></canvas>
+{% endif %}
+{% endfor %}
+</div>
+
+<br>
+
+
+
+<script type="text/javascript">
+var canvas = document.getElementById('drawCanvas');
+var ctx = canvas.getContext('2d');
+var colorpicker = document.getElementById('colorpicker');
+
+ctx.lineWidth = '3';
+
+// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function rgbToHex(r, g, b) {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+// palettes for pre made color choosers; will be placed sequentially into numbered canvascolorN elements
+var palettes = [];
+for(var i = 0; i < {{ page.canvascolors }} && i < palette.length; i++) {
+    palettes.push(rgbToHex(palette[i][0], palette[i][1], palette[i][2])); // palette defined in post it instructionsjs
+}
+
+function colorpaletteclicked(e) {
+    var id = e.target.id;
+    
+    id = id.replace("canvascolor", "");
+    
+    id = parseInt(id);
+    
+    chosencolor = palettes[id];
+    
+    colorpicker.value = chosencolor;
+    
+    //console.log(id);
+    //console.log(chosencolor);
+}
+
+function makeColorPalette(colorcanvas, fillcolor, label) {
+    var colorctx = colorcanvas.getContext('2d');
+    
+    // Color it in with the predefined palette
+    colorctx.fillStyle = fillcolor;
+    colorctx.fillRect(0, 0, colorcanvas.width, colorcanvas.height);
+    
+    // Label the color with a number
+    colorctx.font = "18px Arial";
+    if(fillcolor == '#000000') {
+        colorctx.fillStyle = "white";    
+        colorctx.strokeStyle = "white";         
+    } else {
+        colorctx.fillStyle = "black";    
+        colorctx.strokeStyle = "black"; 
+    }
+    colorctx.fillText(label, (colorcanvas.width / 2.0) * 0.9, (colorcanvas.height / 2.0) * 0.9);
+}
+
+function makeColorPalettes() {
+    for(var i = 0; i < palettes.length; i++) {
+        var colorcanvas = document.getElementById('canvascolor' + i);
+        makeColorPalette(colorcanvas, palettes[i], i);
+        
+        // Add a listener here that, when clicked, sets the main color picker color value
+        colorcanvas.addEventListener('mousedown', colorpaletteclicked, false);        
+    }
+}
+
+makeColorPalettes();
+
+// canvas width is 800x600 by default; use these to set the number of elements: 800/width = num cols, 600/height = num rows
+// note that numcols must be < 26, otherwise a conversion must be written to go from column letter to number beyond one character (see .charCodeAt(0)) in all pages
+var numcols = {{ page.numcols }};
+var numrows = {{ page.numrows }};
+var gridwidth = {{ page.canvaswidth }} / numcols;
+var gridheight = {{ page.canvasheight }} / numrows;
+
+// subcols and subrows provide subsquares within each grid element for the individual fill-ins
+var subcols = {{ page.subcols }};
+var subrows = {{ page.subrows }};
+
+function gridListeners() {
+    canvas.addEventListener('mousedown', fillgrid, false);
+}
+
+{% if page.replaylink %}
+function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "{{ page.replaylink }}/insert?name={{ page.linksuffix }}", true);
+    
+    xhr.onreadystatechange = function () {
+        if (this.readyState != 4) return;
+
+        if (this.status == 200) {
+            var data = JSON.parse(this.responseText);
+
+            console.log("Replay Message Sent");
+        }
+    };
+    
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+    xhr.send("data=" + message);
+}
+
+var isPageFilledIn = [];
+ 
+// A1 A2 A3 A4 A5 A6 A7 A8 to A1-A8, B1-B8, ...
+function condenseList(str, numCols, numRows) {
+    const strlist = str.trim().split(" ");
+    
+    var currentRunStartLetter = '';
+    var currentRunStartNumber = 0;
+    var expectedNumber = 0;
+    var expectedLetter = '';
+    var priorNumber = 0;
+    var priorLetter = '';
+    var number = 0;
+    var letter = '';
+    
+    var result = '';
+    
+    for(var i = 0; i < strlist.length; i++) {
+        if(currentRunStartLetter.length == 0 || currentRunStartNumber == 0) {
+            currentRunStartLetter = strlist[i].charAt(0);
+            currentRunStartNumber = parseInt(strlist[i].substring(1));
+            letter = currentRunStartLetter;
+            number = currentRunStartNumber;
+            expectedLetter = currentRunStartLetter;
+            expectedNumber = currentRunStartNumber;
+            priorLetter = letter;
+            priorNumber = number;
+        } else {
+            letter = strlist[i].charAt(0);
+            number = parseInt(strlist[i].substring(1));                    
+        }
+        
+        console.log("Pages to be filled in: expecting " + expectedLetter + expectedNumber + " and current " +  letter + number + " with js variables numCols=" + numCols + " and numRows=" + numRows);
+        
+        if(expectedNumber != number) {
+            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + ", ";
+            } else {
+                result += " " + currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
+            }        
+            currentRunStartLetter = strlist[i].charAt(0);
+            currentRunStartNumber = parseInt(strlist[i].substring(1)); 
+            letter = currentRunStartLetter;
+            number = currentRunStartNumber;
+            expectedLetter = currentRunStartLetter;
+            expectedNumber = currentRunStartNumber;              
+        }
+        
+        priorLetter = letter;
+        priorNumber = number;
+        
+        expectedNumber++;
+        if(expectedNumber > numRows) {
+            if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
+                result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
+            } else {
+                result += currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
+            }
+            
+            // will be reset at the top of the loop
+            currentRunStartLetter = '';
+            currentRunStartNumber = 0;
+        }
+    }
+    
+    // Output the last column
+    if(currentRunStartLetter.length > 0 || currentRunStartNumber > 0) {
+        if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
+            result += currentRunStartLetter + currentRunStartNumber.toString() + ", ";
+        } else {
+            result += currentRunStartLetter + currentRunStartNumber.toString() + " - " + priorLetter + priorNumber.toString() + ", ";
+        }    
+    }
+    
+    // remove the extra comma at the end
+    if(result.trim().charAt(result.trim().length - 1) == ',') {
+        result = result.trim();
+        result = result.substring(0, result.length - 1);
+    }
+    
+    return result;
+}
+
+function setPagesThatRemain() {
+	var result = "";
+	var ch = "A".charCodeAt(0) - 1;
+	for(var j = 0; j < numCols; j++) { // numCols/numRows is defined in the image javascript, and is not the same as the local numrows/numcols variables here
+		rowresult = "";
+		ch++;
+		for(var i = 0; i < numRows; i++) {		
+			var pagedata = "";
+			for(var k = j * subcols; k < (j+1) * subcols; k++) {
+				for(var l = i * subrows; l < (i+1) * subrows; l++) {
+					pagedata = pagedata + isPageFilledIn[l][k];
+				}
+			}
+			
+			if(pagedata.trim().length <= 0) {
+				result = result + String.fromCharCode(ch) + (i+1).toString() + " ";	
+				console.log(String.fromCharCode(ch) + (i+1).toString() + " not filled in");
+			} else {
+				console.log(String.fromCharCode(ch) + (i+1).toString() + " filled in with (" + pagedata + ")");
+			}
+		}
+	}
+	if(result.length > 0) {
+		document.getElementById("remainingPages").innerHTML = "Here are some pages that remain to be filled in: " + condenseList(result, numCols, numRows);
+	} else {
+		document.getElementById("remainingPages").innerHTML = "";
+	}
+}
+
+function doReplayDispatch(data) {   
+    // Set initially to empty, and use doReplayDispatch to mark "filled in pages" as the corresponding message text
+    for(var i = 0; i < numRows * subrows; i++) {
+        isPageFilledIn[i] = [];
+        
+        for(var j = 0; j < numCols * subcols; j++) {
+            isPageFilledIn[i][j] = '';
+        }
+    }
+    
+    console.log("Initial Empty Page Filled In Matrix up to main image row " + numRows + " and main image col " + numCols + ": " + isPageFilledIn);
+
+    // fills in in chronological order, so overwritten pages will be overwritten in this history matrix
+    for(var i = 0; i < data.length; i++) {
+        row = data[i];
+        
+        id = row[0];
+        timestamp = row[1];
+        msg = row[2];
+        
+        var msgparts = msg.split(',');
+        
+        var leftx = msgparts[0];
+        var topy = msgparts[1];
+        var rectwidth = msgparts[2];
+        var rectheight = msgparts[3];
+        var rectcolor = msgparts[4];
+        var xsquare = msgparts[5];
+        var ysquare = msgparts[6];
+        
+        console.log("Message number " + i + ": Setting filled in matrix at: " + xsquare + ", " + ysquare);
+        
+        // verify the square is within bounds
+        if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols && typeof rectcolor !== "undefined" && rectcolor !== "undefined" && rectcolor.length > 0) {
+            console.log("Message number " + i + ": " + msg);
+            isPageFilledIn[ysquare][xsquare] = msg;
+        }
+    }
+    
+    console.log("Final filled in page matrix: " + isPageFilledIn);
+	
+    setPagesThatRemain();
+}
+
+function doReplayGet() {    
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "{{ page.replaylink }}/retrieve{% if page.linksuffix %}?name={{page.linksuffix}}{% endif %}", true);
+    
+    xhr.onreadystatechange = function () {
+        if (this.readyState != 4) return;
+
+        if (this.status == 200) {
+            var data = JSON.parse(this.responseText);
+
+            console.log("Replay Message Retrieved");
+            console.log(data);
+            
+            doReplayDispatch(data);
+        }
+    };
+    
+    xhr.send();   
+}
+doReplayGet();
+{% endif %}
+
+{% if page.fayelink %}
+// Pub-sub
+var fayeclient = new Faye.Client('{{ page.fayelink }}');
+
+fayeclient.setHeader("Access-Control-Allow-Origin", "*");
+
+function doFayeSubscribe() {
+  fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
+    // Don't draw incoming messages
+    console.log("Message: " + message.text);
+    
+    var msg = message.text;
+    var msgparts = msg.split(',');
+    
+    var leftx = msgparts[0];
+    var topy = msgparts[1];
+    var rectwidth = msgparts[2];
+    var rectheight = msgparts[3];
+    var rectcolor = msgparts[4];
+    var xsquare = msgparts[5];
+    var ysquare = msgparts[6];
+
+    // verify the square is within bounds
+    if(ysquare >= 0 && ysquare < numRows * subrows && xsquare >= 0 && xsquare < numCols * subcols && typeof rectcolor !== "undefined" && rectcolor !== "undefined" && rectcolor.length > 0) {
+        isPageFilledIn[ysquare][xsquare] = msg; // fill in the "filled in pages" table
+    }
+	  
+    // update the set of pages that remain
+    setPagesThatRemain();
+  });    
+}
+
+function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
+    message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
+    
+    fayeclient.publish('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
+      text: message
+    });     
+}
+{% endif %}
+
+// call this to initialize the grid; comment to disable
+// this has been moved to an event on the page selector so that it only appears when a page is selected
+makeGrid(canvas.width, canvas.height, gridwidth, gridheight);
+
+// call this to add click listener to fill in rectangle; comment to disable
+gridListeners();
+
+{% if page.fayelink %}
+// call this to set up pub-sub; comment to disable
+doFayeSubscribe();
+{% endif %}
+
+// https://stackoverflow.com/questions/11735856/draw-grid-table-on-canvas-html5
+// bwidth/bheight is the dimension of the canvas board, and rwidth/rheight is the dimension of the rectangle in the grid
+function makeGrid(bwidth, bheight, rwidth, rheight) {
+    // clear the original canvas
+    ctx.clearRect(0, 0, gridwidth, gridheight);
+
+    ctx.strokeStyle = "black";
+    
+    var xlines = -1;
+    
+    for (var x = 0; x <= bwidth + 1; x += rwidth / subcols) {
+        xlines = xlines + 1;
+        
+        if(xlines == subcols) {
+            xlines = 0;
+        }
+        
+        if(xlines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+        
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, bheight);
+        ctx.stroke();
+    }
+
+    var ylines = -1;
+    
+    for (var y = 0; y <= bheight + 1; y += rheight / subrows) {
+        ylines = ylines + 1;
+        
+        if(ylines == subrows) {
+            ylines = 0;
+        }
+    
+        if(ylines == 0) {
+            ctx.lineWidth = '3';
+        } else {
+            ctx.lineWidth = '1';
+        }
+                
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(bwidth, y);
+        ctx.stroke();
+    }
+}
+
+function drawGridSquare(leftx, topy, rectwidth, rectheight, rectcolor, xsquare, ysquare) {
+    ctx.fillStyle = rectcolor;
+    
+    var origleftx = leftx;
+    var origtopy = topy;
+    var origrectwidth = rectwidth;
+    var origrectheight = rectheight;
+    
+    // Where is this grid square?  If it is known, override original x and y coordinates with these in case the dimensions have changed.  Otherwise, calculate it from the coordinates given.
+    if(typeof xsquare == 'undefined' && typeof ysquare == 'undefined') {
+        xsquare = Math.floor(1.0 * leftx / rectwidth);
+        ysquare = Math.floor(1.0 * topy / rectheight);
+    }
+    
+    leftx =  xsquare * (1.0 * gridwidth / subcols);
+    topy =  ysquare * (1.0 * gridheight / subrows);
+    rectwidth = (1.0 * gridwidth / subcols);
+    rectheight = (1.0 * gridheight / subrows);    
+    
+    console.log("Drawing Grid Square: " + leftx + ", " + topy + ", " + rectwidth + ", " + rectheight + ", " + rectcolor + ", " + xsquare + ", " + ysquare + "; originally: " + origleftx + ", " + origtopy + ", " + origrectwidth + ", " + origrectheight);    
+    
+    // Fill in that rectangle
+    ctx.fillRect(leftx + {{ page.rectangleepsilon | default: 0}},topy + {{ page.rectangleepsilon | default: 0}},rectwidth - {{ page.rectangleepsilon | default: 0}},rectheight - {{ page.rectangleepsilon | default: 0}});
+}
+
+function fillgrid(e) {
+    if(e.button != 0) { // left click only
+        return;
+    }
+    
+    if(!gotPageData) {
+        console.log("Waiting for Select Page button press");
+        alert("Please select a page at the top, and the color codes will appear to the left!");
+        return;
+    }
+    
+    // cross-browser canvas coordinates
+    var x = e.offsetX || e.layerX - canvas.offsetLeft;
+    var y = e.offsetY || e.layerY - canvas.offsetTop;
+    
+    // What grid rectangle are we in?
+    var xsquare = Math.floor(x * 1.0 / (gridwidth / subcols));
+    var ysquare = Math.floor(y * 1.0 / (gridheight / subrows));
+    
+    var pagexsquare = xsquare;
+    var pageysquare = ysquare;
+    
+    // Offset the xsquare and ysquare by the row and col
+    var coloffset = parseInt(document.getElementById("pageCol").selectedIndex);
+    var rowoffset = parseInt(document.getElementById("pageRow").value) - 1;
+    xsquare = xsquare + Math.floor((coloffset * subcols));
+    ysquare = ysquare + Math.floor((rowoffset * subrows));
+    
+    var leftx =  xsquare * (1.0 * gridwidth / subcols);
+    var topy =  ysquare * (1.0 * gridheight / subrows);
+    
+    var pageleftx =  pagexsquare * (1.0 * gridwidth / subcols);
+    var pagetopy =  pageysquare * (1.0 * gridheight / subrows);
+    
+    drawGridSquare(pageleftx, pagetopy, gridwidth / subcols, gridheight / subrows, colorpicker.value, pagexsquare, pageysquare);
+    
+    {% if page.fayelink %}
+    // Send message to faye
+    doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
+    {% endif %}
+    
+    {% if page.replaylink %}
+    // Send to database
+    doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorpicker.value, xsquare, ysquare);
+    {% endif %}
+}
+</script>
+
+<!-- END CANVAS -->
+</td>
+</tr>
+</table>
+	
+</div>
