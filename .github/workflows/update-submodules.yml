@@ -14,11 +14,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2      
       - name: Checkout submodules
         run: |
           git submodule update --init --recursive
           git submodule update --remote --merge          
+      - name: Pull current repo
+        run: git pull           
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
