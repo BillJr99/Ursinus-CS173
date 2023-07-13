@@ -557,11 +557,13 @@ function doReplayDispatch(data) {
 
     // fills in in chronological order, so overwritten pages will be overwritten in this history matrix
     for(var i = 0; i < data.length; i++) {
+        console.log("Dispatching row " + i + " of data: " + data + "; data[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
+        
         row = data[i];
         
-        id = row[0];
-        timestamp = row[1];
-        msg = row[2];
+        id = row["ID"];
+        timestamp = row["TIMESTAMP"];
+        msg = row["DATA"];
         
         var msgparts = msg.split(',');
         
