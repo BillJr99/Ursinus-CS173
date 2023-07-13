@@ -270,12 +270,14 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 {% endif %}
 
 function doReplayDispatch(data, i) {
+    console.log("Dispatching row " + i + " of data: " + data + " with length " + data.length + "; data[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
+    
     if(i < data.length) {
         row = data[i];
         
-        id = row[0];
-        timestamp = row[1];
-        msg = row[2];
+        id = row["ID"]; // was index 0
+        timestamp = row["TIMESTAMP"]; // was index 1
+        msg = row["DATA"]; // was index 2
         
         var msgparts = msg.split(',');
         
@@ -326,12 +328,12 @@ function doReplayGet() {
 
 {% if page.fayelink %}
 // Pub-sub
-var fayeclient = new Faye.Client('{{ page.fayelink }}');
+var fayeclient = new Faye.Client('{{ page.fayelink }}/faye');
 
 fayeclient.setHeader("Access-Control-Allow-Origin", "*");
 
 function doFayeSubscribe() {
-  fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
+  fayeclient.subscribe('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
     //console.log("Message: " + message.text);
     
     var msg = message.text;
@@ -354,7 +356,7 @@ function doFayeSubscribe() {
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
-    fayeclient.publish('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
+    fayeclient.publish('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
       text: message
     });     
 }

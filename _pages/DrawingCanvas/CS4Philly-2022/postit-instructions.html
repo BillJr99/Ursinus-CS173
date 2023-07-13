@@ -432,7 +432,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 }
 
 var isPageFilledIn = [];
- 
+
 // A1 A2 A3 A4 A5 A6 A7 A8 to A1-A8, B1-B8, ...
 function condenseList(str, numCols, numRows) {
     const strlist = str.trim().split(" ");
@@ -463,7 +463,7 @@ function condenseList(str, numCols, numRows) {
             number = parseInt(strlist[i].substring(1));                    
         }
         
-        console.log("Pages to be filled in: expecting " + expectedLetter + expectedNumber + " and current " +  letter + number + " with js variables numCols=" + numCols + " and numRows=" + numRows);        
+        console.log("Pages to be filled in: expecting " + expectedLetter + expectedNumber + " and current " +  letter + number + " with js variables numCols=" + numCols + " and numRows=" + numRows);
         
         if(expectedNumber != number) {
             if(currentRunStartLetter == priorLetter && currentRunStartNumber == priorNumber) {
@@ -557,11 +557,13 @@ function doReplayDispatch(data) {
 
     // fills in in chronological order, so overwritten pages will be overwritten in this history matrix
     for(var i = 0; i < data.length; i++) {
+        console.log("Dispatching row " + i + " of data: " + data + " with length " + data.length + "; data[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
+        
         row = data[i];
         
-        id = row[0];
-        timestamp = row[1];
-        msg = row[2];
+        id = row["ID"]; // was index 0
+        timestamp = row["TIMESTAMP"]; // was index 1
+        msg = row["DATA"]; // was index 2
         
         var msgparts = msg.split(',');
         
@@ -611,12 +613,12 @@ doReplayGet();
 
 {% if page.fayelink %}
 // Pub-sub
-var fayeclient = new Faye.Client('{{ page.fayelink }}');
+var fayeclient = new Faye.Client('{{ page.fayelink }}/faye');
 
 fayeclient.setHeader("Access-Control-Allow-Origin", "*");
 
 function doFayeSubscribe() {
-  fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
+  fayeclient.subscribe('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
     // Don't draw incoming messages
     console.log("Message: " + message.text);
     
@@ -644,7 +646,7 @@ function doFayeSubscribe() {
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
-    fayeclient.publish('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
+    fayeclient.publish('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
       text: message
     });     
 }
@@ -745,7 +747,7 @@ function fillgrid(e) {
     
     if(!gotPageData) {
         console.log("Waiting for Select Page button press");
-        alert("Please select a page at the top, and the color codes will appear to the left!");
+        alert("Please select a page at the top, and the color codes will appear to the left!  If you have done this already, please reload this webpage and try again.");
         return;
     }
     
