@@ -270,7 +270,7 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 {% endif %}
 
 function doReplayDispatch(data, i) {
-    console.log("Dispatching row " + i + " of data: " + data);
+    console.log("Dispatching row " + i + " of data: " + data + "\ndata[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
     
     if(i < data.length) {
         row = data[i];
