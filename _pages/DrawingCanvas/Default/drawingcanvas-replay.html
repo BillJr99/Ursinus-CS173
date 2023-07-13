@@ -270,14 +270,14 @@ function doReplaySend(leftx, topy, gridwidth, subcols, gridheight, subrows, colo
 {% endif %}
 
 function doReplayDispatch(data, i) {
-    console.log("Dispatching row " + i + " of data: " + data + "; data[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
+    console.log("Dispatching row " + i + " of data: " + data + " with length " + data.length + "; data[" + i + "] = " + data[i] + " / " + JSON.stringify(data[i]));
     
     if(i < data.length) {
         row = data[i];
         
-        id = row["ID"];
-        timestamp = row["TIMESTAMP"];
-        msg = row["DATA"];
+        id = row["ID"]; // was index 0
+        timestamp = row["TIMESTAMP"]; // was index 1
+        msg = row["DATA"]; // was index 2
         
         var msgparts = msg.split(',');
         
