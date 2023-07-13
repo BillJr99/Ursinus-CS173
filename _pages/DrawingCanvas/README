@@ -18,6 +18,7 @@ finishedvideo:
 fayelink: "https://FayePubSub.jpopyack.repl.co"
 replaylink: "https://ReplayDataStore.jpopyack.repl.co"
 * It is assumed that the faye mount point is /faye
+* It is assumed that the replay database returns an array of json objects, whose dictionaries are indexed by name (node.js db requests do this by default, but the python db requests merely return arrays of tuples by default!)
 
 5. Set clickable to false, dogrid to true, dofreedraw to false in drawingcanvas-replay.html
 
