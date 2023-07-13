@@ -17,7 +17,8 @@ finishedvideo:
 4. Set faye link and replay link to replits in drawingcanvas-replay.html and postit-instructions.html; ensure they are running and the database in replay is removed
 fayelink: "https://FayePubSub.jpopyack.repl.co"
 replaylink: "https://ReplayDataStore.jpopyack.repl.co"
- 
+* It is assumed that the faye mount point is /faye
+
 5. Set clickable to false, dogrid to true, dofreedraw to false in drawingcanvas-replay.html
 
 6. Set citation in drawingcanvas-replay.html
