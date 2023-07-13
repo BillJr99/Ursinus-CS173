@@ -326,12 +326,12 @@ function doReplayGet() {
 
 {% if page.fayelink %}
 // Pub-sub
-var fayeclient = new Faye.Client('{{ page.fayelink }}');
+var fayeclient = new Faye.Client('{{ page.fayelink }}/faye');
 
 fayeclient.setHeader("Access-Control-Allow-Origin", "*");
 
 function doFayeSubscribe() {
-  fayeclient.subscribe('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
+  fayeclient.subscribe('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', function(message) {
     //console.log("Message: " + message.text);
     
     var msg = message.text;
@@ -354,7 +354,7 @@ function doFayeSubscribe() {
 function doFayeSend(leftx, topy, gridwidth, subcols, gridheight, subrows, colorvalue, xsquare, ysquare) {
     message = leftx + "," + topy + "," + gridwidth / subcols + "," + gridheight / subrows + "," + colorvalue + "," + xsquare + "," + ysquare;
     
-    fayeclient.publish('/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
+    fayeclient.publish('/faye/messages{% if page.linksuffix %}/{{page.linksuffix}}{% endif %}', {
       text: message
     });     
 }
