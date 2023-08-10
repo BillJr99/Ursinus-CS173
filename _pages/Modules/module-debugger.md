@@ -5,7 +5,7 @@ title: "CS173: Intro to Computer Science - Using the NetBeans Debugger"
 excerpt: "CS173: Intro to Computer Science - Using the NetBeans Debugger"
 
 info:
-  video: "https://www.vialogues.com/vialogues/play_embedded/63757/"
+  video: "https://www.youtube.com/embed/6Ca0QeEWbkU"
   videowidth: 540
   videoheight: 700
   
