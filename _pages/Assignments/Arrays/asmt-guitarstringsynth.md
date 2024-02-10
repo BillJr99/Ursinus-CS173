@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/GuitarStringSynth
 title: "CS173: Intro to Computer Science - Guitar String Synthesier with the Karplus-Strong Algorithm"
-excerpt: "CS173: Intro to Computer Science - Guitar String Synthesier with the Karplus-Strong Algorithm"
+
 
 info:
   coursenum: CS173

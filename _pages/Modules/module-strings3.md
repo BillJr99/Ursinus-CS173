@@ -1,7 +1,7 @@
 ---
 layout: module
 permalink: /Modules/Strings/Module3
-excerpt: "CS173: Intro to Computer Science - Strings"
+
 title: "CS173: Intro to Computer Science - Strings"
 
 info:

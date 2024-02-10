@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/RecursionSorting
 title: "CS173: Intro to Computer Science - Recursion and Merge Sort"
-excerpt: "CS173: Intro to Computer Science - Recursion and Merge Sort"
+
 
 info:
   goals: 

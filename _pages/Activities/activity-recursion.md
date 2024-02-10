@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Recursion
 title: "CS173: Intro to Computer Science - Recursion"
-excerpt: "CS173: Intro to Computer Science - Recursion"
+
 
 info:
   next: ./Recursion2

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Testing
 title: "CS173: Intro to Computer Science - Testing"
-excerpt: "CS173: Intro to Computer Science - Testing"
+
 
 info:
   goals: 

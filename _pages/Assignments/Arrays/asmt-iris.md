@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Iris
 title: "CS173: Intro to Computer Science - The Iris Dataset"
-excerpt: "CS173: Intro to Computer Science - The Iris Dataset"
+
 
 info:
   coursenum: CS173

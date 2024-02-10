@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Expressions2
 title: "CS173: Intro to Computer Science - Expressions"
-excerpt: "CS173: Intro to Computer Science - Expressions"
+
 
 info:
   prev: ./Expressions

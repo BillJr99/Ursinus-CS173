@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Iteration/While
 title: "CS173: Intro to Computer Science - Iteration with the while Loop"
-excerpt: "CS173: Intro to Computer Science - Iteration with the while Loop"
+
 
 info:
   goals: 

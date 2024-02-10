@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Faces
 title: "CS173: Intro to Computer Science - Drawing Faces"
-excerpt: "CS173: Intro to Computer Science - Drawing Faces"
+
 
 info:
   coursenum: CS173

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/MiniCrypto
 title: "CS173: Intro to Computer Science - Introduction to Cryptography"
-excerpt: "CS173: Intro to Computer Science - Introduction to Cryptography"
+
 
 info: 
   goals: 

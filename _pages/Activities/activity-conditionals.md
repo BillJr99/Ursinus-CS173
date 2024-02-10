@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Conditionals
 title: "CS173: Intro to Computer Science - Conditionals"
-excerpt: "CS173: Intro to Computer Science - Conditionals"
+
 
 info:
   next: ./Conditionals2

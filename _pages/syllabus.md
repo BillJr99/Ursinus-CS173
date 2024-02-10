@@ -2,7 +2,7 @@
 layout: syllabus
 permalink: /
 title: "CS173: Intro to Computer Science"
-excerpt: "CS173: Intro to Computer Science"
+
     
 info:
   course_number: CS173

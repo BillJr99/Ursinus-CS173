@@ -1,7 +1,7 @@
 ---
 layout: module
 permalink: /Modules/Github/Module
-excerpt: "CS173: Intro to Computer Science - Using Git and GitHub"
+
 title: "CS173: Intro to Computer Science - Using Git and GitHub"
 
 info:

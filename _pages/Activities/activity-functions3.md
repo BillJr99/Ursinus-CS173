@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Functions3
 title: "CS173: Intro to Computer Science - Functions"
-excerpt: "CS173: Intro to Computer Science - Functions"
+
 
 info:
   next: ./Random

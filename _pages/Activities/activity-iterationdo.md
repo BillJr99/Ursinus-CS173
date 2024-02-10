@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Iteration/Do
 title: "CS173: Intro to Computer Science - Iteration with the do Loop"
-excerpt: "CS173: Intro to Computer Science - Iteration with the do Loop"
+
 
 info:
   goals: 

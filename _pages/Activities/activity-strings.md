@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Strings
 title: "CS173: Intro to Computer Science - Strings"
-excerpt: "CS173: Intro to Computer Science - Strings"
+
 
 info:
   warmup: "Trace <a href=\"../Modules/Horstmann/Swap/Exercise\" target=\"_blank\">this algorithm</a> to swap two <code>int</code> variables."

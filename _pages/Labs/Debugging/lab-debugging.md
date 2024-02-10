@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Debugging
 title: "CS173: Intro to Computer Science - Using the Debugger"
-excerpt: "CS173: Intro to Computer Science - Using the Debugger"
+
 
 info:
   coursenum: CS173

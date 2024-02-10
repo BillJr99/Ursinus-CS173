@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/MiniCrypto
 title: "CS173: Intro to Computer Science - Public-Key Cryptography"
-excerpt: "CS173: Intro to Computer Science - Public-Key Cryptography"
+
 
 info:
   coursenum: CS173

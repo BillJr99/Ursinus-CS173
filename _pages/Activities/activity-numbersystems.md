@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/NumberSystems
 title: "CS173: Intro to Computer Science - Number Systems"
-excerpt: "CS173: Intro to Computer Science - Number Systems"
+
 
 info:
   next: ./EscapeCharacters

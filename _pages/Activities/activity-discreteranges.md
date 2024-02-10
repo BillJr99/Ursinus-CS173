@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/DiscreteRanges
 title: "CS173: Intro to Computer Science - Discrete Data Ranges"
-excerpt: "CS173: Intro to Computer Science - Discrete Data Ranges"
+
 
 info:
   goals: 

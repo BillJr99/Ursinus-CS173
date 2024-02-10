@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/TreasureHunt
 title: "CS173: Intro to Computer Science - 2D Array Board Game"
-excerpt: "CS173: Intro to Computer Science - 2D Array Board Game"
+
 
 info:
   coursenum: CS173

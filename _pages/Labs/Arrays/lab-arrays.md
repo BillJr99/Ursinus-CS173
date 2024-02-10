@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/ArrayAveraging
 title: "CS173: Intro to Computer Science - Array Averaging"
-excerpt: "CS173: Intro to Computer Science - Array Averaging"
+
 
 info:
   coursenum: CS173

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/FinancialAidCalculator
 title: "CS173: Intro to Computer Science - Financial Aid Calculator"
-excerpt: "CS173: Intro to Computer Science - Financial Aid Calculator"
+
 
 info:
   coursenum: CS173

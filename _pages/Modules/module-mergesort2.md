@@ -2,7 +2,7 @@
 layout: module
 permalink: /Modules/MergeSort/Module2
 title: "CS173: Intro to Computer Science - Merge Sort"
-excerpt: "CS173: Intro to Computer Science - Merge Sort"
+
 
 info:
   next: "./Exercise"

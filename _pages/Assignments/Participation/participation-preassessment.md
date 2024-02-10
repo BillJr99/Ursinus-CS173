@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Participation/PreAssessment
 title: "CS173: Intro to Computer Science - Participation Pre Assessment"
-excerpt: "CS173: Intro to Computer Science - Participation Pre Assessment"
+
 
 info:
   coursenum: CS173

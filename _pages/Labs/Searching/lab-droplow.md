@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/DropLowest
 title: "CS173: Intro to Computer Science - Searching: Dropping the Lowest Score"
-excerpt: "CS173: Intro to Computer Science - Searching: Dropping the Lowest Score"
+
 
 info:
   coursenum: CS173

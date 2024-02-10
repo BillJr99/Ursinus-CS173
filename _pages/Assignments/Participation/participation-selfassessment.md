@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/Participation/SelfAssessment
 title: "CS173: Intro to Computer Science - Participation Self Assessment"
-excerpt: "CS173: Intro to Computer Science - Participation Self Assessment"
+
 
 info:
   coursenum: CS173

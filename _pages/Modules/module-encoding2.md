@@ -2,7 +2,7 @@
 layout: module
 permalink: /Modules/Encodings/Module2
 title: "CS173: Intro to Computer Science - Numerical Encodings (Number Systems)"
-excerpt: "CS173: Intro to Computer Science - Numerical Encodings (Number Systems)"
+
 
 info:
   next: "./Module3"

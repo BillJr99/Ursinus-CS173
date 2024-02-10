@@ -2,7 +2,7 @@
 layout: module
 permalink: /Modules/Recursion/Module
 title: "CS173: Intro to Computer Science - Recursion"
-excerpt: "CS173: Intro to Computer Science - Recursion"
+
 
 info:
   next: "./Exercise"

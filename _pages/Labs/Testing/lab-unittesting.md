@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/UnitTesting
 title: "CS173: Intro to Computer Science - Unit Testing"
-excerpt: "CS173: Intro to Computer Science - Unit Testing"
+
 
 info:
   coursenum: CS173

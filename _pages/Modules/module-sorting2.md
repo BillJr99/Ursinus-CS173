@@ -2,7 +2,7 @@
 layout: module
 permalink: /Modules/Sorting/Module2
 title: "CS173: Intro to Computer Science - Sorting Algorithms"
-excerpt: "CS173: Intro to Computer Science - Sorting Algorithms"
+
 
 info:
   prev: ./Module

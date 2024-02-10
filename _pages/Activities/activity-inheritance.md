@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Inheritance
 title: "CS173: Intro to Computer Science - Inheritance"
-excerpt: "CS173: Intro to Computer Science - Inheritance"
+
 
 info:
   goals: 

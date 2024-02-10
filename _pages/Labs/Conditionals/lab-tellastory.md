@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/TellAStory/Conditionals
 title: "CS173: Intro to Computer Science - Tell a Story with Conditionals"
-excerpt: "CS173: Intro to Computer Science - Tell a Story with Conditionals"
+
 
 info:
   coursenum: CS173

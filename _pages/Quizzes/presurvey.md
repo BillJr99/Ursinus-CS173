@@ -2,7 +2,7 @@
 layout: quiz
 permalink: /Quizzes/PreSurvey
 title: "CS173: Intro to Computer Science - Pre Survey"
-excerpt: "CS173: Intro to Computer Science - Pre Survey"
+
 
 info:
     points: 0

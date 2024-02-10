@@ -1,7 +1,7 @@
 ---
 layout: module
 permalink: /Modules/Arrays/Module
-excerpt: "CS173: Intro to Computer Science - Arrays"
+
 title: "CS173: Intro to Computer Science - Arrays"
 
 info:

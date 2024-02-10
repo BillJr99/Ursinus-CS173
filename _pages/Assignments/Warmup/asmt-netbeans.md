@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/NetBeans
 title: "CS173: Intro to Computer Science - Introduction to Java Programming with NetBeans"
-excerpt: "CS173: Intro to Computer Science - Introduction to Java Programming with NetBeans"
+
 
 info:
   coursenum: CS173

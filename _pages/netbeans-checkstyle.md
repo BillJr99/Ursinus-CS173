@@ -2,7 +2,7 @@
 layout: default
 permalink: /NetBeans/CheckStyle
 title: "CS173: Intro to Computer Science - NetBeans CheckStyle Plugin"
-excerpt: "CS173: Intro to Computer Science - NetBeans CheckStyle Plugin"
+
     
 ---
 # {{ page.title }}

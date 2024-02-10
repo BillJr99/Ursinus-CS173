@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/MonteCarloPi
 title: "CS173: Intro to Computer Science - Estimating Pi with Monte Carlo Simulation"
-excerpt: "CS173: Intro to Computer Science - Estimating Pi with Monte Carlo Simulation"
+
 
 info:
   coursenum: CS173

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/ArrayList
 title: "CS173: Intro to Computer Science - The ArrayList"
-excerpt: "CS173: Intro to Computer Science - The ArrayList"
+
 
 info: 
   goals: 

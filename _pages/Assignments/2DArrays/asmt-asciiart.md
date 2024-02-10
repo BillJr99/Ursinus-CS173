@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/ASCIIArt
 title: "CS173: Intro to Computer Science - ASCII Art"
-excerpt: "CS173: Intro to Computer Science - ASCII Art"
+
 
 info:
   coursenum: CS173

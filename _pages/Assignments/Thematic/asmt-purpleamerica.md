@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/PurpleAmerica
 title: "CS173: Intro to Computer Science - Purple America"
-excerpt: "CS173: Intro to Computer Science - Purple America"
+
 
 info:
   coursenum: CS173

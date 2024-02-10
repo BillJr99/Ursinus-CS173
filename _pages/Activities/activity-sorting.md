@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Sorting
 title: "CS173: Intro to Computer Science - Sorting Algorithms"
-excerpt: "CS173: Intro to Computer Science - Sorting Algorithms"
+
 
 info:  
   next: ./Sorting2

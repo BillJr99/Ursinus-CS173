@@ -1,7 +1,7 @@
 ---
 layout: module
 permalink: /Modules/ArrayLists/Module
-excerpt: "CS173: Intro to Computer Science - ArrayLists"
+
 title: "CS173: Intro to Computer Science - ArrayLists"
 
 info:

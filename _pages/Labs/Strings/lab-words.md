@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Words
 title: "CS173: Intro to Computer Science - Words with Classmates"
-excerpt: "CS173: Intro to Computer Science - Words with Classmates"
+
 
 info:
   coursenum: CS173

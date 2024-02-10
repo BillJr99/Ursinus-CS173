@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Projects/Final
 title: "CS173: Intro to Computer Science - Final Project"
-excerpt: "CS173: Intro to Computer Science - Final Project"
+
 
 info:
   coursenum: CS173

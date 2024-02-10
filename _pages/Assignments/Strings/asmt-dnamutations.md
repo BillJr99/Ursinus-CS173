@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/DNAMutations
 title: "CS173: Intro to Computer Science - DNA Mutations"
-excerpt: "CS173: Intro to Computer Science - DNA Mutations"
+
 
 info:
   coursenum: CS173

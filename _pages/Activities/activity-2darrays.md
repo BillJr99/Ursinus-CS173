@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/2DArrays
 title: "CS173: Intro to Computer Science - 2D Arrays"
-excerpt: "CS173: Intro to Computer Science - 2D Arrays"
+
 
 info:
   goals: 

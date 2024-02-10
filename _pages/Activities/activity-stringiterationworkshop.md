@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Iteration/Strings/Workshop
 title: "CS173: Intro to Computer Science - String Iteration Workshop"
-excerpt: "CS173: Intro to Computer Science - String Iteration Workshop"
+
 
 info:
   goals: 

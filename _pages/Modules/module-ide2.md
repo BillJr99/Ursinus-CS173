@@ -2,7 +2,7 @@
 layout: module
 permalink: /Modules/IDE/Module2
 title: "CS173: Intro to Computer Science - Exporting a NetBeans Project"
-excerpt: "CS173: Intro to Computer Science - Exporting a NetBeans Project"
+
 
 info:
   next: "./Exercise"

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/EthicalConsiderations
 title: "CS173: Intro to Computer Science - Ethics in Algorithms"
-excerpt: "CS173: Intro to Computer Science - Ethics in Algorithms"
+
 
 info:
   coursenum: CS173

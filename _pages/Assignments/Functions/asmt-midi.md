@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Assignments/MIDI
 title: "CS173: Intro to Computer Science - MIDI Audio"
-excerpt: "CS173: Intro to Computer Science - MIDI Audio"
+
 
 info:
   coursenum: CS173

@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Iteration/For
 title: "CS173: Intro to Computer Science - Iteration with the for Loop"
-excerpt: "CS173: Intro to Computer Science - Iteration with the for Loop"
+
 
 info:
   goals: 

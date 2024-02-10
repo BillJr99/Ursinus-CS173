@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/HashMaps
 title: "CS173: Intro to Computer Science - HashMaps"
-excerpt: "CS173: Intro to Computer Science - HashMaps"
+
 
 info:
   goals: 

@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/CodeReview
 title: "CS173: Intro to Computer Science - Code Style and Review"
-excerpt: "CS173: Intro to Computer Science - Code Style and Review"
+
 
 info:
   coursenum: CS173

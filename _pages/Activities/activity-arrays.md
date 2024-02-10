@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Arrays
 title: "CS173: Intro to Computer Science - Arrays"
-excerpt: "CS173: Intro to Computer Science - Arrays"
+
 
 info:
   next: ./Arrays2

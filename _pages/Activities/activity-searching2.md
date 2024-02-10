@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Searching2
 title: "CS173: Intro to Computer Science - Search Algorithms"
-excerpt: "CS173: Intro to Computer Science - Search Algorithms"
+
 
 info:
   prev: ./Searching

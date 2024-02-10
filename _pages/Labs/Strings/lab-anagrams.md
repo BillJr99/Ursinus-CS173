@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/Anagrams
 title: "CS173: Intro to Computer Science - Anagram Solver"
-excerpt: "CS173: Intro to Computer Science - Anagram Solver"
+
 
 info:
   coursenum: CS173

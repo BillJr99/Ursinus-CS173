@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Classes2
 title: "CS173: Intro to Computer Science - Classes"
-excerpt: "CS173: Intro to Computer Science - Classes"
+
 
 info:
   prev: ./Classes 

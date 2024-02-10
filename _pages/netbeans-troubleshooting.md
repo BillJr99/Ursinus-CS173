@@ -2,7 +2,7 @@
 layout: default
 permalink: /NetBeans/Troubleshooting
 title: "CS173: Intro to Computer Science - NetBeans Software Environment"
-excerpt: "CS173: Intro to Computer Science - NetBeans Software Environment"
+
     
 ---
 # {{ page.title }}

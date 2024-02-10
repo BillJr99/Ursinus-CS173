@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Arrays/Workshop
 title: "CS173: Intro to Computer Science - Arrays Workshop"
-excerpt: "CS173: Intro to Computer Science - Arrays Workshop"
+
 
 info: 
   goals: 

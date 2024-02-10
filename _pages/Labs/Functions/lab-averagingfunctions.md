@@ -2,7 +2,7 @@
 layout: assignment
 permalink: /Labs/AverageFunction
 title: "CS173: Intro to Computer Science - Averaging Functions"
-excerpt: "CS173: Intro to Computer Science - Averaging Functions"
+
 
 info:
   coursenum: CS173

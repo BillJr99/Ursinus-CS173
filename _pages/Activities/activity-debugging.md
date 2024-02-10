@@ -2,7 +2,7 @@
 layout: activity
 permalink: /Activities/Debugging
 title: "CS173: Intro to Computer Science - Debugging"
-excerpt: "CS173: Intro to Computer Science - Debugging"
+
 
 info:
   goals: 
