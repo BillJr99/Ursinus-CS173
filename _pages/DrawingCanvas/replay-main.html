@@ -1,0 +1,131 @@
+---
+layout: default-blankwide
+permalink: /DrawingCanvas/Replay-Main
+title: "Pixel Pandemonium"
+excerpt: "Pixel Pandemonium"
+---
+
+<script LANGUAGE="javascript" TYPE="text/javascript">
+function menuEntry(title,filename)
+{
+	document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + title + '</a></li>');
+}
+
+function dropdownEntry(title, options) {
+    let dropdownHTML = '<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">' + title + '</a><div class="dropdown-content">';
+    options.forEach(option => {
+        dropdownHTML += '<a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + option.url + '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + option.title + '</a>';
+    });
+    dropdownHTML += '</div></li>';
+    document.write(dropdownHTML);
+}
+</script>
+
+<style>
+body {
+/*	font-family: "Times New Roman", "serif";*/
+/*	font-family: "Old Standard TT", sans-serif;*/
+	font-family: "Frank Ruhl Libre", sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4F80B0; /* Winter */
+/*    background-color: #B45B01; /* Fall . */
+/*    background-color: #006;  */
+    //#; 
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: #EBEDEC; //#FFC; //#FF6;
+    text-align: center;
+    padding: 14px 16px;
+	font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    text-decoration: none;
+}
+
+li a:hover {
+ /*   background-color: #99CC99; /* Fall */
+    background-color: #99CC99; /* Winter */
+/*    #2DA389; */
+}
+</style>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
+<link HREF="{{site.baseurl}}/assets/css/drawingcanvas.css" REL="stylesheet" TYPE="text/css" />
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+<table width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="4">
+  <tr> 
+<!--    <td COLSPAN="9" BACKGROUND="images/PragueWall-rotated.png"> --> 
+   <td COLSPAN="9" class="topLevelBody"> 
+      <div ALIGN="center">
+		  <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
+		  <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
+      </div>
+    </td>
+  </tr>
+</table>
+<ul>
+
+<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+	menuEntry("About Pixel Pandemonium","./Replay-About")
+    dropdownEntry("Fill In a Page", [
+        {title: "Demo", url: "../CS4AllPA-2022/Replay/Instructions"},
+        {title: "CS4AllPA-2022", url: "../CS4AllPA-2022/Replay/Instructions"},
+        {title: "CS4Philly-2021", url: "../CS4Philly-2021/Replay/Instructions"},
+        {title: "CS4Philly-2022", url: "../CS4Philly-2022/Replay/Instructions"},
+        {title: "CSTA-2022", url: "../CSTA-2022/Replay/Instructions"},
+        {title: "Eagles", url: "../Eagles/Replay/Instructions"},
+        {title: "Eagles2", url: "../Eagles2/Replay/Instructions"},
+        {title: "GHopper", url: "../GHopper/Replay/Instructions"},
+        {title: "LoveStatue", url: "../LoveStatue/Replay/Instructions"},
+        {title: "MikeWazowski", url: "../MikeWazowski/Replay/Instructions"},
+        {title: "PhillySciFest-2022", url: "../PhillySciFest-2022/Replay/Instructions"},
+        {title: "Pixar-2022", url: "../Pixar-2022/Replay/Instructions"},
+        {title: "RobotSpringboard", url: "../RobotSpringboard/Replay/Instructions"},
+        {title: "RobotSpringboard-2022", url: "../RobotSpringboard-2022/Replay/Instructions"},
+        {title: "Rocky-2022", url: "../Rocky-2022/Replay/Instructions"},
+        {title: "YellowSubmarine", url: "../YellowSubmarine/Replay/Instructions"},
+        {title: "YellowSubmarine-2022", url: "../YellowSubmarine-2022/Replay/Instructions"}
+    ]);    
+	dropdownEntry("View Full Image", [
+        {title: "Demo", url: "../CS4AllPA-2022/Replay/DrawingCanvas"},
+        {title: "CS4AllPA-2022", url: "../CS4AllPA-2022/Replay/DrawingCanvas"},
+        {title: "CS4Philly-2021", url: "../CS4Philly-2021/Replay/DrawingCanvas"},
+        {title: "CS4Philly-2022", url: "../CS4Philly-2022/Replay/DrawingCanvas"},
+        {title: "CSTA-2022", url: "../CSTA-2022/Replay/DrawingCanvas"},
+        {title: "Eagles", url: "../Eagles/Replay/DrawingCanvas"},
+        {title: "Eagles2", url: "../Eagles2/Replay/DrawingCanvas"},
+        {title: "GHopper", url: "../GHopper/Replay/DrawingCanvas"},
+        {title: "LoveStatue", url: "../LoveStatue/Replay/DrawingCanvas"},
+        {title: "MikeWazowski", url: "../MikeWazowski/Replay/DrawingCanvas"},
+        {title: "PhillySciFest-2022", url: "../PhillySciFest-2022/Replay/DrawingCanvas"},
+        {title: "Pixar-2022", url: "../Pixar-2022/Replay/DrawingCanvas"},
+        {title: "RobotSpringboard", url: "../RobotSpringboard/Replay/DrawingCanvas"},
+        {title: "RobotSpringboard-2022", url: "../RobotSpringboard-2022/Replay/DrawingCanvas"},
+        {title: "Rocky-2022", url: "../Rocky-2022/Replay/DrawingCanvas"},
+        {title: "YellowSubmarine", url: "../YellowSubmarine/Replay/DrawingCanvas"},
+        {title: "YellowSubmarine-2022", url: "../YellowSubmarine-2022/Replay/DrawingCanvas"}
+    ]);
+</script>
+
+</ul>
+
+<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+	document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
+</script> 
