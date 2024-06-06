@@ -5,6 +5,8 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
 ---
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <style>
 body {
 /*	font-family: "Times New Roman", "serif";*/
@@ -45,7 +47,7 @@ li a:hover {
 /* Style the dropdown button */
 .dropbtn {
     background-color: #4F80B0;
-    color: white;
+    color: #EBEDEC;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -62,7 +64,7 @@ li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #4F80B0;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -70,14 +72,14 @@ li a:hover {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
+    color: #EBEDEC;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #99CC99}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -86,32 +88,9 @@ li a:hover {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #99CC99;
 }
 </style>
-
-<script LANGUAGE="javascript" TYPE="text/javascript">
-function menuEntry(title,filename)
-{
-	document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + title + '</a></li>');
-}
-
-function dropdownEntry(title, options) {
-    let dropdownHTML = `
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">${title}</a>
-            <div class="dropdown-content">
-                ${options.map(option => `
-                    <a href="javascript:void(0)" onClick="document.getElementById('fileContents').src ='${option.url}'; document.getElementById('fileContents').src = document.getElementById('fileContents').src;">
-                        ${option.title}
-                    </a>
-                `).join('')}
-            </div>
-        </li>
-    `;
-    document.write(dropdownHTML);
-}
-</script>
 
 <head>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
@@ -135,50 +114,78 @@ function dropdownEntry(title, options) {
   </tr>
 </table>
 <ul>
-
-<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-	menuEntry("About Pixel Pandemonium","./Replay-About")
-    dropdownEntry("Fill In a Page", [
-        {title: "Demo (Tetris)", url: "./Replay/Instructions"},
-        {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/Instructions"},
-        {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/Instructions"},
-        {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/Instructions"},
-        {title: "CSTA-2022", url: "./CSTA-2022/Replay/Instructions"},
-        {title: "Eagles", url: "./Eagles/Replay/Instructions"},
-        {title: "Eagles2", url: "./Eagles2/Replay/Instructions"},
-        {title: "GHopper", url: "./GHopper/Replay/Instructions"},
-        {title: "LoveStatue", url: "./LoveStatue/Replay/Instructions"},
-        {title: "MikeWazowski", url: "./MikeWazowski/Replay/Instructions"},
-        {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/Instructions"},
-        {title: "Pixar-2022", url: "./Pixar-2022/Replay/Instructions"},
-        {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/Instructions"},
-        {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/Instructions"},
-        {title: "Rocky-2022", url: "./Rocky-2022/Replay/Instructions"},
-        {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/Instructions"},
-        {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/Instructions"}
-    ]);    
-	dropdownEntry("View Full Image", [
-        {title: "Demo (Tetris)", url: "./Replay/DrawingCanvas"},
-        {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
-        {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/DrawingCanvas"},
-        {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/DrawingCanvas"},
-        {title: "CSTA-2022", url: "./CSTA-2022/Replay/DrawingCanvas"},
-        {title: "Eagles", url: "./Eagles/Replay/DrawingCanvas"},
-        {title: "Eagles2", url: "./Eagles2/Replay/DrawingCanvas"},
-        {title: "GHopper", url: "./GHopper/Replay/DrawingCanvas"},
-        {title: "LoveStatue", url: "./LoveStatue/Replay/DrawingCanvas"},
-        {title: "MikeWazowski", url: "./MikeWazowski/Replay/DrawingCanvas"},
-        {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/DrawingCanvas"},
-        {title: "Pixar-2022", url: "./Pixar-2022/Replay/DrawingCanvas"},
-        {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/DrawingCanvas"},
-        {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/DrawingCanvas"},
-        {title: "Rocky-2022", url: "./Rocky-2022/Replay/DrawingCanvas"},
-        {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/DrawingCanvas"},
-        {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/DrawingCanvas"}
-    ]);
-</script>
-
+<ul id="menu">
+    <!-- Menu will be populated here -->
 </ul>
+<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
+    // jQuery function to create a regular menu entry
+    function menuEntry(title, filename) {
+        $('#menu').append(`
+            <li><a href="javascript:void(0)" onClick="$('#fileContents').attr('src', '${filename}')">${title}</a></li>
+        `);
+    }
+
+    // jQuery function to create a dropdown menu entry
+    function dropdownEntry(title, options) {
+        let $dropdown = $(`
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">${title}</a>
+                <div class="dropdown-content"></div>
+            </li>
+        `);
+        options.forEach(option => {
+            let $option = $(`<a href="javascript:void(0)">${option.title}</a>`);
+            $option.on('click', function() {
+                $('#fileContents').attr('src', option.url);
+            });
+            $dropdown.find('.dropdown-content').append($option);
+        });
+        $('#menu').append($dropdown);
+    }
+    
+    // Create menu entries using the defined functions
+    $(document).ready(function() {
+        menuEntry("About Pixel Pandemonium", "./Replay-About");
+        dropdownEntry("Fill In a Page", [
+            {title: "Demo (Tetris)", url: "./Replay/Instructions"},
+            {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/Instructions"},
+            {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/Instructions"},
+            {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/Instructions"},
+            {title: "CSTA-2022", url: "./CSTA-2022/Replay/Instructions"},
+            {title: "Eagles", url: "./Eagles/Replay/Instructions"},
+            {title: "Eagles2", url: "./Eagles2/Replay/Instructions"},
+            {title: "GHopper", url: "./GHopper/Replay/Instructions"},
+            {title: "LoveStatue", url: "./LoveStatue/Replay/Instructions"},
+            {title: "MikeWazowski", url: "./MikeWazowski/Replay/Instructions"},
+            {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/Instructions"},
+            {title: "Pixar-2022", url: "./Pixar-2022/Replay/Instructions"},
+            {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/Instructions"},
+            {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/Instructions"},
+            {title: "Rocky-2022", url: "./Rocky-2022/Replay/Instructions"},
+            {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/Instructions"},
+            {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/Instructions"}
+        ]);
+        dropdownEntry("View Full Image", [
+            {title: "Demo (Tetris)", url: "./Replay/DrawingCanvas"},
+            {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
+            {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/DrawingCanvas"},
+            {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/DrawingCanvas"},
+            {title: "CSTA-2022", url: "./CSTA-2022/Replay/DrawingCanvas"},
+            {title: "Eagles", url: "./Eagles/Replay/DrawingCanvas"},
+            {title: "Eagles2", url: "./Eagles2/Replay/DrawingCanvas"},
+            {title: "GHopper", url: "./GHopper/Replay/DrawingCanvas"},
+            {title: "LoveStatue", url: "./LoveStatue/Replay/DrawingCanvas"},
+            {title: "MikeWazowski", url: "./MikeWazowski/Replay/DrawingCanvas"},
+            {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/DrawingCanvas"},
+            {title: "Pixar-2022", url: "./Pixar-2022/Replay/DrawingCanvas"},
+            {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/DrawingCanvas"},
+            {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/DrawingCanvas"},
+            {title: "Rocky-2022", url: "./Rocky-2022/Replay/DrawingCanvas"},
+            {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/DrawingCanvas"},
+            {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/DrawingCanvas"}
+        ]);
+    });
+</script>
 
 <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
 	document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
