@@ -5,29 +5,6 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
 ---
 
-<script LANGUAGE="javascript" TYPE="text/javascript">
-function menuEntry(title,filename)
-{
-	document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + title + '</a></li>');
-}
-
-function dropdownEntry(title, options) {
-    let dropdownHTML = `
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">${title}</a>
-            <div class="dropdown-content">
-                ${options.map(option => `
-                    <a href="javascript:void(0)" onClick="document.getElementById('fileContents').src ='${option.url}'; document.getElementById('fileContents').src = document.getElementById('fileContents').src;">
-                        ${option.title}
-                    </a>
-                `).join('')}
-            </div>
-        </li>
-    `;
-    document.write(dropdownHTML);
-}
-</script>
-
 <style>
 body {
 /*	font-family: "Times New Roman", "serif";*/
@@ -112,6 +89,29 @@ li a:hover {
     background-color: #3e8e41;
 }
 </style>
+
+<script LANGUAGE="javascript" TYPE="text/javascript">
+function menuEntry(title,filename)
+{
+	document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + title + '</a></li>');
+}
+
+function dropdownEntry(title, options) {
+    let dropdownHTML = `
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">${title}</a>
+            <div class="dropdown-content">
+                ${options.map(option => `
+                    <a href="javascript:void(0)" onClick="document.getElementById('fileContents').src ='${option.url}'; document.getElementById('fileContents').src = document.getElementById('fileContents').src;">
+                        ${option.title}
+                    </a>
+                `).join('')}
+            </div>
+        </li>
+    `;
+    document.write(dropdownHTML);
+}
+</script>
 
 <head>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
