@@ -5,103 +5,54 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
 ---
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script LANGUAGE="javascript" TYPE="text/javascript">
+function menuEntry(title, filename) {
+    document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\';">' + title + '</a></li>');
+}
+
+function createDropdown(label, options) {
+    let dropdownHTML = `
+        <li>
+            <div style="display: inline-block; padding: 14px 16px;">
+                <span style="color: #EBEDEC; font-family: 'Old Standard TT', Arial, Helvetica, sans-serif; font-weight: bold;">${label}</span>
+                <select style="background-color: #4F80B0; color: #EBEDEC; font-family: 'Old Standard TT', Arial, Helvetica, sans-serif; font-weight: bold;" onchange="document.getElementById('fileContents').src = this.value">
+                    ${options.map(option => `<option value="${option.url}">${option.title}</option>`).join('')}
+                </select>
+            </div>
+        </li>
+    `;
+    document.write(dropdownHTML);
+}
+</script>
 
 <style>
 body {
     font-family: "Frank Ruhl Libre", sans-serif;
 }
-ul.custom-menu {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #4F80B0; /* Winter */
-    position: relative; /* Ensure it respects z-index */
-    z-index: 1000; /* Ensure it's above the iframe */
 }
 
-li.custom-menu-item {
+li {
     float: left;
 }
 
-li.custom-menu-item a.custom-menu-link {
+li a {
     display: inline-block;
-    color: #EBEDEC;
+    color: #EBEDEC; //#FFC; //#FF6;
     text-align: center;
     padding: 14px 16px;
     font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
-li.custom-menu-item a.custom-menu-link:hover {
+li a:hover {
     background-color: #99CC99; /* Winter */
-    text-decoration: none; /* Remove underline on hover */
-}
-
-/* Style the dropdown button */
-.custom-dropbtn {
-    background-color: #4F80B0;
-    color: #EBEDEC;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none; /* Remove underline */
-}
-
-/* The container <li> - needed to position the dropdown content */
-.custom-dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 1100; /* Ensure parent container is above the iframe */
-}
-
-/* Dropdown Content (Hidden by Default) */
-.custom-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #4F80B0;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1200; /* Ensure dropdown content is above the iframe */
-}
-
-/* Links inside the dropdown */
-.custom-dropdown-content a.custom-dropdown-link {
-    color: #EBEDEC;
-    padding: 12px 16px;
-    text-decoration: none; /* Remove underline */
-    display: block;
-    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-/* Change color of dropdown links on hover */
-.custom-dropdown-content a.custom-dropdown-link:hover {
-    background-color: #99CC99;
-    text-decoration: none; /* Remove underline */
-}
-
-/* Show the dropdown menu on hover */
-.custom-dropdown:hover .custom-dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.custom-dropdown:hover .custom-dropbtn {
-    background-color: #99CC99;
-}
-
-/* iframe style */
-iframe#fileContents {
-    z-index: 1; /* Set iframe z-index lower than dropdown */
-    position: relative; /* Ensure it respects z-index */
 }
 </style>
 
@@ -117,50 +68,18 @@ iframe#fileContents {
 <body>
 <table width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="4">
   <tr> 
-   <td COLSPAN="9" class="topLevelBody"> 
+    <td COLSPAN="9" class="topLevelBody"> 
       <div ALIGN="center">
-          <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
-          <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
+        <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
+        <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
       </div>
     </td>
   </tr>
 </table>
-<ul class="custom-menu" id="menu">
-    <!-- Menu will be populated here -->
-</ul>
-
-<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-    // jQuery function to create a regular menu entry
-    function menuEntry(title, filename) {
-        $('#menu').append(`
-            <li class="custom-menu-item">
-                <a class="custom-menu-link" href="javascript:void(0)" onClick="$('#fileContents').attr('src', '${filename}')">${title}</a>
-            </li>
-        `);
-    }
-
-    // jQuery function to create a dropdown menu entry using custom classes
-    function dropdownEntry(title, options) {
-        let $dropdown = $(`
-            <li class="custom-dropdown custom-menu-item">
-                <a href="javascript:void(0)" class="custom-dropbtn">${title}</a>
-                <div class="custom-dropdown-content"></div>
-            </li>
-        `);
-        options.forEach(option => {
-            let $option = $(`<a href="javascript:void(0)" class="custom-dropdown-link">${option.title}</a>`);
-            $option.on('click', function() {
-                $('#fileContents').attr('src', option.url);
-            });
-            $dropdown.find('.custom-dropdown-content').append($option);
-        });
-        $('#menu').append($dropdown);
-    }
-    
-    // Create menu entries using the defined functions
-    $(document).ready(function() {
+<ul>
+    <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
         menuEntry("About Pixel Pandemonium", "./Replay-About");
-        dropdownEntry("Fill In a Page", [
+        createDropdown("Fill In a Page", [
             {title: "Demo (Tetris)", url: "./Replay/Instructions"},
             {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/Instructions"},
             {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/Instructions"},
@@ -178,8 +97,8 @@ iframe#fileContents {
             {title: "Rocky-2022", url: "./Rocky-2022/Replay/Instructions"},
             {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/Instructions"},
             {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/Instructions"}
-        ]);
-        dropdownEntry("View Full Image", [
+        ]);    
+        createDropdown("View Full Image", [
             {title: "Demo (Tetris)", url: "./Replay/DrawingCanvas"},
             {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
             {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/DrawingCanvas"},
@@ -198,10 +117,10 @@ iframe#fileContents {
             {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/DrawingCanvas"},
             {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/DrawingCanvas"}
         ]);
-    });
-</script>
+    </script>
+</ul>
 
 <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-    // Add the iframe with the correct z-index
-    document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+' style="position: relative; z-index: 1; border: none;"></iframe>');
+    document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
 </script> 
+</body>
