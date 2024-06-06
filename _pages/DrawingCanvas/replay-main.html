@@ -12,11 +12,18 @@ function menuEntry(title,filename)
 }
 
 function dropdownEntry(title, options) {
-    let dropdownHTML = '<li class="dropdown"><a href="javascript:void(0)" class="dropbtn">' + title + '</a><div class="dropdown-content">';
-    options.forEach(option => {
-        dropdownHTML += '<a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + option.url + '\'; document.getElementById(\'fileContents\').src = document.getElementById(\'fileContents\').src;">' + option.title + '</a>';
-    });
-    dropdownHTML += '</div></li>';
+    let dropdownHTML = `
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">${title}</a>
+            <div class="dropdown-content">
+                ${options.map(option => `
+                    <a href="javascript:void(0)" onClick="document.getElementById('fileContents').src ='${option.url}'; document.getElementById('fileContents').src = document.getElementById('fileContents').src;">
+                        ${option.title}
+                    </a>
+                `).join('')}
+            </div>
+        </li>
+    `;
     document.write(dropdownHTML);
 }
 </script>
@@ -57,6 +64,53 @@ li a:hover {
     background-color: #99CC99; /* Winter */
 /*    #2DA389; */
 }
+
+/* Style the dropdown button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <li> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 </style>
 
 <head>
@@ -85,7 +139,7 @@ li a:hover {
 <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
 	menuEntry("About Pixel Pandemonium","./Replay-About")
     dropdownEntry("Fill In a Page", [
-        {title: "Demo", url: "./CS4AllPA-2022/Replay/Instructions"},
+        {title: "Demo (Tetris)", url: "./Replay/Instructions"},
         {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/Instructions"},
         {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/Instructions"},
         {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/Instructions"},
@@ -104,7 +158,7 @@ li a:hover {
         {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/Instructions"}
     ]);    
 	dropdownEntry("View Full Image", [
-        {title: "Demo", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
+        {title: "Demo (Tetris)", url: "./Replay/DrawingCanvas"},
         {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
         {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/DrawingCanvas"},
         {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/DrawingCanvas"},
