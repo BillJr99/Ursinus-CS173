@@ -9,7 +9,7 @@ excerpt: "Pixel Pandemonium"
 
 <style>
 body {
-	font-family: "Frank Ruhl Libre", sans-serif;
+    font-family: "Frank Ruhl Libre", sans-serif;
 }
 ul.custom-menu {
     list-style-type: none;
@@ -17,6 +17,8 @@ ul.custom-menu {
     padding: 0;
     overflow: hidden;
     background-color: #4F80B0; /* Winter */
+    position: relative; /* Ensure it respects z-index */
+    z-index: 10; /* Ensure it's above the iframe */
 }
 
 li.custom-menu-item {
@@ -28,8 +30,8 @@ li.custom-menu-item a.custom-menu-link {
     color: #EBEDEC;
     text-align: center;
     padding: 14px 16px;
-	font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
-	font-weight: bold;
+    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -57,7 +59,6 @@ li.custom-menu-item a.custom-menu-link:hover {
 .custom-dropdown {
     position: relative;
     display: inline-block;
-    z-index: 10; /* Ensure parent container is above the iframe */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -200,5 +201,5 @@ iframe#fileContents {
 </script>
 
 <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-	document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
+	document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+' style="position:relative; z-index:1;"></iframe>')
 </script> 
