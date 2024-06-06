@@ -6,29 +6,36 @@ excerpt: "Pixel Pandemonium"
 ---
 
 <script LANGUAGE="javascript" TYPE="text/javascript">
-function menuEntry(title, filename) {
-    document.write('<li><a href="javascript:void(0)" onClick="document.getElementById(\'fileContents\').src =\'' + filename +  '\';">' + title + '</a></li>');
-}
+    // JavaScript function to update the iframe and store the selected value
+    function updateIframeDefault() {
+        document.getElementById('fileContents').src = "./Replay-About";
+    }
 
-function createDropdown(label, options) {
-    let dropdownHTML = `
-        <li>
-            <div style="display: inline-block; padding: 14px 16px;">
-                <span style="color: #EBEDEC; font-family: 'Old Standard TT', Arial, Helvetica, sans-serif; font-weight: bold;">${label}</span>
-                <select style="background-color: #4F80B0; color: #EBEDEC; font-family: 'Old Standard TT', Arial, Helvetica, sans-serif; font-weight: bold;" onchange="document.getElementById('fileContents').src = this.value">
-                    ${options.map(option => `<option value="${option.url}">${option.title}</option>`).join('')}
-                </select>
-            </div>
-        </li>
-    `;
-    document.write(dropdownHTML);
-}
+    function updateSelectedPage() {
+        const dropdown = document.getElementById('pageSelector');
+        const selectedValue = dropdown.options[dropdown.selectedIndex].value;
+        return selectedValue;
+    }
+
+    function fillPage() {
+        const selectedValue = updateSelectedPage();
+        document.getElementById('fileContents').src = selectedValue + "/Instructions";
+    }
+
+    function viewImage() {
+        const selectedValue = updateSelectedPage();
+        document.getElementById('fileContents').src = selectedValue + "/DrawingCanvas";
+    }
+
+    // Initialize the iframe with the "About" page
+    window.onload = updateIframeDefault;
 </script>
 
 <style>
 body {
     font-family: "Frank Ruhl Libre", sans-serif;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -41,7 +48,7 @@ li {
     float: left;
 }
 
-li a {
+li a, .dropdown-container button {
     display: inline-block;
     color: #EBEDEC; //#FFC; //#FF6;
     text-align: center;
@@ -49,17 +56,49 @@ li a {
     font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-decoration: none;
+    background-color: #4F80B0;
+    border: none;
+    cursor: pointer;
 }
 
-li a:hover {
+li a:hover, .dropdown-container button:hover {
     background-color: #99CC99; /* Winter */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.dropdown-container {
+    display: inline-block;
+    padding: 14px 16px;
+}
+
+.custom-dropdown {
+    background-color: #4F80B0;
+    color: #EBEDEC;
+    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.custom-dropdown option {
+    background-color: #4F80B0;
+    color: #EBEDEC;
+    padding: 12px 16px;
+}
+
+iframe#fileContents {
+    width: 100%;
+    height: calc(100vh - 60px);
+    border: none;
+    z-index: 1;
+    position: relative;
 }
 </style>
 
 <head>
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1" />
 <link HREF="{{site.baseurl}}/assets/css/drawingcanvas.css" REL="stylesheet" TYPE="text/css" />
-
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
@@ -70,57 +109,39 @@ li a:hover {
   <tr> 
     <td COLSPAN="9" class="topLevelBody"> 
       <div ALIGN="center">
-        <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
-        <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
+          <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
+          <strong>Jeffrey L. Popyack/Drexel University, William M. Mongan/Ursinus College</strong>
       </div>
     </td>
   </tr>
 </table>
 <ul>
-    <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-        menuEntry("About Pixel Pandemonium", "./Replay-About");
-        createDropdown("Fill In a Page", [
-            {title: "Demo (Tetris)", url: "./Replay/Instructions"},
-            {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/Instructions"},
-            {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/Instructions"},
-            {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/Instructions"},
-            {title: "CSTA-2022", url: "./CSTA-2022/Replay/Instructions"},
-            {title: "Eagles", url: "./Eagles/Replay/Instructions"},
-            {title: "Eagles2", url: "./Eagles2/Replay/Instructions"},
-            {title: "GHopper", url: "./GHopper/Replay/Instructions"},
-            {title: "LoveStatue", url: "./LoveStatue/Replay/Instructions"},
-            {title: "MikeWazowski", url: "./MikeWazowski/Replay/Instructions"},
-            {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/Instructions"},
-            {title: "Pixar-2022", url: "./Pixar-2022/Replay/Instructions"},
-            {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/Instructions"},
-            {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/Instructions"},
-            {title: "Rocky-2022", url: "./Rocky-2022/Replay/Instructions"},
-            {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/Instructions"},
-            {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/Instructions"}
-        ]);    
-        createDropdown("View Full Image", [
-            {title: "Demo (Tetris)", url: "./Replay/DrawingCanvas"},
-            {title: "CS4AllPA-2022", url: "./CS4AllPA-2022/Replay/DrawingCanvas"},
-            {title: "CS4Philly-2021", url: "./CS4Philly-2021/Replay/DrawingCanvas"},
-            {title: "CS4Philly-2022", url: "./CS4Philly-2022/Replay/DrawingCanvas"},
-            {title: "CSTA-2022", url: "./CSTA-2022/Replay/DrawingCanvas"},
-            {title: "Eagles", url: "./Eagles/Replay/DrawingCanvas"},
-            {title: "Eagles2", url: "./Eagles2/Replay/DrawingCanvas"},
-            {title: "GHopper", url: "./GHopper/Replay/DrawingCanvas"},
-            {title: "LoveStatue", url: "./LoveStatue/Replay/DrawingCanvas"},
-            {title: "MikeWazowski", url: "./MikeWazowski/Replay/DrawingCanvas"},
-            {title: "PhillySciFest-2022", url: "./PhillySciFest-2022/Replay/DrawingCanvas"},
-            {title: "Pixar-2022", url: "./Pixar-2022/Replay/DrawingCanvas"},
-            {title: "RobotSpringboard", url: "./RobotSpringboard/Replay/DrawingCanvas"},
-            {title: "RobotSpringboard-2022", url: "./RobotSpringboard-2022/Replay/DrawingCanvas"},
-            {title: "Rocky-2022", url: "./Rocky-2022/Replay/DrawingCanvas"},
-            {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/DrawingCanvas"},
-            {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/DrawingCanvas"}
-        ]);
-    </script>
+    <li>
+        <div class="dropdown-container">
+            <select id="pageSelector" class="custom-dropdown" onchange="updateIframeDefault()">
+                <option value="./Replay">Demo (Tetris)</option>
+                <option value="./CS4AllPA-2022">CS4AllPA-2022</option>
+                <option value="./CS4Philly-2021">CS4Philly-2021</option>
+                <option value="./CS4Philly-2022">CS4Philly-2022</option>
+                <option value="./CSTA-2022">CSTA-2022</option>
+                <option value="./Eagles">Eagles</option>
+                <option value="./Eagles2">Eagles2</option>
+                <option value="./GHopper">GHopper</option>
+                <option value="./LoveStatue">LoveStatue</option>
+                <option value="./MikeWazowski">MikeWazowski</option>
+                <option value="./PhillySciFest-2022">PhillySciFest-2022</option>
+                <option value="./Pixar-2022">Pixar-2022</option>
+                <option value="./RobotSpringboard">RobotSpringboard</option>
+                <option value="./RobotSpringboard-2022">RobotSpringboard-2022</option>
+                <option value="./Rocky-2022">Rocky-2022</option>
+                <option value="./YellowSubmarine">YellowSubmarine</option>
+                <option value="./YellowSubmarine-2022">YellowSubmarine-2022</option>
+            </select>
+            <button onclick="fillPage()">Fill In a Page</button>
+            <button onclick="viewImage()">View Full Image</button>
+        </div>
+    </li>
 </ul>
 
-<script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
-    document.write('<iframe id="fileContents" src="./Replay-About" width='+document.body.clientWidth +' height='+document.documentElement.clientHeight+'></iframe>')
-</script> 
+<iframe id="fileContents" src="./Replay-About"></iframe>
 </body>
