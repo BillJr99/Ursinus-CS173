@@ -45,6 +45,8 @@ li.custom-menu-item a.custom-menu-link:hover {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 /* The container <li> - needed to position the dropdown content */
@@ -60,7 +62,7 @@ li.custom-menu-item a.custom-menu-link:hover {
     background-color: #4F80B0;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1000; /* Ensure it appears above the iframe */
 }
 
 /* Links inside the dropdown */
@@ -69,6 +71,8 @@ li.custom-menu-item a.custom-menu-link:hover {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-family: "Old Standard TT", Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 /* Change color of dropdown links on hover */
