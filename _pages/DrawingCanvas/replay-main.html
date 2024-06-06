@@ -5,7 +5,15 @@ title: "Pixel Pandemonium"
 excerpt: "Pixel Pandemonium"
 ---
 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 <style>
 body {
@@ -19,9 +27,6 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #4F80B0; /* Winter */
-/*    background-color: #B45B01; /* Fall . */
-/*    background-color: #006;  */
-    //#; 
 }
 
 li {
@@ -39,55 +44,19 @@ li a {
 }
 
 li a:hover {
- /*   background-color: #99CC99; /* Fall */
     background-color: #99CC99; /* Winter */
-/*    #2DA389; */
 }
 
-/* Style the dropdown button */
-.dropbtn {
+/* Customize Bootstrap dropdown */
+.dropdown-menu {
     background-color: #4F80B0;
+}
+
+.dropdown-menu a {
     color: #EBEDEC;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
 }
 
-/* The container <li> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #4F80B0;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: #EBEDEC;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #99CC99}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+.dropdown-menu a:hover {
     background-color: #99CC99;
 }
 </style>
@@ -104,7 +73,6 @@ li a:hover {
 <body>
 <table width="100%" BORDER="0" CELLSPACING="0" CELLPADDING="4">
   <tr> 
-<!--    <td COLSPAN="9" BACKGROUND="images/PragueWall-rotated.png"> --> 
    <td COLSPAN="9" class="topLevelBody"> 
       <div ALIGN="center">
 		  <span style="font-size:24px;"><strong>Pixel Pandemonium</strong></span> - an &ldquo;unplugged&rdquo; activity for illustrating Computer Science Principles<br>
@@ -113,32 +81,38 @@ li a:hover {
     </td>
   </tr>
 </table>
-<ul id="menu">
-    <!-- Menu will be populated here -->
-</ul>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4F80B0;">
+    <ul class="navbar-nav mr-auto" id="menu">
+        <!-- Menu will be populated here -->
+    </ul>
+</nav>
 
 <script LANGUAGE="JAVASCRIPT" TYPE="TEXT/JAVASCRIPT">
     // jQuery function to create a regular menu entry
     function menuEntry(title, filename) {
         $('#menu').append(`
-            <li><a href="javascript:void(0)" onClick="$('#fileContents').attr('src', '${filename}')">${title}</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)" onClick="$('#fileContents').attr('src', '${filename}')">${title}</a>
+            </li>
         `);
     }
 
-    // jQuery function to create a dropdown menu entry
+    // jQuery function to create a dropdown menu entry using Bootstrap
     function dropdownEntry(title, options) {
         let $dropdown = $(`
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">${title}</a>
-                <div class="dropdown-content"></div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="${title.replace(/\s+/g, '')}Dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ${title}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="${title.replace(/\s+/g, '')}Dropdown"></div>
             </li>
         `);
         options.forEach(option => {
-            let $option = $(`<a href="javascript:void(0)">${option.title}</a>`);
+            let $option = $(`<a class="dropdown-item" href="javascript:void(0)">${option.title}</a>`);
             $option.on('click', function() {
                 $('#fileContents').attr('src', option.url);
             });
-            $dropdown.find('.dropdown-content').append($option);
+            $dropdown.find('.dropdown-menu').append($option);
         });
         $('#menu').append($dropdown);
     }
@@ -184,16 +158,6 @@ li a:hover {
             {title: "YellowSubmarine", url: "./YellowSubmarine/Replay/DrawingCanvas"},
             {title: "YellowSubmarine-2022", url: "./YellowSubmarine-2022/Replay/DrawingCanvas"}
         ]);
-
-        // Explicitly show and hide dropdown on hover
-        $('.dropdown').hover(
-            function() {
-                $(this).find('.dropdown-content').stop(true, true).slideDown(200);
-            },
-            function() {
-                $(this).find('.dropdown-content').stop(true, true).slideUp(200);
-            }
-        );
     });
 </script>
 
