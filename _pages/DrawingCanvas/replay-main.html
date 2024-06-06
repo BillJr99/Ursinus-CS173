@@ -59,6 +59,7 @@ li a, .dropdown-container button {
     background-color: #4F80B0;
     border: none;
     cursor: pointer;
+    font-size: 18px; 
 }
 
 li a:hover, .dropdown-container button:hover {
@@ -79,12 +80,14 @@ li a:hover, .dropdown-container button:hover {
     border: none;
     padding: 10px;
     margin-right: 10px;
+    font-size: 18px; 
 }
 
 .custom-dropdown option {
     background-color: #4F80B0;
     color: #EBEDEC;
     padding: 12px 16px;
+    font-size: 18px; 
 }
 
 iframe#fileContents {
@@ -119,23 +122,23 @@ iframe#fileContents {
     <li>
         <div class="dropdown-container">
             <select id="pageSelector" class="custom-dropdown" onchange="updateIframeDefault()">
-                <option value="./Replay">Demo (Tetris)</option>
-                <option value="./CS4AllPA-2022">CS4AllPA-2022</option>
-                <option value="./CS4Philly-2021">CS4Philly-2021</option>
-                <option value="./CS4Philly-2022">CS4Philly-2022</option>
-                <option value="./CSTA-2022">CSTA-2022</option>
-                <option value="./Eagles">Eagles</option>
-                <option value="./Eagles2">Eagles2</option>
-                <option value="./GHopper">GHopper</option>
-                <option value="./LoveStatue">LoveStatue</option>
-                <option value="./MikeWazowski">MikeWazowski</option>
-                <option value="./PhillySciFest-2022">PhillySciFest-2022</option>
-                <option value="./Pixar-2022">Pixar-2022</option>
-                <option value="./RobotSpringboard">RobotSpringboard</option>
-                <option value="./RobotSpringboard-2022">RobotSpringboard-2022</option>
-                <option value="./Rocky-2022">Rocky-2022</option>
-                <option value="./YellowSubmarine">YellowSubmarine</option>
-                <option value="./YellowSubmarine-2022">YellowSubmarine-2022</option>
+                <option value="../Replay">Demo (Tetris)</option>
+                <option value="../CS4AllPA-2022/Replay">CS4AllPA-2022</option>
+                <option value="../CS4Philly-2021/Replay">CS4Philly-2021</option>
+                <option value="../CS4Philly-2022/Replay">CS4Philly-2022</option>
+                <option value="../CSTA-2022/Replay">CSTA-2022</option>
+                <option value="../Eagles/Replay">Eagles</option>
+                <option value="../Eagles2/Replay">Eagles2</option>
+                <option value="../GHopper/Replay">GHopper</option>
+                <option value="../LoveStatue/Replay">LoveStatue</option>
+                <option value="../MikeWazowski/Replay">MikeWazowski</option>
+                <option value="../PhillySciFest-2022/Replay">PhillySciFest-2022</option>
+                <option value="../Pixar-2022/Replay">Pixar-2022</option>
+                <option value="../RobotSpringboard/Replay">RobotSpringboard</option>
+                <option value="../RobotSpringboard-2022/Replay">RobotSpringboard-2022</option>
+                <option value="../Rocky-2022/Replay">Rocky-2022</option>
+                <option value="../YellowSubmarine/Replay">YellowSubmarine</option>
+                <option value="../YellowSubmarine-2022/Replay">YellowSubmarine-2022</option>
             </select>
             <button onclick="fillPage()">Fill In a Page</button>
             <button onclick="viewImage()">View Full Image</button>
