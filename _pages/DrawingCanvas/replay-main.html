@@ -35,6 +35,7 @@ li.custom-menu-item a.custom-menu-link {
 
 li.custom-menu-item a.custom-menu-link:hover {
     background-color: #99CC99; /* Winter */
+    text-decoration: none; /* Remove underline on hover */
 }
 
 /* Style the dropdown button */
@@ -49,12 +50,14 @@ li.custom-menu-item a.custom-menu-link:hover {
     font-weight: bold;
     text-align: center;
     display: inline-block;
+    text-decoration: none; /* Remove underline */
 }
 
 /* The container <li> - needed to position the dropdown content */
 .custom-dropdown {
     position: relative;
     display: inline-block;
+    z-index: 10; /* Ensure parent container is above the iframe */
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -64,7 +67,7 @@ li.custom-menu-item a.custom-menu-link:hover {
     background-color: #4F80B0;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000; /* Ensure it appears above the iframe */
+    z-index: 20; /* Ensure dropdown content is above the iframe */
 }
 
 /* Links inside the dropdown */
@@ -80,6 +83,7 @@ li.custom-menu-item a.custom-menu-link:hover {
 /* Change color of dropdown links on hover */
 .custom-dropdown-content a.custom-dropdown-link:hover {
     background-color: #99CC99;
+    text-decoration: none; /* Remove underline */
 }
 
 /* Show the dropdown menu on hover */
@@ -90,6 +94,12 @@ li.custom-menu-item a.custom-menu-link:hover {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .custom-dropdown:hover .custom-dropbtn {
     background-color: #99CC99;
+}
+
+/* iframe style */
+iframe#fileContents {
+    z-index: 1; /* Set iframe z-index lower than dropdown */
+    position: relative; /* Ensure it respects z-index */
 }
 </style>
 
