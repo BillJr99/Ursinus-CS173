@@ -65,6 +65,8 @@ info:
         - Implement a method <code>boolean equals(Book _book)</code> that returns <code>true</code> if the title and author of <code>_book</code> is the same as the title and author of the Book object on which equals is called (in other words, <code>this</code>).
       embed: |
         <iframe src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaAccessorMutatorExample.zip&title=JavaAccessorMutatorExample"
+          height="600px"
+          width="100%"        
           scrolling="yes"
           frameborder="no"
           allowfullscreen="true"
