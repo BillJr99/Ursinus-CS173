@@ -50,8 +50,6 @@ info:
         - "What do you think is the function defintion for <code>Math.pow</code>, <code>Math.sqrt</code>, and <code>System.out.println</code>?" 
         - The Math class includes several useful math functions that you can call.  For example, <code>Math.pow(a, b)</code> will return the <code>double</code> value computed by <code>a</code> raised to the power of <code>b</code> (both <code>double</code> values).  Re-write <code>circleArea()</code> so that it computes the <code>radius</code> raised to the power of <code>2</code>, rather than multiplying it by itself.
         - The Math class also provides constants, so that you do not need to hard-code approximate values like we did with <code>3.14</code> for the value <span>\(\pi\)</span>.  Modify the program to use the constant <code>Math.PI</code> instead of <code>3.14</code>.
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Scanner;

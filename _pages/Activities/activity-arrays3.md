@@ -31,9 +31,7 @@ info:
       title: Array Equality Algorithm
       questions:
         - "Fill in the code in <code>main()</code> above to determine if two arrays contain the same values"
-        - "Move this code into a function.  What should it return?  Print the result in <code>main()</code> and write javadoc for the function."
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>          
+        - "Move this code into a function.  What should it return?  Print the result in <code>main()</code> and write javadoc for the function."      
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
@@ -69,8 +67,6 @@ info:
       questions:
         - "Fill in the code in the two functions above."
         - "Write javadoc for the <code>printArray</code> function."
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>          
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         import java.util.Arrays;
@@ -100,8 +96,6 @@ info:
       questions:
         - "Fill in the code in the two functions above."
         - "Write javadoc for the <code>printArray</code> function."
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit6-Arrays/topic-6-2-traversing-arrays.html
       title: Traversing Arrays

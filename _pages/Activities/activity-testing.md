@@ -99,9 +99,7 @@ info:
             }
         }
         ]]></script>          
-      title: Facilitating Unit Tests
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>       
+      title: Facilitating Unit Tests      
       questions:
         - What makes this a difficult function to test? 
         - What could we do to better facilitate testing a function like this?

@@ -16,7 +16,7 @@ info:
     
   models:
     - model: |
-        Consider the program in the embedded frame.  We protect class fields through <strong>encapsulation</strong>, which allows us to hide fields from manipulation by other classes or main().  In the prior examples, it is possible to set the number of pages of a book to be a negative value.  Using encapsulation, we can help ensure that fields are set correctly by enforcing preconditions, by marking fields and methods as <code>public</code> or <code>private</code>.
+        Consider the program below.  We protect class fields through <strong>encapsulation</strong>, which allows us to hide fields from manipulation by other classes or main().  In the prior examples, it is possible to set the number of pages of a book to be a negative value.  Using encapsulation, we can help ensure that fields are set correctly by enforcing preconditions, by marking fields and methods as <code>public</code> or <code>private</code>.
       title: Accessors and Mutators
       questions:
         - What does <code>private</code> mean?  

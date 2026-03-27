@@ -56,9 +56,7 @@ info:
            }
         }
         ]]></script>       
-      title: Base Cases and Recursive Steps
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>       
+      title: Base Cases and Recursive Steps   
       questions:
         - Fill in the base case and recusive call for the factorial function, and try running it!
         

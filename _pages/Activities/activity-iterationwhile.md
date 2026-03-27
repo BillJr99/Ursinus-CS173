@@ -38,8 +38,6 @@ info:
         - Modify this code to implement a <code>checkIfRaining()</code> function that generates a random number between 1 and 10, and returns <code>true</code> if the number is greater than 7 (and return <code>false</code> otherwise).
         - "Develop an algorithm to determine if two <code>String</code> variables are equal."
         - "Develop a program to iterate over each character of a <code>String</code> and pass each character to a function that returns the letter's position in the alphabet (for example, the letter <code>a</code> would be position <code>0</code>."
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
 
 tags:
   - iterations

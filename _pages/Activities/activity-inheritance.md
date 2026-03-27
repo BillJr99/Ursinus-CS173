@@ -178,9 +178,7 @@ info:
         - Does an <code>interface</code> define fields, methods, both, or neither?
         - What is the advantage of defining an <code>interface</code>?
         - When using an <code>interface</code>, it is sometimes still necessary to duplicate code.  Can you find an example of this in this Model?
-        - Run this example in <a href=https://repl.it>repl.it</a>.  What must each file be named, and what code goes into which file?  When you click Run, what <code>javac</code> command executes (specifically, what files are compiled)? 
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaInheritanceExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>    
+        - Run this example in <a href=https://repl.it>repl.it</a>.  What must each file be named, and what code goes into which file?  When you click Run, what <code>javac</code> command executes (specifically, what files are compiled)?   
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[  
         import java.util.Random;

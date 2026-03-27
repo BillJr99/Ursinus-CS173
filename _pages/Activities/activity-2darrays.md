@@ -34,9 +34,7 @@ info:
         <img src="../images/examples/java-visualizer-2darrayidentity.png" alt="Java Visualizer Example of a 2D Array" />
         <br>
         <img src="../files/manim/output/MatrixExample1.gif" alt="Manim 2D Matrix Animation" />
-      title: 2D Arrays and Traversals
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>  
+      title: 2D Arrays and Traversals 
       questions:
         - How would you describe a 2D array in terms of usual 1D arrays?
         - Does the first index indicate the row or the column of the 2D array?

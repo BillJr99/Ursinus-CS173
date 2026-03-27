@@ -160,11 +160,9 @@ info:
       questions:
         - "What is the result of dividing 6 by 4?  How about dividing 6 by 4.0?  How and why do these differ?"
         - "How are the values of <code>idiv</code> (the result of the integer division operation) and <code>fdiv</code> (the result of the floating point division operation) different and why?"
-        - What would happen if you attempt to divide by 0?  Feel free to try this in the code window below!
+        - What would happen if you attempt to divide by 0?  
         - Notice the result of dividing <code>x / 2</code> if <code>x</code> is an <code>int</code>?  How about if <code>x</code> is a <code>double</code> or a <code>float</code>?
         - Suppose you had to divide two integers, but you want the result to be stored as a floating point value.  How could you ensure that this happens (there are several possibilities!)?
-      embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaFirstExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
         
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-4-assignment.html	
