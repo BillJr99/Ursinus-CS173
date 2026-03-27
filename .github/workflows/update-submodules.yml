@@ -1,27 +1,47 @@
-name: Update submodules
-
+name: Reset and sync submodules
 on:
   workflow_dispatch:
 
 jobs:
-  update:
+  reset-and-sync:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout parent repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: false
           fetch-depth: 0
 
-      - name: Sync and update submodules
+      - name: Configure Git identity
         run: |
-          git submodule sync --recursive
-          git submodule update --init --recursive
-          git submodule update --remote --recursive
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit changes
+      - name: Hard reset to remote HEAD
+        run: |
+          git fetch origin
+          git reset --hard origin/main
+
+      - name: Wipe untracked content
+        run: git clean -ffdx
+
+      - name: Deinitialize all submodules
+        run: git submodule deinit --all --force
+
+      - name: Reinitialize submodules from remote
+        run: git submodule update --init --recursive --remote --force
+
+      - name: Build dynamic file_pattern from registered submodules
+        id: submodule_paths
+        run: |
+          PATHS=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
+                  | awk '{print $2}' \
+                  | tr '\n' ' ' \
+                  | sed 's/ $//')
+          echo "paths=.gitmodules $PATHS" >> $GITHUB_OUTPUT
+
+      - name: Commit updated submodule pointers if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: ".gitmodules _layouts _pages/Exercises assets code"
-          commit_message: "Update submodules from parent"
+          file_pattern: ${{ steps.submodule_paths.outputs.paths }}
+          commit_message: "chore: hard reset submodule pointers to remote HEAD"
