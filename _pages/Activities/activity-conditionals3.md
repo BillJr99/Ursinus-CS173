@@ -48,7 +48,7 @@ info:
         - "Label the three large circles \"A\", \"B\", and \"C\".  In each of the 7 regions within the Venn Diagram, which elements are true and which are false?"
         - "Write a series of <code>if</code> statements that may use <code>else</code> and <code>else if</code> blocks that print out the different states of your Venn Diagram.  There are a few ways to go about this, so we will discuss and compare approaches as a class."
     - model: |
-        <a title="P. Kemp, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:If-Then-Else-diagram.svg"><img width="256" alt="If-Then-Else-diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/If-Then-Else-diagram.svg/256px-If-Then-Else-diagram.svg.png"></a>
+        <a title="P. Kemp, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:If-Then-Else-diagram.svg"><img width="256" alt="If-Then-Else-diagram" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/If-Then-Else-diagram.svg"></a>
       title: "Using Flow Charts to Observe Conditional Program Flow"
       questions:
         - "Draw a flowchart diagram that illustrates the control flow of your Venn Diagram program."

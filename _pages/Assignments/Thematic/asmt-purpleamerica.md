@@ -67,7 +67,7 @@ In the United States, many elections, including the presidential election, are d
 
 This results in an electoral map like the one below from the 2008 United States presidential election, in which information is lost pertaining to the margin of victory.  For example, it is known that President Obama won the Commonwealth of Pennsylvania in 2008 (due to the blue color), receiving its 21 electoral college votes; similarly, it is known that Senator McCain won the state of Texas (due to the red color) and received its 34 electoral college votes.  It is not known from this visualization, however, whether these states were won by a single vote or by a landslide.  For this reason, it is important to carefully choose visualizations that convey as much information as possible, and to be clear about the limitations of the visualization.
 
-![2008 Presidential Election Electoral College Votes from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/ElectoralCollege2008.svg/800px-ElectoralCollege2008.svg.png)
+![2008 Presidential Election Electoral College Votes from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/24/ElectoralCollege2008.svg
 
 A gradient can be seen when the margin of victory is depicted on a similar map through the use of color shading, as in the figure below (from [270towin.com](http://270towin.com)).  Whereas the map above draws each region in either red or blue to indicate the winner, Vanderplei renders the map with a mixture of colors to indicate the proportion of votes received for each candidate in that region.  
 

@@ -11,7 +11,7 @@ info:
     
   models:
     - model: |
-       <a title="Larousse / Public domain" href="https://commons.wikimedia.org/wiki/File:Nouveau_Dictionnaire_Larousse_page.JPG"><img width="512" alt="Nouveau Dictionnaire Larousse page" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Nouveau_Dictionnaire_Larousse_page.JPG/512px-Nouveau_Dictionnaire_Larousse_page.JPG"></a> 
+       <a title="Larousse / Public domain" href="https://commons.wikimedia.org/wiki/File:Nouveau_Dictionnaire_Larousse_page.JPG"><img width="512" alt="Nouveau Dictionnaire Larousse page" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Nouveau_Dictionnaire_Larousse_page.JPG"></a> 
        <br>
        <a title="© 2010 by Tomasz Sienicki [user: tsca, mail: tomasz.sienicki at gmail.com] / CC BY (https://creativecommons.org/licenses/by/3.0)" href="https://commons.wikimedia.org/wiki/File:Telefonbog_ubt-1.JPG"><img width="512" alt="Telefonbog ubt-1" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Telefonbog_ubt-1.JPG"></a>
       title: "Data Maps"

@@ -156,7 +156,7 @@ We will use 24-bit color in this example, meaning that each of the three values 
 
 The color wheel below from Wikipedia shows some example color mixtures.  These values are in hexadecimal, so they range from 0x00 to 0xff for decimal values 0 to 255.  Here is a [guide](https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/number-systems-introduction) from Khan Academy to number systems and converting between hexadecimal, binary, and decimal. 
 
-![RGB Color Wheel from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif/800px-Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif)
+![RGB Color Wheel from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/2e/Palette_of_125_main_colors_with_RGB_components_divisible_by_64.gif
 
 ### Setting the Color
 You can set the color of your face using integers for red, green, and blue, as follows:

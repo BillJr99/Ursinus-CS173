@@ -10,7 +10,7 @@ info:
 
   models:
     - model: |
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ASCII-Table-wide.svg/1280px-ASCII-Table-wide.svg.png" alt="ASCII Table from Wikipedia">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg" alt="ASCII Table from Wikipedia">
         <br>
         <img src="../images/activity-minicrypto/publicmap.png" alt="Public Map from the CS Unplugged Cryptography Activity">
         <br>
@@ -25,7 +25,7 @@ info:
         - "What prevents just anyone from solving the Vertex Cover Problem and decrypting your messages?"
         - "Make your own private map and corresponding public map.  Give your partner your public map, and encrypt a value on each other's maps.  Try decrypting it on your private map!"
     - model: |
-        <a title="Davidgothberg, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Public_key_encryption.svg"><img width="512" alt="Public key encryption" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/512px-Public_key_encryption.svg.png"></a>   
+        <a title="Davidgothberg, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Public_key_encryption.svg"><img width="512" alt="Public key encryption" src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg"></a>   
         <br>
         <a href="https://www.cs.drexel.edu/~jpopyack/Courses/CSP/Fa17/notes/10.1_Cryptography/RSAWorksheetv4e.html">RSA Calculator</a>
       title: The RSA Cryptosystem
