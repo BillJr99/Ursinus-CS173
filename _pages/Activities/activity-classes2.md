@@ -25,7 +25,15 @@ info:
         - Why not just do things the old way and access the variable directly, rather than using accessors and mutators?
         - What does <code>public</code> and <code>private</code> mean?  
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaAccessorMutatorExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        <iframe
+          height="600px"
+          width="100%"
+          src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaAccessorMutatorExample.zip&title=Java%20Accessor%20Mutator%20Example"
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
     - model: |
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {

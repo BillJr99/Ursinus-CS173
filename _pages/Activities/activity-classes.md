@@ -23,13 +23,29 @@ info:
         - Other editions of The Great Gatsby were released with 180 pages.  What would you change in the code to reflect this?
         - What would you write to print the author and title of each of these books? 
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaClassExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>   
+        <iframe
+          height="600px"
+          width="100%"
+          src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaClassExample.zip&title=Java%20Class%20Example"
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
     - model: Consider the program below.
       title: Static Methods
       questions:
         - What does the <code>static</code> keyword mean?
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaMovieClassExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        <iframe
+          height="600px"
+          width="100%"
+          src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaMovieClassExample.zip&title=Java%20Movie%20Class%20Example"
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
     - model: Consider the program in the embedded frame.
       title: Constructors
       questions:
@@ -39,7 +55,15 @@ info:
         - What do you think the <code>this</code> keyword means?
         - Why do you think we put underscore characters in the input parameters to the constructor, like <code>_pages</code>?     
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaConstructorExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> 
+        <iframe
+          height="600px"
+          width="100%"
+          src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaConstructorExample.zip&title=Java%20Constructor%20Example"
+          scrolling="yes"
+          frameborder="no"
+          allowfullscreen="true"
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>
     - model: |
         Recall from our earlier examples that we had to create a separate Book object variable for each Book we wanted to create.  We can simplify things by creating a single variable that refers to the whole collection.  This is called an array.  They allow us to leverage loops to quickly iterate over a collection of values or objects.
         <br>
