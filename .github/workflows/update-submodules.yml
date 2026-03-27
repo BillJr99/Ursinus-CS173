@@ -1,76 +1,96 @@
 name: Reset and Sync Submodules
-
+ 
 on:
   workflow_dispatch:
-
+ 
 concurrency:
   group: submodule-reset
   cancel-in-progress: true
-
+ 
 jobs:
   reset-and-sync:
     runs-on: ubuntu-latest
-
+ 
     permissions:
       contents: write
-
+ 
     steps:
       - name: Checkout parent repository (no submodules)
         uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 0
-
+ 
       - name: Configure Git identity
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
+ 
       - name: Resolve default branch name and hard reset to remote HEAD
         run: |
           DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
           echo "Default branch resolved as: ${DEFAULT_BRANCH}"
           git fetch origin
           git reset --hard origin/${DEFAULT_BRANCH}
-
+ 
       - name: Remove all untracked files and directories (including stale submodule remnants)
         run: git clean -ffdx
-
-      - name: Forcibly remove any lingering submodule working tree directories
+ 
+      - name: Forcibly remove lingering submodule working tree directories and cached module metadata
         run: |
-          # Read every registered submodule path and wipe it entirely before
-          # reinitializing.  This guarantees that a dangling gitlink or a
-          # partially-initialized working tree cannot block the subsequent
-          # submodule update step.
           git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
             | awk '{print $2}' \
             | while IFS= read -r SUBPATH; do
                 echo "Removing submodule working tree: ${SUBPATH}"
                 rm -rf "${SUBPATH}"
-                # Also remove the cached .git/modules entry so Git does not
-                # mistake the old (potentially corrupt) module metadata for a
-                # valid initialization.
                 MODULE_NAME=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
-                               | awk -v p="${SUBPATH}" '$2 == p {sub(/^submodule\./, "", $1); sub(/\.path$/, "", $1); print $1}')
+                               | awk -v p="${SUBPATH}" '$2 == p {
+                                   sub(/^submodule\./, "", $1)
+                                   sub(/\.path$/, "", $1)
+                                   print $1
+                                 }')
                 if [ -n "${MODULE_NAME}" ]; then
                   echo "Removing cached module metadata: .git/modules/${MODULE_NAME}"
                   rm -rf ".git/modules/${MODULE_NAME}"
                 fi
               done
-
+ 
       - name: Deinitialize all submodules
         run: git submodule deinit --all --force
-
-      - name: Reinitialize submodules from remote HEAD (ignores stale recorded SHAs)
-        # --remote: checks out the current HEAD of each submodule's tracked
-        #           branch rather than the (potentially dangling) SHA stored
-        #           in the parent repository's gitlink entry.
-        # --force:  overwrites any local modifications without prompting.
-        run: git submodule update --init --recursive --remote --force
-
+ 
+      - name: Initialize top-level submodules (non-recursive)
+        # We intentionally do NOT pass --recursive here.  Some third-party
+        # submodules (e.g. microsoft/sql-server-samples) contain their own
+        # nested submodules whose URLs are not registered in this repository's
+        # .gitmodules.  Recursive initialization causes Git to descend into
+        # those nested trees and abort with "No url found for submodule path".
+        # We handle recursion selectively in the next step.
+        run: git submodule update --init --remote --force
+ 
+      - name: Selectively recurse into first-party submodules only
+        # List the submodule paths that are safe to recurse into (i.e., those
+        # you own and whose nested submodule trees are fully registered).
+        # Third-party submodules such as files/cosc_304 and files/mssamples
+        # are deliberately excluded from recursive initialization.
+        run: |
+          OWNED_SUBMODULES=(
+            "_layouts"
+            "_pages/Exercises"
+            "assets"
+            "code"
+          )
+          for SUBPATH in "${OWNED_SUBMODULES[@]}"; do
+            if [ -d "${SUBPATH}" ]; then
+              echo "Recursing into owned submodule: ${SUBPATH}"
+              git submodule update --init --remote --force --recursive -- "${SUBPATH}"
+            else
+              echo "WARNING: Expected owned submodule path not found: ${SUBPATH}"
+            fi
+          done
+ 
       - name: Report resolved submodule SHAs for audit
         run: git submodule status --recursive
-
+ 
       - name: Build file_pattern from all registered submodule paths
         id: submodule_paths
         run: |
@@ -80,7 +100,7 @@ jobs:
                   | sed 's/ $//')
           echo "Submodule paths detected: ${PATHS}"
           echo "paths=.gitmodules ${PATHS}" >> "${GITHUB_OUTPUT}"
-
+ 
       - name: Commit updated submodule pointers if changed
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
