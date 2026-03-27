@@ -1,12 +1,21 @@
-name: Reset and sync submodules
+name: Reset and Sync Submodules
+
 on:
   workflow_dispatch:
+
+concurrency:
+  group: submodule-reset
+  cancel-in-progress: true
 
 jobs:
   reset-and-sync:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout parent repository
+      - name: Checkout parent repository (no submodules)
         uses: actions/checkout@v4
         with:
           submodules: false
@@ -17,28 +26,60 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Hard reset to remote HEAD
+      - name: Resolve default branch name and hard reset to remote HEAD
         run: |
+          DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
+          echo "Default branch resolved as: ${DEFAULT_BRANCH}"
           git fetch origin
-          git reset --hard origin/main
+          git reset --hard origin/${DEFAULT_BRANCH}
 
-      - name: Wipe untracked content
+      - name: Remove all untracked files and directories (including stale submodule remnants)
         run: git clean -ffdx
+
+      - name: Forcibly remove any lingering submodule working tree directories
+        run: |
+          # Read every registered submodule path and wipe it entirely before
+          # reinitializing.  This guarantees that a dangling gitlink or a
+          # partially-initialized working tree cannot block the subsequent
+          # submodule update step.
+          git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
+            | awk '{print $2}' \
+            | while IFS= read -r SUBPATH; do
+                echo "Removing submodule working tree: ${SUBPATH}"
+                rm -rf "${SUBPATH}"
+                # Also remove the cached .git/modules entry so Git does not
+                # mistake the old (potentially corrupt) module metadata for a
+                # valid initialization.
+                MODULE_NAME=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
+                               | awk -v p="${SUBPATH}" '$2 == p {sub(/^submodule\./, "", $1); sub(/\.path$/, "", $1); print $1}')
+                if [ -n "${MODULE_NAME}" ]; then
+                  echo "Removing cached module metadata: .git/modules/${MODULE_NAME}"
+                  rm -rf ".git/modules/${MODULE_NAME}"
+                fi
+              done
 
       - name: Deinitialize all submodules
         run: git submodule deinit --all --force
 
-      - name: Reinitialize submodules from remote
+      - name: Reinitialize submodules from remote HEAD (ignores stale recorded SHAs)
+        # --remote: checks out the current HEAD of each submodule's tracked
+        #           branch rather than the (potentially dangling) SHA stored
+        #           in the parent repository's gitlink entry.
+        # --force:  overwrites any local modifications without prompting.
         run: git submodule update --init --recursive --remote --force
 
-      - name: Build dynamic file_pattern from registered submodules
+      - name: Report resolved submodule SHAs for audit
+        run: git submodule status --recursive
+
+      - name: Build file_pattern from all registered submodule paths
         id: submodule_paths
         run: |
           PATHS=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
                   | awk '{print $2}' \
                   | tr '\n' ' ' \
                   | sed 's/ $//')
-          echo "paths=.gitmodules $PATHS" >> $GITHUB_OUTPUT
+          echo "Submodule paths detected: ${PATHS}"
+          echo "paths=.gitmodules ${PATHS}" >> "${GITHUB_OUTPUT}"
 
       - name: Commit updated submodule pointers if changed
         uses: stefanzweifel/git-auto-commit-action@v5
