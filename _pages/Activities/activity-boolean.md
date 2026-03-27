@@ -89,7 +89,15 @@ info:
         - Write a program to compute <code>(!a && !b)</code> for two <code>boolean</code> variables, and then to compute the DeMorgan's Law version of that expression.  Try it with all four combinations of boolean variables (true/true, false/false, true/false, false/true), and print both results to verify that they are equivalent.
         - In the Venn diagram above, assign <code>a</code> to the left circle, and <code>b</code> to the right circle.  Fill in <code>!a || !b</code>.  Now fill in <code>!(a && b)</code>.  How do they differ?
       embed: |
-        <iframe height="400px" width="100%" src="https://repl.it/@BillJr99/JavaBooleanExample?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>        
+        <iframe 
+          height="600px" 
+          width="100%" 
+          src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FJavaBooleanExample.zip&title=Java%20Boolean%20Example" 
+          scrolling="yes" 
+          frameborder="no" 
+          allowfullscreen="true" 
+          sandbox="allow-scripts allow-same-origin">
+        </iframe>      
   additional_reading:
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html
       title: Booleans
