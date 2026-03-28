@@ -33,44 +33,55 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Resolve default branch name and hard reset to remote HEAD
+      - name: Resolve default branch and hard reset to remote HEAD
         run: |
           DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
           echo "Default branch resolved as: ${DEFAULT_BRANCH}"
           git fetch origin
-          git reset --hard origin/${DEFAULT_BRANCH}
+          git reset --hard "origin/${DEFAULT_BRANCH}"
 
-      - name: Remove all untracked files and directories (including stale submodule remnants)
+      - name: Purge entire .git/modules cache unconditionally
+        run: |
+          echo "Removing .git/modules to eliminate all cached submodule state."
+          rm -rf .git/modules
+
+      - name: Remove all untracked files and directories
         run: git clean -ffdx
 
-      - name: Forcibly remove lingering submodule working tree directories and cached module metadata
+      - name: Deinitialize all submodules forcibly
+        run: |
+          git submodule deinit --all --force || true
+
+      - name: Remove orphaned gitlink entries from the index
+        run: |
+          echo "Scanning index for orphaned gitlink entries (mode 160000)..."
+          git ls-files --stage \
+            | awk '$1 == "160000" {print $4}' \
+            | while IFS= read -r GITLINK_PATH; do
+                DECLARED=$(git config --file .gitmodules \
+                             --get-regexp 'submodule\..*\.path' 2>/dev/null \
+                           | awk -v p="${GITLINK_PATH}" '$2 == p {print "yes"}')
+                if [ "${DECLARED}" != "yes" ]; then
+                  echo "Removing orphaned gitlink from index: ${GITLINK_PATH}"
+                  git rm --cached -f -- "${GITLINK_PATH}" || true
+                else
+                  echo "Gitlink declared in .gitmodules, retaining: ${GITLINK_PATH}"
+                fi
+              done
+
+      - name: Initialize submodules individually, proceeding on any failure
         run: |
           git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
             | awk '{print $2}' \
             | while IFS= read -r SUBPATH; do
-                echo "Removing submodule working tree: ${SUBPATH}"
-                rm -rf "${SUBPATH}"
-                MODULE_NAME=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
-                               | awk -v p="${SUBPATH}" '$2 == p {
-                                   sub(/^submodule\./, "", $1)
-                                   sub(/\.path$/, "", $1)
-                                   print $1
-                                 }')
-                if [ -n "${MODULE_NAME}" ]; then
-                  echo "Removing cached module metadata: .git/modules/${MODULE_NAME}"
-                  rm -rf ".git/modules/${MODULE_NAME}"
-                fi
+                echo "---"
+                echo "Initializing submodule: ${SUBPATH}"
+                git submodule update --init --force -- "${SUBPATH}" \
+                  && echo "INFO: ${SUBPATH} initialized successfully." \
+                  || echo "WARNING: ${SUBPATH} failed to initialize. Continuing."
               done
 
-      - name: Deinitialize all submodules
-        run: git submodule deinit --all --force
-
-      - name: Initialize top-level submodules (non-recursive, pinned SHAs for third-party)
-        run: |
-          git submodule update --init --force || \
-            echo "WARNING: git submodule update exited non-zero; known-broken submodules may be present. Continuing."
-
-      - name: Selectively recurse into first-party submodules only
+      - name: Selectively recurse into first-party submodules
         run: |
           OWNED_SUBMODULES=(
             "_layouts"
@@ -81,19 +92,27 @@ jobs:
           for SUBPATH in "${OWNED_SUBMODULES[@]}"; do
             if [ -d "${SUBPATH}" ]; then
               echo "Recursing into owned submodule: ${SUBPATH}"
-              git submodule update --init --remote --force --recursive -- "${SUBPATH}"
+              git submodule update \
+                --init \
+                --remote \
+                --force \
+                --recursive \
+                -- "${SUBPATH}" \
+                && echo "INFO: ${SUBPATH} recursed successfully." \
+                || echo "WARNING: ${SUBPATH} failed during recursive update. Continuing."
             else
               echo "WARNING: Expected owned submodule path not found: ${SUBPATH}"
             fi
           done
 
       - name: Report resolved submodule SHAs for audit
-        run: git submodule status --recursive
+        run: git submodule status --recursive || true
 
       - name: Build file_pattern from all registered submodule paths
         id: submodule_paths
         run: |
-          PATHS=$(git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
+          PATHS=$(git config --file .gitmodules \
+                    --get-regexp 'submodule\..*\.path' \
                   | awk '{print $2}' \
                   | tr '\n' ' ' \
                   | sed 's/ $//')
