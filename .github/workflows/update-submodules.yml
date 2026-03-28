@@ -1,41 +1,48 @@
 name: Reset and Sync Submodules
- 
+
 on:
+  push:
+    branches:
+      - gh-pages
   workflow_dispatch:
- 
+
 concurrency:
-  group: submodule-reset
+  group: submodule-reset-${{ github.ref }}
   cancel-in-progress: true
- 
+
 jobs:
   reset-and-sync:
     runs-on: ubuntu-latest
- 
+
+    if: >
+      github.actor != 'github-actions[bot]' &&
+      !contains(github.event.head_commit.message, '[skip ci]')
+
     permissions:
       contents: write
- 
+
     steps:
       - name: Checkout parent repository (no submodules)
         uses: actions/checkout@v4
         with:
           submodules: false
           fetch-depth: 0
- 
+
       - name: Configure Git identity
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
- 
+
       - name: Resolve default branch name and hard reset to remote HEAD
         run: |
           DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
           echo "Default branch resolved as: ${DEFAULT_BRANCH}"
           git fetch origin
           git reset --hard origin/${DEFAULT_BRANCH}
- 
+
       - name: Remove all untracked files and directories (including stale submodule remnants)
         run: git clean -ffdx
- 
+
       - name: Forcibly remove lingering submodule working tree directories and cached module metadata
         run: |
           git config --file .gitmodules --get-regexp 'submodule\..*\.path' \
@@ -54,24 +61,14 @@ jobs:
                   rm -rf ".git/modules/${MODULE_NAME}"
                 fi
               done
- 
+
       - name: Deinitialize all submodules
         run: git submodule deinit --all --force
- 
-      - name: Initialize top-level submodules (non-recursive)
-        # We intentionally do NOT pass --recursive here.  Some third-party
-        # submodules (e.g. microsoft/sql-server-samples) contain their own
-        # nested submodules whose URLs are not registered in this repository's
-        # .gitmodules.  Recursive initialization causes Git to descend into
-        # those nested trees and abort with "No url found for submodule path".
-        # We handle recursion selectively in the next step.
-        run: git submodule update --init --remote --force
- 
+
+      - name: Initialize top-level submodules (non-recursive, pinned SHAs for third-party)
+        run: git submodule update --init --force
+
       - name: Selectively recurse into first-party submodules only
-        # List the submodule paths that are safe to recurse into (i.e., those
-        # you own and whose nested submodule trees are fully registered).
-        # Third-party submodules such as files/cosc_304 and files/mssamples
-        # are deliberately excluded from recursive initialization.
         run: |
           OWNED_SUBMODULES=(
             "_layouts"
@@ -87,10 +84,10 @@ jobs:
               echo "WARNING: Expected owned submodule path not found: ${SUBPATH}"
             fi
           done
- 
+
       - name: Report resolved submodule SHAs for audit
         run: git submodule status --recursive
- 
+
       - name: Build file_pattern from all registered submodule paths
         id: submodule_paths
         run: |
@@ -100,9 +97,9 @@ jobs:
                   | sed 's/ $//')
           echo "Submodule paths detected: ${PATHS}"
           echo "paths=.gitmodules ${PATHS}" >> "${GITHUB_OUTPUT}"
- 
+
       - name: Commit updated submodule pointers if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           file_pattern: ${{ steps.submodule_paths.outputs.paths }}
-          commit_message: "chore: hard reset submodule pointers to remote HEAD"
+          commit_message: "chore: hard reset submodule pointers to remote HEAD [skip ci]"
