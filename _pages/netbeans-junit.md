@@ -7,7 +7,7 @@ title: "CS173: Intro to Computer Science - Unit Testing with the NetBeans Softwa
 ---
 # {{ page.title }}
 
-This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-tralie).
+This guide has been adapted from [Professor Tralie](https://www.ctralie.com/).
 
 ## Unit Testing
 

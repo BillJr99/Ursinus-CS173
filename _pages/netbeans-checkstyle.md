@@ -7,7 +7,7 @@ title: "CS173: Intro to Computer Science - NetBeans CheckStyle Plugin"
 ---
 # {{ page.title }}
 
-This guide has been adapted from [Professor Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-tralie).
+This guide has been adapted from [Professor Tralie](https://www.ctralie.com/).
 
 ## Writing with Good Coding Style with Help from the CheckStyle NetBeans Plugin
 

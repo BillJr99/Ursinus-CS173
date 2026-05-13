@@ -124,4 +124,4 @@ I strongly suggest computing the portions of this formula one item at a time, ra
 * Don't forget to comment your code to describe what you are doing using `//`, and write up a README describing what you have done to accompany your submission.  You can save your README file in your project directory.  
 * When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  In your README, answer any bolded questions presented on this page.  Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  
 
-[^1]: Developed by [Prof. Chris Tralie](https://www.ursinus.edu/live/profiles/4502-christopher-j-tralie)
+[^1]: Developed by [Prof. Chris Tralie](https://www.ctralie.com/)
