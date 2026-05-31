@@ -93,7 +93,7 @@ info:
     <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
     <div style="width: 100%; display: table-row;">
         <div style="display: table-cell; padding:5px; width:33%;">
-            <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="100%" style="display:block;"  alt="Iris dataset scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Iris_dataset_scatterplot.svg"></a>
+            <a title="Nicoguaro / CC BY (https://creativecommons.org/licenses/by/4.0)" href="https://commons.wikimedia.org/wiki/File:Iris_dataset_scatterplot.svg"><img width="100%" style="display:block;"  alt="Iris dataset scatterplot" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Iris_dataset_scatterplot.svg"></a>
         </div>
         <div style="display: table-cell; padding:5px; width:33%;">
             <img width="100%" style="display:block;" alt="TAP Class Diagram" src="https://www.billmongan.com/files/media/software-clusternav/clusternav.jpg">

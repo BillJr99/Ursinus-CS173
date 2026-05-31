@@ -9,7 +9,7 @@ info:
     - To be able to write a boolean expression using variables of various types
   models:
     - model: |
-        <a title="Teknad / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Demorganlaws.svg"><img width="256" alt="Demorganlaws" src="https://upload.wikimedia.org/wikipedia/commons/0/06/Demorganlaws.svg"></a>
+        <a title="Teknad / CC BY-SA (https://creativecommons.org/licenses/by-sa/4.0)" href="https://commons.wikimedia.org/wiki/File:Demorganlaws.svg"><img width="256" alt="Demorganlaws" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Demorganlaws.svg"></a>
         <br>
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">
