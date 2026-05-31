@@ -62,7 +62,7 @@ In this lab, you will create a text file representing a 2D grid, open and read t
 ## Background: Minesweeper
 The rules of our game will be somewhat like the classic game Minesweeper, in which the user searches for hidden "mines" on a 2-dimensional grid by uncovering squares on the grid one-by-one.  When a square is uncovered, it either contains a "mine" or is empty.  If it contains a "mine," the game is lost.  If the mine is empty, a number is displayed on that square indicating how many "mines" are found on adjacent squares.  This is illustrated in the image below:
 
-<a title="Brandenads, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Kmines_Expert_Game_with_Numbers_1-8.png"><img width="512" alt="Kmines Expert Game with Numbers 1-8" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Kmines_Expert_Game_with_Numbers_1-8.png"></a>
+<a title="Brandenads, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Kmines_Expert_Game_with_Numbers_1-8.png"><img width="512" alt="Kmines Expert Game with Numbers 1-8" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Kmines_Expert_Game_with_Numbers_1-8.png"></a>
 
 ## What to Do
 

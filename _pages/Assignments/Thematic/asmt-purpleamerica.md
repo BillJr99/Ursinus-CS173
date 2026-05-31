@@ -67,7 +67,7 @@ In the United States, many elections, including the presidential election, are d
 
 This results in an electoral map like the one below from the 2008 United States presidential election, in which information is lost pertaining to the margin of victory.  For example, it is known that President Obama won the Commonwealth of Pennsylvania in 2008 (due to the blue color), receiving its 21 electoral college votes; similarly, it is known that Senator McCain won the state of Texas (due to the red color) and received its 34 electoral college votes.  It is not known from this visualization, however, whether these states were won by a single vote or by a landslide.  For this reason, it is important to carefully choose visualizations that convey as much information as possible, and to be clear about the limitations of the visualization.
 
-![2008 Presidential Election Electoral College Votes from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/24/ElectoralCollege2008.svg
+![2008 Presidential Election Electoral College Votes from Wikipedia](https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/ElectoralCollege2008.svg
 
 A gradient can be seen when the margin of victory is depicted on a similar map through the use of color shading, as in the figure below (from [270towin.com](http://270towin.com)).  Whereas the map above draws each region in either red or blue to indicate the winner, Vanderplei renders the map with a mixture of colors to indicate the proportion of votes received for each candidate in that region.  
 
@@ -75,7 +75,7 @@ A gradient can be seen when the margin of victory is depicted on a similar map t
 
 Robert Vanderplei proposed a [Purple America](https://en.wikipedia.org/wiki/Purple_America) map that visualizes the margin of victory with a gradient of colors.  In the example below, he draws each region at a county-by-county level instead of a state-by-state level, to depict a more granular gradient.
 
-![County by County Election Results on a Purple America Map from Wikipedia](https://upload.wikimedia.org/wikipedia/commons/8/8c/ElectionMapPurpleCounty.png)
+![County by County Election Results on a Purple America Map from Wikipedia](https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/ElectionMapPurpleCounty.png)
 
 Kevin Wayne \[[^1]\] developed a [SIGCSE Nifty Assignment](http://nifty.stanford.edu/2014/wayne-purple-america/purple-america.html) in which you will draw this map using GPS coordinates for the regions (states or counties), and then color code those regions using electoral results.  The GPS coordinates of each region and the electoral results in those regions will be given to you.
 

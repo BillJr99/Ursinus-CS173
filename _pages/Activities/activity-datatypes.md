@@ -31,7 +31,7 @@ info:
         - What do you think the <code>//</code> characters represent?
     - title: Primitive Data Types
       model: |
-        <a title="Hellbus / Public domain" href="https://commons.wikimedia.org/wiki/File:Odometer_rollover.jpg"><img width="512" alt="Odometer rollover" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Odometer_rollover.jpg"></a>
+        <a title="Hellbus / Public domain" href="https://commons.wikimedia.org/wiki/File:Odometer_rollover.jpg"><img width="512" alt="Odometer rollover" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Odometer_rollover.jpg"></a>
         <br>      
         <div style="width: 100%; display: table; border-collapse:separate; border-spacing:5px;">
         <div style="width: 100%; display: table-row; background-color: black; color: white;">

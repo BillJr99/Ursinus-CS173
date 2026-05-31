@@ -44,7 +44,7 @@ info:
         }        
         ]]></script>
         <br>
-        <a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion-sort-example-300px.gif"><img width="256" alt="Insertion-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif"></a>
+        <a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion-sort-example-300px.gif"><img width="256" alt="Insertion-sort-example-300px" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Insertion-sort-example-300px.gif"></a>
         <br>
         Consider the array defined in <a href="https://www.geeksforgeeks.org/insertion-sort/">this example</a>: [ 4, 3, 2, 10, 12, 1, 5, 6 ]
       title: <code>Insertion Sort</code>
