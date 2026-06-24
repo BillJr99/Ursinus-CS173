@@ -44,7 +44,7 @@ info:
       questions:
         - What does <code>return</code> mean in the <code>circleArea</code> function above?
         - Notice that functions have data types before their function names, just like variables do.  What is the return type of <code>circleArea()</code>?
-        - Try running the sample program above in repl.it. 
+        - Try running the sample program above in a development environment of your choice. 
         - Modify the program to write an additional function circleDiameter() that computes the diameter (<span>\(2 \times \pi \times r\)</span>) given the radius of the circle.  Call that function from main() and print the value.
         - Modify the program to write and call <code>triangleArea()</code> from <code>main()</code> and then print the area of a triangle whose dimensions you choose.
         - "What do you think is the function defintion for <code>Math.pow</code>, <code>Math.sqrt</code>, and <code>System.out.println</code>?" 
