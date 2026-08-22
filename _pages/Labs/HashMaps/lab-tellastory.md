@@ -45,11 +45,11 @@ info:
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
     - rtitle: "Strings Activity"
-      rlink: "../Activities/Strings"  
+      rlink: "../../Activities/Strings"  
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"
+      rlink: "../../Activities/Iteration"
     - rtitle: "HashMaps Activity"
-      rlink: "../Activities/HashMaps"
+      rlink: "../../Activities/HashMaps"
   questions:
     - "What would happen if you tried to look up a room that does not exist in your <code>places</code> map?  Try it to be sure!"
     - "What would happen if you tried to look up a room called <code>middle</code> when your <code>places</code> map contains a room called <code>Middle</code> instead?  Try it to be sure!"
@@ -217,7 +217,7 @@ for(int i = 0; i < possibleMoves.length; i++) {
 
 Here is an example diagram from my story example above:
 
-![Story State Diagram](../images/lab-tellastory/state-diagram.png)
+![Story State Diagram]({{ site.baseurl }}/images/lab-tellastory/state-diagram.png)
 
 ## Extra Credit (Up to 15%): Best Story Competition
 Creativity is encouraged, but not required for a grade!  Let me know in your documentation if you'd like to demo your story to the class - I hope you do!  You will receive 7.5% extra credit for entering your submission, and the class will vote on their favorite story (the winner will receive an additional 7.5% extra credit).
@@ -244,10 +244,10 @@ You can check these values inside your loop as well, and learn which room you ha
 
 Don't forget to test your program with several different inputs to help verify that things work the way you expect!  Think in terms of trying to break your program; if it's really hard to "trick" your program into getting the wrong answer, you've probably done a good job making your code robust.  
 
-Also, check the [Style Guide](../Style-Guide) to make sure that you've written high quality code; make sure your code is "readable," well indented, uses good variable names, and includes good comments throughout the program.
+Also, check the [Style Guide]({{ site.baseurl }}/Style-Guide) to make sure that you've written high quality code; make sure your code is "readable," well indented, uses good variable names, and includes good comments throughout the program.
 
 When you're done, write a README for your project, and save all your files, before exporting your project to ZIP.  **In your README, answer any bolded questions presented on this page.**  In addition, write a few paragraphs describing what you did, how you did it, and how to use your program.  If your program requires the user to type something in, describe that here.  If you wrote functions to help solve your problem, what are they, and what do they do?  Imagine that you are giving your program to another student in the class, and you want to explain to them how to use it.  What would you tell them?  Imagine also that another student had given you the functions that you wrote for your program: what would you have wished that you knew about how to call those functions?
 
 ### Exporting your Project for Submission
 
-Here is a [video tutorial](../Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  **Be sure to save your README file before exporting the project, so that your work is included in the submission!**
+Here is a [video tutorial]({{ site.baseurl }}/Modules/IDE/Module2) describing how to write a README for your project, and how to export it.  **Be sure to save your README file before exporting the project, so that your work is included in the submission!**
