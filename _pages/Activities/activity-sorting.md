@@ -11,7 +11,7 @@ info:
     - To be able to sort a list using an iterative sorting algorithms (<code>Insertion Sort</code>)
 
   additional_reading:
-    - link: ../Modules/Sorting/Modules/Sorting
+    - link: ../Modules/Sorting
       title: Sorting Module
     - title: "Interactive Demo of Insertion Sort"
       link: "https://mhyfritz.com/blog/2014/09/22/interactive-insertion-sort/"    

@@ -215,7 +215,7 @@ schedule:
 - week: "0"
   date: "2"
   title: "Course Overview: What is Computer Science?"
-  link: "../Ursinus-CS173-Overview"
+  link: "https://www.billmongan.com/Ursinus-CS173-Overview"
   readings:
   - rtitle: "NetBeans IDE Software Environment"
     rlink: "NetBeans"
@@ -232,7 +232,7 @@ schedule:
 - week: "1"
   date: "0"
   title: "A Brief History of Computer Science"  
-  link: "../Ursinus-CS173-CSHistory"  
+  link: "https://www.billmongan.com/Ursinus-CS173-CSHistory"  
 - week: "1"
   date: "1"
   title: "Data Types and Variables" 
