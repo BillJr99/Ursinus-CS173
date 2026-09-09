@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-standard
 permalink: /NetBeans
 title: "CS173: Intro to Computer Science - NetBeans Software Environment"
 

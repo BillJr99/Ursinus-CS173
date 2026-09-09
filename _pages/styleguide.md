@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-standard
 permalink: /Style-Guide
 title: "CS173: Intro to Computer Science - Style Guide"
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-standard
 permalink: /NetBeans/CheckStyle
 title: "CS173: Intro to Computer Science - NetBeans CheckStyle Plugin"
 

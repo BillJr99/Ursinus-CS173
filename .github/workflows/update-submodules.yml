@@ -114,6 +114,13 @@ jobs:
           PATHS=$(git config --file .gitmodules \
                     --get-regexp 'submodule\..*\.path' \
                   | awk '{print $2}' \
+                  | while IFS= read -r SUBPATH; do
+                      if [ -e "${SUBPATH}" ]; then
+                        echo "${SUBPATH}"
+                      else
+                        echo "WARNING: ${SUBPATH} does not exist on disk (submodule failed to initialize); excluding from commit pattern." >&2
+                      fi
+                    done \
                   | tr '\n' ' ' \
                   | sed 's/ $//')
           echo "Submodule paths detected: ${PATHS}"

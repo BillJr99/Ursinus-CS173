@@ -1,0 +1,97 @@
+name: Site Checks
+
+# Deploy GitHub Pages only runs on a push to gh-pages, so until now nothing
+# checked a pull request before it merged: build problems surfaced on the merge
+# commit, after the fact. This runs on every pull request and every push,
+# including direct pushes to gh-pages, and it fails on warnings that the deploy
+# build tolerates. It never blocks a deployment; it just goes red.
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+concurrency:
+  group: site-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Audit pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # The runner's Python has no PyYAML, and the schedule check below needs it.
+      # The audit script itself deliberately uses only the standard library.
+      - name: Install Python dependencies
+        run: python3 -m pip install --quiet pyyaml
+
+      # Literal text eaten by Liquid, layouts that do not exist, and Liquid in
+      # the LiaScript decks. The first of those produces no Jekyll warning at
+      # all: the words just disappear from the published page.
+      - name: Audit pages
+        run: python3 .github/scripts/audit_pages.py
+
+      - name: Check the schedule still parses
+        run: |
+          python3 - <<'PY'
+          import yaml
+          front = open('_pages/syllabus.md', encoding='utf-8').read().split('---')[1]
+          schedule = yaml.safe_load(front)['schedule']
+          readings = sum(len(s.get('readings', [])) for s in schedule)
+          deliverables = sum(len(s.get('deliverables', [])) for s in schedule)
+          print(f"schedule parses: {len(schedule)} sessions, "
+                f"{readings} readings, {deliverables} deliverables")
+          PY
+
+  build:
+    name: Build with warnings as errors
+    # Deploy GitHub Pages already builds on a push to gh-pages, so building again
+    # here would be the same work twice. Skip it there and let the audit job,
+    # which runs everywhere and takes seconds, stay as the guard on direct pushes.
+    if: github.event_name != 'push' || github.ref != 'refs/heads/gh-pages'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Set up GitHub Metadata token
+        run: echo "JEKYLL_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install dependencies
+        run: bundle install
+
+      # jekyll build exits 0 even when it warns, so the warnings have to be
+      # read out of the output. A missing layout is only ever a warning, and it
+      # silently strips the site template off the page.
+      - name: Build with Jekyll
+        run: |
+          set -o pipefail
+          bundle exec jekyll build --destination ./_site 2>&1 | tee build.log
+
+      - name: Fail on build warnings
+        run: |
+          if grep -nE 'Build Warning|Liquid Warning|Liquid Exception' build.log; then
+            echo "::error::Jekyll reported the warnings above. They do not fail the deploy, but they mean a page rendered wrong."
+            exit 1
+          fi
+          echo "No Jekyll warnings."

@@ -52,8 +52,8 @@ You can explore and download these starter templates:
 
 ### Number Cube Example
 
-<iframe height="500px" width="100%" src="{{ site.baseurl }}/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FNumberCubeTemplate.zip&title=Number%20Cube%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe height="500px" width="100%" src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FNumberCubeTemplate.zip&title=Number%20Cube%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
 
 ### Route Cipher Example
 
-<iframe height="500px" width="100%" src="{{ site.baseurl }}/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FRouteCipherTemplate.zip&title=Route%20Cipher%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe height="500px" width="100%" src="https://www.billmongan.com/Ursinus-CS173/assets/code-viewer.html?zip=https%3A%2F%2Fraw.githubusercontent.com%2FBillJr99%2FUrsinus-CS173%2Fgh-pages%2Ffiles%2Freplit%2FRouteCipherTemplate.zip&title=Route%20Cipher%20Example" scrolling="yes" frameborder="no" allowfullscreen="true" sandbox="allow-scripts allow-same-origin"></iframe>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-standard
 permalink: /NetBeans/Debugging
 title: "CS173: Intro to Computer Science - Debugging in the NetBeans Software Environment"
 

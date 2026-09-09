@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-standard
 permalink: /NetBeans/JUnit
 title: "CS173: Intro to Computer Science - Unit Testing with the NetBeans Software Environment"
 

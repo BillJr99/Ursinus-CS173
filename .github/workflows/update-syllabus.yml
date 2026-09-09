@@ -34,7 +34,11 @@ jobs:
           python -m pip install --upgrade python-frontmatter python-dateutil
 
       - name: Build updated ical file
-        run: curl -k https://raw.githubusercontent.com/BillJr99/Ursinus-Boilerplate-Code/main/course/syllabus2ical.py | python
+        run: |
+          curl -fsSL --retry 5 --retry-all-errors --retry-delay 5 \
+            https://raw.githubusercontent.com/BillJr99/Ursinus-Boilerplate-Code/main/course/syllabus2ical.py \
+            -o "$RUNNER_TEMP/syllabus2ical.py"
+          python "$RUNNER_TEMP/syllabus2ical.py"
 
       - name: Commit new ical file
         # On a pull_request, checkout lands on the merge ref in detached HEAD and the
