@@ -4,7 +4,6 @@ updatecalendar.sh
 geckodriver.log
 do-jekyll.sh
 text2qti.sh
-Gemfile
 _site/**
 .sass-cache/**
 Gemfile.lock

@@ -33,12 +33,19 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Resolve default branch and hard reset to remote HEAD
+      - name: Hard reset to the branch this run is for
         run: |
-          DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
-          echo "Default branch resolved as: ${DEFAULT_BRANCH}"
+          # Use the ref that triggered the run, not the repository's default
+          # branch. Where the default is main -- CS170, CS274, CS352, CS375,
+          # CS474, CS475, WebMobile -- resetting to it sent this job onto a
+          # branch that has no submodules at all: it updated nothing, committed
+          # nothing, and still reported success, so the gh-pages pointers sat at
+          # a stale _layouts and code for months.
+          BRANCH="${GITHUB_REF_NAME:-gh-pages}"
+          echo "Working on branch: ${BRANCH}"
           git fetch origin
-          git reset --hard "origin/${DEFAULT_BRANCH}"
+          git checkout -B "${BRANCH}" "origin/${BRANCH}"
+          git reset --hard "origin/${BRANCH}"
 
       - name: Purge entire .git/modules cache unconditionally
         run: |
