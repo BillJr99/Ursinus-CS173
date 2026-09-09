@@ -90,8 +90,17 @@ jobs:
 
       - name: Fail on build warnings
         run: |
-          if grep -nE 'Build Warning|Liquid Warning|Liquid Exception' build.log; then
+          grep -nE 'Build Warning|Liquid Warning|Liquid Exception' build.log \
+            && echo "(warnings above; only those outside files/ fail this job)" \
+            || echo "No Jekyll warnings at all."
+          # files/ holds vendored third-party course material pulled in as
+          # submodules. Jekyll renders its markdown too, and the JSON braces in
+          # it are not valid Liquid, so it warns on documents nobody here wrote
+          # and no page links to. Those are not ours to fix; a warning anywhere
+          # else is.
+          if grep -nE 'Build Warning|Liquid Warning|Liquid Exception' build.log \
+             | grep -v ' in files/'; then
             echo "::error::Jekyll reported the warnings above. They do not fail the deploy, but they mean a page rendered wrong."
             exit 1
           fi
-          echo "No Jekyll warnings."
+          echo "No Jekyll warnings in this site's own pages."
