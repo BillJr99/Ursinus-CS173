@@ -11,3 +11,4 @@ Gemfile.lock
 _pages/Quizzes/qti_*
 setformprocessorasmtid.sh
 Thumbs.db
+/*.sh
