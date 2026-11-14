@@ -12,6 +12,7 @@ info:
     - To be able to call methods in various configurations (parameters, return values)
   models:
     - model: |
+        <!-- run: id=cs173-activity-functions2-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             /* Given an integer value, multiply it by two and return that value
@@ -40,6 +41,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-functions2-1">Visualize this example</a> <!-- code-viz link -->
       title: Parameter Binding and Scope
       questions:
         - "Are the <code>value</code> variables in the <code>twice</code> and <code>thrice</code> functions the same variable, or different variables?  How about <code>result</code>?"

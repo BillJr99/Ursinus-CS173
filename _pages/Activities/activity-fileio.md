@@ -36,6 +36,7 @@ info:
         - "How would you use the <code>scanner</code> object to ask the user to enter their grade in the class; keep asking them to enter their grade until it is an A, B, C, D, or F."
         - "The <code>Scanner</code> class also includes a function called <code>nextInt</code> which returns a numeric value from the user.  Write a program to ask the user to pick a number from 1 to 10 (again, keep prompting them until the value is within this range)!"
     - model: |
+        <!-- run: id=cs173-activity-fileio-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.io.FileNotFoundException;
         import java.io.File;
@@ -64,6 +65,7 @@ info:
             }
         }
         ]]></script>          
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-fileio-1">Visualize this example</a> <!-- code-viz link -->
       title: File Input
       questions:
         - "What do you think <code>try</code> and <code>throws</code> mean?"

@@ -17,6 +17,7 @@ info:
   models:
     - model: |
         <div>
+        <!-- run: id=cs173-activity-conditionals2-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -36,9 +37,11 @@ info:
             }
         }
         ]]></script>    
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-conditionals2-1">Visualize this example</a> <!-- code-viz link -->
         </div>
         <br>
         <div>
+        <!-- run: id=cs173-activity-conditionals2-2 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -54,12 +57,14 @@ info:
             }
         }
         ]]></script>  
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-conditionals2-2">Visualize this example</a> <!-- code-viz link -->
         </div>
       title: Creating a Waterfall of Possibilities by combining <code>else</code> and <code>if</code>
       questions:
         - Which code structure above do you prefer and why?
         - "Can you switch the order of the <code>if</code> statements in either example?  Why or why not?"
     - model: |
+        <!-- run: id=cs173-activity-conditionals2-3 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {           
             public static void main(String[] args) {
@@ -71,6 +76,7 @@ info:
             }
         }
         ]]></script>      
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-conditionals2-3">Visualize this example</a> <!-- code-viz link -->
       title: "Compound <code>if</code> conditionals"
       questions: 
         - What text should go into the <code>println</code> statement to indicate whether the person can vote (at least age 18) but also is too young to run for president (at least age 35)?

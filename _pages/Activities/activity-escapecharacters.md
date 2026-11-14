@@ -14,6 +14,7 @@ info:
   models:
     - title: "Special Characters"
       model: |
+        <!-- run: id=cs173-activity-escapecharacters-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -22,6 +23,7 @@ info:
             }
         }
         ]]></script> 
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-escapecharacters-1">Visualize this example</a> <!-- code-viz link -->
       questions: 
         - The excerpt from the above interview with Admiral Grace Hopper includes a quotation.  How can you print quotation marks to the screen without Java interpreting them as the end of your <code>String</code>?
         - Notice the use of <code>System.out.print</code> and <code>System.out.println</code>.  What's the difference between these two statements?

@@ -1,0 +1,297 @@
+{
+ "course": "cs173",
+ "site": "https://billjr99.github.io/Ursinus-CS173",
+ "built": "2026-11-14 13:04",
+ "examples": [
+  {
+   "id": "cs173-activity-2darrays-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-2darrays.md",
+   "line": 16,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-2darrays",
+   "error": null,
+   "steps": 16
+  },
+  {
+   "id": "cs173-activity-arraylist-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-arraylist.md",
+   "line": 17,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arraylist",
+   "error": null,
+   "steps": 93
+  },
+  {
+   "id": "cs173-activity-arrays-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-arrays.md",
+   "line": 18,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arrays",
+   "error": null,
+   "steps": 12
+  },
+  {
+   "id": "cs173-activity-arrays2-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-arrays2.md",
+   "line": 17,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arrays2",
+   "error": null,
+   "steps": 47
+  },
+  {
+   "id": "cs173-activity-conditionals-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-conditionals.md",
+   "line": 18,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals",
+   "error": null,
+   "steps": 4
+  },
+  {
+   "id": "cs173-activity-conditionals-2",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-conditionals.md",
+   "line": 35,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals",
+   "error": null,
+   "steps": 4
+  },
+  {
+   "id": "cs173-activity-conditionals2-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-conditionals2.md",
+   "line": 21,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
+   "error": null,
+   "steps": 6
+  },
+  {
+   "id": "cs173-activity-conditionals2-2",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-conditionals2.md",
+   "line": 45,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
+   "error": null,
+   "steps": 5
+  },
+  {
+   "id": "cs173-activity-conditionals2-3",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-conditionals2.md",
+   "line": 68,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
+   "error": null,
+   "steps": 4
+  },
+  {
+   "id": "cs173-activity-datatypes-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-datatypes.md",
+   "line": 22,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-datatypes",
+   "error": null,
+   "steps": 3
+  },
+  {
+   "id": "cs173-activity-debugging-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-debugging.md",
+   "line": 14,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-debugging",
+   "error": null,
+   "steps": 12
+  },
+  {
+   "id": "cs173-activity-dynamicprogramming-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-dynamicprogramming.md",
+   "line": 14,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-dynamicprogramming",
+   "error": null,
+   "steps": 38
+  },
+  {
+   "id": "cs173-activity-escapecharacters-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-escapecharacters.md",
+   "line": 18,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-escapecharacters",
+   "error": null,
+   "steps": 3
+  },
+  {
+   "id": "cs173-activity-fileio-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-fileio.md",
+   "line": 40,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-fileio",
+   "error": null,
+   "steps": 7
+  },
+  {
+   "id": "cs173-activity-functions-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-functions.md",
+   "line": 15,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-functions",
+   "error": null,
+   "steps": 8
+  },
+  {
+   "id": "cs173-activity-functions2-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-functions2.md",
+   "line": 16,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-functions2",
+   "error": null,
+   "steps": 11
+  },
+  {
+   "id": "cs173-activity-iterationfor-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-iterationfor.md",
+   "line": 25,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
+   "error": null,
+   "steps": 23
+  },
+  {
+   "id": "cs173-activity-iterationfor-2",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-iterationfor.md",
+   "line": 48,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
+   "error": null,
+   "steps": 93
+  },
+  {
+   "id": "cs173-activity-iterationfor-4",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-iterationfor.md",
+   "line": 84,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
+   "error": null,
+   "steps": 6
+  },
+  {
+   "id": "cs173-activity-recursion-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-recursion.md",
+   "line": 21,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-recursion",
+   "error": null,
+   "steps": 30
+  },
+  {
+   "id": "cs173-activity-stringarrays-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-stringarrays.md",
+   "line": 17,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-stringarrays",
+   "error": null,
+   "steps": 37
+  },
+  {
+   "id": "cs173-activity-stringiteration-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-stringiteration.md",
+   "line": 24,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-stringiteration",
+   "error": null,
+   "steps": 15
+  },
+  {
+   "id": "cs173-activity-strings-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-strings.md",
+   "line": 54,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-strings",
+   "error": null,
+   "steps": 7
+  },
+  {
+   "id": "cs173-activity-testing-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-testing.md",
+   "line": 15,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
+   "error": null,
+   "steps": 7
+  },
+  {
+   "id": "cs173-activity-testing-2",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-testing.md",
+   "line": 37,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
+   "error": null,
+   "steps": 15
+  },
+  {
+   "id": "cs173-activity-testing-3",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Activities/activity-testing.md",
+   "line": 82,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
+   "error": null,
+   "steps": 16
+  },
+  {
+   "id": "cs173-lab-tellastory-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/Labs/Conditionals/lab-tellastory.md",
+   "line": 88,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/Labs/Conditionals/lab-tellastory",
+   "error": null,
+   "steps": 6
+  },
+  {
+   "id": "cs173-styleguide-1",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/styleguide.md",
+   "line": 72,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/styleguide",
+   "error": null,
+   "steps": 219
+  },
+  {
+   "id": "cs173-styleguide-2",
+   "viz": "java",
+   "lang": "java",
+   "page": "_pages/styleguide.md",
+   "line": 86,
+   "page_url": "https://billjr99.github.io/Ursinus-CS173/styleguide",
+   "error": null,
+   "steps": 219
+  }
+ ]
+}

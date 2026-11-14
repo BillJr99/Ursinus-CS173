@@ -12,6 +12,7 @@ info:
   
   models:
     - model: |
+        <!-- run: id=cs173-activity-2darrays-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
            public static void main(String[] args) {
@@ -28,6 +29,7 @@ info:
            }
         }
         ]]></script>         
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-2darrays-1">Visualize this example</a> <!-- code-viz link -->
         <br>
         <img src="../images/examples/java-visualizer-2darray.png" alt="Java Visualizer Example of a 2D Array" />
         <br>

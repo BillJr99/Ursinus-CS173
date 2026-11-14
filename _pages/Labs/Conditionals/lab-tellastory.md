@@ -84,6 +84,7 @@ if(something && somethingElse) {
 
 You can create your own "waterfall" of `else/if` statements using a shortcut notatation for the nested and cascading `if` statements above.  For example:
 
+<!-- run: id=cs173-lab-tellastory-1 viz=java -->
 ```java
 double temperature = 50;
 
@@ -97,6 +98,7 @@ if(temperature > 90) {
   System.out.println("It's freezing out!");
 }
 ```
+[Visualize this example](https://billjr99.github.io/Ursinus-CS173/viz/#cs173-lab-tellastory-1) <!-- code-viz link -->
 
 ### Hint: Automatically Formatting Your Code
 

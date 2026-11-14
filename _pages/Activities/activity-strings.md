@@ -50,6 +50,7 @@ info:
         - "Write a Java statement to replace &quot;Ham&quot; with &quot;Cheese&quot; in a <code>String</code> &quot;Hamburger&quot;"
     - title: "Working with <code>String</code>s"
       model: |
+        <!-- run: id=cs173-activity-strings-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -65,6 +66,7 @@ info:
             }
         }
         ]]></script> 
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-strings-1">Visualize this example</a> <!-- code-viz link -->
       questions: 
         - Why is it necessary to write <code>x.equals(y)</code> instead of <code>x == y</code> to check if two <code>String</code> objects contain the same text?       
         - What does the print statement output for the string <code>z</code>?

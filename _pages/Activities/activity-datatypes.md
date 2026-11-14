@@ -18,6 +18,7 @@ info:
         - What do you think the curly braces represent and enclose?
     - title: "Your First Program"
       model: |
+        <!-- run: id=cs173-activity-datatypes-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -27,6 +28,7 @@ info:
             }
         }
         ]]></script> 
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-datatypes-1">Visualize this example</a> <!-- code-viz link -->
       questions: 
         - What do you think the <code>//</code> characters represent?
     - title: Primitive Data Types

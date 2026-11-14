@@ -10,6 +10,7 @@ info:
     - To implement Dynamic Programming to improve the runtime performance of a given algorithm
   models:
     - model: |   
+        <!-- run: id=cs173-activity-dynamicprogramming-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static int fibonacci(int n) {
@@ -27,6 +28,7 @@ info:
             }
         }
         ]]></script>  
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-dynamicprogramming-1">Visualize this example</a> <!-- code-viz link -->
       title: The Fibonacci Sequence
       questions:
         - Despite the concise code, what is inefficient about this approach to the Fibonacci sequence?

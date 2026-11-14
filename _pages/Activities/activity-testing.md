@@ -11,6 +11,7 @@ info:
   warmup: "We know that a signed 32-bit value, in seconds, will overflow in 68 years.  How long would a 64-bit value last before overflowing?"
   models:
     - model: |
+        <!-- run: id=cs173-activity-testing-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {            
             public static int triangleArea(int base, int height) {
@@ -24,6 +25,7 @@ info:
             }
         }
         ]]></script>      
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-testing-1">Visualize this example</a> <!-- code-viz link -->
       title: Choosing Unit Tests
       questions:
         - What's wrong with this code? (there is more than one answer!)
@@ -31,6 +33,7 @@ info:
         - "Visit <a href=\"../NetBeans/JUnit\">this guide</a> and design a unit test for <code>triangleArea</code>.  You can just write the code in your notes: there is no need to compile or execute it now (we will do this in lab instead!)."
         - "Recall that floating point types cannot always be compared directly for equality, due to rounding and precision limitations.  Change this program to use <code>double</code> data types, and re-generate unit tests for it.  Where do you think a floating point tolerance can be added with the <code>assertEquals</code> function?"
     - model: |
+        <!-- run: id=cs173-activity-testing-2 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {            
             public static double calculateIncomeTax(double income) {
@@ -69,11 +72,13 @@ info:
             }
         }
         ]]></script>                   
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-testing-2">Visualize this example</a> <!-- code-viz link -->
       title: Thinking Critically about Code
       questions:
         - "What kinds of inputs would make this function fail (or return values that don't make sense)?  What can you do about this?"
         - "What tests, at a minimum, would you propose to thoroughly exercise this function?" 
     - model: |
+        <!-- run: id=cs173-activity-testing-3 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         import java.util.Random;
         
@@ -99,6 +104,7 @@ info:
             }
         }
         ]]></script>          
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-testing-3">Visualize this example</a> <!-- code-viz link -->
       title: Facilitating Unit Tests      
       questions:
         - What makes this a difficult function to test? 

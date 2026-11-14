@@ -13,6 +13,7 @@ info:
 
   models:
     - model: |
+        <!-- run: id=cs173-activity-stringarrays-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
             public static void printArray(String[] arr) { 
@@ -30,6 +31,7 @@ info:
             }
         }
         ]]></script>         
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-stringarrays-1">Visualize this example</a> <!-- code-viz link -->
       title: "Manipulating <code>String</code> Arrays"
       questions:
         - "What does the <code>split</code> function do?"

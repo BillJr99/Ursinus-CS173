@@ -20,6 +20,7 @@ info:
 
   models:
     - model: |
+        <!-- run: id=cs173-activity-stringiteration-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {               
@@ -31,6 +32,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-stringiteration-1">Visualize this example</a> <!-- code-viz link -->
       title: Looping over Each Character
       questions:
         - "What is the value of <code>str.length()</code>?"

@@ -68,18 +68,21 @@ Second of all, the tabbing is all over the place. This makes it easy to
 miss a closing brace somewhere, which can be very difficult to resolve
 for multiply nested blocks.
 
+<!-- run: id=cs173-styleguide-1 viz=java -->
 <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
                             for (int i = 0; i < 100; i++) {
                         if (i%2 == 0 && i%3 == 0)
                                 System.out.println(i + " is divisible by 6");
             }
                     ]]></script>  
+<a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-styleguide-1">Visualize this example</a> <!-- code-viz link -->
 
 ### Good Code
 
 Here's a better version of the above example, in which brackets are
 applied and aligned properly
 
+<!-- run: id=cs173-styleguide-2 viz=java -->
 <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
                     for (int i = 0; i < 100; i++) {
                         if (i%2 == 0 && i%3 == 0) {
@@ -87,6 +90,7 @@ applied and aligned properly
                         } 
                     }
                     ]]></script> 
+<a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-styleguide-2">Visualize this example</a> <!-- code-viz link -->
 
 
 <a name="naming"></a>

@@ -14,6 +14,7 @@ info:
     - To implement complex conditional statements using boolean expression operators
   models:
     - model: |
+        <!-- run: id=cs173-activity-conditionals-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -25,10 +26,12 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-conditionals-1">Visualize this example</a> <!-- code-viz link -->
       title: Conditionals for Selective Execution with <code>if</code> Statements
       questions:
         - Try running the above program for different ages (say, 18, 34, 35, and 36).
     - model: |
+        <!-- run: id=cs173-activity-conditionals-2 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -42,6 +45,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-conditionals-2">Visualize this example</a> <!-- code-viz link -->
       title: Conditionals for Selective Execution with <code>if</code>/<code>else</code> Statements        
       questions:
         - Write and execute an <code>if</code>/<code>else</code> statement that determines if it is warm and not raining outside, and prints out whether or not it is appropriate to go outside.

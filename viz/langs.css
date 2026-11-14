@@ -1,0 +1,27 @@
+/* code-viz viewer styles for the SQL, MIPS and VHDL panels (langs.css; panels in langs.js). Uses the
+   colour tokens defined in viewer.css, so both themes follow. Full manual: the header of code-viz
+   (`code-viz readme`, or README.md), sections 7 and 8. */
+.sqlstmt pre { margin: 4px 0 8px; padding: 6px 8px; background: var(--code-bg); border: 1px solid var(--line); border-radius: 6px; white-space: pre-wrap; }
+.sqltab { margin: 6px 0 10px; min-width: 0; overflow-x: auto; }
+.sqltab h5, .sqlstmt h5 { margin: 0 0 4px; font-size: 13px; }
+.sqltab.changed h5, .sqltab.after h5 { color: var(--accent); }
+.sqltab.result { border-left: 3px solid var(--ok); padding-left: 6px; }
+.sqlpair { display: flex; flex-wrap: wrap; gap: 10px; }
+.sqlside { flex: 1 1 220px; min-width: 0; }
+.mins { margin-bottom: 8px; }
+.mregs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 3px; margin-bottom: 10px; }
+.mreg { display: flex; gap: 6px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 4px; font: 12px ui-monospace, Menlo, Consolas, monospace; }
+.mreg .rn { min-width: 42px; color: var(--muted); }
+.mreg .rv { flex: 1; text-align: right; }
+.mreg .rh { color: var(--muted); }
+.mreg.cur { background: var(--hl-strong); }
+.mmem td code { white-space: pre; }
+.wavebox { overflow-x: auto; margin: 6px 0 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
+svg.wave { min-width: 520px; display: block; }
+svg.wave .wname, svg.wave .wt { font: 11px ui-monospace, Menlo, Consolas, monospace; fill: var(--fg); }
+svg.wave .wv { font: 10px ui-monospace, Menlo, Consolas, monospace; fill: var(--fg); text-anchor: middle; }
+svg.wave .wl { stroke: var(--accent); stroke-width: 1.6; }
+svg.wave .wb { fill: var(--frame); stroke: var(--accent); stroke-width: 1.2; }
+svg.wave .wx { stroke: var(--bad); stroke-dasharray: 3 2; }
+svg.wave polygon.wx { fill: none; }
+svg.wave .wcur { stroke: var(--hl-strong); stroke-width: 2; }

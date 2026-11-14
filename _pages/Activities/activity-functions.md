@@ -11,6 +11,7 @@ info:
     - To be able to call methods in various configurations (parameters, return values)
   models:
     - model: |
+        <!-- run: id=cs173-activity-functions-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             /* Return the area of a circle, given its radius
@@ -40,6 +41,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-functions-1">Visualize this example</a> <!-- code-viz link -->
       title: Writing and Invoking Functions to Re-Use Code Logic
       questions:
         - What does <code>return</code> mean in the <code>circleArea</code> function above?

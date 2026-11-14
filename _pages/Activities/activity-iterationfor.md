@@ -21,6 +21,7 @@ info:
     - model: |
         Conditionals can be used to repeatedly execute code.  There are three varieties of these “loops:” the for loop (which is useful when counting the number of iterations that are needed), the while loop (which is useful for executing until something is true), and the do loop (similar to the while loop, but it executes at least once and checks whether it should stop at the end of the loop, rather than at the beginning).    
         <br>
+        <!-- run: id=cs173-activity-iterationfor-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -35,6 +36,7 @@ info:
             }
         }
         ]]></script>    
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-iterationfor-1">Visualize this example</a> <!-- code-viz link -->
       title: The <code>for</code> Loop
       questions:
         - The code prints the numbers from 0 through 9.  Why doesn’t it also print the value 10?
@@ -42,6 +44,7 @@ info:
         - What could you do to print the values 1 through 10?
         - What might you change in the code to print only the even values between 0 and 9, changing only the line beginning with for?
     - model: |
+        <!-- run: id=cs173-activity-iterationfor-2 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -56,6 +59,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-iterationfor-2">Visualize this example</a> <!-- code-viz link -->
       title: Nested Loops
       questions:
         - How many times does the inner loop print statement execute?
@@ -76,6 +80,7 @@ info:
         - What does this program do if you execute it?
         - Why does this program fail to do what you would expect?
     - model: |
+        <!-- run: id=cs173-activity-iterationfor-4 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         public class Main {
             public static void main(String[] args) {
@@ -93,6 +98,7 @@ info:
             }
         }
         ]]></script>     
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-iterationfor-4">Visualize this example</a> <!-- code-viz link -->
       title: Flipping a Coin
       questions:
         - How many times would you expect to land on heads?

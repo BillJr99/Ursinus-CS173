@@ -17,6 +17,7 @@ info:
       
   models:
     - model: |
+        <!-- run: id=cs173-activity-recursion-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[        
         public class Main {
            public static int fibonacci(int n) {
@@ -33,6 +34,7 @@ info:
            }
         }
         ]]></script> 
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-recursion-1">Visualize this example</a> <!-- code-viz link -->
         <br>
         <img src="../images/examples/fibonacci.png" alt="Diagram of Fibonacci Recursive Calls" />        
       title: Recursive Algorithms

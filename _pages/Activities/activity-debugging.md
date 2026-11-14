@@ -10,6 +10,7 @@ info:
     
   models:
     - model: |
+        <!-- run: id=cs173-activity-debugging-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[
         /*
          * To change this license header, choose License Headers in Project Properties.
@@ -46,6 +47,7 @@ info:
             
         }
         ]]></script>   
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-debugging-1">Visualize this example</a> <!-- code-viz link -->
       title: Using a Debugger to Trace Program Execution
       questions:
         - "Without using NetBeans, trace by hand through the program and update the values of each variable on paper."

@@ -13,6 +13,7 @@ info:
 
   models:
     - model: |
+        <!-- run: id=cs173-activity-arraylist-1 viz=java -->
         <script type="syntaxhighlighter" class="brush: cpp"><![CDATA[   
         import java.util.ArrayList;
         
@@ -43,6 +44,7 @@ info:
            }
         }
         ]]></script>       
+        <a href="https://billjr99.github.io/Ursinus-CS173/viz/#cs173-activity-arraylist-1">Visualize this example</a> <!-- code-viz link -->
       title: The <code>ArrayList</code>
       questions:      
         - What is the purpose of the <code>&lt;String&gt;</code> notation when creating the <code>ArrayList</code>?
