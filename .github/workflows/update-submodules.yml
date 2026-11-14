@@ -20,6 +20,7 @@ jobs:
 
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout parent repository (no submodules)
@@ -134,7 +135,20 @@ jobs:
           echo "paths=.gitmodules ${PATHS}" >> "${GITHUB_OUTPUT}"
 
       - name: Commit updated submodule pointers if changed
+        id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
           file_pattern: ${{ steps.submodule_paths.outputs.paths }}
           commit_message: "chore: hard reset submodule pointers to remote HEAD [skip ci]"
+
+      - name: Rebuild code-viz pages when the code submodule moved
+        if: steps.autocommit.outputs.changes_detected == 'true' && hashFiles('.github/workflows/code-viz.yml') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet HEAD~1 HEAD -- code; then
+            echo "code did not move; code-viz not needed"
+          else
+            gh workflow run code-viz.yml --ref "${GITHUB_REF_NAME}" -R "${GITHUB_REPOSITORY}" \
+              || echo "WARNING: could not start code-viz; run it by hand (Actions > code-viz > Run workflow)."
+          fi

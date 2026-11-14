@@ -1,0 +1,28 @@
+# code-viz: course repo caller. Copy to .github/workflows/code-viz.yml in a course repo.
+# The steps live in Ursinus-Boilerplate-Code/.github/workflows/code-viz.yml, so changing them there
+# changes every course. Full manual: the header of code-viz (`code-viz readme`), section 16 CI.
+#
+# Runs on a push to gh-pages that changes pages, files or viz/manifest.json, by hand (Actions >
+# code-viz > Run workflow), and from update-submodules.yml when the code submodule moved. In a repo
+# with no code-viz labels it does nothing. It commits only viz/.
+name: code-viz
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [gh-pages]
+    paths:
+      - "_pages/**.md"
+      - "files/**"
+      - "viz/manifest.json"
+
+concurrency:
+  group: code-viz-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    permissions:
+      contents: write
+      actions: write
+    uses: BillJr99/Ursinus-Boilerplate-Code/.github/workflows/code-viz.yml@main
