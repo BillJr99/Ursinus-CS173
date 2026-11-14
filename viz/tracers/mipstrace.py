@@ -157,6 +157,8 @@ class Program:
                 pad = (-dp) % a
                 self.data += bytes(pad)
                 dp += pad
+                for lab in pending:          # labels above an .align point at the aligned address
+                    self.labels[lab] = dp
                 continue
             if d in (".word", ".half", ".byte"):
                 size = {".word": 4, ".half": 2, ".byte": 1}[d]
@@ -491,11 +493,18 @@ class Machine:
                 self.lo, self.hi = q & M32, (a - q * b) & M32
         elif op in ("mul3", "mul3i"):
             self.setr(w[1], s32(r[w[2]]) * (s32(r[w[3]]) if op == "mul3" else w[3]))
-        elif op in ("div3", "div3i", "rem3", "rem3i", "divu3", "remu3"):
-            a, b = s32(r[w[2]]), (s32(r[w[3]]) if not op.endswith("i") else w[3])
-            if b == 0:
-                raise AsmError("division by zero")
-            q = int(a / b)
+        elif op in ("div3", "div3i", "rem3", "rem3i", "divu3", "divu3i", "remu3", "remu3i"):
+            imm = op.endswith("i")
+            if "u" in op[3:] or op.startswith(("divu", "remu")):
+                a, b = r[w[2]], (r[w[3]] if not imm else w[3] & M32)      # unsigned
+                if b == 0:
+                    raise AsmError("division by zero")
+                q = a // b
+            else:
+                a, b = s32(r[w[2]]), (s32(r[w[3]]) if not imm else w[3])
+                if b == 0:
+                    raise AsmError("division by zero")
+                q = int(a / b)                                          # truncates toward zero, as MIPS does
             self.setr(w[1], q if op.startswith("div") else a - q * b)
         elif op == "mfhi":
             self.setr(w[1], self.hi)

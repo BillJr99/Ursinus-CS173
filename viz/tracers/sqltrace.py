@@ -20,6 +20,7 @@ HOW IT WORKS
      "changes": rows changed (INSERT/UPDATE/DELETE), "tables": {name: {"columns": [...], "rows": [...], "more": bool}},
      "changed": [names of tables whose contents or columns differ from the step before],
      "error": message or absent, "out": length of stdout so far}
+  and, at the top level, "start_tables": every table before the first statement (after setup=).
   A statement that fails records its error and the script carries on, as the sqlite3 shell does.
   stdout is what the sqlite3 shell would print in its default list mode (columns joined by "|"),
   so the expected output can be compared with `sqlite3 db < script.sql`.
@@ -124,6 +125,7 @@ def trace_source(src, setup=None, max_steps=400, db=":memory:"):
             except sqlite3.Error:
                 pass
     steps, out, prev = [], [], snapshot(con)
+    start = prev                 # the tables before the first statement (after setup=), for the first "before"
     truncated = False
     error = None
     for first, last, sql in split_statements(src):
@@ -155,20 +157,7 @@ def trace_source(src, setup=None, max_steps=400, db=":memory:"):
         prev = tabs
     con.close()
     return {"version": 1, "kind": "sql", "language": "sql", "source": src, "steps": steps,
-            "stdout": "".join(out), "error": error, "truncated": truncated,
-            "setup_tables": sorted(snapshot_names(setup)) if setup else []}
-
-
-def snapshot_names(setup):
-    con = sqlite3.connect(":memory:")
-    for _, _, s in split_statements(setup):
-        try:
-            con.execute(s)
-        except sqlite3.Error:
-            pass
-    names = [r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%'")]
-    con.close()
-    return names
+            "stdout": "".join(out), "error": error, "truncated": truncated, "start_tables": start}
 
 
 def main():

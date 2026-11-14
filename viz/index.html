@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
   code-viz viewer page (index.html). Copied into a course site's viz/ folder by code-viz build and
-  serve. All behaviour is in viewer.js and all styling in viewer.css (see their headers). Addresses:
+  serve. All behaviour is in viewer.js (and langs.js: the SQL, MIPS and VHDL panels and browser runs) and all
+  styling in viewer.css (and langs.css) (see their headers). Addresses:
   viz/#<id> (teacher view), viz/?student=1#<id> (student mode, what the QR code opens),
   viz/?step=N#<id> (open at step N). External scripts are pinned: viz.js 2.1.2, qrcode-generator 1.4.4.
 
@@ -14,6 +15,7 @@
 <title>code-viz</title>
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="viewer.css">
+<link rel="stylesheet" href="langs.css">
 </head>
 <body>
 <header class="bar">
@@ -50,6 +52,7 @@
         </div>
         <div class="panel-title">Output</div>
         <pre id="output" class="output"></pre>
+        <div id="figures" hidden></div>
       </div>
       <div class="right">
         <div class="panel-title" id="paneltitle">State</div>
@@ -69,6 +72,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="figures.js"></script>
+<script src="langs.js"></script>
 <script src="viewer.js"></script>
 </body>
 </html>

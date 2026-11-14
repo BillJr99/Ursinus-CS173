@@ -56,7 +56,8 @@
   // this browser's localStorage only; nothing is sent anywhere.
   const STUDENT = new URLSearchParams(location.search).has("student");
   if (STUDENT) document.body.classList.add("student");
-  const canRunHere = (t) => t && t.kind !== "agent" && (t.kind === "lambda" || ["python", "scheme", "lambda"].includes(t.language || t.lang));
+  const X = window.CVIZ || { panels: {}, lines: {}, steps: {}, run: {}, outKinds: [] };  // langs.js: SQL, MIPS, VHDL, JS
+  const canRunHere = (t) => t && t.kind !== "agent" && (t.kind === "lambda" || ["python", "scheme", "lambda"].includes(t.language || t.lang) || !!X.run[t.language || t.lang]);
   const draftKey = (t) => "code-viz-draft:" + location.pathname + ":" + (t && t.id || "");
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
@@ -137,6 +138,7 @@
     if (t.kind === "lambda") return (t.orders && t.orders[state.order]) || t.steps || [];
     if (t.kind === "agent") return t.events || t.steps || [];
     if (t.kind === "cast") return (t.cast && t.cast.events) || [];
+    if (X.steps[t.kind]) return X.steps[t.kind](t);
     return t.steps || [];
   }
 
@@ -206,7 +208,8 @@
 
   function currentLine(t, s) {
     if (!s) return null;
-    if (t.kind === "env" && t.language === "python") return s.line;
+    if (t.kind === "env" && (t.language === "python" || t.language === "java")) return s.line;
+    if (X.lines[t.kind]) return X.lines[t.kind](t, s);
     if (t.kind === "c") return s.line;
     if (t.kind === "agent") return s.line || null;
     return null;
@@ -230,12 +233,14 @@
     }
     // output so far
     let out = t.stdout || "";
-    if (s && typeof s.out === "number" && (t.kind === "env" || t.kind === "c")) out = (t.stdout || "").slice(0, s.out);
+    if (s && typeof s.out === "number" && (t.kind === "env" || t.kind === "c" || X.outKinds.includes(t.kind))) out = (t.stdout || "").slice(0, s.out);
     if (t.kind === "agent" && steps.some((e) => e.line !== undefined))  // recordings with lines: output so far
       out = steps.slice(0, state.step + 1).filter((e) => e.type === "print" || e.type === "prompt").map((e) => e.text + "\n").join("");
     $("output").innerHTML = esc(out) + (t.error && state.step === n - 1 ? `<span class="err">\n${esc(t.error)}</span>` : "");
+    // figures the example drew (figures.js): shown as the output reaches them in a stepped trace
+    if (window.cvizFigures) window.cvizFigures.show(t, $("figures"), out.length, !(t.kind === "env" || t.kind === "c") || state.step >= n - 1);
     const P = { env: t.language === "scheme" ? schemePanel : pyPanel, lambda: lambdaPanel, bison: bisonPanel, automaton: autoPanel,
-                c: cPanel, agent: agentPanel, cast: castPanel };
+                c: cPanel, agent: agentPanel, cast: castPanel, ...X.panels };
     (P[t.kind] || plainPanel)(t, s, steps);
   }
 
@@ -271,14 +276,15 @@
   // ---------- Python environment diagram ----------
   function pyVal(v) {
     if (!v) return "";
+    if ("x" in v) return esc(v.x);  // a literal shown as written (Java true, false, null, 'c')
     if ("p" in v) return typeof v.p === "string" ? `<span>${esc(JSON.stringify(v.p))}</span>` : esc(v.p === null ? "None" : v.p === true ? "True" : v.p === false ? "False" : v.p);
     return `<span class="ref" data-to="h${v.r}"></span>`;
   }
 
   function heapBox(id, o) {
     if (!o) return "";
-    if (["list", "tuple", "set", "frozenset"].includes(o.t)) {
-      return `<div class="obj" data-id="h${id}"><h4>${o.t}</h4><div class="cells">${o.items.map((x, i) => `<div class="cell"><small>${o.t === "set" ? "" : i}</small>${pyVal(x)}</div>`).join("") || '<span class="note-line">empty</span>'}${o.more ? `<div class="cell">+${o.more}</div>` : ""}</div></div>`;
+    if (["list", "tuple", "set", "frozenset", "array"].includes(o.t)) {
+      return `<div class="obj" data-id="h${id}"><h4>${esc(o.class || o.t)}</h4><div class="cells">${o.items.map((x, i) => `<div class="cell"><small>${o.t === "set" ? "" : i}</small>${pyVal(x)}</div>`).join("") || '<span class="note-line">empty</span>'}${o.more ? `<div class="cell">+${o.more}</div>` : ""}</div></div>`;
     }
     if (o.t === "dict") {
       return `<div class="obj" data-id="h${id}"><h4>dict</h4><table>${o.items.map(([k, x]) => `<tr><td>${pyVal(k)}</td><td>${pyVal(x)}</td></tr>`).join("") || '<tr><td class="note-line">empty</td></tr>'}</table></div>`;
@@ -687,6 +693,8 @@
         const setup = lang === "python" && t.setup ? t.setup.source : null;
         py.globals.set("cviz_setup", setup);
         nt = JSON.parse(py.runPython(`import json, ${mod}; json.dumps(${mod}.trace_source(cviz_src${lang === "python" ? ", setup=cviz_setup" : ""}))`));
+      } else if (X.run[lang]) {
+        nt = await X.run[lang](code, t, { pyodide, note: (m) => { $("runnote").textContent = m; } });
       } else {
         $("runnote").textContent = "running on the server ...";
         const r = await fetch("api/run", { method: "POST", body: JSON.stringify({ code, lang, viz: t.viz || t.kind, input: t.input || "", setup: (t.setup && t.setup.ids) || [] }) });

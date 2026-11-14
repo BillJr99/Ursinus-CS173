@@ -1,7 +1,7 @@
 {
  "course": "cs173",
  "site": "https://billjr99.github.io/Ursinus-CS173",
- "built": "2026-11-14 13:04",
+ "built": "2026-11-14 18:18",
  "examples": [
   {
    "id": "cs173-activity-2darrays-1",
@@ -191,7 +191,7 @@
    "line": 84,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
    "error": null,
-   "steps": 6
+   "steps": 7
   },
   {
    "id": "cs173-activity-recursion-1",

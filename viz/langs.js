@@ -44,7 +44,7 @@
     const panel = $("panel");
     if (!s) { panel.innerHTML = `<p class="err">${esc(t.error || "No statements ran.")}</p>`; return; }
     const i = steps.indexOf(s);
-    const before = i > 0 ? steps[i - 1].tables : (t.setup ? null : {});
+    const before = i > 0 ? steps[i - 1].tables : (t.start_tables || {});
     let h = `<div class="sqlstmt"><h5>Statement ${i + 1} of ${steps.length} <span class="badge">${esc(s.kind)}</span>` +
       (s.changes !== undefined ? `<span class="badge">${s.changes} row${s.changes === 1 ? "" : "s"} changed</span>` : "") + `</h5><pre>${esc(s.sql)}</pre>` +
       (s.error ? `<p class="err">${esc(s.error)}</p>` : "") + `</div>`;
