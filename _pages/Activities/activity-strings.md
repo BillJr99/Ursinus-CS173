@@ -81,7 +81,7 @@ Print the result!"
         - "Challenge: there is a String function called matches that will check if a text pattern exists inside the String.    It returns a boolean (true if the pattern is found, false if not).  Use the matches function to see if any letter besides A, C, G, or T is in the String.  Here are some hints: <code>.*</code> means to search for any character (the <code>.</code> represents this) any number of times (the <code>*</code>).  You can check for a particular character using brackets like this: <code>[ACGT]</code> will match one character that is equal to A, C, G, or T.  Try searching for any number of characters, followed by a character in the alphabet other than A, C, G, or T, followed by any number of characters."
 
   additional_reading:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm	
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-6-strings.htm
       title: Strings
     - link: https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html
       title: String Methods

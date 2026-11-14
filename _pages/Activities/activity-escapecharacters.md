@@ -79,7 +79,7 @@ info:
         - How would you print the actual characters <code>\n</code> to the screen (i.e., not a newline character, but the actual backslash and n characters)? 
         
   additional_reading:
-    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-2-java-intro.html	
+    - link: https://runestone.academy/runestone/books/published/csawesome/Unit1-Getting-Started/topic-1-2-java-intro.html
       title: Introduction to Java
       
   additional_practice:
