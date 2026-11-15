@@ -1,25 +1,32 @@
 {
- "version": 1,
- "example": "cs173-styleguide-2",
- "title": "Good Code",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-5",
-   "description": "Lines 1-5 set things up."
-  },
-  {
-   "kind": "focus",
-   "lines": "1",
-   "description": "Line 1 starts a loop."
-  },
-  {
-   "kind": "focus",
-   "lines": "2",
-   "description": "Line 2 makes a decision."
-  }
- ]
+  "version": 1,
+  "example": "cs173-styleguide-2",
+  "title": "Consistent Braces and Indentation in Nested Blocks",
+  "description": "See how explicit curly braces and aligned indentation make the structure of a nested if statement inside a for loop unmistakable.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1,5",
+      "description": "Start with the outer for (int i = 0; i < 100; i++) loop on line 1 and its matching closing brace aligned in column 1 on line 5."
+    },
+    {
+      "kind": "reveal",
+      "lines": "2-4",
+      "description": "Indent the inner if (i%2 == 0 && i%3 == 0) one level inside the loop, wrap its body in explicit curly braces { ... }, and indent line 3 one level further."
+    },
+    {
+      "kind": "predict",
+      "lines": "2-4",
+      "question": "If you add another statement between lines 3 and 4 inside the curly braces, when will it execute?",
+      "answer": "Because lines 2 and 4 enclose the if body in curly braces, every statement between them runs only when i%2 == 0 && i%3 == 0 is true."
+    },
+    {
+      "kind": "run",
+      "trace_step": 2,
+      "lines": "3",
+      "description": "Step into line 3 when i = 0 to see the braced if body print '0 is divisible by 6'."
+    }
+  ]
 }

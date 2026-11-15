@@ -1,36 +1,32 @@
 {
- "version": 1,
- "example": "cs173-activity-stringiteration-1",
- "title": "Example cs173-activity-stringiteration-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1",
-   "description": "Line 1 sets things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "2-8",
-   "description": "Lines 2-8 define `main`."
-  },
-  {
-   "kind": "focus",
-   "lines": "5",
-   "description": "Line 5 starts a loop."
-  },
-  {
-   "kind": "reveal",
-   "lines": "9",
-   "description": "Line 9 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 14,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "8"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-stringiteration-1",
+  "title": "Looping Over Every Character in a String",
+  "description": "Use str.length() and str.charAt(i) inside a for loop to visit each character of a String from index 0 to the end.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-3",
+      "description": "Store the six-character String \"Hello!\" in str on line 3."
+    },
+    {
+      "kind": "reveal",
+      "lines": "5-9",
+      "description": "Loop i from 0 while i < str.length() and call str.charAt(i) on line 6 to print each character at index i."
+    },
+    {
+      "kind": "predict",
+      "lines": "3,5-6",
+      "question": "What does str.length() return for \"Hello!\", and what are the first and last indices passed to str.charAt(i)?",
+      "answer": "str.length() returns 6, and since String indices start at 0, i runs from 0 ('H') through 5 ('!')."
+    },
+    {
+      "kind": "run",
+      "trace_step": 2,
+      "lines": "6",
+      "description": "See the first iteration at i = 0 fetch str.charAt(0) ('H') and print 'Give me a H'."
+    }
+  ]
 }

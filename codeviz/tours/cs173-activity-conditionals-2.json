@@ -1,36 +1,32 @@
 {
- "version": 1,
- "example": "cs173-activity-conditionals-2",
- "title": "Example cs173-activity-conditionals-2",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1",
-   "description": "Line 1 sets things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "2-10",
-   "description": "Lines 2-10 define `main`."
-  },
-  {
-   "kind": "focus",
-   "lines": "5",
-   "description": "Line 5 makes a decision."
-  },
-  {
-   "kind": "reveal",
-   "lines": "11",
-   "description": "Line 11 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 3,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "10"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-conditionals-2",
+  "title": "Two-Way Branching with if and else",
+  "description": "Add an else block to an if(age >= 35) check so the program executes one of two mutually exclusive branches.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-7",
+      "description": "Set int age = 38 and check if(age >= 35) on line 5 to print the eligible message on line 6."
+    },
+    {
+      "kind": "reveal",
+      "lines": "7-11",
+      "description": "Attach an else block on lines 7-9 that prints 'You're too young to run for President.' whenever age >= 35 is false."
+    },
+    {
+      "kind": "predict",
+      "lines": "5-9",
+      "question": "Can both line 6 and line 8 execute during the same run of main?",
+      "answer": "No; age >= 35 is either true or false, so Java runs line 6 when age >= 35 is true (as with age = 38) and skips the else block."
+    },
+    {
+      "kind": "run",
+      "trace_step": 3,
+      "lines": "10",
+      "description": "Notice how execution jumps from line 6 straight to line 10 at the end of main, skipping line 8 inside the else block."
+    }
+  ]
 }

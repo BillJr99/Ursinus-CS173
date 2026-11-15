@@ -1,25 +1,32 @@
 {
- "version": 1,
- "example": "cs173-lab-tellastory-1",
- "title": "Hint: else/if Statements",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-10",
-   "description": "Lines 1-10 set things up."
-  },
-  {
-   "kind": "focus",
-   "lines": "3",
-   "description": "Line 3 makes a decision."
-  },
-  {
-   "kind": "reveal",
-   "lines": "11",
-   "description": "Line 11 runs the rest of the example."
-  }
- ]
+  "version": 1,
+  "example": "cs173-lab-tellastory-1",
+  "title": "Cascading else if Statements on Temperature",
+  "description": "Step through a four-branch if / else if / else waterfall when temperature = 50 to see how strict > comparisons select a branch.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-6",
+      "description": "Initialize double temperature = 50 and test the first two thresholds: if(temperature > 90) on line 3 and else if(temperature > 50) on line 5."
+    },
+    {
+      "kind": "predict",
+      "lines": "1,3-6",
+      "question": "Does temperature = 50 satisfy else if(temperature > 50) on line 5?",
+      "answer": "No; 50 > 50 is false because > is strictly greater than, so Java skips line 6 and continues to line 7."
+    },
+    {
+      "kind": "reveal",
+      "lines": "7-11",
+      "description": "Check else if(temperature > 32) on line 7 to print \"It's above freezing!\" on line 8, with a final else for 32 or below."
+    },
+    {
+      "kind": "run",
+      "trace_step": 4,
+      "lines": "8",
+      "description": "Watch temperature = 50 fail lines 3 and 5, match temperature > 32 on line 7, and execute line 8."
+    }
+  ]
 }

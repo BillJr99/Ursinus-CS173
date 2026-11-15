@@ -1,36 +1,37 @@
 {
- "version": 1,
- "example": "cs173-activity-debugging-1",
- "title": "Example cs173-activity-debugging-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-10",
-   "description": "Lines 1-10 set things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "11-16",
-   "description": "Lines 11-16 continue the example."
-  },
-  {
-   "kind": "reveal",
-   "lines": "17-32",
-   "description": "Lines 17-32 define `main`."
-  },
-  {
-   "kind": "reveal",
-   "lines": "33-34",
-   "description": "Lines 33-34 run the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 11,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "32"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-debugging-1",
+  "title": "Tracing Compound Assignments in a Debugger",
+  "description": "Step through a sequence of arithmetic and compound assignment operations (+=, *=, -=) on intermediate to compute ageThisYear.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-20",
+      "description": "Inside NumberGame.main, initialize value = 6, year = 2021, and birthYear = 1982."
+    },
+    {
+      "kind": "reveal",
+      "lines": "22-25",
+      "description": "Initialize intermediate = value * 2 (12.0), then update intermediate in place with += 5, *= 50, and -= 250."
+    },
+    {
+      "kind": "predict",
+      "lines": "22-25",
+      "question": "What value does intermediate hold right after line 25 runs (when execution reaches line 26)?",
+      "answer": "Starting from 12.0, += 5 gives 17.0, *= 50 gives 850.0, and -= 250 gives 600.0."
+    },
+    {
+      "kind": "reveal",
+      "lines": "26-34",
+      "description": "Add year (2021) and subtract birthYear (1982) on lines 26-27 to get 639.0, take (int) (intermediate % 100) on line 29 to extract the last two digits 39, and print ageThisYear."
+    },
+    {
+      "kind": "run",
+      "trace_step": 7,
+      "lines": "26",
+      "description": "Pause at line 26 to verify that intermediate holds 600.0 before year and birthYear are applied."
+    }
+  ]
 }

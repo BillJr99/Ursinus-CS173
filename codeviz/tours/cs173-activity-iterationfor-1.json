@@ -1,36 +1,32 @@
 {
- "version": 1,
- "example": "cs173-activity-iterationfor-1",
- "title": "Example cs173-activity-iterationfor-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1",
-   "description": "Line 1 sets things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "2-11",
-   "description": "Lines 2-11 define `main`."
-  },
-  {
-   "kind": "focus",
-   "lines": "8",
-   "description": "Line 8 starts a loop."
-  },
-  {
-   "kind": "reveal",
-   "lines": "12",
-   "description": "Line 12 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 22,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "11"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-iterationfor-1",
+  "title": "Counting with a for Loop",
+  "description": "Examine the three parts of a Java for loop header (initialization, condition, update) as it prints 0 through 9.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-7",
+      "description": "Declare int i = 0 and read the block comment explaining the three semicolon-separated parts of a for loop header."
+    },
+    {
+      "kind": "reveal",
+      "lines": "8-12",
+      "description": "Write for(i = 0; i < 10; i++) on line 8 and System.out.println(i) inside the loop body on line 9."
+    },
+    {
+      "kind": "predict",
+      "lines": "8-10",
+      "question": "What value does i have when the loop condition i < 10 finally becomes false, and why is 9 the last number printed?",
+      "answer": "After printing 9, the update i++ increments i to 10; then i < 10 evaluates 10 < 10 (false), ending the loop before line 9 can run with i = 10."
+    },
+    {
+      "kind": "run",
+      "trace_step": 22,
+      "lines": "11",
+      "description": "Check the final state at line 11 after the loop finishes: i holds 10 and the output ends at 9."
+    }
+  ]
 }

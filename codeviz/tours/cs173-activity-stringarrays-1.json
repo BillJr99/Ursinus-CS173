@@ -1,41 +1,32 @@
 {
- "version": 1,
- "example": "cs173-activity-stringarrays-1",
- "title": "Example cs173-activity-stringarrays-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1",
-   "description": "Line 1 sets things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "2-8",
-   "description": "Lines 2-8 define `printArray`."
-  },
-  {
-   "kind": "focus",
-   "lines": "3",
-   "description": "Line 3 starts a loop."
-  },
-  {
-   "kind": "reveal",
-   "lines": "10-14",
-   "description": "Lines 10-14 define `main`."
-  },
-  {
-   "kind": "reveal",
-   "lines": "15",
-   "description": "Line 15 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 36,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "14"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-stringarrays-1",
+  "title": "Splitting a String into a String[] Array",
+  "description": "Break a sentence into an array of words with str.split(\" \") and pass the resulting String[] array to printArray.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-8",
+      "description": "Define printArray(String[] arr) to loop i from 0 to arr.length - 1, printing each element arr[i] followed by a space and newline."
+    },
+    {
+      "kind": "reveal",
+      "lines": "10-15",
+      "description": "In main, store the sentence in str, call str.split(\" \") on line 12 to divide it at every space into String[] words, and pass words to printArray."
+    },
+    {
+      "kind": "predict",
+      "lines": "11-12",
+      "question": "When str.split(\" \") splits at spaces, what is stored at words[4] and words[8]?",
+      "answer": "Because split(\" \") only separates on spaces, attached punctuation stays with its word: words[4] is \"jumped;\" and words[8] is \"dog.\"."
+    },
+    {
+      "kind": "run",
+      "trace_step": 3,
+      "lines": "3",
+      "description": "Inspect the 9-element words array passed into printArray as the loop begins at i = 0."
+    }
+  ]
 }

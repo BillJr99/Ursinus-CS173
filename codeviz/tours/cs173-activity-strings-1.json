@@ -1,36 +1,32 @@
 {
- "version": 1,
- "example": "cs173-activity-strings-1",
- "title": "Example cs173-activity-strings-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1",
-   "description": "Line 1 sets things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "2-12",
-   "description": "Lines 2-12 define `main`."
-  },
-  {
-   "kind": "focus",
-   "lines": "6",
-   "description": "Line 6 makes a decision."
-  },
-  {
-   "kind": "reveal",
-   "lines": "13",
-   "description": "Line 13 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 6,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "12"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-strings-1",
+  "title": "Comparing Strings with equals() and Slicing with substring()",
+  "description": "Use x.equals(y) to compare the text inside two String objects and z.substring(start, end) to extract slices of characters.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-8",
+      "description": "Create String x = \"Test\" and String y = new String(\"Test\"), then compare their contents with x.equals(y) on line 6."
+    },
+    {
+      "kind": "reveal",
+      "lines": "10-13",
+      "description": "Set String z = \"tan\" on line 10 and print z.substring(1, 2) + z.substring(0, 1) on line 11."
+    },
+    {
+      "kind": "predict",
+      "lines": "10-11",
+      "question": "For z = \"tan\", what substrings do z.substring(1, 2) and z.substring(0, 1) extract, and what is printed?",
+      "answer": "substring(start, end) includes index start up to (but not including) index end, so z.substring(1, 2) is \"a\" and z.substring(0, 1) is \"t\", printing \"at\"."
+    },
+    {
+      "kind": "run",
+      "trace_step": 5,
+      "lines": "11",
+      "description": "Step to line 11 to see x.equals(y) print its message and z.substring(1, 2) + z.substring(0, 1) print \"at\"."
+    }
+  ]
 }

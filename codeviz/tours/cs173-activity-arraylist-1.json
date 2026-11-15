@@ -1,46 +1,37 @@
 {
- "version": 1,
- "example": "cs173-activity-arraylist-1",
- "title": "Example cs173-activity-arraylist-1",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
- "reviewed": false,
- "source": "skeleton",
- "steps": [
-  {
-   "kind": "reveal",
-   "lines": "1-3",
-   "description": "Lines 1-3 set things up."
-  },
-  {
-   "kind": "reveal",
-   "lines": "4-27",
-   "description": "Lines 4-27 define `main`."
-  },
-  {
-   "kind": "focus",
-   "lines": "9",
-   "description": "Line 9 starts a loop."
-  },
-  {
-   "kind": "focus",
-   "lines": "15",
-   "description": "Line 15 starts a loop."
-  },
-  {
-   "kind": "focus",
-   "lines": "24",
-   "description": "Line 24 starts a loop."
-  },
-  {
-   "kind": "reveal",
-   "lines": "28",
-   "description": "Line 28 runs the rest of the example."
-  },
-  {
-   "kind": "run",
-   "trace_step": 92,
-   "description": "This is the end of the run: the final state, and all of the output.",
-   "lines": "27"
-  }
- ]
+  "version": 1,
+  "example": "cs173-activity-arraylist-1",
+  "title": "Adding, Accessing, and Removing Elements in an ArrayList",
+  "description": "Populate an ArrayList<String> with add(), read elements by index with get() and size(), remove the middle element, and traverse with an enhanced for loop.",
+  "reviewed": false,
+  "source": "draft: agy free model",
+  "steps": [
+    {
+      "kind": "reveal",
+      "lines": "1-13",
+      "description": "Import ArrayList, construct ArrayList<String> arr, and loop i from 0 to 9 calling arr.add(x) to append 'Test #0' through 'Test #9'."
+    },
+    {
+      "kind": "reveal",
+      "lines": "15-19",
+      "description": "Use a standard indexed for loop up to arr.size() and call arr.get(i) to print each element in order."
+    },
+    {
+      "kind": "predict",
+      "lines": "21",
+      "question": "Which string does arr.remove(arr.size() / 2) remove, and what happens to the elements after it?",
+      "answer": "Since arr.size() is 10, arr.remove(5) removes 'Test #5' at index 5 and shifts 'Test #6' through 'Test #9' down by one index so arr.size() becomes 9."
+    },
+    {
+      "kind": "reveal",
+      "lines": "21-28",
+      "description": "Remove the element at index arr.size() / 2 and iterate over the remaining 9 elements with the enhanced for loop for(String item: arr)."
+    },
+    {
+      "kind": "run",
+      "trace_step": 64,
+      "lines": "24",
+      "description": "Inspect arr right after arr.remove(arr.size() / 2) to see 'Test #5' removed and the remaining elements shifted down."
+    }
+  ]
 }
