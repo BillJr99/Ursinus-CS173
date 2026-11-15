@@ -1,27 +1,34 @@
 {
  "code": "                for (int i = 0; i < 100; i++) {\n            if (i%2 == 0 && i%3 == 0)\n                    System.out.println(i + \" is divisible by 6\");\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Examine a for loop and if statement written without braces on the if body and with uneven indentation.",
  "example": "cs173-styleguide-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Lines 1-4 set things up.",
+   "description": "Read the loop for (int i = 0; i < 100; i++) on line 1. Read the inner if (i%2 == 0 && i%3 == 0) on line 2. Line 2 has no opening curly brace, and the indentation jumps left and right.",
    "kind": "reveal",
    "lines": "1-4"
   },
   {
-   "description": "Line 1 starts a loop.",
+   "description": "Without curly braces after if (...), Java treats only the single statement on line 3 as the body of the if statement.",
    "kind": "focus",
-   "lines": "1"
+   "lines": "2-3"
   },
   {
-   "description": "Line 2 makes a decision.",
-   "kind": "focus",
-   "lines": "2"
+   "answer": "Without braces, only the first statement on line 3 belongs to the if. A second statement below it would belong to the outer for loop and execute on all 100 iterations.",
+   "kind": "predict",
+   "lines": "2-4",
+   "question": "If you added a second System.out.println line right below line 3 without adding curly braces around the if body, how many times would that second line print?"
+  },
+  {
+   "description": "See line 3 execute on i = 0 when both i%2 == 0 and i%3 == 0 are true.",
+   "kind": "run",
+   "lines": "3",
+   "trace_step": 2
   }
  ],
- "title": "Bad Code",
+ "title": "Why Omitted Braces and Misaligned Indentation Cause Bugs",
  "version": 1
 }

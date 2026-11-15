@@ -1,43 +1,34 @@
 {
  "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Each team gets 3 turns!\");\n\n        for(int i = 0; i < 10; i++) {\n            System.out.println(\"Team \" + i);\n            for(int j = 0; j < 3; j++) {\n                System.out.println(\"Team \" + i + \" turn number \" + j);\n            }\n        }\n    }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Place an inner for loop (j from 0 to 2) inside an outer for loop (i from 0 to 9) so the inner loop runs completely for each outer iteration.",
  "example": "cs173-activity-iterationfor-2",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Print 'Each team gets 3 turns!' once before the loops on line 3. Start the outer loop for(int i = 0; i < 10; i++) on line 5. Print 'Team ' + i on line 6.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-6"
   },
   {
-   "description": "Lines 2-11 define `main`.",
+   "description": "Inside the outer loop, run the inner loop for(int j = 0; j < 3; j++) on lines 7-9 to print each turn j for the current team i.",
    "kind": "reveal",
-   "lines": "2-11"
+   "lines": "7-12"
   },
   {
-   "description": "Line 5 starts a loop.",
-   "kind": "focus",
-   "lines": "5"
+   "answer": "Line 6 runs once per outer iteration (10 times total). Line 8 runs 3 times for each of the 10 teams, executing 10 * 3 times total.",
+   "kind": "predict",
+   "lines": "5-9",
+   "question": "How many times does line 6 execute in total, and how many times does line 8 inside the inner loop execute in total?"
   },
   {
-   "description": "Line 7 starts a loop.",
-   "kind": "focus",
-   "lines": "7"
-  },
-  {
-   "description": "Line 12 runs the rest of the example.",
-   "kind": "reveal",
-   "lines": "12"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Watch the inner loop start at j = 0 for Team i = 0 and count j through 0, 1, and 2 before i advances to 1.",
    "kind": "run",
-   "lines": "11",
-   "trace_step": 92
+   "lines": "8",
+   "trace_step": 4
   }
  ],
- "title": "Example cs173-activity-iterationfor-2",
+ "title": "Nested for Loops: Teams and Turns",
  "version": 1
 }

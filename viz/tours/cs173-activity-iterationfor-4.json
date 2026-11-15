@@ -1,43 +1,39 @@
 {
  "code": "public class Main {\n    public static void main(String[] args) {\n        int numHeads = 0;\n\n        for(int i = 0; i < 10; i++); {\n            double randomNumber = Math.random();\n\n            if(randomNumber > 0.5) {\n                numHeads = numHeads + 1;\n            }\n        }\n\n        System.out.println(numHeads); // heads or tails\n    }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Draw a random double with Math.random() to count heads when randomNumber > 0.5, and spot the stray semicolon on the for loop header.",
  "example": "cs173-activity-iterationfor-4",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Initialize int numHeads = 0 on line 3 to count how many coin flips land on heads.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-4"
   },
   {
-   "description": "Lines 2-14 define `main`.",
+   "description": "Look closely at line 5: for(int i = 0; i < 10; i++); has a semicolon right before the opening brace. The following block calls Math.random() and increments numHeads when randomNumber > 0.5.",
    "kind": "reveal",
-   "lines": "2-14"
+   "lines": "5-11"
   },
   {
-   "description": "Line 5 starts a loop.",
-   "kind": "focus",
-   "lines": "5"
+   "answer": "The semicolon ends the for loop with an empty body that counts i to 10 by itself. The block on lines 6-11 executes only once after the loop finishes.",
+   "kind": "predict",
+   "lines": "5-11",
+   "question": "Because of the semicolon after i++) on line 5, how many times does the block on lines 6-11 actually run?"
   },
   {
-   "description": "Line 8 makes a decision.",
-   "kind": "focus",
-   "lines": "8"
-  },
-  {
-   "description": "Line 15 runs the rest of the example.",
+   "description": "Print numHeads on line 13.",
    "kind": "reveal",
-   "lines": "15"
+   "lines": "13-15"
   },
   {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "See line 6 run just once after line 5, confirming that the stray semicolon detached the block from the for loop.",
    "kind": "run",
-   "lines": "14",
-   "trace_step": 6
+   "lines": "6",
+   "trace_step": 2
   }
  ],
- "title": "Example cs173-activity-iterationfor-4",
+ "title": "Simulating Coin Flips and the Semicolon-After-for Trap",
  "version": 1
 }

@@ -1,38 +1,34 @@
 {
  "code": "public class Main {           \n    public static void main(String[] args) {\n        int age = 25;\n\n        if(age >= 18 && age < 35) { // Why < 35 and not <= 35?\n            System.out.println(\"\"); // What should we say here?\n        }\n    }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Combine two comparisons into a single if condition using the logical AND operator &&.",
  "example": "cs173-activity-conditionals2-3",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Initialize int age = 25 inside main.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-3"
   },
   {
-   "description": "Lines 2-8 define `main`.",
+   "description": "Use the logical AND operator && on line 5 to check if(age >= 18 && age < 35) in a single compound condition.",
    "kind": "reveal",
-   "lines": "2-8"
+   "lines": "5-9"
   },
   {
-   "description": "Line 5 makes a decision.",
-   "kind": "focus",
-   "lines": "5"
+   "answer": "At age 35 a person is already eligible to run for President: age >= 35 is true. The exact opposite of age >= 35 is strictly less than 35 (age < 35).",
+   "kind": "predict",
+   "lines": "3,5",
+   "question": "Why does the right-hand comparison on line 5 use age < 35 instead of age <= 35 when negating age >= 35?"
   },
   {
-   "description": "Line 9 runs the rest of the example.",
-   "kind": "reveal",
-   "lines": "9"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "See both age >= 18 and age < 35 evaluate to true for age = 25, entering line 6.",
    "kind": "run",
-   "lines": "8",
-   "trace_step": 3
+   "lines": "6",
+   "trace_step": 2
   }
  ],
- "title": "Example cs173-activity-conditionals2-3",
+ "title": "Compound Conditions with Logical AND (&&)",
  "version": 1
 }

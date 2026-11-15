@@ -1,43 +1,34 @@
 {
  "code": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[10];\n\n        int sum = 0;\n        int i = 0;\n\n        for(i = 0; i < arr.length; i++) {\n            arr[i] = 2 * i;\n        }\n\n        for(i = 0; i < arr.length; i++) {\n            sum = sum + arr[i];\n        }\n\n        System.out.println(\"Sum = \" + sum);\n    }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Fill a 10-element int array with even numbers 2 * i in one loop, then accumulate their sum in a second loop.",
  "example": "cs173-activity-arrays2-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model + edit: codex",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Allocate int[] arr = new int[10], initialize sum = 0 and i = 0. Run the first for loop to assign arr[i] = 2 * i for i from 0 to 9.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-10"
   },
   {
-   "description": "Lines 2-17 define `main`.",
+   "answer": "The first loop fills arr with 0, 2, 4, 6, 8, 10, 12, 14, 16, and 18, and the second loop adds those ten even numbers into sum = 90.",
+   "kind": "predict",
+   "lines": "8-14",
+   "question": "What values are stored in arr[0] through arr[9], and what total does the second loop accumulate in sum?"
+  },
+  {
+   "description": "Traverse arr a second time on lines 12-14, adding each arr[i] to sum, and print 'Sum = ' + sum.",
    "kind": "reveal",
-   "lines": "2-17"
+   "lines": "12-18"
   },
   {
-   "description": "Line 8 starts a loop.",
-   "kind": "focus",
-   "lines": "8"
-  },
-  {
-   "description": "Line 12 starts a loop.",
-   "kind": "focus",
-   "lines": "12"
-  },
-  {
-   "description": "Line 18 runs the rest of the example.",
-   "kind": "reveal",
-   "lines": "18"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Inspect the populated array arr and sum = 90 right as line 16 prints 'Sum = 90'.",
    "kind": "run",
-   "lines": "17",
-   "trace_step": 46
+   "lines": "16",
+   "trace_step": 45
   }
  ],
- "title": "Example cs173-activity-arrays2-1",
+ "title": "Populating and Summing an Array with Two Loops",
  "version": 1
 }
