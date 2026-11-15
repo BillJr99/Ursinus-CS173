@@ -1,0 +1,53 @@
+{
+ "code": "public class Main {\n   public static int fibonacci(int n) {\n        if(n <= 1) {    // Recursive alogirhtms need to know when to stop!\n            return 1;   // This is called the base case: fib(0) = fib(1) = 1\n        } else {\n            return fibonacci(n-1) + fibonacci(n-2);\n        }\n   }\n\n   public static void main(String[] args) {\n        int ans = fibonacci(4);\n        System.out.println(ans);\n   }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-recursion-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-8 define `fibonacci`.",
+   "kind": "reveal",
+   "lines": "2-8"
+  },
+  {
+   "description": "Line 3 makes a decision.",
+   "kind": "focus",
+   "lines": "3"
+  },
+  {
+   "description": "Line 4 returns a value.",
+   "kind": "focus",
+   "lines": "4"
+  },
+  {
+   "description": "Line 6 returns a value.",
+   "kind": "focus",
+   "lines": "6"
+  },
+  {
+   "description": "Lines 10-13 define `main`.",
+   "kind": "reveal",
+   "lines": "10-13"
+  },
+  {
+   "description": "Line 14 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "14"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "13",
+   "trace_step": 29
+  }
+ ],
+ "title": "Example cs173-activity-recursion-1",
+ "version": 1
+}

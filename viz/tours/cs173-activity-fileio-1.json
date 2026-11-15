@@ -1,0 +1,43 @@
+{
+ "code": "import java.io.FileNotFoundException;\nimport java.io.File;\nimport java.util.Scanner;\n\npublic class Main {  \n    public static void readLineByLine(String filePath) throws FileNotFoundException {\n        File input = new File(filePath);\n        Scanner scan = new Scanner(input);\n\n        while(scan.hasNextLine()) {\n            String line = scan.nextLine();\n            System.out.println(line);\n        }           \n    }\n\n    public static void main(String[] args) {\n        String path = \"test.txt\";\n\n        try {\n          readLineByLine(path);\n        } catch(FileNotFoundException e) {\n          System.err.println(\"File not found!\");\n          e.printStackTrace();\n        }\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-fileio-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-5 set things up.",
+   "kind": "reveal",
+   "lines": "1-5"
+  },
+  {
+   "description": "Lines 6-14 define `readLineByLine`.",
+   "kind": "reveal",
+   "lines": "6-14"
+  },
+  {
+   "description": "Line 10 starts a loop.",
+   "kind": "focus",
+   "lines": "10"
+  },
+  {
+   "description": "Lines 16-25 define `main`.",
+   "kind": "reveal",
+   "lines": "16-25"
+  },
+  {
+   "description": "Line 26 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "26"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "25",
+   "trace_step": 6
+  }
+ ],
+ "title": "Example cs173-activity-fileio-1",
+ "version": 1
+}

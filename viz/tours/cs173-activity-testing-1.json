@@ -1,0 +1,43 @@
+{
+ "code": "public class Main {            \n    public static int triangleArea(int base, int height) {\n        // Broken Code!\n        return 1 / 2 * base * height;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(triangleArea(5, 2));\n        System.out.println(triangleArea(3, -2));\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-testing-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-5 define `triangleArea`.",
+   "kind": "reveal",
+   "lines": "2-5"
+  },
+  {
+   "description": "Line 4 returns a value.",
+   "kind": "focus",
+   "lines": "4"
+  },
+  {
+   "description": "Lines 7-10 define `main`.",
+   "kind": "reveal",
+   "lines": "7-10"
+  },
+  {
+   "description": "Line 11 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "11"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 6
+  }
+ ],
+ "title": "Example cs173-activity-testing-1",
+ "version": 1
+}

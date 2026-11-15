@@ -1,0 +1,53 @@
+{
+ "code": "public class Main {\n    /* Given an integer value, multiply it by two and return that value\n     * @param value: the value to multiply by two\n     *        Precondition: an integer\n     * @return the number that is twice the value of the input variable\n     */\n    public static int twice(int value) {\n        int result = 2 * value;\n\n        return result;\n    }\n\n    public static int thrice(int value) {\n        int result = 3 * value;\n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        int twoTimesSix = twice(6);\n        int threeTimesFive = thrice(5);\n\n        System.out.println(\"2 times 6 = \" + twoTimesSix);\n        System.out.println(\"3 times 5 = \" + threeTimesFive);\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-functions2-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-6 set things up.",
+   "kind": "reveal",
+   "lines": "1-6"
+  },
+  {
+   "description": "Lines 7-11 define `twice`.",
+   "kind": "reveal",
+   "lines": "7-11"
+  },
+  {
+   "description": "Line 10 returns a value.",
+   "kind": "focus",
+   "lines": "10"
+  },
+  {
+   "description": "Lines 13-17 define `thrice`.",
+   "kind": "reveal",
+   "lines": "13-17"
+  },
+  {
+   "description": "Line 16 returns a value.",
+   "kind": "focus",
+   "lines": "16"
+  },
+  {
+   "description": "Lines 19-25 define `main`.",
+   "kind": "reveal",
+   "lines": "19-25"
+  },
+  {
+   "description": "Line 26 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "26"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "25",
+   "trace_step": 10
+  }
+ ],
+ "title": "Example cs173-activity-functions2-1",
+ "version": 1
+}

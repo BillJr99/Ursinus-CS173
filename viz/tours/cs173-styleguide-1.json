@@ -1,0 +1,27 @@
+{
+ "code": "                for (int i = 0; i < 100; i++) {\n            if (i%2 == 0 && i%3 == 0)\n                    System.out.println(i + \" is divisible by 6\");\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-styleguide-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-4 set things up.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Line 1 starts a loop.",
+   "kind": "focus",
+   "lines": "1"
+  },
+  {
+   "description": "Line 2 makes a decision.",
+   "kind": "focus",
+   "lines": "2"
+  }
+ ],
+ "title": "Bad Code",
+ "version": 1
+}

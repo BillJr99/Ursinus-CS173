@@ -1,0 +1,38 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int age = 38;\n\n        if(age >= 35) {\n            System.out.println(\"You are old enough to run for President of the United States!\");\n        } else {\n            System.out.println(\"You're too young to run for President.\");\n        }\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-conditionals-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-10 define `main`.",
+   "kind": "reveal",
+   "lines": "2-10"
+  },
+  {
+   "description": "Line 5 makes a decision.",
+   "kind": "focus",
+   "lines": "5"
+  },
+  {
+   "description": "Line 11 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "11"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 3
+  }
+ ],
+ "title": "Example cs173-activity-conditionals-2",
+ "version": 1
+}

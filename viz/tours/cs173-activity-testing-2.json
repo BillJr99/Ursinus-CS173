@@ -1,0 +1,48 @@
+{
+ "code": "public class Main {            \n    public static double calculateIncomeTax(double income) {\n        double result = 0;\n\n        double base10 = 9950 * 0.1;\n        double base12 = base10 + (40525 - 9950) * 0.12;\n        double base22 = base12 + (86375 - 40525) * 0.22;\n        double base24 = base22 + (164925 - 86375) * 0.24;\n        double base32 = base24 + (209425 - 164925) * 0.32;\n        double base35 = base32 + (523600 - 209425) * 0.35;\n\n        if(income < 9950) {\n            result = income * 0.1;\n        } else if(income < 40525) {\n            result = base10 + (income - 9950) * 0.12;\n        } else if(income < 86375) {\n            result = base12 + (income - 40525) * 0.22;\n        } else if(income < 164925) {\n            result = base22 + (income - 86375) * 0.24;\n        } else if(income < 209425) {\n            result = base24 + (income - 164925) * 0.32;\n        } else if(income < 523600) {\n            result = base32 + (income - 209425) * 0.35;\n        } else {\n            result = base35 + (income - 523600) * 0.37;\n        }\n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        double taxOwed = calculateIncomeTax(25000);\n\n        System.out.println(\"I owe: $\" + taxOwed);\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-testing-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-29 define `calculateIncomeTax`.",
+   "kind": "reveal",
+   "lines": "2-29"
+  },
+  {
+   "description": "Line 12 makes a decision.",
+   "kind": "focus",
+   "lines": "12"
+  },
+  {
+   "description": "Line 28 returns a value.",
+   "kind": "focus",
+   "lines": "28"
+  },
+  {
+   "description": "Lines 31-35 define `main`.",
+   "kind": "reveal",
+   "lines": "31-35"
+  },
+  {
+   "description": "Line 36 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "36"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "35",
+   "trace_step": 14
+  }
+ ],
+ "title": "Example cs173-activity-testing-2",
+ "version": 1
+}

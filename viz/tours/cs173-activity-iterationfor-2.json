@@ -1,0 +1,43 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Each team gets 3 turns!\");\n\n        for(int i = 0; i < 10; i++) {\n            System.out.println(\"Team \" + i);\n            for(int j = 0; j < 3; j++) {\n                System.out.println(\"Team \" + i + \" turn number \" + j);\n            }\n        }\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-iterationfor-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-11 define `main`.",
+   "kind": "reveal",
+   "lines": "2-11"
+  },
+  {
+   "description": "Line 5 starts a loop.",
+   "kind": "focus",
+   "lines": "5"
+  },
+  {
+   "description": "Line 7 starts a loop.",
+   "kind": "focus",
+   "lines": "7"
+  },
+  {
+   "description": "Line 12 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "12"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "11",
+   "trace_step": 92
+  }
+ ],
+ "title": "Example cs173-activity-iterationfor-2",
+ "version": 1
+}

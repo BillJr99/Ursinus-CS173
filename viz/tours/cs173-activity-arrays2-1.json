@@ -1,0 +1,43 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[10];\n\n        int sum = 0;\n        int i = 0;\n\n        for(i = 0; i < arr.length; i++) {\n            arr[i] = 2 * i;\n        }\n\n        for(i = 0; i < arr.length; i++) {\n            sum = sum + arr[i];\n        }\n\n        System.out.println(\"Sum = \" + sum);\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-arrays2-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-17 define `main`.",
+   "kind": "reveal",
+   "lines": "2-17"
+  },
+  {
+   "description": "Line 8 starts a loop.",
+   "kind": "focus",
+   "lines": "8"
+  },
+  {
+   "description": "Line 12 starts a loop.",
+   "kind": "focus",
+   "lines": "12"
+  },
+  {
+   "description": "Line 18 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "18"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "17",
+   "trace_step": 46
+  }
+ ],
+ "title": "Example cs173-activity-arrays2-1",
+ "version": 1
+}

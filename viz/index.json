@@ -1,7 +1,7 @@
 {
  "course": "cs173",
  "site": "https://billjr99.github.io/Ursinus-CS173",
- "built": "2026-11-14 18:18",
+ "built": "2026-11-15 00:53",
  "examples": [
   {
    "id": "cs173-activity-2darrays-1",
@@ -11,7 +11,11 @@
    "line": 16,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-2darrays",
    "error": null,
-   "steps": 16
+   "steps": 16,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-arraylist-1",
@@ -21,7 +25,11 @@
    "line": 17,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arraylist",
    "error": null,
-   "steps": 93
+   "steps": 93,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-arrays-1",
@@ -31,7 +39,11 @@
    "line": 18,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arrays",
    "error": null,
-   "steps": 12
+   "steps": 12,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-arrays2-1",
@@ -41,7 +53,11 @@
    "line": 17,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-arrays2",
    "error": null,
-   "steps": 47
+   "steps": 47,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-conditionals-1",
@@ -51,7 +67,11 @@
    "line": 18,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals",
    "error": null,
-   "steps": 4
+   "steps": 4,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-conditionals-2",
@@ -61,7 +81,11 @@
    "line": 35,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals",
    "error": null,
-   "steps": 4
+   "steps": 4,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-conditionals2-1",
@@ -71,7 +95,11 @@
    "line": 21,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
    "error": null,
-   "steps": 6
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-conditionals2-2",
@@ -81,7 +109,11 @@
    "line": 45,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
    "error": null,
-   "steps": 5
+   "steps": 5,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-conditionals2-3",
@@ -91,7 +123,11 @@
    "line": 68,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-conditionals2",
    "error": null,
-   "steps": 4
+   "steps": 4,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-datatypes-1",
@@ -101,7 +137,11 @@
    "line": 22,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-datatypes",
    "error": null,
-   "steps": 3
+   "steps": 3,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-debugging-1",
@@ -111,7 +151,11 @@
    "line": 14,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-debugging",
    "error": null,
-   "steps": 12
+   "steps": 12,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-dynamicprogramming-1",
@@ -121,7 +165,11 @@
    "line": 14,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-dynamicprogramming",
    "error": null,
-   "steps": 38
+   "steps": 38,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-escapecharacters-1",
@@ -131,7 +179,11 @@
    "line": 18,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-escapecharacters",
    "error": null,
-   "steps": 3
+   "steps": 3,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-fileio-1",
@@ -141,7 +193,11 @@
    "line": 40,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-fileio",
    "error": null,
-   "steps": 7
+   "steps": 7,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-functions-1",
@@ -151,7 +207,11 @@
    "line": 15,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-functions",
    "error": null,
-   "steps": 8
+   "steps": 8,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-functions2-1",
@@ -161,7 +221,11 @@
    "line": 16,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-functions2",
    "error": null,
-   "steps": 11
+   "steps": 11,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-iterationfor-1",
@@ -171,7 +235,11 @@
    "line": 25,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
    "error": null,
-   "steps": 23
+   "steps": 23,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-iterationfor-2",
@@ -181,7 +249,11 @@
    "line": 48,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
    "error": null,
-   "steps": 93
+   "steps": 93,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-iterationfor-4",
@@ -191,7 +263,11 @@
    "line": 84,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-iterationfor",
    "error": null,
-   "steps": 7
+   "steps": 7,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-recursion-1",
@@ -201,7 +277,11 @@
    "line": 21,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-recursion",
    "error": null,
-   "steps": 30
+   "steps": 30,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-stringarrays-1",
@@ -211,7 +291,11 @@
    "line": 17,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-stringarrays",
    "error": null,
-   "steps": 37
+   "steps": 37,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-stringiteration-1",
@@ -221,7 +305,11 @@
    "line": 24,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-stringiteration",
    "error": null,
-   "steps": 15
+   "steps": 15,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-strings-1",
@@ -231,7 +319,11 @@
    "line": 54,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-strings",
    "error": null,
-   "steps": 7
+   "steps": 7,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-testing-1",
@@ -241,7 +333,11 @@
    "line": 15,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
    "error": null,
-   "steps": 7
+   "steps": 7,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-testing-2",
@@ -251,7 +347,11 @@
    "line": 37,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
    "error": null,
-   "steps": 15
+   "steps": 15,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-activity-testing-3",
@@ -261,7 +361,10 @@
    "line": 82,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
    "error": null,
-   "steps": 16
+   "steps": 15,
+   "modes": [
+    "run"
+   ]
   },
   {
    "id": "cs173-lab-tellastory-1",
@@ -271,7 +374,11 @@
    "line": 88,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Labs/Conditionals/lab-tellastory",
    "error": null,
-   "steps": 6
+   "steps": 6,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-styleguide-1",
@@ -281,7 +388,11 @@
    "line": 72,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/styleguide",
    "error": null,
-   "steps": 219
+   "steps": 219,
+   "modes": [
+    "run",
+    "explain"
+   ]
   },
   {
    "id": "cs173-styleguide-2",
@@ -291,7 +402,11 @@
    "line": 86,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/styleguide",
    "error": null,
-   "steps": 219
+   "steps": 219,
+   "modes": [
+    "run",
+    "explain"
+   ]
   }
  ]
 }

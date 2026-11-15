@@ -1,0 +1,38 @@
+{
+ "code": "/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\npackage numbergame;\n\n/**\n *\n * @author bill\n */\npublic class NumberGame {\n\n    /**\n     * @param args the command line arguments\n     */\n    public static void main(String[] args) {\n        int value = 6;\n        int year = 2021;\n        int birthYear = 1982;\n\n        double intermediate = value * 2;\n        intermediate += 5;\n        intermediate *= 50;\n        intermediate -= 250;\n        intermediate += year;\n        intermediate -= birthYear;\n\n        int ageThisYear = (int) (intermediate % 100);\n\n        System.out.println(ageThisYear);\n    }\n\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-debugging-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-10 set things up.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Lines 11-16 continue the example.",
+   "kind": "reveal",
+   "lines": "11-16"
+  },
+  {
+   "description": "Lines 17-32 define `main`.",
+   "kind": "reveal",
+   "lines": "17-32"
+  },
+  {
+   "description": "Lines 33-34 run the rest of the example.",
+   "kind": "reveal",
+   "lines": "33-34"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "32",
+   "trace_step": 11
+  }
+ ],
+ "title": "Example cs173-activity-debugging-1",
+ "version": 1
+}

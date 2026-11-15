@@ -1,0 +1,48 @@
+{
+ "code": "import java.util.ArrayList;\n\npublic class Main {\n   public static void main(String[] args) {\n      /* This is a class that encapsulates the behavior of an array,\n         but it grows as you add items on the fly. */\n      ArrayList<String> arr = new ArrayList<String>(10);\n\n      for(int i = 0; i < 10; i++) {\n        String x = new String(\"Test #\" + i);\n\n        arr.add(x);\n      }\n\n      for(int i = 0; i < arr.size(); i++) {\n        String x = arr.get(i);\n\n        System.out.println(x);\n      }\n\n      arr.remove(arr.size() / 2);\n\n      // This is called an Enhanced For Loop - a nice shortcut!\n      for(String item: arr) {\n        System.out.println(item);\n      }\n   }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-arraylist-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-3 set things up.",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Lines 4-27 define `main`.",
+   "kind": "reveal",
+   "lines": "4-27"
+  },
+  {
+   "description": "Line 9 starts a loop.",
+   "kind": "focus",
+   "lines": "9"
+  },
+  {
+   "description": "Line 15 starts a loop.",
+   "kind": "focus",
+   "lines": "15"
+  },
+  {
+   "description": "Line 24 starts a loop.",
+   "kind": "focus",
+   "lines": "24"
+  },
+  {
+   "description": "Line 28 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "28"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "27",
+   "trace_step": 92
+  }
+ ],
+ "title": "Example cs173-activity-arraylist-1",
+ "version": 1
+}

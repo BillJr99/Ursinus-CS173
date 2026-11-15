@@ -1,0 +1,38 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int[] grades = new int[3];\n\n        for(int i = 0; i < grades.length; i++) {\n            grades[i] = 90 + i;\n            System.out.println(grades[i]);\n        }\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-arrays-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-9 define `main`.",
+   "kind": "reveal",
+   "lines": "2-9"
+  },
+  {
+   "description": "Line 5 starts a loop.",
+   "kind": "focus",
+   "lines": "5"
+  },
+  {
+   "description": "Line 10 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "10"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "9",
+   "trace_step": 11
+  }
+ ],
+ "title": "Example cs173-activity-arrays-1",
+ "version": 1
+}

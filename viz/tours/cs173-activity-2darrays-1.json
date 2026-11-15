@@ -1,0 +1,43 @@
+{
+ "code": "public class Main {\n   public static void main(String[] args) {\n      int[][] mat1 = new int[10][10];\n      int[][] mat2 = { { 1, 0 }, { 0, 1 } };\n\n      // This is the length of the \"outer vector\" - the number of rows\n      for(int i = 0; i < mat2.length; i++) {\n        // This is the length of the \"inner vector\" - the number of columns\n        for(int j = 0; j < mat2[i].length; j++) {\n            System.out.println(mat2[i][j]);\n        }\n      }\n   }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-2darrays-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-13 define `main`.",
+   "kind": "reveal",
+   "lines": "2-13"
+  },
+  {
+   "description": "Line 7 starts a loop.",
+   "kind": "focus",
+   "lines": "7"
+  },
+  {
+   "description": "Line 9 starts a loop.",
+   "kind": "focus",
+   "lines": "9"
+  },
+  {
+   "description": "Line 14 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "14"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "13",
+   "trace_step": 15
+  }
+ ],
+ "title": "Example cs173-activity-2darrays-1",
+ "version": 1
+}

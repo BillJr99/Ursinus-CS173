@@ -1,0 +1,58 @@
+{
+ "code": "public class Main {\n    public static int fibonacci(int n) {\n        if(n <= 0) {\n            return 0;\n        } else if(n <= 2) {\n            return 1;\n        } else {\n            return fibonacci(n - 1) + fibonacci(n - 2);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fibonacci(5));\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-dynamicprogramming-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-10 define `fibonacci`.",
+   "kind": "reveal",
+   "lines": "2-10"
+  },
+  {
+   "description": "Line 3 makes a decision.",
+   "kind": "focus",
+   "lines": "3"
+  },
+  {
+   "description": "Line 4 returns a value.",
+   "kind": "focus",
+   "lines": "4"
+  },
+  {
+   "description": "Line 6 returns a value.",
+   "kind": "focus",
+   "lines": "6"
+  },
+  {
+   "description": "Line 8 returns a value.",
+   "kind": "focus",
+   "lines": "8"
+  },
+  {
+   "description": "Lines 12-14 define `main`.",
+   "kind": "reveal",
+   "lines": "12-14"
+  },
+  {
+   "description": "Line 15 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "15"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "14",
+   "trace_step": 37
+  }
+ ],
+ "title": "Example cs173-activity-dynamicprogramming-1",
+ "version": 1
+}

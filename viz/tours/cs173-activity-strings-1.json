@@ -1,0 +1,38 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        String x = \"Test\";\n        String y = new String(\"Test\");\n\n        if(x.equals(y)) {\n            System.out.println(\"x and y contain the same text!\");\n        }\n\n        String z = \"tan\";\n        System.out.println(z.substring(1, 2) + z.substring(0, 1));\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-strings-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-12 define `main`.",
+   "kind": "reveal",
+   "lines": "2-12"
+  },
+  {
+   "description": "Line 6 makes a decision.",
+   "kind": "focus",
+   "lines": "6"
+  },
+  {
+   "description": "Line 13 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "13"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "12",
+   "trace_step": 6
+  }
+ ],
+ "title": "Example cs173-activity-strings-1",
+ "version": 1
+}

@@ -1,0 +1,27 @@
+{
+ "code": "double temperature = 50;\n\nif(temperature > 90) {\n  System.out.println(\"It's going to be hot out!\");\n} else if(temperature > 50) {\n  System.out.println(\"It's going to be comfortable.\");\n} else if(temperature > 32) {\n  System.out.println(\"It's above freezing!\");\n} else {\n  System.out.println(\"It's freezing out!\");\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-lab-tellastory-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-10 set things up.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Line 3 makes a decision.",
+   "kind": "focus",
+   "lines": "3"
+  },
+  {
+   "description": "Line 11 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "11"
+  }
+ ],
+ "title": "Hint: else/if Statements",
+ "version": 1
+}

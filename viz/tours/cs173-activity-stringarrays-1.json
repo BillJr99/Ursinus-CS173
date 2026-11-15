@@ -1,0 +1,43 @@
+{
+ "code": "public class Main {\n    public static void printArray(String[] arr) { \n        for(int i = 0; i < arr.length; i++) {\n            System.out.print(arr[i]);\n            System.out.println(\" \");\n        }\n        System.out.println();\n    }\n\n    public static void main(String[] args) {\n        String str = \"The quick brown fox jumped; it jumped over the dog.\";\n        String[] words = str.split(\" \");\n        printArray(words);\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-stringarrays-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-8 define `printArray`.",
+   "kind": "reveal",
+   "lines": "2-8"
+  },
+  {
+   "description": "Line 3 starts a loop.",
+   "kind": "focus",
+   "lines": "3"
+  },
+  {
+   "description": "Lines 10-14 define `main`.",
+   "kind": "reveal",
+   "lines": "10-14"
+  },
+  {
+   "description": "Line 15 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "15"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "14",
+   "trace_step": 36
+  }
+ ],
+ "title": "Example cs173-activity-stringarrays-1",
+ "version": 1
+}

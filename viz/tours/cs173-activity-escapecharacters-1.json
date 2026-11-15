@@ -1,0 +1,33 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"The most damaging phrase in the language is: \\\"We've always done it this way!\\\"\");\n        System.out.println(\" -- Grace Hopper\");\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-escapecharacters-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Line 1 sets things up.",
+   "kind": "reveal",
+   "lines": "1"
+  },
+  {
+   "description": "Lines 2-5 define `main`.",
+   "kind": "reveal",
+   "lines": "2-5"
+  },
+  {
+   "description": "Line 6 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "6"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "5",
+   "trace_step": 2
+  }
+ ],
+ "title": "Example cs173-activity-escapecharacters-1",
+ "version": 1
+}
