@@ -1,7 +1,7 @@
 {
  "course": "cs173",
  "site": "https://billjr99.github.io/Ursinus-CS173",
- "built": "2026-11-15 00:53",
+ "built": "2026-11-15 00:58",
  "examples": [
   {
    "id": "cs173-activity-2darrays-1",
@@ -361,9 +361,10 @@
    "line": 82,
    "page_url": "https://billjr99.github.io/Ursinus-CS173/Activities/activity-testing",
    "error": null,
-   "steps": 15,
+   "steps": 17,
    "modes": [
-    "run"
+    "run",
+    "explain"
    ]
   },
   {

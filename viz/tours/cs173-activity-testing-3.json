@@ -1,0 +1,48 @@
+{
+ "code": "import java.util.Random;\n\npublic class Main {            \n    public static boolean isHeads() {\n        Random rng = new Random();\n\n        // Use the random number generator (rng)\n        // to generate a value >= 0.0 and < 1.0\n        double randomValue = rng.nextDouble();\n\n        boolean result = false;\n        if(randomValue > 0.5) {\n            result = true;\n        } \n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isHeads());\n        System.out.println(isHeads());\n    }\n}",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "example": "cs173-activity-testing-3",
+ "lang": "java",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "description": "Lines 1-3 set things up.",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Lines 4-17 define `isHeads`.",
+   "kind": "reveal",
+   "lines": "4-17"
+  },
+  {
+   "description": "Line 12 makes a decision.",
+   "kind": "focus",
+   "lines": "12"
+  },
+  {
+   "description": "Line 16 returns a value.",
+   "kind": "focus",
+   "lines": "16"
+  },
+  {
+   "description": "Lines 19-22 define `main`.",
+   "kind": "reveal",
+   "lines": "19-22"
+  },
+  {
+   "description": "Line 23 runs the rest of the example.",
+   "kind": "reveal",
+   "lines": "23"
+  },
+  {
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "kind": "run",
+   "lines": "22",
+   "trace_step": 15
+  }
+ ],
+ "title": "Example cs173-activity-testing-3",
+ "version": 1
+}
