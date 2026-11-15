@@ -1,0 +1,36 @@
+{
+ "version": 1,
+ "example": "cs173-activity-iterationfor-1",
+ "title": "Example cs173-activity-iterationfor-1",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1",
+   "description": "Line 1 sets things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "2-11",
+   "description": "Lines 2-11 define `main`."
+  },
+  {
+   "kind": "focus",
+   "lines": "8",
+   "description": "Line 8 starts a loop."
+  },
+  {
+   "kind": "reveal",
+   "lines": "12",
+   "description": "Line 12 runs the rest of the example."
+  },
+  {
+   "kind": "run",
+   "trace_step": 22,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "11"
+  }
+ ]
+}

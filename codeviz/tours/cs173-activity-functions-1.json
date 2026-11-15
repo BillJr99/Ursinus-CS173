@@ -1,0 +1,51 @@
+{
+ "version": 1,
+ "example": "cs173-activity-functions-1",
+ "title": "Example cs173-activity-functions-1",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-6",
+   "description": "Lines 1-6 set things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "7-11",
+   "description": "Lines 7-11 define `circleArea`."
+  },
+  {
+   "kind": "focus",
+   "lines": "10",
+   "description": "Line 10 returns a value."
+  },
+  {
+   "kind": "reveal",
+   "lines": "13-17",
+   "description": "Lines 13-17 define `triangleArea`."
+  },
+  {
+   "kind": "focus",
+   "lines": "16",
+   "description": "Line 16 returns a value."
+  },
+  {
+   "kind": "reveal",
+   "lines": "19-26",
+   "description": "Lines 19-26 define `main`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "27",
+   "description": "Line 27 runs the rest of the example."
+  },
+  {
+   "kind": "run",
+   "trace_step": 7,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "26"
+  }
+ ]
+}

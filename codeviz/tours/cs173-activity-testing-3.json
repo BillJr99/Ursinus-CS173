@@ -1,0 +1,46 @@
+{
+ "version": 1,
+ "example": "cs173-activity-testing-3",
+ "title": "Example cs173-activity-testing-3",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-3",
+   "description": "Lines 1-3 set things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "4-17",
+   "description": "Lines 4-17 define `isHeads`."
+  },
+  {
+   "kind": "focus",
+   "lines": "12",
+   "description": "Line 12 makes a decision."
+  },
+  {
+   "kind": "focus",
+   "lines": "16",
+   "description": "Line 16 returns a value."
+  },
+  {
+   "kind": "reveal",
+   "lines": "19-22",
+   "description": "Lines 19-22 define `main`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "23",
+   "description": "Line 23 runs the rest of the example."
+  },
+  {
+   "kind": "run",
+   "trace_step": 15,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "22"
+  }
+ ]
+}

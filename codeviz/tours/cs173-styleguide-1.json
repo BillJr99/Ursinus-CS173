@@ -1,0 +1,25 @@
+{
+ "version": 1,
+ "example": "cs173-styleguide-1",
+ "title": "Bad Code",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-4",
+   "description": "Lines 1-4 set things up."
+  },
+  {
+   "kind": "focus",
+   "lines": "1",
+   "description": "Line 1 starts a loop."
+  },
+  {
+   "kind": "focus",
+   "lines": "2",
+   "description": "Line 2 makes a decision."
+  }
+ ]
+}

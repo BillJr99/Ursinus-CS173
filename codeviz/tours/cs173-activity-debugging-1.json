@@ -1,0 +1,36 @@
+{
+ "version": 1,
+ "example": "cs173-activity-debugging-1",
+ "title": "Example cs173-activity-debugging-1",
+ "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "reviewed": false,
+ "source": "skeleton",
+ "steps": [
+  {
+   "kind": "reveal",
+   "lines": "1-10",
+   "description": "Lines 1-10 set things up."
+  },
+  {
+   "kind": "reveal",
+   "lines": "11-16",
+   "description": "Lines 11-16 continue the example."
+  },
+  {
+   "kind": "reveal",
+   "lines": "17-32",
+   "description": "Lines 17-32 define `main`."
+  },
+  {
+   "kind": "reveal",
+   "lines": "33-34",
+   "description": "Lines 33-34 run the rest of the example."
+  },
+  {
+   "kind": "run",
+   "trace_step": 11,
+   "description": "This is the end of the run: the final state, and all of the output.",
+   "lines": "32"
+  }
+ ]
+}
