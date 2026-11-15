@@ -1,27 +1,34 @@
 {
  "code": "double temperature = 50;\n\nif(temperature > 90) {\n  System.out.println(\"It's going to be hot out!\");\n} else if(temperature > 50) {\n  System.out.println(\"It's going to be comfortable.\");\n} else if(temperature > 32) {\n  System.out.println(\"It's above freezing!\");\n} else {\n  System.out.println(\"It's freezing out!\");\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Step through a four-branch if / else if / else waterfall when temperature = 50 to see how strict > comparisons select a branch.",
  "example": "cs173-lab-tellastory-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model",
  "steps": [
   {
-   "description": "Lines 1-10 set things up.",
+   "description": "Initialize double temperature = 50 and test the first two thresholds: if(temperature > 90) on line 3 and else if(temperature > 50) on line 5.",
    "kind": "reveal",
-   "lines": "1-10"
+   "lines": "1-6"
   },
   {
-   "description": "Line 3 makes a decision.",
-   "kind": "focus",
-   "lines": "3"
+   "answer": "No; 50 > 50 is false because > is strictly greater than, so Java skips line 6 and continues to line 7.",
+   "kind": "predict",
+   "lines": "1,3-6",
+   "question": "Does temperature = 50 satisfy else if(temperature > 50) on line 5?"
   },
   {
-   "description": "Line 11 runs the rest of the example.",
+   "description": "Check else if(temperature > 32) on line 7 to print \"It's above freezing!\" on line 8, with a final else for 32 or below.",
    "kind": "reveal",
-   "lines": "11"
+   "lines": "7-11"
+  },
+  {
+   "description": "Watch temperature = 50 fail lines 3 and 5, match temperature > 32 on line 7, and execute line 8.",
+   "kind": "run",
+   "lines": "8",
+   "trace_step": 4
   }
  ],
- "title": "Hint: else/if Statements",
+ "title": "Cascading else if Statements on Temperature",
  "version": 1
 }

@@ -1,38 +1,39 @@
 {
  "code": "/*\n * To change this license header, choose License Headers in Project Properties.\n * To change this template file, choose Tools | Templates\n * and open the template in the editor.\n */\npackage numbergame;\n\n/**\n *\n * @author bill\n */\npublic class NumberGame {\n\n    /**\n     * @param args the command line arguments\n     */\n    public static void main(String[] args) {\n        int value = 6;\n        int year = 2021;\n        int birthYear = 1982;\n\n        double intermediate = value * 2;\n        intermediate += 5;\n        intermediate *= 50;\n        intermediate -= 250;\n        intermediate += year;\n        intermediate -= birthYear;\n\n        int ageThisYear = (int) (intermediate % 100);\n\n        System.out.println(ageThisYear);\n    }\n\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Step through a sequence of arithmetic and compound assignment operations (+=, *=, -=) on intermediate to compute ageThisYear.",
  "example": "cs173-activity-debugging-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model",
  "steps": [
   {
-   "description": "Lines 1-10 set things up.",
+   "description": "Inside NumberGame.main, initialize value = 6, year = 2021, and birthYear = 1982.",
    "kind": "reveal",
-   "lines": "1-10"
+   "lines": "1-20"
   },
   {
-   "description": "Lines 11-16 continue the example.",
+   "description": "Initialize intermediate = value * 2 (12.0), then update intermediate in place with += 5, *= 50, and -= 250.",
    "kind": "reveal",
-   "lines": "11-16"
+   "lines": "22-25"
   },
   {
-   "description": "Lines 17-32 define `main`.",
-   "kind": "reveal",
-   "lines": "17-32"
+   "answer": "Starting from 12.0, += 5 gives 17.0, *= 50 gives 850.0, and -= 250 gives 600.0.",
+   "kind": "predict",
+   "lines": "22-25",
+   "question": "What value does intermediate hold right after line 25 runs (when execution reaches line 26)?"
   },
   {
-   "description": "Lines 33-34 run the rest of the example.",
+   "description": "Add year (2021) and subtract birthYear (1982) on lines 26-27 to get 639.0, take (int) (intermediate % 100) on line 29 to extract the last two digits 39, and print ageThisYear.",
    "kind": "reveal",
-   "lines": "33-34"
+   "lines": "26-34"
   },
   {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Pause at line 26 to verify that intermediate holds 600.0 before year and birthYear are applied.",
    "kind": "run",
-   "lines": "32",
-   "trace_step": 11
+   "lines": "26",
+   "trace_step": 7
   }
  ],
- "title": "Example cs173-activity-debugging-1",
+ "title": "Tracing Compound Assignments in a Debugger",
  "version": 1
 }

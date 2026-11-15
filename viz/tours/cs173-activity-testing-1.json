@@ -1,43 +1,34 @@
 {
  "code": "public class Main {            \n    public static int triangleArea(int base, int height) {\n        // Broken Code!\n        return 1 / 2 * base * height;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(triangleArea(5, 2));\n        System.out.println(triangleArea(3, -2));\n    }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Examine a broken triangleArea(int base, int height) implementation to see why unit tests on different inputs expose integer-division and negative-input bugs.",
  "example": "cs173-activity-testing-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "Look at triangleArea(int base, int height), which returns 1 / 2 * base * height on line 4.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-5"
   },
   {
-   "description": "Lines 2-5 define `triangleArea`.",
+   "answer": "Because 1 and 2 are both int literals, integer division evaluates 1 / 2 to 0 first, and 0 * base * height is always 0.",
+   "kind": "predict",
+   "lines": "2-4",
+   "question": "Why does 1 / 2 * base * height evaluate to 0 for every base and height?"
+  },
+  {
+   "description": "Call triangleArea(5, 2) and triangleArea(3, -2) in main to see both print 0, and notice that height = -2 also tests an invalid negative dimension.",
    "kind": "reveal",
-   "lines": "2-5"
+   "lines": "7-11"
   },
   {
-   "description": "Line 4 returns a value.",
-   "kind": "focus",
-   "lines": "4"
-  },
-  {
-   "description": "Lines 7-10 define `main`.",
-   "kind": "reveal",
-   "lines": "7-10"
-  },
-  {
-   "description": "Line 11 runs the rest of the example.",
-   "kind": "reveal",
-   "lines": "11"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Step into triangleArea(5, 2) on line 4 to watch 1 / 2 * 5 * 2 return 0.",
    "kind": "run",
-   "lines": "10",
-   "trace_step": 6
+   "lines": "4",
+   "trace_step": 1
   }
  ],
- "title": "Example cs173-activity-testing-1",
+ "title": "Catching Integer Division and Domain Bugs with Unit Tests",
  "version": 1
 }

@@ -1,53 +1,34 @@
 {
  "code": "public class Main {\n   public static int fibonacci(int n) {\n        if(n <= 1) {    // Recursive alogirhtms need to know when to stop!\n            return 1;   // This is called the base case: fib(0) = fib(1) = 1\n        } else {\n            return fibonacci(n-1) + fibonacci(n-2);\n        }\n   }\n\n   public static void main(String[] args) {\n        int ans = fibonacci(4);\n        System.out.println(ans);\n   }\n}",
- "description": "A walkthrough built from the code's structure: each part in reading order, then the moments to look at.",
+ "description": "Trace fibonacci(4) through its recursive calls on n - 1 and n - 2 down to the base case n <= 1.",
  "example": "cs173-activity-recursion-1",
  "lang": "java",
  "reviewed": false,
- "source": "skeleton",
+ "source": "draft: agy free model",
  "steps": [
   {
-   "description": "Line 1 sets things up.",
+   "description": "In fibonacci(int n), check the base case if(n <= 1) on line 3 and return 1 on line 4 so the recursion stops when n reaches 1 or 0.",
    "kind": "reveal",
-   "lines": "1"
+   "lines": "1-5"
   },
   {
-   "description": "Lines 2-8 define `fibonacci`.",
+   "description": "In the else branch on line 6, return fibonacci(n-1) + fibonacci(n-2), and call fibonacci(4) from main on line 11.",
    "kind": "reveal",
-   "lines": "2-8"
+   "lines": "5-14"
   },
   {
-   "description": "Line 3 makes a decision.",
-   "kind": "focus",
-   "lines": "3"
+   "answer": "fibonacci(4) calls fibonacci(3) and fibonacci(2), and fibonacci(3) also calls fibonacci(2) and fibonacci(1), so fibonacci(2) is evaluated twice and ans receives 3 + 2 = 5.",
+   "kind": "predict",
+   "lines": "3-7,11",
+   "question": "When main calls fibonacci(4), how many times does the program evaluate fibonacci(2), and what value is stored in ans?"
   },
   {
-   "description": "Line 4 returns a value.",
-   "kind": "focus",
-   "lines": "4"
-  },
-  {
-   "description": "Line 6 returns a value.",
-   "kind": "focus",
-   "lines": "6"
-  },
-  {
-   "description": "Lines 10-13 define `main`.",
-   "kind": "reveal",
-   "lines": "10-13"
-  },
-  {
-   "description": "Line 14 runs the rest of the example.",
-   "kind": "reveal",
-   "lines": "14"
-  },
-  {
-   "description": "This is the end of the run: the final state, and all of the output.",
+   "description": "Watch the call stack reach the first base case (n = 1) on line 4 and return 1 up to fibonacci(2).",
    "kind": "run",
-   "lines": "13",
-   "trace_step": 29
+   "lines": "4",
+   "trace_step": 8
   }
  ],
- "title": "Example cs173-activity-recursion-1",
+ "title": "Base Case and Recursive Case in fibonacci",
  "version": 1
 }
