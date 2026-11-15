@@ -38,7 +38,7 @@
   },
   {
    "kind": "run",
-   "trace_step": 15,
+   "trace_step": 14,
    "description": "This is the end of the run: the final state, and all of the output.",
    "lines": "22"
   }
