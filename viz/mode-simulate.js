@@ -11,7 +11,7 @@
              so colors, cursor moves, \r progress bars, `clear` and full-screen programs look as they
              did live. The screen persists from command to command, with scrollback.
              Next (the > button, Space or the right arrow) types the next command at the prompt,
-             then plays its output at the recorded pace; 1x, fast and instant set the speed. Back
+             then plays its output at the recorded pace; 0.5x (Slow), 1x, fast and instant set the speed. Back
              (<, left arrow) and jumping (the slider, Home, &s=N) rebuild the exact screen at that
              point at once from the recording. Pressing Next while a command is still playing
              finishes it at once.
@@ -35,7 +35,7 @@
   "use strict";
   const XTERM = "https://cdn.jsdelivr.net/npm/xterm@5.3.0/";
   const PROMPT = "\x1b[1;32m$\x1b[0m ";
-  const SPEEDS = { "1x": 1, fast: 4, instant: 0 };
+  const SPEEDS = { "0.5x (Slow)": 0.5, "1x": 1, fast: 4, instant: 0 };
   const S = { sess: null, id: null, step: -1, branch: "", speed: "1x", term: null, xtermTried: false, token: 0, playing: false };
   const V = () => window.CVIZ_VIEWER;
   const el = (id) => document.getElementById(id);

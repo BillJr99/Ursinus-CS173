@@ -658,7 +658,7 @@
     if (e.key === "ArrowLeft") go("-1");
     if (e.key === "Home") go(0);
     if ((e.key === "b" || e.key === "B") && blank && !$("example").hidden) blank.hidden = false;
-    if (["1", "2", "3"].includes(e.key) && M()) M().switchTo(["run", "explain", "simulate"][Number(e.key) - 1]);
+    if (["1", "2", "3", "4"].includes(e.key) && M()) M().switchTo(["run", "explain", "simulate", "terminal"][Number(e.key) - 1]);
   });
 
   // ---------- edit and re-run ----------

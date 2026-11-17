@@ -1,0 +1,27 @@
+/* Terminal-only styles leave all course pages and other viewer modes alone. */
+#terminal-player { --term-bg:#f4f6f8; --term-fg:#18222d; --term-border:#7b8794; color:var(--term-fg); background:var(--term-bg); border:1px solid var(--term-border); border-radius:6px; padding:12px; }
+@media(prefers-color-scheme:dark) { :root:not([data-theme=light]) #terminal-player { --term-bg:#17212b; --term-fg:#edf2f7; --term-border:#8293a3; } }
+:root[data-theme=dark] #terminal-player { --term-bg:#17212b; --term-fg:#edf2f7; --term-border:#8293a3; }
+#terminal-player button,#terminal-player select { background:var(--term-bg); color:var(--term-fg); border:1px solid var(--term-border); border-radius:4px; padding:6px; }
+.terminal-controls { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+#terminal-seek { flex:1 1 160px; min-width:80px; }
+#terminal-screen { background:var(--term-bg); color:var(--term-fg); height:320px; overflow:auto; white-space:pre; font:13px/1.45 ui-monospace,Consolas,monospace; padding:12px; border:1px solid var(--term-border); user-select:text; }
+.terminal-markers { display:flex; flex-wrap:wrap; gap:6px; }
+.terminal-marker[aria-current=true] { outline:2px solid #3088dd; outline-offset:1px; }
+#terminal-note { min-height:2.6em; line-height:1.5; }
+#terminal-transcript { white-space:pre-wrap; overflow-wrap:anywhere; user-select:text; max-height:320px; overflow:auto; }
+body.terminal-embed .brand,body.terminal-embed #pagelink { display:none; }
+body.terminal-embed main { max-width:none; padding:8px; }
+#example > .controls[hidden],#example > .cols[hidden] { display:none; }
+
+#terminal-provenance { margin:8px 0 0; font-weight:600; flex:none; }
+body.terminal-embed[data-mode=terminal] { height:100dvh; display:flex; flex-direction:column; }
+body.terminal-embed[data-mode=terminal] > .bar { flex:none; }
+body.terminal-embed[data-mode=terminal] main { flex:1; min-height:0; display:flex; }
+body.terminal-embed[data-mode=terminal] #example { flex:1; min-width:0; min-height:0; display:flex; flex-direction:column; }
+body.terminal-embed[data-mode=terminal] #terminal-player { flex:1; min-height:0; display:flex; flex-direction:column; overflow:auto; }
+body.terminal-embed[data-mode=terminal] #terminal-screen { flex:1; height:auto; min-height:100px; margin:8px 0; }
+body.terminal-embed[data-mode=terminal] .terminal-controls,
+body.terminal-embed[data-mode=terminal] .terminal-notes,
+body.terminal-embed[data-mode=terminal] #terminal-transcript-details { flex:none; }
+body.terminal-embed #terminal-transcript { max-height:160px; }

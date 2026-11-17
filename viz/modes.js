@@ -31,8 +31,8 @@
 */
 (function () {
   "use strict";
-  const ORDER = ["run", "explain", "simulate"];
-  const LABEL = { run: "Run", explain: "Explain", simulate: "Simulate" };
+  const ORDER = ["run", "explain", "simulate", "terminal"];
+  const LABEL = { run: "Run", explain: "Explain", simulate: "Simulate", terminal: "Terminal" };
   const registry = {};
   const params = new URLSearchParams(location.search);
   const cur = { id: null, meta: null, modes: [], mode: null, pos: {} };
@@ -82,7 +82,7 @@
       b.className = "modetab" + (m === cur.mode ? " on" : "");
       b.setAttribute("aria-pressed", m === cur.mode ? "true" : "false");
       b.title = { run: "Run: step through what the code does (key 1)", explain: "Explain: a guided walkthrough of the code (key 2)",
-                  simulate: "Simulate: replay the recorded terminal session (key 3)" }[m];
+                  simulate: "Simulate: replay the recorded terminal session (key 3)", terminal: "Terminal: play commands and output (key 4)" }[m];
       b.onclick = () => switchTo(m);
       bar.appendChild(b);
     }
@@ -114,7 +114,7 @@
     tabs();
     let pos = cur.pos[mode];
     if (first) {
-      const key = { run: "step", explain: "t", simulate: "s" }[mode];
+      const key = { run: "step", explain: "t", simulate: "s", terminal: "s" }[mode];
       if (params.has(key)) pos = Number(params.get(key)) || 0;
     }
     try {
