@@ -25,7 +25,62 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  scope:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      rebuild: ${{ steps.scope.outputs.rebuild }}
+    steps:
+      - uses: actions/checkout@v4
+        if: github.event_name == 'push'
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          submodules: false
+      - id: scope
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          python3 - <<'PYTHON'
+          import os
+          import subprocess
+          import sys
+
+          def git(*args):
+              return subprocess.check_output(["git", *args])
+
+          def classify(event, before, after):
+              if event != "push":
+                  return True
+              viewer = {
+                  b"viz/mode-terminal.js": b"3b45d9d61ccaa7d63e75d4744efd786a159dab04",
+                  b"viz/mode-simulate.js": b"23221a6163f9e7a7e235579b4f08ee7cc2c99335",
+                  b"viz/terminal.css": b"06cc012958dae3f3eabe61e44e03227deb4d0574",
+              }
+              paths = set(git("diff", "--no-renames", "--name-only", "-z", before, after).split(b"\0")) - {b""}
+              rollout = {b"code", *viewer}
+              workflow = b".github/workflows/code-viz.yml"
+              if paths not in (rollout, rollout | {workflow}):
+                  return True
+              expected = {b"code": b"160000 commit 90837fa0fca4bd7b229cc4d4785e0e675f99665c"}
+              expected.update({path: b"100644 blob " + blob for path, blob in viewer.items()})
+              for path, want in expected.items():
+                  entry = git("ls-tree", after, "--", os.fsdecode(path)).split(b"\t", 1)[0]
+                  if entry != want:
+                      sys.exit(f"Unexpected line-mode rollout object for {os.fsdecode(path)}")
+              print("Verified exact Terminal Viz gitlink and viewer bytes. Pages and site checks run separately.")
+              return False
+
+          rebuild = classify(os.environ["EVENT"], os.environ.get("BEFORE", ""), os.environ["AFTER"])
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"rebuild={str(rebuild).lower()}", file=output)
+          PYTHON
   build:
+    needs: scope
+    if: needs.scope.outputs.rebuild == 'true'
     permissions:
       contents: write
       actions: write

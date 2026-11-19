@@ -4,23 +4,31 @@
 (function () {
   'use strict';
   const el = id => document.getElementById(id);
-  const S = {id:null,time:0,duration:0,playing:false,speed:1,frame:0,events:[],markers:[],sess:null,epoch:0,selectedMarker:null};
-  let saved=[], copyTimer=null, observer=null, motion=null, motionChanged=null;
+  const S = {id:null,time:0,duration:0,playing:false,speed:1,pacing:'line',frame:0,events:[],markers:[],sess:null,epoch:0,selectedMarker:null};
+  let saved=[], copyTimer=null, motion=null, motionChanged=null;
   const reduced=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function resetCopy() {
     clearTimeout(copyTimer);copyTimer=null;
     if(el('terminal-copy')) el('terminal-copy').textContent='Copy transcript';
   }
-  // Presentation timing only: source output stays unchanged. Commands type at 24 chars/sec;
-  // long quiet gaps are capped at two seconds so install demonstrations remain watchable.
-  function demoEvents(sess) {
+  // Presentation timing only. Keep captured output chunks unchanged, with gaps capped at 2 s.
+  const CHAR_TIME=1/24, LINE_HOLD=0.09;
+  function demoEvents(sess,pacing) {
     const events=[], markers=[];let at=0;
     for(const [index,step] of (sess.steps||[]).entries()) {
       for(const marker of sess.markers||[]) if(marker.step===index) {
         markers.push({...marker,at});events.push([at,'m',marker.title]);
       }
       events.push([at,'o','$ ']);
-      for(const char of step.cmd) {at+=1/24;events.push([at,'o',char]);}
+      const line=pacing==='line';
+      // ANSI-bearing commands are opaque. Preserve CRLF and all other command bytes.
+      const parts=/[\x1b\x80-\x9f]/.test(step.cmd)?[step.cmd]:
+        step.cmd.match(line?/[^\n]*\n|[^\n]+/g:/\r\n|[\s\S]/gu)||[];
+      for(const part of parts) {
+        const typed=[...part].length*CHAR_TIME;
+        events.push([at+(line?CHAR_TIME:typed),'o',part]);
+        at+=typed+(line?LINE_HOLD:0);
+      }
       at+=0.25;events.push([at,'o','\r\n']);
       let previous=0;
       const chunks=step.cast&&step.cast.length?step.cast:[[0,step.output||'']];
@@ -82,8 +90,7 @@
   function seek(t,marker=null) {resetCopy();pause();S.selectedMarker=marker;S.time=Math.max(0,Math.min(Number(t)||0,S.duration));draw();}
   function play() {
     resetCopy();S.selectedMarker=null;
-    if(reduced()) {seek(S.duration);return;}
-    S.started=true;
+    if(reduced()||S.speed===0) {seek(S.duration);return;}
     if(S.playing) return pause();
     if(S.time>=S.duration) S.time=0;
     S.playing=true;el('terminal-play').textContent='Pause';S.epoch=performance.now();
@@ -104,15 +111,15 @@
     const rows=(await response.text()).trim().split('\n').map(x=>JSON.parse(x)),header=rows.shift();
     if(header.version!==2||!rows.every(e=>Array.isArray(e)&&e.length===3&&Number.isFinite(e[0])&&e[0]>=0&&typeof e[2]==='string')) throw new Error('Invalid asciicast v2 recording');
     if(epoch!==S.loadEpoch) return;
-    S.id=ctx.id;S.sess=sess;S.events=rows;S.started=false;S.selectedMarker=null;
+    S.id=ctx.id;S.sess=sess;S.events=rows;S.selectedMarker=null;
     S.scripted=sess.provenance==='scripted';
     if(header.code_viz_provenance&&header.code_viz_provenance!==(sess.provenance||'recorded'))throw new Error('Terminal provenance mismatch');
     S.duration=Math.max(Number(header.duration)||0,...rows.map(e=>e[0]));
     const castMarkers=rows.filter(e=>e[1]==='m');
     S.markers=(sess.markers||[]).slice().sort((a,b)=>a.step-b.step).map((m,i)=>({...m,at:castMarkers[i]?castMarkers[i][0]:0}));
-    if(sess.demo) {
-      const demo=demoEvents(sess);S.events=demo.events;S.markers=demo.markers;S.duration=demo.duration;
-    }
+    // Only opt-in demos use the session's explicit command boundaries; never infer them from a cast.
+    const demo=sess.demo&&Array.isArray(sess.steps)&&sess.steps.length&&sess.steps.every(step=>typeof step?.cmd==='string');
+    if(demo) Object.assign(S,demoEvents(sess,S.pacing));
     S.time=reduced()?S.duration:Math.min(S.duration,Math.max(0,ctx.pos||0));
     el('list').hidden=true;el('example').hidden=false;el('title').textContent=sess.title||ctx.id;
     saved=[];
@@ -122,8 +129,21 @@
     const panel=node('div',{id:'terminal-player','data-provenance':sess.provenance||'recorded'}),bar=node('div',{class:'terminal-controls'});
     const toggle=node('button',{id:'terminal-play',type:'button'},'Play');toggle.disabled=reduced();toggle.onclick=play;bar.append(toggle);
     const label=node('label',{},'Speed '),speed=node('select',{id:'terminal-speed','aria-label':'Playback speed'});
-    [0.1,0.25,0.5,0.75,1,2,4,16].forEach(n=>speed.append(node('option',{value:n},n+'x')));speed.value=S.speed;
-    speed.onchange=()=>{S.speed=Number(speed.value);S.epoch=performance.now();};label.append(speed);bar.append(label);
+    [0.1,0.25,0.5,0.75,1,2,4,16,0].forEach(n=>speed.append(node('option',{value:n},n?n+'x':'Instant')));speed.value=S.speed;
+    speed.onchange=()=>{
+      S.speed=Number(speed.value);S.epoch=performance.now();
+      if(S.playing&&S.speed===0)seek(S.duration);
+    };label.append(speed);bar.append(label);
+    if(demo) {
+      const pacingLabel=node('label',{},'Command pacing '), pacing=node('select',{id:'terminal-pacing',title:'Changing command pacing restarts the demo'});
+      pacing.append(node('option',{value:'line'},'Line by line'),node('option',{value:'character'},'Character by character'));
+      pacing.value=S.pacing;
+      pacing.onchange=()=>{
+        S.pacing=pacing.value;Object.assign(S,demoEvents(sess,S.pacing));
+        seekbar.max=S.duration;seek(reduced()?S.duration:0);
+      };
+      pacingLabel.append(pacing);bar.append(pacingLabel);
+    }
     const theme=node('select',{id:'terminal-theme','aria-label':'Terminal theme'});
     ['system','light','dark'].forEach(x=>theme.append(node('option',{value:x},x)));
     theme.onchange=()=>{if(theme.value==='system')delete document.documentElement.dataset.theme;else document.documentElement.dataset.theme=theme.value;};bar.append(theme);
@@ -143,20 +163,13 @@
     el('example').append(panel);draw();
     const onMotion=()=>{pause();toggle.disabled=reduced();if(reduced()) {S.time=S.duration;draw();}};
     motion=window.matchMedia('(prefers-reduced-motion: reduce)');motionChanged=onMotion;motion.addEventListener('change',motionChanged);
-    if(sess.demo) {
-      observer=new IntersectionObserver(entries=>{
-        if(!entries.some(e=>e.isIntersecting)||S.started||reduced()||S.time>=S.duration)return;
-        play();
-      },{threshold:0.15});
-      observer.observe(panel);
-    }
   }
   S.loadEpoch=0;
   window.CVIZ_MODES.register('terminal',{
     label:'Terminal',show,
     go(to){if(to==='+1')play();else if(to==='-1')seek(S.time-5);else seek(to);},
     pos(){return S.time;},url(){return {s:Math.round(S.time*1000)/1000};},
-    hide(){pause();resetCopy();if(observer){observer.disconnect();observer=null;}if(motion){motion.removeEventListener('change',motionChanged);motion=null;}S.loadEpoch++;const n=el('terminal-player');if(n)n.remove();saved.forEach(([n,h])=>{n.hidden=h;});saved=[];}
+    hide(){pause();resetCopy();if(motion){motion.removeEventListener('change',motionChanged);motion=null;}S.loadEpoch++;const n=el('terminal-player');if(n)n.remove();saved.forEach(([n,h])=>{n.hidden=h;});saved=[];}
   });
   if(new URLSearchParams(location.search).has('embed'))document.body.classList.add('terminal-embed');
 })();

@@ -10,7 +10,7 @@
      left    a real terminal emulator (xterm.js 5.3.0, pinned, from jsDelivr, loaded on first use),
              so colors, cursor moves, \r progress bars, `clear` and full-screen programs look as they
              did live. The screen persists from command to command, with scrollback.
-             Next (the > button, Space or the right arrow) types the next command at the prompt,
+             Next command (Space or the right arrow) reveals the next command line by line,
              then plays its output at the recorded pace; 0.5x (Slow), 1x, fast and instant set the speed. Back
              (<, left arrow) and jumping (the slider, Home, &s=N) rebuild the exact screen at that
              point at once from the recording. Pressing Next while a command is still playing
@@ -36,7 +36,7 @@
   const XTERM = "https://cdn.jsdelivr.net/npm/xterm@5.3.0/";
   const PROMPT = "\x1b[1;32m$\x1b[0m ";
   const SPEEDS = { "0.5x (Slow)": 0.5, "1x": 1, fast: 4, instant: 0 };
-  const S = { sess: null, id: null, step: -1, branch: "", speed: "1x", term: null, xtermTried: false, token: 0, playing: false };
+  const S = { sess: null, id: null, step: -1, branch: "", speed: "1x", pacing: "line", term: null, xtermTried: false, token: 0, playing: false };
   const V = () => window.CVIZ_VIEWER;
   const el = (id) => document.getElementById(id);
   const norm = (c) => String(c || "").trim().replace(/\s+/g, " ");
@@ -115,17 +115,25 @@
 
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-  // Type command k at the prompt, then play its output at the recorded pace (or faster).
+  // Reveal command k at the prompt, then play its original output chunks.
   async function play(k) {
     const list = steps(), st = list[k];
     if (!st) return;
-    if (!S.term) return drawInstant(k);
-    const my = ++S.token, f = SPEEDS[S.speed];
+    const f = SPEEDS[S.speed];
+    if (!S.term || f === 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return drawInstant(k);
+    const my = ++S.token, line = S.pacing === "line";
     S.playing = true;
-    if (f === 0) return drawInstant(k);
-    // Typed like a person: 35 ms a character, but never more than 1.5 s for a whole command at 1x.
-    const perChar = Math.min(35, 1500 / Math.max(1, st.cmd.length)) / f;
-    for (const ch of st.cmd) { if (my !== S.token) return; S.term.write(ch); await sleep(perChar); }
+    el("next").textContent = "Finish command";
+    // Budget as for character typing, plus 90 ms to read each revealed line at 1x.
+    const perChar = Math.min(35, 1500 / Math.max(1, st.cmd.length));
+    // Keep ANSI-bearing commands opaque, and don't split CRLF or alter command bytes.
+    const parts = /[\x1b\x80-\x9f]/.test(st.cmd) ? [st.cmd] :
+      st.cmd.match(line ? /[^\n]*\n|[^\n]+/g : /\r\n|[\s\S]/gu) || [];
+    for (const part of parts) {
+      if (my !== S.token) return;
+      S.term.write(part);
+      await sleep(([...part].length * perChar + (line ? 90 : 0)) / f);
+    }
     if (my !== S.token) return;
     S.term.write("\r\n");
     let last = 0;
@@ -165,11 +173,12 @@
 
   function panels() {
     const esc = V().esc, list = steps(), n = list.length, st = list[S.step];
+    el("next").textContent = "Next command";
     el("slider").min = 0; el("slider").max = n; el("slider").value = S.step + 1;
     el("stepinfo").textContent = S.step < 0 ? `${n} command${n === 1 ? "" : "s"}, none run yet` : `command ${S.step + 1} of ${n}`;
     el("paneltitle").textContent = S.step < 0 ? "Before the first command" : "After this command";
     el("output").textContent = st ? `took ${st.duration != null ? st.duration + " s" : "?"}, exit ${st.exit}` : "";
-    if (!st) { el("panel").innerHTML = '<p class="note">Nothing has run yet. Press Next (Space) or type the first command.</p>'; }
+    if (!st) { el("panel").innerHTML = '<p class="note">Nothing has run yet. Choose Next command (Space) or type the first command.</p>'; }
     else {
       const state = st.state || {};
       let h = st.note ? `<p class="tournote">${esc(st.note)}</p>` : "";
@@ -202,7 +211,16 @@
   function extra() {
     const x = el("extra"); x.innerHTML = "";
     const mk = (label, on, title, fn) => { const b = document.createElement("button"); b.textContent = label; b.className = on ? "on" : ""; b.title = title || ""; b.onclick = fn; x.appendChild(b); };
-    for (const sp of Object.keys(SPEEDS)) mk(sp, S.speed === sp, "Playback speed of the next command's output", () => { S.speed = sp; extra(); });
+    for (const sp of Object.keys(SPEEDS)) mk(sp, S.speed === sp, "Playback speed for the next command", () => { S.speed = sp; extra(); });
+    const label = document.createElement("label"), pacing = document.createElement("select");
+    label.textContent = "Command pacing ";
+    pacing.setAttribute("id", "simulate-pacing");
+    for (const [value, text] of [["line", "Line by line"], ["character", "Character by character"]]) {
+      const option = document.createElement("option"); option.value = value; option.textContent = text; pacing.append(option);
+    }
+    pacing.value = S.pacing;
+    pacing.onchange = () => { S.pacing = pacing.value; };
+    label.append(pacing); x.append(label);
     const bs = S.sess.branches || [];
     if (bs.length) {
       x.appendChild(Object.assign(document.createElement("span"), { className: "sep" }));
@@ -213,6 +231,9 @@
 
   function chrome(on) {
     for (const id of ["edit", "reset", "play"]) { const b = el(id); if (b) b.style.display = on ? "none" : ""; }
+    const next = el("next");
+    next.textContent = on ? "Next command" : ">";
+    next.title = on ? "Next command (Space or right arrow)" : "Next step (right arrow)";
     el("setupbox").hidden = true;
     const f = el("figures"); if (f) f.hidden = true;
     el("code").hidden = on;
