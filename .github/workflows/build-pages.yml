@@ -24,6 +24,80 @@ jobs:
         with:
           submodules: recursive
 
+      # code-viz CI keeps its build on the code-viz-build branch, never on gh-pages, so a semester
+      # repo and its parent never merge generated, site-specific files. Publish viz/ as that build
+      # plus the viz/ changes made on gh-pages since the commit it was built from (code-viz manual,
+      # section 16 CI). With no branch yet, or a build that is not of this commit or an ancestor
+      # of it, viz/ is published as committed until the next code-viz run deploys.
+      - name: Add the code-viz build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          B=code-viz-build
+          if ! git ls-remote --exit-code --heads origin "$B" >/dev/null; then
+            echo "no $B branch; publishing viz/ as committed"
+            exit 0
+          fi
+          git fetch -q --depth=1 origin "+refs/heads/$B:refs/remotes/origin/$B"
+          BASE=$(git log -1 --format=%B "origin/$B" | sed -n 's/^Built-from: \([0-9a-f]\{40\}\)$/\1/p' | head -n 1)
+          HEAD_SHA=$(git rev-parse HEAD)
+          REL=""
+          [ -n "$BASE" ] && REL=$(gh api "repos/$GITHUB_REPOSITORY/compare/$BASE...$HEAD_SHA" -q .status 2>/dev/null || true)
+          case "$REL" in
+            identical|ahead) ;;
+            *) echo "::warning::the code-viz build (from ${BASE:-an unknown commit}, ${REL:-not comparable}) is not of this commit or an ancestor; publishing viz/ as committed"
+               exit 0 ;;
+          esac
+          if ! git fetch -q --depth=1 origin "$BASE"; then
+            echo "::warning::could not fetch $BASE, the commit the code-viz build came from; publishing viz/ as committed"
+            exit 0
+          fi
+          git diff --no-renames --name-only -z "$BASE" HEAD -- viz > "$RUNNER_TEMP/changed-since-build"
+          mkdir -p "$RUNNER_TEMP/code-viz-build"
+          git archive "origin/$B" viz | tar -x -C "$RUNNER_TEMP/code-viz-build"
+          python3 - "$RUNNER_TEMP/code-viz-build" "$RUNNER_TEMP/changed-since-build" <<'PYTHON'
+          # viz/ becomes the last build plus what changed on gh-pages since it was built: files
+          # changed or added there are kept, files deleted there stay deleted, other files come from
+          # the build, and files the build does not have are dropped.
+          import os, shutil, sys, tempfile
+          snap, changed = sys.argv[1], sys.argv[2]
+          keep = {p for p in open(changed, "rb").read().decode().split("\0") if p}
+          def files(top):
+              return {os.path.relpath(os.path.join(d, n), top) for d, _, ns in os.walk(os.path.join(top, "viz")) for n in ns}
+          built = files(snap)
+          dropped = [p for p in files(".") - built if p not in keep]
+          for p in dropped:
+              os.remove(p)
+          for d in sorted((d for d, _, _ in os.walk("viz")), key=lambda d: -d.count(os.sep)):
+              if d != "viz" and not os.listdir(d):
+                  os.rmdir(d)                      # emptied by the drop
+          laid, skipped = 0, []
+          for p in sorted(built - keep):
+              parts = p.split(os.sep)
+              # The tree on the branch wins a file/folder clash: a file kept where the build has a folder,
+              # or a folder (holding kept files) where the build has a file.
+              if any(os.path.isfile(os.sep.join(parts[:i])) for i in range(1, len(parts))) or os.path.isdir(p):
+                  skipped.append(p)
+                  continue
+              os.makedirs(os.path.dirname(p), exist_ok=True)
+              # Copy to a new, unique temporary file, then rename: a failed write (a full disk) fails the
+              # step and never leaves a truncated file to be published, and no kept file is overwritten.
+              fd, tmp = tempfile.mkstemp(dir=os.path.dirname(p), prefix=".code-viz-")
+              os.close(fd)
+              try:
+                  shutil.copyfile(os.path.join(snap, p), tmp)
+                  os.chmod(tmp, 0o644)                 # mkstemp makes it 0600
+                  os.replace(tmp, p)
+              except BaseException:
+                  if os.path.exists(tmp):
+                      os.remove(tmp)
+                  raise
+              laid += 1
+          print(f"laid {laid} file(s) of the build over viz/, dropped {len(dropped)} it does not have; kept {len(keep)} path(s) changed since it was built"
+                + (f"; skipped {len(skipped)} that clash with kept files: {' '.join(skipped[:10])}" if skipped else ""))
+          PYTHON
+          echo "code-viz build: $(git log -1 --format='%h %s' "origin/$B")"
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
