@@ -1,0 +1,39 @@
+{
+ "code": "public class Main {            \n    public static double calculateIncomeTax(double income) {\n        double result = 0;\n\n        double base10 = 9950 * 0.1;\n        double base12 = base10 + (40525 - 9950) * 0.12;\n        double base22 = base12 + (86375 - 40525) * 0.22;\n        double base24 = base22 + (164925 - 86375) * 0.24;\n        double base32 = base24 + (209425 - 164925) * 0.32;\n        double base35 = base32 + (523600 - 209425) * 0.35;\n\n        if(income < 9950) {\n            result = income * 0.1;\n        } else if(income < 40525) {\n            result = base10 + (income - 9950) * 0.12;\n        } else if(income < 86375) {\n            result = base12 + (income - 40525) * 0.22;\n        } else if(income < 164925) {\n            result = base22 + (income - 86375) * 0.24;\n        } else if(income < 209425) {\n            result = base24 + (income - 164925) * 0.32;\n        } else if(income < 523600) {\n            result = base32 + (income - 209425) * 0.35;\n        } else {\n            result = base35 + (income - 523600) * 0.37;\n        }\n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        double taxOwed = calculateIncomeTax(25000);\n\n        System.out.println(\"I owe: $\" + taxOwed);\n    }\n}",
+ "description": "Read a multi-branch calculateIncomeTax(double income) method to identify every branch, boundary value, and invalid input that a test suite should cover.",
+ "example": "cs173-activity-testing-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "In calculateIncomeTax(double income), precompute cumulative tax amounts base10 through base35 for the six lower tax brackets.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Use a seven-branch if / else if / else ladder on lines 12-26 to select the bracket for income and return result.",
+   "kind": "reveal",
+   "lines": "12-29"
+  },
+  {
+   "answer": "For 25000, income < 9950 is false and income < 40525 is true. Line 15 computes base10 + (25000 - 9950) * 0.12 = 2801.0. For negative income, income < 9950 is true, so line 13 returns a negative tax.",
+   "kind": "predict",
+   "lines": "12-16,31-35",
+   "question": "Which branch runs when main calls calculateIncomeTax(25000), and what happens if a negative income is passed?"
+  },
+  {
+   "description": "Call calculateIncomeTax(25000) in main and print the resulting tax owed.",
+   "kind": "reveal",
+   "lines": "31-36"
+  },
+  {
+   "description": "Watch income = 25000 enter the second branch (income < 40525) on line 15 and compute result = 2801.0.",
+   "kind": "run",
+   "lines": "15",
+   "trace_step": 10
+  }
+ ],
+ "title": "Designing Branch and Boundary Tests for Tax Brackets",
+ "version": 1
+}

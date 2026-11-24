@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        // println prints a \"line\" to the string\n        System.out.println(\"Hello World!\");\n        System.out.println(\"Have a great day.\");\n    }\n}",
+ "description": "Read a first Java program with a class, main method, single-line comment, and two System.out.println calls.",
+ "example": "cs173-activity-datatypes-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Wrap the program in public class Main and define public static void main(String[] args) inside matching curly braces.",
+   "kind": "reveal",
+   "lines": "1-2,6-7"
+  },
+  {
+   "description": "Read the single-line comment starting with // on line 3, followed by two System.out.println statements on lines 4 and 5.",
+   "kind": "reveal",
+   "lines": "3-5"
+  },
+  {
+   "answer": "No; // starts a comment for human readers that the Java compiler ignores, so only lines 4 and 5 print.",
+   "kind": "predict",
+   "lines": "3-5",
+   "question": "Does the // line on line 3 appear in the program output when the code runs?"
+  },
+  {
+   "description": "Notice how execution starts directly at line 4, skipping the comment on line 3, to print 'Hello World!' and 'Have a great day.'.",
+   "kind": "run",
+   "lines": "4",
+   "trace_step": 0
+  }
+ ],
+ "title": "Structure of a First Java Program",
+ "version": 1
+}

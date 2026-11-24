@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static int fibonacci(int n) {\n        if(n <= 0) {\n            return 0;\n        } else if(n <= 2) {\n            return 1;\n        } else {\n            return fibonacci(n - 1) + fibonacci(n - 2);\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(fibonacci(5));\n    }\n}",
+ "description": "Trace recursive calls in fibonacci(5) to see how branching into fibonacci(n - 1) + fibonacci(n - 2) recomputes the same subproblems.",
+ "example": "cs173-activity-dynamicprogramming-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Define fibonacci(int n) with two base cases: return 0 when n <= 0 (lines 3-4) and return 1 when n <= 2 (lines 5-6).",
+   "kind": "reveal",
+   "lines": "1-7"
+  },
+  {
+   "description": "For n > 2, return fibonacci(n - 1) + fibonacci(n - 2) on line 8, and call fibonacci(5) from main on line 13.",
+   "kind": "reveal",
+   "lines": "7-15"
+  },
+  {
+   "answer": "fibonacci(5) calls fibonacci(4) and fibonacci(3), and fibonacci(4) also calls fibonacci(3) and fibonacci(2), so fibonacci(3) is computed twice from scratch.",
+   "kind": "predict",
+   "lines": "8,13",
+   "question": "When main calls fibonacci(5), how many separate times is fibonacci(3) called?"
+  },
+  {
+   "description": "Follow the call stack down to the base case n <= 2 on line 6 as fibonacci(5) branches through n = 4, 3, and 2.",
+   "kind": "run",
+   "lines": "6",
+   "trace_step": 12
+  }
+ ],
+ "title": "Overlapping Subproblems in Recursive Fibonacci",
+ "version": 1
+}

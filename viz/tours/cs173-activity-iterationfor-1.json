@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        /* for(initial value; \n                execute as long as this is true; \n                what to do after each time through the loop) { … }\n        */\n        for(i = 0; i < 10; i++) {\n            System.out.println(i); // Counts from 0 to 9 and prints each\n        }\n    }\n}",
+ "description": "Examine the three parts of a Java for loop header (initialization, condition, update) as it prints 0 through 9.",
+ "example": "cs173-activity-iterationfor-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Declare int i = 0 and read the block comment explaining the three semicolon-separated parts of a for loop header.",
+   "kind": "reveal",
+   "lines": "1-7"
+  },
+  {
+   "description": "Write for(i = 0; i < 10; i++) on line 8 and System.out.println(i) inside the loop body on line 9.",
+   "kind": "reveal",
+   "lines": "8-12"
+  },
+  {
+   "answer": "After printing 9, the update i++ increments i to 10; then i < 10 evaluates 10 < 10 (false), ending the loop before line 9 can run with i = 10.",
+   "kind": "predict",
+   "lines": "8-10",
+   "question": "What value does i have when the loop condition i < 10 finally becomes false, and why is 9 the last number printed?"
+  },
+  {
+   "description": "Check the final state at line 11 after the loop finishes: i holds 10 and the output ends at 9.",
+   "kind": "run",
+   "lines": "11",
+   "trace_step": 22
+  }
+ ],
+ "title": "Counting with a for Loop",
+ "version": 1
+}

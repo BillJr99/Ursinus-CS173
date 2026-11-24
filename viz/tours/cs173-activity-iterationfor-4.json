@@ -1,0 +1,39 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int numHeads = 0;\n\n        for(int i = 0; i < 10; i++); {\n            double randomNumber = Math.random();\n\n            if(randomNumber > 0.5) {\n                numHeads = numHeads + 1;\n            }\n        }\n\n        System.out.println(numHeads); // heads or tails\n    }\n}",
+ "description": "Draw a random double with Math.random() to count heads when randomNumber > 0.5, and spot the stray semicolon on the for loop header.",
+ "example": "cs173-activity-iterationfor-4",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Initialize int numHeads = 0 on line 3 to count how many coin flips land on heads.",
+   "kind": "reveal",
+   "lines": "1-4"
+  },
+  {
+   "description": "Look closely at line 5: for(int i = 0; i < 10; i++); has a semicolon right before the opening brace. The following block calls Math.random() and increments numHeads when randomNumber > 0.5.",
+   "kind": "reveal",
+   "lines": "5-11"
+  },
+  {
+   "answer": "The semicolon ends the for loop with an empty body that counts i to 10 by itself. The block on lines 6-11 executes only once after the loop finishes.",
+   "kind": "predict",
+   "lines": "5-11",
+   "question": "Because of the semicolon after i++) on line 5, how many times does the block on lines 6-11 actually run?"
+  },
+  {
+   "description": "Print numHeads on line 13.",
+   "kind": "reveal",
+   "lines": "13-15"
+  },
+  {
+   "description": "See line 6 run just once after line 5, confirming that the stray semicolon detached the block from the for loop.",
+   "kind": "run",
+   "lines": "6",
+   "trace_step": 2
+  }
+ ],
+ "title": "Simulating Coin Flips and the Semicolon-After-for Trap",
+ "version": 1
+}

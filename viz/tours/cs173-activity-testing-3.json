@@ -1,0 +1,39 @@
+{
+ "code": "import java.util.Random;\n\npublic class Main {            \n    public static boolean isHeads() {\n        Random rng = new Random();\n\n        // Use the random number generator (rng)\n        // to generate a value >= 0.0 and < 1.0\n        double randomValue = rng.nextDouble();\n\n        boolean result = false;\n        if(randomValue > 0.5) {\n            result = true;\n        } \n\n        return result;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(isHeads());\n        System.out.println(isHeads());\n    }\n}",
+ "description": "See why a method that creates an unseeded Random instance inside its body is hard to unit-test deterministically.",
+ "example": "cs173-activity-testing-3",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Import java.util.Random and define isHeads(), which creates new Random() on line 5 and draws double randomValue = rng.nextDouble() on line 9.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "description": "Set boolean result = false, change result to true if(randomValue > 0.5), and return result.",
+   "kind": "reveal",
+   "lines": "11-17"
+  },
+  {
+   "description": "Call isHeads() twice in main and print each boolean return value.",
+   "kind": "reveal",
+   "lines": "19-23"
+  },
+  {
+   "answer": "new Random() on line 5 has no fixed seed. randomValue is generated inside isHeads() rather than passed as a parameter. It can be either above or below 0.5 on any call.",
+   "kind": "predict",
+   "lines": "5,9,11-16,20-21",
+   "question": "Why can't a unit test predict whether isHeads() on line 20 will return true or false?"
+  },
+  {
+   "description": "Inspect randomValue and result inside the first call to isHeads() when randomValue > 0.5.",
+   "kind": "run",
+   "lines": "13",
+   "trace_step": 5
+  }
+ ],
+ "title": "Testing Methods That Use Random Number Generators",
+ "version": 1
+}

@@ -1,0 +1,39 @@
+{
+ "code": "public class Main {\n    /* Return the area of a circle, given its radius\n     * @param radius: the radius of the circle\n     *        Precondition: radius >= 0\n     * @return the area of the circle in square units of the radius\n     */\n    public static double circleArea(double radius) {\n        double area = 3.14 * radius * radius;\n\n        return area;\n    }\n\n    public static double triangleArea(double base, double height) {\n        double area = 0.5 * base * height;\n\n        return area;\n    }\n\n    public static void main(String[] args) {\n        double r = 10.0;\n\n        double a = circleArea(r);\n\n        System.out.print(\"The area of the circle is: \");\n        System.out.println(a);\n    }\n}",
+ "description": "Define static methods circleArea and triangleArea that accept double parameters and return a double result to main.",
+ "example": "cs173-activity-functions-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Define circleArea(double radius) with return type double, computing area = 3.14 * radius * radius and returning area.",
+   "kind": "reveal",
+   "lines": "1-11"
+  },
+  {
+   "description": "Define triangleArea(double base, double height) to compute 0.5 * base * height and return area.",
+   "kind": "reveal",
+   "lines": "13-17"
+  },
+  {
+   "description": "In main, set double r = 10.0, call circleArea(r) and store its returned value in double a, then print a.",
+   "kind": "reveal",
+   "lines": "19-27"
+  },
+  {
+   "answer": "triangleArea is defined on lines 13-17, and since main only calls circleArea(r) with r = 10.0, only circleArea runs, returning 3.14 * 10.0 * 10.0 = 314.0 into a.",
+   "kind": "predict",
+   "lines": "7-17,19-26",
+   "question": "Does triangleArea ever run during this execution of main, and what value is stored in a on line 22?"
+  },
+  {
+   "description": "Inspect the circleArea stack frame right before return area sends 314.0 back to main on line 22.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 3
+  }
+ ],
+ "title": "Writing and Calling Methods with Parameters and Return Values",
+ "version": 1
+}

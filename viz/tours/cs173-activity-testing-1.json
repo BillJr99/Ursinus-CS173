@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {            \n    public static int triangleArea(int base, int height) {\n        // Broken Code!\n        return 1 / 2 * base * height;\n    }\n\n    public static void main(String[] args) {\n        System.out.println(triangleArea(5, 2));\n        System.out.println(triangleArea(3, -2));\n    }\n}",
+ "description": "Examine a broken triangleArea(int base, int height) implementation to see why unit tests on different inputs expose integer-division and negative-input bugs.",
+ "example": "cs173-activity-testing-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Look at triangleArea(int base, int height), which returns 1 / 2 * base * height on line 4.",
+   "kind": "reveal",
+   "lines": "1-5"
+  },
+  {
+   "answer": "Because 1 and 2 are both int literals, integer division evaluates 1 / 2 to 0 first, and 0 * base * height is always 0.",
+   "kind": "predict",
+   "lines": "2-4",
+   "question": "Why does 1 / 2 * base * height evaluate to 0 for every base and height?"
+  },
+  {
+   "description": "Call triangleArea(5, 2) and triangleArea(3, -2) in main to see both print 0, and notice that height = -2 also tests an invalid negative dimension.",
+   "kind": "reveal",
+   "lines": "7-11"
+  },
+  {
+   "description": "Step into triangleArea(5, 2) on line 4 to watch 1 / 2 * 5 * 2 return 0.",
+   "kind": "run",
+   "lines": "4",
+   "trace_step": 1
+  }
+ ],
+ "title": "Catching Integer Division and Domain Bugs with Unit Tests",
+ "version": 1
+}

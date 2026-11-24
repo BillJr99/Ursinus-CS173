@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int[] grades = new int[3];\n\n        for(int i = 0; i < grades.length; i++) {\n            grades[i] = 90 + i;\n            System.out.println(grades[i]);\n        }\n    }\n}",
+ "description": "Allocate a three-element int array in Java and use a for loop with grades.length to fill and print each slot.",
+ "example": "cs173-activity-arrays-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Allocate a three-element integer array with int[] grades = new int[3].",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Loop i from 0 while i < grades.length, assigning grades[i] = 90 + i and printing grades[i].",
+   "kind": "reveal",
+   "lines": "5-10"
+  },
+  {
+   "answer": "Because grades.length is 3, i takes indices 0, 1, and 2, storing 90 at grades[0], 91 at grades[1], and 92 at grades[2].",
+   "kind": "predict",
+   "lines": "3,5-8",
+   "question": "What indices does i take in the loop, and what values are stored in grades?"
+  },
+  {
+   "description": "Watch the first loop iteration assign 90 to grades[0] and print 90.",
+   "kind": "run",
+   "lines": "7",
+   "trace_step": 3
+  }
+ ],
+ "title": "Creating, Populating, and Indexing an int Array",
+ "version": 1
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<!--
+  code-viz viewer page (index.html). Copied into a course site's viz/ folder by code-viz build and
+  serve. Behaviour: viewer.js is the Run mode (and langs.js: the SQL, MIPS and VHDL panels and browser
+  runs); modes.js draws the mode tabs and switches modes; mode-explain.js and mode-simulate.js are the
+  Explain and Simulate modes. Styling: viewer.css, langs.css and modes.css (see their headers).
+  Addresses: viz/#<id> (teacher view), viz/?student=1#<id> (student mode, what the QR code opens),
+  viz/?step=N#<id> (open at step N), viz/?mode=explain&t=N#<id> and viz/?mode=simulate&s=N#<id>.
+  External scripts are pinned: viz.js 2.1.2, qrcode-generator 1.4.4; highlight.js 11.9.0 (cdnjs)
+  loads in Explain mode only and xterm.js 5.3.0 (jsDelivr) in Simulate mode only.
+
+  Full manual: the header of code-viz (`code-viz readme`, or README.md), sections 8 to 10 and 21 to 23.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>code-viz</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="viewer.css">
+<link rel="stylesheet" href="langs.css">
+<link rel="stylesheet" href="modes.css">
+<link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#">code-viz</a>
+  <span id="title" class="title"></span>
+  <span id="modetabs" class="modetabs" role="group" aria-label="Mode" hidden></span>
+  <span class="spacer"></span>
+  <a id="pagelink" class="pagelink" target="_blank" rel="noopener"></a>
+</header>
+<main id="main">
+  <section id="list" class="list" hidden></section>
+  <section id="example" class="example" hidden>
+    <p id="modenote" class="modenote" hidden></p>
+    <div class="controls">
+      <button id="first" title="First step">|&lt;</button>
+      <button id="prev" title="Previous step (left arrow)">&lt;</button>
+      <button id="play" title="Play">Play</button>
+      <button id="next" title="Next step (right arrow)">&gt;</button>
+      <button id="last" title="Last step">&gt;|</button>
+      <input id="slider" type="range" min="0" max="0" value="0">
+      <span id="stepinfo" class="stepinfo"></span>
+      <span id="extra" class="extra"></span>
+      <span class="spacer"></span>
+      <button id="edit" title="Edit the code and run it again">Edit</button>
+      <button id="reset" title="Back to the original example" hidden>Reset</button>
+      <button id="qr" class="teacher-only" title="Show a QR code students scan to open this example on their own phone or laptop">QR</button>
+    </div>
+    <div class="cols">
+      <div class="left">
+        <div class="panel-title">Code</div>
+        <details id="setupbox" class="setupbox" hidden><summary id="setupsum">Setup code</summary><pre id="setupcode" class="code"></pre></details>
+        <pre id="code" class="code"></pre>
+        <div id="simterm" class="simterm" hidden></div>
+        <div id="simbar" class="simbar" hidden>
+          <input id="simcmd" type="text" autocomplete="off" spellcheck="false" aria-label="The next command">
+          <p id="simhint" class="note" aria-live="polite"></p>
+        </div>
+        <div id="editor" class="editor" hidden>
+          <textarea id="editbox" spellcheck="false"></textarea>
+          <div class="editbar"><button id="rerun">Run</button> <span id="runnote" class="note"></span></div>
+        </div>
+        <div class="panel-title">Output</div>
+        <pre id="output" class="output"></pre>
+        <div id="figures" hidden></div>
+      </div>
+      <div class="right">
+        <div class="panel-title" id="paneltitle">State</div>
+        <div id="panel" class="panel"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="blank" class="blank" hidden title="Press any key to come back"></div>
+<div id="qrdialog" class="qrdialog" hidden>
+  <div class="qrbox">
+    <div id="qrimg" class="qrimg"></div>
+    <p class="qrtitle">Scan to open this example</p>
+    <p id="qrurl" class="qrurl"></p>
+    <button id="qrclose">Close</button>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="figures.js"></script>
+<script src="langs.js"></script>
+<script src="modes.js"></script>
+<script src="mode-explain.js"></script>
+<script src="mode-simulate.js"></script>
+<script src="mode-terminal.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>

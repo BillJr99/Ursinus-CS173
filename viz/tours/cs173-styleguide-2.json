@@ -1,0 +1,34 @@
+{
+ "code": "for (int i = 0; i < 100; i++) {\n    if (i%2 == 0 && i%3 == 0) {\n        System.out.println(i + \" is divisible by 6\");\n    } \n}",
+ "description": "See how explicit curly braces and aligned indentation make the structure of a nested if statement inside a for loop unmistakable.",
+ "example": "cs173-styleguide-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Start with the outer for (int i = 0; i < 100; i++) loop on line 1 and its matching closing brace aligned in column 1 on line 5.",
+   "kind": "reveal",
+   "lines": "1,5"
+  },
+  {
+   "description": "Indent the inner if (i%2 == 0 && i%3 == 0) one level inside the loop, wrap its body in explicit curly braces { ... }, and indent line 3 one level further.",
+   "kind": "reveal",
+   "lines": "2-4"
+  },
+  {
+   "answer": "Because lines 2 and 4 enclose the if body in curly braces, every statement between them runs only when i%2 == 0 && i%3 == 0 is true.",
+   "kind": "predict",
+   "lines": "2-4",
+   "question": "If you add another statement between lines 3 and 4 inside the curly braces, when will it execute?"
+  },
+  {
+   "description": "Step into line 3 when i = 0 to see the braced if body print '0 is divisible by 6'.",
+   "kind": "run",
+   "lines": "3",
+   "trace_step": 2
+  }
+ ],
+ "title": "Consistent Braces and Indentation in Nested Blocks",
+ "version": 1
+}

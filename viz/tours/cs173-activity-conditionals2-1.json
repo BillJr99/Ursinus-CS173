@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int age = 38;\n\n        if(age >= 18) {\n            System.out.println(\"You are old enough to vote!\");\n\n            if(age >= 35) {\n                System.out.println(\"... and you are old enough to run for President!\");\n            } else {\n                System.out.println(\"... but not old enough to run for President!\");\n            }\n        } else {\n            System.out.println(\"You're too young to run for President, and too young to vote.\");\n        }\n    }\n}",
+ "description": "Place an inner if(age >= 35)/else check inside an outer if(age >= 18) block to test two age thresholds in sequence.",
+ "example": "cs173-activity-conditionals2-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Set int age = 38 and check the outer condition if(age >= 18) on line 5, printing 'You are old enough to vote!' on line 6.",
+   "kind": "reveal",
+   "lines": "1-7"
+  },
+  {
+   "description": "Inside the outer if block, check the nested condition if(age >= 35) on line 8. This prints whether the person can also run for President. If the outer check is false, run the outer else on lines 13-15.",
+   "kind": "reveal",
+   "lines": "8-17"
+  },
+  {
+   "answer": "When age is 38, both age >= 18 and age >= 35 are true, so lines 6 and 9 both print. For an age that passes the outer threshold but falls below the inner threshold, lines 6 and 11 would print.",
+   "kind": "predict",
+   "lines": "5-15",
+   "question": "Which println statements run when age is 38? What would print for an age that passes the outer threshold but falls below the inner threshold?"
+  },
+  {
+   "description": "Watch execution print line 6 and then enter the nested if(age >= 35) block on line 9.",
+   "kind": "run",
+   "lines": "9",
+   "trace_step": 4
+  }
+ ],
+ "title": "Nested if/else Statements",
+ "version": 1
+}

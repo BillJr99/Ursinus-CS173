@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int age = 38;\n\n        if(age >= 35) {\n            System.out.println(\"You are old enough to run for President of the United States!\");\n        } else {\n            System.out.println(\"You're too young to run for President.\");\n        }\n    }\n}",
+ "description": "Add an else block to an if(age >= 35) check so the program executes one of two mutually exclusive branches.",
+ "example": "cs173-activity-conditionals-2",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Set int age = 38 and check if(age >= 35) on line 5 to print the eligible message on line 6.",
+   "kind": "reveal",
+   "lines": "1-7"
+  },
+  {
+   "description": "Attach an else block on lines 7-9 that prints 'You're too young to run for President.' whenever age >= 35 is false.",
+   "kind": "reveal",
+   "lines": "7-11"
+  },
+  {
+   "answer": "No; age >= 35 is either true or false, so Java runs line 6 when age >= 35 is true (as with age = 38) and skips the else block.",
+   "kind": "predict",
+   "lines": "5-9",
+   "question": "Can both line 6 and line 8 execute during the same run of main?"
+  },
+  {
+   "description": "Notice how execution jumps from line 6 straight to line 10 at the end of main, skipping line 8 inside the else block.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 3
+  }
+ ],
+ "title": "Two-Way Branching with if and else",
+ "version": 1
+}

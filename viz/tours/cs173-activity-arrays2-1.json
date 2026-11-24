@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[10];\n\n        int sum = 0;\n        int i = 0;\n\n        for(i = 0; i < arr.length; i++) {\n            arr[i] = 2 * i;\n        }\n\n        for(i = 0; i < arr.length; i++) {\n            sum = sum + arr[i];\n        }\n\n        System.out.println(\"Sum = \" + sum);\n    }\n}",
+ "description": "Fill a 10-element int array with even numbers 2 * i in one loop, then accumulate their sum in a second loop.",
+ "example": "cs173-activity-arrays2-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Allocate int[] arr = new int[10], initialize sum = 0 and i = 0. Run the first for loop to assign arr[i] = 2 * i for i from 0 to 9.",
+   "kind": "reveal",
+   "lines": "1-10"
+  },
+  {
+   "answer": "The first loop fills arr with 0, 2, 4, 6, 8, 10, 12, 14, 16, and 18, and the second loop adds those ten even numbers into sum = 90.",
+   "kind": "predict",
+   "lines": "8-14",
+   "question": "What values are stored in arr[0] through arr[9], and what total does the second loop accumulate in sum?"
+  },
+  {
+   "description": "Traverse arr a second time on lines 12-14, adding each arr[i] to sum, and print 'Sum = ' + sum.",
+   "kind": "reveal",
+   "lines": "12-18"
+  },
+  {
+   "description": "Inspect the populated array arr and sum = 90 right as line 16 prints 'Sum = 90'.",
+   "kind": "run",
+   "lines": "16",
+   "trace_step": 45
+  }
+ ],
+ "title": "Populating and Summing an Array with Two Loops",
+ "version": 1
+}

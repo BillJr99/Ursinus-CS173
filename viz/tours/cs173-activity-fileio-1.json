@@ -1,0 +1,34 @@
+{
+ "code": "import java.io.FileNotFoundException;\nimport java.io.File;\nimport java.util.Scanner;\n\npublic class Main {  \n    public static void readLineByLine(String filePath) throws FileNotFoundException {\n        File input = new File(filePath);\n        Scanner scan = new Scanner(input);\n\n        while(scan.hasNextLine()) {\n            String line = scan.nextLine();\n            System.out.println(line);\n        }           \n    }\n\n    public static void main(String[] args) {\n        String path = \"test.txt\";\n\n        try {\n          readLineByLine(path);\n        } catch(FileNotFoundException e) {\n          System.err.println(\"File not found!\");\n          e.printStackTrace();\n        }\n    }\n}",
+ "description": "Open a File with Scanner inside a method declared with throws FileNotFoundException, and catch the exception in main with a try/catch block.",
+ "example": "cs173-activity-fileio-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Define readLineByLine(String filePath) with throws FileNotFoundException: create a File and a Scanner(input), and loop while scan.hasNextLine() to read and print each line.",
+   "kind": "reveal",
+   "lines": "1-14"
+  },
+  {
+   "description": "In main, set path = \"test.txt\" and call readLineByLine(path) inside a try block with a catch(FileNotFoundException e) handler.",
+   "kind": "reveal",
+   "lines": "16-26"
+  },
+  {
+   "answer": "new Scanner(input) throws a FileNotFoundException, which exits readLineByLine immediately and jumps into the catch block in main at line 22.",
+   "kind": "predict",
+   "lines": "7-8,19-24",
+   "question": "What happens when new Scanner(input) runs on line 8 if \"test.txt\" does not exist on disk?"
+  },
+  {
+   "description": "See execution jump from line 8 inside readLineByLine straight to line 22 inside catch(FileNotFoundException e) when \"test.txt\" is missing.",
+   "kind": "run",
+   "lines": "22",
+   "trace_step": 4
+  }
+ ],
+ "title": "Reading a File with Scanner and Handling FileNotFoundException",
+ "version": 1
+}

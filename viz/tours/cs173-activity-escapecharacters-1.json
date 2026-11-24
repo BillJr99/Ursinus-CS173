@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        System.out.print(\"The most damaging phrase in the language is: \\\"We've always done it this way!\\\"\");\n        System.out.println(\" -- Grace Hopper\");\n    }\n}",
+ "description": "Use the \\\" escape sequence to include quotation marks inside a String literal and compare System.out.print with System.out.println.",
+ "example": "cs173-activity-escapecharacters-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Look at line 3, where \\\" inside the String literal tells Java to include literal quotation marks around \"We've always done it this way!\" instead of ending the String early.",
+   "kind": "reveal",
+   "lines": "1-3"
+  },
+  {
+   "description": "Call System.out.println(\" -- Grace Hopper\") on line 4 right after System.out.print on line 3.",
+   "kind": "reveal",
+   "lines": "4-6"
+  },
+  {
+   "answer": "Because line 3 uses System.out.print (without ln), it stays on the same line, so \" -- Grace Hopper\" prints right after the closing quotation mark on the same line.",
+   "kind": "predict",
+   "lines": "3-4",
+   "question": "Does \" -- Grace Hopper\" on line 4 print on the same line as the quote or on a new line?"
+  },
+  {
+   "description": "Step from line 3 to line 4 to see both strings appear on a single output line.",
+   "kind": "run",
+   "lines": "4",
+   "trace_step": 1
+  }
+ ],
+ "title": "Escaping Quotation Marks and Comparing print vs. println",
+ "version": 1
+}

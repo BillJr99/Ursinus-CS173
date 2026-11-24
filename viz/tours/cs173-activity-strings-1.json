@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n    public static void main(String[] args) {\n        String x = \"Test\";\n        String y = new String(\"Test\");\n\n        if(x.equals(y)) {\n            System.out.println(\"x and y contain the same text!\");\n        }\n\n        String z = \"tan\";\n        System.out.println(z.substring(1, 2) + z.substring(0, 1));\n    }\n}",
+ "description": "Use x.equals(y) to compare the text inside two String objects and z.substring(start, end) to extract slices of characters.",
+ "example": "cs173-activity-strings-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Create String x = \"Test\" and String y = new String(\"Test\"), then compare their contents with x.equals(y) on line 6.",
+   "kind": "reveal",
+   "lines": "1-8"
+  },
+  {
+   "description": "Set String z = \"tan\" on line 10 and print z.substring(1, 2) + z.substring(0, 1) on line 11.",
+   "kind": "reveal",
+   "lines": "10-13"
+  },
+  {
+   "answer": "substring(start, end) includes index start up to (but not including) index end, so z.substring(1, 2) is \"a\" and z.substring(0, 1) is \"t\", printing \"at\".",
+   "kind": "predict",
+   "lines": "10-11",
+   "question": "For z = \"tan\", what substrings do z.substring(1, 2) and z.substring(0, 1) extract, and what is printed?"
+  },
+  {
+   "description": "Step to line 11 to see x.equals(y) print its message and z.substring(1, 2) + z.substring(0, 1) print \"at\".",
+   "kind": "run",
+   "lines": "11",
+   "trace_step": 5
+  }
+ ],
+ "title": "Comparing Strings with equals() and Slicing with substring()",
+ "version": 1
+}

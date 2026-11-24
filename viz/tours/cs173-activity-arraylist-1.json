@@ -1,0 +1,39 @@
+{
+ "code": "import java.util.ArrayList;\n\npublic class Main {\n   public static void main(String[] args) {\n      /* This is a class that encapsulates the behavior of an array,\n         but it grows as you add items on the fly. */\n      ArrayList<String> arr = new ArrayList<String>(10);\n\n      for(int i = 0; i < 10; i++) {\n        String x = new String(\"Test #\" + i);\n\n        arr.add(x);\n      }\n\n      for(int i = 0; i < arr.size(); i++) {\n        String x = arr.get(i);\n\n        System.out.println(x);\n      }\n\n      arr.remove(arr.size() / 2);\n\n      // This is called an Enhanced For Loop - a nice shortcut!\n      for(String item: arr) {\n        System.out.println(item);\n      }\n   }\n}",
+ "description": "Populate an ArrayList<String> with add(), read elements by index with get() and size(), remove the middle element, and traverse with an enhanced for loop.",
+ "example": "cs173-activity-arraylist-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model",
+ "steps": [
+  {
+   "description": "Import ArrayList, construct ArrayList<String> arr, and loop i from 0 to 9 calling arr.add(x) to append 'Test #0' through 'Test #9'.",
+   "kind": "reveal",
+   "lines": "1-13"
+  },
+  {
+   "description": "Use a standard indexed for loop up to arr.size() and call arr.get(i) to print each element in order.",
+   "kind": "reveal",
+   "lines": "15-19"
+  },
+  {
+   "answer": "Since arr.size() is 10, arr.remove(5) removes 'Test #5' at index 5 and shifts 'Test #6' through 'Test #9' down by one index so arr.size() becomes 9.",
+   "kind": "predict",
+   "lines": "21",
+   "question": "Which string does arr.remove(arr.size() / 2) remove, and what happens to the elements after it?"
+  },
+  {
+   "description": "Remove the element at index arr.size() / 2 and iterate over the remaining 9 elements with the enhanced for loop for(String item: arr).",
+   "kind": "reveal",
+   "lines": "21-28"
+  },
+  {
+   "description": "Inspect arr right after arr.remove(arr.size() / 2) to see 'Test #5' removed and the remaining elements shifted down.",
+   "kind": "run",
+   "lines": "24",
+   "trace_step": 64
+  }
+ ],
+ "title": "Adding, Accessing, and Removing Elements in an ArrayList",
+ "version": 1
+}

@@ -1,0 +1,34 @@
+{
+ "code": "public class Main {\n   public static void main(String[] args) {\n      int[][] mat1 = new int[10][10];\n      int[][] mat2 = { { 1, 0 }, { 0, 1 } };\n\n      // This is the length of the \"outer vector\" - the number of rows\n      for(int i = 0; i < mat2.length; i++) {\n        // This is the length of the \"inner vector\" - the number of columns\n        for(int j = 0; j < mat2[i].length; j++) {\n            System.out.println(mat2[i][j]);\n        }\n      }\n   }\n}",
+ "description": "Allocate 2D arrays in Java and use nested for loops with mat2.length and mat2[i].length to print every element row by row.",
+ "example": "cs173-activity-2darrays-1",
+ "lang": "java",
+ "reviewed": false,
+ "source": "draft: agy free model + edit: codex",
+ "steps": [
+  {
+   "description": "Allocate mat1 as a 10-by-10 int[][] array and initialize mat2 with the 2-by-2 literal { { 1, 0 }, { 0, 1 } }.",
+   "kind": "reveal",
+   "lines": "1-5"
+  },
+  {
+   "description": "Use an outer loop over row index i up to mat2.length and an inner loop over column index j up to mat2[i].length to print mat2[i][j].",
+   "kind": "reveal",
+   "lines": "6-14"
+  },
+  {
+   "answer": "For i = 0, j steps through 0 and 1 to print mat2[0][0] (1) and mat2[0][1] (0). For i = 1, j steps through 0 and 1 to print mat2[1][0] (0) and mat2[1][1] (1).",
+   "kind": "predict",
+   "lines": "4,7-12",
+   "question": "In what order do the nested loops visit the elements of mat2 = { { 1, 0 }, { 0, 1 } }?"
+  },
+  {
+   "description": "Watch the inner loop print mat2[0][0] = 1 on its first iteration when i = 0 and j = 0.",
+   "kind": "run",
+   "lines": "10",
+   "trace_step": 4
+  }
+ ],
+ "title": "Creating and Traversing a 2D Array in Java",
+ "version": 1
+}
