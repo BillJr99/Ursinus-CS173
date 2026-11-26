@@ -50,8 +50,10 @@ info:
       progressing: The program is submitted according to the directions with a minor omission or correction needed, including a readme writeup describing the solution and answering nearly all questions posed in the instructions
       proficient: The program is submitted according to the directions, including a readme writeup describing the solution and answering all questions posed in the instructions
   readings:
-    - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"
+    - rtitle: "String Iteration Activity"
+      rlink: "../Activities/Iteration/Strings"
+    - rtitle: "Iteration with the for Loop"
+      rlink: "../Activities/Iteration/For"
     - rtitle: "Strings Activity"
       rlink: "../Activities/Strings"
     - rtitle: "Arrays Activity"
