@@ -46,8 +46,10 @@ info:
   readings:
     - rtitle: "Strings Activity"
       rlink: "../../Activities/Strings"  
-    - rtitle: "Iteration Activity"
-      rlink: "../../Activities/Iteration"
+    - rtitle: "Iteration with the while Loop"
+      rlink: "../../Activities/Iteration/While"
+    - rtitle: "Iteration with the do Loop"
+      rlink: "../../Activities/Iteration/Do"
     - rtitle: "HashMaps Activity"
       rlink: "../../Activities/HashMaps"
   questions:
