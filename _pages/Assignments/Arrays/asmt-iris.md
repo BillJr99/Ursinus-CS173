@@ -51,7 +51,7 @@ info:
     - rtitle: "ArrayList Activity"
       rlink: "../Activities/ArrayList"
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"
+      rlink: "../Activities/Iteration/For"
     - rtitle: "File I/O"
       rlink: "../Activities/FileIO" 
     - rtitle: "Flower Classification Example"

@@ -50,7 +50,7 @@ info:
     - rtitle: "ArrayList Activity"
       rlink: "../Activities/ArrayList"  
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration" 
+      rlink: "../Activities/Iteration/For"
   questions:
     - "Given an array containing the following values: <code>7, 8, 4, 2, 6, 5</code>, which index contains the smallest value?  What questions or comparisons did you have to ask to locate it?  What values did you have to keep track of?"
     - "Given an array containing the following values: <code>0, 8, 4, 2, 6, 5</code>, which index contains the smallest value?  What questions or comparisons did you have to ask to locate it?  What values did you have to keep track of?"

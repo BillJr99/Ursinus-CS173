@@ -45,7 +45,7 @@ info:
     - rtitle: "Arrays Activity"
       rlink: "../Activities/Arrays"
     - rtitle: "Iteration Activity"
-      rlink: "../Activities/Iteration"      
+      rlink: "../Activities/Iteration/For"
     - rtitle: "Conditionals Activity"
       rlink: "../Activities/Conditionals"  
   questions:
