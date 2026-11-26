@@ -8,7 +8,7 @@ info:
   next: ./Searching2
   
   additional_reading:
-    - link: ../Modules/Search
+    - link: ../Modules/Search/Module
       title: Searching Module  
   
   goals: 
